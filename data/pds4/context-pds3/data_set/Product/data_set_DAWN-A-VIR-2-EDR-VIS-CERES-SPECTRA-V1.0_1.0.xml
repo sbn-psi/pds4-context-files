@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dawn-a-vir-2-edr-vis-ceres-spectra-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DAWN VIR RAW (EDR) CERES VISIBLE SPECTRA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.dawn::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:vir.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.1_ceres::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dawn-a-vir-2-edr-vis-ceres-spectra-v1.0__browserp_dawn-a-vir-2-edr-vis-ceres-spectra-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bini, A., I. Ficai-Veltroni, S. Pieraccini, G. Cherubini, M. Benetello, and M.
+                   Giustini, Instrument system description, VID-GAF-RP-002, 2005.
+            </reference_text>
+            <description>reference.BINIETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DAWN-A-VIR-2-EDR-VIS-CERES-SPECTRA-V1.0</data_set_id>
+        <data_set_name>DAWN VIR RAW (EDR) CERES VISIBLE SPECTRA V1.0</data_set_name>
+        <data_set_release_date>2015-09-01</data_set_release_date>
+        <start_time>2015-01-13T19:36:00Z</start_time>
+        <stop_time>2015-10-12T09:59:28Z</stop_time>
+        <producer_full_name>MARIA CRISTINA DE SANCTIS</producer_full_name>
+        <citation_text>
+            De Sanctis, M.C., M.T. Capria, M. Giardino, E. Ammannito, S.
+            Fonte, DAWN VIR RAW (EDR) CERES VISIBLE SPECTRA V1.0,
+            DAWN-A-VIR-2-EDR-VIS-CERES-SPECTRA-V1.0, NASA Planetary Data
+            System, 2015.
+        </citation_text>
+        <data_set_terse_desc>
+            Contains raw visible data from the DAWN spacecraft VIR instrument
+            during the Ceres Encounter mission phases.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This volume contains the digital numbers (DN) contained in the
+            telemetry (TM) packages of the VIR-VIS instrument on board of the
+            spacecraft DAWN. The data are from the Ceres Encounter phase,
+            which occurred 2014-12-26 to 2016-06-30.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Required Reading
+  ================
+    The format of all VIR data are described in detail by the SIS document
+    located in the /DOCUMENT directory. VIR team strongly recommends
+    reading this documentation before using the data.
+ 
+ 
+  Data Set Overview
+  =================
+    This data set contains raw VIS data acquired by the DAWN mission VIR
+    spectrometer during the Ceres Encounter phases of the DAWN mission,
+    which covered December 26, 2014 to July 01, 2016.
+ 
+ 
+  VIR Ceres Observations
+  ======================
+    The following table contains a listing of VIR observations at Ceres.
+ 
+    ------------------------------------------------------------------------
+    Dawn Science Observations
+    ------------------------------------------------------------------------
+    Start    Mission Activity     Activity
+    Date     Phase   Name         Description
+    ========================================================================
+    14-12-26 CSA    APPROACH     Ceres Science Approach Phase
+    ------------------------------------------------------------------------
+    15-01-13 CSA    OPNAV_001    Ride-along cubes to FC OpNav images
+    15-01-25 CSA    OPNAV_002    Ride-along cubes to FC OpNav images
+    15-02-04 CSA    OPNAV_003    Ride-along cubes to FC OpNav images
+    15-02-12 CSA    RC1          Ride-along cubes to FC rotational
+                                 characterization movie #1
+    15-02-19 CSA    RC2          Ride-along cubes to FC rotational
+                                 characterization movie #2
+    15-02-25 CSA    OPNAV_004    Ride-along cubes to FC OpNav images
+    15-03-01 CSA    OPNAV_005    Ride-along cubes to FC OpNav images
+    15-04-10 CSA    OPNAV_006    Ride-along cubes to FC OpNav images
+    15-04-15 CSA    OPNAV_007    Ride-along cubes to FC OpNav images
+ 
+    ========================================================================
+    15-04-24 CSR    RC3          Ceres Science Rotational Characterization 3
+    ------------------------------------------------------------------------
+    15-04-25 CSR    RC3          RC3 Equatorial Limb 001 (South) high phase
+    15-04-30 CSR    RC3          RC3 Equatorial Limb 002 (North) high phase
+    15-05-04 CSR    RC3n         RC3 North lit side
+    15-05-05 CSR    RC3e         RC3 Equator lit side
+    15-05-07 CSR    RC3s         RC3 South lit side
+ 
+    ------------------------------------------------------------------------
+    15-05-09 CTS    TRANSFER_    Ceres Transfer to Survey Phase
+                    TO_Survey
+    ------------------------------------------------------------------------
+    15-05-16 CTS    OPNAV_008    Ride-along cubes to FC OpNav images
+    15-05-22 CTS    OPNAV_009    Ride-along cubes to FC OpNav images
+ 
+    ------------------------------------------------------------------------
+    15-06-05 CSS    SURVEY       Ceres Science Survey Phase (range ~4850 km)
+    ------------------------------------------------------------------------
+    15-06-05 CSS    CYCLE1       Survey Cycle (orbit) 1
+    15-06-08 CSS    CYCLE2       Survey Cycle (orbit) 2
+    15-06-11 CSS    CYCLE3       Survey Cycle (orbit) 3
+    15-06-14 CSS    CYCLE4       Data lost to instrument reset, all data lost
+    15-06-17 CSS    CYCLE5       Survey Cycle (orbit) 5 VIS-Only
+    15-06-21 CSS    CYCLE6       Survey Cycle (orbit) 6
+    15-06-24 CSS    CYCLE7       Survey Cycle (orbit) 7 VIS-Only
+    15-06-27 CSS    CYCLE8       Data lost to instrument reset, all data lost
+ 
+    ------------------------------------------------------------------------
+    15-07-01 CTH    TRANSFER_    Ceres Transfer to HAMO Phase
+                    TO_HAMO
+    ------------------------------------------------------------------------
+                                 No science observation in this phase
+ 
+    ------------------------------------------------------------------------
+    15-08-18 CSH    HAMO         Ceres Science HAMO Phase (avg rng ~1950 km)
+    ------------------------------------------------------------------------
+    15-08-18 CSH    CYCLE1       12 orbits of pushbroom nadir imaging
+    15-08-29 CSH    CYCLE2       12 orbits of pushbroom off-nadir imaging
+    15-09-09 CSH    CYCLE3       12 orbits of pushbroom off-nadir IR-only
+    15-09-20 CSH    CYCLE4       12 orbits of pushbroom off-nadir imaging
+    15-10-01 CSH    CYCLE5       12 orbits of pushbroom near nadir IR-only
+    15-10-12 CSH    CYCLE6       12 orbits of pushbroom off-nadir imaging
+ 
+    ------------------------------------------------------------------------
+    15-10-23 CTL    TRANSFER_    Ceres Transfer to LAMO Phase
+                    TO_LAMO
+    ------------------------------------------------------------------------
+                                 No science observation in this phase
+ 
+ 
+  Processing
+  ==========
+    The data in this data set are raw, CODMAC Level 2 data. As such, no
+    processes have been applied to the data other than decompression and
+    reformatting as cubes.
+ 
+ 
+  Data
+  ====
+    The data are in PDS format. A detailed description of the data format
+    is given in the VIR SIS document located in the DOCUMENT directory of
+    this data set.
+ 
+ 
+  Ancillary Data
+  ==============
+    No ancillary data included in this data set.
+ 
+ 
+  Coordinate System
+  =================
+      The geometry items SC_SUN_POSITION_VECTOR,
+      SC_TARGET_POSITION_VECTOR and SC_TARGET_VELOCITY_VECTOR
+      provided in the label of the data product are relative to the
+      Earth Mean Equator frame of J2000.
+ 
+      SUB_SPACECRAFT_LATITUDE, SUB_SPACECRAFT_LONGITUDE are
+      given in the PLANETOCENTRIC coordinate system. These parameters
+      are corrected for planetary and stellar aberrations.
+      Distances are given in km, angles in degrees.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    Data confidence is nominal, meaning that all data have been
+    validated by the VIR team and found as expected. Any exceptions
+    are noted by the DATA_QUALITY field in the label files.
+ 
+    Following the loss of the 2nd reaction wheel during Vesta departure,
+    Dawn had to rely on the RCS thrusters, rather than reaction wheels,
+    to maintain pointing. While the Dawn system does not employ true
+    dead-banding, the net result of the thruster firings is to introduce
+    pointing offsets of up to +/- 0.64 degrees in +X and +Y, and rates of
+    up to 0.01 degrees/second (or ~ 0.7 VIR pixels/second). The
+    combination of long VIR integration times with large pointing and
+    pointing rate errors complicates interpreting the data acquired as
+    normal spectral cubes. When Dawn is near to Ceres, the timing of
+    the thruster firings is moderately predicable with the most common
+    attitude near one of the deadband limits. When Dawn is far from its
+    selected target the thruster firing is more random and the impact of
+    not being pointed at Ceres nadir is amplified. This is especially
+    apparent in the VIR cubes since each frame of the cube effectively
+    has its own pointing. During Approach and RC3, Ceres is highly
+    distored in the raw data cubes and care must taken to properly
+    correct the geometry when calibrating and interpretting these data.
+ 
+  Review
+  ======
+    These are the same data files that were utilized by the Dawn Science
+    Team. Any errors or deficiencies reported by the Science Team were
+    corrected by the VIR team. Note, however, that the geometry information
+    provided in the PDS labels was updated to reflect the IAU coordinate
+    system updated to Dawn derived pole right ascension and declination
+    values. A full PDS peer review was conducted of all products in this
+    data set.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data coverage is good unless otherwise noted by the DATA_QUALITY
+    keyword.
+ 
+    Dropouts that may be observed in some images are due to instrument
+    saturation. The spectral range in which these dropouts occur varies
+    depending upon exposure duration, target topography, and incidence
+    angle.
+ 
+    The spacecraft safed as it entered the RC3 mission phase. As a result,
+    the cubes in the first rotation of the RC3 Equatorial Limb 001 (South)
+    high phase observations were lost.
+ 
+    The VIR instrument reset in Survey cycles 4 and 8 before any science
+    data were discharged to spacecraft memory so these data were completely
+    lost. Prior to and during the first few orbits of the Survey mission
+    phase, the VIR cryocooler began showing signs of aging. As a result,
+    Survey cycles 5 and 7 were acquired in VIS-only mode with the cryocooler
+    turned off to preserve it for use during the HAMO mission phase.
+ 
+    During the HAMO mission phase, the cryocooler set point was raised from
+    75 deg Kelvin to 80 deg Kelvin to reduce the strain on the cooler. There
+    is a slight decrease in the signal to noise ratio as a result of running
+    the cooler at a warmer temperature. Cycles 3 and 5 of HAMO were acquired
+    in IR-only mode in order to increase the number of IR frames that could
+    be acquired. Orbit 6 of HAMO cycle 1 was also an IR-only orbit. After
+    HAMO sequences were initially built and delivered to the Dawn project,
+    the team decided to reduce the repetition time between frames in each
+    cube. This reduced the size of the gaps between frames within cubes but
+    increased the gaps between cubes.
+ 
+ 
+  Limitations
+  ===========
+    No limitations on these data
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

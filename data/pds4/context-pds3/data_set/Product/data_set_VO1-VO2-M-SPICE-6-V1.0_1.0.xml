@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vo1-vo2-m-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VO1/VO2 MARS SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.viking::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-spice-6-v1.0__browserp_vo1-vo2-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-spice-6-v1.0__browser_vo1-vo2-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-spice-6-v1.0__browser_wgc_vo1-vo2-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VO1/VO2-M-SPICE-6-V1.0</data_set_id>
+        <data_set_name>VO1/VO2 MARS SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2000-05-01</data_set_release_date>
+        <start_time>1976-06-01T00:00:00Z</start_time>
+        <stop_time>1980-09-01T00:00:00Z</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., and C.H. Acton, VIKING ORBITER SPICE KERNELS V1.0,
+            VO1/VO2-M-SPICE-6-V1.0, NASA Planetary Data System, 2000.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the Viking Orbiter 1 and Viking Orbiter 2 spacecraft.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes a substantial collection of navigation and
+            other ancillary data for the Viking Orbiter spacecraft (VO1 and
+            VO2) in the form of SPICE kernels, which can be accessed using
+            SPICE software. The SPICE data contains geometric and other
+            ancillary information needed to recover the full value of science
+            instrument data. In particular SPICE kernels provide spacecraft
+            and planetary ephemerides, instrument mounting alignments,
+            spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes a substantial collection of navigation and
+      other ancillary data for the Viking Orbiter spacecraft (VO1 and
+      VO2) in the form of SPICE kernels, which can be accessed using
+      SPICE software. The SPICE data contains geometric and other
+      ancillary information needed to recover the full value of science
+      instrument data. In particular SPICE kernels provide spacecraft
+      and planetary ephemerides, instrument mounting alignments,
+      spacecraft orientation, spacecraft sequences of events, and data
+      needed for relevant time conversions.
+ 
+      This data set is contained on a single virtual volume, VOSP_1000,
+      including data from most mission phases and covering from
+      1976-06-01 through the end of the mission, 1980-09-01.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or fixed
+      spacecraft and instrument structures. They provide position and
+      velocity, given in a Cartesian reference frame. SPK files are
+      located under the ``data/spk&apos;&apos; directory of this data set.
+ 
+      PCK kernels contain certain physical, dynamical and cartographic
+      constants for target bodies, such as size and shape
+      specifications, and orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos;&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos;&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos;&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the ``data/ek&apos;&apos; directory of this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos;&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock
+      calibration data required to perform a mapping between Ephemeris
+      time (ET) and spacecraft on-board time (SCLK.) SCLK files are
+      located under the ``data/sclk&apos;&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under the
+      ``data/fk&apos;&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of Viking Orbiter kernels
+      included in this data set is provided in the
+      CONFIDENCE_LEVEL_NOTE section of this file while details specific
+      to individual files are found in the ``*info.txt&apos;&apos; files in the
+      corresponding data directory. The most detailed description of
+      the data in each file is provided in metadata included inside the
+      file -- in the description area of text kernels or in the comment
+      area of binary kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read SPICE
+      kernel files. SPICELIB software is highly documented via internal
+      headers. Additional documentation is available in separate ASCII
+      text files called Required Reading files. For example, the S- and
+      P- Kernel (SPK) Required Reading File, named ``spk.req&apos;&apos;, describes
+      use of the SPK kernel file readers and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos;&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos;&apos; directory. For more
+      information about the MGS meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;&apos;.
+ 
+ 
+      Credits
+      =======
+ 
+      NAIF thanks the following people for contributing their data to
+      this data set:
+ 
+      -  K. Edwards, D. Cook, E. Eliason, R. Batson, S. Wu; USGS
+         Astrogeology Brunch
+ 
+      -  E. Guinness and S. Slavney; Washington University
+ 
+      -  M. Caplinger; Malin Space Science Systems
+ 
+      -  M. Davies and T. Colvin; The Rand Corporation
+ 
+      -  T. Duxbury and A. Konopliv; JPL
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This data set contains all Viking Orbiters (VO1 and VO2)
+      navigation and ancillary data that the NAIF group could collect
+      and analyze during a year long restoration that took place in
+      1995-1996. Additional kernels based on the initial versions
+      from 1995-1996 were created by NAIF between 2000 and 2008 and
+      were added to the data set in 2008.
+ 
+      The main goal of this restoration effort was to collect all
+      available VO data of this kind in one place and to make them
+      available to future users in consistent formats as SPICE kernel
+      files. During this process data wasn&apos;t just copied from files
+      in other formats to SPICE files; rather analysis of the data
+      quality and consistency was done. When the same kinds of data
+      were obtained from different sources they were compared and
+      the results of these comparisons were reflected in data files
+      and related documents. Also, some brand new data (spacecraft
+      orbit data) were obtained.
+ 
+      In particular the following results of this work can bring
+      improvements to future VO imaging data interpretation:
+ 
+      -  newly reconstructed VO trajectory for the primary, extended
+         and continuation mission phases which provided more accurate
+         VO trajectory in comparison with orbits determined during
+         the Viking era,
+ 
+      -  results of VO image time tags quality and reliability
+         analysis and of an attempt to correct some of these tags based
+         on this analysis;
+ 
+      -  an extensive set of VO orientation data including both the
+         original data produced by the Viking Project and the
+         orientation corrections done by some science groups as the
+         result of cartographic analysis.
+ 
+      Some general information about this data set follows here,
+      but the prospective user is also referred to extensive
+      descriptions about each file that are stored inside each kernel
+      file. These metadata provide detailed information regarding
+      the information source from which the data were derived, the
+      type of processing applied to the source data, applicability
+      of the data, etc. Metadata are located in the ``comment area&apos;&apos;
+      for binary kernel types (SPK, CK, ESQ), accessible using either
+      the COMMNT or SPACIT utility program found in the NAIF Toolkit.
+      Metadata are located after ``\begintext&apos;&apos; markers within the
+      text kernel types (PCK, IK, LSK, SCLK), accessible by
+      using any available text file display tool such as a word
+      processor, text editor, or the unix ``more&apos;&apos; or ``cat&apos;&apos;
+      commands.
+ 
+ 
+      SPK Files
+      =========
+ 
+      Two kinds of SPK files are provided in this archive: SPK files
+      for the spacecraft orbit and an SPK file for Phobos, Deimos,
+      Mars, Earth and the Sun.
+ 
+      Spacecraft Orbit SPK Files
+      --------------------------
+ 
+      Two sets of VO trajectory data are available in SPICE SPK
+      format -- trajectory data from the ``original&apos;&apos; SEDR (Supplemental
+      Experiment Data Record) generated by the Viking Project and
+      VO spacecraft trajectories reconstructed by A. Konopliv, JPL
+      in 1995.
+ 
+      Data from the first set were actively used during the last 20
+      years by different groups working on Viking Orbiter images
+      registration -- USGS Astrogeology (R. Batson, S. Wu), Rand
+      Corporation (M. Davies,T. Colvin), Malin Space Science Systems
+      (M. Caplinger) and others. The information from this set was
+      also stored in multiple derived products at USGS, Flagstaff
+      and the PDS Geosciences node at Washington University, St.
+      Louis.
+ 
+      The second set, Konopliv&apos;s, became available only a short time
+      ago as the result of orbit restoration using Viking Project
+      era tracking data and the latest Mars gravity model. Unfortunately
+      no tracking data for the VO1 survey mission were available at
+      the time of restoration efforts. Therefore, Konopliv&apos;s data
+      covers all mission phases (till the end of 1978) excepting the
+      survey phase for both V01 and VO2.
+ 
+      Konopliv&apos;s trajectory solutions, generated years after the end of
+      the mission using a substantially better Mars gravity field
+      model, are definitely more accurate for some intervals during the
+      mission. Unfortunately, this is not true for the whole mission
+      because for some periods data about propulsive maneuvers was not
+      used and/or trajectory was extrapolated over large periods of
+      time without tracking data, resulting in a great reduction in
+      accuracy. For a more detailed comparison of the two solutions
+      refer to the ``vo_spks.txt&apos;&apos; document provided in this data set.
+ 
+      Solar System Body SPK File
+      --------------------------
+ 
+      The file ``mar033.bsp&apos;&apos; contains the latest (as of the publishing
+      date of this data set) ephemeris data for Mars, Phobos, Deimos,
+      Earth and the sun. Formal one-sigma accuracy information for
+      Phobos and Deimos are reported as follows:
+ 
+         Body         Downtrack      Crosstrack      Radial
+                     Uncertainty     Uncertainty   Uncertainty
+         ------      -----------     -----------   -----------
+         Phobos         15 km           7 km          3 km
+         Deimos         30 km          16 km          3 km
+ 
+      Accuracies for Mars-Sun and Mars-Earth directions (positions
+      obtained from SPK files) are at the level of 0.001 arc-sec (1
+      sigma).
+ 
+      NAIF did not attempt to reconstruct and/or capture the planet and
+      satellite ephemeris data used during and after the VO mission
+      because the latest ephemeris data provided in this data set is
+      definitely more accurate and, therefore, supersedes earlier
+      ephemeris solutions.
+ 
+      Additional information about SPK files provided in this data set
+      is available in the file ``data/spk/spkinfo.txt&apos;&apos;.
+ 
+ 
+      CK Files
+      ========
+ 
+      All CK files provided in this data set contain orientation of the
+      VO1 or VO2 instrument scan platform with respect to the B1950
+      inertial frame.
+ 
+      This orientation was calculated from the following source data
+      sets representing VO camera orientation:
+ 
+         -- combination of the image orientation data from the
+            original VO SEDR data set generated by the Viking Project
+            and Viking Image Geometry (GEM) data set produced by
+            K. Edwards of the USGS;
+ 
+         -- orientation of the images registered by M. Davies of the
+            Rand Corporation;
+ 
+         -- orientation of the images registered by R.M. Batson of
+            the USGS Astrogeology Branch;
+ 
+         -- orientation of the images registered by S. Wu of the USGS
+            Astrogeology Branch;
+ 
+         -- orientation of the images registered by Malin Space Science
+            Systems company (M. Malin, M. Caplinger) using automatic
+            and manual registration methods;
+ 
+      The orientation in the CK files was computed by excluding the
+      transformation from the platform frame to each camera frame (this
+      transformation was defined for each camera by a set of camera
+      mounting alignment angles) and merging the platform orientation
+      data sets calculated from camera A and camera B orientation
+      together.
+ 
+      Though the CK files generated using the first of the five source
+      data sets listed above --  SEDR/GEM set -- are the most complete,
+      the CKs containing the orientation that came out of the several
+      image registration processes are probably more accurate.
+ 
+      The orientation correction resulting from image registration
+      was applied to orientation on each camera independently and
+      it&apos;s quite possible that the constraint of constant relative
+      alignment of the cameras was not taken into account during
+      this process. That could cause inconsistency between orientation
+      points on one orbit submitted by two cameras when the data is
+      merged together.
+ 
+      In addition to that the USGS approach for cartography and image
+      registration was to assume that all the error in registering
+      images to a base map was due to camera pointing and these were
+      updated to match the base map in use. If however, the error was
+      due to an orbit error, then it seems that using both an updated
+      camera pointing (c-matrix) and an updated orbit position could
+      re-introduce errors. For this reason, using inconsistent kernels
+      -- CK containing pointing adjusted based on old trajectory and
+      SPK containing new trajectory -- can re-introduce error. Refer to
+      the meta-kernels provided in the ``extras/mk&apos;&apos; directory for the
+      lists of kernels can be used together to achieve consistent
+      geometry results.
+ 
+      The CK files from the initial set produced in 1996-1997 and
+      archived in 2000 were Type 1 CK files. These CK files proved to
+      be unusable with the high-level APIs of the Frames Subsystem of
+      SPICE. The set of Type 2 CK files containing the same orientation
+      data and eliminating the usage deficiency of the Type 1 files was
+      added to the data set in 2008.
+ 
+      Caution on Using CK Files
+      -------------------------
+ 
+      While not a data accuracy issue, the CK user is nevertheless
+      cautioned to understand and properly use the ``found_flag&apos;&apos; and
+      tolerance arguments that are inputs to the CK reader routine
+      provided in the SPICE Toolkit. Descriptions about how to read
+      CK files are found in the CK reader routine headers (top of
+      the source code files) and in the ``CK Required Reading&apos;&apos;
+      document; these are contained in each SPICE Toolkit package.
+ 
+      Additional information about CK files provided in this data set
+      is available in the file ``data/ck/ckinfo.txt&apos;&apos;.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;&apos;
+      bodies such as Mars, Phobos and Deimos. A description of these
+      data items and reference to their source is provided inside
+      the PCK file, which is a simple text file that can be viewed
+      using any word processor, text editor or text display utility.
+      In most cases the data for the PCK provided in this archive
+      are official IAU/IAG/COSPAR values accepted in 1994.
+ 
+      NAIF did not attempt to reconstruct and/or capture the planet and
+      satellite constants used during and after the VO mission
+      because the latest constant values provided in this data set are
+      definitely more accurate and, therefore, supersede earlier values.
+ 
+      Additional information about PCK files provided in this data set
+      is available in the file ``data/pck/pckinfo.txt&apos;&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      Frames kernel files provide specifications for how one reference
+      frame is defined relative to another frame. The VO FK files
+      provided in this data set contains a complete set of frame
+      definitions for the spacecraft, its structures such as instrument
+      platform, and all of its science instruments. Meta information
+      provided in the comments included in this file consists of the
+      frame definitions, description of the frame relationships, source
+      of and accuracy of the mounting alignment information, etc.
+ 
+      Additional information about FK files provided in this data set
+      is available in the file ``data/fk/fkinfo.txt&apos;&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      Instrument kernel files provide specifications for field-of-view
+      size, shape and orientation for the named instrument. In this
+      data set the IK files also provide instrument mounting alignment
+      data. Metadata describing these parameters are provided in
+      each IK file included in this archive.
+ 
+      This data set contains IK files for four VO instruments --
+      the Visual Imaging Subsystem Cameras A and B (VISA and VISB)
+      of VO1 and VO2. The mounting alignment and FOV data stored in
+      the IK files for these instruments was extracted from the SEDR
+      data.  An additional set of mounting alignment information
+      provided by T. Duxbury of JPL was included in the comment
+      section of the files. There were no known accuracy estimates
+      for this data at the time of this archive preparation.
+ 
+      Additional information about IK files provided in this data set
+      is available in the file ``data/ik/ikinfo.txt&apos;&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data
+      needed for converting time measurements between ephemeris time
+      (ET) and spacecraft clock time (SCLK).
+ 
+      NAIF was not able to locate a data product containing this
+      mapping of the VO on-board clocks to ET that was generated
+      during or after the mission. Since supporting SCLK time was
+      still necessary for tagging data in the CK files, two SCLK
+      files representing fictitious on-board clocks counting
+      milliseconds since the beginning of the mission were created.
+      These files are included in this data set to facilitate access
+      to the CK data.
+ 
+      During the VO data restoration, NAIF analyzed and attempted
+      to correct some of the VO image time tags. The results of this
+      activity were captured in the EK and SCLK files. However the
+      SCLK time based on this correction was not used to tag data
+      in the CK files.  For more information regarding VO image time
+      analysis and restoration refer to the ``vo_time.txt&apos;&apos; and
+      ``vo_trec.txt&apos;&apos; documents provided in this data set.
+ 
+      Additional information about SCLK files provided in this data set
+      is available in the file ``data/sclk/sclkinfo.txt&apos;&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;&apos;
+      and some other terms used in converting time measurements
+      between ephemeris time (ET) and Universal Time (UTC). ``Spacecraft
+      Event Time&apos;&apos; (SCET) is the commonly used name for UTC events
+      measured at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed
+      is contained inside the LSK text file. The time conversion
+      provided by SPICE LSK files is accurate to approximately
+      0.000030 seconds.
+ 
+      Additional information about LSK files provided in this data set
+      is available in the file ``data/lsk/lskinfo.txt&apos;&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      Two kinds of Events kernel (EK) files are included in this
+      archive: VO image and ancillary data catalogs and EK files
+      containing results of the image time tags analysis and
+      reconstruction.
+ 
+      The VO images catalog files capture the original meta information
+      for VO camera images present in the SEDR and in the VO Image
+      catalog maintained by Washington University, St.  Louis. This
+      information is included in this SPICE data set for reference
+      purposes.
+ 
+      The VO image time tag and time tag reconstruction EK files
+      contain results of VO image time tag analysis and correction
+      performed by NAIF as a part of the VO restoration. Refer to
+      the ``vo_time.txt&apos;&apos; and ``vo_trec.txt&apos;&apos; documents provided
+      in this data set for more information about
+      these results.
+ 
+      Additional information about EK files provided in this data set
+      is available in the file ``data/ek/ekinfo.txt&apos;&apos;.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>PSCM-00036</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

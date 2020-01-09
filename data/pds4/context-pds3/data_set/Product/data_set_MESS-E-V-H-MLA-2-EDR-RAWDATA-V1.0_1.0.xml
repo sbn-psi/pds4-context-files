@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-mla-2-edr-rawdata-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER E/V/H MERCURY LASER ALTIMETER 2 EDR RAW DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mla.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mla-2-edr-rawdata-v1.0__browserp_mess-e-v-h-mla-2-edr-rawdata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mla-2-edr-rawdata-v1.0__browser_geo_mercury_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mla-2-edr-rawdata-v1.0__dvo_geo_mess-e-v-h-mla-2-edr-rawdata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cavanaugh, J.F., J.C. Smith, X. Sun, A.E. Bartels, L. Ramos- Izquierdo, D.J.
+                   Krebs, A.M. Novo-Gradac, J.F. McGarry, R. Trunzo, J.L. Britt, J. Karsh, R.B.
+                   Katz, A. Lukemire, R. Szymkiewicz, D.L. Berry, J.P. Swinski, G.A. Neumann, M.T.
+                   Zuber, and D.E. Smith, The Mercury Laser Altimeter instrument for the MESSENGER
+                   mission, Space Science Reviews, 131, 451-479, 2007.
+            </reference_text>
+            <description>reference.CAVANAUGHETAL2007</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Neumann, G.A., J.F. Cavanaugh, X. Sun, E. Mazarico, D.E. Smith, M.T. Zuber, D.
+                   Mao, D.A. Paige, S.C. Solomon, C.M. Ernst, and O.S. Barnouin, Bright and dark
+                   polar deposits on Mercury: Evidence for surface volatiles, Science, 339,
+                   296-300, 2013.
+            </reference_text>
+            <description>reference.NEUMANNETAL2013</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H-MLA-2-EDR-RAWDATA-V1.0</data_set_id>
+        <data_set_name>MESSENGER E/V/H MERCURY LASER ALTIMETER 2 EDR RAW DATA V1.0</data_set_name>
+        <data_set_release_date>2015-03-06</data_set_release_date>
+        <start_time>2004-09-13</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>GREGORY NEUMANN</producer_full_name>
+        <citation_text>
+            G. A. Neumann (GSFC), MLA raw (EDR) DATA E/V/H V1.0, NASA
+            Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            The MESSENGER MLA raw observations consist of laser ranges and
+            instrument data collected by the MLA instrument during fly-by and
+            orbital operations of Mercury. Also included are observations of
+            Earth and Venus for calibration purposes.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== This data set consists of the MESSENGER Mercury
+            Laser Altimeter (MLA) uncalibrated observations, also known as
+            Experiment Data Records, or EDRs. The MLA is a solid-state pulsed
+            laser that measures the distance between the spacecraft and the
+            surface of Mercury. There are three EDR data products,
+            MLASCIENCERAW, MLASTATUS, and MLAHDIAGNOSTIC, including the laser
+            ranges, instrument status, and hardware diagnostic information.
+        </abstract_desc>
+        <data_set_desc>
+ 
+   Data Set Overview
+   =================
+     The data set consists of uncalibrated observations, also known as EDRs.
+ 
+     The MLA EDR products are grouped together into one data set.  Within
+     that data set, there are three EDR data products.  Each MLA EDR data
+     product consists of two files.  One contains the data itself, and is
+     arranged in a PDS compliant binary table file.  The other is a PDS
+     label file that describes the content of the table file.  The label
+     file defines the start time and end of the observation, product
+     creation time, etc.  The label file also describes the different fields
+     within the table.
+ 
+     During the Mercury Orbit mission phase, a single data file will contain
+     the observations obtained in one orbit of the spacecraft around
+     Mercury.  Prior to the Mercury Orbit mission phase, a single data file
+     will aggregate the observations such that all data within the file are
+     taken during the same year, month, day, and hour, an efficient way to
+     archive data resulting from instrument commands that would turn the
+     instrument on, generate data for upwards of several hours, and then
+     turn the instrument off.
+ 
+     In addition to the science data, associated instrument parameters are
+     included.
+ 
+   Instrument Overview
+   ===================
+     The Mercury Laser Altimeter (MLA) uses a solid-state pulsed laser to
+     measure the distance between the spacecraft and the surface of
+     Mercury.  This will allow the science team to take detailed
+     measurements of Mercury&apos;s shape and surface structure.  The MLA is a
+     bi-static system, meaning that it consists of separate transmitter and
+     receiver systems.
+ 
+     See the MLAINST.CAT file for more information and [CAVANAUGHETAL2007]
+     for full details.
+ 
+   Calibration Overview
+   ====================
+     The EDR data set is NOT calibrated; it only provides the uncalibrated
+     sensor measurements.
+ 
+   Parameters
+   ==========
+     The principal parameters when observing with the MLA are as
+     follows:
+ 
+     * MLA_GOTO_KEEP_ALIVE: This parameter transitions the instrument to
+     low-power mode where only the CPU, the Analog Electronics Module, and
+     the laser diode&apos;s thermo-electric cooler are powered.
+ 
+     * MLA_GOTO_STANDBY: This parameter transitions the instrument to a
+     state similar to the Keep-Alive mode, except the Range Measurement
+     Unit is also powered. Laser firing may also be enabled in Standby
+     mode in order to perform calibration and ranging experiments under
+     manual control, which would otherwise be overridden by the Science
+     mode algorithms. The mla_hw_diagnostic_tlm_enable,&apos;LITE&apos; command may
+     be used in Standby mode to provide full-rate uncompressed telemetry.
+ 
+     * MLA_GOTO_SCIENCE: This parameter transitions the instrument to a
+     state similar to the Standby mode, except the laser power supply is
+     on and the laser fires. The Science task provides variable-rate,
+     partially-compressed RMU data at 1 Hz.
+ 
+     The Science algorithm automatically sets parameters associated with
+     acquisition of laser ranges; these parameters can be manually set.
+     The MLA also includes modes for testing the instrument and
+     maintenance activities.  Analog and status telemetry data may be
+     generated at a prescribed time interval in any instrument mode.
+ 
+   Data
+   ====
+     The three EDR data products are described as follows:
+ 
+     Science (RAW) EDR contains the ranging information as collected by the
+     instrument in Science mode.  Designated as raw science data as none of
+     the values have been calibrated or converted into engineering units.
+ 
+     Status (STATUS) EDR contains the instrument status information, such as
+     voltages, temperatures, and timing parameters.  Note that the
+     measurements such as voltage and temperature values are stored in the
+     EDR as the original telemetry counts sampled at multi-second intervals.
+ 
+     Hardware Diagnostic Lite (HAD) EDR contains diagnostic information
+     about the instrument and background brightness information from the
+     detector at 8-Hz resolution.  It is designated as Lite because the EDR
+     is obtained from the lite version of the hardware diagnostic telemetry
+     packet.  This differentiates it from the full version of the packet,
+     which contains more diagnostic fields, but will not be utilized during
+     the course of the mission due to bandwidth limitations.  As with the
+     other MLA EDRs, all values are the original telemetry counts. Each 1-s
+     Science EDR is broken into 8-Hz records, one for each laser shot.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+   Confidence Level Overview
+   =========================
+     This EDR release extends the previous TEST data set with the first
+     altimetry science measurements of a solid body (Mercury). The laser
+     altimeter range is limited to distances less than 1800 km, and neither
+     the Earth nor Venus were suitable targets during cruise. Earlier data
+     were primarily for use in calibration and monitoring of performance.
+     When enabled, the detector continuously triggers on optical signals
+     passing through the receiver telescope at a roughly
+     exponentially-increasing rate with optical power, at any given
+     threshold, making it useful as a &apos;one-pixel camera&apos; with a very narrow
+     spectral bandwidth and a 400-microradian field of view. The Range
+     Measurement Unit operates at 8 Hz, so that scanning across the
+     illuminated surface of a target in a raster pattern provides a
+     boresight calibration. In addition, triggers may be received from
+     Earth-based lasers within a 14-ms subinterval of each 8-Hz cycle, so
+     that the time-of-flight may be measured repeatedly.
+ 
+     The MESSENGER spacecraft employs an ovenized, quartz-crystal-based
+     oscillator whose frequency is stable to a few parts per trillion over
+     the course of an hour.  The MLA acquires its time base from the
+     spacecraft via a one-pulse-per-second (1PPS) tick along with the
+     corresponding mission elapsed time (MET) message over the data bus. The
+     1PPS signal uncertainty during ground testing was 0.021 ms. The 1 PPS
+     offset, and the offset between the MLA event time reference and the
+     1PPS, are very stable over short intervals of time. The latter is
+     monitored by the instrument at 125-ns resolution. While the spacecraft
+     clock can be related to the MLA timing only to tens of microseconds in
+     an absolute sense, over intervals of an hour or so they are precisely
+     coupled. When laser firing is enabled, the time of fire is recorded and
+     may be matched with pulses received at at an earth station. Transmit
+     and receive times may be correlated on the ground to measure the
+     effective 2-way time-of-flight and clock drift. The resolution of the
+     MLA timing measurement is roughly 400 ps, and the demonstrated overall
+     precision of an individual time-of-flight measurement between MLA and
+     Earth is approximately 0.65 ns (20 cm) root-mean-square, owing to
+     signal variations and atmospheric delays. Ranging to planetary surfaces
+     will entail additional error sources related to terrain effects acting
+     on a finite-sized laser footprint, but will approach 20 cm precision
+     under optimal conditions for triggers on Channel 1.
+ 
+     To ensure accurate altimetric measurements, the absolute time
+     correlation of the spacecraft clock is maintained to better than 1 ms
+     via radio tracking, while the spacecraft position is known to better
+     than a few tens of meters during cruise, and even better while in
+     orbit. The main source of uncertainty in targeted observations is the
+     MLA boresight vector, since geolocation multiplies the optical range by
+     the direction cosines of this vector with respect to an inertial
+     reference system. The spacecraft attitude control and knowledge is
+     derived from an inertial measurement unit and star trackers, whose
+     performance is monitored by instrument calibrations. The MLA scans of
+     Earth and Venus have characterized the boresight alignment repeatedly
+     during cruise, and on two occasions, the MLA laser beam has been
+     observed on Earth, providing an improved laser boresight vector.
+     Further tests during cruise will confirm the current system attitude
+     knowledge, which at present is known to be repeatable to within 50
+     microradians from day to day.
+ 
+   Calibration Observations During Cruise
+   ======================================
+     On May 27 and 31, 2005, two-way detection of laser pulses was achieved
+     at a distance of 24 million km between MESSENGER and Earth. In the
+     weeks prior to detection, passive scans of Earth were conducted to
+     refine the MLA pointing with respect to the spacecraft reference
+     frame. The two-way detection was the first successful end-to-end test
+     of the MLA hardware in space.
+ 
+     A total of 40 MLA downlink pulses were detected at the NASA Goddard
+     Geophysical and Astronomical Observatory (GGAO), and 90 uplink
+     observations were obtained during observing sessions on 27 and 31 May
+     2005. The uplinks were relayed to Earth in the hardware diagnostic
+     packets, along with the laser transmit timing. Ranging analysis
+     established that these uplinks corresponded to the times of fire of a
+     16-mJ laser operating at 240 Hz at GGAO. Although tens of thousands of
+     noise triggers were also received, a dozen or more uplink triggers were
+     obtained within a 10-second interval on May 27. No clear uplinks were
+     seen on May 31. The uplinks on May 27 showed several cases where the
+     MLA coarse clock counter recorded the 200-ns clock edge following the
+     trigger. After correcting for the 200-ns offset, these triggers match
+     the predicted time of arrival of ground pulses.
+ 
+     During the second Venus flyby, 5 June 2007, the hardware and flight
+     software were exercised to produce the first targeted science
+     observations of the cloudy atmosphere of Venus. The performance of the
+     instrument and flight software were nominal, but no returns from the
+     surface were seen, owing to the strong absorption of 1064-nm light by
+     the CO2 atmosphere. Although many detector triggers occurred while the
+     laser beam was directed at Venus, and possibly significantly greater
+     numbers of triggers at altitudes where previous experiments had
+     inferred H2SO4 droplets, a clearly-resolved layering of clouds was not
+     seen in the data. While laser altimeters can be designed for
+     atmospheric studies, the Venus clouds were probably too diffuse for the
+     relatively short MLA laser pulses and detector subsystem time
+     constants.
+ 
+     During the week of 17-24 June 2007, several attempts were made to repeat
+     the two-way ranging experiment at a distance greater than 100 million
+     kilometers. All instrument data were acquired as planned and there were
+     no anomalies. Passive detection of earthshine verified the pointing of
+     the MLA instrument, but active detection of a 48-Hz, 250-mJ pulsed
+     laser at GGAO was not achieved. Detection of the MLA laser on the
+     ground using a photon-counting detector could not be confirmed.
+     Alignment problems related to the relatively large velocity aberrations
+     for interplanetary trajectories together with problems in the ground
+     telescope control systems and poor visibility during part of the week
+     hampered this effort.
+ 
+   Mercury Flyby 1 Observations
+   ============================
+     The MLA was turned on two days in advance of the flyby so as to warm up
+     to operating temperature and configure instrument parameters. Using a
+     stored command to enter Standby Mode, the instrument range measurement
+     unit was powered on 45 minutes prior to the flyby closest approach
+     (CA). At 2 minutes and 40 seconds prior to CA, MLA entered Science Mode
+     and the laser commenced firing 43 seconds later as diode current
+     reached operational level. Science data were collected until 9 minutes
+     after CA. Altimetric measurements commenced at a range of 600 km and a
+     laser incidence/emission angle of 71 degrees. Pointing of the
+     spacecraft to nadir was achieved well after CA, by which time ranges
+     were increasing above 1000 km. MLA demonstrated ability to range with
+     more than 50% probability of detection when operating at nadir below
+     1200 km, and usable ranges were acquired at more than 1600 km. The
+     precision of measurement is greatest at nadir, where the least
+     spreading of the laser footprint and reflected pulse occurs. A pair of
+     threshold measurements are made independently for such pulses, which
+     allows the estimation of pulse energy. Such paired returns were
+     obtained out to 1400 km, after which the 1/R^2 decline in signal
+     strength prevented triggers at the higher threshold. A total of 5537
+     altimetric ranges were obtained during the flyby.
+ 
+     Nine days following the flyby, passive scan observations of the
+     half-moon illuminated shape of Mercury were performed, as well as a
+     dark noise-vs- threshold test. The instrument was then commanded off.
+     These observations served to improve the calibration of the detector&apos;s
+     response to Mercury surface conditions and verified the
+     spacecraft-instrument alignment.
+ 
+   Mercury Flyby 2 Observations
+   ============================
+     Several months prior to the flyby, a sequence was tested that commanded
+     the MLA to use the MP-B clock signal for its range measurement
+     hardware. This successful test corrected the previous use of the coarse
+     oscillator signal during flyby 1 and ensured accurate ranging and
+     timing. Otherwise, Flyby M2 operations were identical to those of Flyby
+     M1. The MLA ranged to the surface successfully for nearly 12 minutes,
+     during which period 4388 successful ranges were taken, more than half
+     of which triggered on more than one channel. Instrument health and
+     sensitivity has been unchanged since launch. Passive scan observations
+     of the half-moon illuminated shape of Mercury were performed after
+     Flyby 2, with nearly identical results.
+ 
+   Mercury Flyby 3 Observations
+   ============================
+     Mercury Flyby 3 was aborted 21 seconds prior to MLA entering Science
+     Mode. While the spacecraft was quickly recovered and the primary goal
+     of the flyby was achieved, placing MESSENGER in position for its final
+     encounter, the laser did not fire, and no science data were obtained.
+     Prior to that time, and during the passive scan that followed a few
+     days later, the operation of the instrument was nominal, and the
+     alignment of the detector field of view remains close to that of the
+     earlier flybys.
+ 
+   Mercury Orbital Flight tests
+   ============================
+     MLA was operated for several days in August 2010 in Science Mode as an
+     orbital simulation by the Project, firing into space. No ranges were
+     collected. In February 2010, attempts to communicate by firing the MLA
+     laser at the 1-m GLAS instrument on the ICESAT mission were
+     unsuccessful, owing to difficulties in pointing the GLAS boresight
+     toward MLA using the spacecraft inertial reference system. A subsequent
+     test was canceled due to more urgent orbital flight test preparations.
+ 
+   Mercury Orbit Cycle 1
+   =====================
+     Spacecraft constraints naturally divide MLA observations into periods
+     of operation, or cycles, of approximately one Mercury year or 88 Earth
+     days. As the MESSENGER orbital plane is inertially fixed in space, the
+     orbit plane rotates with respect to the direction of the Sun. The
+     spacecraft maintains its +Y (sunshade) axis within a few degrees of
+     the Sun at all times (the Solar Keep-In constraint). Thus the +Z (nadir)
+     instrument deck may only maintain nadir attitude during the dawn-dusk
+     orbital phase, and may only point nadir during the highest latitude
+     portion of the noon-midnight orbital phase. The SKI constraint forces
+     a cycle of offnadir attitude and poor equatorial coverage to nadir
+     attitude at low latitudes back to offnadir ranging, limiting
+     equatorial coverage. When crossing the perihermian sunlit face or
+     hot pole of Mercury at closest approach, temperatures spike and
+     operation ceases due to fault protection, ending a three-month cycle.
+     Orbital altimetric ranging began on March 29, 2011, until eclipse
+     conditions precluded instrument operations on May 24. A total of 113
+     ranging orbits comprise the first cycle. No data were lost due to
+     instrument anomalies, however, much of the time, ranging to
+     the planet at large emission angles reduced the probability of
+     detection of ground returns substantially. Where conditions are optimal
+     (dawn-dusk orbit, no targeting slews), ranges were obtained nearly to
+     the 1800-km hardware limit, with a probability of return dependent on
+     distance and incidence angle to the surface. Profile data over steep
+     features such as craters will have better or worse coverage depending
+     on the local slope of the target.
+ 
+   Mercury Orbit Cycle 2
+   =====================
+     Operations resumed on 2011-06-07 and continued to 2011-08-19.
+     Because of spacecraft thermal issues as well as the eclipse, MLA
+     operations were suspended for two weeks during which nadir attitude
+     could not be sustained. At the end of this period the MLA instrument
+     deck temperature reached 44.7 degC, only 0.3 degC below the Fault
+     Protection threshold. MLA was not at risk as it was not actively
+     ranging, but the RF Phased Array temperatures also precluded nadir
+     pointing. A total of 147 orbits produced useful ranges, and
+     performance was nominally the same as during the previous cycle.
+     During the next Orbit Cycle however the laser pump diode switchout
+     time, a measure of the time required to produce a laser pulse,
+     started to increase. It is believed that extreme temperatures may
+     have led to contamination in the laser path. The laser energy output
+     measurement did not show an immediate effect but the average pulse
+     energy return as a function of distance declined somewhat.
+ 
+   Mercury Orbit Cycle 3
+   =====================
+     Operations resumed on 2011-09-03 and continued through 2011-11-15,
+     for a total of 149 ranging orbits, completing the first Mercury year of
+     spacecraft orbital operation. PDS delivery 7 contained 67 orbits.
+     During this cycle the orbital periapse passes continued to maintain
+     nadir attitude, within constraints, with the exception of a few
+     high-priority targeted requests by other teams. The nadir attitude and
+     orbital inclination limited polar ground track coverage to latitudes
+     less than approximately 83.5 degrees N. Offnadir slews toward the pole
+     commenced on Sept. 29, 2011, soon reaching to 88 degrees N. Latitude.
+ 
+   Mercury Orbit Cycle 4
+   =====================
+     Operations resumed on 2011-12-11 and continued through 2012-02-11,
+     with the orbital height and periapse latitude rising so as to preclude
+     any further observations of the southern hemisphere.
+ 
+   Mercury Orbit Cycle 5
+   =====================
+     Operations resumed on 2012-02-27 and continued through 2012-04-16,
+     ending the Primary Mission, and extending observations of the northern
+     smooth plains into the large Prokofiev and Kandinsky craters. Reflective
+     anomalies identified as surficial water ice were discovered in areas
+     of permanent shadow by the active radiometric measurement of MLA
+     [NEUMANNETAL2013], corroborated by Neutron Spectrometer data.
+ 
+   Mercury Orbit Cycles 6 onward
+   =============================
+     Operations resumed on 2012-04-23 after the orbit was lowered to an
+     eight-hour period, resulting in slightly more terrain coming within
+     operating range and more frequent observations overall. However the
+     periapse altitude and the argument of periapsis increased slowly,
+     restricting the latitude of coverage to regions northward of the
+     tropics. Heating of the spacecraft in the more frequent crossings of
+     the Mercury hot poles precluded some observations. Thermal degradation
+     of the MLA laser continued and some adjustments of operation were
+     required, such as powering off completely to maximize the cooling of
+     the instrument through passive radiation. Thermal extremes, together
+     with the declining laser health, caused intermittent laser firing.
+     An issue with laser fire time data is discussed below under Events.
+     Weak and intermittent laser output degrades ranging accuracy somewhat.
+     By the end of Cycle 15, the orbital latitude and altitude at periapse
+     decreased owing to solar tidal perturbations. By the end of Mercury
+     Orbit Year 3, some altimetric ranging commenced at latitudes of 10
+     degrees North. As of June 2014, the minimum spacecraft altitude was
+     between 115 and 155 km, controlled by propulsive maneuvers, allowing
+     ever-closer observations of the surface and improving MLA link.
+ 
+     Earth ranging experiments were conducted on the last days of January
+     2014 in an attempt to detect pulses at a range approaching 1 AU, and
+     provide a further calibration of the MLA boresight. The results of
+     this experiment were too inconclusive to report at this time.
+ 
+   Review
+   ======
+     This archival data set has been approved by the Instrument Scientist.
+     The final data set, including calibrated and reduced data records, will
+     be examined by a peer review panel prior to its acceptance by the
+     Planetary Data System (PDS). The peer review will be conducted in
+     accordance with PDS procedures.
+ 
+   Data Coverage and Quality
+   =========================
+     Data reported are the minimally processed data received from the
+     spacecraft during the mission phases: Launch, Earth Cruise,
+     Venus 1 Cruise, Venus 2 Flyby, Mercury 1 Cruise, Mercury 1 Flyby,
+     Mercury 2 Cruise, Mercury 2 Flyby, Mercury 3 Cruise, Mercury 3 Flyby,
+     Mercury 4 Cruise, Mercury Orbit, Mercury Orbit Year 2,
+     Mercury Orbit Year 3, and Mercury Orbit Year 4. The mission phases are
+     defined as:
+ 
+ 
+     Phase Name Date       Start Date (DOY)   End Date (DOY)
+     --------------------  -----------------  ----------------
+     Launch                03 Aug 2004 (216)  12 Sep 2004 (256)
+     Earth Cruise          13 Sep 2004 (257)  18 Jul 2005 (199)
+     Earth Flyby           19 Jul 2005 (200)  16 Aug 2005 (228)
+     Venus 1 Cruise        17 Aug 2005 (229)  09 Oct 2006 (282)
+     Venus 1 Flyby         10 Oct 2006 (283)  07 Nov 2006 (311)
+     Venus 2 Cruise        08 Nov 2006 (312)  22 May 2007 (142)
+     Venus 2 Flyby         23 May 2007 (143)  20 Jun 2007 (171)
+     Mercury 1 Cruise      21 Jun 2007 (172)  30 Dec 2007 (364)
+     Mercury 1 Flyby       31 Dec 2007 (365)  28 Jan 2008 (028)
+     Mercury 2 Cruise      29 Jan 2008 (029)  21 Sep 2008 (265)
+     Mercury 2 Flyby       22 Sep 2008 (266)  20 Oct 2008 (294)
+     Mercury 3 Cruise      21 Oct 2008 (295)  15 Sep 2009 (258)
+     Mercury 3 Flyby       16 Sep 2009 (259)  14 Oct 2009 (287)
+     Mercury 4 Cruise      15 Oct 2009 (288)  03 Mar 2011 (062)
+     Mercury Orbit         04 Mar 2011 (063)  17 Mar 2012 (077)
+     Mercury Orbit Year 2  18 Mar 2012 (078)  17 Mar 2013 (076)
+     Mercury Orbit Year 3  18 Mar 2013 (077)  17 Mar 2014 (076)
+     Mercury Orbit Year 4  18 Mar 2014 (077)  17 Mar 2015 (076)
+ 
+     Operational periods of the MLA dictated by orbital geometry were:
+ 
+     Start time  (DOY)  End time (DOY)     Purpose
+     -----------------  -----------------  ----------------------
+     2004-232T17:09:06  2004-233T20:09:43  Checkout
+     2005-129T15:10:53  2005-154T23:32:00  Earth ranging
+     2006-249T13:40:54  2006-250T12:26:30  Venus scan
+     2007-073T00:20:55  2007-073T23:15:02  FSW upload
+     2007-146T00:00:53  2007-158T06:51:11  Venus flyby
+     2007-168T06:05:47  2007-176T02:16:46  Earth ranging
+     2008-012T12:00:54  2008-023T12:40:11  Mercury Flyby 1
+     2008-168T19:26:08  2008-189T18:39:50  Cruise test
+     2008-269T23:01:54  2008-290T11:42:57  Mercury Flyby 2
+     2009-259T23:01:00  2009-283T22:50:00  Mercury Flyby 3
+     Mercury Orbit:
+     2011-088T02:04:05  2011-144T10:37:39  Mercury Orbit cycle 1
+     2011-158T00:05:12  2011-231T21:16:56  Mercury Orbit cycle 2
+     2011-246T20:47:32  2011-319T10:22:37  Mercury Orbit cycle 3
+     2011-335T21:48:47  2012-042T16:46:29  Mercury Orbit cycle 4
+     2012-058T21:19:24  2012-107T07:38:15  Mercury Orbit cycle 5
+     2012-114T22:46:30  2012-132T15:20:25  Mercury Orbit cycle 6
+     2012-146T06:58:01  2012-225T23:38:29  Mercury Orbit cycle 7
+     2012-233T15:15:23  2012-313T23:56:04  Mercury Orbit cycle 8
+     2012-321T15:34:12  2012-334T23:44:55  Mercury Orbit cycle 9
+     2012-342T15:43:05  2013-057T00:18:54  Mercury Orbit cycle 10
+     2013-064T16:05:05  2013-144T00:30:38  Mercury Orbit cycle 11
+     2013-152T16:29:53  2013-219T17:08:14  Mercury Orbit cycle 12
+     2013-243T00:57:35  2013-317T17:30:33  Mercury Orbit cycle 13
+     2013-330T17:34:15  2014-040T18:00:22  Mercury Orbit cycle 14
+     2014-058T01:58:46  2014-128T10:37:06  Mercury Orbit cycle 15
+     2014-146T02:37:45  - continuous operation through year 4 in
+     low-altitude campaign.
+ 
+ 
+   Significant Operational Events:
+   ===============================
+ 
+     During Mercury 4 Cruise, propellant tank heating was assisted by
+     powering the instrument on in keep-alive mode. During Mercury_Orbit
+     cycle 1 (first Mercury year) the instrument was powered continuously
+     until the first Mercury eclipse period. During this time the most
+     temperature-sensitive components, the laser oscillator and laser
+     amplifier, remained within operational limits. Fault protection autonomy
+     rule 243 powered the MLA off as the external main body sensor reached
+     40 C, well after the laser had ceased operation. A change request to
+     increase the high limit to 45 C was approved following the first
+     perihelion hot pole phase. All other sensors and power monitors
+     including the laser remained nominal and trending showed no decline in
+     instrument performance. Unlike passive remote-sensing instruments, an
+     altimeter is limited to observations within range of a visible
+     reflective surface. Opportunities for such observations did not occur
+     until the first Mercury flyby on 14 January 2008 at a velocity of
+     approximately 7 km/s. Unlike passive remote-sensing instruments, an
+     altimeter is limited to observations within range of a visible
+     reflective surface. Opportunities for such observations did not occur
+     until the first Mercury flyby on 14 January 2008 at a velocity of
+     approximately 7 km/s, at which time the first-ever observations of the
+     equatorial region of Mercury were obtained along a single,
+     sparsely-sampled profile. Noise returns may outnumber ground signal at
+     the limits of instrument range, especially at high emission angles.
+     Since the data are essentially single independent observations,
+     dropouts or corruption of individual packets will not have a
+     significant scientific impact. No such gaps have been detected.
+ 
+     On 2012-04-16 (day 107) MESSENGER transitioned to an 8-hour orbit,
+     following which MLA was scheduled to range to Mercury three times per
+     day when constraints permit. Ranging was performed from 23 May up to
+     11 May 2012 when it was paused for power reasons during eclipse, and
+     resumed 25 May 2012. A fault protection rule was implemented that
+     prevents ranging when the instrument housing temperature exceeds 30C,
+     to extend the longevity of the instrument, and power cycling was
+     implemented during the hottest portion of the orbital cycle to further
+     mitigate the higher average temperatures experienced during the 8-hour
+     orbit.
+ 
+     In June-August, thermal problems caused the MLA instrument to trigger
+     fault protection rules before acquiring signal. Data in these files
+     contain almost no usable altimetry or radiometry:
+ 
+     MLASCI1206030658.DAT
+     MLASCI1206051512.DAT
+     MLASCI1206061513.DAT
+     MLASCI1206062302.DAT
+     MLASCI1206070702.DAT
+     MLASCI1206080703.DAT
+     MLASCI1206111505.DAT
+     MLASCI1206112306.DAT
+     MLASCI1207130719.DAT
+     MLASCI1207160711.DAT
+     MLASCI1208231543.DAT
+     MLASCI1208222342.DAT
+     MLASCI1208242348.DAT
+ 
+     In mid-July 2012, it was noticed that the data were corrupted
+     for several minutes due to a lack of detection and timing of the laser
+     start pulse, the time origin for MLA time-of-flight measurements.
+     As a result, the start pulse time defaulted to the previous time
+     detected.  A command macro to lower the start pulse detection
+     threshold from 15 to 14 counts was requested on July 30, 2012,
+     as provided for in the instrument design and concept of operations.
+ 
+     On August 3, 2012, a command at the end of DPU power-on macro 22 was
+     uploaded to load the new threshold value into a FSW table. On
+     initialization the science algorithm loads this value into a DAC. This
+     table value does not persist between power cycles so it must be added
+     to the macro for MLA poweron.
+ 
+     During Mercury Orbit cycles 11 and 12, owing to offnadir operation
+     commanded by other instruments, the following data have no usable
+     ground returns:
+ 
+     MLASCI1304280822.DAT
+     MLASCI1306060031.DAT
+ 
+     As noted in the Operational period list of the Data Coverage and
+     Quality section, the instrument has had periods during which data have
+     not been acquired.  Non-operational periods are due to factors
+     including off-nadir passes to accomodate data collection by other
+     onboard instruments, as well as instances in which the instrument is
+     powered off by command due to environmental concerns.  The
+     non-operational periods are as follows:
+ 
+     Start time         End time
+     -----------------  -----------------
+     2004-233T20:09:43  2005-129T15:10:53
+     2005-154T23:32:00  2006-249T13:40:54
+     2006-250T12:26:30  2007-073T00:20:55
+     2007-073T23:15:02  2007-146T00:00:53
+     2007-158T06:51:11  2007-168T06:05:47
+     2007-176T02:16:46  2008-012T12:00:54
+     2008-023T12:40:11  2008-168T19:26:08
+     2008-189T18:39:50  2008-269T23:01:54
+     2008-290T11:42:57  2009-259T23:01:00
+     2009-283T22:50:00  2011-088T02:05:11
+     2011-144T10:40:00  2011-158T00:05:56
+     2011-231T21:16:56  2011-246T20:48:47
+     2011-319T10:22:37  2011-335T21:49:10
+     2012-043T16:46:29  2012-058T21:20:10
+     2012-107T07:38:15  2012-114T22:46:30
+     2012-132T15:20:24  2012-146T06:58:01
+     2012-225T23:38:28  2012-233T15:15:23
+     2012-273T16:01:36  2012-275T05:47:06
+     2012-281T23:29:26  2012-283T15:13:38
+     2012-289T16:00:13  2012-291T00:29:26
+     2012-313T23:56:04  2012-321T15:34:12
+     2012-334T00:02:57  2012-342T15:34:04
+     2012-347T16:11:43  2012-349T07:14:04
+     2012-361T16:13:18  2012-363T04:44:15
+     2013-056T00:29:58  2013-064T15:47:49
+     2013-069T16:33:43  2013-071T07:35:10
+     2013-144T00:30:38  2013-152T16:29:53
+     2013-229T17:08:14  2013-243T00:57:52
+     2013-317T17:30:33  2013-330T17:34:15
+     2014-040T18:00:22  2014-058T01:58:46
+     2014-128T10:37:06  2014-146T02:37:45
+ 
+     Starting in April 2014 orbit maintenance maneuvers were suspended to
+     allow the spacecraft to descend naturally to lower altitudes. This
+     allowed observations at altitudes lower than the design minimum of
+     200 km, while the apoapse altitude remained above 10,000 km.
+     Peak temperatures increased, but coverage of lower latitudes was
+     obtained as the periapse latitude steadily drifted southward. In
+     June, September, October, and January 2015 the altitude was raised
+     by means of propulsive maneuvers to delay impact.
+ 
+     The periapse altitude as low as 24 km produced unusual MLA data at
+     times, with the detectors receiving nearly 100 times the signal as was
+     received at the beginning of this period. Instances of ghosts from
+     channel 2 returns whose pulses were substantially wider than the 60-ns
+     matched filter are seen below 50 km. The ghost profiles hover 2-3 km
+     above the ground while simultaneous channel 1 returns are suppressed.
+     The ghost returns are not fully understood, but sufficient ground
+     returns are obtained on the high threshold channel.
+ 
+     The nonlinear response of detectors and electronics under saturation
+     leads to greater uncertainty in derived data such as the energy return
+     and normal albedo, whose resolution is best at moderate signal
+     strength.
+ 
+   Laser Performance
+   =================
+     Starting with Mercury Orbit cycle 5, laser performance began to show
+     significant degradation in the rapidly changing thermal environment
+     as the spacecraft periapse longitude approaches the Mercury hot pole.
+     During this season, the Radio Transmitter system requires protection as
+     well, resulting in several days when operation ceases entirely.  Near
+     the peak of the hot pole season, when operating outside of its optimal
+     thermal range, the laser sometimes fails to produce a pulse within 255
+     microseconds of optical pumping, at which point the MLA internal
+     protection circuits switch off the pumping diodes.
+ 
+     The lack of laser fires produces gaps in the RDR time series. Such gaps
+     are from one pulse to several minutes of seconds in duration. Thermal
+     management of the instrument environment has mitigated this problem
+     somewhat, but gaps recur at each hot pole season, typically for a few
+     days at the beginning and end of each cycle.
+ 
+     The switchout limit is intermittently exceeded during science passes,
+     when the laser amplifier temperature is below 10 deg. C, and toward the
+     end of some passes over the day side due to excessive heating. The laser
+     output has been is less predictable as time progresses, and thermal
+     excursions are more common in the 8-hour orbit of the extended mission,
+     in which case the laser ceases to fire and the TX_ENERGY data value is
+     zero. Or, the energy is recorded, but the pulse amplitude is too low
+     to be detected by the timing hardware. It is believed that the laser
+     undergoes Amplified Spontaneous Emission (ASE) when it fails to trigger.
+     In this case the energy is recorded but the pulse amplitude is too low
+     to be detected by the timing hardware.
+ 
+     On September 11, 2013, at the request of the MLA team, the detection
+     threshold was again lowered by one count to 13 counts via the DPU
+     power-on macro because of further decline in laser output.
+     The lowered threshold reduced but did not eliminate laser misfires.
+     In its degraded state of operation, the laser may fire pulses with a
+     TX_ENERGY within normal limits (10-20 mJ), and appear to produce valid
+     ranges, but the start pulse time is not recorded correctly.
+ 
+     The symptom of this anomaly is that the STARTPLS_TIME counts and the
+     STARTPLS_WIDTH counts, normally varying from shot to shot, are not
+     updated by the RMU from the previous values when the start trigger is
+     not detected by the RMU. The anomaly is indicated by a flag generated
+     by the RMU that is passed to the FSW. In the HW_Diag_Lite packet,
+     the STARTPLS_INVALID flag is recorded correctly. The FSW Science task
+     was intended to summarize this infrequent event, i.e., when neither the
+     leading nor the trailing edge of the laser pulse is detected, as
+     follows:
+       &apos;The STARTPLS_INVALID telemetry point is defined as:
+        =0 all start pulses for the second were valid.
+        =1 at least one start pulse during the second was invalid.&apos;
+ 
+     After reporting this anomaly it was determined by the software
+     leads that the FSW Science task ignores this flag. It is unclear at
+     what point in the software development cycle this error occurred.
+ 
+     As a workaround, the MLASCICDR ground data processing has been modified
+     to flag repeated timing values by setting the STARTPLS_WIDTH to 99.9 ns
+     and assume that the laser fire occurred within 30 ns of the previous
+     recorded time. The time of flight data, derived from the difference of
+     the start pulse and return pulse times, may be useful in spite of the
+     uncertain origin and drifts only slightly from the true value, but the
+     accuracy is typically no better than about 200 ns or 30 m in range.
+     Thus the following field is recorded in the calibrated data product:
+ 
+      NAME             = STARTPLS_WIDTH
+      MISSING_CONSTANT = 99.9
+      DESCRIPTION      = &apos;Width of transmit laser pulse in nanoseconds, used
+        to determine centroid time of outgoing pulse. A value of 99.9
+        denotes a measurement whose pulse width is invalid.&apos;
+ 
+     In the first year of operation, invalid start times occurred only a few
+     times per orbit and did not affect data quality. In July 2012, they
+     became more frequent, indicating the need to lower the start detection
+     threshold as described above. By the third year of operation in orbit
+     (March 2013) the laser output energy had further declined, resulting in
+     bursts of many seconds where the start pulse time was repeated, but
+     with sufficient energy to produce ground returns. Such ranges are
+     considered more uncertain than most, possibly more than 30 m in error
+     due to the &gt;200 ns variability in start time from shot to shot. The
+     lowering of transmit threshold on September 11, 2013 to 13 counts
+     reduced invalid triggers below 1% but resulted in wider, more variable
+     pulse widths.
+ 
+     Additional periods of calibration activity occurred 29-31 January 2014,
+     during which the Earth was targeted by the MLA boresight and the
+     Earth&apos;s sunlit face was used to align the detector field of view.
+     Hardware diagnostic packets were obtained. As well, a test of the laser
+     transmit threshold was performed.
+ 
+     During Mercury Orbit cycle 15, on 3 March 2014, the transmit threshold
+     was lowered to a setting of 9, or about 32 mV, to mitigate further
+     decline in transmit power. As a result, the outgoing pulse width
+     increased from a typical 15 ns to between 20 and 30 ns, as measured at
+     the threshold voltage, now approximately half the original 61 mV. The
+     laser energy output, as measured on board, continued to decline and the
+     intermittent loss of start pulse triggers continued to increase slowly.
+ 
+     Following OCM-10, on September 19, 2014 the transmit threshold
+     was lowered to a setting of 7, or 22.5 mV. This lowered the rate of loss
+     of start pulse triggers to between 0 and 3%. The outgoing pulse width
+     increased 5 ns on average. A test on June 24 indicated that
+     this is the most sensitive possible setting and that lower thresholds
+     will generate mainly noise triggers.
+ 
+   Limitations
+   ===========
+     Cruise data are primarily for use in calibration and understanding the
+     quality of data received during Mercury orbital operations. The results
+     of the first Mercury flyby used the spacecraft coarse oscillator for
+     timing, whose accuracy is estimated to be within a few parts per million
+     of nominal rate. Observations on Flyby 2 used the more precise time USO
+     reference, correcting an instrument commanding error. A limitation of
+     this data set is that it is minimally processed data. The data are
+     received from the spacecraft telemetry and ingested into a database,
+     whence the instrument data products are extracted and reformatted in a
+     reversible fashion. The accuracy of the data relies on the quality of
+     the Precision Orbit Determination procedures employed, as well as
+     internal crossover analysis and correlation with other datasets, and is
+     expected to improve with time.
+ 
+     Further refinement and resampling of the RDR product will produce
+     the Gridded Data Record (GDR) data products.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

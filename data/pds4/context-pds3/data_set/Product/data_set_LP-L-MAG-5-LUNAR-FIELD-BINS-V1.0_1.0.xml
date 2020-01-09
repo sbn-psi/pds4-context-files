@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-mag-5-lunar-field-bins-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LP MOON MAG LEVEL 5 LUNAR MAGNETIC FIELD BINS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_prospector::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-mag-5-lunar-field-bins-v1.0__browserc_lp-l-mag-5-lunar-field-bins-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-mag-5-lunar-field-bins-v1.0__browserp_lp-l-mag-5-lunar-field-bins-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LP-L-MAG-5-LUNAR-FIELD-BINS-V1.0</data_set_id>
+        <data_set_name>LP MOON MAG LEVEL 5 LUNAR MAGNETIC FIELD BINS V1.0</data_set_name>
+        <data_set_release_date>2003-10-01</data_set_release_date>
+        <start_time>1998-01-16</start_time>
+        <stop_time>1999-07-29</stop_time>
+        <producer_full_name>LON L. HOOD</producer_full_name>
+        <citation_text>not applicable</citation_text>
+        <data_set_terse_desc>
+            LUNAR PROSPECTOR MAGNETOMETER (MAG) LEVEL 3 DATA (CODMAC LEVEL
+            5). REGIONAL FIELD BINS AT THE S/C ALTITUDE.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    Lunar Prospector magnetometer (MAG) Level 3 Data (CODMAC Level 5).
+    Regional Field Bins at the S/C Altitude.  Interpolation
+    and two-dimensional filtering are applied to the Level 2 data to
+    produce gridded field component data files on a surface defined by
+    the slowly varying S/C altitude.  The spatial resolution of the
+    grid is chosen to be much less than the mean S/C altitude.
+ 
+ 
+  Parameters
+  ==========
+    The measured parameters consist of the three vector components
+    of the lunar crustal magnetic field in East, North, and Radial
+    (ENR) coordinates, the field magnitude, and the spacecraft
+    altitude.  The units of the field measurements are nanoTeslas (nT).
+    1 nT = 0.00001 Gauss.  The units of the spacecraft altitude are
+    kilometers (km).  ENR coordinates are centered at the instantaneous
+    spacecraft location with X directed eastward, Y directed northward,
+    and Z directed radial to the Moon.
+ 
+ 
+  Processing
+  ===========
+    Step 1:  A two-dimensional filtering algorithm is applied to
+    final selected LP magnetometer Level 2 orbit segments to produce
+    a gridded file suitable for mapping.  The program first sorts the
+    data into latitude / longitude bins and averages values within
+    a single bin (e.g., 0.5 by 0.5 degrees for data acquired at
+    altitudes near 100 km).  A moving boxcar method is
+    then applied to two-dimensionally filter the mean gridded
+    measurements.  A 5 bin by 5 bin filter size is
+    normally chosen.  This step is repeated twice, separately for
+    each field component and the S/C altitude.  Finally, the
+    resulting field magnitude is calculated from the smoothed
+    component files on the same two-dimensional grid.
+    The resulting two-dimensionally filtered gridded files are
+    the Level 3 data.  They contain latitude, longitude, the
+    field component in nT (or the altitude in km), and the number
+    of data points in each bin.
+ 
+    Step 2:  If a significant longitudinal gap between
+    usable orbit segments is present, linear interpolation between the
+    two nearest orbit segments is applied to create an interpolated
+    orbit segment.  This interpolated segment is then read into the
+    two-dimensional filtering code to fill in the missing grid values.
+    This method is applied only when the gap between usable orbits is
+    smaller than the 5-bin size of the two-dimensional filter.
+ 
+    Step 3:  For visualization purposes, a suitable
+    graphics utility is applied to construct regional shaded contour
+    plots of the vector components of the crustal field, the field
+    magnitude, and the mean S/C altitude.  These are contained in a
+    postscript file that is included with the filtered gridded files.
+    The file naming convention for the postscript files is the same
+    as for data files (see below), but with a .PS extension.
+ 
+ 
+  File Names and Format
+  =====================
+    The two-dimensionally filtered gridded files are named as follows:
+ 
+      For 1998 data:
+ 
+        MAP98_mmp_xxx.TAB
+ 
+      where mm indicates the month (01 for January, etc.),
+            p (optional) indicates the map number for this
+                month,
+            xxx is either RAD, EAS, NOR, TOT or ALT, indicating
+                what type of data are in the file (radial B component,
+                east B component, north B component, total B, or
+                altitude).
+ 
+      For 1999 data:
+ 
+        MAP99_dddp-dddp_xxx.TAB or MAP99_dddp_xxx.TAB
+ 
+      where ddd indicates a day (and thus ddd - ddd is a range of days),
+            p and xxx are as for 1998 data.
+ 
+ 
+    Each file (in ascii format) contains the latitude, east longitude,
+    the field component (or total field, or altitude) at the grid
+    point, and the number of data points in the bin centered at the
+    grid point. The altitude is estimated by subtracting the mean lunar
+    radius (1738 km) from the radial distance of the spacecraft to the
+    lunar center of figure.
+ 
+    The columns in each data file are as follows:
+ 
+      Column 1: Latitude at this grid point (South is negative;
+          North is positive).
+      Column 2: East longitude at this grid point.
+      Column 3: Magnetic field value in nanoTeslas or altitude in
+          kilometers.  The last part of the file name before the dot
+          indicates what is contained in this column (EAS = East field
+          component; NOR = North field component; RAD = Radial field
+          component; TOT = total field; ALT = Altitude).
+      Column 4: Number of data points in this latitude/longitude bin.
+          The bin size can be deduced from the difference between
+          successive latitude and longitude values (e.g., 0.5 degrees
+          by 0.5 degrees for altitudes near 100 km; 0.25 degrees by
+          0.25 degrees for altitudes near 25 km).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+    These data have been examined by the data producer, and as of
+    2003-10-01 are being prepared for peer review by the PDS.
+ 
+ 
+  Limitations
+  ===========
+    The quality of the measurements is a
+    strong function of the spacecraft altitude, which varies from a
+    minimum of about 80 km during the first year of the mission to a
+    minimum of about 15 km during the final six months of the
+    mission.  The best crustal field measurements were therefore
+    obtained during the final &apos;&apos;extended mission&apos;&apos; phase when the
+    orbit periapsis was lowest.  The surface resolution of the
+    measurements is normally of the same order as the spacecraft
+    altitude.  However, at the lowest altitudes (about 15 km), the
+    resolution is limited also by the orbit track separation, which
+    is approximately 30 km at the lunar equator.  The accuracy to
+    which the crustal field is measured at a single point along the
+    spacecraft trajectory is limited by residual external field
+    variations and is approximately 0.1 nT.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

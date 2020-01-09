@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-x-i2041-5-ch3dicespec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CH3D ICE ABSORPTION COEFFICIENTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.lab9884::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:i2041.lab9884::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:terrestrial_sample.ch3d_diluted_in_ch4_methane_ice::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:terrestrial_sample.ch3d_diluted_in_n2_nitrogen_ice::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-x-i2041-5-ch3dicespec-v1.0__browserp_ear-x-i2041-5-ch3dicespec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Grundy, W.M., S.J. Morrison, M.J. Bovyn, S.C. Tegler, and D.M. Cornelison,
+                   Remote sensing D/H ratios in methane ice: Temperature-dependent absorption
+                   coefficients of CH3D in methane ice and in nitrogen ice. Icarus 212, 941-949,
+                   doi:10.1016/j.icarus.2011.01.034, 2011.
+            </reference_text>
+            <description>reference.GRUNDYETAL2011</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-X-I2041-5-CH3DICESPEC-V1.0</data_set_id>
+        <data_set_name>CH3D ICE ABSORPTION COEFFICIENTS V1.0</data_set_name>
+        <data_set_release_date>2014-01-13</data_set_release_date>
+        <start_time>2010-07-21</start_time>
+        <stop_time>2010-08-25</stop_time>
+        <producer_full_name>WILL GRUNDY</producer_full_name>
+        <citation_text>
+            Grundy, W.M., Morrison, S.J., Bovyn, M.J., Tegler, S.C., and
+            Cornelison, D.M., CH3D ice absorption coefficients V1.0.
+            EAR-X-I2041-5-CH3DICESPEC-V1.0. NASA Planetary Data System, 2014.
+        </citation_text>
+        <data_set_terse_desc>
+            We record laboratory spectra at wavelengths of 2.47, 2.87, and
+            4.56 microns to study CH3D. We report temperature-dependent
+            absorption coefficients of these bands when the CH3D is diluted
+            in CH4 ice and also when it is dissolved in N2 ice.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set is the result of laboratory transmission
+            spectroscopy experiments performed within a sealed cell in the
+            ice laboratory at Northern Arizona University. We record spectra
+            at wavelengths from 1 to 6 microns to study CH3D bands at 2.47,
+            2.87, and 4.56 microns (as indicated by &apos;25&apos;,
+            &apos;29&apos; and &apos;45&apos; in the data file names). We
+            report temperature-dependent absorption coefficients of these
+            bands when the CH3D is diluted in CH4 ice and also when it is
+            dissolved in N2 ice. These absorption coefficient spectra can be
+            combined with data from the literature to simulate arbitrary D/H
+            ratio absorption coefficients for CH4 ice and for CH4 in N2 ice.
+            The data were originally published in 2011 in Icarus, vol. 212,
+            pp. 941-949, and that paper should be consulted for details about
+            laboratory procedures and limitations of the data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    Quoting from the Icarus paper:
+ 
+    &apos;Samples were mixed at room temperature in [a 2 liter] volume using CH4
+    and N2 gases supplied in high pressure cylinders by Airgas Specialty
+    Gases. These were connected through separate pressure regulators and
+    valves to the mixing volume. The reported purities were &gt;=99.99% for the
+    CH4 and &gt;=99.9% for the N2. To these gases, we could add CH3D purchased in
+    a lecture bottle from Sigma Aldrich (product number 490237, with a
+    reported purity of &gt;=98%).  Unlike in water, proton-deuteron exchange is
+    negligible in methane at room temperature and below, so we did not need to
+    consider the formation of other isotopomers such as CH2D2 and CHD3 (Sigma
+    Aldrich Stable Isotope Department, personal communication 2010). After
+    mixing gases to the desired composition at room temperature in the mixing
+    volume, we opened a valve to allow the gas to flow into the empty, cold
+    cell, condensing it as a liquid. We froze this liquid by
+    reducing its temperature, maintaining a vertical thermal gradient of about
+    2 K across the 15 mm diameter sample by means of heaters (see Fig. 1), so
+    that it would freeze from the bottom upward, with the location of the
+    freezing front being controlled by the cell temperature. Each new mixture
+    requires some experimentation to find appropriate cooling rates, but rates
+    for freezing samples were typically in the range of -0.01 to -0.1 K/min.
+    It was sometimes necessary to freeze an initial polycrystalline mass and
+    then melt almost all of it to obtain a small seed crystal before
+    re-freezing slowly, in order to obtain an optical-quality ice sample.
+    After a suitable sample had been frozen, we removed the thermal gradient
+    by smoothly shifting temperature-control heating from the upper to the
+    lower heating element over a period of 10-20 min. Using only the
+    bottom heater for temperature control resulted in a thermal gradient
+    across the sample of just a few tenths of a Kelvin.
+ 
+    &apos;Spectra were recorded with a Nicolet Nexus 670 Fourier transform infrared
+    (FTIR) spectrometer at a sampling interval of 0.24 cm-1, resulting in a
+    spectral resolution of 0.6 cm-1 (measured full width at half maximum of
+    unresolved lines). The spectrometer beam was focused to a few mm spot
+    inside the cell. We typically averaged over 100 spectral scans to improve
+    the signal/noise ratio. After a sample spectrum had been recorded, we
+    would ramp to a new temperature, at rates typically in the range of
+    0.1-0.5 K/min. We recorded spectra through our ice samples at every
+    multiple of 10 K between 40 K and the host ice melting points (90.7 K for
+    CH4 ice, 63.1 K for N2 ice).
+ 
+    &apos;Before each ice sample was prepared we also recorded spectra through the
+    empty, cold cell, and did the same after each sample was eliminated.
+    Filled-cell spectra were divided by empty-cell spectra to remove gross
+    effects of lamp emission, detector sensitivity, and absorptions by the
+    windows and air, resulting in approximate transmission spectra T(k). These
+    spectra are affected by subtle, spurious slopes from a variety of sources.
+    Wavelength-dependent refractive index contrasts exist between ice and cell
+    windows leading to slightly different transmission through the ice-window
+    interface than through the vacuum-window interface.  The room temperature
+    refractive index n(k) of sapphire decreases gradually with wavelength from
+    about 1.76 to 1.59 from 1.0 to 5.5 microns (Malitson et al., 1958;
+    Gervais, 1991) but methane ice shows almost no wavelength dependence in
+    its refractive index (except at wavelengths near 3.3 microns where
+    absorption is so strong that we measure no transmission whatsoever; Pearl
+    et al., 1991). If we knew the temperature dependent n(k) of both
+    sapphire and ice, and the ice-window interfaces were solely responsible
+    for these slopes, we could easily correct for the effect. But as the ice
+    and the surrounding cell contract on cooling, each with their own
+    distinct temperature-dependent coefficients of thermal expansion, the
+    sample is stressed and can fracture or pull away from the windows, opening
+    additional ice-vacuum interfaces that can produce wavelength-dependent
+    scattering that varies with temperature, with thermal history, and
+    with location within the sample. In addition to imparting slopes,
+    these effects lead to a decline in overall transmission, by as much as
+    a factor of three in an ice sample cooled relatively rapidly from 90 to
+    40 K. Slow drifts in lamp filament temperature or detector sensitivity
+    over the course of experiments lasting multiple days can also contribute
+    spurious slopes. Slopes arising from any combination of the above factors
+    were removed by fitting a line or low-order polynomial to continuum
+    regions adjacent to absorption bands to be quantified and dividing by
+    this function to &apos;straighten out&apos; the continuum. The continuum-corrected
+    transmission spectra were then converted to Lambert absorption coefficient
+    spectra alpha(lambda) via the Beer-Lambert absorption law, rearranged
+    as alpha(lambda) = -ln(T(lambda))/d, where d is the path length through
+    the cell (d = 5.4 +- 0.1 mm for all experiments reported in this paper).
+ 
+    &apos;We added a small amount of CH3D to CH4 to produce a deuterium-enriched
+    sample that remained dominated by normal CH4 absorptions. Addition of 0.5%
+    CH3D (D/H ratio of 1.25 x 10-4) produced ice having sufficiently strong
+    CH3D absorption to be easily measurable, but not so strong as to be
+    saturated in transmission though our 5.4 mm optical path length. We were
+    not able to directly measure the D/H ratio in our ice sample, so we
+    assumed zero fractionation between the gas phase and the liquid condensed
+    from it, and again zero fractionation between the liquid and the solid
+    crystallized from it.
+ 
+    &apos;We subtracted the ordinary methane absorption coefficients to isolate
+    the contribution of the CH3D. The resulting CH3D ice absorption
+    coefficients were divided by the 0.5% concentration of the CH3D
+    (assuming the composition was unchanged by condensation and freezing)
+    to obtain effective absorption coefficients for CH3D in methane as
+    if it were pure CH3D. These values can be combined with ordinary CH4
+    ice absorption coefficients, scaled by their relative abundances, to
+    approximate absorption coefficients for arbitrary CH3D/CH4 mixing ratios.
+ 
+    &apos;We performed an experiment with CH3D diluted in the hexagonal beta phase
+    of N2 ice. N2 ice melts at 63.1 K, so this experiment spanned a smaller
+    range of temperatures. Uncertainty over the CH3D concentration in the
+    ice presented even more of a challenge with this experiment. The CH3D/N2
+    ratio mixed in the gas phase in the mixing volume could not be expected
+    to remain unchanged in the ice, for two reasons. First, methane is much
+    less volatile than nitrogen. On condensing the N2-dominated gas into
+    the cell as a liquid at about 65 K, some of the deuterated methane could
+    have condensed as frost somewhere in the inlet tube rather than making
+    it into the cell. Second, compositional gradients appear on freezing,
+    as a result of the separation between liquidus and solidus curves of
+    the binary phase diagram of nitrogen and methane (e.g., Prokhvatilov
+    and Yantsevich, 1983; unfortunately, the two curves are difficult to
+    distinguish in their figure). Quirico and Schmitt (1997) assumed that
+    the integrated absorptions of CH4 bands remain unchanged on dilution
+    in N2 ice in order to estimate the composition of their samples. Making
+    the same assumption for CH3D, we used the integrated absorption of the
+    4.56 micron CH3D band to estimate the CH3D fraction in our mixed CH3D + N2
+    ice sample as 0.0024 +- 0.0002 (about a factor of two below its gas phase
+    abundance of 0.005). As before, we subtracted the absorption coefficients
+    of the host N2 ice, studied in an otherwise identical separate experiment
+    in our laboratory, to isolate the CH3D absorptions.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    Temperatures uncertainty is about +- 0.5K.
+ 
+    Cell thickness uncertainty is about +- 0.1 mm.
+ 
+    Composition uncertainty is not well determined.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Class_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:class:class.histogram</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>histogram</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Class_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Class_Full>
+        <name>histogram</name>
+        <version_id>1.0</version_id>
+        <local_identifier>histogram</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The histogram object is a sequence of numeric values that
+provides the number of occurrences of a data value or a
+range of data values in a data object.  The number of items
+in a histogram will normally be equal to the number of
+distinct values allowed in a field of the data object.
+(For example, an 8-bit integer field can have 256 values.
+This would result in a 256-item histogram.)  Histograms may
+be used to bin data, in which case an offset and scaling
+factor indicate the dynamic range of the data represented.
+The following equation allows the calculation of the range
+of each &apos;bin&apos; in the histogram.
+&apos;bin lower boundary&apos; = (&apos;bin element&apos; * scaling_factor) +
+offset.
+        </definition>
+        <comment>histogram</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <DD_Association>
+            <local_identifier>data_type</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>item_bytes</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>items</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>bytes</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>interchange_format</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>offset</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>psdd</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>scaling_factor</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+    </DD_Class_Full>
+</Product_Class_Definition>

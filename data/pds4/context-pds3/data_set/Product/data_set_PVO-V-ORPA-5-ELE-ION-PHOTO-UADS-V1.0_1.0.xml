@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.pvo-v-orpa-5-ele-ion-photo-uads-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PVO RPA PROC THERM ELEC, ION, PHOTOELEC, LOW RES. V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.pioneer_venus::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.pvo::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:orpa.pvo::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.pvo-v-orpa-5-ele-ion-photo-uads-v1.0__browserp_pvo-v-orpa-5-ele-ion-photo-uads-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Knudsen W.C. , Evaluation and demonstation of the use of retarding
+                   potential analyzers for measuring several ionospheric quantities, J.
+                   Geophys. Res., vol. 71, pp. 4669-4678, 1966.
+            </reference_text>
+            <description>reference.KNUDSENETAL1966</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Knudsen, W.C., J. Bakke, K. Spenner, and V. Novak, Retarding Potential
+                   Analyzer for the Pioneer Venus Orbiter, Space Sci. Inst., 4, 351, 1979.
+            </reference_text>
+            <description>reference.KNUDSENETAL1979</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Knudsen, W.C., K. Spenner, J. Bakke, and V. Novak, Pioneer Venus Orbiter
+                   Planar Retarding Potential Analyzer Plasma Experiment, IEEE Trans. on
+                   Geosci. Remote Sens., 18, 1, 60, 1980.
+            </reference_text>
+            <description>reference.KNUDSENETAL1980</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PVO-V-ORPA-5-ELE/ION/PHOTO/UADS-V1.0</data_set_id>
+        <data_set_name>PVO RPA PROC THERM ELEC, ION, PHOTOELEC, LOW RES. V1.0</data_set_name>
+        <data_set_release_date>1997-09-01</data_set_release_date>
+        <start_time>1978-12-05T14:41Z</start_time>
+        <stop_time>1992-10-07T20:16Z</stop_time>
+        <producer_full_name>DR. WILLIAM C. KNUDSEN</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            Pioneer Venus Orbiter (PVO) processed data from the retarding
+            potential analyzer (ORPA), including thermal and superthermal
+            electrons, ions, and a key parameters file for all 5055 orbits
+            (Dec 5, 1978 - Oct 7, 1992).
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+Overview:
+============
+ 
+The ORPA processed data consist of 4 file types: high resolution
+thermal electrons, high resolution superthermal electrons, high
+resolution ions, and a key parameters file at 12 second sampling. High
+resolution data are provided (for the entire orbit / only the portion
+of the orbit near periapsis) The sample rate of the high resolution
+data is variable and dependent on the telemetry rate and other
+operational considerations. All of these data are derived from the
+reformatted EDR data (RDR) which contains the raw I-V curve values.
+The moments of the distributions have been computed by a least squares
+fitting algorithm. The low resolution data are resampled from the high
+resolution files. All 5055 orbits of the mission,
+(Dec 5, 1978 - Oct 7, 1992) are included in the data set. The PV RPA
+is described in considerable detail by Knudsen et al. [1979-1980]. The
+principles of measurement are also described therein together with
+some of the factors affecting the accuracy of the derived quantities.
+Additional information on the theory of measurement by an RPA is
+presented by Knudsen [1966].
+ 
+Sampling:
+=========
+ 
+    The ORPA instrument sweeps through the ion, electron, and
+photoelectron modes in an EIIIP sequence covering 5 spacecraft spin
+periods spending one spin period in each mode. A single retarding scan
+can be completed approximately 40 times in a spin period (0.3 sec).
+There are various algorithms by which the instrument can decide which
+scan to place in the telemetry frame.
+Please read the instrument description for more details.
+ 
+Data Processing:
+================
+ 
+High resolution data were processing by using an automated least
+squares fitting procedure. Values derived from these fits are provided
+in the archive. Some of the quantities contained in this submittal of
+RPA data to the PDS are erroneous because of bad least-squares fits to
+the I-V curves. These bad fits were not detected by the data reduction
+algorithms and have not been removed by a trained observer viewing the
+I-V curves and making an educated judgment. A trained observer,
+looking at an I-V plot, can rather quickly recognize data that will
+produce erroneous fit results but it is difficult to write an
+algorithm that can recognize all the possible situations and make the
+necessary adjustments.
+ 
+   High Resolution Electrons:
+ 
+In the electron mode, the ion current to the collector is negligible
+with the collector at 47 V,  A potential difference of 20 V between G-4
+and C was found sufficient to suppress most of the secondary electrons
+produced by ion or electron impact at the collector.  The three front
+grids G-0, G-1 and G-2 are the energy analyzing grids.  They are stepped
+together from +6.8 to -4.2 V in the coarse scan. The corresponding
+collector current is measured by an electrometer and then digitized. The
+straight line portion is the retarding region, and the logarithmic slope
+determines the electron temperature by the relation:
+ 
+       e        Delta(V)
+Te = - -  --------------------
+       k   Delta( log (- Ie) )
+ 
+where e is the electron charge; k, the Boltzmann constant; and Ie, the
+electron current.  The left side with larger positive voltage is the
+attractive region.  The voltage Vp at which these two portions of the
+curve join is the potential of plasma relative to spacecraft.  Vp is
+expected to vary from a few volts negative in interplanetary space to 1
+or 2 V positive in the Venusian ionosphere.  For the simulation it was
+set to zero. The lower portion of the curve bends away from the
+straight-line portion because the velocity distribution is not a true
+Maxwellian distribution.  An additional population of suprathermal
+electrons exists with higher energies than the thermal distribution.
+ 
+ 
+   High Resolution Ions:
+ 
+The algorithm that scans the data in an ion I-V curve and computes
+the initial estimates of the ion quantities must also make a decision
+as to what ion mass is represented by a peak in DI [Knudsen et al.,
+1979; 1980]. The voltage at which the DI peak occurs for a given mass
+may be substantially smaller or larger than the nominal value because
+the Venus ionosphere is moving relative the planet with a velocity
+that can approach that of the spacecraft.  Consequently, some peaks
+in DI have been assigned the wrong mass. The result is not only an
+erroneous concentration for that mass but also an erroneous ion
+velocity and total ion density. It is possible to recognize the
+incorrect assignments when comparing several I-V curves which are
+adjacent to each other in time, but the analysis algorithms are not
+this sophisticated. A few errors in ion quantities are present in the
+PDS files resulting from this difficulty. The uncertainties in the
+ion fitting process are included in an ancillary file.
+ 
+  High Resolution Suprathermal Electrons:
+ 
+The analysis of a suprathermal electron I-V curve is similarly
+difficult. The interpretation of the electron distributions
+contributing to the I-V curve depends on the potential of the
+spacecraft relative to the ambient plasma which, in turn, depends on
+the location of the spacecraft and the properties of the ambient
+plasma. The spacecraft is negative in the dense ionospheric plasma.
+It is positive in the low density solar wind plasma provided the
+spacecraft is not in the umbra of the planet. An additional
+complication arises in that the sign of the current to the
+electrometer occasionally changes from negative to positive during a
+sweep. This can occur because the background current, with maximum
+retarding potential applied to the retarding grids, is compensated
+close to the noise level of the electrometer just before the sweep
+begins [Knudsen et al., 1979]. If the background current that has
+been compensated is significant relative to the saturation current
+and changes in the right direction during the ensuing sweep, the
+total current will go through zero and the sign change. The
+background current can change because the orientation of the rotating
+spacecraft relative to the sun changes, because a purely temporal
+change occurs or because the location of the spacecraft changes.
+Switching of the current from one sign to the other with the
+electrometer in its most sensitive mode produces a noise spike in
+-the electrometer that is digitized and becomes part of-the I-V
+curve. Writing an algorithm that recognizes the noise spike and the
+change in current sign is difficult because the sign of only the
+saturation current and background current of a sweep has been
+retained in the I-V data for reasons of minimizing the telemetry
+requirements of the RPA. A trained observer, looking at an I-V plot,
+can rather quickly recognize in most cases when this condition has
+occurred, but it is difficult to write an algorithm that can
+recognize all the possible situations and make the necessary
+adjustments.
+ 
+   Low Resolution Data:
+ 
+The PV PDS LFD SEDR tapes have time tags at 12 second intervals from
+30 minutes prior to periapsis to 30 minutes after periapsis. These
+time tags are the tags specified in the first four quantities of each
+of the EDR data records. All PV instruments are to report their data
+at these common time tags for the purpose of easy intercomparison of
+data. Principal Investigators (PIs) with instruments with a sampling
+period much less that 12 seconds are to report the average of
+measured quantities over a 12 second interval centered on the time
+tags. The RPA, because of a low telemetry word assignment, records at
+most one current-voltage (I-V) characteristic curve per spacecraft
+spin period.  Except for one set of 14 orbits, the spin period of the
+PV spacecraft has been about 12 seconds. Thus, RPA physical
+quantities are derived at intervals of 12 seconds or more. Since the
+RPA operates in several modes, a particular quantity such as thermal
+electron temperature may be typically measured at much longer
+intervals. The thermal electron temperature is typically measured at
+either approximately 48 or 60 second intervals. In a few orbits, it
+was measured at 12 second intervals.
+ 
+The quantities TOTI,- H+, O+, M29+, CO2+, TI, VX, VY, VZ, N1, TL, N2,
+and T2 are derived by least-squares fitting a strongly non-linear
+numerical algorithm to an I-V curve. It is necessary in performing
+such a fit to supply an initial estimate of the quantities that are
+to be derived. If the estimates are not sufficiently close to the
+true least-squares values, the algorithm may yield a grossly
+erroneous value by converging to a relative minimum of the variance
+and not to the absolute minimum. Also, it may not converge at all.
+Although some such erroneous values have been eliminated from our
+basic tables tapes by checking for the magnitude of the variance,
+some erroneous value are known to be present. Such values can be way
+outside the nominal uncertainty quoted in Table 1.
+ 
+ASCII low resolution data are included as part of the high resolution
+data archive to facilitate browsing of the key parameters of the
+dataset.
+ 
+Missing values:
+ 
+RPA quantities may be unavailable for assigning to a specific time
+tag for several reasons as follows: The spacecraft data format in use
+at the time may not have contained any words for the RPA. The RPA may
+have been turned off for power conservation reasons. The spacecraft
+telemetry bit rate and/or data format may have been such that an RPA
+I-V curve was recorded only at long time intervals. RPA data for an
+interval of time, including the time tag, has not been reduced. (RPA
+data at the time of this submission have been reduced for only a
+small time interval about periapsis: plus and minus approximately 15
+minutes for the first 800 orbits, plus and minus approximately 30
+minutes for orbits 800-1300, plus and minus 60 minutes for orbits
+1300-2890.)
+        </data_set_desc>
+        <confidence_level_note>
+Some of the quantities contained in this submittal of RPA data to the
+PDS are erroneous because of bad least-squares fits to the I-V
+curves.  These bad fits have not been detected by our current
+algorithms for reduction of the data and have not been removed by a
+trained observer viewing the I-V curves and making an educated
+judgment.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>1978-051A</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

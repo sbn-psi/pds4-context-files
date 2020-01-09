@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-a-gst-3-rdr-geographos-radar-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GEOGRAPHOS RADAR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.gdscc::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:dss14.gdscc::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.geographos::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-a-gst-3-rdr-geographos-radar-v1.0__browserp_ear-a-gst-3-rdr-geographos-radar-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Ostro, S.J., R.F. Jurgens, K.D. Rosema, R.S. Hudson, J.D. Giorgini, R.
+                   Winkler, D.K. Yeomans, D. Choate, R. Rose, M.A. Slade, S.D. Howard, D.J.
+                   Scheeres, and D.L. Mitchell, Radar observations of asteroid 1620
+                   Geographos, Icarus 121, 46-66, 1996.
+            </reference_text>
+            <description>reference.OSTROETAL1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-A-GST-3-RDR-GEOGRAPHOS-RADAR-V1.0</data_set_id>
+        <data_set_name>GEOGRAPHOS RADAR V1.0</data_set_name>
+        <data_set_release_date>1998-03-23</data_set_release_date>
+        <start_time>1994-08-28</start_time>
+        <stop_time>1994-09-02</stop_time>
+        <producer_full_name>CAROL NEESE</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Delay-Doppler images and continuous wave, dual-polarization
+            spectra of 1620 Geographos taken during the August 1994 closest
+            approact to Earth (0.0333AU at minimum)
+        </data_set_terse_desc>
+        <abstract_desc>
+            Goldstone radar observations of 1620 Geographos from August 28
+            through Sept. 2, 1994 yield delay-Doppler images whose linear
+            spatial resolutions range from ~75 to ~151 meters, and 138 pairs
+            of dual-polarization (OC/SC) (opposite circular/same circular)
+            spectra with one-dimensional resolution of 103 m. These data are
+            presented in Ostro, et al. 1996, Icarus 121, 46 [OSTROETAL1996],
+            and are included in this data set. A full description of the
+            observations and the reduction process is provided in the paper.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    Goldstone radar observations of 1620 Geographos from August 28 through
+    Sept. 2, 1994 yield delay-Doppler images whose linear spatial
+    resolutions range from ~75 to ~151 meters, and 138 pairs of
+    dual-polarization (OC/SC) (opposite circular/same circular) spectra
+    with one-dimensional resolution of 103 m. These data are presented in
+    Ostro, et al. 1996, Icarus 121, 46 [OSTROETAL1996], and are included
+    in this data set.  A full description of the observations and the
+    reduction process is provided in the paper.
+ 
+ 
+  Data
+  ====
+    Individual images from each successful radar run are in FITS files
+    &apos;ge[Nxx].fit&apos; where N is the last digit of DOY (day of year) and xx is
+    the run number within that day.  The low-resolution images are
+    collected in a collage image &apos;gelrmov.fit&apos;, and the high-resolution
+    images in a collage image &apos;gehrmov.fit&apos;. Multi-run sums of
+    co-registered images from 30 degree blocks of rotational phase, for
+    the low- and high-resolution images respectively, are in files
+    &apos;gelrsum.fit&apos; and &apos;gehrsum[N].fit&apos; (N=1,3 for the three
+    high-resolution summed images).  The collages and summed images are
+    the same as the data presented in Figures 8-11 of the paper.
+ 
+    The scaling of the images is explained in the following excerpt from
+    the paper:  &apos;Data values for each image in this paper are mapped onto
+    a 256-level gray scale.  Since the noise background is not
+    interesting, all data values below a clipping level near the noise
+    mean are mapped to black to make the most of the gray scale&apos;s
+    available dynamic range.  Similarly, all data values above some
+    saturation level are mapped to white, since the contrast at the very
+    highest echo levels contains less interesting information than
+    contrast among the more abundant dimmer pixels.&apos;  The levels chosen
+    for clipping and saturation level for each image are recorded in the
+    label description for that image.
+ 
+    138 individual continuous wave (cw) power spectra are collected in the
+    file &apos;gecwall.tab&apos;, and spectra from the bandwidth extrema are in
+    &apos;gecwext.tab&apos;.  These spectra are the same as those presented in
+    Figures 2 and 7 of the paper.
+ 
+ 
+  Ancillary Data
+  ==============
+    An index of the data with observational circumstances for each run is
+    given in the file geindex.tab.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Review
+  ======
+    This data set underwent external peer review on March 23, 1998.
+ 
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3B</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

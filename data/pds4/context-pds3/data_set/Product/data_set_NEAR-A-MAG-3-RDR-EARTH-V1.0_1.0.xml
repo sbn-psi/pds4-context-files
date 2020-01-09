@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-mag-3-rdr-earth-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR MAG DATA FOR EARTH</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-mag-3-rdr-earth-v1.0__browserp_near-a-mag-3-rdr-earth-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-mag-3-rdr-earth-v1.0__ditdos_near-a-mag-3-rdr-earth-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Anderson, B.J., L.J. Zanetti, D.H. Lohr, J.R. Hayes, M.H. Acuna, C.T. Russell,
+                   and T. Mulligan, In-flight calibration of the NEAR magnetometer, IEEE Trans.
+                   Geosci. Remote Sens., Vol. 39, pp. 907-917, 2001.
+            </reference_text>
+            <description>reference.ANDERSONETAL2001</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cheng, A.F., R.W. Farquhar, and A.G. Santo, NEAR Overview, Johns Hopkins APL
+                   Technical Digest, Vol. 19, pp. 95-106, 1998.
+            </reference_text>
+            <description>reference.CHENGETAL1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Jenkins, J., G. Dakermanji, M. Butler, and U. Carlsson, The Near Earth Asteroid
+                   Rendezvous Spacecraft Power Subsystem, Proc. 4th European Space Power Conf.,
+                   T.-D. Guyenne (ed.), ESA-SP369, p. 277, 1995.
+            </reference_text>
+            <description>reference.JENKINSETAL1995</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-MAG-3-RDR-EARTH-V1.0</data_set_id>
+        <data_set_name>NEAR MAG DATA FOR EARTH</data_set_name>
+        <data_set_release_date>2001-09-27</data_set_release_date>
+        <start_time>1998-01-23T00:00:00.000Z</start_time>
+        <stop_time>1998-01-26T23:59:59.999Z</stop_time>
+        <producer_full_name>KAZUE TAKAHASHI</producer_full_name>
+        <citation_text>
+            Takahashi K., NEAR MAG DATA FOR EARTH,
+            NEAR-A-MAG-3-RDR-EARTH-V1.0, NASA Planetary Data System, 2001.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains vector magnetic field data acquired by the
+            fluxgate magnetometer (MAG) on the NEAR spacecraft during the
+            EARTH phase.
+        </data_set_terse_desc>
+        <abstract_desc>
+            NEAR MAG RDR volume sets contain a single data set, from one
+            instrument and one mission phase (defined in the phase table in
+            /AAREADME.TXT).
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+ 
+    NEAR MAG RDR volume sets contain a single data set, from one instrument
+    and one mission phase (defined in the phase table in /AAREADME.TXT).
+ 
+    This data set contains vector magnetic field data acquired by the
+    fluxgate magnetometer (MAG) on the NEAR spacecraft during the
+    EARTH phase. The data set begins on 1998-01-23T00:00:00.000
+    and ends 1998-01-26T23:59:59.999.
+ 
+    The data are processed science data provided in physical units (nT)
+    in two coordinate systems Near Sun Orbital (NSO) and Eros Body Fixed
+    (EBF). Instrumental and spacecraft effects have been removed from
+    the data during processing.  The data are provided in ASCII tables
+    located in the DATA directory.  Plots of the data are also provided
+    for browsing purposes in the BROWSE directory.  Spacecraft position
+    is also included in the data tables and plot files.
+ 
+ 
+  Data/Parameters
+  ===============
+ 
+    The UTC time tags assigned to each sample are the spacecraft event
+    time of the magnetometer output of the A/D converter.  The sample
+    time has not been shifted to account for the time lag in the
+    anti-aliasing filter. The UTC time tags have the format of
+    year-mo-dmThr:mn:ss.ss, where year(I4) is year, mo (I2)is month, dm
+    (I2)is day of month, hr(I2) is UTC hour, mn(I2) is UTC minute, and
+    ss.ss(F5.2) is UTC second.  DMET is the difference between
+    magnetometer and housekeeping data samples.  The difference is kept
+    as small as possible for accurate evaluation of the time-dependent
+    magnetic fields generated by currents flowing in the spacecraft.
+ 
+    ASCII tables labeled NSOyyddd.TAB (yyddd indicates year and day of
+    year) contain the following Level 2 MAG data.
+ 
+    Column  Name        Description                           Unit
+    ------  -----       -----------                           ----
+    1.      UTC         time, UTC                             see above
+    2.      MET_DAY     time, mission                         day
+    3.      MET_HOUR    time, mission                         hour
+    4.      MET_MINUTE  time, mission                         minute
+    5.      MET_SECOND  time, mission                         second
+    6.      DMET        housekeeping data time rel. to mag.   second
+    7.      B_X         magnetic field NSO X component        nT
+    8.      B_Y         magnetic field NSO Y component        nT
+    9.      B_Z         magnetic field NSO Z component        nT
+    10.     B_TOT       magnetic field magnitude              nT
+    11.     NSO_X       NEAR position NSO X component         km
+    12.     NSO_Y       NEAR position NSO Y component         km
+    13.     NSO_Z       NEAR position NSO Z component         km
+ 
+ 
+    ASCII tables labeled EBFyyddd.TAB (yyddd indicates year and
+    day)contain the following Level 2 MAG data.
+ 
+    Column  Name        Description                           Unit
+    ------  -----       -----------                           ----
+    1.      UTC         time, UTC                             see above
+    2.      MET_DAY     time, mission                         day
+    3.      MET_HOUR    time, mission                         hour
+    4.      MET_MINUTE  time, mission                         minute
+    5.      MET_SECOND  time, mission                         second
+    6.      DMET        housekeeping data time rel. to mag.   second
+    7.      B_X         magnetic field EBF X component        nT
+    8.      B_Y         magnetic field EBF Y component        nT
+    9.      B_Z         magnetic field EBF Z component        nT
+    10.     B_TOT       magnetic field magnitude              nT
+    11.     EBF_X       NEAR position EBF X component         km
+    12.     EBF_Y       NEAR position EBF Y component         km
+    13.     EBF_Z       NEAR position EBF Z component         km
+ 
+ 
+    Files labeled nso10day_yyyy_dd0_dd1.jpg (yyyy indicate year, dd0 is
+    the first day and dd1 is last day of a 10-day interval) provide
+    summary plots of MAG data in NSO coordinates averaged down to 10-min
+    resolution.
+ 
+    Name    Description                             Unit
+    -----   -----------                             ----
+    BX      magnetic field NSO X component          nT
+    BY      magnetic field NSO Y component          nT
+    BZ      magnetic field NSO Z component          nT
+    BTOT    magnetic field magnitude                nT
+    THETA   mag. field direction from NSO Z axis    degree
+    PHI     mag. field azimuth about NSO Z azis     degree
+ 
+ 
+    Files labeled nso_ebf_yyddd.jpg (yyddd indicates year and day)
+    provide daily plots of Level 2 MAG data in both NSO and EBF
+    coordinates.
+ 
+    Name          Description                               Unit
+    -----         -----------                               ----
+    X             magnetic field X component                nT
+    Y             magnetic field Y component                nT
+    Z             magnetic field Z component                nT
+    T             magnetic field magnitude                  nT
+    THETA         mag. field direction from NSO Z axis      degree
+    PHI           mag. field azimuth about NSO Z axis       degree
+    R             NEAR distance from the Sun                AU
+    SElong        NEAR longitude in solar ecliptic coord.   degree
+    SElat         NEAR latitude from solar ecliptic coord.  degree
+    Sunward Exc   arcsin(NSO_X/NSO_R)                       degree
+    Clock Angle   atan2(NSO_Y,NSO_Z)                        degree
+    Eros lat      NEAR latitude in EBF coordinates          degree
+    Eros long     NEAR longitude in EBF coordinates         degree
+    Eros-NEAR     Distance between NEAR and Eros            km
+ 
+ 
+    Processing
+    ==========
+ 
+    Raw data contained in the Level 1 MAG dataset were processed by
+    applying a series of corrections known from pre-flight calibrations
+    and removing spacecraft fields evaluated in-flight. A summary of the
+    calibration process is provided in the MAG_CALIBRATION document and
+    more detailed descriptions can be found in [LOHRETAL1997] and
+    [ANDERSONETAL2001]. Formally, the correction process within the
+    spacecraft (SC) coordinates can be expressed as
+ 
+        B_final_SC = [T1](B_Obs_SC - B_SC)
+ 
+    Where B_final_SC is the calibrated field, B_Obs_SC is the measured
+    field (i.e., the raw Level 1 data converted to physical units
+    incorporating parameters obtained in the pre-flight calibration),
+    and B_SC is the total satellite field.  The matrix [T1] represents
+    the correction in sensor orientations and gain factors resulting
+    from the in-flight calibration [ANDERSONETAL2001].
+ 
+    The pre-flight calibration evaluated the linearity, orthogonality
+    and cross talk of the MAG sensor block for each axis and each
+    dynamic range.  This calibration provided absolute gain calibrations
+    to 0.1% (0.5%) in the least (most) sensitive range and orientation
+    to 1 arc minute [LOHRETAL1997].
+ 
+    The major challenge in producing science-quality Level 2 MAG data
+    was evaluation of spacecraft fields [ANDERSONETAL2001]. There are
+    several known sources of spacecraft fields and each source was
+    evaluated using the extensive in-flight data.  The following table
+    summarizes the sources of spacecraft fields together with their
+    approximate magnitude, characteristic time scale and type of signal,
+    and mitigation approach.
+ 
+    Source                 Propulsion valve motion.
+    Magnitude              ~100nT.
+    Time Scale             Propulsion events.
+    Type of Signal         Discrete pairwise jumps - zero net change.
+    Mitigation Approach    Flag Propulsion events.  Correcting data.
+                           during propulsion events not necessary.
+ 
+    Source                 Terminal board:  all spacecraft loads.
+    Magnitude              25 nT.
+    Time Scale             ~10 min (heaters),  &lt; 1 s (NLR).
+    Type of Signal         Variable baseline with discrete jumps.
+    Mitigation Approach    Field is directly proportional to load currents
+                           monitored in spacecraft engineering data.
+                           Loops measured during assembly.
+ 
+    Source                 Digital power system shunts.
+    Magnitude              5 to 10 nT.
+    Time Scale             Hours to months.
+    Type of Signal         Discrete jumps.
+    Mitigation Approach    Ratio between digital shunt and total solar
+                           array current identifies shunt step.  Field
+                           fixed in each level.
+ 
+    Source                 Analog power system shunts.
+    Magnitude              5 nT.
+    Time Scale             minutes.
+    Type of Signal         Gradual variations with intermittent discrete
+                           jumps
+    Mitigation Approach    Field is proportional to analog current within
+                           each of segments in analog shunt current
+                           corresponding to the six analog shunt resistors
+                           on the spacecraft.
+ 
+    Source                 Solar Arrays.
+    Magnitude              30 nT.
+    Time Scale             hours to months.
+    Type of Signal         Gradual shift with discrete jumps.
+    Mitigation Approach    Field is proportional to total solar array
+                           current.  Independent of digital shunt level.
+ 
+    Source                 Momentum wheels.
+    Magnitude              1 to 2 nT.
+    Time Scale             0.2 to 10s Hz.  usually &gt; 0.5 Hz.
+    Type of Signal         Superposition of four sinusoids corresponding
+                           to rotation rate of four wheels.
+    Mitigation Approach    Benign - wheel speeds kept above 0.5 Hz &amp;
+                           monitored in engineering data.  Speeds &lt; 0.5 Hz
+                           occur during maneuvers.  MAG 0.5 Hz filter
+                           elimiates contamination.  1/s sampling allows
+                           additional filtering if needed.
+ 
+ 
+    Predictive correction algorithms (see Software below) were developed
+    to evaluate these fields using the available spacecraft housekeeping
+    data.  The corrections applied in the production of Level 2 MAG data
+    include:
+ 
+    1. Subtraction of constant offset fields.
+    2. Subtraction of magnetic field generated by the system terminal
+       board.
+    3. Subtraction of magnetic field generated by the analog and
+       digital power system shunts.
+    4. Subtraction of magnetic field generated by solar array.
+    5. Correction of stepwise fields due to on/off of sensor heaters.
+ 
+    The final Level 2 MAG data were generated by rotating the field
+    vector from spacecraft (SC) to NSO and EBF coordinates using the
+    appropriate rotation matrix [T2] derived from information available
+    in the SPICE volume:
+ 
+        B_final = [T2]B_final_SC
+ 
+ 
+    Sampling Rate
+    =============
+ 
+    MAG data were sampled at a rate that varied by command between 0.01
+    and 20 samples/s.  During Eros observations the nominal rate was 1
+    sample/s.  Brief, 10 minute, periods of 20 sample/s data were taken
+    as part of weekly calibration checkout sequences.  During cruise
+    operations the MAG sample rate was commanded to coarse values of
+    0.01 samples/s or 0.02 samples/s.  During full MAG instrument
+    checkout the instrument was commanded through the complete range of
+    sample rates.  Full checkouts were performed after launch
+    activation, after turn-on following the deep space maneuver and
+    Mathilde fly-by, and prior to Eros orbit insertion.
+ 
+    The full-time resolution data can be found in the Level 1 MAG
+    volume.  The sampling rate presented in the Level 2 science data
+    files differs from the original rate since it was necessary to
+    remove spacecraft fields using housekeeping data that were sampled
+    differently.  The spacecraft housekeeping data were 44 times more
+    voluminous than the magnetometer data and were recorded at a maximum
+    rate of one sample/s.  In practice, the spacecraft telemetry and
+    data allocations allowed sampling of housekeeping no more often than
+    one sample every 10s and typically 50s to 600 s between samples.
+    The data rate for valid science data therefore actually ranged from
+    two to four orders of magnitude less than the capabilities of the
+    magnetometer instrument [ANDERSONETAL2001].
+ 
+    It is important to note that the MAG science data sample rate
+    varied, often irregularly.  This is due to the sequence of the
+    command and telemetry processor (CTP) - spacecraft housekeeping
+    data.   For the Level 2  science data, MAG samples that were nearest
+    to CTP samples were selected in order to accurately remove
+    time-dependent spacecraft fields.  There are a variety of reasons
+    for occasional irregular sampling of CTP data: operations commands,
+    commands from other instruments, and spacecraft autonomy.  All of
+    the available CTP data were used to maximize the MAG science
+    records.
+ 
+ 
+    Range Setting
+    =============
+ 
+    The magnetometer had 8 ranges covering full-scale ranges from
+    plus/minus 4 nT (range 0) to 65536 nT (range 7).  A 20-bit A/D
+    conversion for these ranges resulted in resolutions of 1 pT (range
+    0, limited by intrinsic instrument noise) to 2.0 nT (range 7).
+    Range control was done either manually or automatically.  Automatic
+    range control provided transition to less sensitive ranges when any
+    one axis exceeded 87.5% of full scale for 0.25 s and shifted to a
+    higher sensitivity when the field on all three axes fell below 17%
+    of full-scale continuously for 1 min.  This ensured that the
+    instrument follow rapid increases in field strength without rapidly
+    toggling between ranges.  During cruise, the instrument was operated
+    in range 3 (plus/minus 256 nT full scale, 0.008 nT resolution)
+    [ANDERSONETAL2001].  The range setting is not provided in the Level
+    2 data files.  All necessary range scale factors have been applied
+    in Level 1 and Level 2 data files.  The range information is
+    contained in Level 1 MAG files submitted to PDS. The range indicator
+    ACTUAL_RANGE can be found in the Level 1 MAG data files
+    MAGyyddd.FIT, where yyddd indicates year and day of year.
+ 
+    The magnetometer operated in range 3 (256 nT full scale) for almost
+    the entire mission.  Exceptions occurred during Earth flyby when the
+    instrument cycled through all ranges, during instrument calibration
+    and checkout, and during periods when the spacecraft field was
+    larger than the maximum for range 3.
+ 
+ 
+    Ancillary Data
+    ==============
+ 
+    NEAR attitude and location and EROS location, which are necessary
+    for MAG coordinate transformation, are included in separate SPICE
+    volumes.  In each of the SPICE volumes that are organized by mission
+    phase, there are the /DATA/SPK directory for EROS and NEAR position
+    information and the /DATA/CK directory for the NEAR attitude
+    information.
+ 
+ 
+    Coordinate Systems
+    ==================
+ 
+    Two coordinate systems are adopted for Level 2 MAG data presentation.
+ 
+    NEAR Sun Orbital (NSO) coordinates are Cartesian coordinates defined
+    with respect to the NEAR-Sun line and the orbit plane of Eros.  The
+    X-axis points from NEAR to the Sun, the Z direction is given by the
+    Eros velocity vector crossed into X, northward normal to the Eros
+    orbital plane, and Y completes the right-handed set.
+ 
+    Eros Body Fixed (EBF) coordinate system has its Z-axis along the
+    Eros spin axis, the X-axis is in the Eros equatorial plane, and lies
+    in the direction of the prime meridian. The Y-axis completes the
+    right-handed set.
+ 
+ 
+    Software
+    ========
+ 
+    Software for production of science-quality Level 2 data from the raw
+    magnetometer data contained in the Level 1 data is provided in
+    MAG_SW document in this volume.  The software consists of two
+    packages, SDC_PROC and SCI_PROC.  The packages perform all data
+    processing needed as the result of sensor calibration and evaluation
+    of spacecraft fields as described above under the subheading of
+    Processing.
+ 
+    The SDC_PROC codes were used for reading Hierarchical Data Format
+    (HDF) data files produced by the Science Data Center (SDC),
+    extracting the pertinent magnetometer, command telemetry processors
+    (CTP), and housekeeping data, and producing plots and data files for
+    the NEAR MAG experiment.  The files generated by these codes are
+    used as input to the second software package SCI_PROC.
+ 
+    The main functions of SCI_PROC are: open and read the input files,
+    apply corrections to the data, and produce plots and ASCII data
+    files.
+ 
+    The codes are found in the in the MAG_SW directory of the present
+    volume.
+ 
+ 
+    Media/Format
+    ============
+ 
+    This data set is released as a CDROM set.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Review
+    ======
+      This data set is currently undergoing external peer review within
+      PDS in August, 2001.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+ 
+    Gaps in data coverage exist for many reasons including telemetry
+    outage.  Gaps are not filled with flagged data.
+ 
+    The magnetometer was calibrated using in-flight data acquired during
+    the Earth swing-by of January 1997 and during simultaneous solar
+    wind measurements by the WIND from January 22-24, 1997
+    [ANDERSONETAL2001].  The calibration during the Earth swing-by
+    resulted in less than 50 nT residuals in the Earth&apos;s main field of &gt;
+    20000 nT, corresponding to an accuracy better than 0.3 percent.  As
+    for the absolute accuracy, the final magnetometer data are accurate
+    to ~1 nT.  This corresponds to ~0.4 percent of the full scale of
+    range 3, which is used during most of the NEAR mission.
+ 
+ 
+    Limitations
+    ===========
+ 
+    Samples with unusually large values, producing spikes when plotted,
+    occur in the Level 2 MAG data.  These are caused either by internal
+    MAG calibration signals or by firing of the spacecraft thruster
+    (propulsion events).  The calibration signals have a shape of a
+    box-car with a magnitude of ~470 nT and a duration of ~300 seconds.
+    During Eros operations these calibrations were performed weekly.
+    The thruster-induced spikes have varying amplitudes and durations
+    and can be easily distinguished from the calibration signals.  They
+    occur at times of spacecraft maneuvers or momentum management
+    activities.
+ 
+    The following table lists the dates and approximate times of
+    propulsion events on the NEAR spacecraft during the Eros orbital
+    phase of the mission.  Propulsion events are indicated by the
+    mnemonic adopted by NEAR Mission Operations.
+ 
+    Event   Year    Day of year Time UTC    Orbital change/description
+                                (hhmm)
+ 
+    OIM     2000       045       1530        Orbit insertion
+    OCM1    2000       055       1700        to 365 X 204 km
+    OCM2    2000       063       1800        to 204 x 200 km
+    MCM1    2000       075       2000        Momentum management
+    OCM3    2000       093       0205        to 210 x 100 km
+    OCM4    2000       102       2110        to 100 x 100 km
+    OCM5    2000       113       1730        to 101 x 50 km
+    OCM6    2000       121       1615        to 51 x 49 km
+    MCM3    2000       131       1400        Momentum management
+    MCM4    2000       138       1300        Momentum management
+    MCM5    2000       145       1300        Momentum management
+    MCM6    2000       152       1600        Momentum management
+    MCM7    2000       159       1600        Momentum management
+    MCM8    2000       166       1600        Momentum management
+    MCM9    2000       173       1600        Momentum management
+    MCM10   2000       180       1600        Momentum management
+    OCM7    2000       189       1800        to 50 x 35 km
+    OCM8    2000       196       0300        to 37 x 35 km
+    OCM9    2000       206       1700        to 50 x 37 km
+    OCM10   2000       213       1930        to 51 x 49 km
+    OCM11   2000       221       2325        retrograde inclination adjust
+    OCM12   2000       239       2325        to 100 x 50 km
+    OCM13   2000       249       2300        to 100 x 100 km
+    MCM12   2000       264       1700        Momentum management
+    OCM14   2000       287       0545        to 98 x 50 km
+    OCM15   2000       294       2140        to 50 x 50 km
+    OCM16   2000       299       2210        to 50 x 19 km
+    OCM17   2000       300       1740        to 198 x 67 km
+    OCM18   2000       308       0700        to 198 x 195 km
+    MCM13   2000       320       2000        Momentum management
+    MCM14   2000       334       1730        Momentum management
+    OCM19   2000       342       1535        to 196 x 35 km
+    OCM20   2000       348       2015        to 36 x 34
+    MCM15   2000       362       1925        Momentum management
+    MCM16   2001       009       1840        Momentum management
+    OCM21   2001       024       1605        to 35 x 21 km
+    OCM22   2001       028       0120        to 35 x 19 km
+    OCM23   2001       028       1810        to 36 x 34
+    OCM24   2001       033       0851        Preparation for end of mission
+    OCM25   2001       037       1743        Preparation for end of mission
+    EMM1    2001       043       1514        End of mission - descent
+    EMM2    2001       043       1858        End of mission - descent
+    EMM3    2001       043       1914        End of mission - descent
+    EMM4    2001       043       1930        End of mission - descent
+    EMM5    2001       043       1941        End of mission - descent
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>DVD-R</medium_type>
+            <nssdc_collection_id>96-008A-03B</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

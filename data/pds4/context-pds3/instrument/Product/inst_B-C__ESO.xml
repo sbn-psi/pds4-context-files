@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:b-c.eso</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>BOLLER &amp; CHIVENS SPECTROGRAPH for ESO</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.eso::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>BOLLER &amp; CHIVENS SPECTROGRAPH</instrument_name>
+        <instrument_desc>
+ 
+ 
+  Instrument Overview
+  ===================
+    In the Boller &amp; Chivens (B &amp; C) spectrograph, the converging
+    light beam from the telescope passes through the spectrograph
+    entrance slit in the telescope focal plane to the collimator,
+    an off-axis parabolic mirror.  The reflected parallel beam then
+    falls on the grating surface.  The diffracted light passes
+    through a Schmidt camera which images the spectrum on the CCD
+    detector.  The instrument and thus the slit orientation can be
+    rotated fully within a 180 degree range and a readout accuracy
+    of 0.1 degree.  The slit width is set by a motor to a specified
+    value between 50 and 890 micrometers.
+ 
+    The front surface of the spectrograph slits are aluminised and
+    tilted slightly with respect to the incoming beam to allow the
+    use of an integrating TV acquisition and guiding system.
+    Guiding must be done by hand.  Tracking rates for planetary
+    motion can set.
+ 
+    In each exposure, spectra of 2048 pixel length are recorded for
+    100 or more spatial resolution points along the slit at 0.81
+    arcsec/pixel.  The spectral scale can be changed by exchanging
+    gratings.  Although each spectrum is 2048 pixels long, the
+    usable length is at least 10 % less since both ends of each
+    spectrum are of degraded quality due to vignetting.
+ 
+ 
+  Scientific Objectives
+  =====================
+    The objective was to determine the absolute albedo of the
+    jovian planets and Titan at 1 nm or better spectral resolution
+    throughout the spectral range accessible by CCDs.  For small
+    objects, Uranus, Neptune, Titan, and calibration stars, the
+    total light at each wavelength was the only requested datum.
+    For Jupiter and Saturn, the spatial distribution of light at
+    each wavelength was of interest.
+ 
+ 
+  Calibration
+  ===========
+    Wavelength calibration is performed by an He-Ar lamp.
+ 
+    Flat-fields are taken at the dome illuminated by floodlights.
+ 
+ 
+  Operational Considerations
+  ==========================
+    At the beginning of each night, the grating is installed and
+    tilted to achieve the desired spectral range, and the
+    spectrograph is focused by staff members.
+ 
+ 
+  Detectors
+  =========
+    The detector is a CCD: Ford Aerospace FA 2048 L, front
+    illuminated, UV coated by EEV.  It has 2048x2048 pixels of
+    15x15 micrometer size.  The gain is 2.9 electrons/ADU.  The
+    noise level is 8 electrons RMS.  Linearity is better than 0.2 %
+    up to 85,000 electrons/pixel.  The mean dark current is 2
+    electrons/pixel/hour.  About 1.3 cosmic ray events occur per
+    minute on the whole chip.
+ 
+ 
+  Filters
+  =======
+    Order separating filters:
+ 
+       WG345:  cuts off light below 345 nm
+       GG475:  cuts off light below 475 nm
+       OG530:  cuts off light below 530 nm
+       OG550:  cuts off light below 550 nm
+       OG570:  cuts off light below 570 nm
+ 
+    Other filter:
+ 
+       BG24:   lowers light in the 500-650 nm region where the CCD
+               is much more sensitive than in the blue.
+ 
+ 
+  Optics
+  ======
+    Collimator:      off-axis paraboloid of 750 mm focal length.
+ 
+    Schmidt Camera:  focal length 143.5 mm.
+ 
+    Gratings:
+ 
+           Name  grooves  blaze     blaze     dispersion
+                   /mm    angle   wavelength
+           ------------------------------------------------
+           # 5:    900    21o 10&apos;    724 nm   0.13 nm/pixel
+           #17:    400     9  44     770      0.28
+           #19:    600    17  27     910      0.19
+           #23:    600     8  38     455      0.19
+           #29:    600     5  10     300      0.19
+ 
+ 
+  Location
+  ========
+       Latitude:  29 degrees, 15 minutes S
+       Longitude: 70 degrees, 44 minutes W
+       Altitude:  2400 meters
+ 
+ 
+  Measured Parameters
+  ===================
+    The instrument measures the brightness of the area of the sky
+    the telescope is pointed to for a wide range of wavelengths.
+    The spectra are generated by directing the light from the
+    target onto a grating which differentiates the incoming light
+    into its components.
+ 
+
+        </instrument_desc>
+        <instrument_id>B&amp;C</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Spectrometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

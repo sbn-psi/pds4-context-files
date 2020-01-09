@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-sw-epps-3-eps-cdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER E/V/H/SW EPPS CALIBRATED EPS CDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:epps.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-sw-epps-3-eps-cdr-v1.0__browserp_mess-e-v-h-sw-epps-3-eps-cdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Andrews, G.B., T.H. Zurbuchen, B.H. Mauk, H. Malcom, L.A. Fisk, G. Gloeckler,
+                   G.C. Ho, J.S. Kelley, P.L. Koehn, T.W. LeFevere, S.S. Livi, R.A. Lundgren, and
+                   J.M. Raines, The Energetic Particle and Plasma Spectrometer instrument on the
+                   MESSENGER spacecraft, Space Science Reviews, 131, 523-556, 2007.
+            </reference_text>
+            <description>reference.ANDREWSETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H/SW-EPPS-3-EPS-CDR-V1.0</data_set_id>
+        <data_set_name>MESSENGER E/V/H/SW EPPS CALIBRATED EPS CDR V1.0</data_set_name>
+        <data_set_release_date>2016-05-06</data_set_release_date>
+        <start_time>2004-229T19:54:21Z</start_time>
+        <stop_time>2015-120T15:08:25Z</stop_time>
+        <producer_full_name>GEORGE HO</producer_full_name>
+        <citation_text>
+            George C. Ho
+        </citation_text>
+        <data_set_terse_desc>
+            The MESSENGER EPPS calibrated observations consist of energetic
+            particle and plasma data collected by the EPPS instrument during
+            fly-by and orbital operations of Mercury. Also included are
+            cruise observations for calibration purposes.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== This data set consists of the MESSENGER
+            Energetic Particle and Plasma Spectrometer (EPPS) calibrated
+            observations, also known as CDRs. The system encompasses 2
+            instrument subsystems - the Energetic Particle Spectrometer (EPS)
+            and the Fast Imaging Plasma Spectrometer (FIPS). This data set
+            contains EPS instrument data. EPS covers the energy range of 25
+            to &gt; 500 keV for electrons, and 10 keV/nucleon to ~3 MeV total
+            energy for ions. There are seven CDR data products for EPS
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The data set consists of calibrated observations, also known as
+      CDRs.
+ 
+      For all the CDR products there is a detached PDS label file that
+      describes the contents of one data file. Each label file will have
+      the same base name as the data file it is describing, with the
+      extension .LBL to denote a label file. The label file defines the
+      start time and end of the observation, product creation time, and
+      the structure of the ASCII tables. Each data product is identified
+      within the PDS label by a STANDARD_DATA_PRODUCT_ID value, shown in
+      parentheses in the table below.
+ 
+      The EPS portion of the data archive currently consists of seven CDR
+      data products. The different CDR formats represent different Energy
+      Resolution Spectra with different sampling rates.  There is also
+      a Pulse Height/Event Record file and one representing SCAN mode data.
+ 
+      A given CDR data file will contain all the observations obtained on
+      same earth day. The following table shows the different EPS data
+      products. Following is a description of each of the current EPS CDRs.
+      A more complete description of each may be found in the EPPS CDR SIS
+      document, located in the DOCUMENT directory of the document volume.
+ 
+ 
+      Current EPS Data Products:
+ 
+        EPS Pulse Height (EPS_PULSE_HEIGHT)
+ 
+          Contains Pulse Height Analysis data in ASCII table format. The
+          lack of priority groups after the FSW6 load on 8/18/2008 means the
+          weight and group columns of the data are not meaningful after that
+          time.
+ 
+        EPS High Resolution Spectra (EPS_HIRES_SPECTRA)
+ 
+          High resolution (energy channels) ion and electron energy
+          spectra. Replaces EPS_HI_SPECTRA after FSW6 (loaded on 8/18/2008).
+ 
+        EPS Low Resolution Spectra (EPS_LORES_SPECTRA)
+ 
+          Low resolution (energy channel) ion and electron energy spectra
+          and rate counters. Replaces EPS_MED_SPECTRA after FSW6 (loaded on
+          8/18/2008).
+ 
+        EPS Summary Spectra (EPS_SUMMARY_SPECTRA)
+ 
+          Contains a subset of rate counters and low resolution energy
+          spectra. CDR available only after FSW6 (8/18/2008).
+ 
+        EPS Scan (EPS_SCAN_RATES)
+ 
+          Contains the integrated hardware counters over four energy
+          thresholds. Each threshold setting and integration lasts 1/4
+          second. Rates are reported in both raw and &apos;delta&apos; form, see
+          SIS document for details. CDR available only after FSW6
+          (8/18/2008).
+ 
+        EPS High Priority EPS Spectra (EPS_HI_SPECTRA)
+          This product contains high energy resolution spectra similar to
+          the EPS_HIRES_SPECTRA product, but with the configuration from
+          before the new FSW6 load on 8/18/2008.
+ 
+        EPS Medium Priority EPS Spectra (EPS_MED_SPECTRA)
+          This product contains lower energy resolution spectra similar to
+          the EPS_LORES_SPECTRA product, but with the configuration from
+          before the new FSW6 load on 8/18/2008.
+ 
+ 
+ 
+    Instrument Overview
+    ===================
+      The EPS sensor consists of a 60-mm diameter, tuna-can-like
+      cylinder, in which a start foil and stop foil, wrapped around
+      opposite curved sides of the cylinder, constitute the TOF chamber.
+      The detectors are arranged so that each detector senses the
+      events within a given range of incidence angles. Each of the 6
+      detector modules is composed of 4 pixels: large and small ion and
+      large and small electron.
+ 
+      See the EPPSINST.CAT file for more information and
+      [ANDREWSETAL2007] for full details.
+ 
+ 
+    Calibration Overview
+    ====================
+      This data set is calibrated.  Spectral rates have been converted from
+      raw counts to counts/sec and, where possible, to fluxes.  Pulse height
+      measurements are reported in calibrated keVs.  See the calibration
+      implementation document for details.
+ 
+ 
+    Parameters
+    ==========
+ 
+      The accumulation times for spectral rate collection are programmable
+      as described in the SIS document and in the EDR Dataset Catalog. For
+      the CDRs, accumulation time is reported in the table directly so
+      initial raw counts can be recovered from counts/sec by a simple
+      multiplication. Calibration parameters are described in the
+      Calibration Implementation document.
+ 
+ 
+    Data
+    ====
+      The EPS CDR data set products are described as follows (the STANDARD_
+      DATA_PRODUCT_ID value is given in parentheses). All data is in ASCII
+      table format.
+ 
+      The High Priority EPS Spectra (EPS_HI_SPECTRA_CDR) contains
+      spectral data, hardware and software count rates and flux.
+      [BEFORE FSW6, 8/18/2008]
+ 
+      The Medium Priority EPS Spectra (EPS_MED_SPECTRA_CDR) contains
+      spectral data, hardware and software count rates and flux.
+      [BEFORE FSW6, 8/18/2008]
+ 
+      The EPS High Resolution Spectra (EPS_HIRES_SPECTRA_CDR) contains
+      high resolution (in energy) ion and electron energy spectra as count
+      rates and flux. [AFTER FSW6, 8/18/2008]
+ 
+      The EPS Low Resolution Spectra (EPS_LORES_SPECTRA_CDR) contains
+      Low resolution (in energy) ion and electron energy spectra
+      as count rates and flux and rate counters as count rates.
+      [AFTER FSW6, 8/18/2008]
+ 
+      The EPS Summary Spectra  (EPS_SUMMARY_SPECTRA_CDR) contains the same
+      quantities as the LORES data but sampled at the longer accumulation
+      times of the HIRES data. [AFTER FSW6,8/18/2008]
+ 
+      The EPS Scan (EPS_SCAN_SPECTRA_CDR) contains the integrated hardware
+      counters over four energy thresholds. Each threshold setting and
+      integration lasts 1/4 second reported as rates and differential
+      inferred fluxes. [AFTER FSW6, 8/18/2008]
+ 
+      The EPS Pulse Height CDR (EPS_PULSE_HEIGHT_CDR) contains
+      Pulse Height Analysis data.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      The EPPS CDR data are the processed data set released for the
+      EPPS.  Data presented here are an accurate representation of the EPPS
+      data as received from the spacecraft and have been processed from
+      instrument unit to physical unit.
+ 
+ 
+    Review
+    ======
+      The EPPS CDR was reviewed internally by the EPPS team prior to
+      release to the PDS. PDS also performed an external review of the
+      EPPS CDR.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data reported are the processed data received from the
+      spacecraft during the following mission phases: Launch, Earth Cruise,
+      Earth Flyby, Venus 1 Cruise, Venus 1 Flyby, Venus 2 Cruise,
+      Venus 2 Flyby, Mercury 1 Cruise, Mercury 1 Flyby, Mercury 2 Cruise,
+      Mercury 2 Flyby, Mercury 3 Cruise, Mercury 3 Flyby, Mercury 4 Cruise,
+      Mercury Orbit, Mercury Orbit Year 2, Mercury Orbit Year 3, Mercury
+      Orbit Year 4, and Mercury Orbit Year 5.
+      These mission phases are defined as:
+ 
+                           Start time         End time
+      Phase Name           Date (DOY)         Date (DOY)
+      -----------------    ----------------   ----------------
+      Launch                3 Aug 2004 (216)  12 Sep 2004 (256)
+      Earth Cruise         13 Sep 2004 (257)  18 Jul 2005 (199)
+      Earth Flyby          19 Jul 2005 (200)  16 Aug 2005 (228)
+      Venus 1 Cruise       17 Aug 2005 (229)   9 Oct 2006 (282)
+      Venus 1 Flyby        10 Oct 2006 (283)   7 Nov 2006 (311)
+      Venus 2 Cruise        8 Nov 2006 (312)  22 May 2007 (142)
+      Venus 2 Flyby        23 May 2007 (143)  20 Jun 2007 (171)
+      Mercury 1 Cruise     21 Jun 2007 (172)  30 Dec 2007 (364)
+      Mercury 1 Flyby      31 Dec 2007 (365)  28 Jan 2008 (028)
+      Mercury 2 Cruise     29 Jan 2008 (029)  21 Sep 2008 (265)
+      Mercury 2 Flyby      22 Sep 2008 (266)  20 Oct 2008 (294)
+      Mercury 3 Cruise     21 Oct 2008 (295)  15 Sep 2009 (258)
+      Mercury 3 Flyby      16 Sep 2009 (259)  14 Oct 2009 (287)
+      Mercury 4 Cruise     15 Oct 2009 (288)   3 Mar 2011 (062)
+      Mercury Orbit         4 Mar 2011 (063)  17 Mar 2012 (077)
+      Mercury Orbit Year 2 18 Mar 2012 (078)  17 Mar 2013 (076)
+      Mercury Orbit Year 3 18 Mar 2013 (077)  17 Mar 2014 (076)
+      Mercury Orbit Year 4 18 Mar 2014 (077)  17 Mar 2015 (076)
+      Mercury Orbit Year 5 18 Mar 2015 (077)  30 Apr 2015 (120)
+ 
+      No EPPS data were collected during Venus 1 Flyby phases.  The EPPS
+      was on for brief periods during the other six mission phases prior to
+      Venus 2 Cruise.
+ 
+      During these planned operational periods, the EPS sensor on the EPPS
+      did not have high voltage enable, hence no Time-of-flight data and
+      only spectra data were collected.  The EPS was turned on for the
+      Venus 2 Flyby and to be remained on throughout the remainder of the
+      mission phases.  EPPS data were collected during all Mercury Flybys.
+ 
+      The nominal thresholds are set at 35 keV for both ion and electron
+      detectors. Energy channels that are below the energy threshold are
+      not calibrated.
+ 
+      The EPS rate data have not been corrected for priority scheme in the
+      instrument processor.  During high count rate periods, the rate
+      channels in different look directions are not a true representation of
+      particle direction.  Users are advised to contact the instrument team
+      to obtain anisotropy information from EPS.
+ 
+      The instrument background counts have not been subtracted in the rate
+      data.  Users should do proper background subtraction before using the
+      data.  During orbital phase, EPS routinely switches between large and
+      smallpixel on both the ion and electron detector.  Users should check
+      the pixel size flag in the data to know which pixel the detectors are
+      using.  The background rate correction should be done for proper pixel
+      size. But the user should always consult with the instrument team at
+      JHU/APL to verify the quality of specific data prior to publication.
+ 
+      EPS High Ion Sector 1 and 5 have malfunction detectors and do not
+      produce any data product.
+ 
+      The lowest energy channel (32 to 55 keV) on the High Ion Sector 3
+      and 5 have periodic high count that are due to flight software
+      interaction with the instrument and should not be used.  User of
+      EPS data should consult with the instrument team at JHU/APL to
+      verify the quality of specific data in certain time interval prior
+      to publication.
+ 
+      During orbital phase, a certain sector in the EPS field-of-view has a
+      direct view of the sunlit side of the planet. During these periods, the
+      single event data (Fast, Scanned, etc) may be susceptible to photon
+      contamination. The science event data (all rate and spectra data) have
+      additional on-board software processing that should eliminate this
+      photon contamination.  But the user should always consult with the
+      instrument team at JHU/APL to verify the quality of specific data prior
+      to publication.
+ 
+      During spacecraft noon-midnight orbits, EPS instrument temperature can
+      rise to levels that affect the low energy channels.  We have noticed
+      during some of these orbits, the temperature induced noise renders
+      those energy channels below 100 keV to be useless.  In addition, the
+      higher than normal temperature also induced a data &apos;drop-out&apos; where the
+      count in all rate drops by a factor during one integration period and
+      remains so for a few minutes to hours.  The EPS team is currently
+      investigating the cause of this &apos;drop-out&apos;.  Users should always
+      consult the instrument team at JHU/APL to verify the quality of
+      specific data prior to publication.
+ 
+      During orbital phase, EPS routinely switches between large and small
+      pixel on both the ion and electron detector.  User should check the
+      pixel size flag in the data to know which pixel the detectors are
+      using.
+ 
+      On 18 Aug 2008 (231), a new Flight Software (FSW) was uploaded to EPPS.
+      This new FSW (v6) enhances the energy resolution for EPS and adds a
+      high-resolution proton distribution data packet on FIPS. Description of
+      these new data products are included in the FMT file.  In addition, the
+      new FSW v6 fixed the data spikes in the EPS data (as mentioned in the
+      previous paragraph).
+ 
+      On 18 Aug 2009 (230), another new FSW was uploaded to EPPS.  This new
+      FSW (v7) only affects the FIPS data.
+ 
+      In the nominal flight configuration, the FIPS sensor on the EPPS
+      field-of-view will not measure the solar wind.  Periodically, the
+      spacecraft was rotated such that the FIPS field-of-view can detect
+      the nominal radial flowing solar wind.  These periods typically lasted
+      less than 3 hours and are identified as:
+ 
+                         Start time         End time
+      Phase Name         Date (DOY)         Date (DOY)
+      ----------------- ----------------   ----------------
+      Earth Cruise      05 Apr 2005 (105)  05 Apr 2005 (105)
+      Earth Flyby       02 Aug 2005 (214)  02 Aug 2005 (214)
+                        07 Aug 2005 (219)  07 Aug 2005 (219)
+      Venus 1 Cruise    27 Feb 2006 (058)  27 Feb 2006 (058)
+                        06 Sep 2006 (249)  10 Sep 2006 (253)
+      Venus 1 Flyby     No Data
+      Venus 2 Cruise    01 Mar 2006 (060)  01 Mar 2006 (060)
+ 
+      A dark count signature was discovered in the FIPS PHA data.
+      These counts appear in a time-of-flight -- E/q histogram of PHA
+      data as straight tracks in E/q, centered at about 8 different
+      time-of-flights.  These dark counts significantly complicate the
+      analysis of FIPS PHA data, though not significantly for low mass
+      ions (H+, He+ and He2+).  All data since launch is affected.
+      This situation is being heavily investigated by the FIPS team.
+ 
+      A small bug was found in FSW v7 which causes only the high order 4 bits
+      of the wedge, strip and zigzag values are transmitted in
+      the data.  This has the effect of reducing the position
+      resolution for heavy ions in the FSW v7 data.  A software patch
+      which eliminates this bug was uploaded to the spacecraft at 19:15Z on
+      16 Dec 2009 (350).
+ 
+      There are gaps in the EPS scan spectra (EPS_SCAN_SPECTRA) products
+      inclusively spanning 2014-078 through 2014-083 and 2014-246 through
+      2014-254 due to lack of corresponding EDR source data.
+ 
+      There are data gaps in the EPS scan spectra (EPS_SCAN_SPECTRA) products
+      inclusively spanning 2014-334 to 2014-350 (production halted to reduce
+      data volume during a low speed downlink during a solar conjunction),
+      2014-352 to 2015-022 (production halted for a high voltage check), and
+      2015-092 to end of mission on 2015-120 (production halted to reduce
+      solid state recorder load during a solar conjunction).
+ 
+      As always, users of the EPPS data should consult with the instrument
+      team at JHU/APL to verify the quality of specific data prior to
+      publication.
+ 
+    Limitations
+    ===========
+      This data set is minimally processed data.  The data are received
+      from the spacecraft telemetry and ingested into the MESSENGER
+      Science Operations Center (SOC).
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

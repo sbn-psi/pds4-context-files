@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-rss-1-tracking-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO MOON RADIO SCIENCE RAW TRACKING DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-rss-1-tracking-v1.0__browserp_lro-l-rss-1-tracking-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-rss-1-tracking-v1.0__dvo_geo_lro-l-rss-1-tracking-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Chin, G., et al., Lunar Reconnaissance Orbiter Overview: The Instrument Suite
+                   and Mission, Space Sci. Rev. 129:391-419, 2007.
+            </reference_text>
+            <description>reference.CHINETAL2007</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mazarico, E., F.G. Lemoine, S.-C. Han, and D.E. Smith, GLGM-3: A degree-150
+                   lunar gravity model from the historical tracking data of NASA Moon orbiters, J.
+                   Geophys. Res., 115, E05-001, 14 PP., 2010
+            </reference_text>
+            <description>reference.MAZARICOETAL2010</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Pearlman, M., C. Noll, J. McGarry, W. Gurtner, and E. Pavlis, The International
+                   Laser Ranging Service, AOGS Advances in Geosciences: Solid Earth, 2008.
+            </reference_text>
+            <description>reference.PEARLMANETAL2008</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   R.L. Ricklefs, C.J. Moore, Consolidated Laser Ranging Data Format (CRD), For
+                   the ILRS Data Formats and Procedures Working Group, 2009.
+            </reference_text>
+            <description>reference.RICKLEFSETAL2009</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Smith, D.E., M.T. Zuber, G.B. Jackson, G.A. Neumann,H. Riris, X. Sun, R.S.
+                   Zellar, C. Coltharp, J. Connelly, R.B. Katz, I. Kleyner, P. Liiva, A.
+                   Matuszeski, E.M. Mazarico, J.F. McGarry, A.-M. Novo-Gradac, M.N. Ott, C.
+                   Peters, L.A. Ramos-Izquierdo, L. Ramsey, D.D. Rowlands, S. Schmidt, V.S. Scott
+                   III, G.B. Shaw, J.C. Smith, J.-P. Swinski, M.H. Torrence, G. Unger, A.W. Yu,
+                   T.W. Zagwodzki, The Lunar Orbiter Laser Altimeter Investigation on the Lunar
+                   Reconnaissance Orbiter Mission, Space Science Reviews, 16 May 2009.
+            </reference_text>
+            <description>reference.SMITHETAL2009</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tracking and Acquisition Handbook for the Spaceflight Tracking and Data
+                   Network, Revision 5, Space Communications Program, Goddard Space Flight Center,
+                   Greenbelt, Maryland, 1990-2006.
+            </reference_text>
+            <description>reference.STDN7241990</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-RSS-1-TRACKING-V1.0</data_set_id>
+        <data_set_name>LRO MOON RADIO SCIENCE RAW TRACKING DATA V1.0</data_set_name>
+        <data_set_release_date>2014-12-15</data_set_release_date>
+        <start_time>2009-06-23</start_time>
+        <stop_time>2014-09-30</stop_time>
+        <producer_full_name>DAVID E. SMITH</producer_full_name>
+        <citation_text>
+            Smith, DE, LRO Raw Radio Science Data Products,
+            LRO-L-RSS-1-TRACKING-V1.0, NASA Planetary Data System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw radio science data and ancillary files from the Lunar
+            Reconnaissance Orbiter mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival raw, partially processed, and
+            ancillary/supporting radio science data acquired during the Lunar
+            Reconnaissance Orbiter (LRO) mission. The radio observations were
+            carried out using the LRO spacecraft and Earth-based stations of
+            the commercial Universal Space Network (USN), the Ka-band ground
+            station at White Sands, New Mexico (WS1), and the Next Generation
+            Satellite Laser Ranging station in Greenbelt, Maryland (NGSLR).
+            Additional data were provided by the NASA Deep Space Network
+            (DSN) during commissioning. Ongoing participation by the
+            International Laser Ranging Service (ILRS) network of stations
+            provides further LR data that are processed by the Lunar Orbiter
+            Laser Altimeter (LOLA) Science Operations Center (SOC). Of most
+            interest are likely to be the Tracking Data Files in the TRK
+            directory.
+        </abstract_desc>
+        <data_set_desc>
+    Data Set Overview
+    =================
+      The Lunar Reconnaisance Orbiter (LRO) Radio Science (RS) Raw Data
+      Archive (RDA) is a time-ordered collection of raw and partially
+      processed data collected during the LRO mission to the Moon
+      [CHINETAL2007] [SMITHETAL2009].
+ 
+      This data set was collected beginning in June 2009 after the launch
+      of LRO.
+ 
+      Radio Doppler and range tracking to the LRO omnidirectional and
+      high-gain antennas (HGA) provide the main source of the radio
+      science data. The gimbaled HGA also carries a small, coboresighted,
+      optical receiver telescope. One-way time-of-flight from the ground to
+      the optical receiver using laser pulses provides an alternate tracking
+      data type known as Laser Ranging (LR), which is handled jointly by
+      the Lunar Orbiter Laser Altimeter (LOLA) Science Operations Center
+      (SOC) and the Crustal Dynamics Data Information System (CDDIS).
+ 
+      The data set includes one primary data type, the tracking data
+      files, TRKs.
+ 
+      Typical users of these data might analyze range and Doppler
+      measurements in TRKs to reconstruct the spacecraft trajectory.
+ 
+      Users may obtain SPICE kernels related to pointing information of the
+      solar array and high gain antenna at the JPL NAIF website:
+         naif.jpl.nasa.gov/pub/naif/pds/data/lro-l-spice-6-v1.0/
+ 
+    Data
+    ====
+      The Station Raw Tracking Data (TRK) provides the data required to
+      support tracking of the orbiter and generation of orbit and
+      mission products. Each ground station (WS1 and the USN stations)
+      that supports tracking for the LRO mission will create the data
+      in a format identified as the Universal Tracking Data Format
+      (UTDF) as defined in the STDN Tracking and Acquisition Handbook
+      [STDN7241990]. TRKs are stored in the TRK directory.  File names are
+      of the form LSUTDF_SSSSVV_PAD_YYYY_DDD_HHMM.ext,  where
+         File Qualifier =&gt; 6 ASCII characters to identify the type of
+         UTDF data
+           LSUTDF (indicates low-speed UTDF data)
+        Spacecraft Designations =&gt; 6 ASCII characters (SSSSVV) to identify
+        the spacecraft
+           SSSS = Spacecraft ID (0059 for LRO)
+           VV = Vehicle ID (01 for LRO)
+        Receiver PADID =&gt; 3ASCII characters (PAD) to identify the station
+        receiver
+        PAD identifier
+           188 for the White Sands station
+           189 for the Solar Dynamics Observatory (SDO) Backup station
+           103 for USPS for USN Dongara
+           105 for USHS for USN South Point, Hawaii
+           126 for KU1S (or KU2S) for Kiruna, Sweden
+           128 for WU1S (or WU2S) for Wilheim, Germany
+        Date Information =&gt; 13 ASCII characters in the  form of YYYY_DDD_HHMM
+        to represent the date and time of when the station closed the file;
+           YYYY = 4 ASCII characters for year (2008 - 2013)
+           DDD = 3 ASCII characters for day of year (001 - 366)
+           HHMM = 4 ASCII characters (24 Hour time qualifier)
+        ext =&gt; 3-character ASCII extension; TRK (default)
+ 
+      The TRK PDS label has file names of the same form as the data files
+      with an extension of LBL.
+ 
+    Secondary Data
+    ==============
+      A set of ancillary files is needed for proper analysis and
+      interpretation of the TRK data.
+ 
+      Small Forces File (SFF Directory)
+      ---------------------------------
+      The Small Forces File (SFF) or Angular Momentum Desaturation (AMD)
+      data provides the cumulative delta-V effect of attitude thruster
+      firings over one or more specified intervals of time. In some cases
+      it also provides an estimate of the cumulative spacecraft mass loss
+      due to the use of propellant in those attitude thrusters. The same
+      format file is also produced to model predicted accelerations. The
+      primary data portion of a SFF consists of required parameters (in
+      this order) separated by commas:
+        Record index, record type, record generation time, data start
+        time, data stop time, data accumulation period duration, mass
+        change, resultant delta-V in J2000 X direction, resultant delta-V
+        in J2000 Y direction, and resultant delta-V in J2000 Z direction.
+      The secondary data portion is optional and consists of additional
+      data requested by mission, for LRO this is TBD.
+ 
+      Weather Data Files (WEA Directory)
+      ----------------------------------
+      The Weather data are ASCII formatted, space-delimited, information
+      sent in a file format. Weather data files are produced at the
+      ground stations. The file consists of multiple lines in which the
+      first line contains start date (YYYYMMDD), Day of Year (DDD), and
+      station identifier information.  Then there are 2:N repeating lines
+      that provide the following information:
+         Time reference, temperature, Pressure, Relative Humidity, and
+         Wind Speed
+ 
+      File names have the form STID_YYYYDDD_HHMM.ext, where:
+         Station ID =&gt; 4 ASCII Characters for the station ID
+           WS1S = White Sands
+           USPS = USN Dongara
+           USHS = USN Hawaii
+           KI3S = Kiruna, Sweden
+           WG1S = Wilheim, Germany
+         Scheduled Acquisition of Signal (AOS) time =&gt; 12 ASCII characters
+         in the form of YYYYDDD_HHMM, where:
+           YYYY = start year designator (2008 - 2013)
+           DDD = start day of year (001 - 366)
+           HHMM = Hours and Minutes of AOS
+             HH = (00 - 23)
+             MM = (00 - 59)
+         ext =&gt; 3-character ASCII extension, WEA (to represent this
+         is a weather file).
+ 
+      For example, a file name for a weather product from White Sands:
+        WS1S_2009040_0824.WEA
+ 
+      Each WEA file is accompanied by a PDS label file that has a file name
+      of the same form as the WEA file with an extension of LBL.
+ 
+      Laser Ranging Files (RANGE Directory)
+      -------------------------------------
+      The Laser Ranging file contains the LOLA/SOC-processed one-way laser
+      ranging fire time from data processing based on the telemetry that LOLA
+      receives from the LRO Mission Operations Center (MOC) as part of the
+      real-time and post- pass s/c and instrument housekeeping and
+      measurement telemetry, and from station dependent fire time files
+      retrieved from the Crustal Dynamics Data Information System (CDDIS)
+      which contains files from the Next Generation Satellite Laser Ranging
+      (NGSLR) and participating International Laser Ranging Service (ILRS)
+      laser ranging sites [PEARLMANETAL2008]. The Laser Ranging files are
+      ASCII files formatted as defined in [STDN7241990] and ILRS
+      Consolidated Laser Ranging Data Format [RICKLEFSETAL2009].
+ 
+ 
+      Full Rate Files (RANGE/FULL_RATE Directory)
+      -------------------------------------------
+      Laser Ranging full rate files contain LOLA SOC-processed one-way
+      laser ranging fire time.  Full rate data contains every outgoing ground
+      station laser shot together with a corresponding LOLA receive signal
+      whose pulse width is larger than 10 ns.
+ 
+ 
+      Normal Point Files (RANGE/NPT Directory)
+      ----------------------------------------
+      Laser Ranging normal point files contain LOLA SOC-processed one-way
+      laser ranging fire time.  After outliers are removed from full-rate
+      data, every 5 second interval with more than 5 full-rate points files
+      will form one normal point per the procedure described in [SINCLAIR1997].
+ 
+ 
+      GEODYN Trajectory Files (SPK Directory)
+      ---------------------------------------
+      GEODYN SPK files are orbit reconstructions produced by the LOLA
+      Precise Orbit Determination Team.  They were used for geolocation of
+      LOLA data. These files give spacecraft and planetary ephemerides and
+      have the same binary format as SPK files generated by the LRO
+      Flight Dynamics Team.  Flight Dynamics SPKs can be found at
+      naif.jpl.nasa.gov.
+ 
+      Unlike the majority of this data archive, SPKs are a higher level data
+      product (level 5.)  The raw data are level 1.  We include SPKs here
+      as an example of a higher level product that can be derived from the
+      Radio Science Raw Data Archive.
+ 
+      File names have the form LRO_xxxx_yyyymm_model.BSP where xxxx is the
+      mission phase including month, where applicable (CO = Commissioning;
+      NO_01, NO_02, etc. stand for Nominal Mission, with the number
+      corresponding to the month between stationkeeping maneuvers, yyyymm
+      gives the date of generation (or version), and model corresponds to
+      the gravity model used for the creation of this particular SPK file
+      (e.g., GRGM900C_L600 stands for gravity model GRGM900C of degree and
+      order 900 with a power law constraint applied for degree L&gt;600
+      [LEMOINEETAL2014]).
+ 
+      Each trajectory file is accompanied by a PDS label with file name
+      LRO_xxxx_yyyymmdd.LBL.  Typical SPK files comprise one lunar month,
+      with gaps during thrusting maneuvers.
+ 
+      Typical file sizes are approximately 30MB with the exception of
+      Commissioning, which has a 72MB file size.
+ 
+      The reconstructed LRO trajectory contained in each SPK has been
+      created by the LOLA Precision Orbit Determination (POD) Team in an
+      effort to refine the trajectory of the spacecraft and to improve the
+      Lunar Gravity field based on LRO tracking data [MAZARICOETAL2010].
+ 
+      The data were originally written out by the GEODYN orbit processor at
+      five second intervals. They were then converted from the original
+      true of date (IAU of date) coordinates to J2000, and then written in
+      SPK files (type 8, discrete states, evenly spaced, Lagrange
+      Interpolation).
+ 
+      The orbits were produced from an analysis of the Doppler and range
+      data supplied by the LRO project. The primary tracking stations are
+      the NASA/LRO White Sands S/Ka-band ground station and the Universal
+      Space Network (USN) S-band sites. See the Appendix in CATALOG/INST.CAT
+      for a list of LRO tracking stations. Altimetric crossovers constructed
+      with LOLA data were also used in the POD to help improve the
+      trajectory precision.
+ 
+      The various arcs were combined into SPKs spanning one mission phase
+      (about a month). Trajectories from consecutive arcs were (linearly)
+      tapered during overlap periods. Because the maneuvers (delta-H and
+      station-keeping) were not modeled, the SPKs are discontinuous around
+      those maneuvers.
+ 
+ 
+    Coordinate System
+    =================
+      The SPICE (SPK) files use the J2000 reference frame internally, which is
+      equivalent to the International Celestial Reference Frame.  They do
+      not depend on planetary ephemerides, but rather are relative to the
+      Center of Mass (COM) of the Moon.
+ 
+      DE421 is used as the reference ephemeris of the Moon as specified by
+      the Project.  Where there is some dependence on coordinate frame in this
+      dataset, it would be the DE421.
+ 
+    Software
+    ========
+      No software is included with the archival data set.  Spice toolkits can
+      be downloaded from naif.jpl.nasa.gov.
+ 
+    Media/Format
+    ============
+      This data set is stored online at the Planetary Data System
+      (http://pds.nasa.gov/) and may be downloaded using a web browser
+      or FTP software. A copy may be requested on physical media if
+      downloading is not possible. The Planetary Data System maintains
+      backup copies of this data set on various media.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been collected to support radio
+      science investigations, including derivation of the gravity field of
+      the Moon.  These are similar to data collected using other spacecraft
+      and are believed to be generally of good quality.
+ 
+    Review
+    ======
+      This archival data set was reviewed by the LRO Radio Science Team, a
+      subunit of the Lunar Orbiter Laser Altimeter (LOLA) Team,
+      prior to submission to the Planetary Data System (PDS).  Data
+      set design, documentation, and sample products have passed a
+      PDS peer review.
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, example data files, CATALOG files, and
+      Software Interface Specifications.  These materials were
+      distributed to PDS personnel, the experiment investigator,
+      and others, as appropriate.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data set coverage is given by START_TIME and STOP_TIME except for the
+      delivery of SPK files, which are derived products.  These may lag
+      delivery of tyhe raw data (TRK files).  There is no significant
+      variation in data quality with coverage.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

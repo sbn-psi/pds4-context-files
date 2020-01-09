@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-sharad-3-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO SHARAD EXPERIMENT DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:sharad.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-sharad-3-edr-v1.0__browserp_mro-m-sharad-3-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-sharad-3-edr-v1.0__browser_geo_mars_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-sharad-3-edr-v1.0__dvo_geo_mro-m-sharad-3-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Orosei, R., and S. Slavney, Mars Reconnaissance Orbiter Shallow Radar
+                   Experiment Data Record Software Interface Specification, Version 1.1,
+                   March 22, 2006.
+            </reference_text>
+            <description>reference.OROSEI2006A</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-SHARAD-3-EDR-V1.0</data_set_id>
+        <data_set_name>MRO SHARAD EXPERIMENT DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2006-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>ROBERTO OROSEI</producer_full_name>
+        <citation_text>
+            Orosei, R., Mars Reconnaissance Orbiter Shallow Radar Experiment
+            Data Record, MRO-M-SHARAD-3-EDR-V1.0, NASA Planetary Data System,
+            2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Experiment data records for the SHARAD (Shallow Radar) instrument
+            on Mars Reconnaissance Orbiter.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains EDR (raw) data from the SHARAD (Shallow
+            Radar) instrument on Mars Reconnaissance Orbiter. SHARAD is the
+            sub-surface sounding radar provided by the Italian Space Agency
+            (ASI).
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      Data Set MARS RECONNAISSANCE ORBITER MARS SHARAD EXPERIMENT DATA
+      RECORD V1.0 (Level 1-A data) consists of the instrument telemetry
+      correlated with the auxiliary information needed to locate
+      observations in space and time and to process data further. Level
+      1-A data users will mainly be radar scientists interested in
+      redoing the entire processing of the received signal. The fact
+      that unprocessed Subsurface Sounding echoes do not show any
+      obvious indication of subsurface interfaces will make EDRs of
+      little use for geologists. The reader is referred to the SHARAD
+      RDR data set (MRO-M-SHARAD-4-RDR-V1.0) for calibrated, processed
+      SHARAD data suitable for science analysis.
+ 
+    Processing
+    ==========
+ 
+      SHARAD EDR Data Products are generated at the SHARAD operation
+      center in Rome, Italy, under the responsibility of the Team Leader
+      Institution (INFOCOM Department, University of Rome &apos;La
+      Sapienza&apos;).
+ 
+      To produce EDRs, data are ordered in time and sorted by instrument
+      operative mode. Any duplicate packets are removed, while missing
+      and corrupted packets are accounted for and substituted by zero-
+      padding. Level 1A processing consists of the following functions:
+ 
+      1) Deformatting data packets 2) Time ordering data packets 3)
+      Sorting data packets by instrument operative mode 4) Testing
+      quality of data packets 5) Formatting data packets into binary
+      files 6) Generating auxiliary data to locate each observation in
+      space and time 7) Generating PDS detached labels for data products
+ 
+      Apart from editing of data to remove duplicates and transmission
+      errors, no processing is applied to the scientific data of the
+      instrument. Calibration information is provided in the form of
+      calibration files containing the transfer function of the
+      instrument.
+ 
+      Input for Level 1A processing consists of: 1) SHARAD science
+      telemetry in the form of Instrument Raw Science Products. 2)
+      SHARAD engineering telemetry. 3) Spacecraft housekeeping
+      telemetry. 4) Ancillary information on spacecraft trajectory and
+      orientation in the form of SPICE SPK and CK kernels produced by
+      the Navigation and Ancillary Information Facility (NAIF) at JPL.
+      5) Spacecraft clock coefficients to convert spacecraft clock
+      counts into Coordinated Universal Time (UTC), in the form of SPICE
+      SCLK kernels produced by NAIF.
+ 
+    Data
+    ====
+      Each SHARAD Data Product is an aggregation of SHARAD data blocks.
+      A data block is produced through the processing of one or more
+      received echoes, and constitutes a single observation of the
+      instrument.
+ 
+      Each Data Product contains data from one or more data blocks
+      collected continuously using the same operation mode, instrument
+      status and on-board processing scheme; that is, using a single OST
+      line. The content of each SHARAD data product is highly variable
+      in terms of number of data blocks, and depends on how operations
+      for the instrument were planned during a given data collection
+      period.
+ 
+      Because each data block is a sequence of time samples of a
+      received signal, complemented by ancillary information, the
+      natural organization for data blocks within a Data Product is a
+      table, in which each line contains data from a single data block,
+      and each column contains the value of a single parameter or time
+      sample across different data blocks.
+ 
+      Each Data Product consists of three files:
+ 
+      1) A binary file containing the scientific telemetry of the
+      instrument. This is a sequence of echoes, each of which is
+      preceded by a header containing information on the collection and
+      on-board processing of the data. This file is called the Science
+      Telemetry file.
+ 
+      2) A binary table containing geometric quantities generated on-
+      ground from spacecraft navigation data, parameters extracted from
+      instrument and spacecraft housekeeping telemetry, and flags
+      describing the completeness and usability of the associated
+      scientific telemetry. This file is called the Auxiliary Data file
+      and contains one record for every data block in the Science
+      Telemetry file.
+ 
+      3) A detached ASCII label file describing the content of the data
+      product. The label is written according to standards defined by
+      the Planetary Data System (PDS), and lists parameters describing
+      both the observation in which data were acquired and the structure
+      of the files in which data are stored.
+ 
+      Binary files are structured as PDS Table data objects. The content
+      of such tables is listed in format files, of which several exist
+      according to operation mode, instrument status and on-board
+      processing scheme, and which will be contained in the LABEL
+      directory of the Data Set Volume.
+ 
+    Ancillary Data
+    ==============
+      Each Auxiliary Data file contains a binary table with one row for
+      each record in the corresponding Science Telemetry file of an EDR
+      data product. Columns of the table are described in a separate
+      file called format file.
+ 
+    Coordinate System
+    =================
+      SHARAD EDR data products conform to a Project-determined set of
+      cartographic standards. All map-projected data use planetocentric
+      coordinates and east-positive longitudes in the range 0 to 360
+      degrees, computed w.r.t. the IAU 2000 reference ellipsoid. Vector
+      quantities such as spacecraft positions are expressed in a
+      Cartesian planetocentric reference frame.
+ 
+    Media/Format
+    ============
+      Each SHARAD EDR data product consists of two binary files in fixed
+      record-length format, called respectively the Science Telemetry
+      and the Auxiliary Data files. The structure of such files is
+      described by a separate PDS label containing also information on
+      source data, production process, relation between stored bytes and
+      physical quantities, product identification, storing and
+      organizing of ancillary data and descriptive information needed to
+      interpret and process the data.
+ 
+      The data contained in the Science Telemetry file and in the
+      Auxiliary Data files are structured as a PDS Table object. The PDS
+      label contains pointers to files containing definitions of the
+      columns of such Table objects. Each record in a binary Science
+      Telemetry file is a Science Data Format, some internal telemetry
+      counters, the Start of Telemetry and End of Telemetry markers, and
+      the checksum. It thus consists of an ancillary data header
+      reporting the OST line used in collecting the data block,
+      ancillary data reporting the time of acquisition of the data and
+      listing parameter values used in processing the data block, and
+      the data block itself, consisting of 3600 echo samples, each
+      either 4-, 6- or 8-bits long. The resulting record length in bytes
+      is thus dependent of the Operational Mode through which data were
+      acquired.
+ 
+      Each record in a binary Auxiliary Data file is the line of a table
+      listing values of geometric and engineering parameters relevant
+      for the location and processing of the corresponding data block in
+      the Science Telemetry file. Most parameter values are expressed as
+      an 8-byte or 4-byte IEEE real numbers. Values contained in this
+      file are partly computed from SPICE kernels containing information
+      on spacecraft trajectory and attitude, and partly extracted from
+      SHARAD housekeeping telemetry.
+ 
+      PDS labels are written in Object Description Language (ODL). PDS
+      label statements have the form of &apos;keyword = value&apos;. Each label
+      statement is terminated with a carriage return character (ASCII
+      13) and a line feed character (ASCII 10) sequence to allow the
+      label to be read by many operating systems.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      TBD
+ 
+ 
+    Review
+    ======
+      This data set was examined by a peer review panel in accordance
+      with PDS procedures. At this writing (May 21, 2007), some liens
+      placed on the data set as a result of the review are still
+      unresolved.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      TBD
+ 
+    Limitations
+    ===========
+      TBD
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

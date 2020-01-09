@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.derived_image_type</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>derived_image_type</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>derived_image_type</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>derived_image_type</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+     Specifies how to interpret the pixel values in a derived image RDR
+     (or colloquially, the type of the derived image itself).
+ 
+Values are defined as:
+  IMAGE - Standard image, where pixels represent intensity.
+          Note that this implies nothing about radiometric,
+          geometric, or other corrections that may have been applied.
+  DISPARITY_MAP - Pixels represent line and sample disparity coordinates
+          with respect to another image (2 bands).
+  DISPARITY_LINE_MAP - Pixels represent line disparity only.
+  DISPARITY_SAMPLE_MAP - Pixels represent sample disparity only.
+  DISPARITY_ERROR_MAP - Pixels represent a disparity error metric.
+  DELTA_DISPARITY_MAP - Pixels represent line and sample as an offset
+          with respect to another image (2 bands).
+  DELTA_DISPARITY_LINE_MAP - Pixels represent the line delta disparity only.
+  DELTA_DISPARITY_SAMPLE_MAP - Pixels represent
+          the sample delta disparity only.
+  MASK - Pixels represent a mask to apply to another image.
+  XYZ_MAP - Pixels represent XYZ values (3 bands).
+  XYZ_ERROR_MAP - Pixels represent an XYZ error metric.
+  X_MAP - Pixels represent the X component of an XYZ image.
+  Y_MAP - Pixels represent the Y component of an XYZ image.
+  Z_MAP - Pixels represent the Z component of an XYZ image.
+  ANGLE_MAP - Pixels represent an angle between 2 vectores.
+  RANGE_MAP - Pixels represent a distance from the camera center.
+  RANGE_ERROR_MAP - Pixels represent a range error metric.
+  UVW_MAP - Pixels represent Surface Normal values (3
+          bands associating to X,Y,Z).
+  U_MAP - Pixels represent the U (X) component of a
+          Surface Normal image.
+  V_MAP - Pixels represent the V (Y) component of a
+          Surface Normal  image.
+  W_MAP - Pixels represent the W (Z) component of a
+          Surface Normal image.
+  ROUGHNESS_MAP - Pixels represent a measure of surface roughness.
+  REACHABILITY_MAP - Pixels flag what is reachable on
+          the target feature by the respective IDD instrument.
+  PRELOAD_MAP - Pixels represent an arm preload value.
+  SLOPE_MAP - Pixels represent a slope angle.
+  RADIAL_SLOPE_MAP - Pixels represent the component
+           of slope radial to the rover.
+  SLOPE_HEADING_MAP - Pixels represent a slope heading.
+  SLOPE_MAGNITUDE - Pixels represent a slope magnitude.
+  NORTHERLY_TILT_MAP - Pixels represent the north-
+           facing component of slope.
+  SOLAR_ENERGY_MAP - Pixels represent the
+           available fraction of maximum solar energy.
+  IEP_MAP - Pixels represent Incidence, Emmission and Phase angles.
+        </definition>
+        <comment>drivd_img_ty</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>derived_image_type</name>
+            <definition>
+     Specifies how to interpret the pixel values in a derived image RDR
+     (or colloquially, the type of the derived image itself).
+ 
+Values are defined as:
+  IMAGE - Standard image, where pixels represent intensity.
+          Note that this implies nothing about radiometric,
+          geometric, or other corrections that may have been applied.
+  DISPARITY_MAP - Pixels represent line and sample disparity coordinates
+          with respect to another image (2 bands).
+  DISPARITY_LINE_MAP - Pixels represent line disparity only.
+  DISPARITY_SAMPLE_MAP - Pixels represent sample disparity only.
+  DISPARITY_ERROR_MAP - Pixels represent a disparity error metric.
+  DELTA_DISPARITY_MAP - Pixels represent line and sample as an offset
+          with respect to another image (2 bands).
+  DELTA_DISPARITY_LINE_MAP - Pixels represent the line delta disparity only.
+  DELTA_DISPARITY_SAMPLE_MAP - Pixels represent
+          the sample delta disparity only.
+  MASK - Pixels represent a mask to apply to another image.
+  XYZ_MAP - Pixels represent XYZ values (3 bands).
+  XYZ_ERROR_MAP - Pixels represent an XYZ error metric.
+  X_MAP - Pixels represent the X component of an XYZ image.
+  Y_MAP - Pixels represent the Y component of an XYZ image.
+  Z_MAP - Pixels represent the Z component of an XYZ image.
+  ANGLE_MAP - Pixels represent an angle between 2 vectores.
+  RANGE_MAP - Pixels represent a distance from the camera center.
+  RANGE_ERROR_MAP - Pixels represent a range error metric.
+  UVW_MAP - Pixels represent Surface Normal values (3
+          bands associating to X,Y,Z).
+  U_MAP - Pixels represent the U (X) component of a
+          Surface Normal image.
+  V_MAP - Pixels represent the V (Y) component of a
+          Surface Normal  image.
+  W_MAP - Pixels represent the W (Z) component of a
+          Surface Normal image.
+  ROUGHNESS_MAP - Pixels represent a measure of surface roughness.
+  REACHABILITY_MAP - Pixels flag what is reachable on
+          the target feature by the respective IDD instrument.
+  PRELOAD_MAP - Pixels represent an arm preload value.
+  SLOPE_MAP - Pixels represent a slope angle.
+  RADIAL_SLOPE_MAP - Pixels represent the component
+           of slope radial to the rover.
+  SLOPE_HEADING_MAP - Pixels represent a slope heading.
+  SLOPE_MAGNITUDE - Pixels represent a slope magnitude.
+  NORTHERLY_TILT_MAP - Pixels represent the north-
+           facing component of slope.
+  SOLAR_ENERGY_MAP - Pixels represent the
+           available fraction of maximum solar energy.
+  IEP_MAP - Pixels represent Incidence, Emmission and Phase angles.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>true</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>
+N/A
+</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>Unknown</specified_unit_id>
+            <DD_Permissible_Value_Full>
+                <value>ANGLE_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>DELTA_DISPARITY_LINE_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>DELTA_DISPARITY_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>DELTA_DISPARITY_SAMPLE_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>DISPARITY_ERROR_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>DISPARITY_LINE_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>DISPARITY_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>DISPARITY_SAMPLE_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>IEP_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>IMAGE</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>MASK</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>NORTHERLY_TILT_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>PRELOAD_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>RADIAL_SLOPE_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>RANGE_ERROR_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>RANGE_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>REACHABILITY_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>ROUGHNESS_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>SLOPE_HEADING_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>SLOPE_MAGNITUDE</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>SLOPE_MAGNITUDE_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>SLOPE_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>SOLAR_ENERGY_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>UVW_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>U_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>V_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>W_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>XYZ_ERROR_MAP</value>
+                <value_begin_date>2013-05-28T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>XYZ_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>X_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>Y_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>Z_MAP</value>
+                <value_begin_date>2004-06-24T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

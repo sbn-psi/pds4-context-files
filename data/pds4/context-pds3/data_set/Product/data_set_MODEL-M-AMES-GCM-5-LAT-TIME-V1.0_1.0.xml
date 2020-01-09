@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.model-m-ames-gcm-5-lat-time-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>AMES MARS GENERAL CIRCULATION MODEL 5 LAT TIME VARIABLE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.model::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ames-gcm.model::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.model-m-ames-gcm-5-lat-time-v1.0__browserp_model-m-ames-gcm-5-lat-time-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Barnes, J.R., J. Pollack, R. Haberle, C. Leovy, R. Zurek, H. Lee, and J.
+                   Schaeffer, Mars atmospheric dynamics as simulated by the NASA Ames General
+                   Circulation Model 2. Transient baroclinic eddies. J. Geophys. Res., 98,
+                   3125-3148, 1993.
+            </reference_text>
+            <description>reference.BARNESETAL1993</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Haberle, R.M., J. Pollack, J. Barnes, R. Zurek, C. Leovy, J. Murphy, H.
+                   Lee, and J. Schaeffer, Mars atmospheric dynamics as simulated by the NASA
+                   Ames General Circulation Model 1. The zonal mean circulation, J. Geophys.
+                   Res., 98, 3093-3123, 1993.
+            </reference_text>
+            <description>reference.HABERLEETAL1993</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Pollack, J.B, R. Haberle, J. Schaeffer, and H. Lee, Simulations of the
+                   General Circulation of the Martian Atmosphere. J. Geophys. Res., 95,
+                   1447-1473, 1990.
+            </reference_text>
+            <description>reference.POLLACKETAL1990</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MODEL-M-AMES-GCM-5-LAT-TIME-V1.0</data_set_id>
+        <data_set_name>AMES MARS GENERAL CIRCULATION MODEL 5 LAT TIME VARIABLE V1.0</data_set_name>
+        <data_set_release_date>1995-01-01</data_set_release_date>
+        <start_time>1994-11-01</start_time>
+        <stop_time>1994-12-01</stop_time>
+        <producer_full_name>MAUREEN BELL</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            AMES MARS GCM LAT TIME
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Ames Mars General Circulation Model is a three dimensional
+            model based on the primitive equations of meteorology. It
+            includes the radiative effects of dust and carbon dioxide as well
+            as other features such as large-scale topography (see
+            [POLLACKETAL1990]
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Ames Mars General Circulation Model is a three dimensional
+      model based on the primitive equations of meteorology.  It
+      includes the radiative effects of dust and carbon dioxide as
+      well as other features such as large-scale topography (see
+      [POLLACKETAL1990]; [BARNESETAL1993]; and [HABERLEETAL1993]).
+ 
+      The model has 25 latitude bins (7.5 degree resolution), 40
+      longitude bins (9.0 degree resolution) and 13 vertical layers.
+      The spacing between each layer varies.  The following array
+      defines the layer spacing from the tropopause to the surface in
+      mbars:
+ 
+        0.005779, 0.009511, 0.01568, 0.02585, 0.04263, 0.07025,
+        0.1159, 0.1544, 0.1586, 0.1364, 0.1223, 0.09270, 0.05000.
+ 
+      The model spins up from a resting isothermal state with the
+      global temperature equal to 200K.  The spin up starts with hour
+      equal to 0.  The model saves data every 1.5 hours for a total
+      of 16 hour bins per day.
+ 
+      Some other initial conditions that are set when the model spins
+      up:
+ 
+      INITIAL SURFACE PRESSURE      : 7.60 mbars
+      TROPOPAUSE PRESSURE           : 0.06699 mbars
+      DUST OPTICAL DEPTH            : 0.3 (for periods where Ls &lt; 200)
+      DUST OPTICAL DEPTH            : 1.0 (for periods where Ls &gt; 200)
+      ICE CLOUD OPTICAL DEPTH       : 0.00
+      TIME STEP                     : 9.25 minutes
+      RICHARDSON NUMBER TIME SCALE  : 200000000. seconds
+      SCALE HEIGHT FOR DUST PROFILE : 0.03000
+      TIME CONSTANT FOR RAYLEIGH
+        FRICTION                    : 2.0000 days
+ 
+      This data set is composed of 20 to 30 day averages of the data
+      resulting from model runs simulating martian conditions for
+      four Ls periods during 1977 (Ls 10-24, 94-103, 202-220, and
+      267-286).
+ 
+        Native start time  =  10.15 AREOCENTRIC LON, EARTH YEAR 1977
+        Native stop time   = 286.09 AREOCENTRIC LON, EARTH YEAR 1977
+ 
+      The lat-time data set contains the zonally averaged values for
+      the surface temperature mean.  The data are given as a function
+      of latitude and local time.  The calculations are done in the
+      pi coordinate system; pi coordinates are located at the
+      intersection points of a set of evenly spaced latitude circles
+      and a set of evenly spaced longitude circles.
+ 
+      The data set is in the following configuration (listed as field
+      followed by description):
+ 
+      LATITUDE
+        Latitude, degrees
+ 
+      TIME
+        Local time, hr
+ 
+      SURF_TEMP_MEAN
+        Mean surface temperature, K
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      The Ames Mars General Circulation Model is a three dimensional
+      computer model based upon the primitive equations of
+      meteorology.  It includes the radiative effects of dust and
+      carbon dioxide as well as other features such as large-scale
+      topography.  Model results are dependent upon the selected
+      initial conditions and spatial and temporal resolution of the
+      model, and may not fully incorporate the effects of some
+      physical processes represented by paramaterizations made by the
+      model.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>NSD MN-70A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

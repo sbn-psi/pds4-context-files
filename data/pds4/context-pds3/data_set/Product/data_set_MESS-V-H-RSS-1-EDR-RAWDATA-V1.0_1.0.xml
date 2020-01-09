@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-v-h-rss-1-edr-rawdata-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER V/H RADIO SCIENCE SUBSYSTEM 1 EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-v-h-rss-1-edr-rawdata-v1.0__browserp_mess-v-h-rss-1-edr-rawdata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-v-h-rss-1-edr-rawdata-v1.0__browser_geo_mercury_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-v-h-rss-1-edr-rawdata-v1.0__dvo_geo_mess-v-h-rss-1-edr-rawdata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Srinivasan, D.K., M.E. Perry, K.B. Fielhauer, D.E. Smith, and M.T. Zuber, The
+                   radio frequency subsystem and radio science on the MESSENGER mission, Space
+                   Science Reviews, 131, 557-571, 2007.
+            </reference_text>
+            <description>reference.SRINIVASANETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-V/H-RSS-1-EDR-RAWDATA-V1.0</data_set_id>
+        <data_set_name>MESSENGER V/H RADIO SCIENCE SUBSYSTEM 1 EDR V1.0</data_set_name>
+        <data_set_release_date>2015-03-06</data_set_release_date>
+        <start_time>2006-10-18</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>MARK E. PERRY</producer_full_name>
+        <citation_text>
+            Perry, M.E., Solomon, S.C., Lemoine, F.G., Smith, D.E., Zuber,
+            M.T., MESSENGER Radio Science Raw Data
+            (MESS-V/H-RSS-1-EDR-RAWDATA-V1.0), NASA Planetary Data System,
+            2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw radio science data and ancillary files from the MESSENGER
+            mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival raw, partially processed, and
+            ancillary/supporting radio science data acquired during the
+            MESSENGER mission. The radio observations were carried out using
+            the MESSENGER spacecraft and Earth-based receiving stations of
+            the NASA Deep Space Network (DSN). The observations were designed
+            to be part of a data set that is of sufficient quality and
+            quantity to generate high-resolution gravity field models of
+            Mercury. Of most interest are likely to be the Orbit Data Files
+            in the ODF directory. The data range from 2006 to 2014; there are
+            gaps in the data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The MESSENGER Radio Science (RS) Raw Data Archive (RDA) is a
+      time-ordered collection of raw and partially processed data
+      collected during the MESSENGER mission to Mercury.
+ 
+      This data set was collected during the cruise and orbital phases
+      of the MESSENGER mission; the earliest data are from 2006.
+      This period includes the three Mercury flybys and the orbit-phase
+      data from Mercury orbit insertion (MOI) on 11 March 2011 to
+      17 March 2014.
+ 
+      This data set includes four primary data types.
+      Tracking and Navigation Files (TNFs) are the raw
+      product of the closed-loop tracking system.  Orbit Data
+      Files (ODFs) are edited versions of TNFs, specifically
+      targeted to spacecraft navigators and scientists interested in
+      gravity fields.  Radio Science Receiver (RSR) data are the raw
+      product of the open-loop receiver.  Delta-Differential One-way
+      Ranging (DDOR) use two DSN stations and a quasar to provide
+      additional position information normal to the line of sight.
+      The data set also includes ancillary data or
+      supporting data to be used in analyzing the primary data.
+ 
+      Please see documentation in the DOCUMENT directory for
+      additional information on the data files and their format.
+      First-time users of the data set should begin with the
+      MESSENGER_EDR_SIS, which is found in the DOCUMENT directory.
+ 
+    Parameters
+    ==========
+      See individual SIS documents, which are located in the
+      DOCUMENT directory, for detailed descriptions of each file
+      contained in this data archive.
+ 
+    Processing
+    ==========
+      Typical TNFs contain data from a 24-hour period and combine data from
+      several antennas if there were multiple passes during the 24-hour
+      period. ODFs are abstracted from subsets of TNF data.  A full PDS label
+      accompanies each ODF file and gives a bit-level description of the
+      content and format. RSR data were modified during Ground Data System
+      handling so that MISSION_ID in the Primary Header CHDO was set to 5.
+ 
+    Data
+    ====
+      Users should consult listings in the INDEX.TAB file to
+      ascertain full coverage of each data type.
+ 
+      The DATA directory contains ODF and TNF data for each DSN pass.
+      During the cruise phase of the mission, there were
+      usually three DSN contacts per week. During
+      flybys, and the weeks preceding and following, there are more DSN
+      contacts, and usually continuous for the four days centered on
+      close approach. There are TNF and ODF data for each contact. DDOR
+      data are infrequent, and concentrated near flybys. There are no
+      DDOR data after MOI. RSR data were archived for a
+      6-month period starting late in 2006. These data span a long
+      superior conjunction and were collected for potential use for
+      studying the solar corona. RSR data are also collected at each
+      occultation event during the cruise phase of the mission.
+ 
+      During the Mercury orbital phase of the mission, there were one
+      or two DSN contacts per 24 hours. MESSENGER orbited Mercury every 12
+      hours for the first 12 months of orbit operations. Each 24 hours, one
+      contact included data obtained using MESSENGER&apos;s high-gain antennas
+      (HGAs) and low-gain  antennas (LGAs). The LGA data usually included the
+      periapsis portion of the orbit and 75 minutes on either side of the
+      periapsis. The HGA data were farther from Mercury and usually 6-9 hours
+      in duration. If there was a second contact in a 24-hour span, it was
+      usually LGA data that covered the second periapsis portion of the
+      orbit. If there was an Earth occultation during the orbit, it was
+      usually observed using the LGAs and there were usually RSR data
+      collected for several minutes during both ingress and egress. During
+      the first two weeks after MOI, DSN contact was nearly continuous.
+ 
+      Starting in April 2012, thirteen months after MOI, MESSENGER began
+      orbiting Mercury with an eight-hour period. The timing and frequency
+      of contacts changed as described in the DATA COVERAGE AND QUALITY
+      section, below.
+ 
+      ODFs are stored in the ODF directory on archival volumes. File
+      names are described in MESSENGER_EDR_SIS.html. The typical ODF
+      contains under 2 Mbytes of data.
+ 
+      ODFs during cruise are primarily 10-sec Doppler X-band data, but
+      there are some ODFs with 1-second integration periods (during flybys)
+      and some with 60-second integration periods. During the orbital phase
+      of the mission most ODFs have 5-second integration periods.
+ 
+      Every file in the directory has a PDS label. Except for files
+      in the root directory and in the CATALOG directories, the
+      label is a separate file in the same directory with the same
+      name but a LBL extension. The TNF labels are embedded, not detached.
+ 
+ 
+    Ancillary Data
+    ==============
+      An extensive set of ancillary files is provided for detailed
+      analysis and interpretation of the primary (tracking) data. Users
+      should refer to the INDEX.TAB listing to locate ancillary files
+      and to the MESSENGER RS Raw-Data SIS for a description of the ancillary
+      data files, their data formats, and their naming conventions.
+ 
+ 
+    Coordinate System
+    =================
+      The NAIF reader routines enable the raw data and ancillary data to be
+      converted into a wide range of reference frames. Most of the data are
+      linked to time and are independent of reference frame. The user chooses
+      their reference frame.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these must usually operate at the bit-level and is
+      written for a narrow range of platforms.  It is not suitable
+      for general distribution.  No software is included with this
+      archival data set.
+ 
+ 
+    Media/Format
+    ============
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this data set include the three flybys of Mercury, Mercury
+      Orbit Insertion (MOI) and the first forty-two months of MESSENGER&apos;s
+      orbital phase.
+ 
+      The ODF data have been processed by the navigation team and by the
+      gravity science team during the course of their analyses.
+      This processing shows the data to be of good quality, sufficient for
+      analysis of Mercury&apos;s gravitational field.
+      Most of the cruise data were obtained using the spacecraft&apos;s high-gain
+      antennas. There are periods within a few days of the closest approach
+      to Mercury where the low-gain antennas were used. The gain of the
+      low-gain antennas is typically 20-25 dB lower than the high-gain
+      antennas, so the data encompass a wide range of RF power levels, and
+      the signal-to-noise ratio therefore has a wide range. Variations in
+      the proximity of the RF path to the Sun also contribute to a
+      wide variation in the signal-to-noise ratio. Due to occultations and
+      the availability of DSN stations, the tracking data are not
+      continuous and may have several gaps during a single MESSENGER orbit.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the MESSENGER RS
+      Team prior to submission to the Planetary Data System (PDS).
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications.  These materials were distributed to PDS
+      personnel, the experiment investigator, and others,
+      as appropriate.
+ 
+    Data Coverage and Quality
+    =========================
+      Data reported are the minimally processed data received from
+      the spacecraft during the the following mission phases:
+      Launch, Earth Cruise, Earth Flyby, Venus 1 Cruise,
+      Venus 1 Flyby, Venus 2 Cruise, Venus 2 Flyby, Mercury 1 Cruise
+      Mercury 1 Flyby, Mercury 2 Cruise, Mercury 2 Flyby,
+      Mercury 3 Cruise, Mercury 3 Flyby, Mercury 4 Cruise,
+      Mercury Orbit, Mercury Orbit Year 2, Mercury Orbit Year 3 and Mercury
+      Orbit Year 4. These mission phases are defined as:
+ 
+                            Start time          End time
+      Phase Name            Date (DOY)          Date (DOY)
+      -------------------   -----------------  -----------------
+      Launch                03 Aug 2004 (216)  12 Sep 2004 (256)
+      Earth Cruise          13 Sep 2004 (257)  18 Jul 2005 (199)
+      Earth Flyby           19 Jul 2005 (200)  16 Aug 2005 (228)
+      Venus 1 Cruise        17 Aug 2005 (229)  09 Oct 2006 (282)
+      Venus 1 Flyby         10 Oct 2006 (283)  07 Nov 2006 (311)
+      Venus 2 Cruise        08 Nov 2006 (312)  22 May 2007 (142)
+      Venus 2 Flyby         23 May 2007 (143)  20 Jun 2007 (171)
+      Mercury 1 Cruise      21 Jun 2007 (172)  30 Dec 2007 (364)
+      Mercury 1 Flyby       31 Dec 2007 (365)  28 Jan 2008 (028)
+      Mercury 2 Cruise      29 Jan 2008 (029)  21 Sep 2008 (265)
+      Mercury 2 Flyby       22 Sep 2008 (266)  20 Oct 2008 (294)
+      Mercury 3 Cruise      21 Oct 2008 (295)  15 Sep 2009 (258)
+      Mercury 3 Flyby       16 Sep 2009 (259)  14 Oct 2009 (287)
+      Mercury 4 Cruise      15 Oct 2009 (288)  03 Mar 2011 (062)
+      Mercury Orbit         04 Mar 2011 (063)  17 Mar 2012 (077)
+      Mercury Orbit Year 2  18 Mar 2012 (078)  17 Mar 2013 (076)
+      Mercury Orbit Year 3  18 Mar 2013 (077)  17 Mar 2014 (076)
+      Mercury Orbit Year 4  18 Mar 2014 (077)  17 Mar 2015 (076)
+ 
+      There are RSR files for 6 months starting in late 2006 to cover the
+      long solar conjunction for potential use for solar-corona studies.
+ 
+      There are data for the second flyby of Venus, after which there are no
+      data until late in 2007, after which the data are archived for all DSN
+      contacts.
+ 
+      There are three differences in the data for the flybys: 1) DSN coverage
+      increases for the four weeks centered on each flyby, including
+      nearly-constant coverage for +/-24 hours; 2) for most of the period
+      within three days of close approach, the RF power is at least 20 dB
+      below nominal because the low-gain antennas are used; 3) if there is an
+      Earth occultation (M1 and M3), there are RSR data. RSR data are
+      collected only for occultations and for a solar-conjunction
+      investigation in 2006/2007. During flyby occultations, RSR data are
+      recorded on multiple antennas, channels, and subchannels in multiple
+      sample rates, bit rates, and frequency ranges; the data from each of
+      these recordings is in a separate file which is identified by the
+      channel and subchannel.
+ 
+      ODF and TNF data are collected during each DSN
+      contact. There are both 10-s and 1-s ODF data during portions of
+      each flyby. DDOR data are collected irregularly, usually before and
+      after critical events such as flybys or propulsive maneuvers. There
+      are no DDOR data after MOI. Except for the safe mode that occurred near
+      close approach during the third flyby of Mercury, periods of
+      off-nominal operations are not documented, here.
+ 
+      During the first twelve months of the
+      orbital phase of the mission, there is usually one
+      contact using a high-gain antenna (HGA) every other orbit. Each
+      MESSENGER orbit lasts 12 hours. Each HGA contact lasts 6-8 hours and
+      is during the portions of the orbit where MESSENGER is farther from
+      Mercury. There is a low-gain antenna (LGA) contact either before or
+      after the HGA contact, and the LGA contact includes the periapsis
+      portion of the orbit. The LGA contact also includes any Earth
+      occultations that may occur during the orbit. The LGA contact
+      varies from 2 to 4 hours. Occasionally, an occultation will occur
+      during HGA transmissions. For periods that total approximately 50%
+      of the orbital mission, there was a second LGA contact during
+      the second orbit that occurred during a 24-hour timespan.
+      These second LGA contacts occur during weeks and months
+      when the geometry is particularly favorable for
+      high-quality Doppler or when there are occultations in Mercury&apos;s
+      southern hemisphere, which is not reachable by the laser altimeter.
+      Spacecraft activities such as orbit-correction maneuvers or
+      momentum-dumping maneuvers may cause modifications to this
+      nominal plan.
+ 
+      After switching to an eight-hour orbit period, contacts are less
+      frequent, and the HGA data are usually six hours per day or less.
+      Most 24-hour periods contain at least one contact that includes
+      LGA data for one of the three periapsis passes each 24 hours.
+      There are periods when MESSENGER uses the HGA during the periapsis
+      pass; these occur when the Earth-Mercury-Sun angle is near
+      90 degrees, which is a geometry that has particularly poor
+      signal on the LGAs.
+ 
+      RSR data for occultation measurements are captured
+      predominantly when the viewing geometry produces good
+      signal-to-noise observations,
+      when the range to Earth is less than 1 AU.
+ 
+      YY/DDD       Comments
+      ------       ----------------
+      06/291       Start of RSR solar-conjunction campaign
+      07/139       End of RSR solar-conjunction campaign
+      07/156       Second flyby of Venus
+      07/347       Beginning of complete data archive
+      08/014       First flyby of Mercury (M1) Includes an occultation
+      08/280       Second flyby of Mercury(no occultation)
+      09/272       Third flyby of Mercury (M3) Includes an occultation.
+                   RF interrupted by safe mode at 21:57:21 UTC
+      11/077       Mercury orbital insertion (MOI).
+      12/111       Orbital period reduced to 8 hours.
+      13/260       Last data to be included in the delivery 11 data set.
+      14/076       Last data to be included in the delivery 12 data set.
+      14/260       Last data to be included in the delivery 13 data set.
+ 
+ 
+      The start and stop days of the periods when Mercury occults
+      RF transmissions to Earth are
+      YY/DDD to YY/DDD
+      11/077 to 11/129
+      11/190 to 11/293
+      12/045 to 12/120
+      12/241 to 12/278
+      13/030 to 13/121
+      13/231 to 13/264
+      14/015 to 14/120
+      14/223 to 14/253
+      14/361 to 15/086
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-rss-5-sdp-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS RADIO SCIENCE -- SCIENCE DATA PRODUCTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-5-sdp-v1.0__browserp_geo_mgs-m-rss-5-sdp-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-5-sdp-v1.0__ditdos_mgs-m-rss-5-sdp-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-5-sdp-v1.0__dvo_atmos_mgs-m-rss-5-sdp-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-5-sdp-v1.0__dvo_geo_mgs-m-rss-5-sdp-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Davies, M.E., V.K. Abalakin, A. Brahic, M. Bursa, B.H. Chovitz, J.H. Lieske,
+                   P.K. Seidelmann, A.T. Sinclair, and Y.S. Tjuflin, Report of the IAU/IAG/COSPAR
+                   Working Group on Cartographic Coordinates and Rotational Elements of the
+                   Planets and Satellites: 1991, Celestial Mechanics and Dynamical Astronomy, 53,
+                   377-397, 1992.
+            </reference_text>
+            <description>reference.DAVIESETAL1992B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Davies, M.E., V.K. Abalakin, M. Bursa, J.H. Lieske, B. Morando, D. Morrison,
+                   P.K. Seidelmann, A.T. Sinclair, B. Yallop, and Y.S. Tjuflin, Report of the
+                   IAU/IAG/COSPAR Working Group on Cartographic Coordinates and Rotational
+                   Elements of the Planets and Satellites: 1994, Celestial Mechanics and Dynamical
+                   Astronomy, 63, 127-148, 1995.
+            </reference_text>
+            <description>reference.DAVIESETAL1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Fjeldbo, G., A.J. Kliore, and V.R. Eshleman, The Neutral Atmosphere of Venus as
+                   Studied with the Mariner V Radio Occultation Data, Astron. J., 76, 123-140,
+                   1971.
+            </reference_text>
+            <description>reference.FJELDBOETAL1971</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hinson, D.P., R.A. Simpson, J.D. Twicken, G.L. Tyler, and F.M. Flasar, Initial
+                   Results from Radio Occultation Measurements with Mars Global Surveyor, Journal
+                   of Geophysical Research, 104, 26997-27012, 1999.
+            </reference_text>
+            <description>reference.HINSONETAL1999</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hinson, D.P., G.L. Tyler, J.L. Hollingsworth, and R.J. Wilson, Radio
+                   Occultation Measurements of Forced Atmospheric Waves on Mars, Journal of
+                   Geophysical Research, 106, 1463-1480, 2001.
+            </reference_text>
+            <description>reference.HINSONETAL2001</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Smith, D.E., W.L. Sjogren, G.L. Tyler, G. Balmino, F.G. Lemoine, and A.S.
+                   Konopliv, The Gravity Field of Mars: Results from Mars Global Surveyor,
+                   Science, 286, 94-97, 1999.
+            </reference_text>
+            <description>reference.SMITHETAL1999</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tyler, G.L., G. Balmino, D.P. Hinson, W.L. Sjogren, D.E. Smith, R. Woo, S.W.
+                   Asmar, M.J. Connally, C.L. Hamilton, and R.A. Simpson, Radio Science
+                   Investigations with Mars Observer, Journal of Geophysical Research, 97,
+                   7759-7779, 1992.
+            </reference_text>
+            <description>reference.TYLERETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tyler, G.L., G. Balmino, D.P. Hinson, W.L. Sjogren, D.E. Smith, R.A. Simpson,
+                   S.W. Asmar, P. Priest, and J.D. Twicken, Radio science observations with Mars
+                   Global Surveyor: Orbit insertion through one Mars year in mapping orbit,
+                   Journal of Geophysical Research, 106, 23327-23348, 2001.
+            </reference_text>
+            <description>reference.TYLERETAL2001</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Yeh, K.C., and C.H. Liu, Theory of Ionospheric Waves, Academic Press, San
+                   Diego, 1972.
+            </reference_text>
+            <description>reference.YEH-LIU1972</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-RSS-5-SDP-V1.0</data_set_id>
+        <data_set_name>MGS RADIO SCIENCE -- SCIENCE DATA PRODUCTS V1.0</data_set_name>
+        <data_set_release_date>2003-06-30</data_set_release_date>
+        <start_time>1997-09-12T00:00:00Z</start_time>
+        <stop_time>2004-12-22T23:33:00Z</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Tyler, G.L., G. Balmino, D.P. Hinson, W.L. Sjogren, D.E. Smith,
+            R. Woo, J.W. Armstrong, F.M. Flasar, R.A. Simpson, S. Asmar, A.
+            Anabtawi, and P. Priest, MGS RST Science Data Products,
+            MGS-M-RSS-5-SDP-V1.0, NASA Planetary Data System, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            This archive contains reduced radio science data acquired during
+            the Mars Global Surveyor (MGS) mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival results from radio science
+            investigations conducted during the Mars Global Surveyor (MGS)
+            mission. Radio measurements were made using the MGS spacecraft
+            and Earth-based stations of the NASA Deep Space Network (DSN).
+            The data set includes high-resolution spherical harmonic models
+            of Mars&apos; gravity field generated by groups at the Jet
+            Propulsion Laboratory and Goddard Space Flight Center, covariance
+            matrices for some models, and maps for some models; these results
+            were derived from raw radio tracking data. Also included are
+            profiles of atmospheric temperature and pressure and ionospheric
+            electron density, derived from phase measurements collected
+            during radio occultations. The data set also includes analyses of
+            transient surface echoes observed close to occultations during
+            the first few years of MGS operations. The atmospheric and
+            surface investigations were conducted by Radio Science Team
+            members at Stanford University. The data set also includes 93
+            line-of-sight acceleration profiles derived at JPL from radio
+            tracking data collected near periapsis while Mars Global Surveyor
+            was in its Science Phasing Orbit and below its nominal Mapping
+            altitude of 400 km. The data were delivered to PDS in
+            approximately chronological order at the rate of one CD-WO volume
+            (typically 100 MB) every three months.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Mars Global Surveyor (MGS) Radio Science (RS) Archive Data
+      Collection (ADC) of Science Data Products (SDP) includes data
+      products generated from radio occultation, gravity, and surface
+      reflection investigations conducted by members of the MGS Radio
+      Science Team (RST).
+ 
+      The archive includes both Standard Data Products (STDPs) and
+      Special Data Products (SPDPs).  STDPs were defined prior to
+      Launch; with two exceptions, they were produced routinely
+      during the mission.  The two exceptions were not created
+      regularly because suitable data were not available.  SPDPs
+      were defined after Launch and/or were produced on an irregular
+      basis.
+ 
+      Radio occultation STDPs include temperature-pressure (T-p)
+      profiles, occultation summary files, and intensity power
+      spectra.  T-p profiles were computed with standard vertical
+      resolution (approximately 200 m); an option to compute them
+      at high resolution (approximately 20 m, after correction for
+      diffraction effects) was never exercised.  David Hinson at
+      Stanford University created all T-p profiles and occultation
+      summary files.  Intensity power spectra were never computed
+      because no evidence for scintillations was ever found.
+      Richard Woo of the Jet Propulsion Laboratory (JPL) would
+      have created the intensity power spectra.
+ 
+      Gravity STDPs include spherical harmonic models, maps or images
+      of those models, and line-of-sight acceleration profiles.
+      Groups at the Goddard Space Flight Center (GSFC) under the
+      direction of David Smith and at JPL under the direction of
+      William Sjogren produced spherical harmonic models, maps, and
+      images.  Sjogren&apos;s group also produced a small number of
+      line-of-sight acceleration profiles from pre-Mapping data
+      when periapsis was unusually low.  Data collected during
+      Mapping showed little structure that was not captured in the
+      spherical harmonic model coefficients.  A group at Centre
+      National d&apos;Etudes Spatiales (CNES) under Georges Balmino also
+      worked with gravity data; but as of mid-2002 they had not
+      generated any gravity STDPs.
+ 
+      For more information on STDPs, see [TYLERETAL1992] and
+      [TYLERETAL2001].
+ 
+      Under certain conditions radio occultation data can be processed
+      to yield profiles of electron density in the ionosphere.  SPDPs
+      include profiles at standard vertical resolution created at
+      Stanford University by David Hinson.  An option to produce high
+      resolution ionospheric profiles was never exercised.
+ 
+      The surface reflection investigation was developed only after
+      the spacecraft was in Mars orbit.  SPDPs include summary tables
+      of observing geometry, summary tables of reconstructed antenna
+      pointing at the spacecraft, summary tables of signal
+      characteristics, and images of signals in time-frequency space.
+      These products were generated by Richard Simpson of Stanford
+      University.
+ 
+ 
+    Parameters
+    ==========
+      Temperature-pressure profiles are tables of atmospheric
+      temperature, pressure, and molecular number density versus
+      radius from Mars&apos; center of mass.  A header record prepended
+      to each table provides information on observing times and
+      geometry, surface conditions, and on files used in the data
+      processing.  Header records from all of the T-p profiles
+      delivered at one time (typically every three months) are
+      collected together into a single occultation summary file.
+ 
+      Spherical harmonic models are tables of coefficients GM, Cmn,
+      and Smn -- as in equation (1) of [TYLERETAL1992].  These can
+      be used to represent gravitational potential of Mars, for
+      example.  Both ASCII (data type SHA) and binary (data type
+      SHB) formats are defined, with the latter being preferred for
+      large files which also include covariance terms.  Each file
+      contains up to four tables: a header table containing general
+      parameters for the model (gravitational constant, its
+      uncertainty, degree and order of the field, normalization
+      state, reference longitude, and reference latitude); a names
+      table, giving the order in which coefficients appear; a
+      coefficients table (degree m, order n, coefficients Cmn and
+      Smn, and their uncertainties); and a covariances table giving
+      the covariances of CijCmn, SijSmn, CijSmn, and SijCmn.
+ 
+      Radio Science Digital Map files are image representations
+      of gravity and other parameters.  Free air gravity, geoid,
+      Bouguer anomaly, isostatic anomaly, and topographic values
+      may be displayed using this data type.  Data are formatted
+      as PDS image objects.
+ 
+      The Line-of-Sight Acceleration Profile Data Record is a pair
+      of PDS tables.  The first table contains header information
+      such as time and observing geometry, parameters used in
+      deriving acceleration from radio tracking measurements, and
+      first-order Keplerian orbit elements.  The second table gives
+      spacecraft acceleration versus time.  Also included at each
+      time is the spacecraft position in planetocentric coordinates.
+ 
+      Electron density profiles are very similar to temperature-
+      pressure profiles for the neutral atmosphere.  Each is a
+      table of electron density versus radius from Mars&apos; center of
+      mass.  A header record prepended to each table provides
+      information on observing times and geometry and on files used
+      in the data processing.  There is no summary file for the
+      electron density profiles delivered together.
+ 
+      Surface Reflection Tables list carrier frequency and power
+      and the estimated frequency and power in the surface echo.
+      Surface Reflection Images are series of power spectra
+      showing the progression of signal characteristics as a
+      function of time.
+ 
+      Surface Reflection Geometry tables summarize the observing
+      geometry at and near occultations at (typically) 1 second
+      intervals.  Quantities include Earth receive time; the
+      transmit time (receive time corrected for one-way light time);
+      vectors to the spacecraft, Earth receiving station, and
+      several points on the surface; angles; and sensitivities of
+      some quantities to changes in assumed Mars radius.  The
+      surface points include the specular point, the backscatter
+      point (the intersection of a line from the receiver through
+      the spacecraft to the surface), the raypath closest approach
+      point (the point where a line from the Earth to the spacecraft
+      is closest to the surface), and a user-defined &apos;target&apos; on
+      the surface.  For the surface reflection studies conducted
+      with MGS, only the specular point information is of interest.
+      The backscatter point is the point on Mars&apos; disk behind the
+      spacecraft when viewed from Earth, while the raypath closest
+      approach point gives the latitude and longitude of the
+      occultation ray closest approach; the backscatter point and
+      the raypath closest approach point cannot exist simultaneously.
+      The &apos;target&apos; point is meaningful only when a target has been
+      selected; it is usually set to a default value of (0.,0.).
+ 
+ 
+    Processing
+    ==========
+      T-p profiles and ionosphere profiles are derived from raw
+      receiver output in several steps.
+ 
+      First, deterministic sources of frequency change are identified
+      and removed coherently. These included motion of the spacecraft,
+      motion of the Earth receiving station, drift of the UltraStable
+      Oscillator (USO), and relativistic effects associated with
+      gravity fields of solar system bodies.  This leaves the carrier
+      signal at a known frequency except for phase drift associated
+      with passage of the radio ray through Mars&apos; atmosphere and/or
+      ionosphere.  Drift associated with passage through solar plasma
+      or the Earth&apos;s atmosphere or ionosphere is assumed to be
+      negligible over the time of a Mars occultation (approximately
+      two minutes).
+ 
+      Second, using an accurate reconstruction of the spacecraft
+      trajectory, the phase of the signal versus time is converted
+      into a measure of refraction angle versus impact parameter --
+      the perpendicular distance between the incoming raypath and the
+      center of curvature of the atmosphere.
+ 
+      Third, the index of refraction versus radius is obtained using
+      an Abel inversion [FJELDBOETAL1971].  From knowledge of the
+      composition of the atmosphere and laboratory measurements of
+      refractive index for major constituents, index of refraction
+      versus radius for the neutral atmosphere is converted to
+      vertical distribution of mass density.
+ 
+      Fourth, assuming hydrostatic equilibrium and an ideal gas law,
+      the mass density profile is converted to a profile of both
+      temperature and pressure for the neutral atmosphere.
+ 
+      For the ionosphere, refractive index versus radius is converted
+      to density of free electrons versus radius using a method
+      described by [YEH&amp;LIU1972].
+ 
+      Spherical harmonic models, maps, and line-of-sight acceleration
+      profiles are derived from raw radio tracking data in several
+      steps.
+ 
+      The gravity field coefficients are obtained by solving systems
+      of equations with thousands of unknowns.  Radio tracking data in
+      long arcs delimited by propulsive maneuvers, occultations, etc.
+      are used in solutions which are obtained iteratively and by
+      least squares.
+ 
+      Maps of free air gravity and other quantities are generated from
+      the spherical harmonic model(s) evaluated at regular grid
+      points.
+ 
+      Line-of-sight acceleration profiles are derived from single arcs
+      of radio tracking data.  Doppler residuals with respect to a
+      specific spherical harmonic model are spline-fitted; the splines
+      are then differentiated analytically to obtain accelerations.
+ 
+      See [TYLERETAL1992] and [TYLERETAL2001] and references therein
+      for additional details on processing for the products listed
+      above.
+ 
+      Surface Reflection Geometry (SRG) tables are summaries of
+      observing geometry, typically at one second intervals.  The
+      spacecraft-surface-Earth geometry is derived from an SPK (NAIF
+      spacecraft and planetary ephemeris) file.
+ 
+      Surface Reflection Antenna (SRA) tables are summaries of
+      high-gain antenna (HGA) pointing, typically at 1 second
+      intervals.  The HGA pointing in J2000 is computed from
+      spacecraft attitude (TCK) and HGA gimbal (AGK) files; that
+      vector is then compared with the MGS-Earth vector in the SRG
+      file.  Offset is listed as the total angle between the HGA
+      boresight and the MGS-Earth vector and in terms of the
+      components toward the surface and parallel to the limb.
+ 
+      The Surface Reflection Table (SRT) data are derived as follows.
+ 
+        (1) The occultation is located in time and its sense (ingress
+        or egress) is determined from the direction of change in the
+        receiver output: if ingress, the output should decrease; if
+        egress, the output should increase.
+ 
+        (2) Raw samples of receiver output are passed through
+        a digital &apos;equalizing&apos; filter which flattens the output
+        spectral response over the central 80 percent of the
+        passband.  The output is a string of double-precision
+        complex floating point time samples at the Nyquist sampling
+        rate (2500/s for data collected through mid-2001, 2000/s for
+        data collected starting in late 2001).
+ 
+        (3) 512-point power spectra (approximately 0.2 s each) are
+        computed around the transition point (1); approximately 30
+        spectra are saved on the occulted side of the transition and
+        270 are saved when the carrier is clearly visible (total of
+        300 spectra, spaced by 0.2 s and having 5 Hz frequency bins).
+ 
+        (4) A search within each spectrum for the bin with maximum
+        signal locates the carrier (when it is present).
+ 
+        (5) A second search within each spectrum for the strongest
+        signal at frequencies higher (lower) than the carrier if
+        ingress (egress) locates the surface echo.  The surface echo
+        is transient, however, so not all results from this search
+        are valid.  A predicted frequency curve (straight line) is
+        fitted to the DIFFERENCE between the peak echo bin and the
+        carrier bin; half of the points are thrown out (the worst
+        residuals).  A new straight line is fitted to the remaining
+        points, and the single point with the worst residual is
+        thrown out.  The process is repeated, tossing out the point
+        with the worst residual at each step, until only 10 points
+        remain.  The final straight line is taken to be the actual
+        drift of the surface echo with respect to the carrier.
+ 
+        (6) An estimate of the noise power is made by averaging 64
+        frequency bins from 300 spectra on the side OPPOSITE the
+        surface echo and comparing the average with a system
+        temperature estimate provided by the DSN Monitor data.
+        The noise pedestal is removed and the remaining values are
+        scaled to units of watts.
+ 
+        (7) Five bins centered on the carrier are summed to obtain
+        the carrier power.
+ 
+        (8) Seven bins centered on the fitted straight line are
+        summed to obtain the echo power.
+ 
+        (9) The results are tabulated for each of the 300 spectra
+        and stored in the SRT file.
+ 
+        (10) The array of 300 512-point spectra is saved as the
+        SRI file.
+ 
+        (11) Fitting of the straight line to the echo trajectory is
+        not always successful.  Column 25 in the header of the SRT
+        file is set to &apos;0&apos; when the fit is unsatisfactory.  In most
+        cases, this results from a very weak surface echo; in a few
+        cases, the fitting algorithm simply fails.
+ 
+ 
+    Data
+    ====
+      Data are stored on CD-WO volumes approximately in order by the
+      time at which they were delivered for archiving.  A CD volume
+      of reduced data is prepared approximately every three months
+      and forwarded to PDS.
+ 
+      Standard resolution temperature-pressure profiles are stored
+      in the TPS directory with file names of the form  ydddhmmC.TPS
+      where  y  is the least significant digit of the year,  ddd  is
+      the three-digit day number,  h  is one-character which denotes
+      the hour, and  mm  is a two-character string denoting the
+      minute in which data acquisition began.  h  is  &apos;A&apos; if the
+      hour was  00,  &apos;B&apos; if the hour was  01, ... and &apos;X&apos; if the hour
+      was 23.  In most cases  mm  is the two-digit minute; but when
+      data were collected from two sources and the start time was
+      in the same minute, the second digit in  mm  was changed to a
+      letter in the second file name (minute  00  becomes  0A,
+      01  becomes  0B,  etc.).  C  is a single character indicating
+      the version of the file, starting with &apos;A&apos;.
+ 
+      High-resolution temperature-pressure profiles, should they ever
+      be produced, will be stored in the TPH directory with file names
+      of the form  ydddhmmC.TPH where components in the name are the
+      same as for TPS files.
+ 
+      Occultation summary files are stored in the OCS directory if
+      derived from TPS data (and in the OCH directory if derived
+      from TPH files).  File names are of the form  YMMymmCC.OCS
+      and  YMMymmCC.OCH,  respectively, where  Y  is the one-digit
+      year of the first entry in the file,  MM  is the two-digit
+      month of the first entry,  y  is the one-digit year of the
+      last entry, and  mm  is the two-digit month of the last
+      entry.  CC  is a two-character string indicating the version
+      of the file.
+ 
+      ASCII spherical harmonic models are stored in the SHA directory
+      with file names of the form  GTnnnnvv.SHA  where
+      G  denotes the generating institution
+                    J   for Jet Propulsion Laboratory
+                    G   for Goddard Space Flight Center
+                    C   for Centre National d&apos;Etudes Spatiales
+      T  denotes the type of data represented
+                    G   for gravity field
+                    T   for topography
+                    M   for magnetic field
+      nnnn  is a 4-character modifier specified by the data producer
+      vv  is a decimal version number, initialized to  &apos;01&apos;  and
+      SHA  denotes that this is an ASCII file of spherical harmonic
+      coefficients.  The distinction between &apos;nnnn&apos; and &apos;vv&apos; is not
+      enforced strictly, however; in some cases, it has been more
+      convenient to use all six characters to capture a model name
+      and/or number used by the data producer.
+ 
+      Binary spherical harmonic models are stored in the SHB
+      directory with file names of the form  GTnnnnvv.SHB  where
+      individual name components are as defined above except for the
+      SHB suffix.
+ 
+      Radio Science Digital Map products are stored in the IMG
+      directory with file names of the form  GTnnnnnn.IMG  where
+      G  denotes the generating institution
+                    J   for Jet Propulsion Laboratory
+                    G   for Goddard Space Flight Center
+                    C   for Centre National d&apos;Etudes Spatiales
+                    S   for Stanford University
+      T  denotes the type of data represented
+                    G   for free air gravity field
+                    O   for geoid
+                    B   for Bouguer anomaly
+                    I   for isostatic anomaly
+                    T   for topography
+                    M   for magnetic field
+      nnnnnn  is a 6-character modifier specified by the data
+      producer and IMG  denotes that this is a PDS image object.
+ 
+      Line-of-sight acceleration profiles are stored in the LOS
+      directory with file names of the form  MOnnnnnC.LOS  where
+      nnnnn  is the 5-digit orbit number and  C  is a character
+      indicating the version (starting from &apos;A&apos;).
+ 
+ 
+    Ancillary Data
+    ==============
+      When radio occultation data are present on the volume, one
+      or more files with names of the form  OCCLOGxx.TAB  may be
+      included in the DOCUMENT directory.  These files list
+      parameters for each radio occultation data acquisition
+      opportunity.  PDS detached labels OCCLOGxx.LBL describe
+      the format and contents of the files.
+ 
+ 
+    Coordinate System
+    =================
+      MGS RST SDP files use a Mars centered body-fixed coordinate
+      system with positive east longitude.
+ 
+      Gravity models generally use the IAU 1991 [DAVIESETAL1992B]
+      coordinate frame.  Variations are noted in the labels of
+      specific gravity products.
+ 
+ 
+    Software
+    ========
+      None.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set was written on CD-WO media using the
+      Sun Ultra-5/Yamaha/GEAR CD authoring subsystem provided by
+      the MGS Project until June 2002.  Volumes written later than
+      June 2002 were written on a Sun Ultra-5/PlexWriter/cdrtoaster
+      system.  The CD-WO volumes conform to ISO 9660 standards.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archive have been reduced as part of mission data
+      analysis activities of the MGS Radio Science Team.  Products
+      of questionable validity have been flagged or omitted.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the MGS Radio Science
+      Team prior to submission to the Planetary Data System (PDS).
+      The MGS Science Data Validation Team (SDVT) monitored the
+      submissions.
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, example data files, CATALOG files, and
+      Software Interface Specifications.  These materials were
+      distributed to PDS personnel, the experiment investigator,
+      and others, as appropriate.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+ 
+      MORS_1001
+      ---------
+        T-p profiles included in this volume were derived from data
+        collected while the spacecraft was at nearly maximum
+        Earth-Mars range; the observations ended just a few days
+        before solar conjunction.  See [HINSONETAL1999] for
+        discussion of results.
+ 
+            Dates:                   1998/01/28 - 1998/04/10
+            Number of TPS Files:     88
+            Occultation Sense:       Ingress only
+            Latitudes:               29N - 64S
+            Solar Zenith Angles:     85 - 106
+ 
+        Significant events during this period were:
+ 
+           YY/DDD    Start    Stop    Comments
+           ------  -------- --------  ----------------
+           98/024  19:15:36 19:32:15  First occultation recording
+           98/076  13:19:18 (ET)      Close Phobos approach (380 km)
+           98/087  02:44:09           First SPO-1 periapsis gravity
+           98/088  01:51:00 02:15:00  First egress recording (LGA)
+           98/107  23:01:28 23:18:00  Last good ingress recording
+           98/118  15:52:00 16:33:00  Last occultation recording
+ 
+        Quality of data was affected by anomalous conditions during
+        data acquisition.  Specifics are given in the OCCLOGA1.TAB
+        file in the DOCUMENT directory of MORS_1001; five general
+        types of problems dominated:
+ 
+          a) 2-6 dB lower carrier-to-noise level at Madrid antennas
+             throughout the occultation period (98/024-98/118), later
+             found to be from a weak oscillator in the front end of
+             the radio science receiver
+          b) &apos;Sawtooth&apos; frequency residuals in approximately 10
+             percent of the data (all stations), later found to be
+             from an intermittent synchronization error in merging
+             two data streams at the DSN station
+          c) Amplitude baseline variations more than +/-0.1 dB
+             (various)
+          d) Spurs (occasional, no consistent pattern)
+          e) Unreliable local oscillator tuning (wrong controller
+              software) (Madrid antennas, 98/084-98/106)
+ 
+        Gravity models and maps included in this volume were generated
+        from Mariner 9 and Viking data.  They do not contain any data
+        from the Mars Global Surveyor mission; they do, however, serve
+        as the baseline models from which the MGS models evolved.
+        Labels for each of the gravity products provide more
+        information on how the models were derived.
+ 
+        JGM50C01.SHA is the pre-MGS Mars gravity model produced at the
+        Jet Propulsion Laboratory under supervision of Bill Sjogren.
+        JGM50C01.IMG is the free-air gravity map corresponding to this
+        model. It is defined in IAU 1991 coordinates
+        [DAVIESETAL1992B].
+ 
+        GGM50A01.SHA is the pre-MGS Mars gravity model produced at
+        Goddard Space Flight Center under supervision of David Smith.
+        It is defined in IAU 1994 coordinates [DAVIESETAL1995].
+ 
+        GGM50A02.SHA is a slight variation on this model (a coordinate
+        transformation to IAU 1991 coordinates [DAVIESETAL1992B]) used
+        by David Hinson in reduction of radio occultation data
+        acquired during January-April 1998 and included in this
+        volume.
+ 
+      MORS_1002
+      ---------
+        This volume contains gravity models and maps generated from
+        Mariner 9, Viking Orbiter, and MGS data collected through
+        mid-September 1998.  The MGS data included tracking results
+        from Orbit Insertion subphases Aerobraking 1, Science Phasing
+        Orbit 1, and Science Phasing Orbit 2.  Orbit periapsis passed
+        near Mars&apos; north pole during the summer of 1998, so the data
+        are particularly good in defining the gravity field of the
+        north polar region.
+ 
+        GGM0890A.SHA is an ASCII file of coefficients for a 70x70
+        degree and order field produced at Goddard Space Flight
+        Center.  GGM0890A.IMG is a gridded representation of the
+        field.   Derivation of the model is described by a paper in
+        both PostScript and LaTeX formats in the DOCUMENT directory
+        (see DOCUMENT/AAS99147.LBL for details).
+ 
+        JGM75A01.SHA is an ASCII file of coefficients for a 75x75
+        degree and order field produced at the Jet Propulsion
+        Laboratory.  JGM75A01.SHB is a binary file of covariances.
+ 
+      MORS_1003
+      ---------
+        This volume contains gravity models and maps generated from
+        Viking Orbiter data and from MGS data collected through March
+        1999.  The MGS data include tracking from Orbit Insertion
+        subphases Aerobraking 1, Science Phasing Orbit 1, Science
+        Phasing Orbit 2, the Gravity Calibration Orbit, and
+        approximately the first month of MGS Mapping operations,
+        while the high-gain antenna was still not deployed.  Noise
+        produced by the control system after HGA deployment corrupted
+        the tracking data and several months were required before a
+        solution was found.
+ 
+        GGM0964A.SHA is an ASCII file of coefficients for a 70x70
+        degree and order field produced at Goddard Space Flight
+        Center.  GGM0890A.IMG is a gridded representation of gravity
+        anomalies with respect to an evaluation of the Goddard model
+        to degree and order 50.  Derivation of the model is
+        described by a paper in both PostScript and LaTeX formats in
+        the DOCUMENT directory (see DOCUMENT/AAS99328.LBL for
+        details).  The Goddard group argues that the MGS data are of
+        sufficient quality that historic data (Mariner 9 and Viking
+        Orbiter) can be omitted. Their solution is based solely on
+        MGS data.
+ 
+        JGM75B01.SHA is an ASCII file of coefficients for a 75x75
+        degree and order field produced at the Jet Propulsion
+        Laboratory.  JGM75B01.SHB is a binary file of coefficients
+        and covariances.  JGD75B50.IMG is a gridded representation
+        of gravity anomalies with respect to an evaluation of the
+        JPL model to degree and order 50.  The JPL solution
+        continues to include Viking Orbiter data.
+ 
+        The Goddard group has also provided a map of uncertainties
+        in their gravity anomalies; the JPL group has provided a
+        map of geoid height above a reference ellipsoid.
+ 
+        The BRO directory is new with this volume; it contains
+        PostScript representations of selected gravity results.
+ 
+        For a discussion of the major conclusions resulting from
+        study of the gravity field to this point, see [SMITHETAL1999].
+ 
+        MORS_1003 also contains 36 radio occultation profiles of
+        neutral atmosphere temperature and pressure derived from data
+        collected in late December 1998.  These observations were
+        made while there was no telemetry modulation on the spacecraft
+        carrier, providing some of the highest signal-to-noise prior
+        to circularization of the orbit (February 1999).   See
+        [HINSONETAL2001] for more information.
+ 
+            Dates:                   1998/12/24 - 1998/12/31
+            Number of TPS Files:     36
+            Occultation Sense:       Ingress only
+            Latitudes:               64N - 67N
+            Solar Zenith Angles:     78 - 81
+ 
+      MORS_1004
+      ---------
+        This volume contains a gravity model and maps generated at
+        JPL from MGS tracking data collected through early November
+        1999.  The MGS data included tracking results from the
+        following phases/subphases of the mission:  Science Phasing
+        Orbit 1, Science Phasing Orbit 2, Gravity Calibration Orbit,
+        Fixed High-Gain Antenna Mapping, and the first seven months
+        of Mapping.
+ 
+        JGM75C01.SHA is an ASCII file of coefficients for a 75x75
+        degree and order field produced at the Jet Propulsion
+        Laboratory.  JGM75C01.SHB is a binary file of coefficients
+        and covariances.  JGD75C60.IMG is a gridded representation
+        of gravity anomalies with respect to an evaluation of the
+        JPL model to degree and order 60.  JOD75C60.IMG is a
+        gridded representation of geoid height with respect to
+        a reference ellipsoid.
+ 
+        MORS_1004 also contains example files from the Surface
+        Reflection investigation.  9133H43A.SRG is a summary table
+        of observing geometry for an occultation starting
+        1999-133T07:43:00.  9133H43A.SRT is a tabulation of carrier
+        and surface echo signal characteristics.  9133H43A.SRI is
+        a two-dimensional array showing signal strength as a
+        function of both frequency and time around the occultation.
+        Surface echo was visible while the specular point moved
+        from about (69S, 91W) to about (68S, 83W).
+ 
+      MORS_1005
+      ---------
+        MORS_1005 contains 97 temperature-pressure profiles from
+        radio occultations acquired during March 1999 while the
+        spacecraft was in Fixed-High Gain Antenna operations.  The
+        analysis was carried out using the JPL MGS75C gravity model
+        and associated trajectory reconstructions (see MORS_1004).
+ 
+            Dates:                   1999/03/07 - 1999/03/27
+            Number of TPS Files:     97
+            Occultation Sense:       48 ingress; 49 egress
+            Latitudes:               73N - 68N;  74S - 75S
+            Solar Zenith Angles:     76 - 78;    101 - 98
+ 
+        There are also four sets of three files from the surface
+        reflection investigation.  The new files accompany a single
+        set of three files which appeared on MORS_1004.  All sample
+        Mars surface at latitudes 68-69S and longitudes 80-105W.
+ 
+      MORS_1006
+      ---------
+        MORS_1006 contains 440 temperature-pressure profiles from
+        radio occultations acquired during May and June 1999 after
+        the spacecraft recovered from the HGA azimuth anomaly and
+        resumed Mapping operations.  The analysis was carried out
+        using the JPL MGS75C gravity model and associated trajectory
+        reconstructions (see MORS_1004).
+ 
+            Dates:                   1999/05/06 - 1999/06/27
+            Orbit Numbers:           712 - 1356
+            Number of TPS Files:     440
+            Occultation Sense:       Ingress only
+            Latitudes:               36N - 30S
+            Solar Zenith Angles:     98 - 119
+ 
+        This volume contains a gravity model and maps generated at JPL
+        from MGS tracking data collected through late March 2000.  The
+        model also includes data from Mariner 9 and the two Viking
+        Orbiters.
+ 
+        JGM75D01.SHA is an ASCII file of coefficients for the 75x75
+        degree and order gravity field produced at JPL.  JGM75D01.SHB
+        is a binary file of coefficients and covariances. JGD75D60.IMG
+        is a gridded representation of gravity anomalies with respect
+        to an evaluation of the JPL model to degree and order 60.
+        JOD75D60.IMG is a gridded representation of geoid height with
+        respect to a reference ellipsoid.
+ 
+        There are also 105 sets of three files from the surface
+        reflection investigation.  The new files were based on data
+        collected during March 1999 and sample the surface at
+        latitudes 70-75 in both the northern (ingress) and southern
+        (egress) hemispheres.
+ 
+      MORS_1007
+      ---------
+        This volume contains only Special Data Products (SPDPs).
+        Included are 32 electron density profiles derived from
+        ingress radio occultation data acquired 24-31 December
+        1998 (latitude approximately 65N).  Profiles of the neutral
+        atmosphere appeared on MORS_1003.
+ 
+        There are also 696 sets of three files from the surface
+        reflection investigation.  The new files were derived from
+        radio occultations acquired during April-May 1999 and sample
+        the surface at latitudes of approximately 15-65N (ingress)
+        and 60-70S (egress).
+ 
+      MORS_1008
+      ---------
+        MORS_1008 contains 442 temperature-pressure profiles from
+        egress radio occultations acquired during May and June 1999
+        while the spacecraft conducted Mapping operations.  The
+        analysis was carried out using the JPL MGS75C gravity model
+        and associated trajectory reconstructions (see MORS_1004).
+        This set of profiles completes the collection based on the
+        first occultation season in MGS Mapping; the next occultations
+        were obtained starting in December 1999.
+ 
+            Dates:                   1999/05/06 - 1999/06/27
+            Orbit Numbers:           713 - 1348
+            Number of TPS Files:     442
+            Occultation Sense:       Egress only
+            Latitudes:               70S - 67S
+            Solar Zenith Angles:     88 - 79
+ 
+        This volume contains the MGM0964C20 gravity model which was
+        developed at the Goddard Space Flight Center and which
+        provided a reference geoid used extensively by the MOLA
+        team in their data analysis.  The model is archived on this
+        volume primarily for historical purposes.  File GGM0964B.SHA
+        contains ASCII coefficients and uncertainties for the
+        spherical harmonic model.
+ 
+        Also on the volume is an 80x80 gravity model developed at
+        GSFC and based on MGS radio tracking data collected through
+        2000-02-29.  No Viking or Mariner 9 data were used in the
+        solution.  File GGM2BC80.SHA contains ASCII coefficients and
+        uncertainties for the spherical harmonic model.  Gravity
+        anomaly is presented in gridded format in GGM2BA60.IMG at
+        1 degree resolution.  GOM2BA60.IMG contains gridded geoid
+        values at 0.25 degree resolution.  Also available are
+        three grids of error in the gravity anomaly based on
+        evaluation of the model using 60x60, 70x70, and 80x80
+        terms.
+ 
+        There are also 427 sets of three files from the surface
+        reflection investigation.  The new files were based on
+        data collected during May-June 1999 and sample the surface
+        at latitudes 15S-15N (ingress) and 60-65S (egress).  This
+        set of SRX files completes the collection based on the first
+        occultation season in MGS Mapping; the next surface
+        reflections were obtained starting in December 1999.
+ 
+      MORS_1009
+      ---------
+        MORS_1009 contains the 75x75 MGS75E gravity model developed
+        at JPL and based on MGS radio tracking data collected
+        through 2000-09-29.  Both Viking Orbiter and Mariner 9 data
+        were also included in the solution.  File JGM75E01.SHA
+        contains ASCII coefficients and uncertainties for the
+        spherical harmonic model; JGM75E01.SHB is a binary file
+        containing both coefficients and covariances.  Gravity
+        anomaly is presented as gridded data in JGD75E60.IMG;
+        JOD75E60.IMG contains gridded geoid height values.  The
+        gridded values were obtained by evaluating the spherical
+        harmonic coefficients to degree and order 60.
+ 
+      MORS_1010
+      ---------
+        MORS_1010 contains 800 atmospheric profiles from radio
+        occultations captured during late December 1999 through
+        early February 2000.  This was the beginning of the second
+        MGS radio occultation season; the set ends when operations
+        began in &apos;Beta Supplement&apos; -- a configuration that did not
+        allow routine collection of egress occultations.
+ 
+            Dates:                   1999/12/16 - 2000/02/07
+            Orbit Numbers:           3458 - 4111
+            Number of TPS Files:     800
+            Occultation Sense:       389 ingress; 411 egress
+            Latitudes:               55N - 63N;   0S - 35S
+            Solar Zenith Angles:     112 - 92;    123 - 110
+ 
+        MORS_1010 also contains 43 profiles of electron density in
+        the Mars ionosphere.  These were derived from occultations
+        captured during the first three weeks of MGS Mapping
+        (1999-03-09 through 1999-03-27).  Profiles of the neutral
+        atmosphere appeared on MORS_1005.
+ 
+      MORS_1011
+      ---------
+        MORS_1011 contains 577 atmospheric profiles from ingress
+        radio occultations captured during November-December 2000.
+        This period included &apos;Campaign F&apos; in mid-December when
+        Earth passed through the plane of the MGS orbit and joint
+        observations were conducted with TES to compare the two
+        atmospheric probing techniques.  MORS_1011 includes 147
+        profiles from Campaign F.
+ 
+        The above data were reprocessed and released a second time
+        on MORS_1016.  Users should use the results on MORS_1016.
+ 
+        MORS_1011 also includes 134 electron density profiles
+        derived from the Campaign F data.  These data were later
+        reprocessed; the new results were archived on MORS_1019.
+ 
+      MORS_1012
+      ---------
+        MORS_1012 contains results from surface reflection analysis
+        of 725 radio occultations.  These cover 19 December 1999
+        through 31 January 2000, inclusive.  Both ingress and egress
+        occultations are included, but few of the egress occultations
+        produced detectable surface echoes.
+ 
+      MORS_1013
+      ---------
+        MORS_1013 contains 826 temperature-pressure profiles derived
+        from ingress radio occultation measurements acquired during
+        August-October 2000.
+ 
+        The above data were later reprocessed and released a second
+        time on MORS_1015.  Users should use the files on MORS_1015.
+ 
+        MORS_1013 also includes 525 sets of three files from the
+        surface reflection investigation based on data collected
+        during February-March 2000.  Latitudes sampled include
+        approximately 32-36S and 48-49S (egress) and 63-68N (ingress).
+        Many more ingress occultations were captured during this
+        period because of HGA pointing limitations in Beta Supplement
+        mode.
+ 
+      MORS_1014
+      ---------
+        MORS_1014 contains results from surface reflection analysis
+        of 793 radio occultations.  These cover January through March
+        2001, inclusive.  Both ingress and egress occultations are
+        included, but the number of egress occultations is very small
+        because of HGA pointing limitations during Beta Supplement
+        operations.  Latitudes sampled include approximately 73S
+        (egress) and 72-86N (ingress).
+ 
+      MORS_1015
+      ---------
+        MORS_1015 includes a new 85x85 degree and order solution for
+        the gravity field of Mars from the JPL Gravity Science Team
+        and a new 80x80 solution from the GSFC gravity group.
+ 
+        ASCII spherical harmonic coefficients for the JPL model are in
+        SHA/JGM85F01.SHA; binary coefficients and covariances are in
+        SHB/JGM85F01.SHB.  Images of gravity anomalies and the geoid
+        are in the IMG directory (files JGD85F60.IMG and JOD85F60.IMG,
+        where each has been evaluated from degree 2 up to degree 60.
+        The 85F model was derived from Mariner 9, Viking 1/2, and MGS
+        data collected through 2001-08-14.
+ 
+        GSFC ASCII spherical harmonic coefficients are in the SHA
+        directory (file GGM1025A.SHA).  Images of gravity anomalies
+        are in the IMG directory (files GGM1025A.IMG and GGM1025B.IMG,
+        where the first was evaluated up to degree 60 and the second
+        up to degree 66).  A Postscript file showing gravity anomalies
+        is in BRO/GGM1025A.PS1.  The MGM1025 model was derived solely
+        from MGS radio tracking data collected through 2001-07-21 and
+        from MOLA crossover analyses.
+ 
+        The EDS directory contains 220 ionospheric electron density
+        profiles derived from occultation data collected between
+        1999/126 and 1999/149.  Latitudes ranged from 64S to 69S,
+        while solar zenith angle decreased from 87 to 78 degrees.
+        Profiles of the neutral atmosphere appear on MORS_1008.
+ 
+        The TPS directory holds 826 reprocessed atmospheric profiles
+        for ingress occultations between August (day 214) and October
+        (day 305) in 2000.  The original profiles were released on
+        MORS_1013.  The new profiles are more accurate than the
+        originals, which contained a small bias caused by motion of
+        the spacecraft high-gain antenna.  The old files had names
+        of the form ydddHmmA.TPS; the new file names are ydddHmmB.TPS.
+        The OCS directory contains an Occultation Summary File
+        (008010AB.OCS) for the reprocessed TPS profiles.
+ 
+            Dates:                   2000/08/01 - 2000/10/31
+            Orbit Numbers:           6254 - 7379
+            Number of TPS Files:     826
+            Occultation Sense:       Ingress only
+            Latitudes:               67N - 62N
+            Solar Zenith Angles:     91 - 86
+ 
+      MORS_1016
+      ---------
+        The TPS directory contains two sets of atmospheric occultation
+        profiles.  First are 125 egress profiles from fixed high-gain
+        antenna observations scattered through Beta Supplement
+        operations.
+ 
+            Dates:                   2000/05/20 - 2000/05/22
+            Orbit Numbers:           5370 - 5393
+            Number of TPS Files:     12
+            Occultation Sense:       Egress only
+            Latitudes:               75S - 77S
+            Solar Zenith Angles:     94 - 95
+ 
+            Dates:                   2000/08/08 - 2000/08/09
+            Orbit Numbers:           6346 - 6357
+            Number of TPS Files:     12
+            Occultation Sense:       Egress only
+            Latitudes:               73S - 74S
+            Solar Zenith Angles:     86 - 87
+ 
+            Dates:                   2000/09/08 - 2000/09/09
+            Orbit Numbers:           6726 - 6737
+            Number of TPS Files:     4
+            Occultation Sense:       Egress only
+            Latitudes:               67S - 68S
+            Solar Zenith Angles:     86 - 87
+ 
+            Dates:                   2000/10/13 - 2000/10/14
+            Orbit Numbers:           7154 - 7165
+            Number of TPS Files:     12
+            Occultation Sense:       Egress only
+            Latitudes:               64S - 65S
+            Solar Zenith Angles:     89 - 90
+ 
+            Dates:                   2000/11/17 - 2000/11/20
+            Orbit Numbers:           7582 - 7618
+            Number of TPS Files:     24
+            Occultation Sense:       Egress only
+            Latitudes:               65S - 66S
+            Solar Zenith Angles:     94 - 95
+ 
+            Dates:                   2000/12/18 - 2000/12/21
+            Orbit Numbers:           7961 - 7997
+            Number of TPS Files:     25
+            Occultation Sense:       Egress only
+            Latitudes:               69S - 70S
+            Solar Zenith Angles:     99 - 100
+ 
+            Dates:                   2001/01/10 - 2001/01/11
+            Orbit Numbers:           8243 - 8254
+            Number of TPS Files:     12
+            Occultation Sense:       Egress only
+            Latitudes:               73S - 74S
+            Solar Zenith Angles:     102 - 103
+ 
+            Dates:                   2001/04/05 - 2001/04/06
+            Orbit Numbers:           8243 - 8254
+            Number of TPS Files:     12
+            Occultation Sense:       Egress only
+            Latitudes:               89S - 90S
+            Solar Zenith Angles:     105 - 106
+ 
+            Dates:                   2001/05/13 - 2001/05/14
+            Orbit Numbers:           9747 - 9758
+            Number of TPS Files:     12
+            Occultation Sense:       Egress only
+            Latitudes:               83S - 84S
+            Solar Zenith Angles:     96 - 98
+ 
+        Second are 843 reprocessed profiles from November 2000 through
+        January 2001.  The November-December 2000 data were previously
+        released on MORS_1011; the January 2001 data were released
+        through a Stanford website but were not previously delivered
+        to PDS.  Files 0325Q18B.TPS and 1029D33B.TPS had appeared in
+        the earlier releases (MORS_1011 and web site, respectively)
+        but were withdrawn from this release because of severe
+        degradation by antenna motion and generally poor data quality,
+        respectively.
+ 
+            Dates:                   2000/11/01 - 2001/01/31
+            Orbit Numbers:           7380 - 8504
+            Number of TPS Files:     843
+            Occultation Sense:       Ingress only
+            Latitudes:               63N - 78N
+            Solar Zenith Angles:     87 - 75
+ 
+        The OCS directory has two files.  005105AA.OCS summarizes
+        the newly released egress profiles from May 2000 through
+        May 2001.  011101AB.OCS  summarizes the reprocessed profiles
+        from November 2000 through January 2001; it supersedes
+        011012AA.OCS on MORS_1011 though the earlier file did not
+        include the January 2001 data.
+ 
+        Also included in this volume are the first 687 Surface
+        Reflection Antenna (SRA) files.  These cover  1999/127
+        through 1999/178 and may be used in conjunction with SRG,
+        SRI, and SRT files for the same occultations.
+ 
+      MORS_1017
+      ---------
+        The TPS directory contains 433 ingress occultation profiles
+        derived from data collected in April-May 2000.  These data
+        were reprocessed to improve the correction for high-gain
+        antenna motion during the experiment, so have file names of
+        the form ydddHmmB.TPS.  The corresponding ydddHmmA.TPS files
+        were generated, but were never archived.
+ 
+            Dates:                   2000/04/01 - 2000/05/31
+            Orbit Numbers:           4761 - 5504
+            Number of TPS Files:     433
+            Occultation Sense:       Ingress only
+            Latitudes:               68N - 74N
+            Solar Zenith Angles:     87 - 90
+ 
+        The OCS directory includes a single file 004005AB.OCS,
+        which contains summary data from the 433 TPS files.
+ 
+        The SRA directory contains 693 surface reflection antenna
+        files covering 1999/354-2000/038.
+ 
+      MORS_1018
+      ---------
+        The TPS directory contains 993 ingress occultation profiles
+        derived from data collected in February-June 2001.  These
+        data have file names of the form ydddHmmA.TPS.  Scattered
+        egress occultations from the same period are in MORS_1016.
+ 
+            Dates:                   2001/02/01 - 2001/06/20
+            Orbit Numbers:           8505 - 10212
+            Number of TPS Files:     993
+            Occultation Sense:       Ingress only
+            Latitudes:               85N - 51N
+            Solar Zenith Angles:     71 - 97
+ 
+        The OCS directory includes a single file 102106AA.OCS,
+        which contains summary data from the 993 TPS files.
+ 
+        The SRA directory contains 599 surface reflection antenna
+        files covering 2001/001 - 2001/090.
+ 
+      MORS_1019
+      ---------
+        The TPS directory contains 360 occultation profiles derived
+        from data collected in June and July 2000.  These data have
+        file names of the form ydddHmmA.TPS.
+ 
+            Dates:                   2001/06/21 - 2001/07/15
+            Orbit Numbers:           10221-10517
+            Number of TPS Files:     181
+            Occultation Sense:       Ingress
+            Latitudes:               51N - 9N
+            Solar Zenith Angles:     97 - 114
+ 
+            Dates:                   2001/06/21 - 2001/07/16
+            Orbit Numbers:           10221-10534
+            Number of TPS Files:     179
+            Occultation Sense:       Egress
+            Latitudes:               70S - 47S
+            Solar Zenith Angles:     87 - 95
+ 
+       The OCS directory includes a single file 106107AB.OCS,
+       which contains summary data on the TPS files.
+ 
+       The EDS directory includes 134 reprocessed electron density
+       files from 9-21 December 2000; these have file names of the
+       form  ydddHmmB.EDS and replace results originally released
+       on MORS_1011.  The reprocessing included improved correction
+       for high-gain antenna motion, which may have left artifacts
+       in the earlier profiles.  There are also 314 new electron
+       density files covering 22 December 2000 to 31 January 2001
+       with names  ydddHmmA.EDS.
+ 
+       The SHA directory includes ASCII coefficients and uncertainties
+       for the JPL 85x85 MGS85H2 spherical harmonic model of the Mars
+       gravity field.  The model was derived from MGS, 2001 Mars
+       Odyssey, Mars Pathfinder, and Viking 1 Lander data.  No Viking
+       Orbiter or Mariner 9 data are included.  The model is
+       referenced to a Mars fixed frame similar to the Mars Pathfinder
+       orientation model except that the prime meridian has been made
+       consistent with the IAU 2000 coordinate frame.
+ 
+      MORS_1020
+      ---------
+        The TPS directory contains 742 occultation profiles derived
+        from data collected in February 2000 and March-May 2002.  The
+        data from 2000 were delayed because of problems in the
+        reconstructed spacecraft orbits.  The TPS data have file names
+        of the form ydddHmmA.TPS.
+ 
+            Dates:                   2000/02/08 - 2000/02/29
+            Orbit Numbers:           4112 - 4380
+            Number of TPS Files:     170
+            Occultation Sense:       Ingress
+            Latitudes:               63 - 64 N
+            Solar Zenith Angles:     92 - 89
+ 
+            Dates:                   2002/03/14 - 2002/05/17
+            Orbit Numbers:           13470 - 14264
+            Number of TPS Files:     572
+            Occultation Sense:       Ingress
+            Latitudes:               66 -63 N
+            Solar Zenith Angles:     88 - 91
+ 
+       The OCS directory includes two files (002002AA.OCS and
+       203205AA.OCS) which contain summary data on the TPS files.
+ 
+     MORS_1021
+     ---------
+       The TPS directory contains 1259 occultation profiles derived
+       from data collected in March 2000 and from 13 December 2001
+       through 13 March 2002.  The data from 2000 were delayed
+       because of problems in the reconstructed spacecraft orbits.
+       The TPS data have file names of the form ydddHmmA.TPS.  The
+       summary file is in the OCS directory.
+ 
+            Dates:                   2000/03/01 - 2000/03/31
+            Orbit Numbers:           4381 - 4760
+            Number of TPS Files:     214               9
+            Occultation Sense:       Ingress           Egress
+            Latitudes:               64 - 68 N         47 - 48 S
+            Solar Zenith Angles:     89 - 88           106 - 105
+            Summary File:                   003003AA.OCS
+ 
+            Dates:                   2001/12/13 - 2002/03/13
+            Orbit Numbers:           12368 - 13470
+            Number of TPS Files:     563
+            Occultation Sense:       Egress
+            Latitudes:               11 N - 45 S
+            Solar Zenith Angles:     132 - 114
+            Summary File:            112203AA.OCS
+ 
+            Dates:                   2002/01/08 - 2002/03/13
+            Orbit Numbers:           12678 - 13469
+            Number of TPS Files:     473
+            Occultation Sense:       Ingress
+            Latitudes:               62 - 66 N
+            Solar Zenith Angles:     96 - 88
+            Summary File:            201203AA.OCS
+ 
+       The SHA directory contains ASCII coefficients for a 90x90
+       gravity model (GGM1041C.SHA) developed by the group at
+       Goddard Space Flight Center.  This model is based on MGS
+       data collected through 27 May 2002.  The IMG directory
+       contains maps showing gravity anomalies and the geoid
+       evaluated from the first 60, 66, and 72 terms of the 90x90
+       model.
+ 
+     MORS_1022
+     ---------
+       The TPS directory contains 536 occultation profiles derived
+       from data collected from May to July 2002, immediately prior
+       to solar conjunction when signal-to-noise is lowest.  All
+       occultations were ingress occultations.  The TPS data
+       have file names of the form ydddHmmA.TPS.  The summary file
+       is in the OCS directory.
+ 
+            Dates:                   2002/05/18 - 2002/07/15
+            Orbit Numbers:           14265 - 14978
+            Occultation Sense:       Ingress           Egress
+            Number of TPS Files:     536               0
+            Latitudes:               55 - 63 N         N/A
+            Solar Zenith Angles:     90 - 92 deg       N/A
+            Summary File:                   205207AA.OCS
+ 
+     MORS_1023
+     ---------
+       The TPS directory contains 523 occultation profiles derived
+       from data collected in September and October 2002, immediately
+       after solar conjunction when signal-to-noise is lowest.  All
+       occultations were ingress occultations.  The TPS data
+       have file names of the form ydddHmmA.TPS.  The summary file
+       is in the OCS directory.
+ 
+            Dates:                   2002/09/08 - 2002/10/31
+            Orbit Numbers:           15648 - 16307
+            Occultation Sense:       Ingress           Egress
+            Number of TPS Files:     523               0
+            Latitudes:               53 - 60 N         N/A
+            Solar Zenith Angles:     83 - 89 deg       N/A
+            Summary File:                   209210AA.OCS
+ 
+       The EDS directory contains 284 profiles of electron density
+       from data collected in November and December 2000.  All of
+       these were ingress ionospheric occultations.  The EDS data
+       have file names of the form ydddHmmA.EDS.
+ 
+            Dates:                   2000/11/04 - 2000/12/08
+            Orbit Numbers:           7380 - 7844
+            Occultation Sense:       Ingress           Egress
+            Number of Files:         284               0
+            Latitudes:               63 - 68 N         N/A
+            Solar Zenith Angles:     82 - 87 deg       N/A
+ 
+     MORS_1024
+     ---------
+       The TPS directory contains 1225 occultation profiles derived
+       from data collected between November 2002 and March 2003, as
+       Earth-Mars geometry moved from post-conjunction to near-
+       opposition.  All occultations were ingress occultations.  The
+       TPS data have file names of the form ydddHmmA.TPS.  Two
+       summary files are in the OCS directory.
+ 
+            Dates:                   2002/11/01 - 2003/03/21
+            Orbit Numbers:           16308 - 18030
+            Occultation Sense:       Ingress
+            Number of TPS Files:     1225
+            Latitudes:               60N to 83 N
+            Solar Zenith Angles:     83 to 70
+            Summary Files:           211212AA.OCS (Nov-Dec 2002)
+                                     301303AA.OCS (Jan-Mar 2003)
+ 
+       The EDS directory includes 840 electron density profiles
+       from 1 February to 6 June 2001; these have file names of the
+       form  ydddHmmB.EDS.  All are ingress occultations with
+       solar zenith angles between 71 and 87 degrees.
+ 
+       The SHA directory includes ASCII coefficients and uncertainties
+       for the JPL 85x85 MGS85F2 spherical harmonic model of the Mars
+       gravity field.  The model has been adopted by several flight
+       projects including Mars Reconnaissance Orbiter and Mars
+       Express.  The model is referenced to a Mars fixed frame similar
+       to the Mars Pathfinder orientation model except that the prime
+       meridian has been made consistent with the IAU 2000 coordinate
+       frame.  Also included is the JPL 95x95 model MGS95I, a more
+       recent and larger model.
+ 
+     MORS_1025
+     ---------
+       The TPS directory contains 697 occultation profiles derived
+       from data collected between March and June 2003, as
+       Earth-Mars geometry moved from post-conjunction to near-
+       opposition.  All occultations were ingress occultations.  The
+       TPS data have file names of the form ydddHmmA.TPS.  One
+       summary file is in the OCS directory.
+ 
+            Dates:                   2003/03/22 - 2003/06/10
+            Orbit Numbers:           18039 - 19020
+            Occultation Sense:       Ingress
+            Number of TPS Files:     697
+            Latitudes:               81 N to 69N
+            Solar Zenith Angles:     70 - 81
+            Summary Files:           303306AA.OCS (Mar-Jun 2003)
+ 
+     MORS_1026
+     ---------
+       The TPS directory contains 640 occultation profiles derived
+       from data collected between June and September 2003, as
+       Earth-Mars geometry moved through opposition.  All
+       occultations were ingress occultations.  The TPS data have
+       file names of the form ydddHmmA.TPS.  One summary file is
+       in the OCS directory.
+ 
+            Dates:                   2003/06/18 - 2003/09/10
+            Orbit Numbers:           19114 - 20149
+            Occultation Sense:       Ingress
+            Number of TPS Files:     640
+            Latitudes:               65 N to 70N
+            Solar Zenith Angles:     82 - 99
+            Summary File:            306309AA.OCS (Jun-Sep 2003)
+ 
+     MORS_1027
+     ---------
+       The TPS directory contains 84 egress occultation profiles
+       derived from data collected between September 2002 and
+       August 2003, as Earth-Mars geometry moved toward opposition.
+       All occultations were collected as part of special egress
+       campaigns.  The TPS data have file names of the form
+       ydddHmmA.TPS.  One summary file is in the OCS directory.
+ 
+            Dates:                   2002/09/30 - 2003/08/18
+            Orbit Numbers:           15924 - 19857
+            Occultation Sense:       Egress
+            Number of TPS Files:     84
+            Latitudes:               62 S to 90 S
+            Solar Zenith Angles:     83 - 105
+            Summary File:            209308AA.OCS
+ 
+       The EDS directory contains 526 ingress electron density
+       profiles collected between November and December 2002.
+       File names have the form ydddHmmA.EDS.
+ 
+            Dates:                   2002/11/01 - 2002/12/31
+            Orbit Numbers:           16308 - 17051
+            Occultation Sense:       Ingress
+            Number of EDS Files:     526
+            Latitudes:               60 - 74 N
+            Solar Zenith Angles:     84 to 76
+            Summary File:            none
+ 
+     MORS_1028
+     ---------
+       The TPS directory contains 405 occultation profiles derived
+       from data collected between September and October 2003
+       as Earth-Mars geometry moved away from opposition.  The TPS
+       file names have the form ydddHmmA.TPS.  One summary file is
+       in the OCS directory.
+ 
+            Dates:                   2003/09/11 -    2003/09/11 -
+                                      2003/09/28      2003/10/18
+            Orbit Numbers:           20150 - 20367   20151 - 20615
+            Occultation Sense:       Ingress         Egress
+            Number of TPS Files:     172             233
+            Latitudes:               60 - 66 N       1 - 45 S
+            Solar Zenith Angles:     105 - 98        92 - 124
+            Summary File:            309310AA.OCS    309310AA.OCS
+ 
+       The EDS directory contains 650 ingress electron density
+       profiles collected between January and March 2003.
+       File names have the form ydddHmmA.EDS.
+ 
+            Dates:                   2003/01/01 - 2003/03/21
+            Orbit Numbers:           17057 - 18030
+            Occultation Sense:       Ingress
+            Number of TPS Files:     650
+            Latitudes:               73 - 84 N
+            Solar Zenith Angles:     76 - 71
+            Summary File:            none
+ 
+     MORS_1029
+     ---------
+       The TPS directory contains 436 occultation profiles derived
+       from data collected between November 2003 and January 2004
+       as Earth-Mars geometry moved away from opposition.  The TPS
+       file names have the form ydddHmmA.TPS.  One summary file is
+       in the OCS directory.
+ 
+            Dates:                   2003/11/16 - 2004/01/19
+            Orbit Numbers:           20958 - 21752
+            Occultation Sense:       Egress
+            Number of TPS Files:     436
+            Latitudes:               11 N to 11 S
+            Solar Zenith Angles:     130 -132
+            Summary File:            311401AA.OCS
+ 
+       The EDS directory contains 630 ingress electron density
+       profiles collected between March and June 2004. File names
+       have the form ydddHmmA.EDS.
+ 
+            Dates:                   2003/03/22 - 2003/06/04
+            Orbit Numbers:           18039 - 18948
+            Occultation Sense:       Ingress
+            Number of EDS Files:     630
+            Latitudes:               81 - 69 N
+            Solar Zenith Angles:     71-80
+            Summary File:            none
+ 
+     MORS_1030
+     ---------
+       The TPS directory contains 1111 occultation profiles derived
+       from data collected between 1 March and 24 May as Mars moved
+       toward solar conjunction.  Both ingress and egress
+       occultations are included, at virtually a constant 14 degree
+       angle from grazing.  The TPS file names have the form
+       ydddHmmA.TPS.  One summary file is in the OCS directory.
+ 
+            Dates:                   2004/03/01 - 2004/05/24
+            Orbit Numbers:           22255 - 23292
+            Occultation Sense:       Egress (691); Ingress (420)
+            Number of TPS Files:     1111
+            Latitudes:               -26 to -61 (egr); 45 to 37 (ing)
+            Solar Zenith Angles:     125 to 109 (egr); 98 to 100 (ing)
+            Summary File:            403405AA.OCS
+ 
+       The EDS directory contains 76 ingress electron density
+       profiles collected between 22 June and 2 July 2003, about two
+       months before opposition.  File names have the form
+       ydddHmmA.EDS.
+ 
+            Dates:                   2003/06/22 - 2003/07/02
+            Orbit Numbers:           19163 - 19289
+            Occultation Sense:       Ingress
+            Number of EDS Files:     76
+            Latitudes:               68 N
+            Solar Zenith Angles:     83 - 85
+            Summary File:            none
+ 
+     MORS_1031
+     ---------
+       The TPS directory contains 819 occultation profiles.  Data
+       collected after 21 July were contaminated by anomalous HGA
+       motion and solar noise; conjunction was in mid-September.
+       Both ingress and egress occultations are included.  TPS file
+       names have the form ydddHmmA.TPS.  One summary file is in the
+       OCS directory.
+ 
+            Dates:                   2004/05/25 - 2004/07/21
+            Orbit Numbers:           23293 - 24002
+            Occultation Sense:       Egress (286); Ingress (533)
+            Number of TPS Files:     819
+            Latitudes:               -72 to -69 (egr); 36 to 34 (ing)
+            Solar Zenith Angles:     100 to 92
+            Summary File:            405407AA.OCS
+ 
+     MORS_1032
+     ---------
+       The TPS directory contains 696 occultation profiles.  Early
+       data were noisy because of the solar conjunction in September.
+       These are mostly ingress occultations; a handful of egress
+       occultations were captured in two special campaigns.  TPS file
+       names have the form ydddHmmA.TPS.  One summary file is in the
+       OCS directory.
+ 
+            Dates:                   2004/10/10 - 2004/12/22
+            Orbit Numbers:           24982 - 25878
+            Occultation Sense:       Egress (15); Ingress (681)
+            Number of TPS Files:     696
+            Latitudes:               -66 and -76 (egr); 48 - 68 (ing)
+            Solar Zenith Angles:     91 and 96 (egr); 87 to 76 (ing)
+            Summary File:            410412AA.OCS
+ 
+     MORS_1033
+     ---------
+       The TPS directory contains 898 occultation profiles.  Data
+       quality improved as the ray path moved away from the Sun
+       (solar superior conjunction in September 2004) and Earth-Mars
+       distance decreased.  These are mostly ingress occultations; a
+       handful of egress occultations were captured in a special
+       campaign.  TPS file names have the form ydddHmmA.TPS.  One
+       summary file is in the OCS directory.
+ 
+            Dates:                   2004/12/26 - 2005/04/01
+            Orbit Numbers:           25923 - 27096
+            Occultation Sense:       Egress (9); Ingress (889)
+            Number of TPS Files:     898
+            Latitudes:               -78 to -79 (egr); 69 to 79 (ing)
+            Solar Zenith Angles:     100 (egr); 72 to 76 (ing)
+            Summary File:            412504AA.OCS
+ 
+       The SHA directory includes ASCII coefficients and uncertainties
+       for the JPL 95x95 MGS95J spherical harmonic model of the Mars
+       gravity field.  The model is referenced to a Mars fixed frame
+       similar to the Mars Pathfinder orientation model except that
+       the prime meridian has been made consistent with the IAU 2000
+       coordinate frame.  The model is based on radio tracking data
+       from MGS, 2001 Mars Odyssey, Pathfinder, and Viking Lander 1;
+       data from the Viking Orbiters and Mariner 9 were omitted
+       because they did not seem to improve the solution.
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>96-062A-00E</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

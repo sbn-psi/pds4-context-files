@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.sdu-c-d-cida-1-edf-hk-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>STARDUST CIDA DATA</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.stardust::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:cida.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.81p-wild_2_1978_a2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:unk.unk::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.sdu-c-d-cida-1-edf-hk-v1.0__browserp_sdu-c-d-cida-1-edf-hk-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>SDU-C/D-CIDA-1-EDF/HK-V1.0</data_set_id>
+        <data_set_name>STARDUST CIDA DATA</data_set_name>
+        <data_set_release_date>2004-07-02</data_set_release_date>
+        <start_time>1999-02-07</start_time>
+        <stop_time>2004-03-08</stop_time>
+        <producer_full_name>STARDUST DATA MANAGEMENT AND ARCHIVE TEAM</producer_full_name>
+        <citation_text>
+            Ryno, J., B.V. Semenov, J. Kissel, J. Silen, and C.H. Acton,
+            STARDUST CIDA DATA, SDU-C/D-CIDA-1-EDF/HK-V1.0, NASA Planetary
+            Data System, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Collection of time-of-flight spectra measured by Stardust
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains raw time-of-flight spectrum data and
+            associated ancillary data produced by the Stardust Cometary and
+            Interstellar Dust Analyzer Instrument (CIDA), a time-of-flight
+            mass spectrometer. The data were obtained during two mission
+            episodes: flyby of comet Wild-2, and cruise, which includes all
+            other times except the flyby.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      This description was written by J. Kissel, J. Silen, B. Semenov,
+      and C. Acton.
+ 
+    Data Set Overview
+    =================
+ 
+      This data set contains raw time-of-flight spectrum data, which
+      are called ``events&apos;&apos; and are Level 1 data, and associated
+      ancillary data produced by the Stardust Cometary and Interstellar
+      Dust Analyzer Instrument (CIDA), a time-of-flight mass
+      spectrometer. The data were obtained during two mission episodes:
+      flyby of comet Wild-2, and cruise, which includes all other times
+      except the flyby. Each package of ``event&apos;&apos; and ancillary data is
+      telemetered to the ground as an Experiment Data Frame (EDF).
+ 
+      The term ``event&apos;&apos; is used to refer to any type of non-ancillary
+      data returned from the CIDA instrument. Some of these events are
+      test frames, generated by telecommands to ensure continued
+      correct operation of the instrument. Some events are the result
+      of a CIDA re-boot, which may have been commanded or may have been
+      a result of some other spacecraft condition. Some events are
+      known to have been generated by noise within the CIDA
+      electronics. All of these are considered non-scientific data and
+      are distinguished from scientific data by TARGET_NAME set to
+      ``NON SCIENCE&apos;&apos; in the data labels and the data set index file.
+      459 of 535 (86%) EDFs in this data set contain non-scientific
+      data.
+ 
+      The remainder are events that may or may not contain spectra
+      resulting from actual particle hits; it is only through detailed
+      analysis that the user may make a determination of the cause of
+      the event and the resulting spectra may be interpreted. These
+      EDFs are distinguished by TARGET_NAME in the labels and index file
+      set to either ``81P/WILD 2 (1978 A2)&apos;&apos; (31 of 535 EDFs) or
+      ``INTERSTELLAR PARTICLES&apos;&apos; (45 of 535 EDFs).
+ 
+      While included for completeness, the CIDA housekeeping and other
+      ancillary data are NOT needed for generation or interpretation of
+      CIDA spectra.
+ 
+      The CIDA event files include selected observation geometry
+      parameters, derived from the then-current SPICE kernels and
+      allied SPICE Toolkit software. These SPICE kernels are available
+      in a separate PDS Stardust data set, SDU-C-SPICE-6-V1.0.
+ 
+      The CIDA event data are supplemented with a PDS index file
+      providing a set of parameters computed for every CIDA event; this
+      information may be easily loaded into a database or spreadsheet
+      to facilitate searches for CIDA data meeting certain
+      user-specified observing conditions.
+ 
+ 
+    Data Collection Periods
+    =======================
+ 
+      Cruise Collection Period
+      ------------------------
+ 
+        During the cruise from earth to Wild-2 and after the Wild 2
+        encounter the CIDA instrument was operating during the
+        following times:
+ 
+                 Start                Stop
+          -------------------  -------------------
+              1999-02-22           1999-07-30
+              1999-09-13           2000-08-30
+              2000-10-10           2001-08-16
+              2002-11-02           2002-11-02
+              2003-02-04           2003-06-17
+              2003-07-16       2004-01-02T14:08:24
+          2004-01-03T01:23:08      2004-03-08
+ 
+        There were a number of short OFF times during these periods as
+        a result of the spacecraft going into safe-mode, spacecraft
+        maneuvers, and other reasons. The one day window on November 02,
+        2002 was during the Annefrank asteroid flyby, during which
+        no particle hits were detected.
+ 
+ 
+      Wild 2 Encounter Collection Period
+      ----------------------------------
+ 
+        During the Wild-2 encounter the CIDA instrument was operating
+        during the following time:
+ 
+                 Start                Stop
+          -------------------  -------------------
+          2004-01-02T14:27:06  2004-01-03T01:10:20
+ 
+    Data Calibration
+    ================
+ 
+      The ``calibration&apos;&apos; of time-of-flight mass spectrometer data is in
+      fact the essence of the data analysis process. ``Calibration&apos;&apos; of the
+      data numbers contained in each event, resulting in a determination of
+      if a particulate impact actually occurred, and if so, of the
+      composition of the particle, may be straightforward, but may instead
+      be complex and subjective.
+ 
+      This data set includes a document, CALEXAMPL.PDF, providing a
+      complete description of the ``calibration&apos;&apos; of a laboratory test
+      event where the composition of the particle is well known. The
+      document also includes a similar ``calibration&apos;&apos; example for an
+      in-flight event obtained during the Wild 2 flyby.
+ 
+    Data Product Type and Format Overview
+    =====================================
+ 
+      CIDA data files provided in this archive are divided into two
+      main categories:
+ 
+        -- Spectrum Experiment Data Files (Spectrum EDFs), and
+        -- Housekeeping Experiment Data files (HK EDFs).
+ 
+      Spectrum EDFs contain the raw CIDA time-of-flight spectrum data.
+      Each Spectrum EDF file is sufficient for analysis in itself.
+ 
+      HK EDFs contain temperature, voltage and other engineering data
+      that might prove useful in reviewing the operating
+      characteristics of the instrument, but are NOT needed to
+      interpret the spectrum data.
+ 
+      There is only one type of Spectrum EDF, but there are five
+      different types of HK EDFs:
+ 
+        -- housekeeping parameters
+        -- configuration parameters
+        -- calibration parameters
+        -- global variable values
+        -- interrupt variable values
+ 
+      All CIDA data files are plain ASCII text files containing an
+      attached PDS label. The data are in the form of one (for HK EDFs)
+      or a few (for Spectrum EDFs) PDS-style, fixed-width column,
+      comma-delimited tables, the format and contents of which are
+      defined in the CIDASIS.TXT document included in the archive.
+      Each table contained in the file is identified in the attached
+      label by a separate TABLE object pointing to an external table
+      format file specifying individual table columns. The label format
+      and contents are described in detail in the ONLABELS.TXT file
+      included in the archive.
+ 
+    Data Processing
+    ===============
+ 
+      The Stardust CIDA instrument output consisted of a variety of
+      binary data blocks called binary Experiment Data Files (EDFs),
+      each of which contained a set of spectrum or housekeeping data.
+      On board the spacecraft EDFs were packetized by the spacecraft&apos;s
+      flight software and downlinked within packets in the spacecraft
+      telemetry stream. For small housekeeping EDFs, multiple EDFs were
+      contained in one spacecraft telemetry packet while for large
+      spectrum EDFs the EDF was split between a few spacecraft packets.
+ 
+      A suite of software -- developed and run by the Stardust Data
+      Management and Archive Team (DMA) and collectively referred to
+      as CIDA Telemetry Processing Software (CTPS) -- retrieved packets
+      with CIDA data from the Telemetry Data Server(s)(TDS) used by the
+      Stardust Project, striped off ground system and spacecraft packet
+      headers, and placed the EDF data in a binary EDF collection file
+      for delivery to the CIDA science team. That binary file
+      essentially contained a ``chunk&apos;&apos; of a single stream of concatenated
+      EDFs.
+ 
+      The binary EDF collection files were then delivered to the CIDA
+      science Team, which used a set of software -- developed and run
+      by Finnish Meteorological Institute (FMI) and called
+      EDFPARSER/EDF2ASCII -- to combine ``chunks&apos;&apos; into a single
+      telemetry stream, extract individual binary EDFs from it, convert
+      binary data from individual EDFs into ASCII and save the ASCII
+      Spectrum EDF and ASCII HK EDF files in the format in which the
+      data are provided in this data set. For Spectrum EDF data the
+      conversion constituted simply printing byte values as ASCII
+      integers and did not involve any scaling and/or calibration of
+      the values. For the generic EDF header data and HK EDFs it in
+      some cases involved de-multiplexing fields and converting
+      ancillary fields containing count values into physical units --
+      temperatures, voltages, etc.
+ 
+    Ancillary Data
+    ==============
+ 
+      Each Spectrum EDF file includes a table containing a number of
+      derived geometry parameters. These parameters were computed using
+      the following SPICE kernels archived in the Stardust SPICE data
+      set, SDU-C-SPICE-6-V1.0:
+ 
+        Kernel Type   File Name
+        ------------  ------------------------
+        LSK           naif0007.tls
+ 
+        PCK           pck00007.tpc
+ 
+        SCLK          sdu_sclkscet_00080.tsc
+                      sdu_sclkscet_00105.tsc
+ 
+        FK            sdu_v17.tf
+ 
+        SPKs          sdu_l_1999.bsp
+                      sdu_l_2000.bsp
+                      sdu_l_2001.bsp
+                      sdu_l_2002.bsp
+                      sdu_l_2003_w2.bsp&apos;
+                      sdu_w2_opnav.bsp
+ 
+        CKs           sdu_sc_rec_1999_v2.bc
+                      sdu_sc_rec_2000_v2.bc
+                      sdu_sc_rec_2001_v2.bc
+                      sdu_sc_rec_2002_v2.bc
+                      sdu_sc_rec_2003_w2_v2.bc
+                      sdu_sc_rec_w2_opnav.bc
+        ------------  ------------------------
+ 
+    Coordinate System
+    =================
+ 
+      The geometry items provided in the geometry table of the Spectrum
+      EDF files are relative to either the ecliptic reference frame of
+      J2000 or the Stardust spacecraft reference frame. Refer to the
+      specification of the geometry table columns to see which
+      parameters are defined in which frame.)
+ 
+      The ecliptic reference frame of J2000 is defined as follows:
+ 
+        -  +Z axis is along Ecliptic North at J2000 epoch
+           (2000 JAN 01 12:00 ET);
+ 
+        -  +X axis is along vernal Equinox at J2000 epoch;
+ 
+        -  +Y completes the right hand frame;
+ 
+      The Stardust reference frame is defined as follows:
+ 
+        -  +X axis is along the longer side of the spacecraft bus and
+           points from the aerogel capsule side towards the dust shield
+           side;
+ 
+        -  +Z is perpendicular to the deployed solar arrays surface and
+           points along the HGA pointing direction;
+ 
+        -  +Y completes the right hand frame;
+ 
+        -  the origin of this frame is at the center of the launch
+           vehicle interface ring attached to the shield side of the
+           spacecraft bus.
+ 
+      This diagram illustrates the spacecraft reference frame and CIDA
+      mounting with respect to it:
+ 
+                                                   || Dust Collector
+                                                   ||     Array
+        Solar Array            Main                ||
+          Shield       +Z .-. Shield               ||
+            .-.          ^| |                      o
+            | |==========|====o===============o===============
+            `-&apos;          || |-------------------. .        Solar
+                         || |                   |/|        Array
+                         || | .-----.  CIDA     | |
+                 &lt;-------o| | |      &apos;          | |  Return
+               +X        +Y   .   __/           | | Capsule
+                          | |  `. `.            |\|
+                          | |--- `. `.---- -----&apos; o---------
+                          | |      `. `.           \_______/
+                          `-&apos;        `.&apos;`. Target
+         ------&gt;   ------&gt;  ------&gt;     .&apos;  --------
+             Nominal                       .    &apos;
+         Incoming Particle                  `. &apos; 40 deg
+         direction during                     `.
+            Encounter                           `. Normal to
+                                              CIDA Target Plane
+ 
+ 
+      As seen on on the diagram CIDA is mounted on the +Y side of the
+      spacecraft bus. The CIDA target plane is parallel to the
+      spacecraft Y axis. The normal to the target plane is in the XZ
+      plane and 40 degrees from +X towards +Z.
+ 
+      The back of the opening between the target and the entrance to
+      the drift tube is shielded, not permitting particles coming from
+      the back (-X side) or top (+Z side) to hit the target. The
+      un-shielded part of the opening and non-planar geometry of the
+      target surface allow impacts by the particles coming from within
+      the angular range of a few degrees towards +Z and about 30
+      degrees toward -Z, measured from the +X axis.
+ 
+    Software
+    ========
+ 
+      The data in this data set are in standard PDS format -- ASCII
+      text files with comma-delimited, fixed-width columns -- and,
+      therefore, can be viewed by PDS-provided programs or loaded into
+      commercial programs that support comma-delimited formats. For
+      this reason no special processing software is included in this
+      data set.
+ 
+    Unresolved Liens on the Data
+    ============================
+ 
+      A request was made by the external peer reviewers to split the
+      data files into separate subdirectories for science and
+      non-science data. Resources were not available to make this
+      change and propagate it through the data set documentation. Users
+      should note that science and non-science data files are mixed in
+      a single directory, and can use the TARGET_NAME field to
+      discriminate among them as needed. The TARGET_NAME field is
+      included in the index provided with this data set.
+ 
+    Contact Information
+    ===================
+ 
+      For any questions regarding the data in this archive, contact:
+ 
+        Dr. Jochen Kissel, Stardust CIDA Science Lead
+        Dr. Johan Silen, Stardust CIDA Science Team Member
+        Dr. Jouni Ryno, Stardust CIDA S/W Technical Lead
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      All Experiment Data Frames produced by the CIDA instrument
+      contain a checksum that is validated upon ground receipt.
+ 
+      During the processing of the CIDA event EDFs in preparation for
+      delivery with this data set the fundamental validity of each
+      event EDF has been inferred by the CIDA Science Lead and CIDA
+      Science team members by plotting and subsequent visual review of
+      the data structure.
+ 
+      As noted earlier, many CIDA events are the result of turn on
+      sequences, test pulses, reboots or noise. These ``non-science&apos;&apos;
+      events are nevertheless included in this data set. Of those
+      events that remain, many appear to contain significant (``real&apos;&apos;)
+      spectral data while others appear to contain no data of interest.
+      But it is left to the individual user to ultimately determine
+      which events are meaningful.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

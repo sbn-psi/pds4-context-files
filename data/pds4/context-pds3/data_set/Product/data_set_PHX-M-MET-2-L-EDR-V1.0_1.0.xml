@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.phx-m-met-2-l-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PHOENIX MARS MET LIDAR ATMOSPHERIC PROFILES EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.phoenix::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lidar.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-met-2-l-edr-v1.0__browserp_phx-m-met-2-l-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-met-2-l-edr-v1.0__browser_phx-m-met-2-l-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-met-2-l-edr-v1.0__dvo_atm_phx-m-met-2-l-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Whiteway, J, M. Daly, A. Carswell, C. Dickinson, T. Duck, L. Komguem, and C.
+                   Cook, Lidar on the Phoenix Mars Mission, J. Geophys. Res., volume 113, E00A08,
+                   doi:10.1029/2007JE003002
+            </reference_text>
+            <description>reference.WHITEWAY2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PHX-M-MET-2-L-EDR-V1.0</data_set_id>
+        <data_set_name>PHOENIX MARS MET LIDAR ATMOSPHERIC PROFILES EDR V1.0</data_set_name>
+        <data_set_release_date>2008-12-23</data_set_release_date>
+        <start_time>2008-05-28T20:35:58.613Z</start_time>
+        <stop_time>2008-06-24T12:24:49.144Z</stop_time>
+        <producer_full_name>CAMERON S. DICKINSON</producer_full_name>
+        <citation_text>
+            Dickinson, C. D., PHX ATMOSPHERIC LIDAR PROFILES V1.0, NASA
+            Planetary Data System, 2008.
+        </citation_text>
+        <data_set_terse_desc>
+            PHX LIDAR unprocessed laser scattering profiles
+        </data_set_terse_desc>
+        <abstract_desc>
+            The PHX Atmospheric Lidar Profiles product contains unprocessed
+            laser scattering atmospheric profiles for photon counting data at
+            532nm, and analog data at both 532 and 1064nm wavelengths
+            (expressed in Dignal Numbers). The range data is provided as a
+            time series of profiles between 5 and 90 min in total duration,
+            with each profile representing an accumulation or average over
+            1.28-20.24 sec. Supplemental data of estimated laser power and
+            inter-profile analog background skylight estimates are also
+            provided.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Modification History
+  ====================
+    Version 1 data volumes include volumes LS003 through LS029, released
+    Dec 2008.  These volumes contain Lidar data collected May 2008
+    through June 2008, specifically Sols 3-29.
+ 
+  Data Set Overview
+  =================
+    The Phoenix Mars Lander arrived at 68.2184N, 234.2487E on May 25, 2008.
+ 
+    The  PHX Atmospheric Lidar Profiles product contains unprocessed
+    (i.e. Digital Numbers not converted to counts or voltage)
+    laser scattering atmospheric profiles.  Each operation of the lidar
+    instrument is provided as a separate product, and often more than
+     one operation was conducted per sol.
+ 
+    The EDR Data are organized into Photon Counting (532nm), Analog (532 &amp;
+    1064nm) and Supplemental (Laser Power, Lidar Background Skylight and
+    sensorhead temperatures).
+ 
+    The lidar instrument is highly configurable, leading to a myriad of
+    possible data volume outcomes.  Briefly, a single (vertical) profile
+    of atmospheric scattering is given for a single point in time, and
+    listed as values at various ranges (distance) from the lander (with
+    the difference between successive ranges defining the sampling
+    range interval).  Successive profiles, marked with a separate time,
+    determine the temporal sampling interval (period duration), and the
+    total duration is defined as the product of total number of profiles
+    and sampling interval (temporal integration duration).  The range
+    sampling interval for analog and photon counting channels can be
+    configured separately,
+ 
+    Supplemental data contains the unprocessed average, min and max laser
+    voltages (provided as an estimate of laser power); inter_pulse analog
+    background values; and sensor-head temperature estimates, as an
+    indicator of co-alignment between laser transmitter and receiver.
+    [WHITEWAY2008]
+ 
+    The Data is organized by a unique identifier (Token) is keeping with
+    the other Phoenix instruments.  The token for the Lidar was set each
+    instance of operation, and is provided as a 4 byte hex value.
+ 
+    Every record is stored with both the spacecraft time, and UTC start
+    time, and each data record can thus be retrieved from each table
+    using time as a common key.
+ 
+  Parameters
+  ==========
+    Each EDR file contains time as the MET Frame count since instrument
+    power on (1 count is 0.01 sec). The range that scattering occurs at
+    is given from the lander deck (approximately vertical) in meters.
+ 
+    EDR files contain 32bit DN for the number of photon counts (532nm
+    photon counting channel) or the average voltage for the analog
+    channels (532 &amp; 1064nm).  Supplemental values of the min, max and
+    average laser intensities are provided as 16 bit values; as are the
+    analog background (skylight) values sampled between laser pulses
+    (avg, min, max); and the sensorhead temperatures.
+ 
+    The number of profiles and integration duration are also provided for
+    reference.
+ 
+    During surface operations, the range resolution was nominally set to
+    20m and 50m, respectively, for the analog and photon counting data;
+    The sampling period was between 1.28 - 20.48 sec, with the vast
+    majority of lidar operations employing 20.24 sec resolution; each
+    operation of the lidar was between 5 and 90 min in total duration,
+    with the average operation lasting 20 min.
+ 
+  Processing
+  ==========
+    The EDRs are essentially identical to the telemetry messages sent
+    from the MET-Lidar instrument to the Lander computer, converted to
+    ASCII and with the addition of a Lander timestamp (there is no onboard
+    MET clock, so the instrument relies on an internal Frame Count.  Matching
+    of this frame count and the Lander clock are made using the MET GDS)
+ 
+    Finally, the data were converted to PDS format, converting the
+    tab-delimited fields to fixed-width fields, and exchanging the
+    multiple packet headers for a single session header by the MET GDS.
+ 
+    Address:     Cameron Dickinson
+                 Dept. of Earth and Space Science Engineering
+                 York University
+                 4700 Keele St
+                 Toronto, ON M3J 1P3
+ 
+    Phone:       (416) 736-2100 X 23870
+    Email:       cameron.dickinson@gmail.com
+ 
+    For science related questions about the data, please contact the
+    MET Instrument Science Team Lead:
+ 
+    Address:     James Whiteway
+                 Dept. of Earth and Space Science Engineering
+                 York University
+                 4700 Keele St
+                 Toronto, ON M3J 1P3
+ 
+    Phone:       (416) 736-2100 X 22310
+    Email:       whiteway@yorku.ca
+ 
+ 
+  Data
+  ====
+    All of the data in this data set are contained in ASCII tabular files
+    with detached PDS labels.  Data is stored in a separate directory
+    relating to the sol in which the recording of data commenced (i.e.
+    data acquired from 003 10:00 local to 004 10:15 will be in the sol
+    3 directory)
+ 
+    Individual filenames are constructed as follows:
+ 
+                             MS002ELP_00896227243_10CCM0.LBL
+ 
+        1: The first character will always be an &apos;M&apos;, representing MET
+           data.
+        2: The second character will be an &apos;S&apos;, signifying surface
+           data (versus &apos;C&apos; for Cruise)
+      3-5: The next three characters provide the sol number of the data
+           file.
+      6-8: The next three characters describe the type of MET data,
+           ELP - EDR Lidar Photon Counting *532 nm)
+           ELA - EDR Lidar Analog (532 &amp; 1064 nm)
+           ELS - EDR Lidar Supplemental Data
+           RLP - RDR Lidar Photon Counting *532 nm)
+           RLA - RDR Lidar Analog (532 &amp; 1064 nm)
+           RLS - RDR Lidar Supplemental Data
+        9: Blank
+    10-20: SCLK - Spacecraft clock
+       21: Blank
+    22-25: Operations Token
+       26: Producer (M for MET Team)
+       27: Version
+       28: Period
+    29-31: Extension, LBL or TAB
+ 
+    The tabular files are formatted so that they may be read directly into
+    many database management systems (DBMS) or spreadsheet programs on
+    various computers.  Each of the files contains two tables.  The first
+    is the header table, and is only a single record in length.  The
+    second table contains all of the data records for a session and varies
+    in length.
+ 
+    All fields in the tables are stored in columns of fixed width and are
+    right justified.  The records are of fixed length; since the header
+    records are shorter than the data records, they have been padded with
+    blank spaces at the end of the record.  The last two bytes of each
+    record contain the ASCII carriage return and line feed characters.
+    This allows the tables to be treated as fixed length record files on
+    computers that support this file type and as normal text files on
+    other computers.
+ 
+    The PDS labels are object-oriented. The object to which the labels
+    refer (the tables) is denoted by a statement of the form:
+ 
+        ^object = location
+ 
+    in which the carat character (&apos;^&apos;, also called a pointer in this
+    context) indicates that the object starts at the given location.  For
+    an object located outside the label file (as in this case), the
+    location denotes the name of the file containing the object, along
+    with the starting record.  For example:
+ 
+        ^TABLE = &apos;MS013RLP_00126907202_15C6M1.TAB&apos;
+ 
+    indicates that the TABLE object is in the same directory as the
+    detached label file. (Records are counted starting at 1, not 0.)
+ 
+    The detached label files are stream format files, with a carriage
+    return (ASCII 13) and a line feed character (ASCII 10) at the end of
+    each record.  This allows the files to be read by the MacOS, DOS,
+    UNIX, and VMS operating systems.
+ 
+ 
+  Software
+  ========
+    The EDR/RDR tables can be displayed on UNIX, Macintosh,
+    and PC platforms as simple ASCII files, or using the PDS developed
+    program, NASAView.  This software is freely available from the PDS
+    Central Node and may be obtained from their web site at
+    http://pds.nasa.gov/.  For more information or help in obtaining
+    the software, contact the PDS operator at the following address:
+ 
+    Address:     Planetary Data System, PDS Operator
+                 Jet Propulsion Laboratory
+                 4800 Oak Grove Drive
+                 Pasadena, CA 91109
+ 
+    Phone:       (818) 354-4321
+    Email:       pds_operator@jpl.nasa.gov
+    WWW URL:     http://pds.nasa.gov/
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Review
+  ======
+    The contents of this data have been peer reviewed by the following
+    people:
+ 
+    Lyle Huber        - PDS Atmospheres Node, New Mexico State University
+    Jim Murphy        - PDS Atmospheres Node, New Mexico State University
+    Cameron Dickinson - MET/Lidar Data Manager, York University
+    Jim Whiteway      - MET/LIDAR Instrument Co-Investigator, York University
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

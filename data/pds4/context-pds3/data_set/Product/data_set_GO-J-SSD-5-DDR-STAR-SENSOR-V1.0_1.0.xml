@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-j-ssd-5-ddr-star-sensor-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GO JUP SSD DERIVED ELECTRON FLUX V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ssd.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:plasma_cloud.io_plasma_torus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-ssd-5-ddr-star-sensor-v1.0__browserp_go-j-ssd-5-ddr-star-sensor-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Fieseler, P., The Galileo Star Scanner as an Instrument for Measuring Energetic
+                   Electrons in the Jovian Environment, MS Thesis, University of Southern
+                   California, Los Angeles, 2000.
+            </reference_text>
+            <description>reference.FIESELER2000</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-J-SSD-5-DDR-STAR-SENSOR-V1.0</data_set_id>
+        <data_set_name>GO JUP SSD DERIVED ELECTRON FLUX V1.0</data_set_name>
+        <data_set_release_date>2000-10-01</data_set_release_date>
+        <start_time>1995-12-07T00:01Z</start_time>
+        <stop_time>2000-12-31T23:53Z</stop_time>
+        <producer_full_name>MR. PAUL FIESELER</producer_full_name>
+        <citation_text>
+            Fieseler,P.D., GO JUP SSD DERIVED ELECTRON FLUX V1.0,
+            GO-J-SSD-5-DDR-STAR-SENSOR-V1.0, NASA Planetary Data System, 2000
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains Galileo Star Scanner data (electron flux,
+            1.5 to 30 Mev) from Jupiter 0 Orbit through end of mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Galileo star scanner is providing data on the instantaneous
+            flux of 1.5 to 30 MeV electrons in the Jovian environment. It is
+            able to measure fluxes of ~1 x 105 electrons cm-2 sec-1 or
+            greater which generally means the data are usable inside of about
+            12 and rarely as far out as 16.5 Jovian Radii (RJ). Typically,
+            the data points are spaced about 400 or 80 seconds apart with
+            infrequent periods of more rapid data depending upon the
+            operational mode. It should be noted that data are generally
+            accurate in time to only within 20 seconds without special
+            processing. Pitch angle information generally cannot be extracted
+            from this data set. Separate files exist for the Jovian insertion
+            event (J0) and all subsequent perijove passes except J5 which
+            occurred during a period of solar conjunction.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+The Galileo star scanner is providing data on the instantaneous
+flux of 1.5 to 30 MeV electrons in the Jovian environment. It is
+able to measure fluxes of ~1 x 105 electrons cm-2 sec-1 or greater
+which generally means the data are usable inside of about 12 and
+rarely as far out as 16.5 Jovian Radii (RJ). Typically, the data
+points are spaced about 400 or 80 seconds apart with infrequent
+periods of more rapid data depending upon the operational mode.
+It should be noted that data are generally accurate in time to
+only within 20 seconds without special processing. Pitch angle
+information generally cannot be extracted from this data set.
+Separate files exist for the Jovian insertion event (J0) and
+all subsequent perijove passes except J5 which occurred during
+a period of solar conjunction.
+ 
+      Data
+      ====
+ 
+Time: GMT-UTC time of the measurement in PDS
+      format: yyyy-mm-ddThh:mm:ss.sss.
+ 
+      (Note: This accurately reflects when the data was telemetered,
+       not the actual time the data was taken which could be up to
+       20 seconds earlier. All data is referenced to the time it
+       occurred on the spacecraft time and not ground receipt time.
+       Occasional periods of much higher rate telemetry do occur
+       (e.g. parts of orbit C21) where data is telemetered every
+       2/3 second.)
+ 
+Sclk: A spacecraft counter from which time information is derived. The
+      left hand integers are termed RIMs and increment 1 unit per
+      60.66666 seconds. The center two integers are termed
+      &apos;minor frames&apos; and increment from 0 to 90 at a rate of 1 unit
+      per 2/3 second.  When this cycle is complete one digit is added
+      to the RIM count. The final integer is termed an &apos;RTI&apos; and
+      increment from 0 to 9 at a rate of 1 unit per 0.0666666 seconds.
+      When this cycle is complete, one unit is added to the minor
+      frame count.
+ 
+Star Code: This is a hexadecimal representation of the star
+           scanner health and status. It is collected at the same
+           instant as Raw Star Intensity and the reading of Raw
+           Background count.
+ 
+    Position 1 - always should be &apos;0&apos;. Any other number indicates
+                 data is suspect.
+    Position 2 - always should be &apos;x&apos;. Any other letter is a flag
+                 for suspect data.
+    Position 3 - &apos;f&apos; indicates normal operation
+                &apos;1&apos;, &apos;2&apos;, &apos;5&apos;, &apos;6&apos; or &apos;7&apos; indicates anomalous star
+                 scanner operation. Suspect data.
+                &apos;3&apos; or &apos;4&apos; star scanner is having difficulty
+                 recognizing stars. All data is fine unless
+               otherwise noted in notes column.
+    Position 4 and 5 - Two letters that convert to an 8 bit binary
+                       word (hexadecimal). For example C7 = 11000111.
+                      First two bits should always be 11. Other
+                      numbers mean that the star scanner is
+                      re-starting and data is suspect.
+ 
+                       The final six numbers are a binary
+                       representation of recognized stars. In the C7
+                       example, three stars are recognized, most
+                       likely because only three stars have been
+                       loaded into the star scanner memory.
+ 
+Day of Year (DOY): A fractional representation of the time at which
+                   the data was telemetered in GMT-UTC. All data is
+                   in spacecraft time and not ground receipt time.
+                   January 1 is DOY 001.
+ 
+                   For example, 6 pm on March 1, 1996 (a leap year)
+                   is DOY 61.7500000.
+ 
+Twist: Spacecraft rotor twist angle in degrees. It is an inertially
+       based angle using the EME-50 coordinate system. Twist is the
+       angle between the projection of the 1950 North Celestial Pole
+       onto the spacecraft X-Y plane and the -X axis of the rotor
+       (spinning portion of the spacecraft). This represents the angle
+       at which the raw background  and star intensity data was
+       telemetered, but not necessarily the angle at which the data
+       was taken. It is used to subtract out the effects of
+       &apos;star corruption&apos; (see Fieseler [2000]) in the creation of the
+       filtered and compensated data sets. It is a real number which
+       varies from 0 to 360 degrees.
+ 
+Raw Star Intensity: The intensity of the most recently recognized
+                    star in counts. An integer which can scale from
+                    0 to 16,383. Sirius is about 4200 counts and the
+                    star scanner is linear for spectrally similar
+                    stars. The instrument, however, has a sharp
+                    spectral response in the blue and so reddish
+                    stars are much dimmer than might otherwise be
+                    expected.  Star intensity is put into a buffer
+                    for downlink only when a star is recognized. After
+                    this, the stale data remains in the buffer until
+                    the next star is seen. This buffer is generally
+                    only checked and relayed to the ground once per
+                    several minutes in most telemetry modes. Star
+                    intensity information is primarily used to
+                    subtract out the effects of  &apos;star corruption&apos;
+                    [Fieseler, 2000] in the creation of the
+                    compensated data set.
+ 
+Raw Background: Far from Jupiter, this is just average brightness of
+                the sky, including stars, nebulae, zodiacal light
+                taken over the previous 25.6 milliseconds. This is
+                termed &apos;star corruption&apos; Near Jupiter, electron
+                bombardment adds signal and eventually overwhelms
+                the light from background sources. An integer which
+                can scale from 1 to 16,383. It is placed into at the
+                same time as star intensity.  This buffer is generally
+                only checked and read-out once per several minutes in
+                most telemetry modes.
+ 
+Filtered: This is the filtered data which is derived from the Raw
+          background, Star Intensity and Twist data. It represents the
+          measured background light with the star corruption
+          (deterministic effects of background light) subtracted out.
+          A value of -50 means that this data had to be thrown out of
+          the processing because the star light could not be
+          subtracted out in this instance. Although this data
+          frequently appears to be an integer, it is actually real as
+          fractional values are do occur in some orbits.
+ 
+Compensated: This is the compensated data set which is derived from
+             the filtered data. It linearizes the star scanner data
+             (detector saturation becomes a factor in some cases) and
+             corrects for gain changes in the photomultiplier tube.
+             A real number. A value of -50 means that this data had
+             to be thrown out of the processing because the star light
+             could not be subtracted out of the filtered data in this
+             instance.
+ 
+Error low: This is the estimated error in the compensated data applied
+           on the low side. It is comprised of an RSS&apos;ed series of
+           independent or nearly independent worst case instrument
+           errors, biases and computational errors. It accounts for
+           aging and radiation damage to the star scanner equipment,
+           noise in the background radiation data after being averaged,
+           noise in the star light subtracted out of the filtered data,
+           attitude errors, calculational errors and biases caused by
+           magnetic and temperature effects.
+ 
+Error high: This is the estimated error in the compensated data
+            applied on the high side. It is comprised of an RSS&apos;ed
+            series of independent or nearly independent worst case
+            instrument errors, biases and computational errors. It
+            accounts for aging and radiation damage to the star
+            scanner equipment, noise in the background radiation data
+            after being averaged, noise in the star light subtracted
+            out of the filtered data, attitude errors, calculational
+            errors and biases caused by magnetic and temperature
+            effects.
+ 
+Flux: This is the omnidirectional flux of electrons in particles/cm-2
+      sec-1 between ~1.5 and 30 MeV external to the spacecraft. Due to
+      the steep decrease of electron flux with energy, it can also be
+      thought of as simply integral flux above 1.5 MeV. It is thought
+      to be no more accurate than within a factor of five. It is an
+      integer which would built from knowledge of the jovicentric
+      distance and the Compensated data.  The equation used was
+ 
+         Flux = 1755 * Compensated Counts  * RJ^1.1208
+ 
+      Where RJ is the most recently Estimated RJ rather than the
+      actual RJ at the instant the data was taken. This does not
+      cause an error of more than a few percent. The user is
+      cautioned that this is equation is preliminary - the star scanner
+      data are self-consistent but the attempt to calculate a flux is
+      less certain and was based primarily upon comparison with EPD
+      data. This flux parameter was forced to a value of zero for all
+      cases where the jovicentric distance was outside 20 RJ or when
+      it, due to slightly negative values in the compensated counts,
+      would have given a negative flux.
+ 
+Range: Distance from Jupiter center of mass in Jupiter Radii.
+ 
+Latitude: Planetographic latitude of the spacecraft in degrees.
+ 
+West Longtitude: Planetographic (West) longitude of the spacecraft in
+                 degrees.
+ 
+L: Distance at which a dipole field line crosses the dipole equator.
+   L is given by L = R sin*2(Magnetic Latitude) where R is the distance
+   from the center of Jupiter.
+ 
+Magnetic Latitude: Angle with respect to the dipole equator where the
+                   dipole axis tilts 9.6 degrees towards
+                   system III (1965.0) West Longitude.
+ 
+Magnetic Longtitude: Angle around the dipole axis with respect to the
+                     prime meridian.  The prime meridian can be
+                     considered to intersect with 202 degrees west
+                     longitude of System III (1965.0).
+ 
+Notes:  Text notes describing the transition to different star scanner
+        operation modes, suspected problems with the data not captured
+        under Star Code and other points of interest.
+ 
+ 
+The files of this data set are in the following structure:
+ 
+NAME                 TYPE    Description
+----------------------------------------------------------------------
+PDS Time             char    UTC time
+Spacecraft Clock     char    Spacecraft clock time
+Star Code            char    Star Scanner status code
+Day of Year          float   Decimal day of year
+Twist                float   Spacecraft rotor angle (degrees)
+Raw Star Intensity   Int     Star intensity (counts)
+Raw Background       Int     Background intensity (counts)
+Filtered Data        float   Raw intensity minus background
+Compensated Data     float   calibrated star intensity
+Error, Low           float   Bottom limit from error estimate
+Error, High          float   Top limit from error estimate
+Flux                 Int     Electron flux
+R                    float   Distance from Jupiter to spacecraft (Rj)
+Latitude             float   Planetographic latitude (degrees)
+West Longitude       float   Planetographic west longitude (degrees)
+L                    float   Distance at which a dipole field line
+                                crosses the dipole equator
+Magnetic Latitude    float   angle to dipole equator (degrees)
+Magnetic Longitude   float   angle to dipole equator (degrees)
+Notes                char    note on changes in data
+ 
+      Coordinate System
+      =================
+ 
+    Satellite-Centered Planetographic (Right Handed) Coordinates (SPRH)
+    -------------------------------------------------------------------
+      SPRH is a spherical &apos;planetocentric&apos; coordinate system, centered
+      at the satellite. The magnetic field components are the standard
+      right-handed spherical triad: R, Theta, and Phi. R is radial
+      (along the line from the center of the satellite to the center of
+      the spacecraft), and positive away from the satellite. Phi, the
+      azimuthal component, is parallel to the satellite&apos;s
+      planetographic equator (Omega x R) and positive in a right-handed
+      sense. Theta, the &apos;southward&apos; component, completes the
+      right-handed set. Trajectory components are also right-handed.
+      Since all of the satellites studied are nearly phase locked to
+      Jupiter, the SPRH prime meridian is effectively the sub-Jupiter
+      meridian. More precise definitions are provided by the IAU [1994]
+      (see Table 4). Longitude is measured from the prime meridian and
+      is positive in a right-handed sense (see figure below). R is the
+      radial distance (satellite&apos;s center to spacecraft center).
+      Latitude is planetocentric.
+ 
+    System III [1965] Coordinates (SYS3)
+    ------------------------------------
+      System III [1965] (SYS3) magnetic field vector components form
+      the standard right-handed spherical triad (R, Theta, Phi) for a
+      Jupiter centered system. Namely, R is radial (along the line from
+      the center of Jupiter to the center of the spacecraft), and
+      positive away from Jupiter. Phi, the azimuthal component, is
+      parallel to the Jovigraphic equator (Omega x R) and positive in
+      the direction of corotation. Theta, the &apos;southward&apos; component,
+      completes the right-handed set.
+ 
+      For SYS3 trajectory both east and west longitudes are provided.
+      West longitudes are related to east longitudes by to the
+      algorithm:
+ 
+        west longitude = 360. - east longitude &lt;degrees&gt;
+ 
+      West longitude is defined such that it appears to increase with
+      time for a stationary observer [DESSLER1983]. Note, however, that
+      R, latitude, and west longitude constitute a left handed set. The
+      SYS3 1965 prime meridian is the sub-Earth longitude of
+      1965-01-01 00:00 UT. The spin rate (which was determined from the
+      rotation rate of the magnetic field) is 9 hrs 55 min 29.719 sec.
+      (See [DESSLER1983] for a discussion on Jovian longitude). R is the
+      radial (Jupiter&apos;s center to spacecraft center) distance. Latitude
+      is planetocentric.
+        </data_set_desc>
+        <confidence_level_note>
+There are currently
+(as of November, 2000) 28 separate data files reflecting
+the 28 orbits Galileo has made of Jupiter and the J0 orbit insertion
+event. One orbit, J5, is not included as the spacecraft was behind the
+sun in that instance.  In general, the star scanner is insensitive to
+electrons outside of about 12 RJ although the files often go out
+beyond 35 RJ.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

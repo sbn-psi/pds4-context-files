@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:caspir.mssso</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CRYOGENIC ARRAY SPECTROMETER/IMAGER for MSSSO</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.mssso::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   McGregor, P.J., P.D. Nicholson, M.G. Allen, near-infrared observations of
+                   the impacts of fragments C, D, G, K, N, R, V, and W of Comet
+                   P/Shoemaker-Levy 9 with Jupiter from the ground, Icarus, 121 361-388,
+                   1996.
+            </reference_text>
+            <description>reference.MCGREGORETAL1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>CRYOGENIC ARRAY SPECTROMETER/IMAGER</instrument_name>
+        <instrument_desc>
+ 
+ 
+    Instrument Overview
+    ===================
+      This manual describes the operation of CASPIR, the Cryogenic Array
+      Spectrometer/Imager on the ANU 2.3 m telescope at Siding Spring
+      Observatory.  CASPIR uses a Santa Barbara Research Center (SBRC)
+      CRC463 256 x 256 InSb detector array to provide direct imaging and
+      spectroscopic capabilities in the 1-5 micrometer wavelength range.
+      Two direct imaging focal plane scales of 0.5 arcsec/pixel and 0.25
+      arcsec/pixel are available, as well as long slit J, H, and K grisms
+      giving two pixel resolving powers of ~500 through a 1 arcsec x 128
+      arcsec slit, and IJ, JH, and HK cross-dispersed grisms giving two
+      pixel resolving powers of ~1100 through a 1 arcsec x 15 arcsec
+      slit.  Coronograph and imaging polarimetry functions are also
+      available.
+ 
+ 
+    Operational Considerations
+    ==========================
+      CASPIR operates within the environment common to all infrared
+      instrumentation on the 2.3 m telescope. All mechanical functions are
+      controlled from MOPRA to the LSI-11/23 located in the Cassegrain
+      Instrumentation Rack in the Nasmyth Lab, and from this to the
+      instrument control subrack mounted on the Instrument Mounting Box
+      (IMB).  The detector array clocks, biases, and signal processing are
+      performed by the SBRC Array Control Electronics (ACE2) also mounted
+      on the IMB, close to the CASPIR dewar.  The ACE2 is controlled
+      directly by MOPRA through a 9600 baud RS-232 connection.  Data from
+      the four detector output channels are digitised in the ACE2 using
+      four 16-bit, 500 kHz Burr-Brown ADCS, and serialised using four
+      transputer Link Adaptors.  The serial data are transmitted from the
+      Cassegrain focus to the Nasmyth Lab where four T800 transputers
+      receive the data and process it as necessary.  When the requested
+      integration sequence completes, the data are transferred to MOPRA
+      through a transputer link to Q-bus interface and are displayed on
+      the workstation screen and stored on disk.  The detector array
+      temperature is controlled by a commercial controller located in the
+      Nasmyth Lab.  MOPRA communicates with this controller through an
+      RS-232 line.
+ 
+ 
+    Optics
+    ======
+      CASPIR is a cryogenic reimaging camera with a 50 mm long, 10.4 mm
+      diameter collimated beam section.  The camera body is cooled to ~60
+      K by the first stage of a closed cycle helium refrigerator, and the
+      detector array cooled detector array cooled to ~32 K by the second
+      stage of the cooler.  The dewar incorporates a novel design which
+      uses five 16-position annular wheels mounted coaxially around the
+      cooler to produce a compact vacuum system.  The wheels are driven by
+      motors located on the dewar base plate.
+ 
+      The CASPIR dewar mounts on port A of the IMB.  The rotatable
+      dichroic mirror in the IMB directs the f/18 telescope beam to the
+      dewar.  The dewar window is a Sapphire/CaF2 doublet which acts as
+      field lens to image the telescope exit pupil (the secondary mirror)
+      onto an internal cold stop.  A cold gold-coated mirror then directs
+      the beam down, parallel to the dewar axis.  The telescope focus is
+      located immediately below this mirror at the Aperture Wheel.  The
+      Aperture Wheel contains baffles for the 0.5 arcsec/pixel and 0.25
+      arcsec/pixel focal plane scales, a range of slits for the grisms,
+      coronograph masks, and the field mask used for imaging polarimetry
+      (Table 12).  The diverging beam then passes to a fixed MgO/CaF2
+      doublet, collimator lens which produces the collimated beam
+      section.  Immediately below this, in the collimated beam, is the
+      Upper Filter Wheel which contains the filters listed in Table 13.
+      Next is the Utility Wheel which is located at the pupil plane.  This
+      wheel contains the direct imaging cold stop, the MgO/CaF2 doublet
+      slow camera lens for the 0.25 arcsec/pixel focal plane scale, the
+      six grisms, and the Wollaston prism polarimeter analysers (Table
+      14).  Below the Utility Wheel is the Lower Filter Wheel which
+      contains the filters listed in Table 15. Note that some of the
+      broadband filters require blocking filters located in the Lower
+      Filter Wheel.  Both filter wheels contain clear positions.  The
+      detector array should not be exposed to optical light while cold, so
+      the software prevents both clear positions being selected at the
+      same time. Note also that the Lower Filter Wheel is located in an
+      f/10.4 converging beam when the slow camera is used, so some
+      refocusing between filters may be required.  The final wheel is the
+      Lens Wheel which contains the MgO/BaF2 fast camera lenses for the
+      0.5 arcsec/pixel focal plane scale.  These are rotated out of the
+      beam when the slow camera is used. The detector array is located at
+      the lower end of the dewar at the camera focus.
+ 
+ 
+    Detectors
+    =========
+      The detector is an SBRC CRC463 256x256 InSb array which is sensitive
+      from ~0.9 micrometers to 5.5 micrometers.  The array has four output
+      channels corresponding to four interlaced columns (12341234...) The
+      array is controlled by the SBRC ACE2 drive electronics which is
+      mounted close to the CASPIR dewar.  Communications with the ACE2 is
+      through an RS-232 connection to MOPRA.
+ 
+ 
+      The CRC463 is a hybrid device in which the InSb detector material is
+      bump-bonded to a silicon multiplexer through indium bumps.  The
+      multiplexer is a switched FET read-out device, which operates
+      differently than a CCD.  Each pixel (or unit cell) contains four
+      FETS; the two row select FETs and the reset FET are switches which
+      can be thought of as closed when activated.  The fourth FET  acts as
+      a source-follower amplifier which continuously samples the voltage
+      on the detector node without affecting its value.  A load is
+      provided for the unit cell source-follower FET.  This load FET  is
+      located in the column biasing circuitry.  The output FET acts as a
+      second source-follower amplifier with its external 10 KOhm load
+      resistor in the ACE2 electronics rack.  The two column select FETs
+      also act as switches.
+ 
+      Pixels in the array are sequentially addressed by pulsing column and
+      row shift registers which activate the column and row select FET
+      switches.  Once a pixel is selected, the voltage of the detector
+      node can be non-destructively read via the source-follower amplifier
+      signal train, and the detector node voltage can then be optionally
+      reset to Vdduc by activating the reset FET switch by pulsing the
+      Phibrst clock line.  Note that the stored charge is not transferred
+      across the array like a CCD.  Instead each pixel is sequentially
+      reset and read.  This results in a time delay in the integration
+      window across the array of one frame readout time between the first
+      and last pixels.
+ 
+      The array readout scheme permits the use of a variety of readout
+      methods which are now described.
+ 
+ 
+    Data Modes
+    ==========
+      Readout Method 1: Fast Sampling
+      -------------------------------
+      In the fastest readout method, speed is considered more important
+      than accuracy so we take only one sample per pixel and reference
+      this voltage to electrical ground (Vss).  The detector node voltage
+      is applicable in readout method I. The unit cell is reset,
+      integrated, and sampled once at the end of the integration ramp.
+ 
+      This method should be used for imaging in the 3-4 micrometer band
+      and at M where the high thermal background flux significantly fills
+      the detector wells in of order the frame readout time.  In this
+      situation, the dominant noise source is photon shot noise from the
+      background flux, so readout noise is not an issue.
+ 
+      The minimum readout time for this method is 0.2 sec.
+ 
+      Readout Method 2: Relative Sampling
+      -----------------------------------
+      Under less extreme background conditions, significant improvement in
+      stability can be made by referencing the signal level to the reset
+      level, instead of electrical ground.  This is done in readout method
+      2.
+ 
+      Note that the detector node voltage jumps when the reset FET is
+      switched off, and this pedestal level is not removed in readout
+      method 2. The pedestal level is different for each pixel in the
+      array so this imprints a pedestal structure on the image, which is
+      difficult to remove completely.  The uncertainty in the value of
+      this pedestal is known as kTC noise.
+ 
+      For direct imaging through broad band filters with high sky levels,
+      the dominant noise source is still the photon shot noise of the
+      background flux so readout method 2 gives acceptable performance.
+ 
+      The minimum readout time for this method is 0.3 sec.
+ 
+      Readout Method 3: Double-Correlated Sampling
+      --------------------------------------------
+      The pedestal structure can be removed using a readout method which
+      references the detector node voltage at the end of the integration
+      to the voltage at the beginning of the integration.
+ 
+      In principle, this readout method is susceptible to electrical 1/f
+      noise since it differences two samples separated in time by the
+      duration of the integration.  In practice, this is unlikely to be an
+      important noise source.
+ 
+      This is the preferred readout method for broad band imaging because
+      it does not imprint the pedestal pattern on the data.
+ 
+      The minimum readout time for this method is 0.4 sec.
+ 
+      Readout Method 4: Triple Correlated Sampling
+      --------------------------------------------
+      The potential 1/f noise problem with readout method 3 can be
+      overcome, at the expense of two more reads, by referring both the
+      start and end reads to their respective reset levels.
+ 
+      Naively, this should be the most accurate readout method to adopt.
+      However, we must now delve into the more obscure operating
+      characteristics of the CRC463 array to see why other effects
+      dominate.
+ 
+      Readout Method 5: Fowler Sampling
+      ---------------------------------
+      The FET switches in the CRC463 multiplexer are not perfect switches
+      as assumed above, but instead have finite gate capacitances that act
+      as sinks of charge that would otherwise remain on the detector node
+      capacitance.  The reset pedestal (i.e., the amount the detector node
+      voltage jumps by when the reset is taken off) is due to a
+      redistribution of charge from the detector node capacitance to the
+      reset FET gate capacitance that occurs when the reset FET gate
+      voltage (i.e., the reset clock voltage) moves positive to switch the
+      reset FET off.  This amounts to ~100 mV of lost detector reverse
+      bias (or well depth).  Similarly, a further ~400 mV of detector bias
+      is lost when the row and column select FETs  are switched off to
+      deselect the pixel.  This constitutes a movement of ~500 mV of
+      charge off the detector node compared to the normal operating
+      detector reverse bias that remains of only ~200 mV.  The true
+      pedestal is therefore significantly larger than the reset pedestal
+      seen if each pixel is reset and read on one pass through the array.
+ 
+      Fowler &amp; Gatley (1990, ApJ, 353, L33) show that the read noise can
+      be reduced by performing multiple nondestructive passes through the
+      array at the beginning and end of the integration ramp.  By
+      resetting each pixel on one pass through the array, and sampling the
+      detector node voltage on subsequent passes through the array, the
+      true pedestal is removed from the data.  Each time a pixel is
+      selected charge is redistributed from the row and column select FETs
+      back onto the detector node capacitance.  Fowler claims that the
+      read noise is predominantly due to the kTC noise associated with
+      this charge redistribution.  By performing multiple non-destructive
+      passes through the array at the beginning and end of the
+      integration, the read noise is reduced by the square root of the
+      number of passes.
+ 
+      Readout Method 5 implements Fowler sampling in this way.  The number
+      of reads at each end of the integration is set by the FNDR parameter
+      (CASPIR/FNDR=...).  For applications where low read noise is
+      required, at the expense of increased frame readout time, method 5
+      is the preferred readout method.  This is likely to be the case when
+      using the grisms.
+ 
+ 
+    Processing
+    ==========
+      Well Depth Considerations
+      -------------------------
+      The detector node capacitance for the CRC463 array is ~0.06 pF.  The
+      well depth is then proportional to the actual reverse bias voltage
+      across the detector; q = CV.  Consequently, a detector reverse bias
+      of ~160 mV is required for a well depth of 60,000 e. Our array has
+      an odd-even column effect which causes the applied detector reverse
+      bias on even columns to be lower than that on odd columns.  This
+      means that even columns have well depths ~80% smaller than odd
+      columns.
+ 
+      Linearity Correction
+      --------------------
+      When the bias-subtracted linearity data are plotted as signal rates,
+      it is apparent that the CASPIR array has a quadratic non-linearity
+      that must be allowed for during data reduction. The best description
+      of this non-linearity is currently given by the equation:
+ 
+      Linear Counts = Raw Counts + 6.4 * 10^-6 * (Raw Counts)^2
+ 
+      It is possible that different quadratic coefficients apply to
+      different pixels.  Further investigation of this effect is
+      required.
+ 
+      Transputer Preprocessor
+      -----------------------
+      CASPIR is designed to operate in the high background conditions
+      encountered at long wavelengths.  It uses four 16-bit 500 kHz
+      analog-to-digital converters to digitize the data, with the rest of
+      the data train being capable of sustained data rates of at least 2
+      microsec/pixel.  The requirement that individual frames be coadded
+      at this data rate to build up the image means that the data cannot
+      be input directly into MOPRA.  Instead a transputer-based
+      preprocessor is used.
+ 
+      A transputer is a fast microprocessor chip with considerable
+      in-built parallelism and which uses four fast serial &apos;links&apos; for
+      I/0.  Each link can be connected to another transputer, or to an
+      external device through a &apos;Link Adaptor&apos;, which is essentially a
+      bidirectional serial to parallel converter.  This architecture has
+      made transputers popular in parallel computing applications.
+ 
+      The CASPIR system uses four transputer link adaptors on the ADC
+      cards to serialise the data at the Cassegrain focus.  Four serial
+      lines then bring the signals to the Nasmyth Lab where the transputer
+      preprocessor is located.  This consists of four T800 transputer
+      boards which each have 1 Mbyte of memory and each are responsible
+      for processing the data from one serial line.  The current frame is
+      DMAD into transputer memory at the same time that the previous frame
+      is being coadded to an accumulation array where the summed image is
+      stored.  After the requested number of coadd cycles, the accumulated
+      image is divided by the number of coadd cycles, optionally has a
+      bias frame subtracted and is divided by flatfield frame, and is
+      copied to MOPRA via a transputer link to Q-bus interface with the
+      four separate data channels correctly interlaced to form the final
+      image.
+ 
+      The result of each sequence of coadd cycles is displayed on MOPRA&apos;s
+      workstation screen and is stored on MOPRA&apos;s disk.  The individual
+      frames from each cycle are not normally saved (this only occurs in
+      the occultation observing mode).
+ 
+ 
+    Mounting
+    ========
+      Instrument Mounting Box
+      -----------------------
+      All infrared dewars mount on a box attached to the Cassegrain focus
+      of the 2.3 m telescope that is known as the Instrument Mounting Box
+      (IMB).  Two dewars can mount on the IMB at the same time and a
+      dichroic mirror in the IMB can be positioned to direct infrared
+      light from the telescope to either dewar.  The IMB output ports are
+      identified by the labels A-D.  From the Cassegrain Access Platform,
+      with the control electronics racks on your left, the port position
+      facing you is &apos;A&apos;, the one to your right (not used) is &apos;B&apos;, the back
+      position is &apos;C&apos;, and the control electronics mount on face &apos;D&apos;.  A
+      dichroic reflexer directs the infrared beam to the selected IMB port
+      while an acquisition system views the same field in optical light.
+      Auxiliary modules can be mounted above the dichroic reflexer in the
+      IMB.  A calibration lamp module is available, and a polarimetry
+      module is under construction.
+ 
+      A manual dust cover is located in the mounting flange at the top of
+      the IMB.  The open and close positions are clearly marked on the
+      flange, and it should be used.
+ 
+ 
+    Calibrations
+    ============
+      Calibration Module
+      ------------------
+      The calibration lamp module can be used to obtain wavelength
+      calibration arc spectra.  The module contains Xenon and Argon lamps
+      as well as an incandescent lamp which may be useful for
+      flatfielding.  A rotary mirror is used to select one of the three
+      lamps and a flip mirror is placed in the telescope beam to direct
+      the lamp light to the detector.
+ 
+      Polarimetry Module
+      ------------------
+      The polarimetry module contains an achromatic half-wave plate
+      borrowed from the polarimetry module used at the AAT with IRIS, and
+      a 50 mm diameter wire grid for position angle and efficiency
+      calibration.  The warm half-wave plate is rotated in the infrared
+      beam to rotate the intrinsic plane of polarization of an
+      astronomical source with respect to a cold analyser mounted within
+      CASPIR.  The analyser is either a Wollaston prism mounted in the
+      Utility wheel, or a wire grid mounted in the Upper Filter wheel.
+      The Wollaston prism separates the parallel and perpendicular
+      polarization components equally on the array, so is a dual beam
+      system.  The wire passes only one polarization, but it does allow
+      the grisms mounted in the Utility wheel to be used for single beam
+      spectropolarimetry.
+ 
+ 
+    Field of View
+    =============
+      Sky Subtraction
+      ---------------
+      The strong and variable near-infrared background has contributions
+      from OH airglow in the J, H, and K bands, moonlight (either directly
+      or reflected off clouds) especially in the J band, and from thermal
+      emission from the telescope and sky in the K and L bands which
+      varies with temperature and humidity.  Although the 10-30%
+      variations in background caused by these factors do not strongly
+      limit the S/N of observations (except at K and L for large changes
+      in temperature), they greatly complicate both the creation of
+      mosaics of large regions and accurate surface photometry of objects
+      with extents comparable to CASPIR&apos;s field of view.  For such
+      observing programs, it is best to obtain sufficient object exposures
+      (and intermixed sky exposures if necessary) to create a SKY frame
+      for each dataset.  For programs with single or a few observations of
+      many objects, a sky calibration based on observations of several
+      objects, possibly combined with subtracting a fitted surface from
+      the final image, is the best that can be accomplished.  These
+      grouped observations could be treated as one dataset for the
+      purposes of sky subtraction.  It is useful to remember that variable
+      airglow can cause the sky background to vary at H by a factor of 2
+      and at J by 40% on hour timescales.
+ 
+      SKY frames for a dataset are created using the redimage task by
+      setting the subsky flag, and supplying values to the obstype,
+      subtype, nrun, and destripe parameters, obstype defines the type of
+      sky observations in the dataset.  obstype=all indicates that all
+      images in the dataset are to be included in the creation of SKY
+      frames. obstype=objskyobj indicates that the first image in the
+      dataset is an object image, and this is followed by a sequence of an
+      off-source sky image and an object image, ending with an object
+      image.  Only the off-source sky images will be included in the
+      creation of SKY frames.  obstype=skyobjsky indicates that the first
+      image in the dataset is an off-source sky image, and this is
+      followed by object and off-source sky image pairs, ending with a sky
+      image.  Only the off-source sky images will be included in the
+      creation of SKY frames. obstype=skyobjobjsky indicates that the
+      dataset consists of sequences of sky, object, object, sky frames.
+      Only the off-source sky images will be included in the creation of
+      SKY frames. obstype=radio is a special pattern used for nbL band
+      observations, initially of radio galaxies.  Sets of ten dithered nbL
+      frames are separated by Kn sky and object frames that (hopefully)
+      allow drifts in telescope pointing to be corrected in the final
+      mosaicing.  It is likely that, these patterns will include most
+      observing sequences in user defined DO files.  redimage can be
+      extended to include other sky types if this proves necessary.
+ 
+      Standard star measurements recorded in pairs with the star displaced
+      on the array can be processed by selecting obstype=standard.  This
+      is a special type requiring exactly two input images.  An output
+      image is formed by subtracting the second (sky) image of the
+      standard star from the first (object) image of the standard star.  A
+      permanent output file is produced with the name stdnnn_mmm where nnn
+      is the number of the first standard star image and mmm is the number
+      of the second standard star image.  This sky- subtracted standard
+      star image can be automatically processed in each of the following
+      steps except that mosaicing and creating a coordinate grid will be
+      ignored.  These steps are not applicable to this image.  It is most
+      likely that users will fix bad pixels and then measure aperture
+      photometry on the standard star image after sky subtracting.
+ 
+      The subtype parameter in redimage defines the type of sky
+      subtraction that is performed. subtype=all defines that all sky
+      images in the dataset will be included in the creation of a single
+      SKY frame, which is then scaled to the median pixel value of each
+      object image and subtracted from them.  This is adequate for small
+      datasets where the total time span of the observation is less than
+      about 20 minutes.  Larger datasets need to be subdivided into
+      smaller units, with individual SKY frames.  This is achieved by
+      setting subtype=running.  This causes a SKY frame to be formed for
+      each object image in the dataset from the median of nrun sky images
+      taken immediately before and after the object image.  The object
+      image itself is not included in the running median.  The SKY frame
+      created for each object image is then scaled to the median pixel
+      value of the object image and subtracted from it.
+ 
+      The destripe parameter in redimage determines whether a residual
+      column bias pattern is to be defined and subtracted from each image
+      after normal sky subtraction.  Usually this will not be necessary.
+      However, nbL images obtained with readout method 1 suffer from DC
+      drifts in the bias levels of the four output amplifiers between the
+      object and sky frames that are manifest as a residual column bias
+      pattern with four pixel period that is often not removed by normal
+      sky subtraction.  When the destripe parameter is set, redimage
+      determines the shape of this bias pattern by projecting the image in
+      the column direction to a 1D spectrum, and then subtracting this
+      spectrum off each row in the image.
+ 
+ 
+    System Performance
+    ==================
+      The best empirical estimate of the system performance is the
+      observation that for imaging with 0.5 arcsec pixels after 6 hr of
+      on-source integration, objects spread over ~2 arcsec with Kn ~19.5
+      mag are detectable with a signal- to-noise ratio of ~5, depending on
+      how they are measured.  This is confirmed by similar observations
+      with 4 min on-source integration times reaching Kn ~17.0 mag with
+      similar signal-to-noise ratio.
+ 
+      The following describes measurements of basic system parameters, and
+      then calculations of the theoretical performance based on these
+      parameters.  These calculations can be used to estimate system
+      performance in other configurations, but should be normalized by
+      comparison with the above observed sensitivities.
+ 
+      System zero point offsets are based on the total ADUs in a
+      sky-subtracted stellar image after correction for airmass effects
+      and are defined by the equation ZP = M_std + 2.5*log(ADU/sec).
+      Typical values of the zero point offsets for each filter (mainly
+      with the 0.5 arcsec pixel scale) are listed in Table 3. These can be
+      used to calculate the total signal expected on an object of a given
+      brightness or the signal/pixel on an object of a given surface
+      brightness.
+ 
+      Table 3: Typical Zero Points
+ 
+      Filter                     Zero Point
+      --------------------------------------
+      J                              21.6
+      H                              21.6
+      K                              20.8
+      K&apos;                             20.6
+      Kn                             20.5
+      M                              11.7
+      MSO [Fe II]                    18.6
+      H_2 1-0 S(1)                   18.0
+      H I Br_gamma                   17.6
+      2.21 micrometer Continuum      19.1
+      CO (delta_v=2)                 18.5
+      3.28 micrometer Dust           16.6
+      3.60 micrometer Continuum      17.3
+      4.00 micrometer Continuum      16.6
+      H I Br_alpha                   16.3
+ 
+      Typical background brightnesses measured with CASPIR are listed in
+      Table 4.  The expected background photon fluxes can be calculated
+      from the tabulated background brightnesses and the system zero point
+      offsets.
+ 
+      Table 4: Background Brightnesses (mag/arcsec^2)
+ 
+      Filter                     IRPS  IRIS   CASPIR   CASPIR   PICNIC
+                                 1984  1993  Nov 1993 Mar 1993 Aug 1994
+      ------------------------------------------------------------------
+      J                          15.5  15.0    18.7     ....    ....
+      H                          14.5  13.7    14.6     ....    ....
+      K                          11.5  12.5    11.6     11.7    ....
+      K&apos;                         ....  13.7    12.5     12.6    ....
+      Kn                         ....  13.2    12.4     12.5   13.1-13.9
+      2.21 micrometer Continuum  ....  ....    12.9     ....    ....
+      CO (delta_v=2)             ....  ....    10.7     ....    ....
+      3.28 micrometer Dust       ....  ....     3.1     ....    ....
+      3.60 micrometer Continuum  ....  ....     3.8     ....    ....
+      4.00 micrometer Continuum  ....  ....     2.6     ....    ....
+      H I Br_alpha               ....  ....     2.0     ....    ....
+ 
+      The noise in an image is a combination of photon shot noise from the
+      sky and telescope, photon shot noise from the object, shot noise
+      from the dark current, read noise, and other systematic noise
+      sources that are difficult to quantify. For small signals, the noise
+      per pixel can be estimated from the equation:
+ 
+                Noise = [RN^2 + T*(i_b + i_d)]^1/2
+ 
+      where RN is the read noise in e-, T is the integration time in sec,
+      i_b is the background signal in e-/sec, and i_d is the dark current
+      in e-/sec.  The read noise for the double sample readout methods
+      (methods 2-4, and method 5 with FNDR=1) is ~50 e-.  The dark current
+      is typically 10 e-/s/pixel for most of the array, but there are a
+      significant number of detectors with dark currents of 100
+      e-/s/pixel, and some with 1000 e-/s/pixel.
+ 
+      With these data, theoretical performance figures for CASPIR can be
+      calculated from the measured background brightness and the camera
+      throughput as quantified by the system zero point.
+ 
+      For example, for a Kn background brightness of 12.4 mag/arcsec^2 and
+      a Kn zero point offset of 20.5 mag, the Kn background flux for 0.5
+      arcsec pixels is
+ 
+          (10^[(Z*P-m_std)/2.5])/4 = 434 ADU/sec/pixel
+ 
+      In a 5 sec integration, the background count is ~2170 ADU/pixel, or
+      19550 e-/pixel (1 ADU = 9 e-). The shot noise of this background
+      signal is (19550)^(1/2) = 140 e- which dominates the typical readout
+      noise of 40-60 e-.  Consequently, Kn images with 0.5 arcsec pixels
+      and an integration time of 5 sec should be background limited.  The
+      total noise per cycle is ~(50^2 + 19550)^.5 ~148 e-/pixel or 148/9 =
+      16.5.  ADU/pixel which is reduced to 4.8 ADU/pixel when 12 cycles
+      are averaged.  The measured value is ~5 ADU/pixel.  We assume here
+      that sufficient sky frames are averaged so that sky subtraction is
+      essentially noiseless.
+ 
+      For a 5*sigma detection of an object spread over n x n pixels, we
+      require an average signal in each of these n^2 pixels of five times
+      the noise per pixel.  The total object signal is then n^2 x 5 x 4.8
+      ADU.  This can be converted to a Kn magnitude after dividing by the
+      integration time of 5 sec and using the Kn zero point offset of 20.5
+      mag.  In this way, we can estimate limiting magnitudes at Kn for a
+      range of seeing or object sizes.  The results of these calculations
+      are shown in detail in Table 5.
+ 
+      Table 5: Performance at Kn (0.5 arcsec/pixel)
+ 
+          Image Size       5*sigma Total Signal     Mag      Time to 20 mag
+      (arcsec)   (pixels)     (ADU/5 sec)       (1 min, 5:1)     (min)
+      ---------------------------------------------------------------------
+       1 x 1     2 x 2           96                17.3           145
+      1.5 x 1.5  3 x 3          215                16.4           760
+       2 x 2     4 x 4          382                15.8          2290
+       5 x 5    10 x 10        2384                13.8         91200
+ 
+      Predicted performance figures for 5*sigma detections in 1 min of
+      on-source integration in different seeing conditions for various
+      filters are listed in Table 6 for the 0.5 arcsec/pixel scale and in
+      Table 7 for the 0.25 arcsec/pixel scale.  The 1 min integration time
+      does not include time for sky measurements and the dead time between
+      frames of ~20 sec.  It is recommended to limit individual frames to
+      1 min exposures, effectively making the elapsed time ~80 sec, so
+      that an adequate number of sky frames can be obtained in the time
+      scale of 15 min on which the sky level is observed to change
+      significantly.  If off-source sky measurements are necessary, it is
+      recommended that equal time be spent on the object, and sky
+      positions.
+ 
+      Relative performance figures for each filter are of interest in
+      deciding which passband is most sensitive for a particular
+      observation.  These calculations for the 0.5 arcsec/pixel scale in
+      1.5 arcsec seeing and an integration time of 5 sec with 12 cycles
+      are listed in Table 8 for a 15.0 mag star with zero color
+      (S/N_HotStar), a typical unreddened late-type star with K = 15.0
+      mag, J - K = 1.0, and H - K = 0.2 (S/N_CoolStar), and a typical AGN
+      power law spectrum (S/N_AGN).
+ 
+      Performance figures for the grisms can be estimated assuming a slit
+      transmission Tau_Slit = 0.5 and a grism transmission Tau_Grism =
+      0.5. For example, consider an observation using the HK grism and a 1
+      arcsec (2 pixel) wide slit of an object spread over 2 arcsec (n_y =
+      4 pixels) along the slit and recorded in two frames.
+ 
+      Table 6: System Performance (0.5 arcsec/pixel)
+ 
+      Filter  Time Cycles  RN^2  Background  Dark  5*sigma, 1 min Magnitude
+                                   Signal   Signal   1x1 1.5x1.5  2x2   5x5
+             (sec)        (e-)^2    (e-)     (e-)          (arcsec)
+      ---------------------------------------------------------------------
+      J       5.0    12    2500     3100      50     19.1  18.3  17.6  15.6
+      H       5.0    12    2500     7100      50     18.8  18.0  17.3  15.4
+      K       5.0    12    2500    53850      50     17.1  16.2  15.6  13.6
+      K&apos;      5.0    12    2500    19550      50     17.4  16.5  15.9  13.9
+      Kn      5.0    12    2500    19550      50     17.3  16.4  15.8  13.8
+      [Fe II] 10.0    6    2500      900     100     16.8  15.9  15.3  13.3
+      H2O     10.0    6    2500     3810     100     15.8  15.0  14.3  12.3
+      Cont2.2 10.0    6    2500     6800     100     16.7  15.9  15.2  13.2
+      CO      10.0    6    2500    29660     100     15.5  14.6  14.0  12.0
+ 
+      Table 7: System Performance (0.25 arcsec/pixel)
+ 
+      Filter  Time Cycles  RN^2  Background  Dark  5*sigma, 1 min Magnitude
+                                   Signal   Signal   1x1 1.5x1.5  2x2   5x5
+             (sec)        (e-)^2    (e-)     (e-)          (arcsec)
+      ---------------------------------------------------------------------
+      J        5.0    12   2500      775      50     17.9  17.0  16.4  14.4
+      H        5.0    12   2500     1775      50     17.8  16.9  16.3  14.3
+      K        5.0    12   2500    13460      50     16.3  15.4  14.8  12.8
+      K&apos;       5.0    12   2500     4890      50     16.5  15.6  15.0  13.0
+      Kn       5.0    12   2500     4890      50     16.4  15.5  14.9  12.9
+      [Fe 11] 10.0     6   2500      224     100     15.4  14.5  13.9  11.9
+      H20     10.0     6   2500      978     100     14.7  13.8  13.2  11.2
+      Cont2.2 10.0     6   2500     1700     100     15.7  14.8  14.2  12.2
+      CO      10.0     6   2500     7420     100     14.6  13.7  13.1  11.1
+      Cont3.28 0.3   200   2500   706500       3     10.0  9.1    8.5   6.5
+      nbL      0.3   200   2500   706500       3     10.7  9.8    9.2   7.2
+ 
+      (n_frames = 2) each with an integration time T = 180 sec and with
+      the object placed at different positions along the slit in both
+      images.  The spectral resolution at 2.2 micrometers is 2.2/2200 =
+      0.001 micrometers/pixel, or a factor of Lambda = 0.33/0.001 = 330
+      lower than for Kn.  In the spectral direction, each pixel sees
+      signal from an area of sky A_Sky = 1 arcsec x 0.5 arcsec = 0.5
+      arcsec^2, dispersed by a factor of Lambda more than for Kn, but
+      reduced in flux by Tau_Grism.  The background current per pixel
+      (averaged over features in the sky emission spectrum) is therefore:
+ 
+      10^((Z.P.-m_Bkg)/2.5) * A_sky * Tau_Grism * Gain/Lambda =
+                                                       11.8 e-/sec/pixel
+ 
+      Here we have used the observed Kn background brightness, M_Bkg, of
+      12.4 mag/arcsec^2 , and zero point offset, Z.P., of 20.5 mag, and
+      conversion between electrons and ADU, Gain, of 9 e-/ADU.  The noise
+      per pixel is then
+ 
+      Noise = (50^2 + 180*(11.8+10))^1/2 = (2500 + 3933)^1/2 = 80 e-/pixel
+ 
+      We see from this that shot noise from the dark current makes a
+      significant contribution to the total noise, and that integration
+      times of order 180 sec are required to minimize the read noise
+      contribution.  Integration times significantly longer than this are
+      not recommended because sky intensity variation make accurate sky
+      subtraction increasingly difficult, and significant numbers of hot
+      pixels saturate as the integration time is increased further.
+      Normally, spectra are recorded as a nodded pair to allow sky
+      subtraction, and preferably as an ABBA sequence.  In the case where
+      a single sky frame is subtracted from an object frame to perform the
+      sky subtraction, the total noise per pixel is increased by (2)^1/2
+      because the sky frame has the same noise per pixel as the object
+      frame.  For our example, the final noise becomes 113 e-/pixel.
+ 
+      We define a 5*sigma detection per pixel by requiring a
+      signal-to-noise ratio of 5 per pixel after averaging n_y pixels
+      along the slit and averaging the n_frames object frames.  The
+      average object signal per pixel in the dispersion direction is then
+ 
+      Signal = 5 * Noise / (n_y)^1/2 /(n_frames)^1/2 = 200 e-/pixel
+ 
+      The equivalent Kn imaging signal would be
+ 
+      Kn Signal =
+        200 / Gain / Tau_Grism / Tau_Slit * Lambda * n_y^2
+                = 470000 ADU
+ 
+      which corresponds to a Kn brightness of
+ 
+      Kn = 20.5 - 2.5 * log (470000/180) = 12.0 mag
+ 
+      From this we predict that a signal-to-noise ratio of 5:1 can be
+      achieved with the HK grism on a Kn 12.0 mag object in the continuum
+      in 6 min of on-source integration.  The 5*sigma line detection
+      sensitivity in the same time can be estimated by assuming the line
+      occupies two pixels in the dispersion direction. The line flux is
+      then
+ 
+      3.84 * 10^-14 * 10^(-12.0/2.5) * 0.001 * 2 = 1.2 * 10^-21 W cm^-2
+ 
+ 
+    Filters
+    =======
+      Acquisition System
+      ------------------
+      The IMB   acquisition system contains either the ICCD acquisition
+      TV, SBIG autoguider, or tip-tilt sensor mounted on an X-Y stage at
+      the bottom of the IMB.  These systems view the telescope field in
+      optical light through the dichroic reflexer, and allow offset
+      guiding or selection of bright tip-tilt reference stars.  The travel
+      of the X-Y stage is ~ +/-31.2mm in each direction in the f/18 (5
+      arcsec/mm) telescope beam.  A TV filter/focusser unit mounted on the
+      X-Y stage directly in front of the TV camera converts the f/18
+      telescope beam to f/5.76, provides a pupil mask that acts as an
+      optical sky baffle, allows for focussing of the optical image
+      independent of the infrared image, and contains B, V, R, I, and
+      RG630 filters as well as a clear position.
+ 
+      F Wheel Contents
+      ----------------
+      The contents of the five wheels are listed below.
+ 
+      Note that as of Oct 1994, it is necessary to set the Utility Wheel
+      to increasing numbers in order to ensure that it is latched
+      correctly.  The Lens Wheel should also be set to increasing
+      numbers.  These details will be fixed as soon as convenient.
+ 
+      Table 12: Aperture Wheel Contents
+ 
+      Position    Keyword      Content
+      ----------------------------------------------------------------
+      1            Blank        Blank
+      2            Lslit1      1.0 arcsec x 128 arcsec slit
+      3            Disk5       5.0 arcsec occulting disk
+      4            Lslit1.5    1.5 arcsec x 128 arcsec slit
+      5            Lslit2      2.0 arcsec x 128 arcsec slit
+      6            SlowClr     0.25 arcsec/pixel baffle
+      7            Lslit5      5.0 arcsec x 128 arcsec slit
+      8            Lslitl0     10.0 arcsec x 128 arcsec slit
+      9            Polar       Three 20 arcsec x 120 arcsec
+                                 slits (for polarimetry)
+      10           Sslit10     10.0 arcsec x 15 arcsec slit
+      11           Sslit5      5.0 arcsec x 15 arcsec slit
+      12           FastClr     0.5 arcsec/pixel baffle
+      13           Sslit2      2.0 arcsec x 15 arcsec slit,
+      14           Sslit1.5    1.5 arcsec x 15 arcsec slit
+      15           Disk2       2.0 arcsec occulting disk
+      16           Sslit1      1.0 arcsecx 15 arcsec slit
+ 
+      Table 13: Upper Filter Wheel Contents
+ 
+      Position   Keyword   Filter             lambda_c         delta lambda
+                                            (micrometer)       (micrometer)
+      ---------------------------------------------------------------------
+      1          Blank     Blank                 ...               ...
+      2          Clear     Clear                 ...               ...
+      3          Helium    He I 10830           1.082             0.011
+      4          PGamma    H I P_gamma          1.093             0.010
+      5          PBeta     H I P_beta           1.282             0.015
+      6          FeII      MSO [Fe II] + PK50   1.647             0.018
+      7          AAOFeII   AAO [Fe II]          1.650             0.015
+      8          H2O       H2O                  1.996             0.050
+      9          H2_1_0    H2 1-0 S(1)          2.120             0.027
+      10         BrGamma   H I Br_gamma         2.170             0.022
+      11         Cont2.2   Continuum            2.210             0.094
+      12         H2_2_1    H2 2-1 S(1)          2.249             0.024
+      13         CO        CO (delta v = 2)     2.343             0.088
+      14         Cont1.6   Continuum            1.580             0.012
+      15         Grid      Wire Grid Analyser    ...               ...
+      16         Mirror    IR85                  ...               ...
+ 
+      Table 14: Utility Wheel Contents
+ 
+      Position      Keyword    Content
+      --------------------------------------------------------
+      1              Blank      Blank
+      2              Clear      Direct imaging cold stop
+      3              IJ-grism   IJ cross-dispersed grism
+      4              Blank4     Blank
+      5              Blank5     Blank
+      6              H-grism    H grism
+      7              SlowCam    Slow camera lens (0.25 arcsec/pixel)
+      8              JH-grism   JH cross-dispersed grism
+      9              Blank9     Blank
+      10             Blankl0    Blank
+      11             J-grism    J grism
+      12             Mask       Coronograph pupil mask
+      13             Blank13    Blank
+      14             HK-grism   HK cross-dispersed grism
+      15             Wollaston  Wollaston polarimeter analyser
+      16             K-grism    K grism
+ 
+      Table 15: Lower Filter Wheel Contents
+ 
+      Position Keyword   Filter                     lambda_c   delta lambda
+                                                  (micrometer) (micrometer)
+      ---------------------------------------------------------------------
+      1       Blank     Blank                          ...          ...
+      2       Clear     Clear                          ...          ...
+      3       J         J                             1.275        0.282
+      4       H         H                             1.672        0.274
+      5       KP        K&apos; + PK50                     2.124        0.337
+      6       KN        Kn + PK50                     2.165        0.330
+      7       K         K                             2.224        0.394
+      8       L         L&apos;                            3.821        0.602
+      9       Ice       3.08 micrometer H2O ice       3.077        0.102
+      10      Dust3.28  3.28 micrometer Dust emission 3.299        0.074
+      11      Dust3.4   3.4 micrometer Dust emission  3.415        0.072
+      12      Cont3.6   3.6 micrometer Continuum      3.592        0.078
+      13      Cont4.0   4.0 micrometer Continuum      3.990        0.052
+      14      BrAlpha   H I Br_alpha                  4.051        0.054
+      15      M         M                             4.777        0.650
+      16      PK50      2 mm PK50                      ...          ...
+ 
+ 
+      Table 16:  Lens Wheel Contents
+      Position   Keyword     Content
+      ---------------------------------------------------
+      1          Blank       Blank
+      2          FastCam     Fast Camera Lens (0.5 arcsec/pixel)
+      3          Blank3      Blank
+      4          Clear       Clear
+ 
+      (Note K Filter Curve Functions can be found in the CASPIR User&apos;s
+      Guide)
+ 
+
+        </instrument_desc>
+        <instrument_id>CASPIR</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Infrared Imaging Spectrometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

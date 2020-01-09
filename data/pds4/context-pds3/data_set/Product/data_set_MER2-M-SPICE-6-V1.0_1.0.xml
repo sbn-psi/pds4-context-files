@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer2-m-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS EXPLORATION ROVER 2 SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-spice-6-v1.0__browserp_mer2-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-spice-6-v1.0__browser_mer2-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-spice-6-v1.0__browser_wgc_mer2-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER2-M-SPICE-6-V1.0</data_set_id>
+        <data_set_name>MARS EXPLORATION ROVER 2 SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2004-08-04</data_set_release_date>
+        <start_time>2003-06-10T00:00:00Z</start_time>
+        <stop_time>2010-05-03T09:11:09Z</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., L.S. Elson, and C.H. Acton, MARS EXPLORATION ROVER
+            2 SPICE KERNELS V1.0, MER2-M-SPICE-6-V1.0, NASA Planetary Data
+            System, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the Mars Exploration Rover 2.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Mars Exploration Rover
+            2 SPICE data files (``kernel files&apos;), which can be accessed
+            using SPICE software. The SPICE data contains geometric and other
+            ancillary information needed to recover the full value of science
+            instrument data. In particular SPICE kernels provide spacecraft
+            and planetary ephemerides, instrument mounting alignments,
+            spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of Mars Exploration
+      Rover 2 SPICE data files (``kernel files&apos;), which can be
+      accessed using SPICE software. The SPICE data contains geometric
+      and other ancillary information needed to recover the full value
+      of science instrument data. In particular SPICE kernels provide
+      spacecraft and planetary ephemerides, instrument mounting
+      alignments, spacecraft orientation, spacecraft sequences of
+      events, and data needed for relevant time conversions.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels provide position and velocity information for
+      spacecraft, planets, satellites, comets and asteroids as well as
+      for moving or fixed spacecraft and instrument structures. SPK
+      files are located under the ``data/spk&apos; directory of this data
+      set.
+ 
+      PCK kernels contain certain physical, dynamical and cartographic
+      constants for target bodies, such as size and shape
+      specifications, and orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as field-of-view model parameters. IK files are located
+      under the ``data/ik&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the ``data/ek&apos; directory of this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock
+      calibration data required to perform a mapping between Ephemeris
+      time (ET) and spacecraft on-board time (SCLK.) SCLK files are
+      located under the ``data/sclk&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under the
+      ``data/fk&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of Stardust kernels
+      included in this data set is provided in the
+      CONFIDENCE_LEVEL_NOTE section of this file while details specific
+      to individual files are found in the ``*info.txt&apos; files in the
+      corresponding data directory. The most detailed description of
+      the data in each file is provided in metadata included inside the
+      file -- in the description area of text kernels or in the comment
+      area of binary kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read
+      SPICE kernel files. SPICELIB software is highly documented
+      via internal headers. Additional documentation is available
+      in separate ASCII text files called Required Reading files.
+      For example, the S- and P- Kernel (SPK) Required Reading File,
+      named SPK.REQ, describes use of the SPK kernel file readers
+      and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos; directory. For more
+      information about the Stardust meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This volume contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here,
+      but the prospective user is also referred to extensive
+      descriptions about each file that are stored inside each kernel
+      file. These metadata provide detailed information regarding
+      the information source from which the data were derived, the
+      type of processing applied to the source data, applicability
+      of the data, etc. Metadata are located in the ``comment area&apos;
+      for binary kernel types (SPK, CK, EK/SEQ), accessible using either
+      the COMMNT or SPACIT utility program found in the NAIF Toolkit.
+      Metadata are located after ``\begintext&apos; markers within the
+      text kernel types (PCK, IK, FK, LSK, SCLK), accessible by
+      using any available text file display tool such as a word
+      processor, text editor, or the UNIX ``more&apos; or ``cat&apos;
+      commands.
+ 
+      In some cases data accuracy information does not exist, or
+      may be estimated after mission completion.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;
+      not addressed herein the reader is invited to examine subsequent
+      SPICE archive releases associated with this data set (if such
+      exist), or to contact the NAIF node of the Planetary Data System
+      for possible further information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      SP-Kernel files included in this dataset provide the following
+      types of position information:
+ 
+        -- cruise trajectory
+ 
+        -- EDL trajectory
+ 
+        -- landing site position relative to the center of Mars
+ 
+        -- positions of the numbered sites along the rover path
+ 
+        -- position of the rover with respect to site(s)
+ 
+        -- relative locations of the rover structures and science
+           instruments relative to each other
+ 
+        -- gravity-compensated position of the Microscopic Imager
+           touch point relative to the rover reference frame origin
+ 
+        -- ephemerides for planets and Martian satellites
+ 
+      The ``data/spk/spkinfo.txt&apos; file provides names of and/or
+      explains naming convention for each of the SPK types provided in
+      this data set.
+ 
+      Cruise SPK
+      ----------
+        This SPK file provide the final reconstructed cruise
+        trajectory, from the TECO up to the atmospheric entry point.
+        The accuracy of this trajectory is about or better than a
+        hundred meters.
+ 
+      EDL SPK
+      -------
+        This SPK file provide the reconstructed EDL trajectory, from
+        the atmospheric entry point to touchdown, computed by Robert C.
+        Blanchard, (LARC-D205)[GWU] in 2008. The file&apos;s internal
+        comments discuss the accuracy of this trajectory.
+ 
+      Landing Site Position SPK
+      -------------------------
+        This SPK file provides the location of the landing site on the
+        surface of Mars determined by the MER NAV team using post-landing
+        radio tracking data. It is based on the final solution that was
+        different from the earlier solutions by only a few tens of meters.
+ 
+      Site and Rover Position SPKs
+      -----------------------------
+        These SPK files provide positions of the numbered sites along
+        the rover path and position of the rover relative to these
+        sites. Two types of site/rover position SPKs are included in
+        this data set: one is based solely on rover telemetry and the
+        other is based on the rover telemetry combined with the
+        bundle-adjustment data provided by Dr. Ron Li, Ohio State
+        University.
+ 
+        Telemetry data used to generate both types of files consisted
+        of a combination of the rover position data relative to the
+        current site determined by the on-board mobility software and
+        the index of the current site. The numbered site positions
+        relative to the landing site were computed by combining these
+        two inputs and checking for site increment, computing inter-site
+        positions based on them, and accumulating these positions from
+        the initial site to each individual site. The telemetry was
+        extracted from the channelized telemetry stream and from a variety
+        of non-channelized telemetry products including image and other
+        science products, mobility system products, etc. It provided a
+        sufficient number of data points for SPICE SPK interpolation
+        technique to correctly represent rover position during
+        traverses and at the time when the rover was stationary.
+ 
+        Because the position data that came in telemetry is known to be
+        inaccurate -- since the rover did not have an on-board
+        capability to take slippage and sliding into account -- the SPK
+        files based solely on telemetry ``carry over&apos; these errors. At
+        the same time, the data provided in these SPKs are consistent
+        with the position information from other telemetry-only based
+        products such as image labels.
+ 
+        The second type of SPK attempts to fix the slippage and sliding
+        errors by combining the same, relatively complete telemetry
+        stream with the sparse data set containing more accurate
+        position of the sites and selected rover position between the
+        sites determined by Dr. Ron Li by processing the image data.
+        Li&apos;s data was used to replace the corresponding telemetry-based
+        values, resulting in more accurate but discontinuous rover
+        path.
+ 
+      Rover Structures SPK
+      --------------------
+        This SPK provides relative locations of various rover
+        structures and science instruments with respect to the rover
+        frame origin and/or each other. The data provided in this file
+        were obtained from a number of sources such as the rover
+        engineering drawings, IDD calibration report, and latest
+        official CAHVOR camera models. When loaded together with the
+        IDD, PMA, and HGA orientation CK files this SPK allows one to
+        compute positions of these structures and science instruments
+        mounted on them with respect to the rover reference frame
+        origin.
+ 
+      Gravity-compensated MI Position SPK
+      ------------------------------------
+        These SPK files provide gravity-compensated position of the
+        Microscopic Imager (MI) touch point relative to the rover
+        reference frame origin. The position data stored in this SPK
+        was determined by the on-board IDD software and was sent to the
+        ground in the image product headers.
+ 
+        Although the gravity compensated position provided by this file
+        is more accurate than the same position computed using a
+        combination of structures SPK and IDD CK, it is correct ONLY at
+        the times images were taken. Between the images this SPK will
+        return completely bogus position as SPICE does not have a way
+        of preventing the SPK subsystem to interpolate between the
+        actual data stored in this SPK file even if they are days
+        apart.
+ 
+      Planet and Martian Satellite Ephemeris SPKs
+      -------------------------------------------
+ 
+        The Martian satellite SPK provided in this data set contains
+        ephemeris data for Mars, Phobos, Deimos, Earth and the sun.
+        Formal one-sigma accuracy information for Phobos and Deimos are
+        reported as follows:
+ 
+          Body         Downtrack      Crosstrack      Radial
+                      Uncertainty     Uncertainty   Uncertainty
+          ------      -----------     -----------   -----------
+          Phobos         15 km           7 km          3 km
+          Deimos         30 km          16 km          3 km
+ 
+        Accuracies for Mars-Sun and Mars-Earth directions (positions
+        obtained from SPK files) are at the level of 0.001 arc-sec (1
+        sigma).
+ 
+        The planet ephemeris SPK file included in this data set
+        provides the best current knowledge of the ephemeris of Mars.
+ 
+      CK Files
+      ========
+ 
+      C-kernel files included in this dataset provide the following
+      types of orientation data:
+ 
+        -- cruise orientation
+ 
+        -- rover orientation during surface operations
+ 
+        -- Pancam Mast Assembly (PMA) orientation
+ 
+        -- Instrument Deployment Device (IDD) orientation
+ 
+        -- High Gain Antenna (HGA) orientation
+ 
+        -- Gravity-compensated orientation of the Microscopic Imager
+           relative to the rover reference frame
+ 
+      The ``data/ck/ckinfo.txt&apos; file provides names of and/or explains
+      naming convention for each of the CK types provided in this data
+      set.
+ 
+      Cruise CK
+      ---------
+        The cruise orientation CK file provided in this data set was
+        created by ``packaging&apos; the complete set of cruise stage
+        orientation quaternions extracted from channelized telemetry
+        into a type 3 CK file. This file should be used with great
+        caution because it allows to compute orientation that is only
+        partially correct.
+ 
+        During cruise the spacecraft was spinning about +Z axis at
+        approximately 12 rpm at the very beginning of cruise and at 2
+        rpm during the rest of cruise. The cruise orientation
+        quaternions ``packaged&apos; in this CK file were downlinked
+        relatively infrequently (mostly only once every 25 seconds) and
+        sometimes with large gaps in coverage (up to a half a day).
+        Because of that, when SPICE is reading this file using the
+        simple interpolation approach implemented in the type 3 CK, it
+        produces incorrect interpolation results with regards to the
+        rotation phase. The spin (+Z) axis direction, though, should be
+        very close to reality.
+ 
+      Rover Surface Orientation CK
+      ----------------------------
+        These CK files provide orientation of the rover relative to the
+        local level frame. These CKs are based solely on the rover
+        orientation quaternions determined by the on-board mobility
+        software. On the ground quaternions were extracted from
+        channelized telemetry stream and from a variety of
+        non-channelized telemetry products including image and other
+        science products, mobility system products, etc. The set of
+        quaternions contained a sufficient number of data points to
+        provide rover orientation during traverses and all science
+        observations activities when the rover was stationary.
+ 
+      PMA, IDD, and HGA Orientation CKs
+      ---------------------------------
+        These CK files provide rotations in the PMA, IDD, and HGA
+        joints/gimbals. When combined with the frame definition
+        information from the FK files these rotations allow one to
+        compute orientation of these structures and science instruments
+        mounted on them with respect to the rover reference frame.
+        These CKs are based solely on the joint/gimbal angles reported
+        by the on-board software. On the ground the angles were
+        extracted from channelized telemetry stream and from a variety
+        of non-channelized telemetry products including image and other
+        science products, mobility system products, etc. The set of
+        angles for each structure contained a sufficient number of data
+        points to provide orientation during all science and
+        engineering activities performed using these structures.
+ 
+      Gravity-Compensated MI Orientation CK
+      -------------------------------------
+        These CK files provide gravity-compensated orientation of the
+        IDD turret frame (co-aligned with the MI frame) relative to the
+        rover reference frame. The orientation data stored in this CK
+        was determined by the on-board IDD software and sent to the
+        ground in the image product headers.
+ 
+        Although the gravity compensated orientation provided by this
+        file is more accurate than the same orientation computed using
+        IDD CKs, it is provided ONLY at the times of images. This CK
+        will not return orientation data for the times between the
+        images.
+ 
+ 
+      PCK Files
+      =========
+ 
+      The data for the Planetary Constants Kernel provided in this
+      archive are official IAU/IAG/COSPAR values for the size, shape
+      and orientation for Mars, Phobos and Deimos accepted in 2000.A
+      description of these data items and reference to their source is
+      provided inside the PCK file, which is a simple text file that
+      can be viewed using any word processor, text editor or text
+      display utility.
+ 
+      The ``data/pck/pckinfo.txt&apos; file provides names of and/or
+      explains naming convention for the PCK files provided in this
+      data set.
+ 
+ 
+      FK Files
+      ========
+ 
+      The Frame Definitions Kernel (FK) file provided in this data set
+      contains the complete set of definitions for the surface frames,
+      rover frames, rover appendage/manipulator frames, and science
+      instrument frames. Meta information provided in the comments
+      included in the FK file consist of the frame definitions,
+      description of the frame relationships, source of and accuracy of
+      the mounting alignment information, etc.
+ 
+      The ``data/fk/fkinfo.txt&apos; file provides names of and/or explains
+      naming convention for the FK files provided in this data set.
+ 
+ 
+      IK Files
+      ========
+ 
+      The Instrument Kernel (IK) files for MER-2 cameras provided in
+      the data set contain values derived from the official CAHVOR
+      models used by on-board and ground software. These IK files
+      provide specifications for the optical and physical instrument
+      parameters and field-of-view size, shape and orientation.
+ 
+      No I-Kernel files for Miniature Thermal Emission Spectrometer
+      (MiniTES), Moessbauer Spectrometer (MB), Alpha Particle X-ray
+      Spectrometer (APXS), or Descent Camera (DESCAM) are provided on
+      this volume.
+ 
+      The ``data/ik/ikinfo.txt&apos; file provides names of and/or explains
+      naming convention for the IK files provided in this data set.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock Kernel (SCLK) files providing the following
+      types of time correlation data are included in this data set:
+ 
+        -- on-board clock correlation SCLK files
+ 
+        -- Hybrid Local Solar Time (HLST) SCLK files
+ 
+      The ``data/sclk/sclkinfo.txt&apos; file provides names of and/or
+      explains naming convention for each of the SCLK types provided in
+      this data set.
+ 
+      On-board Clock Correlation SCLKs
+      --------------------------------
+        The SCLK files provide a tabulation of data needed for
+        converting time measurements between ephemeris time (ET) and
+        spacecraft clock time (SCLK). A SPICE SCLK file is made from a
+        similar file -- SCLK/SCET file, or SCLKvSCET file -- produced
+        by another mission entity. Each newly made SCLK file fully
+        replaces the previous SCLK file.
+ 
+        The official on-board correlation SCLK files used in operations
+        and included in this data set provide correlation that is
+        incorrect in an absolute sense by as much as 20 seconds during
+        some periods. The error stems from a combinations of reasons:
+        the rover generated too few time correlation packets, the
+        specifics of the process used to derive the correlation
+        function, and the requirement for backward compatibility
+        between correlation versions imposed by the ground system
+        tools.
+ 
+        Until an improved version of the on-board clock correlation
+        becomes available, this table providing on-board clock time,
+        the corresponding UTC computed using the official correlation,
+        and the correction, in seconds, to be added to the UTC computed
+        using the official correlation, can be used to compensate for
+        the error in the UTC time tags attached to the science data
+        products:
+ 
+              SCLK                UTC            Correction
+          -------------   -------------------   ------------
+          126091000.000   2003-12-30T21:15:07     0.00000000
+          127259000.000   2004-01-13T09:41:45     5.31779034
+          127260000.000   2004-01-13T09:58:31     0.00000000
+          129032000.000   2004-02-02T22:12:09    -3.41549060
+          129033000.000   2004-02-02T22:28:46     0.00000000
+          130349000.000   2004-02-18T04:02:16    -0.90037587
+          130350000.000   2004-02-18T04:18:56     0.00000000
+          130793000.000   2004-02-23T07:22:19    -1.16488062
+          130794000.000   2004-02-23T07:38:58     0.00000000
+          133470000.000   2004-03-25T06:59:09    -4.57467157
+          133471000.000   2004-03-25T07:15:45     0.00000000
+          134539000.000   2004-04-06T15:55:47    -2.56826568
+          134540000.000   2004-04-06T16:12:24     0.00000000
+          137118000.000   2004-05-06T12:19:03    -7.99848235
+          137119000.000   2004-05-06T12:35:35     0.00000000
+          138620000.000   2004-05-23T21:32:10    -7.62354127
+          138621000.000   2004-05-23T21:48:42     0.00000000
+          144743000.000   2004-08-02T18:21:11   -18.77159578
+          144744000.000   2004-08-02T18:37:32     0.00000000
+          161963000.000   2005-02-18T01:37:36    12.00370592
+          161964000.000   2005-02-18T01:54:28     0.00000000
+          163650000.000   2005-03-09T14:14:11     6.30416778
+          163651000.000   2005-03-09T14:30:58     0.00000000
+          166225000.000   2005-04-08T09:30:42    26.56784931
+          166226000.000   2005-04-08T09:47:48     0.00000000
+          167734000.000   2005-04-25T20:41:15     2.39826447
+          167735000.000   2005-04-25T20:57:57     0.00000000
+          181313000.000   2005-09-30T00:39:07     8.44620439
+          181318000.000   2005-09-30T02:02:35     0.00000000
+          188325000.000   2005-12-20T04:26:36   -10.97230372
+          188326000.000   2005-12-20T04:43:05     0.00000000
+          189345813.000   2006-01-01T00:00:00     0.00000000
+          189345814.000   2006-01-01T00:00:01     0.00000000
+          193297000.000   2006-02-15T17:33:16   -26.84156373
+          193298000.000   2006-02-15T17:49:29     0.00000000
+          201200000.000   2006-05-18T04:48:54   -53.50781852
+          201201000.000   2006-05-18T05:04:41     0.00000000
+          206882000.000   2006-07-22T23:06:58   -12.18677679
+          206883000.000   2006-07-22T23:23:26     0.00000000
+          219219000.000   2006-12-12T18:00:43     6.83766875
+          219220000.000   2006-12-12T18:17:30     0.00000000
+          221084000.000   2007-01-03T08:03:46     1.80669975
+          221085000.000   2007-01-03T08:20:28     0.00000000
+          228189000.000   2007-03-26T13:39:05    34.90978691
+          228190000.000   2007-03-26T13:56:19     0.00000000
+          233073000.000   2007-05-22T02:19:06    19.45480382
+          233074000.000   2007-05-22T02:36:06     0.00000000
+          243458000.000   2007-09-19T07:02:17   -18.62140173
+          243459000.000   2007-09-19T07:18:38     0.00000000
+          252603000.000   2008-01-03T03:18:01     6.69929239
+          252604000.000   2008-01-03T03:34:48     0.00000000
+          258905000.000   2008-03-16T01:51:07  -106.78366995
+          258906000.000   2008-03-16T02:06:00     0.00000000
+          278258000.000   2008-10-26T01:34:12    50.01633453
+          278259000.000   2008-10-26T01:51:42     0.00000000
+          289178000.000   2009-03-01T10:52:34    24.63962740
+          289179000.000   2009-03-01T11:09:39     0.00000000
+          300721000.000   2009-07-13T01:14:50    85.36628681
+          300722000.000   2009-07-13T01:32:55     0.00000000
+          310573000.000   2009-11-04T01:57:09   -61.83415705
+          310574000.000   2009-11-04T02:12:47     0.00000000
+          319185000.000   2010-02-11T18:08:32   -45.57725817
+          319186000.000   2010-02-11T18:24:26     0.00000000
+ 
+        (Linear interpolation can be used to estimate correction value
+        between the points.)
+ 
+ 
+      Hybrid Local Solar Time (HLST) SCLK files
+      -----------------------------------------
+        These SCLK files provide a way of converting between the Hybrid
+        Local Solar Time (HLST) time system used during surface
+        operations and other time systems. HLST was introduced as a
+        replacement of the True Local Solar Time (TLST) because a time
+        system with a constant duration of a second was needed for use
+        in the planning and sequencing processes. The HLST is
+        essentially a linear approximation of the true local time with
+        the rate set equal to the mean Mars local second duration and the
+        initial reference point set to make sure that HLST deviates from
+        TLST by no more that 15 local minutes during the primary
+        mission. This approximation continued to deviate from the TLST
+        as the surface operations went on, reaching over 50 local
+        minutes difference by the end of the first extended mission, as
+        illustrated by this table:
+ 
+             True LST           Hybrid LST
+          -----------------  -----------------
+          SOL-0001-12:00:00  SOL-0001-12:09:17
+          SOL-0010-12:00:00  SOL-0010-12:09:10
+          SOL-0020-12:00:00  SOL-0020-12:08:23
+          SOL-0030-12:00:00  SOL-0030-12:06:59
+          SOL-0040-12:00:00  SOL-0040-12:05:03
+          SOL-0050-12:00:00  SOL-0050-12:02:40
+          SOL-0060-12:00:00  SOL-0060-11:59:54
+          SOL-0070-12:00:00  SOL-0070-11:56:48
+          SOL-0080-12:00:00  SOL-0080-11:53:29
+          SOL-0090-12:00:00  SOL-0090-11:49:58
+          SOL-0100-12:00:00  SOL-0100-11:46:21
+          SOL-0110-12:00:00  SOL-0110-11:42:40
+          SOL-0120-12:00:00  SOL-0120-11:38:59
+          SOL-0130-12:00:00  SOL-0130-11:35:20
+          SOL-0140-12:00:00  SOL-0140-11:31:46
+          SOL-0150-12:00:00  SOL-0150-11:28:18
+          SOL-0160-12:00:00  SOL-0160-11:25:00
+          SOL-0170-12:00:00  SOL-0170-11:21:52
+          SOL-0180-12:00:00  SOL-0180-11:18:55
+          SOL-0190-12:00:00  SOL-0190-11:16:11
+          SOL-0200-12:00:00  SOL-0200-11:13:39
+          SOL-0210-12:00:00  SOL-0210-11:11:20
+          SOL-0220-12:00:00  SOL-0220-11:09:13
+          SOL-0230-12:00:00  SOL-0230-11:07:17
+          SOL-0240-12:00:00  SOL-0240-11:05:32
+          SOL-0250-12:00:00  SOL-0250-11:03:56
+          SOL-0260-12:00:00  SOL-0260-11:02:26
+          SOL-0270-12:00:00  SOL-0270-11:01:02
+          SOL-0280-12:00:00  SOL-0280-10:59:41
+          SOL-0290-12:00:00  SOL-0290-10:58:22
+          SOL-0300-12:00:00  SOL-0300-10:57:03
+          SOL-0310-12:00:00  SOL-0310-10:55:42
+          SOL-0320-12:00:00  SOL-0320-10:54:19
+          SOL-0330-12:00:00  SOL-0330-10:52:53
+          SOL-0340-12:00:00  SOL-0340-10:51:23
+          SOL-0350-12:00:00  SOL-0350-10:49:50
+          SOL-0360-12:00:00  SOL-0360-10:48:15
+          SOL-0370-12:00:00  SOL-0370-10:46:38
+          SOL-0380-12:00:00  SOL-0380-10:45:02
+          SOL-0390-12:00:00  SOL-0390-10:43:29
+          SOL-0400-12:00:00  SOL-0400-10:42:01
+          SOL-0410-12:00:00  SOL-0410-10:40:42
+          SOL-0420-12:00:00  SOL-0420-10:39:35
+          SOL-0430-12:00:00  SOL-0430-10:38:45
+          SOL-0440-12:00:00  SOL-0440-10:38:15
+          SOL-0450-12:00:00  SOL-0450-10:38:10
+          SOL-0460-12:00:00  SOL-0460-10:38:35
+          SOL-0470-12:00:00  SOL-0470-10:39:34
+          SOL-0480-12:00:00  SOL-0480-10:41:11
+          SOL-0490-12:00:00  SOL-0490-10:43:31
+          SOL-0500-12:00:00  SOL-0500-10:46:37
+          SOL-0510-12:00:00  SOL-0510-10:50:29
+          SOL-0520-12:00:00  SOL-0520-10:55:07
+          SOL-0530-12:00:00  SOL-0530-11:00:30
+          SOL-0540-12:00:00  SOL-0540-11:06:33
+          SOL-0550-12:00:00  SOL-0550-11:13:07
+          SOL-0560-12:00:00  SOL-0560-11:20:03
+          SOL-0570-12:00:00  SOL-0570-11:27:08
+          SOL-0580-12:00:00  SOL-0580-11:34:11
+          SOL-0590-12:00:00  SOL-0590-11:40:57
+          SOL-0600-12:00:00  SOL-0600-11:47:14
+          SOL-0610-12:00:00  SOL-0610-11:52:54
+          SOL-0620-12:00:00  SOL-0620-11:57:47
+          SOL-0630-12:00:00  SOL-0630-12:01:49
+          SOL-0640-12:00:00  SOL-0640-12:04:58
+          SOL-0650-12:00:00  SOL-0650-12:07:14
+          SOL-0660-12:00:00  SOL-0660-12:08:38
+          SOL-0670-12:00:00  SOL-0670-12:09:13
+          SOL-0680-12:00:00  SOL-0680-12:09:02
+          SOL-0690-12:00:00  SOL-0690-12:08:10
+          SOL-0700-12:00:00  SOL-0700-12:06:42
+          SOL-0710-12:00:00  SOL-0710-12:04:42
+          SOL-0720-12:00:00  SOL-0720-12:02:15
+          SOL-0730-12:00:00  SOL-0730-11:59:26
+          SOL-0740-12:00:00  SOL-0740-11:56:19
+          SOL-0750-12:00:00  SOL-0750-11:52:58
+          SOL-0760-12:00:00  SOL-0760-11:49:27
+          SOL-0770-12:00:00  SOL-0770-11:45:49
+          SOL-0780-12:00:00  SOL-0780-11:42:08
+          SOL-0790-12:00:00  SOL-0790-11:38:27
+          SOL-0800-12:00:00  SOL-0800-11:34:49
+          SOL-0810-12:00:00  SOL-0810-11:31:16
+          SOL-0820-12:00:00  SOL-0820-11:27:50
+          SOL-0830-12:00:00  SOL-0830-11:24:33
+          SOL-0840-12:00:00  SOL-0840-11:21:27
+          SOL-0850-12:00:00  SOL-0850-11:18:32
+          SOL-0860-12:00:00  SOL-0860-11:15:49
+          SOL-0870-12:00:00  SOL-0870-11:13:20
+          SOL-0880-12:00:00  SOL-0880-11:11:02
+          SOL-0890-12:00:00  SOL-0890-11:08:57
+          SOL-0900-12:00:00  SOL-0900-11:07:03
+          SOL-0910-12:00:00  SOL-0910-11:05:20
+          SOL-0920-12:00:00  SOL-0920-11:03:44
+          SOL-0930-12:00:00  SOL-0930-11:02:16
+          SOL-0940-12:00:00  SOL-0940-11:00:52
+          SOL-0950-12:00:00  SOL-0950-10:59:32
+          SOL-0960-12:00:00  SOL-0960-10:58:13
+          SOL-0970-12:00:00  SOL-0970-10:56:54
+          SOL-0980-12:00:00  SOL-0980-10:55:33
+          SOL-0990-12:00:00  SOL-0990-10:54:09
+          SOL-1000-12:00:00  SOL-1000-10:52:43
+          SOL-1010-12:00:00  SOL-1010-10:51:12
+          SOL-1020-12:00:00  SOL-1020-10:49:39
+          SOL-1030-12:00:00  SOL-1030-10:48:04
+          SOL-1040-12:00:00  SOL-1040-10:46:27
+          SOL-1050-12:00:00  SOL-1050-10:44:51
+          SOL-1060-12:00:00  SOL-1060-10:43:19
+          SOL-1070-12:00:00  SOL-1070-10:41:52
+          SOL-1080-12:00:00  SOL-1080-10:40:35
+          SOL-1090-12:00:00  SOL-1090-10:39:31
+          SOL-1100-12:00:00  SOL-1100-10:38:43
+          SOL-1110-12:00:00  SOL-1110-10:38:17
+          SOL-1120-12:00:00  SOL-1120-10:38:16
+          SOL-1130-12:00:00  SOL-1130-10:38:45
+          SOL-1140-12:00:00  SOL-1140-10:39:50
+          SOL-1150-12:00:00  SOL-1150-10:41:33
+          SOL-1160-12:00:00  SOL-1160-10:43:59
+          SOL-1170-12:00:00  SOL-1170-10:47:11
+          SOL-1180-12:00:00  SOL-1180-10:51:09
+          SOL-1190-12:00:00  SOL-1190-10:55:54
+          SOL-1200-12:00:00  SOL-1200-11:01:23
+          SOL-1210-12:00:00  SOL-1210-11:07:30
+          SOL-1220-12:00:00  SOL-1220-11:14:07
+          SOL-1230-12:00:00  SOL-1230-11:21:05
+          SOL-1240-12:00:00  SOL-1240-11:28:10
+          SOL-1250-12:00:00  SOL-1250-11:35:11
+          SOL-1260-12:00:00  SOL-1260-11:41:53
+          SOL-1270-12:00:00  SOL-1270-11:48:05
+          SOL-1280-12:00:00  SOL-1280-11:53:39
+          SOL-1290-12:00:00  SOL-1290-11:58:25
+          SOL-1300-12:00:00  SOL-1300-12:02:19
+          SOL-1310-12:00:00  SOL-1310-12:05:20
+          SOL-1320-12:00:00  SOL-1320-12:07:28
+          SOL-1330-12:00:00  SOL-1330-12:08:44
+          SOL-1340-12:00:00  SOL-1340-12:09:12
+          SOL-1350-12:00:00  SOL-1350-12:08:55
+          SOL-1360-12:00:00  SOL-1360-12:07:57
+          SOL-1370-12:00:00  SOL-1370-12:06:24
+          SOL-1380-12:00:00  SOL-1380-12:04:20
+          SOL-1390-12:00:00  SOL-1390-12:01:50
+          SOL-1400-12:00:00  SOL-1400-11:58:58
+          SOL-1410-12:00:00  SOL-1410-11:55:49
+          SOL-1420-12:00:00  SOL-1420-11:52:26
+          SOL-1430-12:00:00  SOL-1430-11:48:54
+          SOL-1440-12:00:00  SOL-1440-11:45:16
+          SOL-1450-12:00:00  SOL-1450-11:41:35
+          SOL-1460-12:00:00  SOL-1460-11:37:55
+          SOL-1470-12:00:00  SOL-1470-11:34:17
+          SOL-1480-12:00:00  SOL-1480-11:30:45
+          SOL-1490-12:00:00  SOL-1490-11:27:20
+          SOL-1500-12:00:00  SOL-1500-11:24:05
+          SOL-1510-12:00:00  SOL-1510-11:21:00
+          SOL-1520-12:00:00  SOL-1520-11:18:07
+          SOL-1530-12:00:00  SOL-1530-11:15:27
+          SOL-1540-12:00:00  SOL-1540-11:12:59
+          SOL-1550-12:00:00  SOL-1550-11:10:44
+          SOL-1560-12:00:00  SOL-1560-11:08:40
+          SOL-1570-12:00:00  SOL-1570-11:06:48
+          SOL-1580-12:00:00  SOL-1580-11:05:06
+          SOL-1590-12:00:00  SOL-1590-11:03:31
+          SOL-1600-12:00:00  SOL-1600-11:02:04
+          SOL-1610-12:00:00  SOL-1610-11:00:41
+          SOL-1620-12:00:00  SOL-1620-10:59:21
+          SOL-1630-12:00:00  SOL-1630-10:58:02
+          SOL-1640-12:00:00  SOL-1640-10:56:43
+          SOL-1650-12:00:00  SOL-1650-10:55:21
+          SOL-1660-12:00:00  SOL-1660-10:53:57
+          SOL-1670-12:00:00  SOL-1670-10:52:30
+          SOL-1680-12:00:00  SOL-1680-10:50:59
+          SOL-1690-12:00:00  SOL-1690-10:49:26
+          SOL-1700-12:00:00  SOL-1700-10:47:50
+          SOL-1710-12:00:00  SOL-1710-10:46:13
+          SOL-1720-12:00:00  SOL-1720-10:44:38
+          SOL-1730-12:00:00  SOL-1730-10:43:06
+          SOL-1740-12:00:00  SOL-1740-10:41:40
+          SOL-1750-12:00:00  SOL-1750-10:40:25
+          SOL-1760-12:00:00  SOL-1760-10:39:22
+          SOL-1770-12:00:00  SOL-1770-10:38:38
+          SOL-1780-12:00:00  SOL-1780-10:38:14
+          SOL-1790-12:00:00  SOL-1790-10:38:18
+          SOL-1800-12:00:00  SOL-1800-10:38:52
+          SOL-1810-12:00:00  SOL-1810-10:40:02
+          SOL-1820-12:00:00  SOL-1820-10:41:51
+          SOL-1830-12:00:00  SOL-1830-10:44:24
+          SOL-1840-12:00:00  SOL-1840-10:47:43
+          SOL-1850-12:00:00  SOL-1850-10:51:48
+          SOL-1860-12:00:00  SOL-1860-10:56:40
+          SOL-1870-12:00:00  SOL-1870-11:02:15
+          SOL-1880-12:00:00  SOL-1880-11:08:27
+          SOL-1890-12:00:00  SOL-1890-11:15:09
+          SOL-1900-12:00:00  SOL-1900-11:22:09
+          SOL-1910-12:00:00  SOL-1910-11:29:15
+          SOL-1920-12:00:00  SOL-1920-11:36:14
+          SOL-1930-12:00:00  SOL-1930-11:42:53
+          SOL-1940-12:00:00  SOL-1940-11:49:00
+          SOL-1950-12:00:00  SOL-1950-11:54:26
+          SOL-1960-12:00:00  SOL-1960-11:59:05
+          SOL-1970-12:00:00  SOL-1970-12:02:52
+          SOL-1980-12:00:00  SOL-1980-12:05:45
+          SOL-1990-12:00:00  SOL-1990-12:07:46
+          SOL-2000-12:00:00  SOL-2000-12:08:54
+          SOL-2010-12:00:00  SOL-2010-12:09:15
+          SOL-2020-12:00:00  SOL-2020-12:08:52
+          SOL-2030-12:00:00  SOL-2030-12:07:49
+          SOL-2040-12:00:00  SOL-2040-12:06:11
+          SOL-2050-12:00:00  SOL-2050-12:04:03
+          SOL-2060-12:00:00  SOL-2060-12:01:29
+          SOL-2070-12:00:00  SOL-2070-11:58:34
+          SOL-2080-12:00:00  SOL-2080-11:55:23
+          SOL-2090-12:00:00  SOL-2090-11:51:58
+          SOL-2100-12:00:00  SOL-2100-11:48:25
+          SOL-2110-12:00:00  SOL-2110-11:44:46
+          SOL-2120-12:00:00  SOL-2120-11:41:05
+          SOL-2130-12:00:00  SOL-2130-11:37:24
+          SOL-2140-12:00:00  SOL-2140-11:33:47
+          SOL-2150-12:00:00  SOL-2150-11:30:16
+          SOL-2160-12:00:00  SOL-2160-11:26:53
+          SOL-2170-12:00:00  SOL-2170-11:23:39
+          SOL-2180-12:00:00  SOL-2180-11:20:35
+          SOL-2190-12:00:00  SOL-2190-11:17:44
+          SOL-2200-12:00:00  SOL-2200-11:15:05
+          SOL-2210-12:00:00  SOL-2210-11:12:39
+          SOL-2220-12:00:00  SOL-2220-11:10:26
+          SOL-2230-12:00:00  SOL-2230-11:08:24
+          SOL-2240-12:00:00  SOL-2240-11:06:33
+          SOL-2250-12:00:00  SOL-2250-11:04:52
+          SOL-2260-12:00:00  SOL-2260-11:03:19
+          SOL-2270-12:00:00  SOL-2270-11:01:53
+          SOL-2280-12:00:00  SOL-2280-11:00:30
+          SOL-2290-12:00:00  SOL-2290-10:59:11
+          SOL-2300-12:00:00  SOL-2300-10:57:52
+          SOL-2310-12:00:00  SOL-2310-10:56:33
+          SOL-2320-12:00:00  SOL-2320-10:55:11
+          SOL-2330-12:00:00  SOL-2330-10:53:47
+          SOL-2340-12:00:00  SOL-2340-10:52:19
+          SOL-2350-12:00:00  SOL-2350-10:50:48
+          SOL-2360-12:00:00  SOL-2360-10:49:14
+          SOL-2370-12:00:00  SOL-2370-10:47:38
+          SOL-2380-12:00:00  SOL-2380-10:46:01
+          SOL-2390-12:00:00  SOL-2390-10:44:26
+          SOL-2400-12:00:00  SOL-2400-10:42:54
+          SOL-2410-12:00:00  SOL-2410-10:41:30
+          SOL-2420-12:00:00  SOL-2420-10:40:16
+          SOL-2430-12:00:00  SOL-2430-10:39:15
+          SOL-2440-12:00:00  SOL-2440-10:38:33
+          SOL-2450-12:00:00  SOL-2450-10:38:13
+          SOL-2460-12:00:00  SOL-2460-10:38:20
+          SOL-2470-12:00:00  SOL-2470-10:38:59
+          SOL-2480-12:00:00  SOL-2480-10:40:14
+          SOL-2490-12:00:00  SOL-2490-10:42:08
+          SOL-2500-12:00:00  SOL-2500-10:44:47
+          SOL-2510-12:00:00  SOL-2510-10:48:13
+          SOL-2520-12:00:00  SOL-2520-10:52:25
+          SOL-2530-12:00:00  SOL-2530-10:57:22
+          SOL-2540-12:00:00  SOL-2540-11:03:03
+          SOL-2550-12:00:00  SOL-2550-11:09:19
+          SOL-2560-12:00:00  SOL-2560-11:16:04
+          SOL-2570-12:00:00  SOL-2570-11:23:05
+          SOL-2580-12:00:00  SOL-2580-11:30:11
+          SOL-2590-12:00:00  SOL-2590-11:37:08
+          SOL-2600-12:00:00  SOL-2600-11:43:43
+          SOL-2610-12:00:00  SOL-2610-11:49:45
+          SOL-2620-12:00:00  SOL-2620-11:55:06
+          SOL-2630-12:00:00  SOL-2630-11:59:38
+          SOL-2640-12:00:00  SOL-2640-12:03:18
+          SOL-2650-12:00:00  SOL-2650-12:06:04
+          SOL-2660-12:00:00  SOL-2660-12:07:57
+          SOL-2670-12:00:00  SOL-2670-12:08:59
+          SOL-2680-12:00:00  SOL-2680-12:09:14
+          SOL-2690-12:00:00  SOL-2690-12:08:45
+          SOL-2700-12:00:00  SOL-2700-12:07:37
+          SOL-2710-12:00:00  SOL-2710-12:05:55
+          SOL-2720-12:00:00  SOL-2720-12:03:43
+          SOL-2730-12:00:00  SOL-2730-12:01:06
+          SOL-2740-12:00:00  SOL-2740-11:58:09
+          SOL-2750-12:00:00  SOL-2750-11:54:55
+          SOL-2760-12:00:00  SOL-2760-11:51:29
+          SOL-2770-12:00:00  SOL-2770-11:47:55
+          SOL-2780-12:00:00  SOL-2780-11:44:16
+          SOL-2790-12:00:00  SOL-2790-11:40:34
+          SOL-2800-12:00:00  SOL-2800-11:36:54
+          SOL-2810-12:00:00  SOL-2810-11:33:18
+          SOL-2820-12:00:00  SOL-2820-11:29:47
+          SOL-2830-12:00:00  SOL-2830-11:26:25
+          SOL-2840-12:00:00  SOL-2840-11:23:12
+          SOL-2850-12:00:00  SOL-2850-11:20:11
+          SOL-2860-12:00:00  SOL-2860-11:17:21
+          SOL-2870-12:00:00  SOL-2870-11:14:44
+          SOL-2880-12:00:00  SOL-2880-11:12:20
+          SOL-2890-12:00:00  SOL-2890-11:10:08
+          SOL-2900-12:00:00  SOL-2900-11:08:07
+          SOL-2910-12:00:00  SOL-2910-11:06:18
+          SOL-2920-12:00:00  SOL-2920-11:04:38
+          SOL-2930-12:00:00  SOL-2930-11:03:06
+          SOL-2940-12:00:00  SOL-2940-11:01:40
+          SOL-2950-12:00:00  SOL-2950-11:00:18
+          SOL-2960-12:00:00  SOL-2960-10:58:59
+          SOL-2970-12:00:00  SOL-2970-10:57:40
+          SOL-2980-12:00:00  SOL-2980-10:56:21
+          SOL-2990-12:00:00  SOL-2990-10:54:59
+          SOL-3000-12:00:00  SOL-3000-10:53:34
+ 
+ 
+      LSK Files
+      =========
+ 
+      The leapseconds kernel file provides a tabulation of ``leapseconds&apos;
+      and some other terms used in converting time measurements
+      between ephemeris time (ET) and Universal Time (UTC). ``Spacecraft
+      Event Time&apos; (SCET) is the commonly used name for UTC events
+      measured at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed
+      is contained inside the LSK text file. The time conversion
+      provided by SPICE LSK files is accurate to approximately
+      0.000030 seconds.
+ 
+      The ``data/lsk/lskinfo.txt&apos; file provides names of and/or
+      explains naming convention for the LSK files provided in this
+      data set.
+ 
+ 
+      EK Files
+      ========
+ 
+      No Event Kernel (EK) files are included in this data set.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>PSCM-00035</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

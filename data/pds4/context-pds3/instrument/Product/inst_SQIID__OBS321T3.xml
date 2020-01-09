@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:sqiid.obs321t3</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>SIMULTANEOUS QUAD INFRARED IMAGING DEVICE (SQIID) for OBS321T3</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.obs321t3::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>SIMULTANEOUS QUAD INFRARED IMAGING DEVICE (SQIID)</instrument_name>
+        <instrument_desc>
+ 
+ 
+  Instrument Overview
+  ===================
+    The NOAO SQIID (Simultaneous Quad Infrared Imaging Device)
+    infrared camera produces simultaneous images of the same field in
+    the J, H, K, and narrowband L filters, using individual 512 x 512
+    quadrants of ALADDIN InSb arrays and is designed for use at the
+    f/15 Cassegrain foci of the KPNO 2.1-m and 4-m telescopes. On the
+    KPNO 2.1-m, the pixel scale is 0.69 arcsec/pixel and the
+    unvignetteed field of view is 304 x 317 arcsec (440 x 460 pixels).
+ 
+    Instrument Characteristics
+    =========================
+    The physical and optical characteristics and estimated imaging
+    performance of SQIID are provided below. These properties are
+    reproduced from the SQIID User&apos;s Manual, available at
+    http://www.noao.edu/kpno/sqiid/sqiidmanual.html. This guide is
+    included as documentation for this archive with permission from
+    NOAO/KPNO (/DOCUMENT/SQIIDMANUALDOC.PDF).
+ 
+    Physical characteristics
+    ------------------------
+    Detector type           : Raytheon Infrared Operations ALADDIN
+    InSb array
+    Detector format         : 1024 x 1024 pixels (only 512 x 512 are
+    used)
+    Pixel size              : 27 microns
+    Data format             : Two-dimensional FITS file [X,Y]
+    Filters                 : J, H, K, L
+    Nominal operating       : 30 K, cooled by Closed Cycle Cryogenic
+    Coolers
+      temperature             (no dewar)
+    Guiding system          : none
+ 
+    Estimated imaging performance
+    -----------------------------
+    Field of view           : 304 x 317 arcsec (unvignetted)
+    Detector pixel scale    : 0.69 arcsec/pixel
+    Wavelength range        : Name              Bandpass in microns
+                              J                 1.131-1.402
+                              H                 1.535-1.809
+                              K (pre 02/2002)   2.027-2.421
+                              K (post 02/2002)  1.95-2.30
+                              L                 3.262-3.336
+    Data pipeline flow      : ~40 sec, roughly fixed
+    Internal co-addition    : 0.10 sec
+ 
+    Observing efficiency
+    --------------------
+    To optimize observing efficiency and avoid saturating the
+    detectors while building up integration times, images are taken
+    then coadded on the chip a number of times before being read out
+    to the disc. Each internal coaddition requires only 0.10 ms while
+    each read to disc requires ~40 seconds. For example, 8 second
+    exposures with 10 coadditions results in a total integration time
+    of 80 seconds. Including the readout time, this takes ~120
+    seconds, resulting in an observing efficiency of 0.67. However,
+    reading to disc after each 8 second integration would require ~48
+    seconds, resulting in an efficiency of only 0.13.
+ 
+    Array characteristics and system responsivity
+    ---------------------------------------------
+    Characteristic                   J        H        K        L
+    Response uniformity            : +/-5%    +/-5%    +/-5%    +/-5%
+    Quantum efficiency             : 95%      95%      95%      85%
+    Bias (mv)                      : 700      700      700      800
+    Full well (electrons)          : &gt;200000  &gt;160000  &gt;200000
+    &gt;300000
+    in situ read noise             : 40       40       35       35
+      (electrons rms)
+    in situ dark signal            : 21       32       197      26
+      (electrons/sec)
+    Conversion gain                : 10       10       11       11
+      (electrons/ADU)
+    Minimum integration time (sec) : 0.84     0.84     0.84     0.11
+    10 mag star within aperture    : 3.25e4   2.90e4   1.78e4   ?
+      (ADU/sec)
+    Sky brightness level           : 98       421      387      ?
+      (ADU/sec/pixel)
+    Limiting magnitude for S/N=3
+      in 60 sec integration time
+      point source (mag)           : 19.8     18.9     18.3     12.3
+      diffuse-source               : 20.2     19.7     19.2     13.1
+        (mag/sq_arcsec)
+    Sky brightness origin          : Filter  Origin
+                                     J       OH airglow, scattered
+    light
+                                     H       OH airglow, scattered
+    light
+                                     K       OH airglow, thermal
+    emission
+                                     L       thermal emission
+ 
+    Detector non-linearity
+    ----------------------
+    The response of the SQIID detectors is non-linear. The model
+    fitted function for the relative error is:
+ 
+      ym[x] = a(1) * x**2 + a(2) * x**3
+ 
+    where ym = relative error = (input - observed)
+          x  = observed (adu)
+ 
+    The fit is valid for values &lt; Xmax. For values beyond Xmax, the
+    array is rapidly approaching saturation. The fitted parameters for
+    each channel are summarized below (from Table 10 in the SQIID
+    Manual
+    (/DOCUMENT/SQIIDMANUALDOC.PDF):
+ 
+    Channel     : J            H           K           L
+    Bias (mv)   : 700          700         700         ?
+    a(1)        : 6.4864e-7    -1.3456e-8  1.2626e-6   ?
+    a(2)        : 4.4790e-10   6.1010e-10  2.9498e-10  ?
+    Xmax (ADU)  : 16000        16000       16000       ?
+    Valid from  : Jun 2000     Jan 2005    Jan 2005    ?
+ 
+    Note that prior to 2005 the bias was 600 mv, requiring different
+    linearity coefficients.
+
+        </instrument_desc>
+        <instrument_id>SQIID</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Camera</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

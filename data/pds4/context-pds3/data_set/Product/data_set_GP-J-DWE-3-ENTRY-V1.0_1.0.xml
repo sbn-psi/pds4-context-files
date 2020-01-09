@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gp-j-dwe-3-entry-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO PROBE DOPPLER WIND EXPERIMENT DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:dwe.gp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gp-j-dwe-3-entry-v1.0__browserp_gp-j-dwe-3-entry-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Atkinson, D.H., J.B. Pollack, and A. Seif, Galileo Doppler measurements of the
+                   deep zonal winds at Jupiter, Science, 272, 842-843, 1996.
+            </reference_text>
+            <description>reference.ATKINSONETAL1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Davies, M.E., M. Abalakin, J.H. Lieske, P.K. Seidelman, A.T. Sinclair, A.M
+                   Sinzi, B.A. Smith, and Y.S. Tjuflin, Report of the IAU Working Group on
+                   Cartographic Coordinates and Rotational Elements of the Planets and
+                   Satellites, Celestial Mechanics and Dynamical Astronomy 29, 309-321, 1983.
+            </reference_text>
+            <description>reference.DAVIESETAL1983</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.RIDDLE-WARWICK1976</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GP-J-DWE-3-ENTRY-V1.0</data_set_id>
+        <data_set_name>GALILEO PROBE DOPPLER WIND EXPERIMENT DATA V1.0</data_set_name>
+        <data_set_release_date>1996-12-08</data_set_release_date>
+        <start_time>1995-12-07T21:05:44Z</start_time>
+        <stop_time>1995-12-07T23:35:44Z</stop_time>
+        <producer_full_name>DAVID ATKINSON</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            GALILEO PROBE DOPPLER WIND EXPERIMENT DATA V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            A total of seven data sets are used to derive the wind profile.
+            These include two trajectory data files (probe and orbiter),
+            three frequency data files including the &apos;quicklook&apos;
+            data set comprising 1/2 resolution frequency data from the
+            orbiter CDS, and two data files containing the full tape recorder
+            (SDR) data. Additionally, the probe descent trajectory data are
+            supplemented with probe descent velocity/altitude/pressure/time
+            data from the Atmospheric Structure Instrument. Finally, the
+            Jovian atmospheric structure, based on measurements by the
+            Atmospheric Structure Instrument, is included.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    A total of seven data sets are used to derive the wind profile.
+    These include two trajectory data files (probe and orbiter),
+    three frequency data files including the &apos;quicklook&apos; data set
+    comprising 1/2 resolution frequency data from the orbiter CDS,
+    and two data files containing the full tape recorder (SDR) data.
+    Additionally, the probe descent trajectory data are supplemented
+    with probe descent velocity/altitude/pressure/time data from the
+    Atmospheric Structure Instrument.  Finally, the Jovian
+    atmospheric structure, based on measurements by the Atmospheric
+    Structure Instrument, is included in ASI4ATM.TAB.
+ 
+ 
+    Reference Times
+    ---------------
+      time of entry (UT): 22:04:43.752
+      time of Minor Frame Zero (UT at the probe): 22:07:30.265
+      time of Minor Frame Zero (UT at the orbiter): 22:07:30.965
+      time of Lock (UT at the orbiter): 22:08:30.693
+      time of Loss of Lock (UT at the orbiter): 23:06:09
+      time between entry and Minor Frame Zero at the probe: 166.513
+      seconds
+      time between entry and lock at the orbiter: 226.941 seconds
+      time between Minor Frame Zero and lock at the orbiter: 59.728
+      seconds
+      time between entry and loss of lock at the orbiter: 3,685.25
+      seconds
+      total data (total time of lock): 57 minutes, 38.31 seconds =
+      3,458.31 seconds
+      Total data points (frequencies): 5,015 out of a possible 5,174
+      total missing frequencies: 5,174 - 5,015 = 159
+ 
+      Note 1:
+ 
+      Minor Frame Zero is the start time of the first minor frame of
+      data in probe descent mode.  This is the probe mission
+      reference time.  It differs between the probe and orbiter due
+      to the propagation time between the probe and orbiter of about
+      0.7 seconds.  The use of one time or the other (relative to the
+      probe or the orbiter) depends on whether the instantaneous
+      times of each frequency measurement and the trajectory
+      parameters are referenced to times at the probe or the orbiter.
+ 
+      Since the probe/orbiter trajectories, as well as the winds, are
+      referenced to times at the probe, Minor Frame Zero at the probe
+      is used rather than at the orbiter.
+ 
+      Note 2:
+ 
+      Lock is the time (UT) at which the orbiter locks onto the probe
+      signal and starts recording probe science data.
+ 
+ 
+  Data
+  ====
+    Data files:
+ 
+    CRS (Orbiter trajectory, ASCII): orbtrtrj.tab
+    PSTF (Probe trajectory, ASCII): probetrj.tab
+    CDS (Tape Recorder, half resolution frequency, ASCII): rsf0117a.adj
+    SDR (Probe frequency data, ASCII): sdr0530a.tab
+    SDR (Probe frequency data, ASCII): radio.tab
+    ASI (Probe trajectory data from ASI, ASCII): asi2ref.tab
+    Atmospheric Structure Data (ASCII): asi4atm.tab
+ 
+    Frequency data:
+ 
+    The frequency data sets come in two different forms.  The
+    &apos;Quick-Look&apos; data are half-resolution and comprise probe radio
+    link frequencies stored in the orbiter CDS every 4/3 seconds.
+    These data files, designated as rsf (radio science frequencies)
+    are described in more detail below.
+ 
+    The System Data Record (SDR) data are from the tape recorder with
+    a sampling frequency of 1.5 Hz (one sample every 2/3 seconds).
+    The SDR data are described below.
+ 
+    The probe and orbiter data files (PSTF and CRS, respectively)
+    provide the probe and orbiter trajectories in time from entry.
+    The PSTF file lists the probe position and velocity as a function
+    of time from probe entry (defined to be the time of probe
+    altitude equal to 450 km above the one bar reference surface).
+    The probe descent trajectory is given in x,y,z,xdot,ydot,zdot in
+    EME50 coordinates (defined below).
+ 
+    The orbiter trajectory is also listed as x,y,z,xdot,ydot,zdot in
+    EME50 coordinates as a function of time past 1950 in ephemeris
+    time.
+ 
+ 
+    CRS - Orbiter Trajectory Data File, ASCII
+    -----------------------------------------
+      The orbiter trajectory, provided by the Galileo Navigation team
+      at the Jet Propulsion Laboratory, is contained in a data file
+      called a CRS file.  The CRS data set provides the EME50
+      coordinates (x,y,z;xdot,ydot,zdot) of the center of Jupiter in
+      an orbiter-centered system.  The CRS file also provides
+      auxiliary data such as GM, and the equatorial and polar radii
+      for Jupiter.  The times for the orbiter trajectory are given in
+      year, day, hour, minute, second, and millisecond past 1950 in
+      ephemeris time.
+ 
+      The orbiter trajectory is converted from the
+      spacecraft-centered EME50 coordinates to a Jupiter-centered
+      JPPM (Jupiter Pole and Prime Meridian) frame.  To make this
+      conversion, the unit vectors in the direction of Jupiter&apos;s
+      rotation axis (x_pole,y_pole,z_pole) and prime meridian
+      (x_pm,y_pm,z_pm) in EME50 coordinates must be known.  These are
+      provided in the probe trajectory file PSTF.
+ 
+ 
+    PSTF - Probe Trajectory Data File, ASCII
+    ----------------------------------------
+      The Probe System Trajectory File (PSTF) provides the nominal
+      descent profile of the probe from entry to the end of the
+      descent mission.  The PSTF file is generated by the ATMINT
+      program, a key element of JPL&apos;s RLINK program set.
+ 
+      The PSTF file is an ASCII file that contains 1) a header
+      containing run identification information; 2) a listing of
+      major program parameter values, including a table of probe
+      aerodynamic coefficients, and 3) a descent trajectory profile
+      which lists the probe&apos;s inertial and atmosphere relative motion
+      in Jupiter&apos;s atmosphere as a function of time after entry.  At
+      the time of parachute deployment the profile is interrupted by
+      a second aerodynamic characteristics table.  This is followed
+      by a listing of the probe positional and velocity vectors, the
+      unit vectors in the vertical, west, and north directions at the
+      probe, and the probe altitude relative to the one bar level,
+      all as a function of time (seconds after entry).  The probe
+      position and velocity components are given in Jupiter-centered
+      EME50 coordinates.
+ 
+      Auxiliary data supplied in the PSTF file include 1) the probe
+      entry time both in year, day of year, hour, minutes, and
+      seconds in ephemeris time, and the number of seconds past 1950
+      again in ephemeris time; 2) the unit vectors in the direction
+      of Jupiter&apos;s pole (z-axis), and the intersection between the
+      prime meridian and Jupiter&apos;s equator (y-axis) in EME50
+      coordinates; 3) the atmosphere model (nominal Orton III); 4)
+      Gravitational parameters (GM, J_2, J_4); 5) the polar and
+      equatorial radii; 6) the planetary flattening; and 7) the
+      system III rotation period of Jupiter.  An x-axis is generated
+      by standard techniques to complete the right-handed coordinate
+      system.  It should be noted that, although the probe entry time
+      is provided in the PSTF file, for purposes of the wind
+      retrieval the entry time is input separately, and can therefore
+      be altered without the need for regenerating an entirely new
+      PSTF data set.
+ 
+      The PSTF file used (PSTF-OD126\_1s) provides the probe descent
+      trajectory in 1 second increments and includes the effect of
+      the late parachute deployment.  Once the probe trajectory is
+      converted from the Jupiter-centered EME50 coordinates to the
+      JPPM reference frame, the probe positions and velocities are
+      generated as a function of time after entry in a radius,
+      latitude, longitude coordinate system.
+ 
+ 
+    CDS (RSF) Frequency Data, ASCII
+    -------------------------------
+      Due to the failure of the high gain antenna to deploy and
+      concerns about the possible failure of the orbiter tape
+      recorder, the probe data were stored in the memory of the
+      orbiter Command and Data Subsystem as a backup.  The CDS data
+      stored in the CDS were at half resolution (every other time
+      point) and therefore provided a frequency measurement every 4/3
+      seconds.  The CDS data are an ASCII file of NCO frequency vs.
+      time from lock and were used for the early wind analysis.
+ 
+      The CDS (half-resolution) data are contained within the data
+      file rsf0117a.adj.  The &apos;adj&apos; indicates that the data set is
+      adjusted by removal of spurious frequency measurements and
+      missing data.
+ 
+      The first several lines of rsf0117a.adj are given below:
+ 
+            0.000  95:341:22: 8:30.693  1  30 96 C8  432029.71
+            1.333  95:341:22: 8:32. 26  1  30 96 75  432018.45
+            2.667  95:341:22: 8:33.360  1  30 96 1B  432006.24
+            4.000  95:341:22: 8:34.693  1  30 95 BE  431993.62
+            5.333  95:341:22: 8:36. 26  1  30 95 68  431981.95
+ 
+      Column one gives the time after lock (seconds) and the last
+      column gives the NCO frequency in Hz.
+ 
+ 
+    SDR Frequency Data (Tape Recorder)
+    ----------------------------------
+      There are two SDR data sets presented in this archive.  The
+      first, designated sdr0530a.tab, is the probe frequency raw data
+      as an ASCII data file.  This file has several data outages of
+      varying lengths, and several individual missing frequency
+      measurements.  Many of these missing measurements were filled
+      in using the CDS data set.
+ 
+      Including housekeeping and radioscience, the probe data were
+      stored on the orbiter tape recorder for later playback to the
+      ground.  The probe signal frequency, measured every 2/3
+      seconds, as well as the other probe science and engineering
+      data measured throughout the probe mission, was delivered in
+      the form of binary System Data Records.
+ 
+      The data file sdr0530a.tab is an ASCII file that was converted
+      from binary for further analysis.  Although the probe signal
+      frequencies were measured every 2/3 seconds, some gaps existed
+      in the data due to corrupted data, DSN outages, and possibly
+      several bad spots on the tape recorder tape.  Many of these
+      gaps were filled by the CDS data.  Out of 5,174 possible
+      frequency measurements there are only 159 missing points, none
+      consecutive.
+ 
+      The SDR (tape-recorder) data are contained within data file
+      radio.tab and include (where necessary) half-resolution data
+      from the CDS file rsf0117a.adj to fill gaps in the data, and
+      corrections for the timing errors.  radio.tab is an ASCII file
+      that lists NCO frequency vs.  time from lock (seconds).
+ 
+      The first several lines of radio.tab are given below.  The
+      columns are time from lock (seconds) and NCO frequency (Hz):
+ 
+            .000       432029.712
+            .667       432024.013
+           1.334       432018.451
+           2.000       432012.481
+ 
+ 
+  Ancillary Data
+  ==============
+    Data from the probe Atmospheric Structure Instrument are used to
+    supplement the Doppler wind analysis.  Of primary importance are
+    the probe descent velocity, and radius/altitude (above/below the
+    one bar reference surface at the given latitude) vs.
+    pressure/time.  These data are included in the file asi2ref.tab.
+    The first several lines of asi2ref.tab are provided below.  The
+    columns are
+ 
+       column 1: time from minor frame zero (seconds)
+       column 2: unused
+       column 3: probe altitude (km above 1 bar)
+       column 4: probe radial velocity (m/s)
+       column 5: unused
+       column 6: unused
+       column 7: unused
+       column 8: Probe latitude (planet-centered)
+       column 9: Probe longitude at initial time point only
+       column 10: unused
+       column 11: unused
+       column 12: unused
+ 
+  30.1600  0.0  16.000 98.747  0.0  0.0  0.0  6.41 359.468 0.0  0.0  0.0
+  50.4700  0.0  14.031 95.168  0.0  0.0  0.0  6.41   0.0   0.0  0.0  0.0
+  71.1400  0.0  12.098 91.866  0.0  0.0  0.0  6.41   0.0   0.0  0.0  0.0
+  91.2600  0.0  10.281 88.709  0.0  0.0  0.0  6.41   0.0   0.0  0.0  0.0
+  112.200  0.0  8.4539 85.822  0.0  0.0  0.0  6.41   0.0   0.0  0.0  0.0
+  134.400  0.0  6.5777 83.206  0.0  0.0  0.0  6.41   0.0   0.0  0.0  0.0
+  157.460  0.0  4.6867 80.797  0.0  0.0  0.0  6.41   0.0   0.0  0.0  0.0
+ 
+    The initial time point is 30.60 seconds after Minor Frame Zero,
+    and the final time point is 3,422.44 seconds after Minor Frame
+    Zero.
+ 
+    Note: The total data used in the Doppler Wind Analysis is limited
+    by the duration of the ASI data.  Therefore, although the total
+    time of lock is 3,458.31 seconds, only 3,361.33 seconds of data
+    are used for the wind retrieval due to the lack of ASI data
+    beyond 3,422.44 seconds after Minor Frame Zero.
+ 
+ 
+  Other Data Sets Provided
+  ========================
+    FRED.TAB
+ 
+    This ASCII file contains the frequency residuals for the Galileo
+    Probe Doppler Wind Experiment prior to the wind measurements.
+    The columns are
+ 
+      Time from Entry in seconds
+      Pressure at probe location (bar)
+      Frequency Residuals before the wind retrieval (Hz)
+ 
+    This file contains 5043 rows.  The initial time point is
+    1995-12-07 22:08:31 (UT), corresponding to the initial Time from
+    Entry of 227.3333 seconds.  The final time point is 23:04:32
+    (UT), corresponding to Time from Entry of 3,588.6667 seconds.
+ 
+    Note: the total time in this file (5043 time points) is
+    3,588.6667 - 227.3333 seconds = 3,361.33 seconds.  This is less
+    than the total time of lock provided above (3,458.31 seconds) and
+    is due to the fact that data from the Atmospheric Structure
+    Instrument was used to generate the probe descent profile
+    (asi2ref.tab).  Therefore, the total data are limited not by the
+    time of loss of lock, but by the time at which the data provided
+    by the ASI instrument team ended.
+ 
+    The first several rows are shown below:
+ 
+     227.3333      0.5648        0.0000
+     228.0000      0.5664        0.3178
+     228.6667      0.5680        0.4498
+     229.3333      0.5696        0.2558
+ 
+    RESID.TAB
+ 
+    This ASCII file contains data for the Galileo Probe Doppler Wind
+    Experiment, including time from entry, time from link lock,
+    altitude, pressure, and frequency residuals after the wind
+    retrieval.  The columns are
+ 
+      Time from entry (seconds)
+      Time from link lock (seconds)
+      Altitude above 1 bar (km)
+      Pressure at probe location (bar)
+      Frequency Residuals after the wind retrieval (Hz)
+ 
+    This file contains 5043 rows.  The initial time point is
+    1995-12-07 22:08:31 (UT), corresponding to the initial Time from
+    Entry of 227.3333 seconds.  The final time point is 23:04:32
+    (UT), corresponding to Time from Entry of 3,588.6667 seconds.
+ 
+    Note: the total time in this file (5043 time points) is
+    3,588.6667 - 227.3333 seconds = 3,361.33 seconds.  This is less
+    than the total time of lock provided above (3,458.31 seconds) and
+    is due to the fact that data from the Atmospheric Structure
+    Instrument was used to generate the probe descent profile
+    (asi2ref.tab).  Therefore, the total data are limited not by the
+    time of loss of lock, but by the time at which the data provided
+    by the ASI instrument team ended.
+ 
+    The first several rows are shown below:
+ 
+     227.3330       0.392330       13.3990      0.5648       0.00000
+     228.0000        1.05900       13.3380      0.5664       0.37720
+     228.6670        1.72567       13.2770      0.5680       0.56510
+     229.3330        2.39233       13.2160      0.5696       0.42640
+ 
+    WIND.TAB
+ 
+    This ASCII file contains wind data from the Galileo Probe Doppler
+    Wind Experiment, including time from entry, time from lock,
+    temperature, pressure and wind.  The columns are
+ 
+      Time from entry (seconds)
+      Time from link lock (seconds)
+      Temperature (K)
+      Pressure at probe location (bar)
+      Wind (m/s)
+ 
+    This file contains 5043 rows.  The initial time point is
+    1995-12-07 22:08:31 (UT), corresponding to the initial Time from
+    Entry of 227.3333 seconds.  The final time point is 23:04:32
+    (UT), corresponding to Time from Entry of 3,588.6667 seconds.
+ 
+    Note: the total time in this file (5043 time points) is
+    3,588.6667 - 227.3333 seconds = 3,361.33 seconds.  This is less
+    than the total time of lock provided above (3,458.31 seconds) and
+    is due to the fact that data from the Atmospheric Structure
+    Instrument was used to generate the probe descent profile
+    (asi2ref.tab).  Therefore, the total data are limited not by the
+    time of loss of lock, but by the time at which the data provided
+    by the ASI instrument team ended.
+ 
+    The first several rows are shown below:
+ 
+     227.3330        0.39200      138.1107      0.5648      86.54214
+     228.0000        1.05900      138.2380      0.5664      86.52588
+     228.6670        1.72600      138.3654      0.5680      86.51108
+     229.3330        2.39200      138.4927      0.5696      86.49774
+ 
+ 
+  Coordinate System
+  =================
+ 
+    EME50 - Earth Mean Equator and Equinox of 1950 Coordinates
+    ----------------------------------------------------------
+      The EME50 coordinate system is an inertial (non-rotating)
+      cartesian coordinate frame.  It is defined by the Earth&apos;s mean
+      equator, Earth&apos;s vernal equinox, and Earth&apos;s rotation axis.
+      The positive x-axis is directed towards the Earth&apos;s mean vernal
+      equinox of date; the z-axis is aligned with Earth&apos;s mean
+      rotation axis, and the y-axis is made to complete the
+      right-handed coordinate frame.  The epoch is 1950 (December 21,
+      1949 at 22:09:07 UT).
+ 
+ 
+    Planetographic/Planetocentric Latitudes
+    ---------------------------------------
+      Planetographic/planetocentric latitudes are measured north
+      (positive) and south (negative) of the equator.  The
+      planetographic latitude of a point on the reference surface is
+      the angle between the equatorial plane and the normal to the
+      surface at that point.  The planetocentric latitude of a point
+      is the angle between the line connecting the point to the
+      center of mass and the equator [DAVIESETAL1983].
+ 
+ 
+    System III Longitudes
+    ---------------------
+      The Jupiter System III longitudes are defined by the rotation
+      of Jovian decimetric and decametric radio noise, presumably
+      co-rotating with Jupiter&apos;s magnetic field and core.
+      [RIDDLE&amp;WARWICK1976].
+ 
+ 
+    JPPM - Jupiter Pole and Prime Meridian Coordinates
+    --------------------------------------------------
+      The Jupiter Pole/Prime Meridian system is an inertial cartesian
+      coordinate system centered on Jupiter&apos;s center.  The z-axis is
+      along Jupiter&apos;s rotation axis, the y-axis is defined by the
+      unit vector through the intersection of the system III (1965)
+      Prime Meridian and the Jovian equator in EME50 at the epoch of
+      probe entry, and the x-axis completes the right-handed
+      coordinate system.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    Data Coverage and Quality
+    -------------------------
+      There are several locations where frequency data points are
+      missing.  Several gaps existed due to tape recorder (SDR)
+      problems, corrupted data, and DSN outages.  Most of these gaps
+      were filled with CDS data.  Out of the maximum possible number
+      of frequency measurements of 5,174 covering the period of lock
+      (3,458.31 seconds), 5,015 were obtained.  None of the missing
+      points are consecutive so the largest gap is 4/3 second.
+ 
+      At approximately 10 locations in the frequency profile, a null
+      frequency measurement is observed.  This is due to a timing
+      mismatch between the RRH and the orbiter.  Occasionally the
+      orbiter will look for a frequency in an RRH buffer before the
+      frequency has been placed in the buffer.  The null
+      measurements, resulting from a sampling period that is slightly
+      longer than 2/3 seconds, occur approximately every 340 seconds.
+      A portion of the SDR frequency data with the null measurement
+      is shown below:
+ 
+ REC1.DAT  RRH DATA --11/20/92-- PLL MODE ONLY
+    HHMMSS.SSS  SFM  SFI  SFL  FREQC    FREQ(Hz)    FTIME (SEC) RS FREQ
+                                                                 (Hz)
+295 155339 798  048  098  242  3171058. 430229.321  196.667  430229.3209
+296 160019 767  048  098  199  3171015. 430223.487  197.334  430223.4870
+297 160659 731  048  098  157  3170973. 430217.789  198.000  430217.7887
+298 161339 701  048  098  113  3170929. 430211.819  198.667  430211.8190
+299 162019 670  048  098  068  3170884. 430205.714  199.334  430205.7137
+300 162659 634  048  098  017  3170833. 430198.794  200.000  430198.7944
+301 163339 599  000  000  000        0.       .000  200.667        .0000
+301 164019 567  048  097  221  3170781. 430191.739  201.334  430191.7393
+302 164659 530  048  097  176  3170736. 430185.634  202.000  430185.6340
+303 165339 495  048  097  127  3170687. 430178.986  202.667  430178.9860
+ 
+      A simple method of treating this discontinuity is to remove the
+      null frequency and recalculate the times.  For example, the
+      first point above is 196.667 seconds, the last is at 202.667
+      seconds.  In this interval there are 9 valid frequency
+      measurements.  While the frequencies are unchanged, the
+      corresponding times for each of the nine frequencies (for this
+      example) are 196.667 + (n-1)*delta t where n=1,2,3,...9 and
+      delta t is (202.667-196.667)/(n-1) = 0.75 seconds.  This
+      results in the listed frequencies (not including the null
+      measurement) at times 196.667, 197.417, 198.167, 198.917,
+      199.667, 200.417, 201.167, 201.917, 202.667.  The choice of 9
+      points is arbitrary.  This averaging of n measurements over n+1
+      time points results in a shift in the apparent time of each
+      frequency measurement of a fraction of a second.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

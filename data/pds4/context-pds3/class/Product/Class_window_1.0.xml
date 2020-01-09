@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Class_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:class:class.window</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>window</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Class_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Class_Full>
+        <name>window</name>
+        <version_id>1.0</version_id>
+        <local_identifier>window</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The WINDOW object is used to identify an area of interest within an
+IMAGE object.  For example:
+ 
+  - In sparse images, a sub-image would indicate where the valid data
+    are located.
+ 
+  - In mosaicked images, sub-images could indicate the borders of the
+    constituent images.
+ 
+  - In approach images, a sub-image could indicate the area where the
+    target is expected to be found.
+ 
+The WINDOW object identifies a rectangular area of interest within an
+IMAGE object.  WINDOW objects may not serve as the primary object in a
+data product, nor may they appear outside the context of an IMAGE
+object.  The areas described by separate WINDOW objects may overlap in
+whole or in part, but WINDOW object definitions may not be nested.
+ 
+The boundaries and physical attributes of the WINDOW object are always
+determined with reference to the enclosing (parent) IMAGE object.
+That is, &apos;first&apos; is defined with respect to the LINE_DISPLAY_DIRECTION
+and SAMPLE_DISPLAY_DIRECTION of the IMAGE and the WINDOW must have the
+same SAMPLE_TYPE and SAMPLE_BITS as the IMAGE.  WINDOW objects may not
+have prefix or suffix bytes.
+ 
+As a rule, PDS structures are one-based rather than zero-based.  Thus,
+references to the parent object using FIRST_LINE and FIRST_LINE_SAMPLE
+should be counted starting at (1,1) rather than (0,0).
+        </definition>
+        <comment>window</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <DD_Association>
+            <local_identifier>description</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>first_line</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>first_line_sample</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>line_samples</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>lines</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>name</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>psdd</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>target_name</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+    </DD_Class_Full>
+</Product_Class_Definition>

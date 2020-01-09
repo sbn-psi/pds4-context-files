@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mpfr-m-rvreng-2-3-edr-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS PATHFINDER ROVER MARS ENG 2/3 EDR/RDR VERSION 1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_pathfinder::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mpfr::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rcrr.mpfr::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpfr-m-rvreng-2-3-edr-rdr-v1.0__browserp_mpfr-m-rvreng-2_3-edr_rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpfr-m-rvreng-2-3-edr-rdr-v1.0__dvo_imaging_mpfr-m-rvreng-2_3-edr_rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.TBD</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MPFR-M-RVRENG-2/3-EDR/RDR-V1.0</data_set_id>
+        <data_set_name>MARS PATHFINDER ROVER MARS ENG 2/3 EDR/RDR VERSION 1.0</data_set_name>
+        <data_set_release_date>1998-01-04</data_set_release_date>
+        <start_time>1997-07-05T02:18:30.266Z</start_time>
+        <stop_time>1997-09-25T04:52:07.936Z</stop_time>
+        <producer_full_name>HENRY W. STONE</producer_full_name>
+        <citation_text>
+            Stone, H. W., MARS PATHFINDER ROVER MARS ENG 2/3 EDR/RDR VERSION
+            1.0, MPFR-M-RVRENG-2/3-EDR/RDR-V1.0, NASA Planetary Data System,
+            1998
+        </citation_text>
+        <data_set_terse_desc>
+            The rover engineering files on this CD contain raw and reduced
+            (engineering unit) values for each and every rover channel as
+            defined within the Missions Ground Data System Channel Parameter
+            Table (CPT).
+        </data_set_terse_desc>
+        <abstract_desc>
+            The rover engineering files on this CD contain raw and reduced
+            (engineering unit) values for each and every rover channel as
+            defined within the Missions Ground Data System Channel Parameter
+            Table (CPT) configuration file.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The rover engineering files on this CD contain raw and reduced
+    (engineering unit) values for each and every rover channel as
+    defined within the Missions Ground Data System Channel Parameter
+    Table (CPT) configuration file.
+ 
+ 
+  Parameters
+  ==========
+    Channels
+ 
+    Each of the rover data files contain 380 columns of channelized
+    data (i.e., 380 individual channels) and 5 additional columns
+    containing the Sol number and the four time values SCLK, SCET,
+    ERT, and LST as described below.  Each channel has a unique
+    channel identifier of the form E-nnnn or R-nnnn (i.e., the letter
+    &apos;E&apos; or &apos;R&apos; followed by a hyphen and a four digit number).  The
+    channel identifiers are contained in the header rows of each
+    &apos;.CSV&apos; file, and in the PDS labels of the &apos;.TAB&apos; files.
+ 
+    The identifiers can be used as a cross reference into the Rover
+    Telemetry Dictionary and into the Channel Parameter Table (CPT)
+    and Channel Conversion Language (CCL) configuration files.  Note
+    that there are many more channels contained within these data
+    files than there are channels defined within the Rover Telemetry
+    Dictionary.  The reason for this is that during mission
+    operations it was advantageous for the ground data system to
+    generate synthesized channels in order to drive a variety of
+    real-time display tools.
+ 
+    Channels which do not appear in the &apos;ch_id&apos; column of the Rover
+    Telemetry Dictionary are synthesized channels and have been
+    derived on the ground via one of several methods.  These include
+    generation during initial decommutation of the rover telemetry
+    messages by the ground data system decommutation program
+    &apos;ccsds_tlm&apos; or by the derived channel algorithms written and
+    contained within the missions CCL configuration file.
+ 
+    There are a number of channels (i.e., columns) within the rover
+    data files on this CD which do not contain any data.  This is not
+    an error or omission in the data files but rather an artifact of
+    the fact that a number of channels were initially defined earlier
+    in the development of the ground data system but never used.
+ 
+    As a consequence of the existence of synthesized channels and the
+    particular needs of the real-time display tools used during
+    mission operations, you will notice what appears to be a
+    multiplicity in the number of measurements of the same logical
+    value (i.e, the X accelerometer measurements) at the same instant
+    in time.  For example, every instant of time that a value appears
+    in the data tables for channel R-2550 (&apos;Rover X Position, Start&apos;
+    ...  see Rover Telemetry Dictionary, Section 5.0) you will see
+    the same value appearing in the column for channel R-0500, but
+    not vice versa.  Channel R-2550 is defined to be a &apos;unique
+    channel&apos; as opposed to a &apos;common channel&apos;.
+ 
+    &apos;Unique channels&apos; contain measurements made of a particular
+    logical value during the execution of a specific set of rover
+    commands (one or more).  The &apos;common channels&apos;, in general,
+    contain all measurements of a logical value regardless of which
+    command was actually responsible for taking the measurement.
+    Hence, unique channels are much more sparsely populated with
+    actual data than are the common channels.
+ 
+    Channel Ordering
+ 
+    The 380 columns of channelized rover data contained with the
+    rover data files are ordered by channel identifiers starting with
+    the E-nnnn channels first (in ascending numeric order) followed
+    by the R-nnnn channels (in ascending numeric order).  As a
+    consequence of this and the way in which the rover channels were
+    initially defined, channels which are normally associated with
+    one another (e.g., common and unique X accelerometer measurements
+    do not appear in adjacent columns within the file.  The user can
+    easily rearrrange the columns in any fashion so desired.  Note
+    the channel identifiers are NOT sequential (e.g., 3,4,5).  There
+    are gaps in the identifier numbering.  These are not missing
+    channels they are simply channel identifiers which were never
+    used.
+ 
+    Row Ordering
+ 
+    The data files SOLxx_DN.TAB and SOLxx_EU.TAB vary in length from
+    Sol to Sol.  Within each file the rows are time ordered based
+    upon the time at which the measurement was taken by the rover (or
+    at least the time the rover thought it was ...  see the section
+    &apos;Limitations - Timestamping Anomalies&apos; later in this document).
+    The data contained within the files within directory
+    &apos;RVR_ENG/SOLxx/&apos; corresponds to measurements actually taken (i.e,
+    acquired by) by the rover on the &apos;xx-th&apos; sol of the mission as
+    opposed to when the information was received on earth.  The later
+    information is contained within the &apos;ERT&apos; column or each file.
+ 
+    Image Data
+ 
+    The files SOLxx_DN.TAB and SOLxx_EU.TAB contain channels of
+    information relating to the characteristics and conditions under
+    which the rover took images using its three cameras (e.g.,
+    exposure time, temperature).  The actual image data (i.e, the
+    pixel values), however, was not channelized and hence is not
+    contained within these engineering data files.  Rover images
+    (i.e., images taken by the rover&apos;s cameras are available
+    elsewhere on this CD).
+ 
+    APXS Spectra Data
+ 
+    The files SOLxx_DN.TAB and SOLxx_EU.TAB contain several channels
+    of data associated with measurements from the Alpha Proton X-Ray
+    Spectrometer Instrument which was onboard the Sojourner Vehicle.
+    These channels contain a mix of ancilliary data as well as the
+    actual spectra data.  The separation of the ancilliary data from
+    the actual spectra data is accommodated within these data
+    products.  Instead special software tools elsewhere in the ground
+    data system were used to process the telemetered data and
+    actually convert it into spectra and ancilliary data sets.  The
+    processed/decommutated spectra data are archived elsewhere on
+    this CD.
+ 
+ 
+  Data
+  ====
+    There are 75 subdirectories within the rover engineering data
+    directory, one for each Martian Day (Sol) of the surface mission
+    and one for each of the two cruise health checks (i.e.,
+    &apos;cruise1&apos;, and &apos;cruise2&apos;).  (Directories containing no data were
+    deleted.) The name of each directory contains the Sol number
+    (e.g., SOL45 corresponding to the forty fifth day on Mars).  Each
+    directory contains two (2) compressed data files and two PDS
+    labels.
+ 
+    The data files have been compressed using the ZIP compression
+    utility.  The decompression utility UNZIP is widely available.
+    Information about where it can be obtained, and source code (if
+    necessary), is provided in the SOFTWARE/ directory on this CD.
+ 
+    The files SOLxx_DN.ZIP contain the DN (data number) values for
+    each and every rover channel as defined within the Missions
+    Ground Data System Channel Parameter Table (CPT) configuration
+    file.  The files named SOLxx_EU.ZIP contain the EU (engineering
+    unit) values for each and every rover channel as defined within
+    the the Missions Ground Data System CPT file, if and only if the
+    channel was defined to have an engineering unit conversion.  For
+    those channels which no such conversion was defined, the
+    SOLxx_EU.ZIP file contains the DN value.
+ 
+    Each compressed file contains a copy of the PDS label, and two
+    versions of the data file.  One of these versions, with the file
+    extension &apos;.TAB&apos;, is formatted according to PDS standards for
+    tables and is fully described by the PDS label.  The other
+    version of the data file, with extension &apos;.CSV&apos;, is a simple
+    comma-separated value table.  Both versions of the tables are
+    large and relatively sparsely filled.
+ 
+    The PDS formatted tables are formatted so that they can be read
+    directly into many data management systems.  All fields are
+    separated by commas, and character fields are enclosed in double
+    quotation marks.  Character fields are left justified, and
+    numeric fields are right justified.  Each record ends with the
+    ASCII carriage return &lt;CR&gt; and line feed &lt;LF&gt; characters.  The
+    &apos;.LBL&apos; files are PDS label files that describe the content and
+    structure of the fields in their corresponding tables, including
+    field name, format, and description.  The values for start byte
+    and number of bytes listed in the label file do not include
+    commas between fields or quotation marks surrounding character
+    fields.
+ 
+    The &apos;.CSV&apos; files are saved in Comma Separated Value (CSV) file
+    format.  Newlines within the file indicate the start of a new row
+    within the table and commas (,) mark the separation between
+    columns within the table.  The files are in ASCII format and are
+    designed to be read into most spreadsheet type applications
+    programs (e.g., Microsoft Excel) or processed using relatively
+    simple text parsing scripts/programs.  Given that the &apos;.CSV&apos;
+    files are significantly smaller in size than the PDS-formatted
+    files, they may be easier to load into some database or
+    spreadsheet programs.  The &apos;.CSV&apos; files all have four header
+    lines which describe the contents of the fields.
+ 
+    Each column within these files corresponds to a specific channel
+    of data.  The channel number, format specification (C programming
+    style print format used originally to generate the channel by the
+    ground data system), DN or EU designation, and units of
+    measurement for each column is contained within the first four
+    rows of each file (in the &apos;.CSV&apos; files) or in the PDS label (for
+    the &apos;.TAB&apos; files).  In the case of the SOLxx_EU files, if there
+    was no conversion algorithm in the ground data system to convert
+    the DN value to EU values, the corresponding header value for
+    that column will have a value of &apos;DN&apos;.  There are a few columns
+    which do not have DN/EU designators and/or channel numbers.
+    These included the first three columns which contain the Sol
+    number, local standard time (i.e., Martian time at the landing
+    site), and the SpaceCraft Event Time (SCET); and the last two
+    columns which contain the Spacecraft Clock (SCLK) and the Earth
+    Receive Time (ERT), respectively.
+ 
+    Each row within the table (with the exception of the first four
+    &apos;header rows&apos; in the &apos;.CSV&apos; files) corresponds to a particular
+    instant in time at which one or more measurements were taken by
+    the rover and telemetered back to earth.  The time at which the
+    measurement(s) were taken is indicated by the SOL/LST, SCET, and
+    SCLK time values contained within each and every row.  There are
+    approximately 380 channels of data contained with each of the
+    rover data files.  Only a few channels are measured at any
+    instant in time and hence these tables are VERY sparsely
+    populated.
+ 
+    All of the rover data files have exactly the same number of
+    columns.  In addition, the i-th column of every file corresponds
+    to the same rover data channel although in the SOLxx_EU files the
+    actual values for the channel may be in EUs as opposed to DNs.
+ 
+    The pairs of files SOLxx_DN and SOLxx_EU contained within each
+    sol directory have exactly the same number of rows and columns.
+    Within a particular sol directory, the i-th row in file SOLxx_DN
+    and SOLxx_EU will always correspond to the same instant in time.
+    The number of rows within the SOLxx_DN and SOLxx_EU files,
+    however will vary from sol directory to sol directory depending
+    upon how much information was collected by the rover.
+ 
+    The fixed and consistent format of the data files SOLxx_DN, and
+    similarly for the SOLxx_EU files, are such that files from
+    different sols can be simply concatenated in order to create
+    multi-sol data files to support multi-sol analyses (albeit you
+    will most likely want to first delete the first four &apos;header&apos;
+    rows from all but the first of concatenated files).
+ 
+ 
+  Ancillary Data
+  ==============
+    The Rover Telemetry Dictionary, mentioned above, can be found in
+    the DOCUMENT/ROVERDOC/TLMDICT/ directory on this CD.
+ 
+ 
+  Software
+  ========
+    Complete documentation about the UNZIP decompression software
+    necessary to decompress these files is available in the SOFTWARE/
+    directory on this CD.
+ 
+    These tables can be read using many database or spreadsheet
+    software packages.  However, the length of the records or the
+    large number of columns may pose difficulties for some software.
+ 
+    If you need assistance finding software that can be used to
+    decompress or display these tables, please contact the PDS
+    operator at the following address:
+ 
+    Address:     Planetary Data System, PDS Operator
+                 Jet Propulsion Laboratory
+                 4800 Oak Grove Drive
+                 Pasadena, CA 91109
+ 
+    Phone:       (818) 354-4321
+    Email:       pds_operator@jpl.nasa.gov
+    WWW URL:     http://pds.nasa.gov/
+ 
+ 
+  Media / Format
+  ==============
+    The Rover Engineering data is stored on compact disc-read only
+    memory (CD-ROM) media.  The CD is formatted according to ISO-9660
+    and PDS standards.  The data files do not include extended
+    attribute records (XARs), and are therefore not readable on some
+    older VMS operating systems.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    Review
+    ------
+      Prior to release, the data will be reviewed by the Rover Team
+      and the Planetary Data System.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Derived Channel Data Anomalies
+ 
+    Due to limitations within the capabilities of the Channel
+    Conversion Language (CCL) portion of the Mars PathFinder (MPF)
+    Ground Data System (GDS), a number of rover derived channels
+    contain &apos;bogus&apos; values which are not explicitly indicated as such
+    in the rover data files contained on the CD.  These values should
+    be replaced by &apos;INVALID&apos; markers by the user prior to analysis.
+    The algorithm(s) for determining which values are bogus are
+    described below along with a list of potentially affected
+    channels.
+ 
+    Pitch, Roll, Tilt:
+ 
+    Derived Channels:
+ 
+          R-0518
+          R-0519
+          R-0536
+          R-0537
+          R-0538
+          R-0539
+          R-0540
+          R-0541
+          R-0542
+          R-0543
+          R-0544
+          R-0545
+          R-0616
+          R-0617
+          R-2636
+          R-2637
+          R-2638
+          R-2736
+          R-2737
+          R-2738
+          R-3608
+          R-3609
+          R-3618
+          R-3619
+          R-3628
+          R-3629
+          R-3708
+          R-3709
+          R-3808
+          R-3809
+          R-3908
+          R-3909
+          R-3918
+          R-3919
+          R-3928
+          R-3929
+ 
+    Corrective Action:
+ 
+    If any value for DN and/or EU of any of the above listed channels
+    is greater than &apos;45.0&apos; the value is INVALID.
+ 
+    Explaination
+ 
+    The above channels, which correspond to angular values (i.e, in
+    degrees) of the rover&apos;s pitch, roll, and tilt, are derived by a
+    Channel Conversion Language (CCL) routine which takes the actual
+    measurements of the rover&apos;s three linear accelerometers and
+    converts them to an angular measurements using simple sine and
+    cosine functions.
+ 
+    If the value of the accelerometer reading was greater than 1 Mars
+    G (= 3/8 of an earth G) the CCL algorithm would generate one of
+    several bogus values (e.g., 360.0, 361.0, 362.0).  This was done
+    because the ground data system was unable to mix data types
+    within a channel.  Hence, you couldn&apos;t literally put in the value
+    &apos;INVALID&apos; for the above derived channels since these channels
+    were defined to be floating point numbers.
+ 
+    Now you ask, why would the accelerometers ever read more than 1
+    Mars G.  The answer is we don&apos;t exactly know but such raw
+    measurements were intermittently obtained during the later part
+    of the mission.
+ 
+    Other Channel Data Anomalies
+ 
+    General
+ 
+    Due to limitations within the capabilities of the Channel
+    Parameter Table (CPT) portion of the Mars PathFinder (MPF) Ground
+    Data System (GDS), a number of rover non-derived channel,
+    engineering unit representations of the actual DN value contain
+    &apos;misleading&apos; information if not properly interpreted.  These
+    values should be replaced by markers indicating that these
+    particular entries/values have special significance.
+ 
+    Temperature Measurements
+ 
+    The first example of potentially misleading values is in the case
+    of the temperature sensors.  The rover&apos;s temperature sensors and
+    temperature sensor electronics interface were such that if a
+    temperature sensor became disconnected from the rover&apos;s
+    electronics (e.g., a broken wire or bad solder joint) the analog
+    input signal sent to the rover&apos;s Analog to Digital converter
+    would be &apos;pulled high&apos; causing the A/D converter to saturate in
+    turn producing a telemetered temperature reading of &apos;7FF&apos; (HEX).
+ 
+    The ground data system was not capable of detecting this prior to
+    converting it to a engineering unit temperature value and
+    stuffing that value into the channels EU value field.  While the
+    conversion function for each temperature sensor is different
+    (i.e., they were individually calibrated) a DN value of 7FF will
+    produce an EU value of approximately 77 degC.
+ 
+    The point is that if you see any EU temperature values in the
+    SOLxx_EU files in the range of 77degC you should correlate this
+    with the DN value in the corresponding SOLxx_DN file to confirm
+    that the EU value should actually be replaced by a marker such as
+    &apos;OUT_OF_RANGE&apos;.  Such measurements were obtained during the later
+    portion of the mission on one of the front wheel temperature
+    sensors.  During the beginning of the mission this sensor was
+    producing consistently reasonable measurements.  later in the
+    mission it began saturating whenever it starting getting cold
+    (e.g., early in the morning and at night).  Eventually, it
+    produced only the saturated value.  We have hypothesized that the
+    wire to the sensor and/or one of the related solder joints failed
+    during the mission due to thermal cycling.
+ 
+    Laser Spot Measurements
+ 
+    Channels R-1400 through R-1419 correspond to measurements of the
+    height of terrain in front of the rover at 20 distinct point
+    (i.e., a 4 x 5 grid of points).  The EU values for these channels
+    measure the height of the terrain at these points in millimeters
+    measured relative to where the lasers would have detected the
+    surface to be terrain to be had the rover been sitting on a flat
+    surface.  Negative values mean there is a depression (e.g., drop
+    off) and positive values represent the presence of an obstacle
+    (e.g., a rock).
+ 
+    What is important to remember when analyzing this data is that if
+    the rover was unable to detect the location of the laser spot on
+    the surface it would send a telemetry value of 7FFF/-128
+    HEX/DECIMAL).  Analogous to the temperature sensor issue
+    described above, the Ground Data System is/was incapable of
+    marking these values so that they would be interpreted to mean
+    &apos;SPOT NOT DETECTED&apos;.  Hence, scientists/engineers analyzing the
+    laser data on this CD should do this so as not to misinterpret
+    the results.  In the files containing the EU values for these
+    channels the DN value of 7FFF/-128 (HEX/DECIMAL) gets convertered
+    into a value of -179.2 mm.  EU values of -179.2 mm should
+    likewise be replaced with a &apos;SPOT NOT DETECTED&apos; marker in the
+    SOLxx_EU files.  The bottom line is that such values should NOT
+    be interpreted to mean that the rover drove up to hole/cliff that
+    was 179.2 mm deep!
+ 
+    There are several reasons why the rover&apos;s hazard detection system
+    (i.e., camera/laser system) would fail to detect/see the spot
+    generated by one of it&apos;s lasers.  One such reason is that it is
+    possible for the rover to physically attain a kinematic
+    configuration in which either the front right or front left
+    wheels are positioned high enough (via the rocker-bogie
+    suspension system) that the wheel actually blocks the projection
+    of the lasers output beam and hence the camera(s) are unable to
+    detect the beam on the surface of the ground.
+ 
+    The remaining reasons for the existence of the &apos;SPOT NOT
+    DETECTED&apos; values are all associated with the physical geometry of
+    the terrain and the relative positioning of the cameras and
+    lasers to one another.  Fundamentally, the camera/laser detection
+    system is based upon measuring distances via triangulation
+    between the emitted laser beam and the line of sight from the
+    camera to the spot on the terrain illuminated by the laser.
+    Obviously there must be a clear line of sight between the camera
+    and the actual physical spot on the terrain which is illuminated
+    by the laser in order for the camera to see the spot.  There are,
+    however, situations in which the laser beam can enter a very
+    sharp depression in the terrain, such as in the case of hitting a
+    point within a small hole in a vesicular rock, and the line of
+    sight from this spot to the camera is obstructed by the
+    sharp/steep walls of the hole.  In such a case, the rover would
+    not be able to detect the spot at all and it was therefore
+    programmed to generate a value of 7FFF in the telemetry data for
+    the measurement.
+ 
+ 
+  Limitations
+  ===========
+    Timestampimg Anomalies
+ 
+    The Sojourner rover did NOT have an independently powered mission
+    clock circuit.  As a consequence, when the rover&apos;s batteries were
+    finally exhausted on Sol 58 the rover no longer had an accurate
+    means for knowing what time it was when it automatically woke up
+    via solar power and the lander was unavailable (i.e., it&apos;s rover
+    modem was not yet powered on) to provide an clock/time update.
+    This situation unfortunately creates a number of complications in
+    terms of analyzing rover data collected after Sol 58,
+    particularly, data taken during the early morning hours prior to
+    the rover getting an clock update from the lander.
+ 
+    The thing to remember when analyzing the rover data for Sols 58
+    and beyond is that the rover executes one command at a time
+    (i.e., serially) and executes them in &apos;command sequence number&apos;
+    order (e.g., command 61001 is executed prior to command 61002,
+    etc).  Thus, any regressions in the command sequence numbers
+    contained in these files as time increases is a clear indication
+    that a block of data taken by the rover that morning was
+    incorrectly timestamped.  Note that the relative timestamping
+    within the block is correct its just that the entire block is
+    offset in time from when it was actually taken.
+ 
+    A simple example of the situation that occurs should help to
+    explain the situation.  Consider the situation in which the rover
+    automatically wakes up via solar power at 7:00 am (LST).  Also
+    assume that the lander&apos;s rover modem was not yet powered on at
+    this time and hence when the rover, during wakeup, tries to get a
+    clock update from the lander it cannot.  Under these conditions,
+    the rover sets its mission clock according to its best estimate
+    of what time it is which happens to correspond to the last time
+    it was instructed to wake up.  Lets say that time was 10:00 am.
+    The rover then begins/continues to execute its active command
+    sequence and time stamps the data starting with 10:00 am on.
+    Lets also say, for expository purposes, that the rover executes
+    five commands with command sequence numbers 61005, 61006, 61007,
+    61008, 61009 and the data from command 61009 is taken at 7:30 am
+    (LST).  Because the rover&apos;s clock is off the data from command
+    61009 is timestamped as having been collected at 10:30 am (LST).
+ 
+    Now assume that at 7:31 am (LST), the lander powers up it&apos;s rover
+    modem and that after executing command 61009 the rover performs
+    one of its automatic and/or commanded attempts to contact the
+    lander to get a clock update.  The rover does so receiving and an
+    update which indicates that the current time is 7:31 am and sets
+    it&apos;s mission clock accordingly.  Then command 61010 is executed.
+    The telemetry data collected by this command is then timestamped
+    as having been taken at 7:31 am.
+ 
+    In the rover data files which are time ordered by SCET, you will
+    find the block of commands 61005-61009 appearing after the data
+    entries (i.e, rows) containing the data collected by command
+    61010.  Again, this situation is relatively easy to detect in the
+    data files by simply looking at the ordering of the command
+    sequence numbers for each entry (i.e., row).
+ 
+    Ideally, the thing to do is to take the timestamps on the data
+    entries for commands 61005-61009 and subtract 3 hours (10:00am -
+    7:00am) from each.  Unfortunately, their is no precise way to
+    back calculate what time the rover actually woke up.  The wakeup
+    time is a function of many unknown variables including actual
+    (not measured) vehicle orientation, tilt, optical density of the
+    atmosphere on that particular morning, and electrical performance
+    of the solar array to name a few.  While one can, with some work,
+    come up with a reasonable estimate we have not done so to the
+    rover data contained within the rover data files on this CD.
+ 
+    Finally, depending upon the timing involved (e.g., the length of
+    time it takes the rover to execute the commands 61005-61009 in
+    the example above, the actual time that the rover wakes up, and
+    the actual time at which rover is first able to get a clock
+    update from the lander) it is possible for the block of commands
+    61005-61009 in our example to be interlaced with commands 61010
+    and above.  This makes rearranging the data files to be in actual
+    time order more complicated and is a process not easily
+    automated.
+        </confidence_level_note>
+        <archive_status>IN_QUEUE</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

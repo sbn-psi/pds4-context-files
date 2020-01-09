@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:spec.spec</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IHW SPECTROSCOPY AND SPECTROPHOTOMETRY for SPEC</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.spec::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zdenek (ed.), &apos;The Comet Halley Archive Summary Volume&apos;, Jet
+                   Propulsion Laboratory, California Institute of Technology, Pasadena,
+                   California, JPL D-400-450, August 1991.
+            </reference_text>
+            <description>reference.JPL_D-400-450</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>IHW SPECTROSCOPY AND SPECTROPHOTOMETRY</instrument_name>
+        <instrument_desc>
+ 
+ 
+    Instrument Overview
+    ===================
+    The spectroscopic archive consists of data obtained by a
+    wide variety of observers, instruments, and techniques. The
+    range of observation sites spans the globe and includes the
+    upper atmosphere and satellites in Earth orbit. The
+    spectroscopic observations of Comet Halley were monitored,
+    but not coordinated, by the Spectroscopy Center at Arizona
+    State University. Various individual observing programs were
+    planned and executed in their entirety by the observers who
+    contributed data to the archive. Occasionally the
+    observations were made by observers who had no expertise in
+    cometary spectroscopy. Fortunately, there was such an
+    overwhelmingly universal interest in Comet Halley that
+    virtually every large aperture telescope equipped with
+    spectroscopic instrumentation obtained at least a few
+    spectra of the comet. Thus, the spectroscopic archive
+    comprises data obtained with a very diverse array of
+    state-of-the-art instruments and detectors in the years
+    1985-1986 and represents a unique set of observations of
+    Comet Halley. These instruments include simple scanners and
+    spectrographs to more complicated Fabry-Perot and echelle
+    systems.
+ 
+         The spectroscopic data in the Comet Halley archive
+    consist of two basic types: one-dimensional and
+    two-dimensional spectra. In the case of one- dimensional
+    spectra, the data are measurements vs. wavelength of the
+    flux from the comet within a solid angle determined by the
+    size of the spectroscopic instrument aperture projected at
+    the comet. For the two-dimensional spectra, a spatial
+    dimension is added covering the length of the slit projected
+    at the comet. Thus a two-dimensional spectrum contains flux
+    information for a set of points, determined by the slit
+    length used. The two-dimensional spectra can be treated as a
+    normal image, as far as manipulation and display. The only
+    difference from an image is that one dimension is wavelength
+    and the other is spatial. The one-dimensional spectra might
+    be displayed as a one-dimensional image, but a graphical
+    display, plotting flux vs. wavelength is more conventional.
+ 
+         Both the coma and plasma tail spectra are composite
+    with an underlying continuous spectrum contributed by the
+    solar radiation scattered by the comet dust. Thus when
+    analyzing the gaseous component of the spectrum, the dust-
+    reflected solar continuum is usually subtracted from the
+    composite spectrum. The spectra of Comet Halley presented in
+    this archive can be found in various forms, both with and
+    without the correction for the solar background continuum.
+    The state of each archive spectrum can generally be
+    determined by reading its fits header. Some observers have
+    submitted spectra of solar system objects or scattered
+    twilight to provide a solar spectrum with the same
+    instrument used to observe the comet. These spectra have
+    been archived with the Halley spectra and can be used to
+    subtract the background solar spectrum from the comet
+    spectrum. Also included in the IHW archive as appendices are
+    two high resolution spectra obtained directly of the Sun,
+    which, when convolved with the appropriate instrument
+    profile and corrected for the scattered light wavelength
+    dependence (1/lambda), can be used to correct the composite
+    comet spectra for scattered sunlight.
+ 
+       It was requested that observers submit data to the IHW in
+    reduced form (i.e., F(lambda) vs. lambda versus rho). Most
+    of the data in the archive are as fully reduced, or as fully
+    reduced as possible (in some instances, such as high
+    spectral resolution data, flux calibration may not be
+    possible). In some sets, the data are raw, essentially as
+    observed. Hopefully with the raw data sets, other
+    calibration data have been included as well, although this
+    is not always the case. When calibration frames are
+    available, their type should be clear from the OBJECT
+    keyword. The type of data presented can be determined from
+    DAT-TYPE. Data and calibration frames should be correlated,
+    based on time and date of observation, observer, and
+    observatory.
+    Details in the instrument system are given in the table
+    below:
+ 
+       SPECTROSCOPY &amp; SPECTROPHOTOMETRY DISCIPLINE
+ 
+    __________________________________________________________
+    SYSTEM  OBSERVATORY            TELESCOP INSTRUMENT
+    __________________________________________________________
+    75110601 OBS. OF HAUTE-PROVENCE 1.52-M   ECHELLEC SPEC
+    75110501 OBS. OF HAUTE-PROVENCE 1.2-M    MARLEY/PL IIaO
+    75110102 OBS. OF HAUTE-PROVENCE 1.9-M    SILFID
+    75000701 BOLOGNA UNIV. OBS.     1.52-M   B&amp;C/EMI TUBE
+    75001301 SOUTH AFRICAN ASTRO OBS1.88-M   RET PHOT COUNT
+    75002403 KR.AO AS USSR          2.6-M    SD/IC/103AG
+    75002401 MAIN ASTRO OBS, TERSKO 0.6 M    UAGS/2-CHAMBIC
+    75002404 MAIN ASTRO OBS, MAIDAN 0.6-M    AS
+    75002402 GISSAR                 0.7-M    SPM-1/IC/103AG
+    72130201 ASSA (ALMA-ATA, KASAKH)1-M RCC  UAGS/103AO
+    75000501 VAINU BAPPU OBS,KAVALUR1.02-M   AUTO SCAN
+    72860101 YUNNAN OBS, CHINA      1.0-M    CASS SPEC/BAKD
+    75000801 OKAYAMA ASTRO OBS      1.88-M   PLATE/RCA INTN
+    75000802 OKAYAMA ASTRO OBS      1.88-M   CASS IMAG TUBE
+    74140101 MOUNT STROMLO OBS      74-INCH  COUDE ECHELLE
+    71410102 ANGLO-AUSTRALIAN OBS.  3.9-M    AAO CCD
+    71410103 ANGLO-AUSTRALIAN OBS.  3.9-M    FAINT RED SPEC
+    71410101 ANGLO-AUSTRALIAN OBS.  3.9-M    RGO SPEC/IPCS
+    75680401 MAUNA KEA OBSERVATORY  88-INCH  COUDE SPEC/#3
+    76620102 LICK OBSERVATORY       120-INCH COUDE CCD SPEC
+    76620103 LICK OBSERVATORY       120-INCH CASS SPEC/CCD
+    76750101 PALOMAR OBS            200-INCH DOUBLESPEC/CAS
+    76950103 KITT PEAK NATIONAL OBS 4.0-M    CRYOCAM/CCD
+    76950102 KITT PEAK NATIONAL OBS 4.0-M    RC SPEC/CCD
+    76950203 KITT PEAK NATIONAL OBS 2.1-M    IIDS
+    76950301 KITT PEAK NATIONAL OBS MCMATH   FABRY-PEROT
+    76880101 LOWELL OBSERVATORY     1.8-M    IDS
+    76960101 F.L. WHIPPLE OBS       4.5-M    ECHELLE SPEC
+    76930101 CATALINA OBS           61-INCH  LPL CCD/SPEC
+    76930102 CATALINA OBS           61-INCH  LPL CCD/SPEC
+    75001602 SOUNDING ROCKET NASA   FOT      ROWLAND CIRCL
+    77110104 MCDONALD OBS.          2.7-M    LONG SLIT CCD
+    77110102 MCDONALD OBS.          2.7-M    IDS BLUE CHAIN
+    77110103 MCDONALD OBS.          2.7-M    IDS RED CHAIN
+    75001601 BLACK MOSHANNON OBS    1.6-M    BMO GALAXY
+    78070101 CERRO TOLOLO INTER OBS 4.0-M    2D-FRUTTI
+    78070201 CERRO TOLOLO INTER OBS 1.5-M    HARVARD SCAN
+    78090101 EUROPEAN SOUTHERN OBS  3.6-M    CASPEC/ECH/CCD
+    78090301 EUROPEAN SOUTHERN OBS  1.5-M    CASS SPEC/IDS
+    78090302 EUROPEAN SOUTHERN OBS  1.5-M    B&amp;C/EMI TUBE
+    78090501 EUROPEAN SOUTHERN OBS  F=400MM  WIDEFIELD/LONG
+    73040301 LAS CAMPANAS OBS       0.6-M    CLASS SPEC
+    75009903 IUE OBSERVATORY        IUE      LONG/LOW RES
+    75009901 IUE OBSERVATORY        IUE      SHORT/LOW RES
+    78800101 NATIONAL OBS, BRAZIL   1.6-M    CASS SPEC/VID
+    75007401 ROQUE MUCHACHOS OBS    2.5-M    FOS/DUR CCD
+    _________________________________________________________
+ 
+ 
+    Scientific Objectives
+    =====================
+         During the years 1983-88, the Spectroscopy and
+    Spectrophotometry Network (SSN) of the International Halley
+    Watch (IHW) was responsible for coordinating, collecting,
+    and archiving a wide diversity of spectroscopic observations
+    of the periodic comets Halley, Giacobini-Zinner, and
+    Crommelin. The spectral domain covered the ultraviolet and
+    visible regions, from about 1100 A to 10,000 A, with the
+    ground-based data representing the bulk of the spectra and
+    covering 3000 A to 10,000 A. Spectra of comets obtained in
+    the wavelength regions longer than 10,000 A (1 micron) have
+    been archived by the Infrared Network.
+ 
+         The spectra of comet Halley taken from Earth have
+    spatial resolutions of about 400 km at best. Such spectra
+    obtained remotely arise from three distinct sources in the
+    coma: (1) sunlight scattered by the coma dust, (2) neutral
+    molecular gas fluorescing with the solar radiation, and (3)
+    molecular and atomic ions also excited by resonance
+    fluorescence. Solar radiation reflected directly from the
+    nucleus of the comet contributes negligibly to the spectrum
+    observed from Earth, except when a comet is at relatively
+    large heliocentric distances (&gt;5 AU). Spectra in the IHW
+    archive obtained with the instrument aperture centered on
+    the brightest part of the coma are generally dominated by
+    the neutral molecular spectrum of the coma. Spectra offset
+    projected distances &gt;100,000 km from the brightest coma
+    region toward the tail (anti-solar direction) are generally
+    dominated by molecular ions which populate the plasma tail
+    of the comet.
+ 
+       Estimates were that the majority (70-80%) of the spectra
+    would be recorded in digital format. In fact, virtually all
+    the spectroscopic data that we received were in digital
+    format. A small percentage (less than 3%) of spectra
+    originally recorded on photographic plates were scanned with
+    digital microphotometers by observers at their institutes
+    and were submitted on magnetic tape. At the time the IHW was
+    organized, photographic plates were already on their way
+    out. Nearly all observatories that had instrumentation to
+    record useful slit spectra of comet Halley had some kind of
+    digital detector system.
+ 
+ 
+
+        </instrument_desc>
+        <instrument_id>SPEC</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Spectrometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gio-c-did-3-rdr-grigg-skjell-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GIOTTO EXTENDED MISSION DUST IMPACT DETECTOR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.giotto_extended_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:did.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.26p-grigg-skjellerup_1_1922_k1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gio-c-did-3-rdr-grigg-skjell-v1.0__browserp_gio-c-did-3-rdr-grigg-skjell-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   McDonnell, J.A.M, N. McBride, R. Beard, E. Bussoletti, L. Colangeli, P.
+                   Eberhardt, J.G. Firth, R. Grard, S.F. Green, J.M. Greenberg, E. Grun, D.W.
+                   Hughes, H.U. Keller, J. Kissel, B.A. Lindblad, J.-C. Mandeville, C.H. Perry, K.
+                   Renbor, H. Rickman, G.H. Schwehm, R.F. Turner, M.K. Wallis, J.C. Zarnecki,
+                   Nature 362, No. 6422, 732-734, 1993.
+            </reference_text>
+            <description>reference.MCDONNELLETAL1993</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GIO-C-DID-3-RDR-GRIGG-SKJELL-V1.0</data_set_id>
+        <data_set_name>GIOTTO EXTENDED MISSION DUST IMPACT DETECTOR V1.0</data_set_name>
+        <data_set_release_date>1995-12</data_set_release_date>
+        <start_time>1992-07-09T18:42Z</start_time>
+        <stop_time>1992-07-11T05:42Z</stop_time>
+        <producer_full_name>PDS SMALL BODIES NODE</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            This dataset contains the results obtained from the Dust Impact
+            Detection System (DIDSY) flown aboard the GIOTTO spacecraft
+            during its extended mission to Comet P/Grigg-Skjellerup in 1992.
+            (SAVED DATA)
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains the results obtained from the Dust Impact
+            Detection System (DIDSY) flown aboard the GIOTTO spacecraft
+            during its extended mission to Comet P/Grigg-Skjellerup in 1992.
+            The measurements and analysis of the three impacts detected
+            during close approach are contained in text files. Calibration
+            tables for the sensors are included in this dataset. These data
+            have not been reviewed or formally archived with the PDS.
+        </abstract_desc>
+        <data_set_desc>
+      Data Set Overview
+      =================
+      This dataset contains the results obtained from the Dust Impact
+      Detection System (DIDSY) flown aboard the GIOTTO spacecraft during
+      its extended mission to Comet P/Grigg-Skjellerup in 1992.  The
+      measurements and analysis of the three impacts detected during close
+      approach are contained in text files.  Calibration tables for the
+      sensors are included in this dataset.
+ 
+ 
+      Parameters
+      ==========
+      The timing and masses of the impacting meteroid are tabulated within
+      the DOCUMENT file, &apos;didtext.doc&apos;.
+ 
+ 
+      Processing
+      ==========
+      See the &apos;didtext.doc&apos; file for details of the data processing and
+      analysis.
+ 
+      For PDS ingest, the shield map files were each pulled out of the
+      original text file and formatted as separate PDS TABLE files, each
+      with its own label.
+ 
+ 
+      Data
+      ====
+      The data set consists of four files:
+ 
+         didtext.doc       An early draft of a paper published in April
+                           1993 as a Letter to Nature.  This file provides
+                           a description of the experiment, presents the
+                           results and includes a discussion of the data
+                           analysis
+         did2map.tab       These files contain the bumper shield maps for
+         did3map.tab       each of the three sensors active during the
+         did4map.tab       flyby.  The maps indicate relative sensitivity
+                           of each area on the shield compared to a direct
+                           impact on the sensor.
+ 
+      Ancillary Data
+      ==============
+      There is no ancillary data to this data set.
+ 
+      Coordinate System
+      =================
+      See the analysis section of the &apos;didtext.doc&apos; file for a description
+      of the geometry of the impacts.
+ 
+      Software
+      ========
+      Not applicable.
+ 
+      Media/Format
+      ============
+      These data are available as part of the Giotto Extended Mission CDROM.
+        </data_set_desc>
+        <confidence_level_note>
+      Confidence Level Overview
+      =========================
+      See the &apos;didtext.doc&apos; file for a discussion of the analysis procedure
+      as well as the effects of the previous encounter with Comet P/Halley
+      on the DIDSY sensitivity at P/Grigg-Skjellerup.
+ 
+      Review
+      ======
+      These data were reviewed for ingest into the PDS permanent archives in
+      December 1995.
+ 
+      Data Coverage and Quality
+      =========================
+      See the &apos;didtext.doc&apos; file.
+ 
+      Limitations
+      ===========
+      See the &apos;didtext.doc&apos; file.
+        </confidence_level_note>
+        <archive_status>SAFED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>85-056A-00E</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>PSSB-00025</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

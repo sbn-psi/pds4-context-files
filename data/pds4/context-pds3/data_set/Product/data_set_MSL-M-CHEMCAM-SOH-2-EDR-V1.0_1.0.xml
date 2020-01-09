@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-chemcam-soh-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL CHEMCAM STATE OF HEALTH EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:chemcam_soh.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemcam-soh-2-edr-v1.0__browserp_msl-m-chemcam-soh-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemcam-soh-2-edr-v1.0__dvo_geo_msl-m-chemcam-soh-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemcam-soh-2-edr-v1.0__pds.geo.msl.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.TBD</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-CHEMCAM-SOH-2-EDR-V1.0</data_set_id>
+        <data_set_name>MSL CHEMCAM STATE OF HEALTH EDR V1.0</data_set_name>
+        <data_set_release_date>2013-02-27</data_set_release_date>
+        <start_time>2012-08-06T00:00:00Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>ROGER WIENS</producer_full_name>
+        <citation_text>
+            Wiens, R., MSL ChemCam State of Health raw data,
+            MSL-M-CHEMCAM-SOH-2-EDR-V1.0, NASA Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            The MSL ChemCam SOH EDR data set consists of all raw state of
+            health data collected by the ChemCam instrument on the Mars
+            Science Laboratory rover.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The MSL ChemCam SOH EDR data set consists of all raw state of
+            health data collected by the ChemCam instrument on the Mars
+            Science Laboratory rover.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    The ChemCam SOH data product consists of various state of health
+    parameters including the DPU voltages and temperatures, Mast Unit (MU)
+    current and temperaturs, as well as status of various data parameters.
+ 
+ 
+ 
+  Parameters
+  ==========
+      ??
+ 
+ 
+  Processing
+  ==========
+    This data set uses the Committee On Data Management And
+    Computation (CODMAC) data level numbering system. The EDRs are to be
+    reconstructed from &apos;Level 1&apos; or &apos;Raw Data&apos;, which are the
+    telemetry packets within the project specific Standard Formatted Data
+    Unit (SFDU) record.
+ 
+    CHEMCAM EDRs were generated by the MIPL (Multimission Image Processing
+    Laboratory) at JPL under the Operation Products Generation Subsystem.
+    The EDRs are raw uncalibrated data reconstructed from telemetry data
+    products and formatted according to the Camera EDR/RDR Software Interface
+    Specification. Meta-data acquired from the telemetry data headers
+    and a meta-data database were used to propagate the PDS label.
+ 
+    RDRs will be produced in succession by the ChemCam Team and formatted
+    according to this SIS, the RDR data product will be placed into FEI for
+    distribution.
+ 
+ 
+  Data
+  ====
+     The data are stored in multiple data files and have been organized by
+     data products.
+ 
+     For SOH the data product consist of the following:
+     Ancillary Data which includes sclk, tempertures and command paramteres
+     and arguments.
+     SOH science Data.
+ 
+     An attached PDL Label describes the content of the data file and
+     format of the data can be found in referenced .FMT files.
+ 
+  Ancillary Data
+  ==============
+     Most of the ancillary data needed can be found in the data it self or
+     in the label portion of the EDR.
+ 
+ 
+  Coordinate System
+  =================
+     ?
+ 
+ 
+ 
+ 
+  Software
+  ========
+      ?
+ 
+ 
+ 
+ 
+  Media/Format
+  ============
+      ?
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    High-level description of confidence level (reliability, accuracy,
+      completeness, etc.)
+ 
+ 
+ 
+  Review
+  ======
+      Describe review processes which the data have undergone, including the
+      PDS Peer review.
+ 
+ 
+ 
+  Data Coverage and Quality
+  =========================
+     This is a good place to mention known data gaps and any null values or
+      invalid data flags which might be included.
+ 
+`
+ 
+ 
+  Limitations
+  ===========
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

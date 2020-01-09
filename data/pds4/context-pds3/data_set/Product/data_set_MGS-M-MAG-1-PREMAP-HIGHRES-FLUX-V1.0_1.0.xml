@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-mag-1-premap-highres-flux-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS MARS MAG PRE-MAP DETAIL WORD RESOLUTION V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-mag-1-premap-highres-flux-v1.0__browserp_mgs-m-mag-1-premap-highres-flux-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Acuna, M.H., J.E.P. Connerney, P. Wasilewski, R.P. Lin, K.A. Anderson, C.W.
+                   Carlson, J. McFadden, D.W. Curtis, H. Reme, A. Cros, J.L. Medale, J.A. Sauvaud,
+                   C. d&apos;Uston, S.J. Bauer, P. Cloutier, M. Mayhew, and N.F. Ness, Mars Observer
+                   Magnetic Fields Investigation, J. Geophys. Res., 97, 7799-7814, 1992.
+            </reference_text>
+            <description>reference.ACUNAETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-MAG-1-PREMAP/HIGHRES-FLUX-V1.0</data_set_id>
+        <data_set_name>MGS MARS MAG PRE-MAP DETAIL WORD RESOLUTION V1.0</data_set_name>
+        <data_set_release_date>2007-10-09</data_set_release_date>
+        <start_time>1997-09-12T00:00:00Z</start_time>
+        <stop_time>1999-03-08T23:59:59Z</stop_time>
+        <producer_full_name>DR. JOHN E. P. CONNERNEY</producer_full_name>
+        <citation_text>
+            Connerney, John E.P., MGS Mars Mag Pre-Map Detail Word Resolution
+            V1.0, MGS-M-MAG-1-PREMAP/HIGHRES-FLUX-V1.0, NASA Planetary Data
+            System (PDS), 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated time-ordered data tables from the Magnetometer
+            instrument collected during the premapping phase of the mission
+            and expressed in payload coordinates and Sun-State coordinates.
+            These are high time resolution (detail) data.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains vector magnetic field data acquired by the
+            Fluxgate section of the Magnetometer / Electron Reflectometer
+            instrument aboard the Mars Global Surveyor (MGS) spacecraft. The
+            data are provided at a variable time resolution depending on the
+            telemetry rate available to the investigation for the time period
+            beginning with Aerobraking Phase 1A (1997-09-12). The data in the
+            dataset cover the entire premapping period (ends 1999-03-08).
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  ====================================================================
+  Overview:
+  =========
+ 
+    This data set contains vector magnetic field data acquired by
+    the Fluxgate section of the Magnetometer / Electron
+    Reflectometer instrument aboard the Mars Global Surveyor (MGS)
+    spacecraft. The data are provided at a variable time resolution
+    depending on the telemetry rate available to the investigation
+    for the time period beginning with Aerobraking Phase 1A
+    (1997-09-12). The data in the dataset cover the entire
+    premapping period (ends 1999-03-08).
+ 
+    The data are calibrated and provided in physical units (nT).
+    Since high time resolution spacecraft engineering (in particular,
+    measurements of power subsystem currents) data are not available,
+    the calibration does not fully compensate for spacecraft fields.
+    Estimates based on the linearly interpolating available spacecraft
+    engineering data have been used.  The variable fields associated
+    with articulation of the high gain antenna have been removed.
+    The data are provided in payload coordinates and Sun-State (SS)
+    coordinate system.
+ 
+    For some applications, data processed in this manner are still
+    useful. However, for most applications, use of the fully calibrated,
+    fullword data products that are also available through the PDS is
+    recommended.
+ 
+    The magnetometers on Mars Global Surveyor (MGS) are not boom
+    mounted. They are mounted at the outer edge of the two solar
+    panels, and both are about the same distance from the center of
+    the spacecraft. In the traditional dual magnetometer technique,
+    one of the two magnetometers is mounted at the end of a boom
+    (outboard mag) and the other mounted closer to the spacecraft
+    body (inboard mag). The data acquisition scheme usually allows
+    for more rapid sampling of one or the other magnetometer to
+    optimize the telemetry allocation usage. The outboard mag is
+    usually describes as the the primary mag, the inboard as the
+    secondary. On the Mars Observer mission, the magnetometer
+    sensors were boom-mounted; Mars Global Surveyor uses flight
+    spares mounted at the edge of the solar panels, approximately
+    5.2 meters away from the spacecraft center. MGS data processing
+    software is based upon software developed for Mars Observer.
+ 
+    For MGS, we will preserve the terminology outboard and inboard
+    mag for simplicity but we must define which is which.
+ 
+    By definition, the MGS OUTBOARD MAG is on the S/C +Y solar panel
+                   the MGS INBOARD  MAG is on the S/C -Y solar panel
+ 
+    The bulk of the telemetry allocation is utilized by the outboard
+    magnetometer.
+ 
+ 
+  ====================================================================
+  Sampling:
+  =========
+ 
+    The instrument samples the magnetic field at a rate of 32
+    samples per second by using a clock system derived from the
+    spacecraft system real-time interrupt (RTI) clock. Raw samples
+    are averaged in the instrument according to the telemetry mode
+    for the spacecraft and the data allocation for the MAG/ER
+    investigation. The MAG investigation utilizes a data compression
+    scheme to make efficient use of spacecraft telemetry while at
+    the same time preserving the ability to recover gracefully from
+    spacecraft telemetry errors and the like. A primary MAG full
+    word sample consists of a 12 bit value for the x component, a 12
+    bit sample for the y component, a 12 bit sample for the z
+    component (all in sensor coordinates) and a 4 bit range word
+    (bit one is an autorange/manual range switch; bits 2,3,4 are the
+    0-7 range designation). Each primary MAG full word sample is
+    followed by 23 difference samples in which the 6 bit difference
+    from the previous value is telemetered, effectively doubling the
+    data rate obtained within the telemetry allocation.
+ 
+    Reconstructed full words are generated in ground data processing
+    for high rate (detail) data. Full word samples, occur every 0.75s,
+    1.5s, or 3.0s depending on the telemetry allocation.  There are
+    23 detail words between full words occurring every 0.03125s, 0.0625s,
+    or 0.125s depending on the telemetry allocation.
+ 
+    Onboard averages are non-overlapping boxcar averages. Time tags
+    are placed at the center of the averaging interval. The data
+    rate allocation is summarized in the following table:
+ 
+    Data Rate       Primary Samples         Secondary Samples
+    (bits/sec)      (samples/second)        (samples/second)
+    -----------------------------------------------------------
+       324               8                       1/6
+       648              16                       1/3
+      1296              32                       2/3
+ 
+    The magnetic field is sampled over a large dynamic range
+    (+/- 4 nT to +/- 65536 nT) by automatically adjusting the
+    instrument response (gain) in the magnetometer electronics.
+    The nominal resolution of the 12-bit analog-to-digital (A/D)
+    converter is provided in the following table:
+ 
+    Range          Max Field       Resolution (12-bit)
+                    (+/- nT)             (+/- nT)
+    -----------------------------------------------------------
+      0                4                  0.002
+      1               16                  0.008
+      2               64                  0.032
+      3              256                  0.128
+      4             1024                  0.512
+      5             4096                  2.048
+      6            16384                  8.192
+      7            65536                 32.768
+ 
+    Actual ranges may be expected to deviate from the nominal
+    (design) range by varying amounts, ranging from as much as 5%.
+ 
+    The instrument noise level is 0.006 nT rms over a
+    10 Hz bandwidth. Note that in-flight performance is limited
+    by the level of magnetic noise generated by the MGS spacecraft
+    and the instruments it carries. Magnetic field fluctuations are
+    best studied in either the sensor coordinate system (fixed to
+    and aligned with the spacecraft solar panels) or the spacecraft
+    payload coordinate system, since large differences in rms
+    fluctuations can be seen in these components. The sensor y
+    component evidences shows the smallest rms fluctuations of
+    approximately 0.05 nT, whereas the x and z components are more
+    variable with time and often exceed 0.5 nT.
+ 
+ 
+  ====================================================================
+  Processing:
+  ===========
+ 
+    Raw data are processed by applying a series of corrections
+    which include sensor zero levels offsets, gain factors,
+    scaling to physical units, and subsequent rotation into
+    payload and geophysical coordinates.
+ 
+    The instrument zero levels and gains are quite stable over large
+    temperature ranges and time periods. Of more concern
+    is the magnetic field generated by the spacecraft itself. In
+    flight tests suggest that variation of the spacecraft field
+    observed at the position of the magnetometer sensors when they
+    are articulated in the frame of reference of the spacecraft
+    is about 5 nT (static field). It is believed that this field is
+    largely due to the TWTA amplifiers mounted on the communications
+    dish (which was not deployed until after mapping orbit began).
+ 
+    For Science Phasing orbits (SPO), the solar panels did not
+    articulate and compensation for spacecraft fields can be done by
+    simple adjustment to the instrument zero table; this method was
+    used in the production of SPO datasets. Note that this method
+    only works for SPO mission phase, and requires a stationary
+    high gain antenna as well.
+ 
+    NOTE that special spacecraft maneuvers were needed before an
+    adequate spacecraft magnetic field model could be developed. These
+    maneuvers were executed in late 1999 and February, 2000 (HGA
+    articulation sequences). The February 2000 maneuvers resulted in
+    a model for the field of the HGA.
+ 
+ 
+  ====================================================================
+  Spacecraft Field Estimation and Compensation:
+  ============================================
+ 
+    The spacecraft field estimation and compensation is a bit involved.
+    The magnetometer measures the field due to all sources, the ambient
+    field plus that of the spacecraft. The spacecraft may generate
+    magnetic fields in many ways; the estimation problem is largely one
+    of identifying correctly what on the spacecraft is responsible for
+    the interference. It is usually very helpful to have specialized
+    tests pre-launch to identify the prominent sources. Often one finds
+    that it is impractical to operate the spacecraft in precisely the
+    manner it will in space (e.g., powered by solar panels, power
+    subsystem state, component articulations, thermal environment, and
+    so on). Pre-launch tests of the MGS spacecraft identified permanent
+    magnets on the High Gain Antenna (HGA) as the most significant
+    source and sources associated with the power subsystem primary
+    harness which were partially corrected.
+ 
+    We categorize spacecraft sources as static or dynamic. Static
+    fields are due to permanent magnetization, for example, magnets or
+    magnetized objects. Magnetic fields are also produced by current
+    loops, for example in power subsystems, solar arrays, batteries, and
+    so on; these often scale with a known current and are called dynamic
+    fields. For MGS, during mapping operations, the HGA is articulated
+    in the frame of reference of the spacecraft (spacecraft payload
+    coordinates, PL for short) as are the two solar panels upon which
+    the magnetometer sensors are located. Each sensor also has an
+    associated zero offset (for each range) vector which must also be
+    estimated. Note that a spacecraft generated static magnetic field
+    that is in the same reference coordinates as the sensor (sensor
+    coordinates) will behave as a sensor offset.
+ 
+    Spacecraft maneuvers conducted in February, 2000 were very helpful
+    in characterizing the static field associated with the HGA. Of
+    course, since the HGA is constantly articulating, the &apos;&apos;static&apos;&apos;
+    field of the HGA is time variable as seen by the sensors. These
+    maneuvers were designed to map the magnetic field of the HGA: the
+    sensors (and solar panels) were set at fixed locations and the HGA
+    was rotated in elevation several times. The field of the HGA could
+    then be determined from the difference between the vector field at
+    the two sensor locations. The difference must be used to eliminate
+    the time variable, and mostly much larger, ambient field.
+ 
+    A more complete model of the field at each sensor takes into account
+    the possibility of a static field associated with the spacecraft
+    and fixed in spacecraft pl coordinates (Bc), as well as dynamic
+    fields both fixed in sensor coordinates (Bod) and fixed in
+    spacecraft payload coordinates (Bcd). The former might arise
+    from imperfect cancellation of current loops on the solar panels
+    and the latter might arise from loops associated with power circuits
+    fixed to the spacecraft body.
+ 
+    These sources are to be characterized in flight and on orbit about
+    Mars. The ambient field is large (to 250 nT) and variable, all of
+    which looks like very large amplitude &apos;&apos;common mode&apos;&apos; noise to our
+    sensors (in this effort; the ambient field is of course most welcome
+    otherwise). So we can only use the difference between the
+    measurements to characterize the spacecraft field.
+ 
+    The magnetic field is modeled in sc payload coordinates
+    (applies to both ib and ob sensors)
+ 
+       Bpl = [ HGA ]  Bs   +  [ T ] Bo  + Ba + Bc
+                           +  [ T ] Bod      + Bcd
+ 
+       where Bpl is the field in cartesian payload coordinates,
+             Bs  is the field of the HGA assembly, in cartesian
+                 coordinates, in the HGA coordinate system;
+ 
+           [HGA] is the transformation from HGA coordinates to
+                 spacecraft payload coordinates.
+ 
+             [T] is the transformation from sensor to s/c payload
+                 coordinates.
+ 
+             Bo  is the sensor zero offsets, constant (static)
+ 
+             Ba  is the ambient field in sc payload coordinates
+ 
+             Bc  is the spacecraft (body) field (static) in payload
+                 coordinates
+ 
+             Bod is field in sensor coordinates that scales with
+                 the power system current (cartesian coordinates)
+ 
+             Bcd is the spacecraft (body) field (dynamic) in payload
+                 coordinates that scales with power system current
+ 
+             Bod and Bcd are DYNAMIC spacecraft fields
+                 we ASSUME they both scale with a spacecraft current
+                 as follows:
+ 
+             inboard  mag dynamic field scales with solar array
+                 -y panel current;
+             outboard mag dynamic field scales with solar array
+                 +y panel current;
+ 
+             Bcd, the spacecraft body field, scales with total current
+                 (sao_i) output from the (shunted) arrays. This is the
+                 current that goes into the power subsystem on the s/c
+ 
+     we use the observation   Bpl (inboard) - Bpl (outboard)
+     to remove the ambient field. Pure sensor rotations will
+     constrain Bo, and coupled displacements/rotations (from
+     solar panel movements) or HGA articulations will be used
+     to constrain the spacecraft field Bs, modeled as an
+     offset dipole about the HGA origin.
+ 
+     A generalized inverse procedure is used to estimate the parameters
+     of the various sources, e.g., the dipole coefficients of the HGA
+     and the offset of the HGA source from the defined center of the
+     HGA coordinate system; or scale factors (nT/A) for the x,y,z
+     components of the dynamic field associated with solar panel
+     current.
+ 
+     The current spacecraft magnetic field model (that used in the
+     processing of this data) is described in sc_mod.ker, provided
+     with the MGS magnetometer fullword resolution data release.
+     It uses an offset dipole for the HGA (tests demonstrated that no
+     improvement in the fit resulted from using a higher degree and
+     order spherical harmonic), referenced to the HGA coordinate system
+     (which is at the end of the HGA boom, see SPICE documentation).
+     We found that no additional static spacecraft field was needed
+     and so this is zero in the current release. The dynamic fields
+     are at present imperfectly estimated but amount to about 0.2 nT/A
+     or less in each sensor.
+ 
+     This dataset should be used in combination with the MGS magnetometer
+     fullword resolution data set which includes additional variables,
+     largely to let the user know exactly what spacecraft fields have been
+     removed from the observations, and the calibration status of the data.
+ 
+     In the command line variable in the attached header for these files:
+ 
+     CMD_LINE  =  -mars -magonly -odl -detail -sc -ss time dday ob_bpl ob_b
+ 
+     you find an option &apos;&apos;-sc&apos;&apos;, this means that the spacecraft field
+     estimated using the model described in the &apos;&apos;sc_mod.ker&apos;&apos; file
+     has been removed from the vector field. In addition to
+     the variables ob_b (vector ambient magnetic field, ob mag) and
+     posn (spacecraft position) we have added ob_bpl (ob mag in payload
+     coordinates).
+ 
+     A few plots of the HGA articulation sequences and the model fit
+     to the (differenced) data are included in the fullword data set
+     documentation directory.
+ 
+ 
+  ====================================================================
+  Media/Format:
+  =============
+ 
+    The data are provided as ASCII tables of time series data. These
+    files are referred to as standard time series files (STS files),
+    and all such files have a .STS suffix.  Each file has an attached
+    header (called an ODL header, which represents the data producer&apos;s
+    object definition language, distinct from the PDS Object Description
+    Language). The header contains text describing the file processing
+    and structure.
+ 
+    The attached (machine readable) header provides sufficient
+    information to understand what is in the file. A sample
+    header is given below; it consists of nested OBJECT = KEYWORD
+    and END_OBJECT pairs. This attached header is documentation,
+    applied to the output file by the analysis program. Any
+    detached header you see with these data has not been generated
+    by the investigator team, but has been added by the PDS for
+    compatibility purposes.
+ 
+    The header, as well as any other non-numeric ASCII,
+    can easily be stripped with the following AWK script:
+ 
+    #
+    #  script for files with odl
+    #
+    # this script will reject records until object
+    # and end object statements are resolved (x=0)
+    #
+ 
+     /OBJECT/ &amp;&amp; !/END_OBJECT/ { ++x }
+     /END_OBJECT/              { --x }
+     x == 0 &amp;&amp; $0 !~ /[A-z]/   {
+    #
+ 
+     print $0
+     }
+ 
+    The attached header provides a level of traceability for the data
+    product. All of the SPK and CK kernels loaded by the processing
+    program, and used by the processing program to compute spacecraft
+    position and attitude, can be readily identified in the
+    CK_DOCUMENTATION and SPK_DOCUMENTATION objects. There are several
+    of each that need be consulted to perform the necessary
+    transformations. Please refer to JPL NAIF documentation for
+    information regarding the SPK and CK kernels.
+ 
+    The user may use either the attached or detached headers for
+    automated plotting, depending on the software you have.
+    PDS-provided software (if any) uses the detached headers (PDS
+    label files). The OBJECT = RECORD / END_OBJECT nest describes the
+    data in each record, but you must also be cognizant of the CMD_LINE
+    keyword to interpret the vector variables. For example, the
+    lines below indicate that
+ 
+    OBJECT   =  VECTOR
+      NAME   =  OB_B
+      ALIAS  =  OUTBOARD_B_J2000
+      TYPE   =  REAL
+      OBJECT   =  SCALAR
+        NAME   =  X
+        FORMAT =  1X,F9.3
+        UNITS  =  NT
+             ...
+ 
+    the variable ob_b (also known as outboard_b_J2000) is a
+    real vector variable, consists of scalar components x, and
+    so on, in units nanoteslas. Note that the instrument range
+    is carried as a fourth component of the magnetic field vector, as
+    this practice preserves reversibility. Range values R&gt;7 indicate
+    automatic range selection on board, with the range = R-8. The
+    range is coded as a four bit binary, with the most significant
+    bit (8) turned on in auto range mode.
+ 
+    The CMD_LINE options -odl -magonly -ss
+    specify that odl header is requested; mag data only is
+    processed, and magnetic field and position vectors are
+    TRANSFORMED INTO SUN-STATE COORDINATES. This is why you need
+    be cognizant of the CMD_LINE when you interpret the record.
+    In the CMD_LINE, the option -Mars is implied, unless
+    another body is specified, denoting that the center of Mars is
+    the center of the coordinate system. If instead the option
+    -phobos or -deimos appeared on the command line, the coordinate
+    system is relative to these bodies instead.
+ 
+    (In the following sample attached header, double quotation
+    marks have been replaced by pairs of single quotation marks
+    for the sake of PDS compatibility. A real attached header
+    can contain double quotation marks.  Also, a few lines have
+    been slightly condensed to reduce line length for ease of
+    display in the present file.)
+ 
+ 
+                       SAMPLE ATTACHED HEADER FOLLOWS
+ 
+OBJECT      =  FILE
+OBJECT   =  HEADER
+  PROGRAM   =  mgan
+  CMD_LINE  =  -mars -magonly -odl -detail -sc -ss time dday ob_bpl ob_b
+  DATE      =  Tue Jun 26 18:41:27 2007
+  HOST      =  lepmom
+  COMMENT   =  This version MGAN compiled with F77 revision. 5.0 and
+               spicelib MSOP_SCI V.6 (GENERIC_TOOLKIT V.N0049  on MAY 21,
+               2007 by P.J. Lawton (ADNET at NASA/GSFC).
+  TITLE     =  MARS GLOBAL SURVEYOR MAG/ER
+OBJECT      =  CK_DOCUMENTATION
+ 
+  MGS Solar Array Orientation CK File for Aerobraking-2
+  ===========================================================================
+ 
+  Created by Boris Semenov, NAIF/JPL April 3, 1999
+ 
+  Orientation Data in the File
+  --------------------------------------------------------
+ 
+  This file contains orientation and angular velocity data for the Mars
+  Global Surveyor (MGS) +Y and -Y nominal solar array frames --
+  &apos;MGS_LEFT_SOLAR_ARRAY&apos; and &apos;MGS_RIGHT_SOLAR_ARRAY&apos; -- relative to the
+  &apos;MGS_SPACECRAFT&apos; frame. The NAIF ID codes for the
+  &apos;MGS_LEFT_SOLAR_ARRAY&apos; and &apos;MGS_RIGHT_SOLAR_ARRAY&apos; frames are -94001
+  and -94002.
+ 
+  This C-kernel provides the nominal orientation of the MGS solar
+  arrays. However, this does NOT reflect the fact that the -Y solar
+  panel did not fully deploy after launch, stopping short by
+END_OBJECT
+OBJECT      =  CK_DOCUMENTATION
+ 
+  MGS Spacecraft Orientation CK File for Aerobraking-2
+  ===========================================================================
+ 
+  Created by Boris Semenov, NAIF/JPL, April 3, 1999
+ 
+  Orientation Data in the File
+  --------------------------------------------------------
+ 
+  This file contains orientation and angular velocity data for the Mars
+  Global Surveyor (MGS) spacecraft frame, &apos;MGS_SPACECRAFT&apos;, relative to
+  the &apos;J2000&apos; inertial frame. The NAIF ID code for the &apos;MGS_SPACECRAFT&apos;
+  frame is -94000.
+ 
+  Status
+  --------------------------------------------------------
+ 
+  This file was created by merging daily CK files produced by the MGS
+END_OBJECT
+OBJECT      =  CK_DOCUMENTATION
+    MGS Solar Array Orientation CK File for Mapping, Cycles 1-3
+  ===========================================================================
+ 
+    Created by Boris Semenov, NAIF/JPL, June 18, 1999
+ 
+      Orientation Data in the File
+  --------------------------------------------------------
+ 
+    This file contains orientation and angular velocity data for the Mars
+  Global Surveyor (MGS) +Y and -Y nominal solar array frames --
+  &apos;MGS_LEFT_SOLAR_ARRAY&apos; and &apos;MGS_RIGHT_SOLAR_ARRAY&apos; -- relative to the
+  &apos;MGS_SPACECRAFT&apos; frame. The NAIF ID codes for the
+  &apos;MGS_LEFT_SOLAR_ARRAY&apos; and &apos;MGS_RIGHT_SOLAR_ARRAY&apos; frames are -94001
+  and -94002.
+    This C-kernel provides the nominal orientation of the MGS solar
+  arrays. However, this does NOT reflect the fact that the -Y solar
+  panel did not fully deploy after launch, stopping short by
+END_OBJECT
+OBJECT      =  CK_DOCUMENTATION
+  Mars Global Surveyor High Gain Antenna Stowed Gimbal Orientation CK File
+  ===========================================================================
+ 
+  Orientation Data in the File
+  --------------------------------------------------------
+ 
+  This file contains orientation and angular rate data for the Mars
+  Global Surveyor (MGS) High Gain Antenna (HGA) Elevation and Azimuth
+  gimbal frames. The orientation of the &apos;MGS_HGA_EL_GIMBAL&apos; is given
+  with respect to the &apos;MGS_HGA_HINGE&apos; frame; orientation of the
+  &apos;MGS_HGA_AZ_GIMBAL&apos; is given with respect to the &apos;MGS_HGA_EL_GIMBAL&apos;
+  frame.
+ 
+  Status
+  --------------------------------------------------------
+ 
+  This file contains gimbal orientation for the stowed HGA position
+  (EL = -95 degrees, AZ = 180 degrees) for the period of time from the
+END_OBJECT
+OBJECT      =  CK_DOCUMENTATION
+ 
+ 
+******************************************************************************
+  MGS -Y Solar Array Steady Attitude CK File
+ 
+===========================================================================
+ 
+  Version
+  --------------------------------------------------------
+ 
+  Version 1.1 -- by Boris Semenov, NAIF/JPL, January 17, 2000
+ 
+  File coverage was extended to January 1, 2005. Deflection
+  angle values were not changed.
+ 
+  Version 1.0 -- by Boris Semenov, NAIF/JPL, September 16, 1998
+ 
+  Initial Release.
+ 
+END_OBJECT
+OBJECT      =  CK_DOCUMENTATION
+ 
+******************************************************************************
+ 
+  Mars Global Surveyor High Gain Antenna Hinge Orientation CK File
+  ==========================================================================
+ 
+  Created by Boris Semenov, NAIF/JPL, March 30, 1999 Orientation Data in
+ 
+  Orientation Data in the File
+  --------------------------------------------------------
+ 
+  This file contains orientation and angular rate data for the Mars
+  Global Surveyor (MGS) High Gain Antenna (HGA) deployment hinge
+  frame &apos;MGS_HGA_HINGE&apos; with respect to the &apos;MGS_SPACECRAFT&apos; frame.
+ 
+  Status
+  --------------------------------------------------------
+ 
+  END_OBJECT
+OBJECT      =  SPK_DOCUMENTATION
+ 
+  Mars Global Solar Array / MAG Structures SPK File
+==============================================================================
+ 
+  This SPK file (FK) contains location of various MGS solar array structures
+  and MAG sensors with respect to each other.
+ 
+  If You&apos;re in a Hurry
+  ----------------------------------------------------------------------
+ 
+  In case you are not interested in details and just looking for the right
+  NAIF code of a particular MAG sensor IT to use it in a call to SPKEZ,
+  here is the list:
+ 
+  -94051      +Y MAG Sensor ID;
+  -94052      -Y MAG Sensor ID;
+ 
+  Version and Date
+END_OBJECT
+OBJECT      =  SPK_DOCUMENTATION
+  ; mar022-9000.bsp LOG FILE
+  ;
+  ; Created 1993-02-04/12:39:30.00.
+  ;
+  ; BEGIN NIOSPK COMMANDS
+ 
+  LEAPSECONDS_FILE    = naf0000c.tls
+  SPK_FILE            = mar022-9000.bsp
+  SPK_LOG_FILE      = mar022-9000.log
+  NOTE              = Made by CHA on Feb 4 1993
+  SOURCE_NIO_FILE   = /scratch/naif/ephem/nio/gen/de202.nio
+  BODIES          = 3, 399, 4, 10
+  BEGIN_TIME      = 1990/1/01
+  END_TIME        = 2000/1/01
+  SOURCE_NIO_FILE   = /scratch/naif/ephem/nio/gen/mar022-9000.nio
+  BODIES          = 401, 402, 499
+  BEGIN_TIME      = 1990/1/01
+  END_TIME        = 2000/1/01
+ 
+  ; END NIOSPK COMMANDS
+END_OBJECT
+OBJECT      =  SPK_DOCUMENTATION
+  Ephemeris DE403s                                        14-NOV-1995
+ 
+  Objects In This Ephemeris
+ 
+  Name                         Id-code
+  ------------------------------------
+  Sun...............................10
+  Mercury Barycenter.................1
+  Mercury..........................199
+  Venus Barycenter...................2
+  Venus............................299
+  Earth Moon Barycenter..............3
+  Moon.............................301
+  Earth............................399
+  Mars Barycenter....................4
+  Mars.............................499
+  Jupiter Barycenter.................5
+  Saturn Barycenter..................6
+  Uranus Barycenter..................7
+  Neptune Barycenter.................8
+END_OBJECT
+OBJECT      =  SPK_DOCUMENTATION
+ 
+  Mars Global Surveyor Antenna Structures SPK File
+==============================================================================
+ 
+  This SPK file (FK) contains location of various MGS antenna structures
+  with respect to each other. If You&apos;re in a Hurry
+ 
+  If You&apos;re in a Hurry
+------------------------------------------------------------------------------
+ 
+  In case you are not interested in details and just looking for the right
+  NAIF code of a particular MGS antenna center to use it in a call to SPKEZ,
+  here is the list:
+ 
+  -94         s/c ID;
+  -94000      s/c frame center ID;
+  -94073      HGA center ID (reflector axis @ reflector rim plane);
+  -94074      LGT1 center ID (center of the patch);
+  -94075      LGT2 center ID (center of the patch);
+END_OBJECT
+OBJECT      =  SPK_DOCUMENTATION
+ 
+  Mars Global Surveyor Aerobraking-2 SPK file, MGSNAV Solution
+  ===========================================================================
+ 
+  Created by Boris Semenov, NAIF/JPL, March 28, 1999
+ 
+  Objects in the Ephemeris
+  --------------------------------------------------------
+ 
+  This file contains ephemeris data for the Mars Global Surveyor (MGS)
+  spacecraft. NAIF ID code for MGS is -94.
+ 
+  Approximate Time Coverage
+  --------------------------------------------------------
+ 
+  This file covers Aerobraking-2 (AB2) phase of the MGS mission (orbits
+  573 through 1683):
+ 
+END_OBJECT
+END_OBJECT
+OBJECT      =  RECORD
+OBJECT   =  VECTOR
+  NAME   =  TIME
+  ALIAS  =  TIME
+  TYPE   =  INTEGER
+  OBJECT   =  SCALAR
+    NAME   =  YEAR
+    FORMAT =  1X,I4
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  DOY
+    FORMAT =  1X,I3
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  HOUR
+    FORMAT =  1X,I2
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  MIN
+    FORMAT =  1X,I2
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  SEC
+    FORMAT =  1X,I2
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  MSEC
+    FORMAT =  1X,I3
+  END_OBJECT
+END_OBJECT
+OBJECT   =  SCALAR
+  NAME   =  DDAY
+  ALIAS  =  DECIMAL_DAY
+  TYPE   =  REAL
+  FORMAT =  F13.9
+END_OBJECT
+OBJECT   =  VECTOR
+  NAME   =  OB_BPL
+  ALIAS  =  OUTBOARD_B_PAYLOAD
+  TYPE   =  REAL
+  OBJECT   =  SCALAR
+    NAME   =  X
+    FORMAT =  1X,F9.3
+    UNITS  =  NT
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  Y
+    FORMAT =  1X,F9.3
+    UNITS  =  NT
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  Z
+    FORMAT =  1X,F9.3
+    UNITS  =  NT
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  RANGE
+    FORMAT =  1X,F4.0
+  END_OBJECT
+END_OBJECT
+OBJECT   =  VECTOR
+  NAME   =  OB_B
+  ALIAS  =  OUTBOARD_B_J2000
+  TYPE   =  REAL
+  OBJECT   =  SCALAR
+    NAME   =  X
+    FORMAT =  1X,F9.3
+    UNITS  =  NT
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  Y
+    FORMAT =  1X,F9.3
+    UNITS  =  NT
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  Z
+    FORMAT =  1X,F9.3
+    UNITS  =  NT
+  END_OBJECT
+  OBJECT   =  SCALAR
+    NAME   =  RANGE
+    FORMAT =  1X,F4.0
+  END_OBJECT
+END_OBJECT
+END_OBJECT
+END_OBJECT
+ 
+ 
+ 
+ 
+                       END SAMPLE ATTACHED HEADER
+ 
+ 
+    The Science Team&apos;s naming convention for these files is
+    mYYdDDD[pX]_TTTTTT.sts, where YY is the 2 digit year, DDD indicates
+    the day of year (where Jan 1 = day 001), and TTTTTT is &apos;detail&apos;.
+    The optional pX indicates which periapsis of the day is included in
+    the file.  The PDS file naming convention for these data is the same
+    as the science team&apos;s, but with all letters uppercase. The internal
+    structure of each file is:
+ 
+       Sample UT:     Time of the sample (UT) provided as a
+                      set of integers that contain the year,
+                      day of year, hour, minute, second, and
+                      millisecond when the sample was
+                      acquired at the spacecraft.
+ 
+ 
+       Decimal Day:   Another representation of the sample
+                      time as a decimal day of year (Jan 1
+                      at 00:00 UT = 1.000).
+ 
+ 
+       mag_vector:    Array[3] giving B-field components in the
+       (OB_BPL)       order Bx, By, Bz in the payload coordinate system.
+ 
+ 
+       Range:         Gain range of the instrument at the time of
+       (OB_BPL)       the sample. Sample quantization is gain
+                      range dependent. A negative value indicates a
+                      detail word (verus fullword) entry.
+ 
+ 
+       mag_vector:    Array[3] giving B-field components in the
+       (OB_B)         order Bx, By, Bz in the sun-state coordinate system.
+ 
+ 
+       Range:         Gain range of the instrument at the time of
+       (OB_B)         the sample. Sample quantization is gain
+                      range dependent. A negative value indicates a
+                      detail word (verus fullword) entry.
+ 
+ 
+  ======================================================================
+  Coordinate Systems:
+  ===================
+ 
+    There are two principal coordinate systems used to represent
+    the data in this archive: payload and sun-state (ss). Cartesian
+    representations are used for both coordinate systems.
+ 
+    The payload coordinate system is the frame of reference of the
+    spacecraft.
+ 
+    The ss coordinate system is defined using the instantaneous
+    Mars-Sun vector as the primary reference vector (x direction).
+    The X-axis lies along this vector and is taken to be positive
+    toward the Sun. The Mars velocity vector is the second vector
+    used to define the coordinate system. The negative of the velocity
+    vector is used as a secondary reference vector so that the
+    vector cross product of x and y yields a vector z parallel to
+    the northward (upward) normal of the orbit plane of Mars. This
+    system is sometimes called a Sun-State (SS) coordinate system
+    since its principal vectors are the Sun vector and the Mars
+    state vector.
+ 
+ 
+  ======================================================================
+  Ancillary Data:
+  ===============
+ 
+     Ancillary data can be found in the MGS magnetometer fullword
+     resolution data set.
+ 
+ 
+  ======================================================================
+  Software:
+  =========
+ 
+    There is no software provided with this data archive.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  ======================================================================
+  Review:
+  =======
+ 
+    The major uncertainty in these data is in the imperfect removal
+    of spacecraft magnetic contamination.
+ 
+    Since high time resolution spacecraft engineering (in particular,
+    measurements of power subsystem currents) data are not available,
+    the calibration does not fully compensate for spacecraft fields.
+    Estimates based on the linearly interpolating available spacecraft
+    engineering data have been used.  The variable fields associated
+    with articulation of the high gain antenna have been removed.
+ 
+ 
+  ======================================================================
+  Limitations:
+  ============
+ 
+    Cruise observations indicate that the static spacecraft field
+    is bounded by approximately +/- 5 nT at the sensor locations,
+    as the sensors are articulated about the spacecraft body.
+    For operations prior to mapping phase of the mission, the
+    solar panels are largely fixed in the frame of reference of the
+    spacecraft, moving only to assume the appropriate configuration
+    for aerobraking near periapsis (and return). During these
+    mission phases, it is possible to approximate the spacecraft
+    field as a fixed offset, and remove it by adjustment of
+    the sensor zero table. This is how the SPO dataset was reduced.
+    The cruise observations, and SPO and aerobraking phase (AB)
+    observations, were all acquired with the antenna in the stowed
+    configuration. Prelaunch magnetic mapping indicated that the
+    traveling wave tube amplifiers (TWTA&apos;s) on the antenna dish
+    are the leading source of static magnetic field contamination.
+ 
+    Mapping orbit data have been processed with a spacecraft magnetic
+    field model used to compensate for spacecraft interference. This
+    is described above. The model is deemed to be accurate at this
+    time for the HGA source, but less so for the dynamic sources related
+    to the power subsystem. We estimate the ambient field to be accurate
+    to within 1 nT for all times when the solar panels are not
+    illuminated. With illuminated solar panels the error is expected
+    to be a few nT, depending on the configuration of the panels.
+ 
+    The solar array currents in the MGS magnetometer fullword resolution
+    data set should always be checked to confirm that the data is
+    calibrated. When solar array currents were not available, &apos;-999&apos; was
+    entered in the SAM_I, SAP_I, and/or SAO_I fields of the magnetometer
+    fullword resolution data, and the data is not calibrated.
+ 
+ 
+  ======================================================================
+  Data Coverage:
+  ==============
+ 
+    Gaps in data coverage exist for many reasons including
+    telemetry outages and inadequate pointing and/or other
+    engineering information. Gaps are not filled with flagged data.
+ 
+    The reason that data are missing may include on or more of the
+    following:
+ 
+    1.) No magnetometer data available because it was not recorded
+    on the MGS spacecraft, for operational reasons.
+    2.) Magnetometer data was available but the solar panel CK
+    kernel file was not available and observations could not be
+    transformed into spacecraft payload coordinates.
+    3.) Magnetometer data was available but the spacecraft CK kernel
+    was not available and observations could not be transformed into
+    the desired coordinate system.
+    4.) Magnetometer data was available but the spacecraft SPK
+    kernel was not available and the position vector could not be
+    computed.
+    5.) Magnetometer data was available but the spacecraft HGA kernel
+    was not available and the position of the HGA could not be
+    determined.
+    6.) When solar array currents were not available, &apos;-999&apos; was
+    entered in the SAM_I, SAP_I, and/or SAO_I fields (see the MGS
+    magnetometer fullword resolution data) and the dynamic field was
+    not calculated.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

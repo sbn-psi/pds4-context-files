@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.citation_desc</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>citation_desc</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>citation_desc</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>citation_desc</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+     The CITATION_DESC contains a citation for the product or
+     DATA_SET_INFORMATION object in which it appears. It provides
+     a string that may be used to cite the product (data set) in a
+     publication. It should follow the standard citation order as
+     outlined in Appendix B, Section 31.5.5.3.1 of the PDS Standards
+     reference, which in turn follows established practice for
+     scientific journals that cite electronic publications
+     (e.g., AGU Reference citation format).
+ 
+     The CITATION_DESC must contain sufficient information to locate
+     the product or data set in the PDS archives.  For example,
+     the CITATION_DESC in a DATA_SET_INFORMATION object must contain
+     the DATA_SET_ID; it will also likely contain VOLUME_ID information
+     for the archive volumes, an author list, a release date, and so
+     on as appropriate.
+ 
+     Note that if CITATION_DESC is used within any product label within
+     a data set, all product labels within that data set must also have
+     a CITATION_DESC, even if they are only filled with &apos;N/A&apos;.
+ 
+      DATA_SET Example:
+ 
+        CITATION_DESC = &apos;Levin, G.V., P.A. Strat, E.A. Guinness, P.G.
+        Valko, J.H. King, and D.R. Williams, VL1/VL2 MARS LCS EXPERIMENT
+        DATA RECORD V1.0, VL1/VL2-M-LCS-2-EDR-V1.0, NASA Planetary
+        Data System, 2000.&apos;
+ 
+      Data Product Example:
+ 
+        CITATION_DESC = &apos;Cunningham, C., MINOR PLANET INDEX TO SCIENTIFIC
+        PAPERS, EAR-A-5-DDR-BIBLIOGRAPHY-V1.0:REFS-REFS-199409, NASA
+        Planetary Data System, 1994.&apos;
+        </definition>
+        <comment>citdesc</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>citation_desc</name>
+            <definition>
+     The CITATION_DESC contains a citation for the product or
+     DATA_SET_INFORMATION object in which it appears. It provides
+     a string that may be used to cite the product (data set) in a
+     publication. It should follow the standard citation order as
+     outlined in Appendix B, Section 31.5.5.3.1 of the PDS Standards
+     reference, which in turn follows established practice for
+     scientific journals that cite electronic publications
+     (e.g., AGU Reference citation format).
+ 
+     The CITATION_DESC must contain sufficient information to locate
+     the product or data set in the PDS archives.  For example,
+     the CITATION_DESC in a DATA_SET_INFORMATION object must contain
+     the DATA_SET_ID; it will also likely contain VOLUME_ID information
+     for the archive volumes, an author list, a release date, and so
+     on as appropriate.
+ 
+     Note that if CITATION_DESC is used within any product label within
+     a data set, all product labels within that data set must also have
+     a CITATION_DESC, even if they are only filled with &apos;N/A&apos;.
+ 
+      DATA_SET Example:
+ 
+        CITATION_DESC = &apos;Levin, G.V., P.A. Strat, E.A. Guinness, P.G.
+        Valko, J.H. King, and D.R. Williams, VL1/VL2 MARS LCS EXPERIMENT
+        DATA RECORD V1.0, VL1/VL2-M-LCS-2-EDR-V1.0, NASA Planetary
+        Data System, 2000.&apos;
+ 
+      Data Product Example:
+ 
+        CITATION_DESC = &apos;Cunningham, C., MINOR PLANET INDEX TO SCIENTIFIC
+        PAPERS, EAR-A-5-DDR-BIBLIOGRAPHY-V1.0:REFS-REFS-199409, NASA
+        Planetary Data System, 1994.&apos;
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>
+ 
+     In the following descriptions:
+ 
+       angle brackets (&lt;&gt;)   indicate information to be supplied by
+                             the data preparer
+       braces ({})           indicate optional fields
+       brackets ([])         are literal characters that must be
+                             included as shown
+       ellipsis (...)        indicates that the preceeding field is
+                             repeated as often as necessary
+       punctuation           must be used as indicated
+       UPPERCASE_TEXT        should be replaced with the value of
+                             the keyword contained in uppercase
+       year_of_peer_review   is the year that the data set that this
+                             file is a part of, officially passed PDS
+                             Peer Review
+       text                  plain text not otherwise mentioned must
+                             be included literally
+ 
+     Note that the &lt;year_of_peer_review&gt; should be replaced by the text
+     &apos;submitted&apos; for data that are in the process of being prepared,
+     reviewed or corrected.
+ 
+     DATA_SET formation
+     ==================
+      { author_name, author_name, ... }. &apos;data_set_name&apos;.
+      DATA_SET_ID, NASA Planetary Data System, year_of_peer_review.
+ 
+     Product formation
+     =================
+      { author_name, author_name, ... }. &apos;product_name&apos;.
+      DATA_SET_ID:PRODUCT_ID, NASA Planetary Data System,
+      year_of_peer_review.
+</formation_rule>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

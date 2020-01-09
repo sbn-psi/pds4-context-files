@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vl1-m-met-4-binned-p-t-v-corr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VL1 MARS METEOROLOGY DATA RESAMPLED DATA BINNED-P-T-V V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.viking::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vl1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:met.vl1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vl1-m-met-4-binned-p-t-v-corr-v1.0__browserp_vl1-m-met-4-binned-p-t-v-corr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vl1-m-met-4-binned-p-t-v-corr-v1.0__dvo_atmos_vl1_vl2-m-met::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Barnes, J.R., Time Spectral Analysis of Midlatitude
+                   Disturbances in the Martian Atmosphere, Journal
+                   of Atmospheric Sciences, 37, 2002-2015, 1980.
+            </reference_text>
+            <description>reference.BARNES_1980</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Chamberlain, T.E., H.L. Cole, R.G. Dutton, G.C. Greene,
+                   and J.E. Tillman, Atmospheric Measurements on Mars:
+                   The Viking Meteorology Experiment, Bulletin American
+                   Meteorological Society, 57, 1094-1104, 1976.
+            </reference_text>
+            <description>reference.CHAMBERLAIN_ETAL1976</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hess, S.L., R.M. Henry, C.B. Leovy, J.A. Ryan, and J.E.
+                   Tillman, Meteorological  Results From the Surface of Mars:
+                   Viking 1, and 2, Journal of Geophysical Research, 82,
+                   4559-4574, 1977.
+            </reference_text>
+            <description>reference.HESS_ETAL_1977</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hess, S.L., R.M. Henry, C.B. Leovy, J.A. Ryan, and J.E.
+                   Tillman, The Annual Cycle of Pressure on Mars Measured
+                   by the Viking Landers 1, and 2, Geophysical Research
+                   Letters, 7, 197, 1980.
+            </reference_text>
+            <description>reference.HESS_ETAL_1980</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Leovy C.B., Observations of Martian Tides Over Two Annual
+                   Cycles, Journal of Atmospheric Sciences, 38, 30-39, 1981.
+            </reference_text>
+            <description>reference.LEOVY_1981</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Murphy, J.R., The Recovery and Analysis of Martian Surface
+                   Winds at the Viking Lander 1 Site, MS Thesis, University
+                   of Washington, Seattle, WA, 97 p., 1986.
+            </reference_text>
+            <description>reference.MURPHY_1986</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sharman, R.D, and J.A. Ryan, Mars Atmospheric Pressure
+                   Periodicities from Viking Observations, Journal of
+                   Atmospheric Sciences, 37, 1994-2001, 1980.
+            </reference_text>
+            <description>reference.SHARMAN_RYAN_1980</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tillman, J.E., Mars Global Atmospheric Oscillations:
+                   Annually Synchronized, Transient Normal Mode Oscillations
+                   and the Triggering of Global Dust Storms, Journal of
+                   Geophysical Research, 93, 9433-9451, 1988.
+            </reference_text>
+            <description>reference.TILLMAN_1988</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tillman, J.E., S.L. Hess, and R.M. Henry, Frontal
+                   Systems During Passage of the Martian North Polar
+                   Hood Over the Viking Lander 2 Site Prior to the
+                   First 1977 Dust Storm, Journal of Geophysical
+                   Research, 84, 2947-2955, 1979.
+            </reference_text>
+            <description>reference.TILLMAN_ETAL_1979</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VL1-M-MET-4-BINNED-P-T-V-CORR-V1.0</data_set_id>
+        <data_set_name>VL1 MARS METEOROLOGY DATA RESAMPLED DATA BINNED-P-T-V V1.0</data_set_name>
+        <data_set_release_date>1989-11-01</data_set_release_date>
+        <start_time>1976-07-20</start_time>
+        <stop_time>1977-07-14</stop_time>
+        <producer_full_name>JAMES R. MURPHY</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VL1 MARS METEOROLOGY RESAMPLED DATA BINNED-P-T-V
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains binned and splined data obtained from the
+            Viking Meteorology Instrument System (VMIS) through portions of
+            the Viking Lander 1 mission. The data set consists of mean values
+            of pressure, temperature, and wind speed (zonal and meridional)
+            calculated for 25 bins of equal duration per day. The data are
+            presented on a bin by bin basis for Lander 1 sol (Mars solar day
+            after landing) 1-350, with no data existing between sols 117 and
+            133. Failure of the wind direction quadrant sensor on Lander 1
+            sol 45 required development of data recovery techniques to
+            produce wind direction information for periods after the failure.
+            For details on the data recovery techniques used to produce this
+            data set, see MURPHY_1986. Another data set is available for an
+            extensive period of Lander 2 observations and the Lander 1
+            observations made prior to the sol 45 failure
+            VL1/VL2-M-MET-4-BINNED-P-T-V-V1.0.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set contains binned and splined data obtained from
+      the Viking Meteorology Instrument System (VMIS) through
+      portions of the Viking Lander 1 mission.  The data set consists
+      of mean values of pressure, temperature, and wind speed (zonal
+      and meridional) calculated for 25 bins of equal duration per
+      day.  The data are presented on a bin by bin basis for Lander 1
+      sol (Mars solar day after landing) 1-350, with no data existing
+      between sols 117 and 133.  Failure of the wind direction
+      quadrant sensor on Lander 1 sol 45 required development of data
+      recovery techniques to produce wind direction information for
+      periods after the failure.  For details on the data recovery
+      techniques used to produce this data set, see MURPHY_1986.
+      Another data set is available for an extensive period of Lander
+      2 observations and the Lander 1 observations made prior to the
+      sol 45 failure; refer to PDS data set id
+      VL1/VL2-M-MET-4-BINNED-P-T-V-V1.0.
+ 
+      The 1/25 of a day temporal resolution of this data set make it
+      useful for the study of atmospheric motions in the martian
+      subtropics and diurnal variations in atmospheric properties.
+      For further background information on the VMIS and results from
+      this experiment, see CHAMBERLAIN_ETAL1976, HESS_ETAL_1977,
+      TILLMAN_ETAL_1979, BARNES_1980, HESS_ETAL_1980, LEOVY_1981,
+      SHARMAN_RYAN_1981, MURPHY_1986, and TILLMAN_1988.
+ 
+      This data set is composed of the following fields (listed as
+      the field name followed by a description):
+ 
+      SC_ID
+       Spacecraft id
+ 
+      SOL_LON
+       Areocentric longitude of the Sun (Ls), derived for the
+       local time corresponding to the beginning of each bin
+ 
+      VIKING_YEAR
+       Viking mission year, starting at 1 when the Viking
+       spacecraft reached Mars, and incremented at Ls = 0
+       every martian year
+ 
+      MARTIAN_DAY
+       The martian solar day (sol), starting at day 0 when
+       each Lander touched down
+ 
+      LOCAL HR_BIN
+       The hour bin number, starting with 0 at local midnight
+       and incremented by 1 every 1/25 of a martian day
+ 
+      PRESS_MEAN
+       The mean atmospheric pressure in each bin
+ 
+      ZON_WND_MEAN
+       The mean zonal wind speed in each bin
+ 
+      MER_WND_MEAN
+       The mean meridional wind speed in each bin
+ 
+      TEMP_MEAN
+       The mean ambient temperature in each bin
+ 
+ 
+      Processing Level Id            : 4
+      Software Flag                  : Y
+      Processing Start Time          : 1984-09
+      Processing Stop Time           : 1986-12
+      Native Start Time              : 97.2 AREOCENTRIC SOL LON,
+                                       EARTH YR 1976
+      Native Start Time              : 298.2 AREOCENTRIC SOL LON,
+                                       EARTH YR 1977
+ 
+ 
+    Parameters
+    ==========
+ 
+      Data Set Parameter &apos;ATMOSPHERIC PRESSURE&apos;
+      -----------------------------------------
+        The force per unit area exerted by an atmosphere, measured in
+        millibars (10**3 dyne cm**-2).
+ 
+        Data Set Parameter Name        : ATMOSPHERIC PRESSURE
+        Data Set Parameter Unit        : MILLIBAR
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : MARS SOLAR DAY / 25
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 1
+        Sampling Parameter Interval    : 1
+        Minimum Available Sampling Int : 1
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;TEMPERATURE&apos;
+      --------------------------------
+        The temperature of a system is a measure of the heat content
+        of the system, and determines if a system is in thermal
+        equilibrium with other systems.
+ 
+        Data Set Parameter Name        : TEMPERATURE
+        Data Set Parameter Unit        : DEGREES CELSIUS
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : MARS SOLAR DAY / 25
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 1
+        Sampling Parameter Interval    : 1
+        Minimum Available Sampling Int : 1
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;WIND VELOCITY&apos;
+      ----------------------------------
+        The velocity of a parcel of atmosphere in motion relative to
+        a reference location.
+ 
+        Data Set Parameter Name        : WIND VELOCITY
+        Data Set Parameter Unit        : METERS/SECOND
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : MARS SOLAR DAY / 25
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 1
+        Sampling Parameter Interval    : 1
+        Minimum Available Sampling Int : 1
+        Noise Level                    : N/A
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : VL1
+      Data Set Parameter Name         : TEMPERATURE
+      Instrument Parameter Name       : TEMPERATURE
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VL1
+      Data Set Parameter Name         : WIND VELOCITY
+      Instrument Parameter Name       : TEMPERATURE
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VL1
+      Data Set Parameter Name         : ATMOSPHERIC PRESSURE
+      Instrument Parameter Name       : PRESSURE
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID       : N/A
+        Software                 : UNK
+        Product Data Set ID      : VL1-M-MET-4-BINNED-P-T-V-CORR-V1.0
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      The pressure transducers were calibrated to approximately 0.01
+      to 0.02 millibars accuracy over the ranges expected for martian
+      atmospheric pressure variation.  Calibrations to accuracies
+      greater than allowed by the digitizing system were accomplished
+      by test support instrumentation.  Repeatability from year to
+      year of the daily average pressures indicates that the
+      transducers have remained stable to significantly better than
+      0.04 millibars throughout the mission, possibly maintaining
+      stabilities on the order of 0.01 millibars.  Due to the binned
+      nature of this data set, accuracy is not limited by the
+      pressure digitization.
+ 
+      The ambient temperature sensor consists of three thermocouples
+      wired in parallel.  It is capable of measuring over the entire
+      range of expected martian temperatures with an accuracy of
+      about 1.5 degrees Celsius.  Problems with this sensor on Lander
+      2 limit its accuracy to about 3 degrees Celsius (see
+      HESS_ETAL_1977).  Note that the effects of Lander interference
+      (ie, wind flowing over the lander) are not included in this
+      data set.
+ 
+      Wind speed is measured by means of two hot film anemometers
+      oriented orthogonal to each other and lying in the horizontal
+      plane.  These hot film elements were maintained at a nominal
+      overheat temperature of 100 degrees Celsius above the air
+      temperature measured by a reference temperature sensor.  The
+      power required to maintain each anemometer at the specified
+      temperature was a function of the component of the wind speed
+      orthogonal to the element.  Wind speed accuracy is about 10%
+      over most of the range (about 2-150 meters per second) but
+      degrades somewhat for very light winds.  Lander interference,
+      ie, wind flowing over the lander, also degrades accuracy;
+      ground testing indicates that the degradation should not be
+      much in excess of 10% for the system as a whole.
+ 
+      The wind speed sensors also measure wind direction, but with a
+      fourfold ambiguity.  Selection of the proper quadrant is
+      accomplished by a quadrant sensor, consisting of a heated
+      cylindrical platinum core (maintained at a 100 degrees Celsius
+      overheat) surrounded by four thermocouple junctions at equal
+      angles and distance from the core.  Thermocouples on opposite
+      sides of the post comprised a thermocouple pair which was
+      connected in series, allowing for measurement of the
+      temperature differences across each pair.  These differences
+      resulted from the thermal wake in the lee of the heated center
+      core.  The quadrant sensor values were functions, though not
+      single-valued, of wind speed.  The redundant wind speed and
+      directional information provided by both the wind speed and
+      quadrant sensors was combined using a least squares technique
+      to give the best estimates of wind speed and direction.
+      Overall accuracy in wind direction measurement is about 10%.
+ 
+      Failure of the quadrant sensor on Lander 1 sol 45 (see
+      HESS_ETAL_1977) required development of special data recovery
+      techniques to produce wind direction information for periods
+      after the failure.  For details on the data recovery techniques
+      used to produce this data set, see MURPHY_1986.  Another data
+      set is available for an extensive period of Lander 2
+      observations and the Lander 1 observations made prior to the
+      sol 45 failure; refer to PDS data set id
+      VL1/VL2-M-MET-4-BINNED-P-T-V-V1.0
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>MAG TAPE</medium_type>
+            <nssdc_collection_id>75-075C-07M</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

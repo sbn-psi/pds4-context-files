@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-x-rpcmag-4-cr4b-resampled-v3.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER CHECK RPCMAG 4 CR4B RESAMPLED V3.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rpcmag.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:unk.unk::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-x-rpcmag-4-cr4b-resampled-v3.0__browserp_ro-x-rpcmag-4-cr4b-resampled-v3.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Glassmeier, K.H., H. Boehnhardt, D. Koschny, E. Kuhrt, and I. Richter, The
+                   Rosetta Mission: Flying Towards the Origin of the Solar System, Space Science
+                   Reviews, 128(1-4), 1-21, Feb. 2007.
+            </reference_text>
+            <description>reference.GLASSMEIERETAL2007A</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-X-RPCMAG-4-CR4B-RESAMPLED-V3.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER CHECK RPCMAG 4 CR4B RESAMPLED V3.0</data_set_name>
+        <data_set_release_date>2010-03-03</data_set_release_date>
+        <start_time>2009-01-31T19:53:20Z</start_time>
+        <stop_time>2009-02-01T00:46:08Z</stop_time>
+        <producer_full_name>INGO RICHTER</producer_full_name>
+        <citation_text>
+            Richter,I., Glassmeier, K.H.,Eichelberger. H, ROSETTA RPCMAG
+            CRUISE PHASE 4-2 (CR4B) RESAMPLED DATA RECORD V3.0,
+            RO-SS-RPCMAG-4-CR4B-RESAMPLED-V3.0, PDS, 2009
+        </citation_text>
+        <data_set_terse_desc>
+            ohis dataset contains RESAMPLED DATA of the Cruise Phase 4-2,
+            named CR4B. Included are the data of the Passive Checkout PC9
+            from January 31 until February 1, 2009.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains RESAMPLED DATA of the Cruise Phase 4-2,
+            named CR4B. Included are the data of the Passive Checkout PC9
+            from January 31, 2009 until February 01 , 2009.
+        </abstract_desc>
+        <data_set_desc>
+ 
+Data Set Overview
+=================
+ 
+ 
+The data from the ROSETTA PLASMA CONSORTIUM (RPC) Fluxgate
+Magnetometer(MAG)was submitted by Ingo Richter (TM) for the RPCMAG
+team. The PI of the team is Karl-Heinz Glassmeier.
+ 
+ 
+The data have been measured during
+ 
+ -The Passive Checkout Phase (PC9) at
+  January 31 and Feburary 1, 2009
+ 
+All magnetic field data are calibrated, resampled data. That means the
+data represent the 3 components of the magnetic field measured in
+physical units (nT). Calibration has been applied according to the
+Ground calibration results which means:
+- temperature dependent offset calibration
+- temperature dependent sensitivity calibration
+- temperature dependent misalignment calibration
+ 
+ 
+Data are given in different coordinates, dependent on the calibration
+LEVEL.
+ 
+ LEVEL_F :  averaged data in s/c-coordinates
+            Source of these data are either LEVEL_B or LEVEL_K data.
+ 
+ LEVEL_G :  averaged data in ECLIPJ2000-coordinates
+            Source of these data are either LEVEL_C or LEVEL_L data.
+ 
+ LEVEL_H :  averaged data in ECLIPJ2000-coordinates,
+            Reaction wheel influence eliminated,
+            Data available for disturbed times only
+            Source of these data are either LEVEL_C or LEVEL_L data.
+ 
+ 
+Bad vectors have been removed. Any s/c caused residual magnetic fields
+are not eliminated. The ground temperature model for the sensor
+calibration has been improved (expanded for a wider temperature range
+down to - 130 deg C) using long term temperature model obtained
+from flight data.
+The data are sorted by the sensor (OB: outboard sensor, IB: inboard
+sensor)and the measurement mode (M1..M6) and average interval (A&lt;n&gt;,
+where n denotes the average interval in seconds). Data can uniquely be
+identified by their file names.
+Averaging means calculating a mean value of of the specified interval
+in time domain. It does not mean any mixing of data from the OB and IB
+sensor.
+ 
+Normally the OB is the Primary (Pri) and the IB is the Secondary (Sec)
+sensor. However, this order can be toggled by TCs. This feature has
+been tested especially and only during the commissioning phases.
+ 
+ 
+In cases were the PRIMARY and SECONDARY sensor were toggled the
+individual data files (OB/IB) will contain data measured with
+different sampling rates according to the actual sampling rates of the
+PRIMARY and SECONDARY sensors. Refer to the MODE DESCRIPTION table
+below. The actual sampling rate is the only indicator showing which
+sensor is the primary and which is the secondary one.
+ 
+ 
+LEVEL_H data were only generated if the  signature of the Reaction
+wheel rotations showed up in the calibrated data. A correction could
+be achieved for only for higher frequently sampled data. For sample
+rates below one Hertz the disturbing spectrum of the Reaction Wheels
+can hardly be distinguished from the background spectrum. Therefore
+only burst mode data of the OB sensor are corrected.
+ 
+ 
+ 
+Mode description:
+=================
+ 
+MODE SAMPLE RATE PACKET PERIOD PACKET LENGTH VECTOR RATE
+ 
+Minimum Mode M1  1/32 Hz 1024 s   32 Pri Vec 0.03125 vec/s
+                                   1 Sec Vec 0.000976 vec/s
+Normal Mode M2      1 Hz   32 s   32 Pri Vec 1 vec/s
+                                   1 Sec Vec 0.03125 vec/s
+Burst Mode M3      20 Hz   16 s  320 Pri Vec 20 vec/s
+                                  16 Sec Vec 1 vec/s
+Medium Mode M4      5 Hz   32 s  160 Pri Vec 5 vec/s
+                                   1 Sec Vec 0.03125 vec/s
+Low Mode M5      0.25 Hz  128 s   32 Pri Vec 0.25 vec/s
+                                   1 Sec Vec 0.007812 vec/s
+Test Mode M6       20 Hz   16 s  320 Pri Vec 20 vec/s
+                                   1 Sec Vec 0.0625 vec/s
+HK Mode                    32 s    8 words 0.03125 vec/s
+ 
+ 
+ 
+FILENAME CONVENTION &amp; Mode Coding
+===================================
+Due to operational constraints it might happen that the instrument
+mode or the primary sensor has to be switched during a specific
+observation.
+The actual mode and the primary sensor of the instrument can easily
+be identified by analyzing the filename of the actual data files. The
+complete filename convention is listed in the EAICD, chapter 3.1.4.
+ 
+The filenames for RESAMPLED averaged data (CLE,CLF,CLG,CLI) are coded
+as follows:
+ 
+&lt;inst&gt;  &lt;begin of observation&gt;_&lt;level&gt;_&lt;sensor&gt;_A&lt;average&gt;.&lt;ext&gt;
+RPCMAG          yymmdd           CLE      IB    A60         LBL
+                                 CLF      OB                TAB
+                                 CLG
+                                 CLI
+ 
+ 
+Example: RPCMAG040528_CLG_OB_A20.LBL
+         RPCMAG040528_CLG_OB_A20.TAB
+ 
+Average denotes the time interval for one average period in seconds.
+ 
+ 
+The filenames for RESAMPLED Heater or Reaction Wheel influenced data
+(CLK, CLL, CLH)  are coded as follows:
+ 
+&lt;inst&gt;  &lt;begin of observation&gt;_&lt;level&gt;_&lt;sensor&gt;_&lt;inst mode&gt;.&lt;ext&gt;
+RPCMAG         yymmddThhmm       CLK      IB      M1..M6      LBL
+                                 CLL      OB                  TAB
+                                 CLI
+ 
+Example: RPCMAG040528T1230_CLK_OB_M3.LBL
+         RPCMAG040528T1230_CLK_OB_M3.TAB
+ 
+ 
+ 
+ 
+Geometry Information - Coordinate System
+========================================
+The geometry items
+  SC_SUN_POSITION_VECTOR
+  SC_TARGET_POSITION_VECTOR
+  SC_TARGET_VELOCITY_VECTOR
+provided in the label of the data product are relative to the
+ECLIPJ2000 frame. This reference frame is built up by  Ecliptic
+Coordinates related to Equinox of Epoch J2000.
+Orientation:
+    X: Pointing from SUN to Vernal Equinoxe,
+    Y: perpendicular to X in Ecliptic Plane,
+    Z: Perpendicular to Ecliptic plane, pointing up
+ 
+The items
+  SUB_SPACECRAFT_LATITUDE
+  SUB_SPACECRAFT_LONGITUDE
+are given in the PLANETOCENTRIC coordinate system.
+ 
+All these geometry parameters are computed at time t=START_TIME.
+Distances are given in km, angles in degrees.
+        </data_set_desc>
+        <confidence_level_note>
+This dataset has been reviewed by two
+                        independent review teams in autumn 2008.
+                        After these reviews the dataset has been
+                        accepted by the Planetary Science Archive(PSA)
+                        of the ESA and by the Planetary Data System
+                        (PDS) of NASA for the longterm archiving.
+                        The data have been processed  on best effort
+                        base according to the procedures described in
+                        RO-IGEP-TR0028: Step by Step Calibration
+                        Procedure. Quality  flags are attached for
+                        CALIBRATED and RESAMPLED data as described in
+                        the EAICD RO-IGEP-TR0009.
+        </confidence_level_note>
+        <archive_status>IN_LIEN_RESOLUTION</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

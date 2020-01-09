@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ice-c-plawav-3-rdr-esp-giacobin-zin-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ICE PLASMA WAVE ELECTRIC FIELD MEASUREMENT DATA</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_cometary_explorer::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ice::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:plawav.ice::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.giacobini-zinner::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ice-c-plawav-3-rdr-esp-giacobin-zin-v1.0__browserp_ice-c-plawav-3-rdr-esp-giacobin-zin-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Reinhard, R and B. Battrick (eds), &apos;Space Missions to Halley&apos;s Comet&apos;, European
+                   Space Agency ESA SP-1066, ESA Pub Div, Moordwijk, Netherlands, 1986.
+            </reference_text>
+            <description>reference.ESA-SP1066</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ICE-C-PLAWAV-3-RDR-ESP-GIACOBIN-ZIN-V1.0</data_set_id>
+        <data_set_name>ICE PLASMA WAVE ELECTRIC FIELD MEASUREMENT DATA</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1985-09-10T23:12:55.070Z</start_time>
+        <stop_time>1985-09-14T20:51:13.320Z</stop_time>
+        <producer_full_name>INTERNATIONAL HALLEY WATCH</producer_full_name>
+        <citation_text>
+            Chang, S., ICE PLASMA WAVE ELECTRIC FIELD MEASUREMENT DATA,
+            ICE-C-PLAWAV-3-RDR-ESP-GIACOBIN-ZIN-V1.0, NASA Planetary Data
+            System, 1995.
+        </citation_text>
+        <data_set_terse_desc>
+            ICE plasma wave electric field measurements for encounter with
+            1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Plasma Wave Data were submitted to National Space Science
+            Data Center after the Principal Investigator&apos;s death (Scarf)
+            by S. Chang of TRW. For the electric field data, the time
+            interval submitted was Sept 9 - 14, 1985 was included. That
+            information, as well as an explanation of the reformatted data is
+            detailed.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+Data Set Overview
+=================
+ 
+    The Plasma Wave Data were submitted to National Space
+    Science Data Center after the Principal
+    Investigator&apos;s death (Scarf) by S.  Chang of TRW.
+     For the electric field data, the time interval
+    submitted was Sept 9 - 14, 1985; only a file layout
+    was included.  That information, as well as an
+    explanation of the reformatted data is detailed
+    below:
+ 
+    The filenames were submitted with the following
+    format
+ 
+ 
+    PEyymmdd.#
+    where P signifies processed ascii data
+    E stands for e-field data
+    yy is the last 2 digits of the year
+    mm is a decimal month
+    dd stands for day
+    hh stands for hour
+    # is a file number that consecutively increases
+ 
+ 
+    E-channel data file
+ 
+    Header - two lines
+ 
+    Year and Day of Year Number File starting time (in
+    milliseconds from the start of the day and in
+    hh:mm:ss.ss) and file ending time (in the same
+    format)
+ 
+    Subheader - one line (flagged by a -99 at the
+    beginning of the line)
+ 
+    Bit rate (values: 1 = 1 second data samples, 2 = 0.5
+    second, 3 = 2 second, 4 = 8 second) and antenna modes
+    (values: 1 = u, 2 = v, 0 = bad) separated by commas.
+     Note that subheaders may not always be followed by
+    data.  If there was bad header data, the frame was
+    zeroed out.
+ 
+     Data - Time in milliseconds, calibrated 16 channel
+    data (in order of lowest to highest frequency.
+     Values: 17.8, 31.6, 56.2, 100, 178, 316, 562, 1000,
+    1780, 3160, 5620, 10000, 17800, 31600, 56200, 100000
+    Hz)
+ 
+    These data were reformatted into simplified ASCII
+    tables (Emmdd###.tab) as follows:
+ 
+    1.  the lines with year, and DOY are dropped; the
+    TIME is represented in the PDS label as a
+    MEASUREMENT_START_ or MEASUREMENT_STOP_ value.
+    2.  the flag fields are dropped; the processing
+    information is contained in the description field of
+    the PDS label (same filename, but &apos;.lbl&apos; extension).
+    3.  all the intervening flag fields have been
+    dropped; the data now organized as a flat ASCII table
+    terminated by a carriage return and line field.
+ 
+     NOTE: the sampling rate changed from 1 sec (Sept 9 -
+    11) to 2 sec after 18:38 on Sept 12.  In addition,
+    some of the indicated time ranges for the filename
+    are not exact, e.g., E1109038 has data from 09 h
+    through 11 h 55m.
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      N/A
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

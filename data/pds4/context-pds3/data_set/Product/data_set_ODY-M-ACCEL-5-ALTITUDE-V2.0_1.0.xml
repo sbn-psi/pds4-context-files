@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ody-m-accel-5-altitude-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ODY ACCELEROMETER ALTITUDE DATA RECORDS V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.2001_mars_odyssey::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ody::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:accel.ody::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ody-m-accel-5-altitude-v2.0__browserp_ody-m-accel-5-altitude-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H., A.M. Dwyer, J.L. Hanna, G.M. Keating, B.E. George, P.E. Escalera
+                   and M.R. Werner, M. R., Application of accelerometer data to Mars Odyssey
+                   aerobraking and atmospheric modeling. J. Spacecraft Rockets 42, 435-443, 2005
+            </reference_text>
+            <description>reference.TOLSONETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ODY-M-ACCEL-5-ALTITUDE-V2.0</data_set_id>
+        <data_set_name>ODY ACCELEROMETER ALTITUDE DATA RECORDS V2.0</data_set_name>
+        <data_set_release_date>2007-11-01</data_set_release_date>
+        <start_time>2001-10-31T01:00:57.00Z</start_time>
+        <stop_time>2002-01-11T07:19:04.00Z</stop_time>
+        <producer_full_name>ROBERT TOLSON</producer_full_name>
+        <citation_text>
+            R.H. Tolson, J.R. Murphy, R.F. Beebe and L.F. Huber,
+            ODY-M-ACCEL-5-ALTITUDE-V2.0, NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Odyssey Accelerometer altitude data
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      All ALTITUDE data are packaged by periapsis number for each
+      aerobraking orbit. ALTITUDE data are provided in a table labeled
+      Pyyy.tab where &apos;yyy&apos; is the three digit periapsis number.
+ 
+ 
+    Parameters
+    ==========
+      Altitude:                   Units = km
+      Latitude:                   Units = degrees
+      Longitude:                  Units = degrees
+      Local Solar Time:           Units = N/A
+      Longitude of the Sun:       Units = degrees
+      Solar Zenith Angle:         Units = degrees
+      Density:                    Units = kg/km**3
+      Sigma Density:              Units = kg/km**3
+      Scale Height:               Units = km
+      Sigma Scale Height:         Units = km
+ 
+ 
+    Data
+    ====
+      For each orbit, ALTITUDE data consist of an 13 by 10 array in the file
+      folder Pyyy. Each row gives atmospheric characteristics at a constant
+      altitude. When applicable, inbound and outbound legs are in separate
+      rows. The altitude levels going from row 1 to row 11 are: periapsis,
+      1.26 nbar inbound, 1.26 nbar outbound, 100 km inbound, 100 km outbound,
+      110 km inbound, 110 km outbound, and so on to 140 km inbound, 140 km
+      outbound. The columns from one to ten are separated as follows:
+      altitude, latitude, longitude, local solar time, longitude of the sun,
+      solar zenith angle, density, sigma density, scale height, and sigma
+      scale height.
+ 
+ 
+    Processing
+    ==========
+      Density and density scale heights are provided at reference altitudes
+      of periapsis, 1.26 nbar, 100, 110, 120, 130, and 140 km. Except for
+      periapsis, these are obtained by a least squares fit to the 39 point
+      running mean data sets that span 5 km on either side of a reference
+      altitude for both the inbound and outbound portions of the orbit.
+      The values at periapsis are obtained by a similar fit to all data
+      within 10 km of the periapsis altitude. See [TOLSONETAL2005].
+ 
+ 
+    Coordinate System
+    =================
+      Latitude and longitude are in the IAU Mars Centered Mars Equatorial
+      System. Altitude is above the IAU reference ellipsoid with a=3396 km
+      and f=0.005206.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      Standard deviations on density and scale height are based on the formal
+      covariance matrix for the linear regression of log density and altitude.
+      Data noise is assumed to be the standard deviation of the fit.
+ 
+ 
+    Review
+    ======
+      Comparisons were made with operational data sets. Deviations were within
+      expectations.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data coverage during an aerobraking pass varied throughout the mission.
+      The nominal pass assured that sufficient data were recovered above 250
+      km to calibrate the accelerometers both inbound and outbound.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

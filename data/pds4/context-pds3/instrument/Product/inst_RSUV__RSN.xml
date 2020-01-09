@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:rsuv.rsn</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VERY LARGE ARRAY for RSN</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.rsn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zdenek (ed.), &apos;The Comet Halley Archive Summary Volume&apos;, Jet
+                   Propulsion Laboratory, California Institute of Technology, Pasadena,
+                   California, JPL D-400-450, August 1991.
+            </reference_text>
+            <description>reference.JPL_D-400-450</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>VERY LARGE ARRAY</instrument_name>
+        <instrument_desc>
+ 
+ 
+    Instrument Overview
+    ===================
+    Radio interferometers measure a source&apos;s visibility
+    function, which is the Fourier transform of the source
+    brightness distribution. In aperture synthesis imaging, a
+    set of measurements of the visibility function are Fourier
+    transformed to obtain an image of the source brightness
+    distribution. Unfortunately, the processing steps required
+    to make a map force the observer to specify many parameters
+    that determine how the visibility data will be transformed
+    to make the image. The specification of these parameters and
+    the Fourier transformation of the data, in our view,
+    constitutes an interpretation of the data, and runs counter
+    to the philosophy of a data archive. Thus, we have preserved
+    the actual visibility data in this archive.
+ 
+         The visibility data are presented in the extended FITS
+    GROUP data format. This is the format currently used for
+    visibility data by many of the world&apos;s interferometers, and
+    FITS readers for visibility data should be able to read the
+    files prepared for the IHW archive directly. We have tested
+    the files in the data reduction program for the U.S.
+    National Radio Astronomy Observatory (Astronomical Image
+    Processing System = AIPS), and in fact the files are quite
+    similar to the UVFITS format of AIPS. For spectral line
+    data, AIPS cannot Fourier transform more than eight spectral
+    line channels at a time. Therefore, following the style of
+    the NRAO VLA, we have archived the 32 channel data that were
+    typically obtained in 4 separate FITS files with 8 channels
+    in each file. A fifth file usually accompanies this data and
+    contains the broadband continuum data recorded at the same
+    time as the spectral line data.
+ 
+ 
+    Scientific Objectives
+    =====================
+         Radio Astronomy is a developing new technique for the
+    study of comets. In some areas, such as observations of the
+    OH radical via its 18 cm transitions, the observational
+    procedures and analysis are well developed. Studies in these
+    areas have proved their value since they both provide new
+    probes of important physical processes as well as a window
+    on physical processes which are less well-known and less
+    accessible to study by other techniques. In many other areas,
+    however, the study of comets at radio wavelengths continues
+    to be primarily an exploratory endeavor. In recognition of
+    this fact, the IHW Radio Science Discipline Specialist team
+    felt that it was important to attempt many different kinds of
+    observations during this campaign on Halley&apos;s Comet, since each
+    observation has scientific merit as an exploration. Thus, we
+    have been careful to document and include all data submitted
+    to this archive by radio observers.
+ 
+         The P/Halley Archive contains data from 36 different
+    observing groups, representing a range of techniques. The
+    majority of the observational data comes in the well
+    developed area of 18cm OH observations. However, many other
+    projects were attempted as well. Approximately 75% of the
+    groups who are known to have obtained useful data on the
+    comet have submitted it to the archive, and we are grateful
+    to them for their contributions.
+ 
+ 
+
+        </instrument_desc>
+        <instrument_id>RSUV</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Radio</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

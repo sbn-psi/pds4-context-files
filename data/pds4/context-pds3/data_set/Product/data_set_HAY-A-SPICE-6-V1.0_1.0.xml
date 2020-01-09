@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.hay-a-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>HAYABUSA SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.hayabusa::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.hay::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.hay::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.25143_itokawa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hay-a-spice-6-v1.0__browserp_hay-a-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hay-a-spice-6-v1.0__browser_hay-a-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hay-a-spice-6-v1.0__browser_wgc_hay-a-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>HAY-A-SPICE-6-V1.0</data_set_id>
+        <data_set_name>HAYABUSA SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2009-12-01</data_set_release_date>
+        <start_time>2005-09-11T05:51:38Z</start_time>
+        <stop_time>2005-11-19T23:54:03Z</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., N. Hirata, R. Nakamura, Y. Yamamoto, O.S.
+            Barnouin-Jha, D.K. Yeomans, and C.H. Acton, HAYABUSA SPICE
+            KERNELS V1.0, HAY-A-SPICE-6-V1.0, NASA Planetary Data System,
+            2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the Hayabusa mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Hayabusa SPICE data
+            files (``kernel files&apos;&apos;) for the surveying and
+            collection phases of the mission. The SPICE data files, which can
+            be accessed using SPICE software, contain geometric and other
+            ancillary information needed to recover the full value of the
+            science instrument data. In particular SPICE kernels provide
+            spacecraft and planetary ephemerides, instrument mounting
+            alignments, spacecraft orientation, spacecraft sequences of
+            events, and data needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of Hayabusa SPICE data
+      files (``kernel files&apos;&apos;) for the surveying and collection phase
+      of the mission. The SPICE data files, which can be accessed using
+      SPICE software, contain geometric and other ancillary information
+      needed to recover the full value of the science instrument data.
+      In particular SPICE kernels provide spacecraft and planetary
+      ephemerides, instrument mounting alignments, spacecraft
+      orientation, spacecraft sequences of events, and data needed for
+      relevant time conversions.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or fixed
+      spacecraft and instrument structures. They provide position and
+      velocity, given in a Cartesian reference frame. SPK files are
+      located under the ``data/spk&apos;&apos; directory of this data set.
+ 
+      PCK kernels contain certain physical, dynamical and
+      cartographic constants for target bodies, such as size and shape
+      specifications, and the orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos;&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos;&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos;&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. In some cases
+      EK files are used to storing database-type information such as
+      parameter value tables, triangular shape model data, etc. EK
+      files are located under the ``data/ek&apos;&apos; directory of this data
+      set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos;&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock calibration
+      data required to perform a mapping between Ephemeris time (ET)
+      and spacecraft on-board time (SCLK.) SCLK files are located under
+      the ``data/sclk&apos;&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under
+      the ``data/fk&apos;&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of Hayabusa kernels included
+      in this data set is provided in the CONFIDENCE_LEVEL_NOTE section
+      of this file while details specific to individual files are found
+      in the ``*info.txt&apos;&apos; files in the corresponding data directory.
+      The most detailed description of the data in each file is
+      provided in metadata included inside the file -- in the
+      description area of text kernels or in the comment area of binary
+      kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read
+      SPICE kernel files. SPICELIB software is highly documented
+      via internal headers. Additional documentation is available
+      in separate ASCII text files called Required Reading files.
+      For example, the S- and P- Kernel (SPK) Required Reading File,
+      named SPK.REQ, describes use of the SPK kernel file readers
+      and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos;&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos;&apos; directory. For more
+      information about the Hayabusa meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This data set contains SPICE kernel files created during mission
+      operations and post mission data reconstruction and analysis.
+      Some general information about this collection follows here, but
+      the prospective user is also referred to extensive descriptions
+      (metadata) about each file that are stored inside each kernel
+      file. Those metadata provide detailed information regarding the
+      information source from which the data were derived, the type of
+      processing applied to the source data, applicability of the data,
+      etc. Metadata are located in the ``comment area&apos;&apos; for binary
+      kernel types (SPK, CK, DBK), accessible using either the COMMNT
+      or SPACIT utility program found in the NAIF Toolkit. Metadata are
+      located after ``\begintext&apos;&apos; markers within the text kernel types
+      (PCK, IK, FK, LSK, SCLK), accessible by using any available text
+      file display tool such as a word processor, text editor, or the
+      unix ``more&apos;&apos; or ``cat&apos;&apos; commands.
+ 
+      In some cases data accuracy information does not exist because
+      it could not be estimated even after mission completion.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;&apos;
+      not addressed herein the reader is invited to examine subsequent
+      SPICE archive releases associated with this data set (if such
+      exist), or to contact the NAIF node of the Planetary Data System
+      for possible further information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      The SPK files included in this dataset provide reconstructed
+      trajectory of the Hayabusa spacecraft, ephemeris data for the
+      mission target asteroid Itokawa, Solar System planets, and the
+      Sun.
+ 
+      The spacecraft trajectory SPK files provided in this data set
+      include SPKs created by the Hayabusa Joint Science Team (HJST),
+      Dr. Olivier S. Barnouin-Jha, and NAIF.
+ 
+      The HJST&apos;s set of spacecraft trajectory SPKs includes a few dozen
+      short-coverage SPKs (``hayabusa_YYYYMMDD_YYYYMMDD_v01.bsp&apos;&apos;)
+      produced during operations near the asteroid and one
+      long-coverage SPK (``hayabusa_itokawarendezvous_v01.bsp&apos;&apos;)
+      produced at the end of operations near the asteroid. These files
+      were created by HJST using the Hayabusa position and velocity
+      data relative to Itokawa determined by the spacecraft on-board
+      software. The long-coverage SPK supersedes all short coverage
+      SPKs.
+ 
+      Dr. Barnouin-Jha&apos;s SPK (``hay_osbj_050911_051118_v1.bsp&apos;&apos;)
+      was created from the Hayabusa position data determined by joint
+      processing of LIDAR, WAC, and Itokawa shape data.
+ 
+      In an attempt to resolve some of the issues found in both HJST&apos;s
+      and Dr. Barnouin-Jha&apos;s SPKs at the time of the archive
+      preparation NAIF created the ``touched-up&apos;&apos; versions of the
+      long-coverage HJST&apos;s SPK and Dr. Barnouin-Jha&apos;s SPK. These SPKs
+      are named ``hay_jaxa_050916_051119_v1n.bsp&apos;&apos; and
+      ``hay_osbj_050911_051118_v1n.bsp&apos;&apos;. For more information about
+      issues with the original SPKs and what was done to make the
+      ``touched-up&apos;&apos; SPKs see the ``hayspice.htm&apos;&apos; document provided
+      under the ``document&apos;&apos; directory of the data set.
+ 
+      The asteroid Itokawa ephemeris SPK files provided in this data
+      set include two files created by JPL&apos;s Solar System Dynamics
+      (SSD) group. The first SPK, ``sb_25143_140.bsp&apos;&apos;, was officially
+      delivered to the project by SSD three months before the start of
+      operations near Itokawa. The second SPK,
+      ``itokawa_1989_2010.bsp&apos;&apos;, was created by HJST using SSD&apos;s
+      HORIZONS service during operations near Itokawa. Although both
+      files were created using the same initial conditions and models,
+      the asteroid ephemerides provided by them differ by about a
+      hundred meters, which is less than 2% of the 6.9 km 1-sigma
+      formal uncertainty of the initial conditions. This difference was
+      introduced in the second SPK due to integrating over a longer
+      time-span (1989-2010).
+ 
+      The planetary ephemeris SPK file included in this data set
+      (``de403s.bsp&apos;&apos;) is the DE-403 ephemeris used to integrate the
+      Itokawa trajectory provided in the Itokawa SPKs.
+ 
+      Additional information about SPK files provided in this data set
+      is available in the file ``data/spk/spkinfo.txt&apos;&apos;.
+ 
+ 
+      CK Files
+      ========
+ 
+      The CK files included in this dataset provide the orientation of
+      the Hayabusa spacecraft bus. All these CK files were produced
+      from engineering telemetry downlinked from the spacecraft. As is
+      often the case with spacecraft engineering telemetry-based
+      measurements, considerable uncertainty exists as to the accuracy
+      of such measurements, and, data quality (accuracy and
+      completeness) can vary significantly.
+ 
+      The spacecraft orientation CK files provided in this data set
+      include CKs created by HJST and NAIF.
+ 
+      The HJST&apos;s set of spacecraft orientation CKs includes a few dozen
+      short-coverage CKs (``hayabusa_YYYYMMDD_YYYYMMDD_v01.bc&apos;&apos;)
+      produced during operations near the asteroid and two
+      long-coverage CKs (``hayabusa_itokawarendezvous_v01.bc&apos;&apos; and
+      ``hayabusa_itokawarendezvous_v02.bc&apos;&apos;) produced at the end of
+      operations near the asteroid. These files were created from the
+      Hayabusa orientation determined by the spacecraft&apos;s on-board
+      software. The ``v02&apos;&apos; long-coverage CK supersedes all short
+      coverage CKs and the ``v01&apos;&apos; long-coverage CK.
+ 
+      In an attempt to resolve some of the issues found in HJST&apos;s CKs
+      at the time of the archive preparation NAIF created the
+      ``touched-up&apos;&apos; version of the ``v02&apos;&apos; CK. This CK is named
+      ``hayabusa_itokawarendezvous_v02n.bc&apos;&apos;. For more information
+      about issues with the original CKs and what was done to make the
+      ``touched-up&apos;&apos; CK see the ``hayspice.htm&apos;&apos; document provided
+      under the ``document&apos;&apos; directory of the data set.
+ 
+      Additional information about CK files provided in this data set
+      is available in the file ``data/ck/ckinfo.txt&apos;&apos;.
+ 
+ 
+      PCK Files
+      =========
+ 
+      The PCK files included in this data set provide size, shape and
+      orientation data for the mission target, asteroid Itokawa, and
+      for the Solar System planets and satellites. A description of
+      these data items and reference to their source is provided inside
+      the PCK files, which are simple text files that can be viewed
+      using any word processor, text editor or text display utility.
+ 
+      The Itokawa PCK files provided in this data set include a PCK
+      file with Itokawa rotation constants derived by the Hayabusa
+      Team of University of Aizu (``itokawa_aizu504.tpc&apos;&apos;) and and two
+      PCK files with the Itokawa rotation constants derived by Dr.
+      Robert W. Gaskell, Planetary Science Institute (PSI)
+      (``itokawa_gaskell.tpc&apos;&apos; and ``itokawa_gaskell_n3.tpc&apos;&apos;). The
+      Aizu PCK and the first Gaskell PCK are consistent with the
+      Itokawa shape models stored in the EK files included in this data
+      set. The second Gaskell&apos;s PCK (``_n3&apos;&apos;) is consistent with the
+      Itokawa shape models archived in the PDS data set
+      HAY-A-AMICA-5-ITOKAWASHAPE-V1.0.
+ 
+      The generic PCK file (``pck00008.tpc&apos;&apos;) provided in this data set
+      contains constants for the Solar System planets and satellites
+      taken from the official IAU/IAG/COSPAR report published in 2000.
+ 
+      Additional information about PCK files provided in this data set
+      is available in the file ``data/pck/pckinfo.txt&apos;&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      The FK files included in this data set provide definitions for
+      the Hayabusa spacecraft frames, mission-specific dynamic frames,
+      and the asteroid Itokawa body-fixed frame. Comments in the FK
+      files provide the frame specifications, descriptions of the frame
+      relationships, the source of and accuracy of the mounting
+      alignment information, etc.
+ 
+      The ``hayabusa_hp.tf&apos;&apos; FK defines the Hayabusa spacecraft frame
+      and the dynamic frame used as the reference in the HJST-produced
+      SPKs, as well as a few other dynamic frames intended to represent
+      the nominal pointing of the spacecraft for different attitude
+      modes. For historic reasons the Hayabusa instrument frame
+      definitions are not provided in this FK file; instead all frames
+      defined for a given instrument are included in the IK file for
+      that instrument.
+ 
+      The ``itokawa_fixed.tf&apos;&apos; FK defines the body-fixed frame for
+      asteroid Itokawa.
+ 
+      Both FK files were created by HJST.
+ 
+      Additional information about FK files provided in this data set
+      is available in the file ``data/fk/fkinfo.txt&apos;&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      The IK files included in this data set provide specifications for
+      the optical and physical instrument parameters and -- where
+      applicable -- field-of-view size, shape and orientation for the
+      Hayabusa instruments. In addition to these parameters, for
+      historic reasons, the Hayabusa IK files also contain the
+      instrument frame definitions that are normally found in the FK
+      files. Each IK file contains comments providing descriptions of
+      the included parameters and FOV and frame specifications.
+ 
+      All IK files provided in the data set were created by HJST. There
+      is one IK for each instrument (``amica31.ti&apos;&apos;, ``nirs10.ti&apos;&apos;,
+      ``xrs10.ti&apos;&apos;) except for LIDAR, for which there are two IK files
+      (``lidar10.ti&apos;&apos;, defining a 0.1 by 0.1 degrees FOV, and
+      ``lidar_v1.ti&apos;&apos;, defining a 0.0566 by 0.0566 degree FOV).
+ 
+      Additional information about IK files provided in this data set
+      is available in the file ``data/ik/ikinfo.txt&apos;&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      The SCLK file included in this data set provides a tabulation of
+      data needed to convert time measurements between ephemeris time
+      (ET) and Hayabusa spacecraft clock time (SCLK). This file was
+      created by HJST and is named ``hayabusa.tsc&apos;&apos;. The accuracy of
+      and issues with the correlation provided by this file are
+      discussed in the ``hayspice.htm&apos;&apos; document provided under the
+      ``document&apos;&apos; directory of the data set.
+ 
+      Additional information about SCLK files provided in this data set
+      is available in the file ``data/sclk/sclkinfo.txt&apos;&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      The LSK file included in this data set provides the most current
+      tabulation of ``leapseconds&apos;&apos; and other terms used in converting
+      time measurements between ephemeris time (ET) and Universal Time
+      (UTC) at the time when this data set was assembled (October
+      2009).
+ 
+      Metadata describing how the LSK data are obtained or computed is
+      contained inside the LSK text file. The time conversion provided
+      by SPICE LSK files is accurate to approximately 0.000030 seconds.
+ 
+      Additional information about LSK files provided in this data set
+      is available in the file ``data/lsk/lskinfo.txt&apos;&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      The EK files included in this data set provide tessellated
+      triangular plate data describing the shape of the asteroid
+      Itokawa. These files store plate data in the format used by the
+      SPICE PLATELIB package informally provided by NAIF to a number of
+      customers, including HJST, between 1997 and 2005. While NAIF
+      discontinued support for this package in 2006, the basic data
+      stored in the file -- vertex coordinates and plate-vertex
+      associations -- can still be accessed via either SPICE EK APIs or
+      using the INSPEKT utility program.
+ 
+      This data set includes two plate model EK files:
+      ``itokawa_aizu504.bdb&apos;&apos; containing data derived by the Hayabusa
+      Team of University of Aizu and ``itokawa_gaskell070104.bdb&apos;&apos;
+      containing data derived by Dr. Robert W. Gaskell, PSI. Both files
+      were created by HJST; the Aizu EK providing lower resolution data
+      was created at the end of operations near Itokawa while Gaskell&apos;s
+      file providing higher resolution data was created in 2007.
+ 
+      Additional information about EK files provided in this data set
+      is available in the file ``data/ek/ekinfo.txt&apos;&apos;.
+ 
+ 
+      Kernel Files Obtained from ISAS/JAXA Hayabusa Archive
+      =====================================================
+ 
+      Most kernels included in the archive were copied from the
+      Hayabusa Project Science Data Archive Information System
+      (http://hayabusa.sci.isas.jaxa.jp). Some of the kernels had names
+      that were not PDS-compliant and/or consistent with the naming
+      conventions used in other SPICE archives; these kernels were
+      renamed before inclusion in the archive as shown in this table:
+ 
+        Original Name                       Name in the Archived Data Set
+        ---------------------------------   -----------------------------
+        hayabusa_YYYYMMDD_YYYYMMDD_v01.bc   -
+        hayabusa_itokawarendezvous_v01.bc   -
+        itokawa_aizu504.bpl                 itokawa_aizu504.bdb
+        itokawa_gaskell070104.bpl           itokawa_gaskell070104.bdb
+        HAYABUSA_HP.TF                      hayabusa_hp.tf
+        itokawa_fixed.tf                    -
+        amica30.ti                          -
+        lidar10.ti                          -
+        nirs10.ti                           -
+        xrs10.ti                            -
+        itokawa_aizu504.tpc                 -
+        itokawa_gaskell.tpc                 -
+        hayabusa.tsc                        -
+        hayabusa_YYYYMMDD_YYYYMMDD_v01.bsp  -
+        hayabusa_itokawarendezvous_v01.bsp  -
+        itokawa_1989-2010.bsp               itokawa_1989_2010.bsp
+ 
+      (A ``-&apos;&apos; in the right column means that the file was archived
+      with its original name. YYYYMMDD in the daily CK and SPK files
+      names stands for the coverage begin and end dates.)
+ 
+ 
+      Kernel Files Provided by Dr. Olivier S. Barnouin-Jha
+      ====================================================
+ 
+      Four kernels included in the archive were provided by Dr. Olivier
+      S. Barnouin-Jha. Some of these kernels had non PDS-compliant
+      names and had to be renamed before inclusion in the archive. This
+      table lists the original and new file names:
+ 
+        Original Name              Name in the Archived Data Set
+        ------------------------   ---------------------------------
+        lidar_v1.ti                -
+        Sept-Nov_SPK.bsp           hay_osbj_050911_051118_v1.bsp
+        Itokawa_Gaskell_n3.tpc     itokawa_gaskell_n3.tpc
+        20050902-20051126_att.bc   hayabusa_itokawarendezvous_v02.bc
+ 
+      (A ``-&apos;&apos; in the right column means that the file was archived
+      with its original name.)
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

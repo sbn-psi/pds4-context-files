@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-rss-5-tps-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS RS: ATMOSPHERIC TEMPERATURE-PRESSURE PROFILES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-5-tps-v1.0__browserp_mgs-m-rss-5-tps-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-5-tps-v1.0__dvo_atm_mgs-m-rss-5-tps-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Clancy, R.T., B.J. Sandor, M.J. Wolff, P.R. Christensen, M.D. Smith, J.C.
+                   Pearl, B.J. Conrath, and R.J. Wilson, An Intercomparison of Ground-Based
+                   Millimeter, MGS TES, and Viking Atmospheric Temperature Measurements: Seasonal
+                   and Interannual Variability of Temperatures and Dust Loading in the Global Mars
+                   Atmosphere, Journal of Geophysical Research, 105, 9553-9571, 2000.
+            </reference_text>
+            <description>reference.CLANCYETAL2000</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Davies, M.E., V.K. Abalakin, A. Brahic, M. Bursa, B.H. Chovitz, J.H. Lieske,
+                   P.K. Seidelmann, A.T. Sinclair, and Y.S. Tjuflin, Report of the IAU/IAG/COSPAR
+                   Working Group on Cartographic Coordinates and Rotational Elements of the
+                   Planets and Satellites: 1991, Celestial Mechanics and Dynamical Astronomy, 53,
+                   377-397, 1992.
+            </reference_text>
+            <description>reference.DAVIESETAL1992B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Fjeldbo, G., A.J. Kliore, and V.R. Eshleman, The Neutral Atmosphere of Venus as
+                   Studied with the Mariner V Radio Occultation Data, Astron. J., 76, 123-140,
+                   1971.
+            </reference_text>
+            <description>reference.FJELDBOETAL1971</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hinson, D.P., R.A. Simpson, J.D. Twicken, G.L. Tyler, and F.M. Flasar, Initial
+                   Results from Radio Occultation Measurements with Mars Global Surveyor, Journal
+                   of Geophysical Research, 104, 26997-27012, 1999.
+            </reference_text>
+            <description>reference.HINSONETAL1999</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hinson, D.P., G.L. Tyler, J.L. Hollingsworth, and R.J. Wilson, Radio
+                   Occultation Measurements of Forced Atmospheric Waves on Mars, Journal of
+                   Geophysical Research, 106, 1463-1480, 2001.
+            </reference_text>
+            <description>reference.HINSONETAL2001</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hinson, D.P., M.D. Smith, and B.J. Conrath, Comparison of Atmospheric
+                   Temperatures Obtained through Infrared Sounding and Radio Occultation by Mars
+                   Global Surveyor, Journal of Geophysical Research, 109, E12002,
+                   doi:10.1029/2004JE002344, 2004.
+            </reference_text>
+            <description>reference.HINSONETAL2004</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tyler, G.L., G. Balmino, D.P. Hinson, W.L. Sjogren, D.E. Smith, R. Woo, S.W.
+                   Asmar, M.J. Connally, C.L. Hamilton, and R.A. Simpson, Radio Science
+                   Investigations with Mars Observer, Journal of Geophysical Research, 97,
+                   7759-7779, 1992.
+            </reference_text>
+            <description>reference.TYLERETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tyler, G.L., G. Balmino, D.P. Hinson, W.L. Sjogren, D.E. Smith, R.A. Simpson,
+                   S.W. Asmar, P. Priest, and J.D. Twicken, Radio science observations with Mars
+                   Global Surveyor: Orbit insertion through one Mars year in mapping orbit,
+                   Journal of Geophysical Research, 106, 23327-23348, 2001.
+            </reference_text>
+            <description>reference.TYLERETAL2001</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-RSS-5-TPS-V1.0</data_set_id>
+        <data_set_name>MGS RS: ATMOSPHERIC TEMPERATURE-PRESSURE PROFILES V1.0</data_set_name>
+        <data_set_release_date>2008-05-31</data_set_release_date>
+        <start_time>1998-01-28T03:38:00Z</start_time>
+        <stop_time>2006-09-19T23:56:00Z</stop_time>
+        <producer_full_name>DAVID P. HINSON</producer_full_name>
+        <citation_text>
+            Hinson, D.P., Mars Global Surveyor Radio Occultation Profiles of
+            the Neutral Atmosphere - Reorganized, MGS-M-RSS-5-TPS-V1.0, NASA
+            Planetary Data System, 2008.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Global Surveyor radio occultation neutral atmosphere
+            profiles - reorganized onto one volume.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains over 21000 temperature-pressure profiles
+            (TPS files) of the neutral atmosphere derived from Mars Global
+            Surveyor (MGS) radio occultation data. The profiles were
+            previously archived in the MGS-M-RSS-5-SDP-V1.0 data set along
+            with other reduced data products from the MGS Radio Science Team
+            (RST). Here they have been pulled from the original 38 volumes
+            and reorganized in chronological order on a single volume. The
+            profiles themselves have not been modified, and the labels have
+            been edited only to conform with the requirements of the new data
+            set. This set of profiles is accompanied by a single occultation
+            summary file which lists key characteristics of each experiment.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      MGS radio occultation experiments were conducted using a 3.6-cm
+      wavelength radio signal transmitted by the spacecraft and received
+      on Earth.  In principle this &apos;downlink&apos; configuration allows
+      atmospheric structure to be sampled twice per orbit. Occultation
+      entry and exit generally occurred in the northern and southern
+      hemispheres, respectively, and the latitude of the measurements
+      drifted gradually in response to changes in the observing geometry.
+      The experiments eventually visited essentially all latitudes on
+      Mars.  However, far more experiments were performed at occultation
+      entry than exit, owing to a problem with one of the gimbals used
+      to point the spacecraft high-gain antenna (HGA).  This resulted
+      in particularly dense coverage at latitudes of 60-80 deg in the
+      northern hemisphere. The coverage in longitude of the data set
+      is fairly dense and uniform with few exceptions.
+ 
+      Radio occultation temperature-pressure (T-p) profiles were
+      computed with standard vertical resolution (approximately 500 m);
+      an option to compute them at high resolution (approximately 20 m,
+      after correction for diffraction effects) was never exercised.
+      T-p files are stored as ASCII tables, preceded by a header record
+      which contains supplementary information as described below.
+ 
+      The headers from each individual file have been collected in a
+      single occultation summary file, which may be useful for scanning
+      the data set, identifying profiles of particular interest, and
+      reviewing the coverage in latitude, season, and local time.
+ 
+      David Hinson at Stanford University created all T-p profiles and
+      the occultation summary file.
+ 
+      For more information about these data, see [TYLERETAL1992],
+      [HINSONETAL1999], [HINSONETAL2001], [TYLERETAL2001], and
+      [HINSONETAL2004].
+ 
+ 
+    Parameters
+    ==========
+      Temperature-pressure profiles are tables of geopotential,
+      temperature, pressure, and molecular number density versus
+      radius from Mars&apos; center of mass.  Each profile extends from
+      the surface to the 10-Pa pressure level with a sample spacing
+      of about 1 km.  A header record prepended to each table
+      provides information about observing times and geometry,
+      surface conditions, and files used in the data processing.
+ 
+ 
+    Processing
+    ==========
+      T-p profiles are derived from raw receiver output in several
+      steps.
+ 
+      First, deterministic sources of frequency change are identified
+      and removed coherently. These included motion of the spacecraft,
+      motion of the Earth receiving station, drift of the UltraStable
+      Oscillator (USO), and relativistic effects associated with
+      gravity fields of solar system bodies.  This leaves the carrier
+      signal at a known frequency except for phase drift associated
+      with passage of the radio ray through Mars&apos; atmosphere and/or
+      ionosphere.  Drift associated with passage through solar plasma
+      or the Earth&apos;s atmosphere or ionosphere is assumed to be
+      negligible over the time of a Mars occultation (approximately
+      two minutes).
+ 
+      Second, using an accurate reconstruction of the spacecraft
+      trajectory, the phase of the signal versus time is converted
+      into a measure of refraction angle versus impact parameter --
+      the perpendicular distance between the incoming raypath and the
+      center of curvature of the atmosphere.
+ 
+      Third, the index of refraction versus radius is obtained using
+      an Abel inversion [FJELDBOETAL1971].  From knowledge of the
+      composition of the atmosphere and laboratory measurements of
+      refractive index for major constituents, index of refraction
+      versus radius for the neutral atmosphere is converted to
+      vertical distribution of mass density.
+ 
+      Fourth, assuming hydrostatic equilibrium and an ideal gas law,
+      the mass density profile is converted to a profile of both
+      temperature and pressure for the neutral atmosphere.
+ 
+ 
+    Data
+    ====
+      Data are stored on a single volume in the TPS directory
+      in subdirectories in the order they were collected.  Thirty-four
+      subdirectories have been defined with names of the form
+      yyyy_ddd  where  yyyy  is the year and  ddd  is the day-of-year
+      of the first profile in each directory.  Directory boundaries
+      have been chosen so that collections have common characteristics,
+      such as similar Ls values, or are easily separated by periods
+      when there was little MGS RST activity, such as solar conjunction
+      or spacecraft anomalies when no data were collected.  When these
+      criteria allowed more than 1000 profiles in a directory,
+      arbitrary boundaries were added so that the largest directory
+      contains only 971 profiles.  The directories and their
+      boundaries are summarized below.
+ 
+      Temperature-pressure profiles are stored with file names of
+      the form  ydddhmmC.TPS  where  y  is the least significant
+      digit of the year,  ddd  is the three-digit day number,
+      h  is a one-character string denoting the hour, and  mm  is
+      a two-character string denoting the minute in which data
+      acquisition began.  h  is  &apos;A&apos; if the hour was  00,  &apos;B&apos;
+      if the hour was  01, ... and &apos;X&apos; if the hour was 23.  In
+      most cases  mm  is the two-digit minute; but when data were
+      collected from two sources and the start time was in the
+      same minute, the second digit in  mm  was changed to a
+      letter in the second file name (minute  00  becomes  0A,  01
+      becomes  0B,  etc.).  C  is a single character
+      indicating the version of the file, starting with &apos;A&apos;.
+      T-p profiles from 2006 have file names in which  y  is set
+      to &apos;G&apos; to avoid conflict with files which might have
+      originated in 1996.  In fact, there were no occultation
+      profiles in 1996, but other data types do have files from
+      those years.
+ 
+      An occultation summary file is stored in the OCS directory.
+      Its file name is 801609AA.OCS where 801 indicates that the
+      first occultation was from January 1998 and 609 indicates that
+      the last occultation was from September 2006. &apos;AA&apos; is a two
+      character string which indicates that this is the first version
+      of the file.
+ 
+ 
+    Ancillary Data
+    ==============
+      OCCLOG.TAB in the DOCUMENT directory provides single-line
+      summaries for each observation opportunity.  Parameters listed
+      mostly relate to settings of and quick-look results from data
+      acquisition.  See detached PDS label OCCLOG.LBL for details.
+ 
+ 
+    Coordinate System
+    =================
+      MGS RST SDP files use a Mars centered body-fixed coordinate
+      system with positive east longitude.
+ 
+      Gravity models generally use the IAU 1991 [DAVIESETAL1992B]
+      coordinate frame.  Variations are noted in the labels of
+      specific gravity products.
+ 
+ 
+    Software
+    ========
+      None.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set was written on CD-WO media using the
+      Sun Ultra-60/PlexWriter/cdrtoaster system.  The CD-WO
+      volumes conform to ISO 9660 standards.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archive have been reduced as part of mission data
+      analysis activities of the MGS Radio Science Team.  Products
+      of questionable validity have been flagged or omitted.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the MGS Radio Science
+      Team prior to submission to the Planetary Data System (PDS).
+ 
+      All of the profiles had been in the public domain as elements
+      of the MGS-M-RSS-5-SDP-V1.0 data set for as much as seven years
+      before this reorganized data set was compiled.
+ 
+    Data Coverage
+    ==============
+ 
+      The following table describes the directories that contain
+      the profiles.  Each directory is represented by one row.  The
+      first two columns list the year and day-of-year of the first
+      and last profiles in each directory, respectively.  The first
+      column is also the directory name.  The third and fourth
+      columns provide the same information in standard calendar
+      format.  The fifth and sixth columns give the number of the
+      Martian year (MY, as defined by [CLANCYETAL2000]) and the
+      approximate areocentric longitude of the Sun (Ls, in degrees)
+      of the first and last profiles in each directory, respectively.
+      The last column specifies the number of profiles in each
+      directory.  Blank rows denote gaps caused by solar
+      conjunction (see below).
+ 
+       Start     End       Start       End      Start   End
+      yyyy_ddd yyyy_ddd  yyyy-mm-dd yyyy-mm-dd  MY/Ls  MY/Ls   Number
+      -------- --------  ---------- ----------  ------ ------  ------
+      1998_028 1998_100  1998-01-28 1998-04-10  23/264 23/308    88
+      1998_358 1998_365  1998-12-24 1998-12-31  24/074 24/077    36
+      1999_068 1999_086  1999-03-09 1999-03-27  24/108 24/116    97
+      1999_126 1999_178  1999-05-06 1999-06-27  24/135 24/161   882
+      1999_350 2000_038  1999-12-16 2000-02-07  24/264 24/297   800
+      2000_039 2000_152  2000-02-08 2000-05-31  24/297 25/000   838
+ 
+      2000_214 2000_305  2000-08-01 2000-10-31  25/029 25/070   854
+      2000_306 2001_031  2000-11-01 2001-01-31  25/070 25/111   904
+      2001_032 2001_122  2001-02-01 2001-05-02  25/111 25/155   687
+      2001_130 2001_197  2001-05-10 2001-07-16  25/159 25/197   690
+      2001_347 2002_058  2001-12-13 2002-02-27  25/290 25/334   906
+      2002_066 2002_137  2002-03-07 2002-05-17  25/338 26/014   702
+      2002_138 2002_196  2002-05-18 2002-07-15  26/014 26/041   536
+ 
+      2002_251 2002_304  2002-09-08 2002-10-31  26/065 26/089   544
+      2002_305 2002_365  2002-11-01 2002-12-31  26/089 26/116   557
+      2003_001 2003_080  2003-01-01 2003-03-21  26/116 26/156   694
+      2003_081 2003_161  2003-03-22 2003-06-10  26/156 26/201   720
+      2003_169 2003_253  2003-06-18 2003-09-10  26/205 26/258   654
+      2003_254 2003_291  2003-09-11 2003-10-18  26/258 26/282   405
+      2003_320 2004_019  2003-11-16 2004-01-19  26/299 26/336   436
+      2004_061 2004_100  2004-03-01 2004-04-09  26/358 27/017   388
+      2004_101 2004_145  2004-04-10 2004-05-24  27/017 27/038   723
+      2004_146 2004_203  2004-05-25 2004-07-21  27/038 27/064   819
+ 
+      2004_284 2004_357  2004-10-10 2004-12-22  27/099 27/133   696
+      2004_361 2005_090  2004-12-26 2005-03-31  27/135 27/185   898
+      2005_091 2005_181  2005-04-01 2005-06-30  27/185 27/241   971
+      2005_182 2005_238  2005-07-01 2005-08-26  27/241 27/276   597
+      2005_252 2005_296  2005-09-09 2005-10-23  27/285 27/312   794
+      2005_297 2005_334  2005-10-24 2005-11-30  27/312 27/333   604
+      2005_335 2005_365  2005-12-01 2005-12-31  27/333 27/350   610
+      2006_001 2006_050  2006-01-01 2006-02-19  27/350 28/014   309
+      2006_130 2006_181  2006-05-10 2006-06-30  28/051 28/073   381
+      2006_182 2006_218  2006-07-01 2006-08-06  28/073 28/089   699
+      2006_219 2006_262  2006-08-07 2006-09-19  28/089 28/109   724
+ 
+ 
+      Data coverage was limited by many factors.  This is
+      particularly true during the pre-mapping phases of the
+      mission, which extended into early 1999.  Prior to the
+      start of the mapping phase, the spacecraft frequently
+      conducted special maneuvers for aerobraking and temperature
+      control, and scientific observations were constrained by
+      numerous other operational issues.  The following discussion
+      focuses on the mapping phase of the mission, when data
+      collection was much more systematic.  The most significant
+      gaps in coverage fall into five categories.
+ 
+      Coverage in Local Time
+      ----------------------
+        These occultation measurements are geometrically constrained
+        to occur near the terminator within a restricted range of
+        local true solar time.  With few exceptions, observations at
+        latitudes between 60 deg N and 60 deg S are available only at
+        local times of about 3-6 hours.  Observations at local times
+        of 9-16 hours are available only at latitudes poleward of
+        60 deg, and this daytime coverage is generally restricted to
+        autumn and winter of the respective hemispheres.
+ 
+      Solar Conjunction
+      ------------------
+        The noise level of the radio occultation measurements
+        increased dramatically near solar conjunction.  This
+        prevented retrieval of profiles in the following intervals,
+        denoted by blank rows in the preceding table:
+        2000_153 - 2000_213
+        2002_197 - 2002_250
+        2004_204 - 2004_283
+        2006_263 - 2006_277
+ 
+      Beta Supplement
+      ----------------
+        The range of motion of one of the gimbals that controls
+        pointing of the spacecraft HGA was severely restricted
+        until late in the mission, when the obstruction vanished
+        for reasons unknown. During the extended intervals when
+        the failed gimbal prevented normal operations, the
+        spacecraft was configured in a &apos;beta supplement&apos; mode
+        that restored most of its functionality. This had no
+        effect on measurements at occultation entry (northern
+        hemisphere) but experiments could not be conducted
+        routinely at occultation exit (southern hemisphere) when
+        the spacecraft was in the beta supplement mode.  The
+        resulting loss of exit data was reduced slightly through
+        use of special spacecraft maneuvers that allowed
+        collection of radio occultation data over sequences of
+        typically 12 consecutive orbits at intervals of about
+        one month.  The spacecraft operated in the beta supplement
+        mode during the following periods, during which exit
+        measurements are extremely sparse:
+        2000_039 - 2001_171
+        2002_073 - 2003_253
+        2004_204 - 2005_251
+ 
+      Spacecraft Anomalies and Emergencies
+      --------------------------------------
+        The spacecraft occasionally stopped collecting scientific
+        data for periods of several days in response to problems
+        with flight software or hardware.  This prevented
+        occultation experiments from being conducted in the
+        following intervals:
+        2001_123 - 2001_129
+        2002_059 - 2002_065
+        2002_092 - 2002_100
+        2003_162 - 2003_168
+        2004_358 - 2004_360
+        2005_239 - 2005_251
+        2005_256 - 2005_261
+ 
+      Broadside Orbit / Highly Grazing Geometry
+      --------------------------------------------
+        In periods when the MGS orbit plane was nearly broadside
+        as viewed from Earth, the atmospheric occultation either
+        occurred in a highly grazing geometry or was entirely
+        absent.  For this reason no profiles are available in
+        the following intervals:
+        1999_179 - 1999_349
+        2001_198 - 2001_346
+        2006_051 - 2006_129
+ 
+      Anomalous HGA Motion
+      ---------------------
+        Throughout most of its mission, MGS orbited Mars with
+        its nadir panel facing the surface.  The HGA was
+        positioned at the end of a rotating boom that maintained
+        pointing toward Earth.  Radio occultation data were
+        calibrated to remove effects caused by the mean motion
+        of the HGA, but it was not possible to correct for
+        abrupt changes in HGA pointing.  The occultation data
+        are especially vulnerable to HGA motion associated with
+        two types of spacecraft activity: (1) repositioning of
+        the solar arrays, performed in discrete steps several
+        times per orbit, and (2) rewinding of the HGA, which
+        usually occurred when the spacecraft was behind Mars.
+        These types of HGA motion interfered with the
+        occultation experiments and prevented retrieval of
+        atmospheric profiles in the following periods:
+        2001_347 - 2002_006 (entry)
+        2001_352 - 2002_001 (exit)
+        2003_272 - 2004_100 (entry)
+        2003_265 - 2003_275 (exit)
+        2003_292 - 2003_319 (exit)
+        2004_020 - 2004_060 (exit)
+        2004_134 - 2004_171 (exit)
+        2005_297 - 2005_309 (entry)
+        2006_001 - 2006_006 (exit)
+        2006_012 - 2006_034 (exit)
+        2006_012 - 2006_050 (entry)
+        2006_130 - 2006_169 (entry)
+        2006_134 - 2006_160 (exit)
+ 
+ 
+    Data Quality
+    =============
+ 
+      Each profile includes uncertainties on the estimates of
+      pressure, temperature, and number density.  This is the
+      best source of information about data quality.  Some
+      obvious trends are apparent in the error bars, such as a
+      general increase in the noise level when the spacecraft
+      was close to solar conjunction.  Data quality can vary
+      significantly between successive experiments, and
+      sometimes from one DSN complex to another, and these
+      variations are reflected in the error bars.
+ 
+      Some error sources are difficult to quantify, and their
+      effects are therefore not included in the formal
+      uncertainties. As a general rule, diametric occultations
+      yield more reliable results than grazing occultations.
+      (The header of each profile includes several parameters,
+      such as the &apos;angle from diametric&apos;, that characterize
+      the experiment geometry.)
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

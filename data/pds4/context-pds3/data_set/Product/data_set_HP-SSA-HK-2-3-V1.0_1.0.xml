@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.hp-ssa-hk-2-3-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>HUYGENS ENGINEERING DATA</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.hp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:huygens_hk.hp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.titan::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hp-ssa-hk-2-3-v1.0__browserp_atmos_hp-ssa-hk-2-3-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hp-ssa-hk-2-3-v1.0__dvo_hp-ssa-hk-2-3-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>HP-SSA-HK-2/3-V1.0</data_set_id>
+        <data_set_name>HUYGENS ENGINEERING DATA</data_set_name>
+        <data_set_release_date>2006-07-17</data_set_release_date>
+        <start_time>2005-01-14T09:04:58.174Z</start_time>
+        <stop_time>2005-01-14T12:41:29.130Z</stop_time>
+        <producer_full_name>HUYGENS PROJECT SCIENTIST TEAM</producer_full_name>
+        <citation_text>blank</citation_text>
+        <data_set_terse_desc>
+            The Huygens Atmospheric Instrument is one of the six experiment
+            onboard the Huygens probe. HASI is a muultisensor package
+            designed to measure the physical quantities characterizing
+            Titan&apos;s atmosphere during entry and descent phase and at the
+            surface.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Huygens Atmospheric Instrument is one of the six experiment
+            onboard the Huygens probe. HASI is a muultisensor package
+            designed to measure the physical quantities characterizing
+            Titan&apos;s atmosphere during entry and descent phase and at the
+            surface.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+Data Set Overview
+=================
+ 
+This data set contains the engineering data of the
+Huygens probe, measured during its mission on 14 January 2005.
+ 
+The total number of engineering parameters is ~ 1600.
+It was decided to archive in the PDS only a
+selection of the most useful parameters (217). However, all
+the data are stored in their original format in the EXTRAS directory.
+ 
+ 
+Data Set Identifier
+===================
+ 
+      The &apos;DATA_SET_ID&apos; is a unique alphanumeric identifier for the
+      data sets. It looks something like:
+ 
+                      XX-Y-ZZ-U-WWW
+ 
+         Acronym |    Description          | Example
+         --------------------------------------------------------------
+            XX   | Instrument Host ID      | HP
+         --------------------------------------------------------------
+             Y   | Target ID               | SSA (for Saturn satellite)
+         --------------------------------------------------------------
+            ZZ   | Instrument ID           | HK (for HouseKeeping)
+         --------------------------------------------------------------
+             U   | Data level (here        | 2-3
+                 | CODMAC levels are used) |
+        ---------------------------------------------------------
+          WWW    | Version number          | V1.0
+ 
+ 
+ 
+Documents
+=========
+ 
+The DOCUMENT directory contains the files that provide documentation and
+supplementary information to assist in understanding and using the data
+products.
+ 
+Structure of DATA Directory
+===========================
+ 
+Below /DATA/ the directories are named after the Huygens probe subsystems.
+They are:
+CDMS: Command and Data Management Subsystems
+SASW: Support Avionics Software
+POSW: Probe Onboard Software
+PDRS: Probe Data Relay Subsystem
+EPSS: Electrical Power Subsystem
+EXP: Experiments
+ 
+A specific folder for the spin is accessible: SPIN
+ 
+Then, subdirectories are named after specific subsubsystems or payload:
+ 
+CDMUB: Command and Data Management Unit Chain B
+CASU: Central Acceleration Sensor Unit
+RASU: Radial Acceleration Sensor Unit
+PSAB: Probe Support Avionics Chain B
+DISR: Descent Imager Spectral Radiometer
+HASI: Huygens Atmospheric Structure Instrument
+ACP: Aerosol Collector Pyroliser
+SSP: Surface Science Package
+GCMS: Gas Chromatograph and Mass Spectrometer
+TUSO: Transmitter Ultra Stable Oscillator
+RUSO: Receiver Ultra Stable Oscillator
+PROXSENSORA: Proximity Sensor (radar) Chain A
+PROXSENSORB: Proximity Sensor (radar) Chain B
+TIMER: Huygens timers
+TEMP: Temperature sensors
+PCDU: Power Conditioning &amp; Distribution Unit
+LNAA: Low Noise Amplifiers Chain A
+TXB: Transmitter Chain B.
+ 
+ 
+File naming convention
+======================
+ 
+The data product file naming convention is as follows:
+ 
+HK_&lt;subsystem&gt;_&lt;subsubsystem&gt;_&lt;parameter name&gt;.TAB
+ 
+ 
+Warnings
+========
+ 
+Overall the data quality is very good. The user of the data must be
+informed about the following warnings:
+ 
+(1) Datation: The value of To, official start of the descent, may
+be updated later. However, the difference will not exceed one second.
+ 
+(2) Completeness of the data: it must be understood that the engineering
+parameters on channel A were lost [read INSTRUMENT_HOST.CAT].
+Therefore, (and unfortunately) less data are archived.
+ 
+(3) Radar calibration:
+The altitude needed to be calibrated. An explanation is given
+in the file HUYGENS_RADAR_ALTITUDE_CALIBRATION in the CALIB
+directory. Two data products (tables) can be found in the
+DATA directory.
+ 
+(4) Computation of the Huygens spin rate:
+It was necessary to reconstruct the spin rate, see text in INSTRUMENT.CAT .
+ 
+ 
+CALIB Directory
+============================
+This directory contains four files summarizing the calibration
+information of the Huygens engineering data.
+ 
+In addition, a document provides information on the
+correction of the radar altitude data.
+ 
+Software
+========
+ 
+The data are stored as ASCII files and do not need
+any specific software.
+No software is included with this data set.
+ 
+EXTRAS directory
+================
+ 
+All the engineering parameters are stored in their original format
+in this directory.
+ 
+Open questions
+==============
+ 
+During the proprietary period (18 months), the data analysis of the
+engineering data led to the publications of one article in Nature, one in
+Journal of Geophysical Research, and a number of proceedings (See
+REFERENCE.CAT). At the time of archiving, there are still some open issues:
+(1) Why Huygens spun in the opposite direction ten minutes after the start
+of the descent?
+(2) Why the descent duration lasted so long (12 minutes more than the
+predictions)?
+(3) What is the final attitude of the probe on the surface?
+(4) Why the altitudes given by the proximitor sensor (chain B) do not agree
+well with the altitudes calculated from pressure and temperature
+measurements?
+ 
+Review
+======
+ 
+      The Huygens data sets were reviewed in two steps:
+      (1) a review of the Experimenter-to-archive-ICD, in 2004.
+      (2) a review of the data sets, in 2006.
+      Procedures and details of this process can be obtained from
+      the ESA archive team:
+ 
+      Olivier Witasse or Joe Zender
+      ESA ESTEC
+      Keplerlaan 1
+      2200 AG Noordwijk
+      The Netherlands
+      Olivier.Witasse@esa.int or Joe.Zender@esa.int
+ 
+      This data set was reviewed by an external reviewer.
+        </data_set_desc>
+        <confidence_level_note>
+N/A
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

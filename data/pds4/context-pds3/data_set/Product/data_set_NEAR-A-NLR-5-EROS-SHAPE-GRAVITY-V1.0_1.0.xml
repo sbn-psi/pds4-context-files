@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-nlr-5-eros-shape-gravity-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR EROS NLR DERIVED PRODUCTS - SHAPE MODEL V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nlr.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-nlr-5-eros-shape-gravity-v1.0__browserp_near-a-nlr-5-eros-shape-gravity-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Konopliv, A.S., J.K. Miller, W.M. Owen, D.K. Yeomans, J.D. Giorgini, R.
+                   Garmier, J.-P. Barriot, &apos;A Global Solution for the Gravity Field, Rotation,
+                   Landmarks, and Ephemeris of Eros,&apos; 16th International Symposium on Space
+                   Dynamics, Pasadena, CA, USA, 2001.
+            </reference_text>
+            <description>reference.KONOPLIVETAL2001</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Miller, J.K., A.S. Konopliv, P.G. Antreasian, J.J. Bordi, S. Chesley, C.E.
+                   Helfrich, W.M. Owen, D.J. Scheeres, T.C. Wang, B.G. Williams, and D.K. Yeomans,
+                   Determination of Shape, Gravity, and Rotational State of Asteroid 433 Eros,
+                   Icarus, in press, 2002.
+            </reference_text>
+            <description>reference.MILLERETAL2002</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-NLR-5-EROS/SHAPE/GRAVITY-V1.0</data_set_id>
+        <data_set_name>NEAR EROS NLR DERIVED PRODUCTS - SHAPE MODEL V1.0</data_set_name>
+        <data_set_release_date>2001-09-30</data_set_release_date>
+        <start_time>2001-04-30</start_time>
+        <stop_time>2001-08-27</stop_time>
+        <producer_full_name>JAMES MILLER</producer_full_name>
+        <citation_text>
+            Neumann G., Giorgini J.D., Miller J.K., A. Konopliv, and E.
+            Grayzeck, NEAR EROS NLR DERIVED PRODUCTS - SHAPE MODEL V1.0,
+            NEAR-A-NLR-5-EROS/SHAPE/GRAVITY-V1.0, NASA Planetary Data System,
+            2001.
+        </citation_text>
+        <data_set_terse_desc>
+            NEAR Eros shape/gravity science derived data from NEAR NAV team
+            at JPL.
+        </data_set_terse_desc>
+        <abstract_desc>
+            NEAR Eros shape/gravity science derived data from NEAR NAV team
+            at JPL.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+    This file contains a shape model for the asteroid Eros derived from
+    NEAR Laser Rangefinder observations. The NLR measurements were made
+    over the period 30 April 2000 to 27 August 2000 from orbits of 35
+    and 50 km.
+ 
+    The gravity model (16 x 16 elements) obtained from this shape model
+    is provided as a separate companion file (&apos;GR_101.TXT&apos;) to this
+    file.
+ 
+    The shape model (34 x 34) files and information regarding the file
+    formats and contents were kindly supplied by J.K. Miller of the NEAR
+    navigation team, in response to user requests made at the NEAR PDS
+    archive review.
+ 
+ 
+    Parameters
+    ==========
+    SH_101.TXT    A multi-part table giving X, Y, and Z vertices of the
+                  shape model, the plate model, and parameters.
+ 
+    The shape table lists a serial number and coordinates for each
+    vertex comprising the plate model of the shape of Eros. The vertex
+    numbers are referenced in the following table.
+ 
+    NOTE that the first row of this table contains only a single integer
+    in the first column, giving the total number of vertices in the
+    table.
+ 
+    The index number of the vertex. This number is used in the plate
+    table.
+ 
+    Following rows contain (x,y,z) position of the vertex
+ 
+    The shape table further defines the triangular plates comprising the
+    Eros shape model. For each plate three vertices are listed by vertex
+    number. The positions corresponding to each vertex number are
+    defined in the preceding vertex table.
+ 
+    NOTE: The first row of this table contains only a single integer
+          indicating the total number of plates defined.
+ 
+    Subsequent rows have the index number for the triangular plate
+    defined along with the index numbers of the three vertices defining
+    this plate
+ 
+    Then there is a single-row table contains two constants relating to
+    the table of harmonic coefficients: first the degree of the harmonic
+    solution. The total number of coefficients in the solution is
+    (NDEGREE+1)^2. Second there is a Normalization flag. This value is
+    &apos;1&apos;, indicating that the following solution has been fully
+    normalized.
+ 
+    The last part of the table lists several parameters and the harmonic
+    coefficients constituting the shape model solution. The format, an
+    in-house format used by the NAV team, is not tied to logical
+    records, but rather makes use of a repeating, 3-column physical
+    record structure as needed to hold the various parameters. The
+    contents of the rows of the table are as follows:
+ 
+    The first two records contain the volume of the model and the vector
+    offset from the center of the shape model to the true center of
+    gravity:
+ 
+      Record 1:
+        Column 1   Volume in km^3
+        Column 2   -blank-
+        Column 3   -blank-
+ 
+      Record 2:
+        Column 1   Xcg  in km
+        Column 2   Ycg  in km
+        Column 3   Zcg  in km
+ 
+    The next two record contain the coefficients for the inertia tensor.
+    Note that this is a symmetric matrix, so only the unique elements are
+    specified here:
+ 
+      Record 3:
+        Column 1   Ixx  in km^2
+        Column 2   Iyy  in km^2
+        Column 3   Izz  in km^2
+ 
+      Record 4:
+        Column 1   Ixy  in km^2
+        Column 2   Ixz  in km^2
+        Column 3   Iyz  in km^2
+ 
+    The subsequent records contain the shape model harmonic coefficients
+    Cij and Sij. All the Si0 are = 0, and are thus omitted from this file.
+    The remaining coefficients are stored three to a record, in this
+    logical sequence:
+ 
+      C00
+      C10  C11  S11
+      C20  C21  C22  S21  S22
+      C30  C31  C32  C33  S31  S32  S33
+      etc.
+ 
+    which becomes this physical sequence:
+ 
+      Record 5:  C00  C10  C11
+      Record 6:  S11  C20  C21
+      Record 7:  C22  S21  S22
+      Record 8:  C30  C31  C32
+      Record 9:  C33  S31  S32
+      etc.
+ 
+    The total number of coefficients stored is (NDEGREE+1)^2, where
+    NDEGREE is found as the first integer (i.e., COLUMN 1) in the first
+    row of the HDR_TABLE, above,
+ 
+    The last record in the file contains only a single entry in the first
+    column.
+ 
+    GR_101.TXT  ASCII coefficients for the gravity model.
+ 
+    The gravity model table starts as one row with three integer
+    parameters: The degree of the harmonic solution presented and two
+    processing flags. The degree of the harmonic solution, i.e., the
+    number of harmonic cooefficient stored in this file is
+    (NDEGREE+1)^2. The first flag indicating that the result has been
+    normalized. It is equal to &apos;1&apos;.  A second flag as an internal
+    processing flag, equal to &apos;1&apos;
+ 
+    Next this table lists the various parameters and harmonic
+    coefficients of the gravity solution. The format, an in-house format
+    used by the NAV team, is not based on logical records, but rather
+    makes use of a repeating, 3-number physical record structure as
+    needed to hold the various parameters. The contents of the rows of
+    the table are as follows.
+ 
+    The first two records contain general model parameters:
+ 
+      Record 1:
+        Column 1   Volume in km^3 of the model
+        Column 2   Density in g/cm^3 (assumed constant)
+        Column 3   Mass in kg
+ 
+      Record 2:
+        Column 1   The gravitational potential, GM, in km^2/s^3
+        Column 2   R0, the average radius used in the model - in this case
+                   selected to be the maximum radius
+        Column 3   -blank-
+ 
+    The next two records contain the coefficients for the inertia tensor.
+    Note that this is a symmetric matrix, so only the unique elements are
+    specified here:
+ 
+      Record 3:
+        Column 1   Ixx  in km^2
+        Column 2   Iyy  in km^2
+        Column 3   Izz  in km^2
+ 
+      Record 4:
+        Column 1   Ixy  in km^2
+        Column 2   Ixz  in km^2
+        Column 3   Iyz  in km^2
+ 
+    The subsequent records contain the gravitational harmonic coefficients
+    Cij and Sij. All the Si0 are = 0, and are thus omitted from this file.
+    The remaining coefficients are stored three to a record, in this
+    logical sequence:
+ 
+      C00
+      C10  C11  S11
+      C20  C21  C22  S21  S22
+      C30  C31  C32  C33  S31  S32  S33
+      etc.
+ 
+    which becomes this physical sequence:
+ 
+      Record 5:  C00  C10  C11
+      Record 6:  S11  C20  C21
+      Record 7:  C22  S21  S22
+      Record 8:  C30  C31  C32
+      Record 9:  C33  S31  S32
+      etc.
+ 
+    The total number of coefficients stored is (NDEGREE+1)^2, where
+    NDEGREE is found as the first integer in the first row of the file
+    (that is, in column 1 of the INTEGER_TABLE defined above).
+ 
+    The last record in the file contains only a single entry in the first
+    column.
+ 
+    Processing
+    ==========
+ 
+    The shape model include both a triangular plate model and a set
+    of spherical harmonics. The plate model is comprised of two lists:
+    a list of (x,y,z) vertex positions relative to the center of the
+    model; and a list of the triples of vertices defining each of the
+    triangular plate.
+ 
+    The spherical harmonics are provided as a set of coefficients
+    with corresponding values for volume, center-of-gravity offset
+    and the inertia tensor (KONOPLIVETAL2001, MILLERETAL2002).
+ 
+    The gravity model obtained by integrating this shape model is
+    provided as a separate companion file (&apos;gr_101.dat&apos;) to this
+    file in the same form as the shape model.
+ 
+    Ancillary Data
+    ==============
+      None.
+ 
+    Coordinate System
+    =================
+    The Eros coordinate system is defined as follows: prime meridian
+    fixed at 326.06 deg, IAU 1994 right ascension at 11.369 deg,
+    declination at 17.227 degrees, and rotation rate at 1639.38885
+    deg/day.
+ 
+    Software
+    ========
+      None.
+ 
+    Media/Format
+    ============
+      CD
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archive have been reduced as part of mission data
+      analysis activities of the NEAR Navigation Team.  Data of
+      questionable validity have been omitted from the solutions.
+ 
+    Review
+    ======
+      This archival data set was not reviewed by the NEAR NLR or RSS
+      Teams prior to submission to the Planetary Data System (PDS).
+      It was not one of the data sets included in a comprehensive
+      review by the PDS Small Bodies Node in August 2001.   Instead
+      a separate onlinbe review was performed for PDS acceptance.
+ 
+    Data Coverage and Quality
+    =========================
+      The data included in this archive were collected during the
+      NEAR orbital phase from 2000-04-30 to 2000-08-27.
+ 
+    Limitations
+    ===========
+      None.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>1996-008A-4</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

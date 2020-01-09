@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.pvo-v-oims-4-iondensity-12s-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PVO VENUS ION MASS SPECTROMETER LOW RES ION DENSITY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.pioneer_venus::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.pvo::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:oims.pvo::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.pvo-v-oims-4-iondensity-12s-v1.0__browserp_pvo-v-oims-4-iondensity-12s-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PVO-V-OIMS-4-IONDENSITY-12S-V1.0</data_set_id>
+        <data_set_name>PVO VENUS ION MASS SPECTROMETER LOW RES ION DENSITY V1.0</data_set_name>
+        <data_set_release_date>1993-10-01</data_set_release_date>
+        <start_time>1978-12-05T14:41:18.480Z</start_time>
+        <stop_time>1987-08-18T00:00:00.000Z</stop_time>
+        <producer_full_name>DR. PAUL CLOUTIER</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            Pioneer Venus (PVO) Ion Mass Spectrometer (OIMS) low resolution
+            ion density data set for the period periapsis +/- 30 minutes for
+            orbits 1- 2996 (1978-12-05 - 1987-08-18).
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+ 
+Data Set Overview
+=================
+The PV-OIMS low resolution dataset contains data from the Orbiter Ion
+Mass Spectrometer (OIMS) experiment for orbits 1-2996, including data
+for the period periapsis +/- 30 minutes for each orbit. The dataset
+is divided into multiple files, each of which contains 1 orbit. The
+user should be able to easily get to any desired orbit by selecting the
+appropriate file.
+ 
+ 
+column    type       bytes   description
+==========================   ========================================
+date      integer      5     Date given in the format YYDOY where YY
+                             is the year and DOY is the day-of-year
+                             (Jan 1 =1)
+UT        float       10     Universal Time second of day
+orbit     integer      7     PVO orbit number
+perisecs  float       10     Seconds after periapsis, negative before
+                             periapsis
+den_1     integer      8     Number density of 1 AMU particle
+den_2     integer      8     Number density of 2 AMU particle
+den_4     integer      8     Number density of 4 AMU particle
+den_8     integer      8     Number density of 8 AMU particle
+den_12    integer      8     Number density of 12 AMU particle
+den_14    integer      8     Number density of 14 AMU particle
+den_16    integer      8     Number density of 16 AMU particle
+den_18    integer      8     Number density of 18 AMU particle
+den_28    integer      8     Number density of 28 AMU particle
+den_30    integer      8     Number density of 30 AMU particle
+den_32    integer      8     Number density of 32 AMU particle
+den_44    integer      8     Number density of 44 AMU particle
+        </data_set_desc>
+        <confidence_level_note>
+The user should be aware that some of the data columns have been
+coded.  For example, the values -999999 is the missing data value for
+that point.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>1978-051A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

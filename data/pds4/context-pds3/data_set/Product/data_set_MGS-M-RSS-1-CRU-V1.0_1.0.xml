@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-rss-1-cru-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS GLOBAL SURVEYOR RAW DATA SET - CRUISE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-1-cru-v1.0__browserp_geo_mgs-m-rss-1-cru-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-1-cru-v1.0__dvo_atmos_mgs-m-rss-1-cru-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-rss-1-cru-v1.0__dvo_geo_mgs-m-rss-1-cru-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tyler, G.L., G. Balmino, D.P. Hinson, W.L. Sjogren, D.E. Smith, R. Woo, S.W.
+                   Asmar, M.J. Connally, C.L. Hamilton, and R.A. Simpson, Radio Science
+                   Investigations with Mars Observer, Journal of Geophysical Research, 97,
+                   7759-7779, 1992.
+            </reference_text>
+            <description>reference.TYLERETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-RSS-1-CRU-V1.0</data_set_id>
+        <data_set_name>MARS GLOBAL SURVEYOR RAW DATA SET - CRUISE V1.0</data_set_name>
+        <data_set_release_date>1997-12-31</data_set_release_date>
+        <start_time>1996-11-06</start_time>
+        <stop_time>1997-09-02</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Simpson, R. A., MARS GLOBAL SURVEYOR RAW DATA SET - CRUISE V1.0,
+            MGS-M-RSS-1-CRU-V1.0, NASA Planetary Data System, 1997
+        </citation_text>
+        <data_set_terse_desc>
+            This archive contains raw radio science data and ancillary files
+            acquired during the cruise phase of the Mars Global Surveyor
+            (MGS) mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Mars Global Surveyor (MGS) Radio Science (RS) Raw Data
+            Archive (RDA) is a time-ordered collection of raw and partially
+            processed data collected during the MGS Mission to Mars. For more
+            information on the investigations proposed see [TYLERETAL1992].
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Mars Global Surveyor (MGS) Radio Science (RS) Raw Data
+      Archive (RDA) is a time-ordered collection of raw and partially
+      processed data collected during the MGS Mission to Mars.
+      For more information on the investigations proposed see
+      [TYLERETAL1992].
+ 
+      This data set was collected while the spacecraft was en route
+      from Earth to Mars (the MGS Cruise Phase); it can serve as
+      calibration for later Mars observations.  During Cruise,
+      the spacecraft was far from other bodies, so evolution of
+      its trajectory was very smooth.  Range and Doppler behavior
+      could be predicted long in advance, and variability resulted
+      from intrinsic limitations of the equipment (including
+      unmodeled spacecraft activity) -- not from the phenomena
+      being measured.  Some of the Cruise data have intrinsic
+      science value of their own.  Approximately halfway through
+      Cruise, three weeks of spacecraft and ground system time
+      was devoted to a search for gravitational waves, presumably
+      originating outside the solar system.
+ 
+      Two types of measurements were conducted during Cruise; these
+      are known as closed-loop and open-loop recordings.  The closed-
+      loop system uses a phase-lock loop in the receiver to track the
+      downlink signal, reporting both amplitude and frequency at
+      intervals typically of once per second.  In the open-loop
+      system, the signal is simply converted to a baseband frequency
+      range; the entire passband is sampled and recorded for later
+      processing.  Typical open-loop sampling rates for MGS were
+      5000 samples per second.  Closed-loop data are efficient for
+      characterizing slowly changing signals; open-loop data
+      (because of their much higher volume) are collected only
+      when the signal is very dynamic -- such as during an
+      occultation.
+ 
+      The data set includes three primary data types.  Archival
+      Tracking Data Files (ATDFs or TDFs) are the most primitive (and
+      most voluminous) product of the closed-loop system.  Orbit Data
+      Files (ODFs) are edited versions of ATDFs, specifically
+      targeted to spacecraft navigators and scientists interested in
+      gravity fields.  Original Data Records (ODRs) are the primary
+      data type from the open-loop system.
+ 
+      Typical users of these data might analyze range and Doppler
+      measurements in ATDFs or ODFs to derive the spacecraft
+      trajectory during Cruise.  Relevant questions would include the
+      measurement uncertainties in range and Doppler at different DSN
+      antennas; these would set constraints on any model of Mars&apos;
+      gravity field developed later, for example.  Users of ODRs
+      could identify and characterize anomalous signals within the
+      recorded passband, derive the drift of the USO during Cruise,
+      and calculate Allan Deviation for various radio science
+      configurations.  Data collected during the Gravitational Wave
+      Experiment could be searched for evidence of gravitational
+      waves.
+ 
+ 
+    Parameters
+    ==========
+      The ATDF is the primary output from the closed-loop system.
+      Its format and content changed on 15 April 1997.  ATDFs
+      generated before 15 April had 117 defined fields in the data
+      records; ATDFs generated beginning on 15 April had 150 fields,
+      though not all had been assigned.  Though the general nature of
+      the ATDF parameters in the new version remained the same --
+      status flags, Doppler residuals, range measurements, signal
+      strength  estimates, etc. -- the scope of the measurements and
+      their accuracies improved considerably.  Each ATDF in the data
+      set is accompanied by a full PDS label which defines both the
+      content and the format (at the bit level) of the file.
+      ATDF data types include:
+           High- or low-rate Doppler
+           Uplink phase
+           Differential Range vs Integrated Doppler (DRVID)
+           Range
+           Allan deviation
+           Smoothed noise
+           High or low-rate downlink phase
+      Other information included in ATDF data records is date and
+      time; spacecraft ID; ground station and its configuration;
+      status flags and values reported by various ground systems;
+      calibration values, noise estimates, and tolerances (station
+      delay, transmitter power, etc.); and signal strength;
+ 
+      The ODF is an edited version of the ATDF; it is a smaller file,
+      issued more frequently than the ATDF.  It contains the most
+      important information (range and Doppler) needed by spacecraft
+      navigators and investigators interested in determining
+      gravitational fields of bodies such as Mars.  Like the ATDF,
+      its format and content were also upgraded effective 15 April
+      1997.  Each ODF is accompanied by a full PDS label which
+      describes both the content and format of the associated file.
+      ODF data types include:
+           Narrowband spacecraft VLBI, Doppler mode (cycles)
+           Narrowband spacecraft VLBI, phase mode (cycles)
+           Narrowband quasar VLBI, Doppler mode (cycles)
+           Narrowband quasar VLBI, phase mode (cycles)
+           Wideband spacecraft VLBI (nanoseconds)
+           Wideband quasar VLBI (nanoseconds)
+           One-way Doppler (Hertz)
+           Two-way Doppler (Hertz)
+           Three-way Doppler (Hertz)
+           One-way total count phase (cycles)
+           Two-way total count phase (cycles)
+           Three-way total count phase (cycles)
+           PRA planetary operational discrete spectrum range (range
+                units)
+           SRA planetary operational discrete spectrum range (range
+                units)
+           RE[GSTDN] range (nanoseconds)
+           Azimuth angle (degrees)
+           Elevation angle (degrees)
+           Hour angle (degrees)
+           Declination angle (degrees)
+ 
+      Open loop data records (ODRs) contain 8- or 12-bit samples of
+      receiver output.  Each block of (typically) 1000 data samples
+      is accompanied by a 166 byte header.  Each ODR is accompanied
+      by a full PDS label which describes both the content and format
+      of the file at the bit level.  Header information includes:
+           Date and time of first data sample
+           Sample rate and channel assignments
+           Receiver local oscillator (POCA) frequency
+           Attenuator settings
+           RMS voltages at several stages in the receiving chain
+ 
+ 
+    Processing
+    ==========
+      ATDFs are screened for &apos;bad&apos; data points, which are removed
+      before the file is released by the JPL Radio Metric Data
+      Conditioning Team (RMDCT).
+ 
+      ODFs are abstracted from subsets of ATDF data.
+ 
+      The open-loop format delivered to Stanford is usually the ODS
+      (packet data).  In some cases where the Ground Data System
+      (GDS) corrupted the ODS during delivery (or lost it entirely),
+      data have been recovered from tape in ODR format.  ODS packets
+      have been converted to ODR format for consistency in subsequent
+      processing and archive; headers applied by GDS for ODS handling
+      have not been preserved.  The resultant ODR (whether from ODS
+      conversion or from backup tape) accurately represents the
+      output of the DSCC Spectrum Processing (DSP) Subsystem at the
+      DSN station.  A full PDS label accompanies each ODR file and
+      gives a bit level description of the content and format.
+ 
+      A 32-byte label at the beginning of each ODR tape is not
+      included in the data file.  The 32-byte label gives the version
+      of the data taking software; this information has been copied
+      to the PDS label that accompanies the data file.   The software
+      version recorded in the &apos;NOTE&apos; keyword is more likely to be
+      accurate than the version recorded with the &apos;SOFTWARE_VERSION&apos;
+      keyword.  Because the 32-byte label is no longer part of the
+      data stream, users can treat the remaining file as an integral
+      number of fixed-length records.  The 32-byte label was never
+      defined in the ODS.
+ 
+ 
+    Data
+    ====
+      Data are stored on CD-WO volumes approximately chronologically.
+      Files which were delayed in delivery to Stanford may be out of
+      order, however.  Users should consult listings in the
+      INDEX/CUMINDEX.TAB file to ascertain full coverage of each file
+      type.
+ 
+      ATDFs were delivered irregularly during MGS Cruise; a full set
+      is not available.  ATDFs were obtained for most USO tests and
+      during the Gravitational Wave Experiment (GWE) in late April
+      and early May 1997.  ATDFs are stored in the TDF directory on
+      archival volumes.  File names are of the form   ydddeeeC.TDF
+      where  y  is the one-digit year of the first data,  ddd  is the
+      three-digit day-of-year of the first data,  eee  is the three-
+      digit day-of-year of the last data, and  C  is a single letter
+      (beginning with &apos;A&apos;) denoting the sequence in which files with
+      the same  ydddeee  were handled.  Generally  ydddeeeB.TDF  is
+      a revised version of  ydddeeeA.TDF.  The PDS label has file
+      name  ydddeeeC.LBL.  Typical ATDF file sizes are 39 Mbytes.
+ 
+      ODFs were issued approximately daily throughout MGS Cruise; in
+      some cases special ODFs were also created.  Most of the ODFs
+      which were released are included in the archival data set.
+      ODFs are stored in the ODF directory.  File names are of the
+      form   ydddeeeC.ODF  where  y  is the one-digit year of the
+      first data,  ddd  is the three-digit day-of-year of the first
+      data,  eee  is the three-digit day-of-year of the last data,
+      and  C  is a single letter (beginning with &apos;A&apos;) denoting the
+      sequence in which files with the same  ydddeee  were handled.
+      In most cases  ydddeeeB.ODF  is NOT simply a revised version
+      of  ydddeeeA.ODF;  there were many requests for special ODF
+      processing during MGS Cruise -- to obtain higher time
+      resolution over short intervals, for example.  The PDS label
+      has file name  ydddeeeC.LBL.  Typical ODF file sizes are
+      small multiples of 8064 bytes (e.g., less than 100 kB).
+ 
+      Original Data Records (ODRs) were produced whenever the DSP
+      was set to &apos;run&apos; mode.  These files are stored in the ODR
+      directory.  In most cases, the entire DSP run was collected
+      into a single ODR file.  But in other cases, it was more
+      convenient to subdivide the DSP data; queries were issued for
+      shorter time spans, and separate files were produced.  File
+      names are of the form  ydddhhmm.ODR  where  y  is the one-digit
+      year of the first data,  ddd  is the day-of-year of the first
+      data,  hh  is the hour on which the first sample was taken, and
+      mm  was the minute on which the first sample was taken.  In
+      cases were two files had the same nominal  ydddhhmm  (for
+      example, two DSN stations began recording at the same time),
+      the less significant digit in  mm  of the second file was
+      converted to a letter (&apos;0&apos; became &apos;A&apos;, &apos;1&apos; became &apos;B&apos;, ...,
+      &apos;9&apos; became &apos;J&apos;).  In cases where three files had the same
+      ydddhhmm, the less significant  mm  digit was converted to
+      &apos;K&apos;, &apos;M&apos;, etc.  For data collected during MGS Cruise, multiple
+      ydddhhmm  instances occurred primarily from multiple queries
+      for the same data, or from early data obtained as ODS and
+      later data obtained as ODR from tape backup.  The PDS label
+      has file name  ydddhhmm.LBL.
+ 
+      At 5000 samples per second, a two-hour USO test would yield
+      a 60 MB ODR -- one X-band (RCP) channel; 5 records per second,
+      each with 1000 12-bit samples and a 166-byte header.  At
+      200 samples per second, an eight-hour GWE run would yield
+      a 33 MB ODR -- four channels (one X-RCP, the others null); 2
+      records per second with 100 8-bit samples per channel and a
+      166-byte header.
+ 
+ 
+    Ancillary Data
+    ==============
+      An extensive set of ancillary files is needed for proper
+      analysis and interpretation of the radio data (file types
+      TDF, ODF, and ODR).  These are organized in parallel
+      directories and stored approximately chronologically.
+      When a file type was not represented on a CD-WO volume, the
+      corresponding directory was omitted.  With the exception of
+      files stored in the CALIB directory, ancillary files
+      appeared on only one CD-WO volume.  Users should refer to
+      the INDEX/CUMINDEX.TAB listing to locate ancillary files.
+ 
+      Files in the CALIB Directory
+      ----------------------------
+        Files in the CALIB directory are those likely to have wide
+        applicability in working with the raw data.  They help
+        unpack and allow use of the raw data, rather than being
+        &apos;instrument&apos; calibration data per se.  They include
+        decommutation maps, clock conversion files, files of
+        planetary constants, leapsecond files, and files needed for
+        display of data on the MGS Science Operations Planning
+        Computer (SOPC).  Each file is accompanied by a PDS minimal
+        label.
+ 
+        Clock Conversion files are produced by the JPL/PDS
+        Navigation Ancillary Information Facility (NAIF) for use
+        with NAIF-developed and MGS-provided software.  These are
+        ASCII files of variable length records.  Each record is
+        delimited by an ASCII carriage-return &lt;CR&gt; (ASCII 13)
+        line-feed pair &lt;LF&gt; (ASCII 10), which may need to be
+        converted to either &lt;CR&gt; or &lt;LF&gt; before the file is used
+        on the local machine.  File names have the form  ydddeeeC.SCK
+        where  y  is the one-digit year of the first date covered,
+        ddd  is the day-of-year of the first date covered,  eee
+        is the day-of-year of the last date covered, and  C  is a
+        character denoting sequence when more than one file
+        with the same  ydddeee  is handled.  C  starts from &apos;A&apos;
+        and progresses to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers
+        of similar coverage files.
+ 
+        Planetary Constants files are produced by the JPL/PDS
+        Navigation Ancillary Information Facility (NAIF) for use
+        with NAIF-developed and MGS-provided software.  These are
+        ASCII files of variable length records.  Each record is
+        delimited by an ASCII carriage-return &lt;CR&gt; (ASCII 13)
+        line-feed pair &lt;LF&gt; (ASCII 10), which may need to be
+        converted to either &lt;CR&gt; or &lt;LF&gt; before the file is used
+        on the local machine.  File names have the form  PCKydddC.TPC
+        where  y  is the one-digit year of the file creation date,
+        ddd  is the day-of-year of the file creation date, and  C
+        is a character denoting sequence when more than one file with
+        with the same  yddd  is handled.  C  starts from &apos;A&apos;
+        and progresses to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers
+        of similar coverage files.
+ 
+        Leapsecond files are produced by the JPL/PDS
+        Navigation Ancillary Information Facility (NAIF) for use
+        with NAIF-developed and MGS-provided software.  These are
+        ASCII files of variable length records.  Each record is
+        delimited by an ASCII carriage-return &lt;CR&gt; (ASCII 13)
+        line-feed pair &lt;LF&gt; (ASCII 10), which may need to be
+        converted to either &lt;CR&gt; or &lt;LF&gt; before the file is used
+        on the local machine.  File names have the form  LSKydddC.TLS
+        where  y  is the one-digit year of the file creation date,
+        ddd  is the day-of-year of the file creation date, and  C
+        is a character denoting sequence when more than one file
+        with the same  yddd  is handled.  C  starts from &apos;A&apos;
+        and progresses to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers
+        of similar coverage files.
+ 
+        Channel Conversion Language files come in three types --
+        source, dependency, and binary.  File names are of the
+        forms  CCLydddS.SRC,  CCLydddD.BIN,  and  CCLydddB.BIN,
+        respectively, where  y  is the one-digit year of the file
+        creation date and  ddd  is the day-of-year of the file
+        creation date.  Source files are ASCII files of variable
+        length records.  Each record is delimited by an ASCII
+        carriage-return &lt;CR&gt; (ASCII 13) line-feed pair &lt;LF&gt; (ASCII
+        10), which may need to be converted to either &lt;CR&gt; or &lt;LF&gt;
+        before the file is used on the local machine.  Dependency and
+        binary files are identical to those used on the SOPC.  Source
+        and binary files are typically 500 kB; dependency files are
+        typically 15 kB.  Channel Conversion Language files are used
+        in converting raw binary data in telemetry streams to
+        meaningful numbers.
+ 
+        Channel Parameter Table files come in two types -- source and
+        binary.  File names are of the forms  CPTydddS.SRC  and
+        CCLydddB.BIN, respectively, where  y  is the one-digit year
+        of the file creation date and  ddd  is the day-of-year of the
+        file creation date.  Source files are ASCII files of variable
+        length records.  Each record is delimited by an ASCII
+        carriage-return &lt;CR&gt; (ASCII 13) line-feed pair &lt;LF&gt; (ASCII
+        10), which may need to be converted to either &lt;CR&gt; or &lt;LF&gt;
+        before the file is used on the local machine.  Binary files
+        are identical to those used on the SOPC.  Source and binary
+        files are typically less than 1 MB.  Channel Parameter Table
+        files are used in converting raw binary data in telemetry
+        streams to meaningful numbers.
+ 
+        Template Description Language files come in two types --
+        source and binary.  File names are of the forms  TDLydddS.SRC
+        and  TDLydddB.BIN, respectively, where  y  is the one-digit
+        year of the file creation date and  ddd  is the day-of-year
+        of the file creation date.  Source files are ASCII files of
+        variable length records.  Each record is delimited by an
+        ASCII carriage-return &lt;CR&gt; (ASCII 13) line-feed pair &lt;LF&gt;
+        (ASCII 10), which may need to be converted to either &lt;CR&gt;
+        or &lt;LF&gt; before the file is used on the local machine.  Binary
+        files are identical to those used on the SOPC.  Source and
+        binary files are typically less than 1 MB.  Template
+        Description Language files are used during display of data on
+        the SOPC.
+ 
+        Decommutation Map files come in two types -- source and
+        binary.  File names are of the forms  DCSxxxxx.SRC  and
+        DCOxxxxx.BIN, respectively, where  xxxxx  is a mnemonic for
+        the map.  Only four Decommutation Map files were used during
+        MGS Cruise.  DCSM515A.SRC  and  DCOM515A.BIN  were the source
+        and binary maps, respectively, for DSN Monitor 5-15 data.
+        DCSSCR14.SRC  and  DCOSCR14.BIN  were the source and binary
+        maps, respectively, for spacecraft engineering data.
+        Source files are ASCII files of variable length records.
+        Each record is delimited by an ASCII carriage-return &lt;CR&gt;
+        (ASCII 13) line-feed pair &lt;LF&gt; (ASCII 10), which may need to
+        be converted to either &lt;CR&gt; or &lt;LF&gt; before the file is
+        used on the local machine.  Binary files are identical to
+        those used on the SOPC.  Source and binary files are
+        typically less than 200 kB.  Decommutation Map files are used
+        in converting raw binary packet data to channelized formats.
+        On the SOPC, they are used with the MGS-provided program
+        mapx.
+ 
+      Angular Momentum Desaturation Files (AMD Directory)
+      ---------------------------------------------------
+        Angular Momentum Desaturation files are produced by the MGS
+        Spacecraft Team (SCT).  Each file documents a set of AMD
+        events on the spacecraft.  These are ASCII files of variable
+        length records.  Each record is delimited by an ASCII
+        carriage-return &lt;CR&gt; (ASCII 13) line-feed pair &lt;LF&gt; (ASCII
+        10), which may need to be converted to either &lt;CR&gt; or &lt;LF&gt;
+        before the file is used on the local machine.  File names
+        have the form  ydddeeeC.AMD  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each AMD file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  Typical file sizes are less than 1500
+        bytes.
+ 
+      Channelized Engineering Data Files (ECH Directory)
+      ---------------------------------------------------
+        Channelized Engineering Data files are produced by the MGS
+        query server, operating on telemetry packets stored in the
+        MGS Central Data Base (CDB).  These are binary files, usually
+        representing the collection of raw spacecraft engineering
+        data received from a 24 hour period; they are not readily
+        interpretable by end users.  File names have the form
+        ydddeeeC.ECH  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each ECH file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  File sizes can be as large as 200 MB.
+        In general, an ECH file can be derived from the corresponding
+        EPK file using MGS-provided software and a decommutation map.
+ 
+        Also in some ECH directories are ASCII tables of extracted
+        channel values--channelized state vectors, or CSV files.
+        These are values for a limited number of potentially
+        useful ECH channels that have been saved in tabular form.
+        CSV files in the ECH directory have names of the form
+        CSVydddC.ECH  where  y,  ddd,  and  C  are the same as for
+        the corresponding ECH file.  Each CSV file is accompanied
+        by a detached PDS label with name  CSVydddC.LBL  which
+        completely describes the format and content of the CSV file.
+ 
+      Engineering Channelized Data Summary Files (ECS Directory)
+      ---------------------------------------------------
+        Engineering Channelized Summary Data Files are created at
+        Stanford during ingestion of spacecraft engineering data.
+        Each file contains a summary line for each channel processed
+        from the previous day&apos;s telemetry.  The ECS file thus gives
+        a snapshot (mean and standard deviation) of each channel
+        on each day.  ECS files are PDS TABLE objects; each is
+        fully described as to format and content by a detached PDS
+        label.  File names are of the form  ydddeeeA.ECS  where
+        y  is the one-digit year of the first data,  ddd  is the
+        three-digit day-of-year of the first data,  eee  is the
+        three-digit day-of-year of the last data,  and  C  is a
+        character denoting sequence when more than one file with
+        the same  ydddeee  is handled.  File sizes vary depending
+        on the number of channels processed; typical growth is
+        4000 bytes per day.
+ 
+      Experimenters Notebook Files (ENB Directory)
+      --------------------------------------------
+        Experimenters Notebook files are e-mail messages and other
+        notes collected during and shortly after data acquisition.
+        They document expectations of various measurements and
+        anomalies discovered in subsequent analysis.  File names
+        have the form  ENByyddd.TXT,  where  yy  is the two-digit
+        year and  ddd  is the three-digit day-of-year.  In general
+        the messages in file  ENByyddd.TXT  refer to activities on
+        that date regardless of when the message was sent.
+        Alternatively, the characters  yyddd  may be used to
+        indicate very tersely the subject matter of a collection
+        of messages.  These are ASCII files with variable length
+        records.  Each record is delimited by an ASCII
+        carriage-return line-feed pair.
+ 
+      Earth Orientation Parameter Files (EOP Directory)
+      ---------------------------------------------------
+        Earth Orientation Parameter files are produced by the Time
+        and Earth Motion Precision Observation (TEMPO) Group at JPL.
+        They document and predict Earth rotation (rate and axis).
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        File names have the form  ydddzeee.EOP  where  y  is
+        the one-digit year of the first data in the file,  ddd  is
+        the day-of-year of the first data in the file,  z  is the
+        one-digit year of the last data, and  eee  is the day-of-year
+        of the last data in the file.  EOP files are typically
+        released on Tuesdays and Fridays.  There are both &apos;long&apos;
+        and &apos;short&apos; versions.  The long file covers past motion
+        since about 1962 and a prediction for about three months into
+        the future; these files have typical sizes of 860 kB.  The
+        short file covers the most recent nine months of past motion
+        and a prediction for three months into the future; these
+        files are typically 30 kB.  Each EOP file is accompanied
+        by a PDS minimal label with file name  ydddzeee.LBL.
+ 
+      Engineering Packet Data Files (EPK Directory)
+      ---------------------------------------------------
+        Engineering Packet Data files are produced by the MGS
+        query server, operating on telemetry packets stored in the
+        MGS Central Data Base (CDB).  These are binary files, usually
+        representing the collection of raw spacecraft engineering
+        data received from a 24 hour period; they are not readily
+        interpretable by end users.  File names have the form
+        ydddeeeC.EPK  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each EPK file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  File sizes can be as large as 100 MB.
+ 
+      Filtered Body Rate Files (FBR Directory)
+      ---------------------------------------------------
+        Filtered Body Rate Files were created at Stanford from
+        body rate data in the spacecraft engineering telemetry
+        stream.  They give spacecraft attitude as a function of
+        time.  FBR files are PDS TABLE objects; each is
+        fully described as to format and content by a detached PDS
+        label.  File names are of the form  ydddeeeC.FBR  where
+        y  is the one-digit year of the first data,  ddd  is the
+        three-digit day-of-year of the first data,  eee  is the
+        three-digit day-of-year of the last data,  and  C  is a
+        character denoting sequence when more than one file with
+        the same  ydddeee  is handled.  File sizes vary depending
+        on the time interval covered.
+ 
+      Daily Health Report Files (HEA Directory)
+      ---------------------------------------------------
+        Daily Health Report Files were created at Stanford; they
+        summarize spacecraft engineering data of interest for Radio
+        Science, list recently acquired radio data, summarize any
+        analysis performed on recent radio data, summarize anomalies
+        in recent radio science operations, and list files that have
+        been obtained from the MGS CDB or other sources.  Daily
+        Health Report Files are PDS TEXT objects; each has an
+        attached PDS label.  File names are of the form  HEAydddC.TXT
+        where  y  is the one-digit year of the report,  ddd  is the
+        three-digit day-of-year of the report,  and  C  is a
+        character denoting sequence when more than one file with
+        the same  ydddeee  is generated.  The first report on a day
+        would be  HEAydddA.TXT;  subsequent revisions or updates
+        would be  HEAydddB.TXT,  HEAydddC.TXT,  etc.
+ 
+        Some Health Reports are accompanied by plots, saved as
+        Type 1 PostScript files.  File names for these plot files
+        have names of the form  HEAydddC.PSn  where  y  and  ddd
+        are as defined above and  n  is the figure number.
+ 
+        Both Health Reports themselves and accompanying PostScript
+        files have variable length records delimited by carriage-
+        return (ASCII 13) line-feed (ASCII 10) pairs.
+ 
+      Ionosphere Calibration Files (ION Directory)
+      ---------------------------------------------------
+        Ionosphere Calibration files are produced by the
+        Tracking System Analytic Calibration (TSAC) Group at JPL.
+        They document and predict Earth ionospheric conditions.
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        File names have the form  ydddeeeC.ION  where  y  is
+        the one-digit year of the first data in the file,  ddd  is
+        the day-of-year of the first data in the file,  eee  is the
+        day-of-year of the last data in the file, and  C  is a
+        character denoting sequence when more than one file with the
+        same  ydddeee  is handled.  C  starts from &apos;A&apos; and progresses
+        to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers of similar coverage
+        files.  Frequently, ION files are released at one week
+        intervals to cover a single month;  ydddeeeA.ION  would be
+        the file released during the first week,  ydddeeeB.ION  would
+        be the file released during the second week, etc.  Each ION
+        file is accompanied by a PDS minimal label with file name
+        ydddeeeC.LBL.  Typical file sizes are less than 50 kB.
+ 
+      Light Time Files (LIT Directory)
+      ---------------------------------------------------
+        Light Time files are produced by the MGS Navigation Team
+        (NAV).  They give radio propagation time from the spacecraft
+        to Earth vs time.  These are ASCII files of fixed
+        length records.  Each record is delimited by an ASCII
+        carriage-return &lt;CR&gt; (ASCII 13) line-feed pair &lt;LF&gt; (ASCII
+        10), which may need to be converted to either &lt;CR&gt; or &lt;LF&gt;
+        before the file is used on the local machine.  File names
+        have the form  ydddeeeC.LIT  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each LIT file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  Typical file sizes are less than 1 MB.
+ 
+      Channelized DSN Monitor Data Files (MCH Directory)
+      ---------------------------------------------------
+        Channelized DSN Monitor Data files are produced by the MGS
+        query server, operating on DSN Monitor packets stored in the
+        MGS Central Data Base (CDB).  These are binary files, usually
+        representing the collection of DSN Monitor
+        data received from a 24 hour period; they are not readily
+        interpretable by end users.  File names have the form
+        ydddeeeC.MCH  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each MCH file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  File sizes can be as large as 30 MB.
+        In general, an MCH file can be derived from the corresponding
+        MPK file using MGS-provided software and a decommutation
+        map.
+ 
+        Also in some MCH directories are ASCII tables of extracted
+        channel values--channelized state vectors, or CSV files.
+        These are values for a limited number of potentially
+        useful MCH channels that have been saved in tabular form.
+        CSV files in the MCH directory have names of the form
+        CSVydddC.MCH  where  y,  ddd,  and  C  are the same as for
+        the corresponding MCH file.  Each CSV file is accompanied
+        by a detached PDS label with name  CSVydddC.LBL  which
+        completely describes the format and content of the CSV file.
+ 
+      Maneuver Implementation/Reconstruction Files (MIF Directory)
+      ---------------------------------------------------
+        Maneuver Implementation/Reconstruction files are produced by
+        the MGS Spacecraft Team (SCT); they document spacecraft
+        maneuver events.  These are ASCII files of
+        variable length records.  Each record is delimited by an
+        ASCII line-feed &lt;LF&gt; (ASCII 10).  File names
+        have the form  ydddeeeC.MIF  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each MIF file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  Typical file sizes are 2327 bytes.
+ 
+      Maneuver Performance Data Files (MPD Directory)
+      ---------------------------------------------------
+        Maneuver Performance Data files are produced by
+        the MGS Spacecraft Team (SCT).  They contain estimates of
+        spacecraft mass and center of mass; moments of inertia;
+        thruster locations, directions, and magnitudes; and
+        propellant flow rate.  These are ASCII files of
+        variable length records.  Each record is delimited by an
+        ASCII line-feed &lt;LF&gt; (ASCII 10).  File names
+        have the form  ydddeeeC.MPD  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each MPD file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  Typical file sizes are 4 kB.
+ 
+      DSN Monitor Packet Data Files (MPK Directory)
+      ---------------------------------------------------
+        DSN Monitor Packet Data files are produced by the MGS
+        query server, operating on DSN Monitor packets stored in the
+        MGS Central Data Base (CDB).  Monitor data are records of
+        DSN status and radio measurements.  These are binary files,
+        usually representing the collection of DSN Monitor
+        data received from a 24 hour period; they are not readily
+        interpretable by end users.  File names have the form
+        ydddeeeC.MPK  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each MPK file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  File sizes can be as large as 30 MB.
+ 
+      Orbit Propagation and Time Generation Files (OPT Directory)
+      ---------------------------------------------------
+        Orbit Propagation and Time Generation files are produced by
+        the MGS Navigation Team (NAV).  They contain estimates of
+        event timing (e.g., equator crossings) that depend on
+        precise knowledge of the spacecraft orbit.  These are ASCII
+        files of variable length records.  Each record is delimited
+        by an ASCII line-feed &lt;LF&gt; (ASCII 10).  File names
+        have the form  ydddeeeC.OPT  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee
+        is handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;,
+        etc. with increasing numbers of similar coverage files.
+        Each OPT file is accompanied by a PDS minimal label with file
+        name  ydddeeeC.LBL.  Typical file sizes are less than 1 MB.
+ 
+      Space Flight Operation Schedule Files (SFO Directory)
+      ---------------------------------------------------
+        Space Flight Operations Schedule Files are produced by the
+        MGS Mission Control Team (MCT), usually in parallel with
+        a corresponding Sequence of Event (SOE) file.  They
+        graphically present parts of the SOE.  These are
+        ASCII files of variable length records in a special format
+        that allows use with the MGS-provided  sfosedt  program.
+        Each record is delimited by a carriage-return (ASCII 13)
+        line-feed &lt;LF&gt; (ASCII 10) pair, which may need to be removed
+        before the file is used on the local machine.  File names
+        have the form  ydddeeeC.SFO  where  y  is the one-digit year
+        of the first data in the file,  ddd  is the day-of-year of
+        the first data in the file,  eee  is the day-of-year of the
+        last data in the file, and  C  is a character denoting
+        sequence when more than one file with the same  ydddeee  is
+        handled.  C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;, etc.
+        with increasing numbers of similar coverage files.  Each SFO
+        file is accompanied by a PDS minimal label with file name
+        ydddeeeC.LBL.  Typical file sizes are less than 100 kB.
+ 
+      Sequence of Event Files (SOE Directory)
+      ---------------------------------------------------
+        Sequence of Event Files are produced by the MGS Mission
+        Control Team (MCT).  These are ASCII files of variable length
+        records in a special format that allows use with the
+        MGS-provided  soeedt  program.  Each record is delimited
+        by a carriage-return (ASCII 13) line-feed &lt;LF&gt; (ASCII 10)
+        pair, which may need to be removed before the file is used on
+        the local machine.  File names have the form  ydddeeeC.SOE
+        where  y  is the one-digit year of the first data in the
+        file,  ddd  is the day-of-year of the first data in the file,
+        eee  is the day-of-year of the last data in the file, and  C
+        is a character denoting sequence when more than one file
+        with the same  ydddeee  is handled.  C  starts from &apos;A&apos; and
+        progresses to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers of
+        similar coverage files.  Each SOE file is accompanied by a
+        PDS minimal label with file name  ydddeeeC.LBL.  Typical file
+        sizes are less than 1 MB.
+ 
+      Spacecraft/Planetary Ephemeris (SPK) Files (SPK Directory)
+      ---------------------------------------------------
+        Spacecraft/Planetary Ephemeris Files (also known as SP
+        kernels or SPK files) are produced by the MGS Navigation Team
+        (NAV).  These files give spacecraft and planetary ephemerides.
+        These are ASCII files of variable length records in
+        a special NAIF &apos;transfer&apos; format.  Each record is delimited
+        by a carriage-return (ASCII 13) line-feed &lt;LF&gt; (ASCII 10)
+        pair, which may need to be removed before the file is used on
+        the local machine.  After delimiter conversion (if needed)
+        the file would ordinarily be passed through the NAIF utility
+        SPACIT  or  TOBIN  to convert it to the local binary format.
+        File names have the form  ydddeeeC.SPK  where  y  is the
+        one-digit year of the first data in the
+        file,  ddd  is the day-of-year of the first data in the file,
+        eee  is the day-of-year of the last data in the file, and  C
+        is a character denoting sequence when more than one file
+        with the same  ydddeee  is handled.  C  starts from &apos;A&apos; and
+        progresses to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers of
+        similar coverage files.  Each SPK file is accompanied by a
+        PDS minimal label with file name  ydddeeeC.LBL.  Typical file
+        sizes are less than 5 MB.
+ 
+      Spacecraft Attitude (CK) Files (TCK Directory)
+      ---------------------------------------------------
+        Spacecraft Attitude Files (also known as C
+        kernels or CK files) are produced by the MGS Spacecraft Team
+        (SCT).  These are ASCII files of variable length records in
+        a special NAIF &apos;transfer&apos; format.  Each record is delimited
+        by a carriage-return (ASCII 13) line-feed &lt;LF&gt; (ASCII 10)
+        pair, which may need to be removed before the file is used on
+        the local machine.  After delimiter conversion (if needed)
+        the file would ordinarily be passed through the NAIF utility
+        SPACIT  or  TOBIN  to convert it to the local binary format.
+        File names have the form  ydddeeeC.TCK  where  y  is the
+        one-digit year of the first data in the
+        file,  ddd  is the day-of-year of the first data in the file,
+        eee  is the day-of-year of the last data in the file, and  C
+        is a character denoting sequence when more than one file
+        with the same  ydddeee  is handled.  C  starts from &apos;A&apos; and
+        progresses to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers of
+        similar coverage files.  Each TCK file is accompanied by a
+        PDS minimal label with file name  ydddeeeC.LBL.  Typical file
+        sizes are less than 5 MB.
+ 
+      Troposphere Calibration Files (TRO Directory)
+      ---------------------------------------------------
+        Troposphere Calibration files are produced by the
+        Tracking System Analytic Calibration (TSAC) Group at JPL.
+        They document and predict Earth tropospheric conditions.
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        File names have the form  ydddeeeC.TRO  where  y  is
+        the one-digit year of the first data in the file,  ddd  is
+        the day-of-year of the first data in the file,  eee  is the
+        day-of-year of the last data in the file, and  C  is a
+        character denoting sequence when more than one file with the
+        same  ydddeee  is handled.  C  starts from &apos;A&apos; and progresses
+        to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers of similar coverage
+        files.  TRO files are typically released at the beginning of
+        a month and cover the previous month.  Each TRO file is
+        accompanied by a PDS minimal label with file name
+        ydddeeeC.LBL.  Typical file sizes are less than 50 kB.
+ 
+      UltraStable Oscillator Files (USO Directory)
+      --------------------------------------------
+        UltraStable Oscillator (USO) files are calibration data
+        derived from open-loop radio measurments.  Files are PDS
+        table objects with detached labels.  Examples include USO
+        Allan Deviation (type A files) and the piecewise-continuous
+        linear model of USO frequency (type M files).  File names
+        are of the form  USOtyddd.TAB,  where  t  is the file type
+        (see above),  y  is the one-digit year in which the file was
+        created, and  ddd  is the three-digit day-of-year in which
+        the file was created.  Each USO file is accompanied by a
+        detached PDS label with name  USOtyddd.LBL  which completely
+        describes the content and format of the file.
+ 
+      DSN Weather Files (WEA Directory)
+      ---------------------------------------------------
+        DSN Weather files are produced by the Tracking System
+        Analytic Calibration (TSAC) Group at JPL.  Files give weather
+        calibration information for DSN complexes.  These are ASCII
+        files of variable length records.  Each record is delimited
+        by an ASCII line-feed &lt;LF&gt; (ASCII 10).  File names have
+        the form  ydddeeeD.WEA  where  y  is the one-digit year of
+        the first data in the file,  ddd  is the day-of-year of the
+        first data in the file,  eee  is the day-of-year of the last
+        data in the file, and  D  is a single digit denoting the
+        DSN complex at which the data were acquired (&apos;1&apos; for
+        Goldstone, &apos;4&apos; for Canberra, or &apos;6&apos; for Madrid).  WEA files
+        are typically released weekly and contain all weather data
+        for the complex since 1 January.  Each WEA file is
+        accompanied by a PDS minimal label with file name
+        ydddeeeC.LBL.  The files grow at the rate of approximately
+        90 kB per month.
+ 
+ 
+    Coordinate System
+    =================
+      SPK ephemeris files and TCK files were produced for the
+      J2000 inertial reference frame.  NAIF reader routines may be
+      used to convert these to other coordinate systems.
+ 
+      Other data types are not dependent on definition of a
+      coordinate system.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at Stanford University and elsewhere.
+      Because such software must usually operate at the bit-level and
+      is written for a narrow range of platforms, it is not suitable
+      for general distribution.  No software is included with this
+      archival data set.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set is written on CD-WO media using the
+      Young Minds CD Studio authoring system.  The CD-WO volumes
+      conform to ISO 9660 standards.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been processed as part of
+      health monitoring activities of the MGS Radio Science Team.
+      In general, this is a good data set.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the MGS Radio Science
+      Team prior to submission to the Planetary Data System (PDS).
+      The MGS Science Data Validation Team (SDVT) set standards and
+      procedures.
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications.  These materials were distributed to PDS
+      personnel, the experiment investigator, and others,
+      as appropriate.
+ 
+      ODR files on the CD-WO volumes were checked using Stanford
+      parsing and reduction software to ensure that they were both
+      complete and accurate replicas of the data contained in the
+      original files.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Significant events for Radio Science during MGS Cruise were as
+      follows:
+ 
+         YY/DDD Start DSP Stop DSP  Comments
+         ------  -------- --------  ----------------
+         96/326  15:22:00 16:53:00  TCM-1
+         96/332  04:46:00 07:00:25  USO Test #1
+         96/345  10:00:00 12:00:00  USO Test #2 (no open-loop data)
+         96/353  10:00:00 12:00:00  USO Test #3 (no open loop data)
+         97/009                     Switch from LGT to HGA
+         97/016  06:30:00 08:30:00  USO Test #4
+         97/030  10:00:00 12:00:00  USO Test #5
+         97/043  12:45:00 14:45:00  USO test #6 (tape data only)
+         97/049  19:01:27 21:01:27  USO test #7
+         97/061  12:31:50 16:31:51  USO test #8 (4 hrs)
+         97/072  11:32:16 13:32:16  USO Test #9
+         97/088  04:19:36 07:19:36  KaBLE/USO test
+         97/092  05:57:30 07:00:00  USO Test #10 (1 hr; DSP error)
+         97/104                     Begin GWE
+         97/124                     End GWE
+         97/126 (approx)            S/C enters safe mode
+         97/142 (approx)            S/C exits safe mode
+         97/162  02:00:00 04:00:00  USO test #11
+         97/189  14:00:00 20:30:00  RS ORT #1
+         97/193  20:30:00 02:10:00  RS ORT #2
+         97/198  00:10:39 02:10:39  USO Test #12
+         97/204  22:00:00 04:30:00  RS ORT #3
+         97/220  05:15:00 11:45:00  RS ORT #4
+         97/220  14:00:00 16:00:00  USO Test #13
+         97/224  00:40:00 12:35:00  RS ORT #5
+         97/237  12:00:00 01:00:00  TCM-4
+ 
+      Quality of data was affected by anomalous conditions.  Examples
+      include:
+ 
+      Open-Loop (ODR) Data Anomalies
+      ------------------------------
+        1. Presence of 60 and/or 180 Hz spurs around carrier
+        2. Presence of 30, 420, 540 Hz and higher spurs (infrequent)
+        3. 650 Hz carrier sidebands (present when telemetry is ON)
+        4. Missing data records (frequent)
+        5. Amplitude modulation on various time scales of a few
+             seconds and longer; modulation with a period of about
+             33 secs was common unless spacecraft activities had been
+             largely limited to radio science support
+        6. Amplitude modulation with 100 minute period (resulting
+             from spacecraft spin while in Cruise)
+        7. Incorrect POCA values and/or POCA values out of
+             sequence(common)
+        8. Small spurs at 30, 48, 75 Hz from carrier (uncommon)
+        9. Incorrect attenuator settings, DSP configuration
+             (uncommon)
+       10. Image of carrier in power spectra (common at 200 sps
+             sampling rate)
+       11. Spikes in frequency residuals at 209 sec intervals
+             (when ranging ON)
+       12. 60 Hz comb in power spectra, tracking carrier (seen once)
+ 
+      Closed-Loop Data Anomalies (mostly observed in ODF)
+      ---------------------------------------------------
+        1. Interference from Goldstone Solar System Radar
+             (infrequent)
+        2. Discontinuities among range results at different stations
+        3. Excessive Doppler noise in DSS 45 data
+ 
+      Note that the official end of the Cruise Phase has been defined
+      as 1997-09-12; when this data set was assembled, the end date
+      was understood to be 1997-09-02.  If a complete understanding of
+      Cruise data is required, users may wish to investigate the first
+      few volumes in the  MGS-M-RSS-1-MOI-V1.0  data set.
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>96-062A-04A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

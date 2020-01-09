@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-j-mag-2-redr-raw-data-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO ORBITER JUPITER RAW MAGNETOMETER DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:plasma_cloud.io_plasma_torus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.amalthea::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.callisto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.europa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.ganymede::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-mag-2-redr-raw-data-v1.0__browserp_go-j-mag-2-redr-raw-data-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson, M.G., K.K. Khurana, J.D. Means, C.T. Russell, and R.C. Snare, The
+                   Galileo Magnetic Field Investigation, Space Science Reviews, 60, 1-4, 357, 1992.
+            </reference_text>
+            <description>reference.KIVELSONETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-J-MAG-2-REDR-RAW-DATA-V1.0</data_set_id>
+        <data_set_name>GALILEO ORBITER JUPITER RAW MAGNETOMETER DATA V1.0</data_set_name>
+        <data_set_release_date>1997-07-01</data_set_release_date>
+        <start_time>1995-11-06T00:21Z</start_time>
+        <stop_time>2003-09-21T18:45Z</stop_time>
+        <producer_full_name>DR. MARGARET G. KIVELSON</producer_full_name>
+        <citation_text>
+            added ABSTRACT_DESC, , DATA_SET_MISSION OBJECT = DATA_SET OBJECT
+            = DATA_SET_INFORMATION DATA_SET_NAME =Kivelson, M.G., Khurana,
+            K.K., Russell, C.T., Walker, R.J., Joy, S.P.,Green, J., GO JUP/SW
+            MAG EDR JUPAPPROACH/IO/JUP OPTAVG MRO V1.0,
+            GO-J/SW-MAG-2-EDR-JA/I0/J0-OPTAVMRO-V1.0, NASA Planetary Data
+            System, 1995.
+        </citation_text>
+        <data_set_terse_desc>
+            All edited raw Galileo Magnetometer data aquired at Jupiter. Data
+            are properly time tagged and include everything needed for
+            determining and applying a calibration.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains raw magnetic field data acquired by the
+            Galileo Orbiter magnetometer at Jupiter. The data set covers the
+            time period from 1995-11-06T00:21:30 UT (Jupiter approach) until
+            the end of mission (March 2003). The raw magnetometer data set
+            includes various forms of data: recorded high time resolution,
+            real-time survey (RTS), optimal averager (opt/avg), snapshot, and
+            the calibration parameters required to generate processed data
+            products. In addition corrected rotor angles and spacecraft
+            relative clock and cone angles are provided to simplify future
+            calibration and reprocessing of the data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+       Data Set Overview
+       =================
+ 
+       This data set contains raw magnetic field data acquired by the
+       Galileo Orbiter magnetometer at Jupiter. The data set covers the
+       time period from 1995-11-06T00:21:30 UT (Jupiter approach) until
+       the end of mission (March 2003). The raw magnetometer data set
+       includes various forms of data: recorded high time resolution,
+       real-time survey (RTS), optimal averager (opt/avg), snapshot, and
+       the calibration parameters required to generate processed data
+       products. In addition corrected rotor angles and spacecraft
+       relative clock and cone angles are provided to simplify future
+       calibration and reprocessing of the data. These data have been
+       extracted from the packetized telemetry stream, time-tagged and
+       time-ordered, and had duplicate records removed. Obviously
+       corrupted data (e.g. spikes) have also been removed. MAG data are
+       uncalibrated and provided in data numbers.
+ 
+ 
+       Parameters
+       ==========
+ 
+       Data Sampling:
+ 
+       Data acquisition strategies varied throughout the mission. High
+       time resolution data were acquired only for short intervals near
+       targeted satellite encounters and occasionally elsewhere in the
+       magnetosphere. These data were recorded to tape and played back
+       during the &apos;cruise&apos; portion of each orbit. During the Jupiter
+       Approach period, most fields and particles (MWG) instruments were
+       off. The magnetometer, on the other hand, acquired low resolution
+       (opt/avg) data. During the bulk of the prime mission, the MWG
+       instruments were allowed to acquire continuous RTS data whenever
+       the spacecraft was inside 50 Jovian radii (Rj). When the MWG was
+       not returning RTS data, MAG used its opt/avg capability to
+       acquire low time resolution averages of the field. In general,
+       these are ~32 minute averages, although some higher rate data
+       (1-8 minute) were used to fill small gaps in RTS data coverage.
+ 
+       RTS, opt/avg, and snapshot data were all stored in the MAG
+       internal memory buffer. RTS data were continuously averaged at
+       MAG memory address 4800 and transmitted to Earth in real-time.
+       When an Opt/Avg ON command was given data were stored in the MAG
+       memory buffer beginning at address 4800 and continuing to higher
+       addresses until Opt/Avg OFF was commanded, another Opt/Avg ON was
+       commanded and the MAG buffer began filling at 4800 again, or the
+       MAG memory buffer filled. Opt/avg data was returned to Earth via
+       Memory Read-Out (MRO) as telemetry permitted. Since RTS and
+       opt/avg data used the MAG memory buffer in different ways, they
+       could not be collected simultaneously. Snapshot data, which
+       completely filled the MAG memory buffer, could likewise not be
+       collected simultaneously with opt/avg, and caused periodic spikes
+       in RTS data. Snapshot corruption of RTS data is discussed in more
+       detail in the &apos;Data Quality and Coverage&apos; section of this
+       document. For a more detailed discussion how MAG RTS, opt/avg,
+       and snapshot data are collected, please refer to
+       [KIVELSONETAL1992].
+ 
+       When high-resolution data were available, but the RTS data were
+       either lost or corrupted, simulated RTS (sRTS) data have been
+       generated from the high-resolution data. sRTS data were averaged
+       down to the RTS rate, then interpolated to be continuous with the
+       existing RTS data.
+ 
+       During the prime mission, the RTS data rate varied, depending the
+       downlink capability. MAG has several different possible
+       RTS data rates depending on the telemetry format:
+ 
+       ----------------------------------------------------------------
+       Table 1.               MAG RTS Rates
+       ----------------------------------------------------------------
+        Format     MAG bit rate    Time between samples    Corner Freq.
+                     (bps)         (seconds)    (mf)         (Hz)
+       ----------------------------------------------------------------
+          A-D         2               24         36          1/34
+          E           4               12         18          1/34
+          F           6                8         12          1/17
+          G           8                6          9          1/17
+          H          12                4          6          1/17
+          I          18               8/3         4          1/17
+ 
+       Similarly, the opt/avg data can be acquired at different rates.
+       The relatively high data rates fill the MAG internal memory
+       buffer more quickly and are only used to cover short data
+       disruptions.
+ 
+       ----------------------------------------------------------------
+       Table 2.          Optimal Averager Data Rates
+       ----------------------------------------------------------------
+       Time between samples     Buffer fill time     Corner Freq.
+        (RIM)   (hh:mm:ss.ss)     (day/hh:mm)            (Hz)
+       ----------------------------------------------------------------
+           1     00:01:00.67         03:22             1/67
+           2     00:02:01.33         06:44             1/134
+           4     00:04:02.67         13:29             1/268
+           8     00:08:05.33       1/02:58             1/536
+          16     00:16:10.67       2/05:56             1/1072
+          32     00:32:21.33       4/11:51             1/2144
+ 
+       The instrument has the ability to acquire longer time averages,
+       but these modes were not used at Jupiter.
+ 
+       After the prime mission ended (December 1997), RTS data
+       acquisition was limited to a few days near perijove with the
+       exception of a few orbits. When RTS data were acquired, they were
+       acquired exclusively in the 2 bps (24 sec/sample) telemetry
+       formats. There were no modifications to the opt/avg data
+       acquisition strategy associated with the end of the prime
+       mission.
+ 
+       Both the opt/avg and the RTS data processor compute field
+       averages by applying a recursive filter and decimate algorithm to
+       the data. The instrument applies a calibration, decimates vectors
+       down to minor frame (mf) samples (2/3 second) and despins the
+       data using the spin angle value broadcast on the spacecraft bus.
+       The corner frequencies of the recursive filter are provided in
+       tables 1 and 2 for the various sample durations. BOTH RTS AND THE
+       OPT/AVG DATA ARE TIME TAGGED AT THE TIME OF DECIMATION (END OF
+       AVERAGE) IN SPACECRAFT EVENT TIME (UTC). Averaged data overlay
+       high time resolution data acquired at the same time best when
+       these data are shifted in time by about 1/3 of the average
+       length.
+ 
+       MAG uses fixed gains to acquire data [KIVELSONETAL1992]. Gain
+       states must be changed manually by sending a gain change command
+       to the instrument. There are 3 ranges of field strengths that the
+       instrument can measure:
+ 
+       ----------------------------------------------------------------
+       Table 3.    Magnetometer Ranges
+       ----------------------------------------------------------------
+       Field Range (nT)     Magnetometer, range
+         min      max
+       ----------------------------------------------------------------
+         1/64  -    32      Outboard low field
+          1/4  -   512      Outboard high field, Inboard low field
+            8  - 16384      Inboard high field
+ 
+       The outboard magnetometer, low field mode was used to acquire
+       data beyond 60 Rj and the inboard magnetometer, high field
+       mode was used to acquire data inside of 9 Rj. During the prime
+       mission, the both the inboard low field and the outboard high
+       field modes were used to acquire data between 9-60 Rj. As the
+       outboard magnetometer is further out from the main body of the
+       spacecraft on the boom than the inboard magnetometer it is
+       impacted less by spacecraft fields. For this reason it was
+       initially preferred over the inboard magnetometer. However, the
+       outboard magnetometer began to experience abrupt changes in the
+       sensor zero levels towards the end of the prime mission. As a
+       result, the inboard magnetometer, low field mode was used to
+       acquire data between 9-60 Rj throughout the remainder of the
+       mission.
+ 
+       The AACS data are provided at the same rate as any MAG data
+       available for the same interval. MAG can be transformed from the
+       various possible rotor coordinate systems by using the values of
+       the rotor right ascension (RA), declination (DEC), twist, and
+       spin phase (Spin) angles. Spin also allows transforming MAG data
+       between spinning and despun (IRC) spacecraft coordinates.
+       Calibrations to the spin plane sensors must be applied in the
+       spinning reference frame. The spacecraft relative clock (clock)
+       and cone (cone) give information regarding the relative positions
+       of the Galileo rotor and scan platforms. Both clock and cone may
+       be useful in removing spacecraft interference due to sources on
+       the scan platform.
+ 
+       Neither clock nor cone angles are returned in the spacecraft
+       telemetry stream. Rather they are calculated from the rotor
+       and scan platform angles that are returned. Clock and cone have
+       been calculated in the following way:
+ 
+         1) Convert Scan Platform RA, DEC, and twist into a C-Matrix
+         2) Get unit vectors along platform M and L axis
+         3) Convert Rotor RA, DEC, and twist to Cartesian coordinates
+         4) Calculate cone angle (the angle between the Scan Platform
+            the Rotor spin axis) and correct C-Matrix for cone position
+         5) Convert Scan Platform C-Matrix into Stator C-Matrix
+         6) Get &apos;N&apos; axis of stator
+         7) Calculate clock angle (the angle between the spinangle and
+            the stator N axis)
+ 
+ 
+       Processing
+       ==========
+ 
+       The MAG data are raw. The data have merely been unpacked from the
+       packetized telemetry and formatted into time-ordered tabular
+       formats. Spikes and other obviously corrupted data have been
+       removed. However, the data are &apos;processed&apos; in the instrument and
+       a preliminary calibration is applied as part of that processing.
+       The RTS and opt/avg data are irrecoverably altered by instrument
+       processing. The only further processing that can be performed on
+       these data is to change the sensor offset corrections. In the
+       case of the high time resolution (LPW) data, the first step in
+       any form of processing is to remove the onboard calibration and
+       then apply an updated calibration. Both the onboard calibration
+       and the calibration updates are provided a part of this data set.
+ 
+       The AACS data have been interpolated to correct bad and missing
+       data. These corrected AACS values have then been used in
+       transforming the MAG data from spacecraft to geophysical
+       coordinates.
+ 
+ 
+       Data
+       ====
+ 
+       The raw telemetry data are logically separated into several data
+       types. These include:
+ 
+         MAG RAW LPW - high time resolution data, includes both recorded
+                       (LPW) and record rate change coverage (RRCC) data
+                       merged and properly time ordered
+         MAG RAW RTS - real-time survey data, including both data
+                       returned in real-time and those where the CDS
+                       buffer needed to be dumped to tape in order to
+                       order to prevent buffer overflow
+         MAG RAW OPT AVG - data from the MAG opt/avg; data returned in
+                       memory readouts (MROs) has been merged with the
+                       data returned in the LPW stream
+         MAG RAW ENG - MAG temperature and offset estimate data returned
+                       in the engineering data stream
+         MAG RAW SNAPSHOT - brief (7 sec) &apos;snapshots&apos; of the field at
+                       the full instrument sample rate (30 samples/sec)
+         AACS CORRECTED LPW - LPW rate corrected rotor angles and
+                       uncorrected relative clock and cone angles
+         AACS CORRECTED RTS - RTS rate corrected rotor angles.
+ 
+       Each of these data types are stored in separate files. In
+       general, data from a single orbit is included in a data file.
+       For some of the more data rich orbits, further subdivision is
+       necessary.
+ 
+       ------------------------------------------------------------
+       LPW data (SRC = spinning rotor coordinates)
+       ------------------------------------------------------------
+       Column   Type    Description &lt;units&gt;
+       ------------------------------------------------------------
+       time     char    Spacecraft event time, seconds since 1966
+       sclk     char    Spacecraft clock (rim:mf:mod10:mod8)
+       Bx       int     X field component in spinning coords &lt;DN&gt;
+       By       int     Y (along boom) field component &lt;DN&gt;
+       Bz       int     Z (spin aligned) field component &lt;DN&gt;
+ 
+       ------------------------------------------------------------
+       RTS data (IRC = inertial rotor coordinates)
+       ------------------------------------------------------------
+       Column   Type    Description &lt;units&gt;
+       ------------------------------------------------------------
+       time     char    Spacecraft event time, seconds since 1966
+       sclk     char    Spacecraft clock (rim:mf:mod10:mod8)
+       Bx       int     Southward field component &lt;DN&gt;
+       By       int     Eastward field component &lt;DN&gt;
+       Bz       int     Anti-Earthward field component &lt;DN&gt;
+ 
+       ------------------------------------------------------------
+       Opt/Avg data (IRC coordinates)
+       ------------------------------------------------------------
+       Column   Type    Description &lt;units&gt;
+       ------------------------------------------------------------
+       time     char    Spacecraft event time, seconds since 1966
+       sclk     char    Spacecraft clock (rim:mf:mod10:mod8)
+       Bx       int     Southward field component &lt;DN&gt;
+       By       int     Eastward field component &lt;DN&gt;
+       Bz       int     Anti-Earthward field component &lt;DN&gt;
+ 
+       ------------------------------------------------------------
+       Snapshot data (sensor coordinates)
+       ------------------------------------------------------------
+       Column   Type    Description &lt;units&gt;
+       ------------------------------------------------------------
+       time     char    Spacecraft event time, seconds since 1966
+       sclk     char    Spacecraft clock (rim:mf:mod10:mod8)
+       sen1     int     Sensor 1 field component in spinning coords &lt;DN&gt;
+       sen2     int     Sensor 2 field component in spinning coords &lt;DN&gt;
+       sen3     int     Sensor 3 field component in spinning coords &lt;DN&gt;
+ 
+       ------------------------------------------------------------
+       Eng data   (IRC coordinates)
+       ------------------------------------------------------------
+       Column    Type   Description &lt;units&gt;
+       ------------------------------------------------------------
+       time      char   Spacecraft event time, seconds since 1966
+       sclk      char   Spacecraft clock (rim:mf:mod10:mod8)
+       inb_Temp  float  Temperature of the inboard sensor &lt;K&gt;
+       out_Temp  float  Temperature of the outboard sensor &lt;K&gt;
+       ele_Temp  float  Temperature of the MAG electronics &lt;K&gt;
+       adc_Temp  float  A/D converter temperature &lt;K&gt;
+       Bx_avg    int    Average of spinning Bx (offset error) &lt;DN&gt;
+       By_avg    int    Average of spinning By (offset error) &lt;DN&gt;
+ 
+       ------------------------------------------------------------
+       AACS data (LPW rate)
+       ------------------------------------------------------------
+       Column    Type   Description &lt;units&gt;
+       ------------------------------------------------------------
+       time      char   Spacecraft event time, seconds since 1966
+       rotattr   float  Rotor right ascension (EME-50) &lt;radians&gt;
+       rotattd   float  Rotor declination (EME-50) &lt;radians&gt;
+       rotattt   float  Rotor spin phase angle (EME-50) &lt;radians&gt;
+       spinangl  float  Rotor spin phase angle (ECL-50) &lt;radians&gt;
+       screlclk  float  Spacecraft relative clock angle &lt;radians&gt;
+       screlcon  float  Spacecraft relative cone angle &lt;radians&gt;
+ 
+       ------------------------------------------------------------
+       AACS data (RTS rate)
+       ------------------------------------------------------------
+       Column    Type   Description &lt;units&gt;
+       ------------------------------------------------------------
+       time      char   Spacecraft event time, seconds since 1966
+       rotattr   float  Rotor right ascension (EME-50) &lt;radians&gt;
+       rotattd   float  Rotor declination (EME-50) &lt;radians&gt;
+       rotattt   float  Rotor spin phase angle (EME-50) &lt;radians&gt;
+       spinangl  float  Rotor spin phase angle (ECL-50) &lt;radians&gt;
+ 
+ 
+       Ancillary Data
+       ==============
+ 
+       There are several files that are provided in addition to the data
+       files themselves that may be of value to the user. These include
+       the following:
+ 
+         MAG GAP LISTING - a detailed list of the timing and cause of
+           data gaps
+         MAG EVENT TABLE - a table of important spacecraft and
+           instrument commands and events
+         MAG_CALIB_SURVEY.TXT - a description of RTS and OPT AVG data
+           onboard calibration procedures along with a time history
+           of z-sensor offsets
+         MAG_CALIB_HIGHRES.TXT - a description of high-resolution (LPW)
+           data calibration procedures, including a description of the
+           calibration used to process each recording
+ 
+ 
+       Coordinate Systems
+       ==================
+ 
+       The data are provided in three coordinate systems, spinning
+       spacecraft (LPW), despun spacecraft (RTS, opt/avg, Eng), and
+       sensor coordinates (snapshot).
+ 
+       The rotor portion of the spacecraft spins to allow the fields and
+       particles instruments to see a larger fraction of the sky and to
+       provide spacecraft stability. The coordinate system that is fixed
+       with respect to the rotor (SRC), spins in an inertial frame. In
+       this frame, the SRC Y-axis points away from the spin axis along
+       the magnetometer boom. The SRC Z-axis is the rotor spin axis, and
+       is positive in the opposite direction from the high gain antenna.
+       X completes the right-handed set.
+ 
+       Effects of the rotor spin can be removed by &apos;despinning&apos; the
+       data by using either the &apos;rotor twist angle&apos; or the &apos;rotor spin
+       angle&apos;. When the data are despun by using the spin angle, as
+       broadcast on the spacecraft bus, the resulting data are in
+       inertial rotor coordinates (IRC). In this frame, the X-axis
+       is nearly aligned with the ecliptic normal (positive southward),
+       the Z-axis points anti-earthward, and Y completes the right-handed
+       set. Earthward pointing of the antenna is maintained for
+       communication purposes to within ten degrees. The rotor right
+       ascension, declination, and twist angle in the AACS data stream
+       allow the data to be rotated into the inertial EME-50 reference
+       frame.
+ 
+       The MAG sensors are not perfectly aligned with respect to the
+       rotor (spinning) coordinate system. In addition, two of the
+       MAG sensors can be &apos;flipped&apos; to change which sensor is nearly
+       aligned with the spin axis. Sensor 1 is fixed along the boom
+       direction (SRC Y-axis). Sensors 2 and 3 flip. When the
+       instrument is in the &apos;flip left&apos; state, sensor 3 is along the
+       SRC Z-axis (spin axis) and sensor 1 oriented opposite the
+       SRC X axis. In the flip right state, sensor 3 is along the
+       SRC
+ 
+ 
+       References
+       ==========
+ 
+       [KIVELSONETAL1992] The Galileo Magnetic Field Investigation,
+          Space Science Rev.  60, 357, 1992
+        </data_set_desc>
+        <confidence_level_note>
+ 
+       Review
+       ======
+ 
+       These are raw data that have been reformatted by the instrument
+       team. The team has reviewed the data and verified that they
+       accurately reflect the MAG data returned by the instrument.
+       After submission to the PDS, these data successfully completed
+       the peer review process.
+ 
+ 
+       Data Coverage and Quality
+       =========================
+ 
+       The magnetometer raw data set contains all of the data that were
+       returned from the instrument. However, there are numerous gaps
+       in coverage. Gaps can be caused by telemetry outages,
+       insufficient downlink or uplink, conjunctions, instrument
+       anomalies, spacecraft anomalies, commanding errors, etc. A
+       detailed gap listing including a description of the reason for
+       the gap is provided in a separate file with these data. Below is
+       a list of some of the larger or more common gaps.
+ 
+       Early in the prime mission, MAG was required to &apos;pay&apos; for the
+       bits its used to return the opt/avg data by not acquiring as much
+       high resolution data. MAG did not return data from the MWG
+       transauroral crossing recorded interval in the C3 orbit so that
+       it could have continuous coverage during that orbit. After the
+       fourth orbit, the MAG opt/avg data was returned in the spacecraft
+       engineering data stream at no cost to the team.
+ 
+       JA:  Gaps in coverage due to limited telemetry
+       J0:  Large gaps during probe relay and Io playback
+       G1:  MAG flip/commanding anomaly, and spacecraft safing (2 and 1
+            weeks respectively)
+       J5:  Conjunction, limited telemetry (5 weeks)
+       E6:  Instrument anomaly, radiation hit (2 weeks)
+       G7:  MAG flip anomaly (1 week)
+       E12: AACS anomaly (7 weeks)
+       J13: Conjunction (6 weeks)
+       E14: Spacecraft safing (5 days)
+       E15: Ground station reallocated to SOHO for spacecraft anomaly
+            recovery effort (3 days)
+       E16: Spacecraft safing (4 days)
+       E17: Ground station reallocated to Voyager 2 for spacecraft
+            anomaly recovery effort (4 days)
+       E18: Spacecraft safing, and ground station reallocated to NEAR
+            for spacecraft anomaly recovery effort (2 days each)
+       E19: Conjunction (3 weeks)
+       I27: Conjunction (3 weeks)
+       C30: Conjunction (3 weeks)
+       I33: Conjunction (3 weeks)
+ 
+       Other common causes of data gaps that are not related to
+       telemetry outages and anomaly gaps are listed below. Gaps may
+       have occurred throughout Jupiter Orbital Operations - whenever
+       the conditions which caused them existed.
+ 
+         Gaps between consecutive opt/avg segments: Gaps of at least two
+           data vectors occurred between consecutive opt/avg data
+           segments. The first and last vector in every opt/avg segment
+           are underfiltered and have therefore been discarded. For the
+           most common data opt/avg rate, this results in a gap of ~1
+           hour. These gaps may be larger than two vectors if there is
+           any delay between the MRO of the data in the buffer and the
+           subsequent opt/avg ON command.
+ 
+         Snapshot corruption of RTS data: When snapshots (see
+           [KIVELSONETAL1992] for more information) were taken the
+           addresses in which RTS data were averaged were overwritten
+           with snapshot data. Since snapshots were written to MAG
+           memory in reversed byte order, the result was a spike which
+           persisted over the course of few records due to the
+           application of the filter. Whenever possible RTS data
+           corrupted by snapshots have been replaced with sRTS data
+           which were unaffected by snapshots. When high-resolution data
+           are not available, however, snapshots result in a series of
+           short (3-6 vector), regularly spaced gaps in the RTS.
+ 
+       It is difficult to define what is meant by data quality when
+       discussing raw data products. These are the data returned by the
+       instrument, after reformatting and the inclusion of time tags
+       for each sample.
+ 
+       SNPE_07.DAT - The first snapshot contained in the Ganymede 7 raw
+         file (beginning ~1997-03-30 18:57:52.19) was shifted -.9 sec in
+         order to match the LPW data. The sclk values were not updated.
+ 
+       OPTE_09.DAT and OPTE_10.DAT - In Callisto 9 and Callisto 10
+         orbits the magnetometer was commanded into opt/avg mode without
+         deselecting the instrument from RTS. As a result the Command
+         and Data Subsystem (CDS) overwrote the opt/avg rate filter
+         constant stored that MAG memory with a RTS rate filter
+         constant. This resulted in the data being under filtered
+         relative to the data sample rate. This under filtering shows up
+         as spin-tone in the spinning sensors in spacecraft coordinates.
+         The spin-tone may be eliminated by averaging the raw data (two
+         point averages on one point centers).
+ 
+       LPWE_12.DAT - Due to a stronger than expected magnetic field near
+         closest approach to Europa in the Europa 12 orbit, some of the
+         magnetometer data was corrupted due to instrument saturation.
+         The problem occurs 1997-Dec-16 11:53:00 - 12:05:20. For more
+         information on the recovery process please refer to the file
+         /CALIB/MAG/MAG_SATURATION.TXT.
+ 
+       RTSE_17.DAT and AACS_RTS_17.DAT - Between 1998-09-26T15:46:24 and
+         1998-09-26T16:42:01 the AACS data are unstable. Apparently,
+         some form of AACS calibration was occurring. During this
+         period, the magnetometer spin plane components appear to slowly
+         rotate and then jump back to a correct orientation. This
+         problem occurred on the spacecraft and has not been corrected
+         in the ground system processing.
+ 
+       AACS_RTS_19.DAT - Due to a spacecraft anomaly AACS data from
+         1999-01-31 16:02:06 - 1999-02-01 01:49:37 were lost. The MAG
+         data from this interval, however, were written to tape and
+         returned later. Recovering the lost AACS - specifically the RA,
+         and DEC - was complicated by two Science Instrument Turns
+         (SITURN&apos;s) which occurred in the missing interval. In between
+         the SITURN&apos;s, RA and DEC were interpolated by the following
+         means:
+ 
+         1/31 16:02:06 to 18:01:28     - set to last known value
+         1/31 18:01:28 to 18:26        - linearly interpolated
+         1/31 18:26    to 19:31:27     - assumed constant between
+           and determined by examination
+         1/31 19:31:27 to 19:49        - linearly interpolated
+         1/31 19:49    to 2/1 01:49:37 - set to next known value (taken
+           from high-res. data, the E19-EUR recording)
+ 
+       AACS_LPW_21.DAT - The AACS data for this recording were seriously
+         corrupted, and required special processing to correct. In order
+         to correct rotor twist, and spin angle, the LPW rate data were
+         discarded and the RTS rate data was interpolated to the LPW
+         rate. The rotor right ascension and declination have been set
+         to fixed values.
+ 
+       AACS_LPW_22.DAT - The AACS data for this recording were seriously
+         corrupted, and required special processing to correct. In order
+         to correct rotor twist, and spin angle, the LPW rate data were
+         discarded and the RTS rate data was interpolated to the LPW
+         rate. The rotor right ascension and declination have restricted
+         to a limited set of the most common values.
+ 
+       AACS_LPW_23.DAT - The AACS data for this recording were seriously
+         corrupted, and required special processing to correct. In order
+         to correct rotor right ascension, declination, and twist
+         angles, and the spin angle, the LPW rate data were discarded
+         and the RTS rate data was interpolated to the LPW rate.
+ 
+       AACS_RTS_23.DAT - It was necessary to interpolate the rotor twist
+         and spin angles for the intervals:
+           1999-09-17 05:26:41 - 06:08:30
+           1999-09-27 16:06:58 - 16:28:53
+         The first interval corresponds to the use of the Gyros to
+         generate AACS onboard the spacecraft.
+ 
+       RTS_25.DAT - Following recovery from spacecraft safing, MAG was
+         inadvertently left in snapshot mode. As a result there are
+         numerous short gaps where the RTS data were corrupted by
+         snapshots, and a large gap where the OPT/AVG data were
+         overwritten. This problem affects the interval
+         1999-11-26 04:32 to 1999-11-29 00:54.
+ 
+       RTS_26.DAT - The packet headers for the data from the time
+         interval 2000-01-01 23:30:00.000 to 2000-01-03 14:08:39.742
+         indicated that the data were sampled at 18 minor frames (mf) or
+         12 seconds sampling resolution. This data rate matched the MAG
+         RTS format reported in the sequence (format E). In the original
+         12 second data there were a series of systematic gaps. The end
+         of each gap occurred where the packet of MAG data included a
+         time tag. This would be the case if an incorrect sampling rate
+         were applied to the data in packets where no time tag is given,
+         then the data were to jump forward to the correct time when a
+         time tag was given. Accordingly the data in this interval were
+         re-time tagged at 36 mf (24 second) samples. This done the data
+         became continuous across what were previously gaps -- both in
+         time (the data are evenly sampled), and data value (the data
+         contain no steps). The reason for this discrepancy was unknown.
+ 
+ 
+       Limitations
+       ===========
+ 
+       There are no particular limitations or warnings regarding the
+       use of these data, in general, that are not described above.
+       Users should review the PDS label files associated with
+       individual data files for file (orbit) specific warnings.
+        </confidence_level_note>
+        <archive_status>IN_PEER_REVIEW</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

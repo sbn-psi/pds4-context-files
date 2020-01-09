@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vega1-c-ducma-3-rdr-halley-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VEGA1 DUST PARTICLE COUNTER MASS ANALYSER DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.vega_1::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vega1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ducma.vega1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.halley::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vega1-c-ducma-3-rdr-halley-v1.0__browserp_vega1-c-ducma-3-rdr-halley-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Reinhard, R and B. Battrick (eds), &apos;Space Missions to Halley&apos;s Comet&apos;, European
+                   Space Agency ESA SP-1066, ESA Pub Div, Moordwijk, Netherlands, 1986.
+            </reference_text>
+            <description>reference.ESA-SP1066</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VEGA1-C-DUCMA-3-RDR-HALLEY-V1.0</data_set_id>
+        <data_set_name>VEGA1 DUST PARTICLE COUNTER MASS ANALYSER DATA V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1986-02-27T05:13:02.000Z</start_time>
+        <stop_time>1986-03-07T10:11:02.000Z</stop_time>
+        <producer_full_name>INTERNATIONAL HALLEY WATCH</producer_full_name>
+        <citation_text>
+            Simpson, J.A., Rabinowitz, D., Tuzzolino, A. J., and A. V.
+            Dyachkov, VEGA1 DUST PARTICLE COUNTER MASS ANALYSER DATA V1.0,
+            VEGA1-C-DUCMA-3-RDR-HALLEY-V1.0, NASA Planetary Data System, 1989.
+        </citation_text>
+        <data_set_terse_desc>
+            VEGA 1 satellite DUCMA instrument dust particle counter and mass
+            analyzer observations of 1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            Encounter Data for Vega-1 included two files: DSFAST17 and
+            Dvega101. These files were submitted by the Univ of Chicago group
+            with hard copy versions of the operating manual and a preprint of
+            results. The following explanation of the contents of the two
+            files is below.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+    Encounter Data for Vega-1 included two files: DSFAST17
+    and Dvega101. These files were submitted by the Univ
+    of Chicago group with hard copy versions of the operating
+    manual and a preprint of results.  The following
+    explanation of the contents of the two files is below.
+ 
+     The DSFAST17 file includes all the fast telemetry
+    data (data obtained every two seconds).  The fast
+    telemetry data covers the entire Halley&apos;s comet
+    encounter, lasting approximately four hours.  The
+    telemetry noise events have not been removed from the
+    data.  Each readout includes; 1)the time at which
+    data was obtained in seconds (given in time since the
+    Vega launch date),and the Blissi clock described in
+    the technical manual, 2) Two eight integer status
+    commands also described in the Ducma Technical
+    Manual, 3) two temperatures,the detector temperature
+    and the electronic temperature explained in the
+    technical manual, 4) the dust events given as ten
+    integers which represent counts in each of four
+    different thresholds,M4-M1,as well as the
+    anticoincident counts,M4NV-M1NV, and the two V
+    detector counts, VL and VH, which register noise
+    events.  More detailed explanations may be found in
+    the Ducma technical manual which is available through
+    PDS-SBN.  The masses corresponding to thresholds M1
+    through M4 are given below:
+ 
+ 
+        M1: 1.5x10**-13 g
+    	M2: 5.6x10**-11 g
+    	M3: 1.6x10**-9 g
+        M4: 4.0x10
+ 
+    A sample data line appears as follows:
+ 
+ 
+Ducma     Blissi     Command     Status      Detector    Elect.
+clock     clock                               Temp.      Temp.
+38252812     1      10100100    11011001     -18.01      30.86
+ 
+ 
+M4    M3      M2    M1    M4NV   M3NV   M2NV   M1NV    VL     VH
+0     0       1     2       0      0      0      0      0      0
+ 
+ 
+    Dvega101 file includes the encounter data without any
+    information about status commands and temperature
+    variations.  The noise spikes have been removed.
+     This file is designed for easy data analysis and
+    lists simply the time of an event in seconds and the
+    total counts in each threshold, M4-M1, the
+    anticoincident events, M4NV-M1NV, and the noise
+    events,VL and VH, all obtained during that time
+    interval.
+ 
+     Below are charts to help in the conversion of BLISSI
+    clock times for Vega1 to DUCMA clock times and
+    &apos;calendar time&apos;.
+ 
+     DUCMA times are given in seconds after launch BLISSI
+    times are given in seconds
+ 
+ 
+Vega1
+DUCMA start time: Dec. 15 1984 10:33:37
+from file dsfast17.tab
+------------+-----------+--------------------------+--------------------+
+ DUCMA time |BLISSI time|    DUCMA Time to CA 	   |      Real time	|
+  (seconds) | (seconds)	| (seconds) |(DD hh:mm:ss) | (YY-MM-DDThh:mm:ss)|
+------------+-----------+-----------+--------------+--------------------+
+  37910088  |    179	|   612424  | 07 02:07:04  |  86-02-27T05:13:02	|
+  37917104  |   7195	|   605408  | 07 00:10:08  |  86-02-27T07:09:58	|
+  38344948  |      8	|   177564  | 02 01:19:24  |  86-03-04T06:00:42	|
+  38352136  |   7196	|   170376  | 01 23:19:36  |  86-03-04T08:00:30	|
+  38431348  |     13	|    91164  | 01 01:19:24  |  86-03-05T06:00:42	|
+  38438524  |   7191	|    83988  | 00 23:19:48  |  86-03-05T08:00:18	|
+  38511536  |      2	|    10976  | 00 03:02:56  |  86-03-06T04:17:10	|
+* 38522512  |  10976 	|        0  | 00 00:00:00  |  86-03-06T07:20:06 |
+  38526412  |  14878	|     3900  | 00 01:05:00  |  86-03-06T08:25:06	|
+  38612184  |    202	|    89672  | 01 00:54:32  |  86-03-07T08:14:38	|
+  38619168  |   7188	|    96656  | 01 02:50:56  |  86-03-07T10:11:02	|
+------------+-----------+-----------+--------------+--------------------+
+ 
+*-times of Closest Approach (CA)
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      N/A
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

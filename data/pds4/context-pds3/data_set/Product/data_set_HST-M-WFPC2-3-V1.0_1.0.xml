@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.hst-m-wfpc2-3-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>HST WIDE FIELD PLANETARY CAMERA 2 OBSERVATIONS OF MARS</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.hst::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:wfpc2.hst::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hst-m-wfpc2-3-v1.0__browserp_geo_hst-m-wfpc2-3-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hst-m-wfpc2-3-v1.0__dvo_geo_hst-m-wfpc2-3-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bell III, J.F., HST Studies of Mars, in A Decade of Hubble Space Telescope
+                   Science, eds. M. Livio, K. Noll, and M. Stiavelli, Cambridge University
+                   Press, pp. 1-24, 2003.
+            </reference_text>
+            <description>reference.BELL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>HST-M-WFPC2-3-V1.0</data_set_id>
+        <data_set_name>HST WIDE FIELD PLANETARY CAMERA 2 OBSERVATIONS OF MARS</data_set_name>
+        <data_set_release_date>2004-04-01</data_set_release_date>
+        <start_time>1999-04-27T18:05:13.000Z</start_time>
+        <stop_time>2006-12-31T22:56Z</stop_time>
+        <producer_full_name>JIM BELL</producer_full_name>
+        <citation_text>
+            Bell III, J.F., HST WIDE FIELD PLANETARY CAMERA 2 OBSERVATIONS OF
+            MARS, HST-M-WFPC2-3-V1.0, NASA Planetary Data System, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Hubble Space Telescope Wide Field Planetary Camera 2 observations
+            of Mars
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Hubble Space Telescope Wide Field Planetary Camera 2 data
+            archive contains calibrated data of Mars observed between April
+            27, 1999 and September 4, 2001. These are full-disk images of
+            Mars obtained primarily through narrowband filters and in the
+            wavelength interval of 255 to 1042 nm. The data have been
+            calibrated to radiance factor, or I/F.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    The Hubble Space Telescope Wide Field Planetary Camera 2 data
+    archive contains calibrated data of Mars observed between April
+    27, 1999 and September 4, 2001.  These are full-disk images of
+    Mars obtained primarily through narrowband filters and in the
+    wavelength interval of 255 to 1042 nm.  The data have been
+    calibrated to radiance factor, or I/F. The archive is divided into
+    13 groups according to different observation dates, and each group
+    contains five different types of FITS files:
+    1. simple cylindrical projection images in a cube with backplanes
+       containing emission and incidence angles
+    2. orthographic projection images in a cube with backplanes
+       containing latitude, longitude, emission angle, and incidence
+       angle
+    3. Unprojected image for each wavelength
+    4. simple cylindrical projection image for each wavelength
+       (used to compile the cube #1)
+    5. orthographic projection image for each wavelength
+       (used to compile the cube #2)
+ 
+    Important parameters and information can be found in the file
+    headers. For the files with the &apos;RL&apos; prefix, please see near the
+    bottom of the header for more organized information.  This can be
+    helpful in further manipulation of the data.  For example, The
+    value of F (solar flux) used in our calibration process is
+    included in the headers with the keyword starting with &apos;FSUN&apos;, so
+    that one can go back to radiance units (I).
+ 
+    The following table summarizes some information on the thirteen
+    observation groups in the data archive. The first column list the
+    observation dates in the format, YYMMDD.  The resolution is the best
+    spatial resolution at the sub-Earth point for images obtained on
+    the PC1 chip.
+      ------------------------------------------------------------------
+      Observation   Wavelengths           Diam.   Phase Ang.  Resolution
+         Date        (nm)               (inches)   (degree)   (km/pixel)
+      ------------------------------------------------------------------
+                    255, 336, 410, 502,
+       990427       547, 588, 631, 673,   16.2    2.70        19.4
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 410, 502,
+       990428       547, 588, 631, 673,   16.2    2.92        19.3
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 410, 502,
+       990501       547, 588, 631, 673,   16.2    5.90        19.3
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 410, 502,
+       990506       547, 588, 631, 673,   16.1    10.00       19.4
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 375, 410,
+       010116       502, 588, 631, 673,   5.7     34.95       54.6
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 375, 410,
+       010213       502, 588, 631, 673,   6.9     37.54       45.3
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 375, 410,
+       010402       502, 588, 631, 673,   10.6    36.46       29.6
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 375, 410,
+       010513       502, 588, 631, 673,   16.4    23.18       19.1
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    410, 502, 588, 631,
+       010626       673, 1042, 410,       16.2    2.70        19.4
+                    502, 673
+      ------------------------------------------------------------------
+                    255, 336, 410, 502,
+       010809       547, 588, 631, 673,   15.9    38.09       19.6
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 410, 502,
+       010810       547, 588, 631, 673,   15.8    38.54       19.8
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 410, 502,
+       010814       547, 588, 631, 673,   15.3    39.66       20.4
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+                    255, 336, 410, 502,
+       010904       547, 588, 631, 673,   13.0    44.21       24.1
+                    763, 835, 953, 1042
+      ------------------------------------------------------------------
+ 
+ 
+  Data
+  ====
+    The data products are stored as FITS images and cubes.  All files
+    with &apos;IMG&apos; suffix contain 2D image in a simple FITS format.  The
+    remaining files with the &apos;CUB&apos; ending have 3D array consisting of
+    2D images stacked in increasing wavelength order (except for
+    010626 data set) with additional information stored in the
+    backplanes, which have the same array size as the preceding 2D
+    images.  The FITS headers contain detailed and tailored
+    information about their content.
+ 
+ 
+  Coordinate System
+  =================
+    Mars areocentric, west positive.
+        </data_set_desc>
+        <confidence_level_note>
+UNK
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

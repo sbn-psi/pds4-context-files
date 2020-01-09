@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.wff-e-atm-1-5-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ATM OBSERVATIONS AT NEVADA TEST SITE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.wff::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:atm.wff::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.wff-e-atm-1-5-v1.0__browserp_geo_wff-e-atm-1-5-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.wff-e-atm-1-5-v1.0__dvo_geo_wff-e-atm-1-5-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Farr, T.G., W. Krabill, and J.B. Garvin, High Resolution Digital Elevation
+                   Models of Pristine Explosion Craters, LPSC XXXV, Houston, TX, Abstract No.
+                   2146, 2004.
+            </reference_text>
+            <description>reference.FARRETAL2004</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>WFF-E-ATM-1/5-V1.0</data_set_id>
+        <data_set_name>ATM OBSERVATIONS AT NEVADA TEST SITE V1.0</data_set_name>
+        <data_set_release_date>2005-11-01</data_set_release_date>
+        <start_time>2003-09-30</start_time>
+        <stop_time>2003-09-30</stop_time>
+        <producer_full_name>TOM FARR</producer_full_name>
+        <citation_text>
+            Farr, T., and J. Ward, ATM Observations at Nevada Test Site,
+            WFF-E-ATM-1/5-V1.0, NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Wallops/GSFC Airborne Topographic Mapper (ATM) digital elevation
+            data of explosion craters in the Nevada Test Site.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains digital elevation data for three explosion
+            craters in the Nevada Test Site. These data were acquired by the
+            Wallops/GSFC Airborne Topographic Mapper (ATM) in September 2003.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+ 
+    This archive contains DEMs acquired in September 2003 by the Wallops/
+    GSFC Airborne Topographic Mapper, a scanning laser altimeter. The data
+    were acquired at three locations in Nevada: Sedan crater, in the
+    northern part of Yucca Flats, Schooner crater, in the northwestern part
+    of the Nevada Test Site, and Buckboard mesa (Danny Boy crater), in the
+    western part of the Nevada Test Site.
+ 
+    The data consist of three vector data files and three DEM flat files,
+    each with an accompanying detached PDS label. The three DEM flat files
+    also have detached ENVI headers containing geographic data. The vector
+    files list the longitude in degrees, the latititude in degrees, and the
+    elevation in meters above datum as floating point values. The vector
+    data were rasterized with ENVI to 2x2 m spacing and projected to UTM
+    coordinates. In the resultant DEM flat files, the pixels are floating
+    point values in meters above the datum.
+ 
+    For the vector data:
+      horizontal datum = WGS84 Ellipsoid
+      vertical datum = ITRF94
+    For the raster data:
+      horizontal datum = WGS84 Ellipsoid
+      vertical datum = NAD27
+ 
+    All three datasets were generated from multiple flight lines.
+ 
+    Please see [FARRETAL2004] for more information.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+        This data set underwent external peer review from January 21, 2008
+        through February 18, 2008.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

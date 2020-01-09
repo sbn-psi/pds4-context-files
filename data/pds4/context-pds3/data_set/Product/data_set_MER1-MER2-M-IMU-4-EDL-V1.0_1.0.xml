@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-mer2-m-imu-4-edl-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER1/MER2 MARS IMU ENTRY DESCENT AND LANDING DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:imu.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:imu.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-mer2-m-imu-4-edl-v1.0__browserp_mer1-mer2-m-imu-4-edl-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Crisp, J.A., M. Adler, J.R. Matijevic, S.W. Squyres, R.E. Arvidson, and D.M.
+                   Kass, Mars Exploration Rover mission, J. Geophys. Res., 108(E12), 8061,
+                   doi:10.1029/2002JE002038, 2003.
+            </reference_text>
+            <description>reference.CRISPETAL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1/MER2-M-IMU-4-EDL-V1.0</data_set_id>
+        <data_set_name>MER1/MER2 MARS IMU ENTRY DESCENT AND LANDING DATA V1.0</data_set_name>
+        <data_set_release_date>2004-08-24</data_set_release_date>
+        <start_time>2004-01-04T04:04:52.022Z</start_time>
+        <stop_time>2004-01-25T05:04:44.582Z</stop_time>
+        <producer_full_name>DAVID M. KASS</producer_full_name>
+        <citation_text>
+            D.M. Kass, J.T. Schofield, J. Crisp, E.S. Bailey, E.J. Konefat,
+            W.J. Lee, E.C. Litty, R.M. Manning, A.M. San Martin, J.R. Willis,
+            R.F. Beebe, J.R. Murphy and L.F. Huber,
+            MER1/MER2-M-IMU-4-EDL-V1.0, NASA Planetary Data System, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 1 and 2 Inertial Measurement Unit Entry,
+            Descent and Landing Data Records, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    TRANSFORMED data files consist of time ordered records of Inertial
+    Measurement Unit (IMU) quaternion elements and accelerations for
+    the Backshell IMU; and quaternion elements and integrated change in
+    velocity for the Rover IMU measured during the Entry, Descent, and
+    Landing phases of the MER1 (Opportunity) and MER2 (Spirit) landers.
+    For these files, the quantities have been (via onboard spacecraft
+    processing) spatially transformed to the center of mass of the
+    entry vehicle prior to backshell:lander separation, and following
+    separation to the backshell&apos;s center of mass (for the Backshell
+    IMU) and the center of mass of the rover (for the Rover IMU).
+ 
+    HIGHRATE data files consist of time ordered records of Inertial
+    Measurement Unit (IMU) three-axis rotation rates and velocity
+    changes for the Backshell IMU; and three-axis rotation rates and
+    velocity changes for the Rover IMU measured during an approximately
+    five minute subset of the approximately 30 minute Entry, Descent,
+    and Landing phases of the MER1 (Opportunity) and MER2 (Spirit)
+    missions.  These HIGHRATE rotation rates and velocity changes have
+    not been spatially transformed.
+ 
+ 
+  Parameters
+  ==========
+    The TRANSFORMED data files contain the following measurements:
+    Spacecraft Clock Time: Units = seconds Rover IMU Quaternion
+    Element 1: Units = N/A Rover IMU Quaternion Element 2: Units =
+    N/A Rover IMU Quaternion Element 3: Units = N/A Rover IMU
+    Quaternion Element 4: Units = N/A Backshell IMU Quaternion
+    Element 1: Units = N/A Backshell IMU Quaternion Element 2: Units
+    = N/A Backshell IMU Quaternion Element 3: Units = N/A Backehsll
+    IMU Quaternion Element 4: Units = N/A Rover IMU Velocity Change
+    X-Direction: Units = m/s Rover IMU Velocity Change Y-Direction:
+    Units = m/s Rover IMU Velocity Change Z-Direction: Units = m/s
+    Backshell IMU Acceleration X-Direction: Units = m/s**2 Backshell
+    IMU Acceleration Y-Direction: Units = m/s**2 Backshell IMU
+    Acceleration Z-Direction: Units = m/s**2
+ 
+    The HIGHRATE data files contain the following measurements:
+    Spacecraft Clock Time: Units = seconds Rover IMU X-Direction
+    Rotation Rate: Units = radians/s Rover IMU Y-Direction Rotation
+    Rate: Units = radians/s Rover IMU Z-Direction Rotation Rate:
+    Units = radians/s Rover IMU X-Direction Velocity Change: Units =
+    m/s Rover IMU Y-Direction Velocity Change: Units = m/s Rover IMU
+    Z-Direction Velocity Change: Units = m/s Backshell IMU
+    X-Direction Rotation Rate: Units = radians/s Backshell IMU
+    Y-Direction Rotation Rate: Units = radians/s Backshell IMU
+    Z-Direction Rotation Rate: Units = radians/s Backshell IMU
+    X-Direction Velocity Change: Units = m/s Backshell IMU
+    Y-Direction Velocity Change: Units = m/s Backshell IMU
+    Z-Direction Velocity Change: Units = m/s
+ 
+ 
+  Data
+  ====
+    Each of the two Mars Exploration Rover (MER) spacecraft had two
+    Inertial Measurement Units (IMU) on board.  All four IMU were
+    quality controlled Litton LN-200S units
+    (http://www.ngnavsys.com/SiteMap/).  The four units were selected
+    from a larger population for improved stability.  The IMU were on
+    the spacecraft as engineering sensors, primarily to assist in
+    Entry, Descent and Landing (EDL), but also to assist in surface
+    mobility.  Thus the data were processed and collected for
+    engineering uses and have a number of unusual features.
+ 
+    The two IMU on each spacecraft were located in significantly
+    different positions.  One was inside the rover (the rover IMU:
+    RIMU) and thus inside the lander and one was attached to the
+    backshell (backshell IMU: BIMU).  Note that neither IMU was
+    particularly close to the entry capsule center of mass or spin
+    axis.  The data from the RIMU were collected throughout EDL
+    (although there are gaps where they were not trasmitted back to
+    Earth, see below).  Just before bridle cut (right after the retro
+    rockets begin firing and just before the bouncing begins), the
+    BIMU is turned off since bridle cut &apos;discards&apos; the backshell (and
+    BIMU).  See [CRISPETAL2003] for details on the spacecraft design
+    and EDL timeline.
+ 
+    The very high rate data produced directly by the LN-200S units
+    were summed in firmware and sampled at 8 Hz.  In some cases the 8
+    Hz data were then stored directly and eventually played back.
+    This is the HIGHRATE dataset.  These data only cover a relatively
+    short portion of the entire EDL process (since they were not of
+    prime engineering interest).  These data have been processed to
+    physical units.  This is due to the digital output of the IMU
+    itself being essentially in physical units.  The DN values from
+    the IMU were converted to physical values on the spacecraft in
+    the process of summing to the 8 Hz sampling.  The ground
+    depacketization then directly ended up with the physical units.
+ 
+    The TRANSFORMED datasets contain data that were used by the
+    on-board algorithms in realtime during the EDL process.  The
+    on-board software converted the IMU output into physical units
+    and then transformed them for use by the flight software.  All of
+    the transformations were based on the nominal (not measured)
+    properties of the spacecraft (and various components).  The
+    accelerations were transformed to the center of mass (CM) and
+    into the spacecraft coordinate system, changing the effective
+    axes of the data.  Before the deployment of the lander, this is
+    the CM of the entry capsule.  Afterwards, the BIMU measurements
+    were transformed to the CM of the backshell and the rover IMU
+    measurements to the CM of the lander.  Secondly, the RIMU data in
+    each axis were accumulated in a register to give accumulated
+    delta-V since the start of the entry.  The gyroscope data were
+    used to compute a quaternion for the orientation of the
+    spacecraft component relative to J2000.  Like the acceleration
+    data, this was done for the entire capsule before lander
+    deployment for both IMU; and then for the backshell with the BIMU
+    data, and lander for the RIMU data.  The quaternions calculated
+    onboard the spacecraft were positive normalized.  Thus, the
+    fourth element is redundant and was not transmitted back to
+    Earth.  During depacketization, the fourth element was
+    recalculated: e4 = sqrt(1 - e1*e1 + e2*e2 + e3*e3) where e1..e4
+    are the four elements of the quaternion.  This calculation
+    produced &apos;complete&apos; quaternions so they are easier to use.  This
+    calculation was performed for all the quaternions and results in
+    the fourth element being set to unity when there are no data
+    (since the other three elements are then zero).
+ 
+ 
+  Processing
+  ==========
+    The processing was done on the spacecraft for every one of the 8
+    Hz samples.  But, due to limitations on the spacecraft memory,
+    only some of the samples were stored and these samples were not
+    co-added before being stored.  The frequency of the saved data
+    depended on the phase of the entry process (these range from 0.05
+    Hz to 4 Hz, see the actual datasets for the various sampling
+    rates).  In addition to being stored on board, some of the
+    TRANSFORMED data were sent to MGS (Mars Global Surveyor) during
+    the EDL process over the UHF link.  This also continued for a
+    short period after landing.  Some of the data sent directly to
+    MGS were also stored on board and some were not stored (also,
+    some of the stored data were not sent over the UHF link).  Due to
+    the motions of the lander, the UHF link to MGS was somewhat
+    intermittent and parts of the data sent were lost (there is also
+    a regular data loss due to the realtime nature of the data
+    transmission).  This is the cause of the various gaps, holes and
+    irregular spacing of the samples.  The data returned during EDL
+    and the stored data sent back later are complementary in many
+    cases (in particular, for MER2 the two streams are both at 4 Hz
+    but on alternating 8 Hz timesteps, resulting in an effective 8 Hz
+    record--minus the lost data over the UHF link).  Data from the
+    two paths have been merged together in the archived datasets.
+    This was done during the telemetry processing, before being
+    delivered for calibration.  The data from the two sources are
+    identical when they overlap (since they are essentially the same
+    data played back twice by different communication paths), and so
+    this was only a removal of duplicate records (and sorting by
+    time, but the order of the returned packets was not chronological
+    in any case).
+ 
+    One other correction was made to the data during telemetry
+    processing.  Timesteps without any IMU data were removed (these
+    were usually caused by events that caused a momentary loss of the
+    UHF link).  There were some timesteps for which only a subset of
+    the IMU data (usually the quaternion element values) were
+    transmitted.  In these instances, the file record includes the
+    transmitted values, but the non-transmitted values for these
+    records have been set to a value of zero.  Note that zero is a
+    legal value for an IMU measurement.  These instances of
+    incomplete IMU data transmission are identified by the occurrence
+    of all six accelerometer values (three RIMU and three BIMU)
+    having the value of zero, or all six rotation rate values in the
+    HIGHRATE files, or eight quaternion element values in the
+    TRANSFORMED files, having the value of zero.
+ 
+    The accumulated delta-V values for the RIMU were reset to 0 by
+    the flight software while those data were used during EDL (the
+    cause is known and the timing of the resets is known due to the
+    spacecraft events they are associated with).  This is the cause
+    of the sudden jump in the RIMU data where they go to zero in all
+    three axes and then start accumulating once again.
+ 
+    The data presented are those transmitted from the spacecraft.
+    Since processing was done onboard the spacecraft (since these
+    data were used in real-time by the onboard software to provide
+    control and critical event triggering during EDL), the &apos;raw&apos; DN
+    values were not stored on the spacecraft.  Rather, the values
+    used by the on-board software (acceleration, accumulated velocity
+    changes, rotation rates) are the values that were transmitted and
+    are available for this archive.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+ 
+  Data Coverage and Quality
+  =========================
+   The complete 8 Hz data collected and utilized during EDL are not
+   available within this archive. Data transmission dropouts between
+   each rover and MGS have resulted in several short gaps within the
+   data.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

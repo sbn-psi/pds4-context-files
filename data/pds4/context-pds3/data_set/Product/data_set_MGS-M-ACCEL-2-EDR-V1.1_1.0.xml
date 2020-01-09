@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-accel-2-edr-v1.1</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS ACCELEROMETER RAW DATA RECORDS V1.1</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:accel.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-accel-2-edr-v1.1__browserp_mgs-m-accel-2-edr-v1.1::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-accel-2-edr-v1.1__dvo_atmos_mgs-m-accel-2-edr-v1.1::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cancro, G.J., R.H. Tolson and G.M. Keating, Operational Data Reduction
+                   Procedure for Determining Density and Vertical Structure of the Martian Upper
+                   Atmosphere From Mars Global Surveyor Accelerometer Measurements,
+                   NASA/CR-998-208721, October 1998.
+            </reference_text>
+            <description>reference.CANCROETAL1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Shane, R.W. and R.H. Tolson, Aerothermodynamics of the Mars Global
+                   Surveyor Spacecraft, NASA/CR-1998-206941, March 1998.
+            </reference_text>
+            <description>reference.SHANE-TOLSON1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H. et al., Application of Accelerometer Data to Mars Global
+                   Surveyor Aerobraking Operations, Journal of Spacecraft and Rockets, Vol.
+                   36, No. 3, May-June 1999, pp. 323-329.
+            </reference_text>
+            <description>reference.TOLSONETAL1999A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H. et al., Utilization of Mars Global Surveyor Accelerometer
+                   Data for Atmospheric Modeling, AAS Paper 99-386, August 1999.
+            </reference_text>
+            <description>reference.TOLSONETAL1999B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Wilmoth, R.G. et al., Rarefied Aerothermodynamic Predictions for Mars
+                   Global Surveyor, Journal of Spacecraft and Rockets, Vol. 36, No. 3,
+                   May-June 1999, pp. 314-322.
+            </reference_text>
+            <description>reference.WILMOTHETAL1999</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-ACCEL-2-EDR-V1.1</data_set_id>
+        <data_set_name>MGS ACCELEROMETER RAW DATA RECORDS V1.1</data_set_name>
+        <data_set_release_date>1999-08-15</data_set_release_date>
+        <start_time>1997-11-13T00:58:24.68Z</start_time>
+        <stop_time>1999-02-04T09:12:48.01Z</stop_time>
+        <producer_full_name>GERALD M. KEATING</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            MGS ACCELEROMETER RAW DATA RECORDS V1.1
+        </data_set_terse_desc>
+        <abstract_desc>
+            All level zero accelerometer data are packaged by periapsis
+            number for each aerobraking orbit. Each orbit is identified by a
+            folder with name Pyyyy where &apos;yyyy&apos; is the four digit
+            periapsis number. Level 0 z-axis accelerometer data are provided
+            every 0.1 seconds during an interval of time that generally
+            assures that the initial and final data points are taken at least
+            200 km above the surface of Mars. Additional data, required to
+            reduce accelerometer counts to acceleration on the spacecraft,
+            are provided at lower sampling rates.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    All level zero accelerometer data are packaged by periapsis
+    number for each aerobraking orbit.  Each orbit is identified by a
+    folder with name Pyyyy where &apos;yyyy&apos; is the four digit periapsis
+    number.  Level 0 z-axis accelerometer data are provided every 0.1
+    seconds during an interval of time that generally assures that
+    the initial and final data points are taken at least 200 km above
+    the surface of Mars.  Additional data, required to reduce
+    accelerometer counts to acceleration on the spacecraft, are
+    provided at lower sampling rates.
+ 
+ 
+  Parameters
+  ==========
+  Accelerometer counts: Units = counts  (1 count = 0.332 mm/s change in
+                                         velocity)
+                        Sampling Interval = 0.1 seconds
+ 
+  Quaternions:          Units = dimensionless
+                        Sampling Interval = 1 second
+ 
+  Filtered body rates:  Units = rad/s
+                        Sampling Interval = 1 second
+ 
+  Thruster on-times:    Units = sec (cumulative time thruster has fired)
+                        Sampling Interval = 8 seconds
+ 
+  Orbital elements:     Units = various
+                        Sampling Interval = once per orbit
+ 
+ 
+  Data
+  ====
+    For each orbit, level 0 data consist of four arrays in four files
+    in folder Pyyyy.  The array in &apos;counts.tab&apos; is n-by-11 in size,
+    where n is the number of seconds of data received during the
+    aerobraking pass.  Column 1 contains the time in UTC and follows
+    the PDS format YYYY-DDDTHH:MM:SS.SSSZ where YYYY = four digit
+    year, DDD = day of year, HH = hour, MM = minute, and SS.SSS =
+    seconds.  T is a separator for date and time and the Z is the UTC
+    Z.  Columns 2 through 11 contain the 0.1 second accelerometer
+    counts for the second beginning at the time stamp.
+ 
+    The array in &apos;ratequat.tab&apos; is n-by-8 in size.  Column 1 is the
+    time corresponding to the filtered rates and quaternions in the
+    same UTC format as described for the counts above.  Columns 2-4
+    contain the angular rates about the x, y and z axes respectively.
+    Columns 5-8 contain the quaternions.
+ 
+    The third file, &apos;thruster.tab&apos;, is a k-by-13 array, where k is
+    within 1 of n/8.  The first column is time as described above.
+    The next 12 columns are the cumulative reading of how long each
+    thruster has been fired during the mission.  Column two
+    corresponds to thruster number one, column 3 with thruster 2, and
+    so on.  Column 13 corresponds with thruster 12.  Thrusters 1-8
+    produce moments about the &apos;x-y&apos; axes by forces along the s/c
+    z-axis and thereby corrupt the accelerometer measurements.
+    Thrusters 9-12 provide roll about the z-axis and no detectible
+    corruption of z-acceleration has been found.
+ 
+    The fourth file, &apos;orbelem.tab&apos;, is a 1-by-6 array of osculating
+    elements at periapsis in the order semi-major axis (km),
+    eccentricity, inclination (radians), longitude of the ascending
+    node (radians), argument of periapsis (radians), and universal
+    time of periapsis (seconds past J2000).
+ 
+ 
+  Coordinate System
+  =================
+    Spacecraft body coordinate system has the origin at the center of
+    mass.  The z-axis is normal to the main engine nozzle etiz plane
+    and positive in the direction of the science instrument deck.
+    Positive x-axis is in the direction of the high gain antenna.
+    See DOCUMENT/JSR01_04.TIF or [CANCROETAL1998] for graphic.
+ 
+    Acceleration and rates are given in the MGS body system with the
+    z-axis along the centerline of the bus, y being along the solar
+    array inner gimbal rotation axis, and positive x on the same side
+    of the bus as the high gain antenna.  The quaternions define the
+    orientation of the body axes with respect to the IAU Mars
+    Centered Mars Equatorial at Time of Jan 1, 2000 12:00.  Orbital
+    elements are given relative to the IAU system.  The reference
+    geoid used is a (4,4) representation of the Mars gravitational
+    field.  There is a negligible difference between current Mars
+    gravitational models up to fourth order and degree.  The
+    objective is to determine the areo-potential altitude to within
+    100m.
+ 
+ 
+  Timing
+  ======
+    The times in the data files are UTC.  For orbit calculations,
+    ephemeris time was converted to UTC and the spacecraft data were
+    already in UTC.  During the early part of operations it was found
+    that the time tags on the three fundamental data types -
+    accelerometer counts, attitude rates, and thruster firing times -
+    were not synchronized.  Information on the telemetry maps for all
+    these data were not available.  Five of the 10 accelerometer
+    channels came from each of the two onboard computers and special
+    care was taken to assure that these data were properly ordered in
+    time.  Accelerometer data time tags were taken as the fundamental
+    reference and all orbital velocities and positions are
+    interpolated to this time.  Between Phase 1 and Phase 2 of
+    aerobraking, it was found that the accelerometer time tags were
+    delayed 1.5 seconds on the s/c and subsequently all accelerometer
+    data were shifted 1.5 seconds relative to UTC.  As mentioned
+    above, attitude rates have a frequency dependent delay in
+    addition to any basic uncertainty in time tagging.  Finally,
+    there is uncertainty in the proper time tags for thruster firing.
+    To synchronize the rates and thruster data with the accelerometer
+    data, numerous firings of the x- and y- thrusters throughout the
+    mission were studied.  Such thruster firings should produce
+    simultaneous effects in rates and acceleration.  By these means
+    it was found that for the purposes herein, the rate time tags
+    required shifting by -2 seconds to be in sync with the already
+    shifted accelerometer data.  By studying thruster firings that
+    occurred on either side of the 8 sec thruster data interval, it
+    was concluded that the thruster time tag needed to be shifted by
+    -0.5 seconds.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    After the effects of rate filtering are included (see Limitations
+    below), the confidence level for the rate and quaternion data is
+    sufficient for reducing the accelerometer data to density at the
+    noise level of the accelerometer.  Accelerometer data would most
+    likely be corrupted by changes in temperature of the instrument.
+    The temperature of the accelerometer environment is actively
+    controlled, and short term (order 10 seconds) variations are
+    expected to be less than 1/6 count.  Variations in accelerometer
+    bias due to temperature changes over a pass have been less than
+    0.1 counts.  Except for the time of periapsis, errors in
+    remaining orbital elements are of sufficient accuracy for data
+    interpretation.  During phase 1 of aerobraking, Sept.  1997
+    through March 1998, every orbit was reconstructed using DSN
+    tracking data on each side of periapsis.  This provided errors in
+    the time of periapsis of less than 1 second.  During phase 2,
+    this was not the case and larger errors may result.
+ 
+ 
+  Review
+  ======
+    All of the data types included in the level 0 product are
+    utilized by the MGS operations to monitor the health of the
+    spacecraft.  These data are reviewed in near real time to assure
+    MGS performance.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data coverage during an aerobraking pass has varied throughout
+    the mission.  Early in the mission, data were received for 500
+    seconds on either side of periapsis.  Later, the data started
+    between 200 and 250 seconds before periapsis.  This change was
+    made to reduce propulsion usage.  Though this change somewhat
+    reduced the accuracy of determining the accelerometer bias, it
+    had the advantage of reducing the corruption of the data set with
+    thruster firings while still inside the detectable atmosphere.
+    The data for the early orbits of MGS have an eight second sample
+    time.  This does not agree with software devised to archive this
+    data, therefore there is no plan, at this time, to archive the
+    early orbit data.
+ 
+ 
+  Limitations
+  ===========
+    The rate and quaternion data are calculated onboard the
+    spacecraft.  Raw rate information from the rate gyros are
+    filtered to remove a potential interaction with a 2 Hz structural
+    vibration mode.  This produces an approximate 2 second delay in
+    the output rates.  Quarternions are obtained by onboard
+    integration of rates, providing a delay of about 1 second.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

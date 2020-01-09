@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-m-hazcam-5-slope-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 1 MARS HAZARD AVOID CAMERA SLOPE RDR OPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hazcam.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-hazcam-5-slope-ops-v1.0__browserp_mer1-m-hazcam-5-slope-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-hazcam-5-slope-ops-v1.0__browser_geo_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-hazcam-5-slope-ops-v1.0__dvo_imaging_mer1-m-hazcam-5-slope-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Maki, J.N., et al., Mars Exploration Rover Engineering Cameras, J. Geophys.
+                   Res., 108(E12), 8071, doi:10.1029/2003JE002077, 2003.
+            </reference_text>
+            <description>reference.MAKIETAL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1-M-HAZCAM-5-SLOPE-OPS-V1.0</data_set_id>
+        <data_set_name>MER 1 MARS HAZARD AVOID CAMERA SLOPE RDR OPS V1.0</data_set_name>
+        <data_set_release_date>2004-08-24</data_set_release_date>
+        <start_time>2004-01-25T06:45:11.906Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JUSTIN MAKI</producer_full_name>
+        <citation_text>
+            Maki, Justin, MER 1 Mars Hazard Avoidance Camera Slope Ops RDR
+            V1.0, NASA Planetary Data System, MER1-M-HAZCAM-5-SLOPE-OPS-V1.0,
+            2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 1 Hazard Avoidance Camera Slope Images,
+            Operations Reduced Data Record, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+ 
+    Surface Normal for Slopes
+    -------------------------
+      While the Surface Normal for Slopes product is not archived, it is
+      an intermediate product used as an input to the Slope, Slope Rover
+      Direction,Slope Heading, and Slope Magnitude products, so it is
+      described once here for brevity.
+ 
+      The Surface Normal for Slopes is a unit vector indicating the
+      surface normal for each pixel.  It is derived from the XYZ product
+      by fitting a plane over a rover-sized patch in physical space for
+      every image pixel in the input stereo images. The surface normal
+      is then computed (in Site frame) as the normal to the plane fit.
+ 
+      Note that the Surface Normal for Slopes is not the same as the UVW
+      product.  While it uses fundamentally the same algorithm, the UVW
+      product is based on a RAT-sized patch and is intended for use with
+      IDD operations, while the surface normal used in slope
+      calculations is based on a rover-sized patch and is intended for
+      use with rover driving.  Also, the Slopes version is in Site
+      frame, while the UVW product is expressed in Rover frame.
+ 
+      The symbols Nx, Ny, and Nz are used below to indicate the x,y,z
+      components of the unit vector for slopes.
+ 
+ 
+    Slope Map RDR
+    -------------
+      The Slope Map RDR is a single-band floating-point image that
+      represents the predicted slope of the terrain centered around each
+      pixel.  It is expressed in units of degrees.  It is computed as
+      the elevation of the Surface Normal for Slopes vector with respect
+      to the (X,Y) plane in Site frame according to the following
+      formula:
+ 
+        slope = (180/pi) * (pi/2 + arctan(Nz / sqrt(Nx^2 + Ny^2)))
+ 
+      A value of 0.0 is used to indicate lack of data.  This can be
+      ambiguous in the rare cases that the computed slope is
+      exactly 0.0.
+ 
+ 
+    Slope Rover Direction RDR
+    -------------------------
+      The Slope Rover Direction is a single-band floating-point image
+      that represents the component of the slope centered around each
+      pixel that is facing toward the rover at its current position. It
+      is intended to indicate the amount of climb the rover would
+      experince if it traveled radially away from its current position
+      (i.e. ignoring side-slope). It is expressed in units of degrees.
+      It is computed from the XYZ image and the Surface Normal for
+      Slopes according to the following formulae:
+ 
+        Vx = (x - x0) / sqrt((x-x0)^2 + (y-y0)^2)
+        Vy = (y - y0) / sqrt((x-x0)^2 + (y-y0)^2)
+        srd = -(180/pi) * arctan2((Vx*Nx + Vy*Ny), -Nz)
+ 
+      where x0 and y0 are the X and Y offsets of the Rover coordinate
+      system with respect to the Site (ORIGIN_OFFSET_VECTOR in
+      ROVER_COORDINATE_SYSTEM group) and x and y are the X and Y values
+      from the XYZ image.  Vx and Vy thus make up a unit vector
+      representing the direction in the Site X-Y plane of the pixel from
+      the rover.
+ 
+      A value of 0.0 is used to indicate lack of data.  This can be
+      ambiguous in the rare cases that the computed value is
+      exactly 0.0.
+ 
+ 
+    Slope Heading RDR
+    -----------------
+      The Slope Heading RDR is a single-band floating-point image that
+      represents the compass direction toward which the slope centered
+      around each pixel points (clockwise from north).  Thus a value of
+      90 indicates an east-facing slope.  It is expressed in units of
+      degrees in the range +/-180.  It is derived from the Surface
+      Normal for Slopes as follows:
+ 
+        heading = (180/pi) * arctan2(Ny, Nx)
+ 
+      A value of 0.0 is used to indicate lack of data.  This can be
+      ambiguous in the rare cases that the computed heading is exactly
+      0.0.
+ 
+ 
+    Slope Magnitude RDR
+    -------------------
+      The Slope Magnitude RDR is a single-band floating-point image that
+      represents the magnitude of the slope centered around each pixel.
+      It is a dimensionless number between 0 and 1, and is in fact
+      simply the sine of the Slope product. Thus it provides no
+      additional information beyond the Slope product but the value may
+      be more useful in some circumstances.  Together the Slope Heading
+      and Slope Magnitude completely describe the surface normal.  The
+      magnitude can be computed two ways:
+ 
+        magnitude = sin(slope)
+        magnitude = sqrt(Nx^2 + Ny^2)
+ 
+      The second is used by MIPL software.
+ 
+      A value of 0.0 is used to indicate lack of data.  This can be
+      ambiguous in the rare cases that the computed magnitude is exactly
+      0.0.
+ 
+ 
+  Processing
+  ==========
+    MER Camera Payload RDRs are considered Level 3 (Calibrated Data
+    equivalent to NASA Level 1-A), Level 4 (Resampled Data
+    equivalent to NASA Level 1-B), or Level 5 (Derived Data
+    equivalent to NASA Level 1-C, 2 or 3). The RDRs are to be
+    reconstructed from Level 2 edited data, and are to be assembled
+    into complete images that may include radiometric and/or geometric
+    correction.
+ 
+    MER Camera Payload EDRs and RDRs will be generated by JPL&apos;s
+    Multimission Image Processing Laboratory (MIPL) under the OPGS
+    subsystem of the MER GDS. RDRs will also be generated by the Athena
+    Pancam Science and Microscopic Imager Science Teams under the SOAS
+    subsystem of the GDS.
+ 
+    RDR data products will be generated by, but not limited to, MIPL
+    using the Mars Suite of VICAR image processing software at JPL, the
+    Athena Pancam Science Team using IDL software at Cornell University
+    and JPL, and the Microscopic Imager Science Team using ISIS software
+    at USGS (Flagstaff) and JPL. The RDRs produced will be processed
+    data. The input will be one or more Camera EDR or RDR data products
+    and the output will be formatted according to this SIS. Additional
+    meta-data may be added by the software to the PDS label.
+ 
+ 
+  Data
+  ====
+    RDR products generated by MIPL will have a VICAR label wrapped by a
+    PDS label, and their structure can include the optional EOL label
+    after the binary data. RDR products not generated by MIPL may
+    contain only a PDS label. Or, RDR products conforming to a standard
+    other than PDS, such as JPEG compressed or certain Terrain products,
+    are acceptable without a PDS header during mission operations, but
+    may not be archivable.
+ 
+    The RDR data product is comprised of radiometrically decalibrated
+    and/or camera model corrected and/or geometrically altered versions
+    of the raw camera data, in both single and multi-frame (mosaic)
+    form. Most RDR data products will have PDS labels, or if generated
+    by MIPL (OPGS), dual PDS/VICAR labels. Non-labeled RDRs include JPEG
+    compressed products and the Terrain products.
+ 
+ 
+  Software
+  ========
+    The MIPL Mars Program Suite was used to generate these RDRs.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online.  Upon
+    Mission completion, the Hazcam Operations RDRs will be delivered
+    to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

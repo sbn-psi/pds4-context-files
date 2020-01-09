@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-grs-3-edr-eros-surface-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR GRS SPECTRA EROS ON ASTEROID</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:grs.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-grs-3-edr-eros-surface-v1.0__browserp_near-a-grs-3-edr-eros-surface-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cheng, A.F., R.W. Farquhar, and A.G. Santo, NEAR Overview, Johns Hopkins APL
+                   Technical Digest, Vol. 19, pp. 95-106, 1998.
+            </reference_text>
+            <description>reference.CHENGETAL1998</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-GRS-3-EDR-EROS/SURFACE-V1.0</data_set_id>
+        <data_set_name>NEAR GRS SPECTRA EROS ON ASTEROID</data_set_name>
+        <data_set_release_date>2001-07-15</data_set_release_date>
+        <start_time>2001-02-19T16:59:24Z</start_time>
+        <stop_time>2001-02-28T17:49:37Z</stop_time>
+        <producer_full_name>JACOB TROMBKA</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            Reduced (integrated and corrected) Level 2 and Level 3 NEAR Gamma
+            Ray Spectrometer observations taken during the Eros Surface phase
+            of the mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains reduced (integrated and corrected) science
+            data products from observations acquired by the Near Earth
+            Asteroid Rendezvous (NEAR) Gamma Ray Spectrometer (GRS)
+            instrument during the Eros Surface phase.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+   Introduction
+   =============
+     This document provides an overview of the Near Earth Asteroid
+     Rendezvous Gamma-Ray Spectrometer On-asteroid Level 2 and 3 data
+     archive.  This data set contains reduced (integrated and corrected)
+     science data products from observations acquired by the Near Earth
+     Asteroid Rendezvous (NEAR) Gamma Ray Spectrometer (GRS) instrument
+     during the Eros Surface phase.
+ 
+     The following sections describe this data set and its documentation
+     delivered as part of the NEAR XGRS instrument team delivery to
+     NASA&apos;s Planetary Data System.
+ 
+ 
+   Data Set Information
+   ====================
+     It was found that the on-surface attitude of the spacecraft did
+     not facilitate the use of the fixed high gain antenna and the
+     low gain antenna was used for the duration of the on-surface
+     mission.  As a result available telemetry rates did not
+     facilitate the downlink of the full complement of instrument,
+     engineering and ancillary information with priority being
+     given to selected spectra.  The first two days of on-surface
+     activity were used to calibrate the detectors to account for
+     deviations of temperature between orbital and on surface
+     operations.  Adjustments were then made to the instrument high
+     voltage to improve the energy gain in the escape peak spectra.
+ 
+     In this configuration, several long term integrations were
+     collected and spectra taken for the four longest integrations
+     along with ancillary information were used to generate the
+     Level 2 science products on the first volume of this data set,
+     NXERSF_2001.  For the Level 3 products on the second volume,
+     NXERSF_2002, spectra from the two longest integration times
+     (total duration of 586320 seconds) were summed for NAI, ANTI,
+     NAI1, and NAI2 spectra.  The higher counting rate BGO spectrum
+     was taken for a single integration (total duration of 346480
+     seconds) and summed.
+ 
+     Each of set of spectra were corrected for channel rollover
+     which occurred in several instances due to long integration
+     times causing accumulations of counts in some channels to
+     exceed and rollover the maximum numerical range of the 2 byte
+     channel.  Higher counting rates in the lower energies of each
+     spectrum incurred multiple rollovers and algorithms were
+     developed to rectify this effect.
+ 
+     A second correction made to the on-surface spectra is the
+     removal of differential non-linearities (DNL) contained within
+     the spectra.  The effect being high frequency spikes in
+     channels spaced at regular intervals within the spectrum.
+     (DNL)`s were removed using a 3rd order polynomial fit and
+     smoothing function for a sliding boxcar of 21 channels
+     through each raw spectrum.
+ 
+     Level 2 Data Products
+     ---------------------
+       As a result three Level 2 spectra were generated for the BGO
+       instrument and three for the NAI instrument and finally the
+       NAI 1 and 2 escape spectra only were collected as the last
+       spectra integrated from the surface.  The resulting 17
+       individual Level 2 spectra are listed with ancillary
+       information in the following table:
+ 
+       ID MET (start)  UTC  (at Start)    I-Time  NAI ANT BGO N1 N2
+       ------------------------------------------------------------
+       1  158012304    2001:050:17:00:48  23108   x   x   x   x  x
+       2  158035412    2001:050:23:25:56  237840  x   x   x   x  x
+       3  158273394    2001:053:17:32:18  346480  x   x   x   x  x
+       4  158619998    2001:057:17:49:02  169440              x  x
+ 
+         where
+ 
+           &apos;x&apos;    = Available as a Level 2 DATA product.
+           NAI    = Sodium Iodide
+           BGO    = Bismuth Germanate
+           N1     = NAI 1 Escape
+           N2     = NAI 2 Escape Spectra only.
+           I-Time = Integration time.
+ 
+       The GRS On-asteroid Level 2 corrected spectra are provided as
+       fixed-width ASCII table files.  Ancillary information specific
+       to each integration is provided as a separate ASCII table.
+ 
+       All Level 2 tables (*.TAB files) and detached labels (*.LBL
+       files) are ASCII files with a carriage return (ASCII 13) and a
+       line feed character (ASCII 10) at the end of each line.  This
+       allows the files to be read by MacOS, DOS, and UNIX operating
+       systems.
+ 
+       A description of the content and format of the On-asteroid
+       Level-2 record files is provided next.
+ 
+       Format:
+           ONSURxAz.TAB
+             - Asteroid Surface Position (Lat, Lon) West Longitude
+             - Starting time tags (MET) for each summed integrations
+             - End (MET)
+             - Energy Calibration
+             - Instrument Attitude
+             - &apos;x&apos; denotes
+                   (N = NAI, B = BGO, A = ANTI, 1 = NAI 1, 2 = NAI 2)
+             - &apos;A&apos; denotes ancillary
+             - &apos;z&apos; denotes integration number (1,2,3,4)
+             -  11 columns in single record
+           ONSURxSz*.TAB
+             - Surface Spectrum
+             - &apos;x&apos; denotes
+                   (N = NAI, B = BGO, A = ANTI, 1 = NAI 1, 2 = NAI 2)
+             - &apos;S&apos; denotes Spectrum
+             - &apos;z&apos; denotes integration number (1,2,3,4)
+             - 2 columns, 1024 channels
+             - Plus label (.LBL) files
+ 
+       These Level 2 products are located in the DATA directory of the
+       first volume of this data set, NXERSF_2001.
+ 
+     Level 3 Data Products
+     ---------------------
+       The GRS On-asteroid Level 3 corrected and summed spectra are
+       provided as fixed-width ASCII table files.  Ancillary information
+       specific to each integration is provided as a separate ASCII
+       table.
+ 
+       All Level 3 tables (*.TAB files) and detached labels (*.LBL
+       files) are ASCII files with a carriage return (ASCII 13) and a
+       line feed character (ASCII 10) at the end of each line.  This
+       allows the files to be read by MacOS, DOS, and UNIX operating
+       systems.
+ 
+       A description of the content and format of the two On-asteroid
+       Level-3 record files is provided next.
+ 
+       File 1:  ONSURNAS.TAB
+                - Starting and ending time tags (MET) for each summed
+                  integration
+                - Asteroid Surface Position (Lat, Lon) West Longitude
+                - Energy Calibration
+                - Instrument Attitude
+                ONSURNSS.TAB
+                - 4 Spectra (NAI, ANTI, NAI1, NAI2)
+                - Summed from 2 separate integrations
+                  (total duration = 586320 sec)
+ 
+       File 2:  ONSURBAS.TAB
+                - Starting and ending time tags (MET) for the single BGO
+                  integration
+                - Energy Calibration
+                -
+ Surface Position (Lat, Lon) West Longitude
+                - Instrument Attitude
+                ONSURBSS.TAB
+                - 1 Spectrum, BGO
+                - Summed from one separate integration
+                  (total duration = 346480 sec)
+ 
+       These Level 3 products are located in the DATA directory of the
+       second volume of this data set, NXERSF_2002.
+ 
+ 
+   Coordinate System
+   =================
+     All products were derived in the Asteroid Body Fixed Coordinate
+     System
+ 
+ 
+   Software
+   ========
+     Requirement Specifications For Level-2 Parameters Required
+     Stored or Derived by The Near Earth Asteroid Rendezvous
+     (NEAR) Gamma-Ray Spectrometer (GRS) Ground System
+ 
+ 
+   Media
+   ======
+     CD-ROM
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archive have been reduced as part of mission data
+      analysis activities of the NEAR XGRS Science Team.  Data of
+      questionable validity have been omitted from the solutions.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the NEAR XGRS
+      Team prior to submission to the Planetary Data System (PDS).
+      It was one of several data sets included in a comprehensive
+      review by the PDS Small Bodies Node in August 2001, prior to
+      PDS acceptance and ingestion.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The data included in this archive were collected from
+      2001-02-19 to 2001-02-28 during the Eros Surface
+      (i.e., On-asteroid) phase of the NEAR mission.
+ 
+ 
+    Limitations
+    ===========
+    None
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>1996-008A-2</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

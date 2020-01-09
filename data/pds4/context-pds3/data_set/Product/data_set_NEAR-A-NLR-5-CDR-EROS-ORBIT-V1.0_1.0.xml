@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-nlr-5-cdr-eros-orbit-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR NLR LEVEL 2 DATA PRODUCTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nlr.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-nlr-5-cdr-eros-orbit-v1.0__browserp_near-a-nlr-5-cdr-eros-orbit-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-nlr-5-cdr-eros-orbit-v1.0__browser_geo_near-a-nlr-5-cdr-eros_orbit-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-nlr-5-cdr-eros-orbit-v1.0__dvo_geo_near-a-nlr-5-cdr-eros_orbit-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cheng, A.F., O. Barnouin-Jha, L. Prockter, M.T. Zuber, G. Neumann, D.E. Smith,
+                   J. Garvin, M. Robinson, J. Veverka, and P. Thomas, Small Scale Topography of
+                   433 Eros from Laser Altimetry and Imaging, Icarus, in press, 2001.
+            </reference_text>
+            <description>reference.CHENGETAL2001</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-NLR-5-CDR-EROS/ORBIT-V1.0</data_set_id>
+        <data_set_name>NEAR NLR LEVEL 2 DATA PRODUCTS V1.0</data_set_name>
+        <data_set_release_date>2001-07-16</data_set_release_date>
+        <start_time>2000-03-05T00:00:04Z</start_time>
+        <stop_time>2001-02-12T19:42:43Z</stop_time>
+        <producer_full_name>DAVID E. SMITH</producer_full_name>
+        <citation_text>
+            Neumann G., and D.E. Smith, NEAR NLR LEVEL 2 DATA PRODUCTS V1.0,
+            NEAR-A-NLR-5-CDR-EROS/ORBIT-V1.0, NASA Planetary Data System,
+            2001.
+        </citation_text>
+        <data_set_terse_desc>
+            NLR Level 2 Data Products include
+        </data_set_terse_desc>
+        <abstract_desc>
+            NLR Level 2 Data Products include the along-track profiles of NLR
+            data in SI units, together with spacecraft position, orientation,
+            and timing data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+    The NEAR Laser Rangefinder (NLR) Level 2 Data Products include
+    the along-track profiles of NLR data in SI units, together with
+    spacecraft position, orientation, and timing data. The radius of
+    433 Eros with respect to its center of mass is the primary profile
+    parameter.
+ 
+    Surface slope and topographic relief are not as easily defined on an
+    irregular object as on the Earth. We provide the geopotential
+    arising from the mass of the asteroid and its rotation, based on the
+    NLR shape model NLR125AR.IMG, a rotation rate of 3.3166E-04 rad s^(-
+    1), and an assumed homogeneous density of 2670 kg m^(-3).
+    Geophysical studies may use the potential as a proxy for topographic
+    height, scaled by a regional average gravitational acceleration
+    [CHENGETAL2001].
+ 
+    Ranges from level 1 NLR data are the source of the level 2 data
+    product. Precision orbits were generated at NASA-GSFC, and
+    supplemented where appropriate by JPL navigation team orbits,
+    ancillary timing and attitude information supplied by the NEAR SDC
+    and instrument data derived from in-flight analysis. These data were
+    merged to create the calibrated profile data. Each level 2 data
+    product is a text format table corresponding to a daily level 1 EDR
+    file, and is described by a detached label. The file naming
+    convention is LyydddNv.TAB, where L=laser, and yyddd contains the
+    two-digit year and the three-digit day of observation. The letter v
+    stands for processing version. Version &apos;D&apos; is based on the most
+    recent JPL navigation team orbits, version &apos;G&apos; and &apos;J&apos; on GSFC&apos;s
+    precision orbit series 393, where version &apos;J&apos; is supplemented by JPL
+    orbits at times of spacecraft maneuvers. There is only one version
+    of the data for each specific orbit on the volume.
+ 
+    The orbital mission phase employed only normal format packets. In
+    these packets, the spacecraft mission elapsed time (MET) is recorded
+    at the time of the first major frame in the packet. A normal rate
+    packet contains up to 56 observations, so that the last observation
+    may occur up to 55 seconds after the nominal packet time in the case
+    of 1 Hz data. The SPACECRAFT_CLOCK_STOP_COUNT and STOP_TIME values
+    reflect the time recorded in the last packet for a given UTC day.
+    Thus the last observation may occur later than the nominal
+    STOP_TIME.
+ 
+    Parameters
+    ==========
+    Profiles are tables of longitude, latitude, and radius at the laser
+    bounce point, together with time stamps, the spacecraft position, and
+    instrument threshold setting.
+ 
+    Processing
+    ==========
+    Ranges are converted from counts to meters of one-way range from NLR
+    to 433 Eros as described in the calibration document NLRCALIB.TXT.
+    Precision orbit data for the NEAR-Shoemaker spacecraft is provided
+    by the NASA-GSFC analysis team and the JPL navigation team, and is
+    archived in the form of SPICE format spacecraft ephemeris (SPK)
+    files. The MET time associated with each shot, with minor frame
+    given in decimal seconds, is converted to Ephemeris Time in seconds
+    past J2000 (ET) using the project&apos;s time conversion (SCLK) file. The
+    spacecraft position at the ET shot time is interpolated from the SPK
+    file. The spacecraft orientation SPICE file (CK) is resampled at 1-
+    second intervals of whole seconds. Its quaternions are convolved
+    with a 9-point, centered, finite-impulse-response filter to reduce
+    high-rate gyro noise before conversion to matrix form.
+ 
+    The filtered spacecraft orientation matrix transforms vectors from
+    the J2000 inertial reference frame to the instrument deck
+    (NEAR_SC_BUS_PRIME) frame. Observations are directed toward the
+    positive X&apos;-axis in this frame.  A fixed boresight offset with
+    respect to this frame is assumed.  The Euler angles of the boresight
+    are provided as a SPICE instrument kernel (IK) file, from which a
+    transformation matrix from NEAR to NLR frame is derived.
+ 
+    The J2000-to-NLR frame matrix is calculated from the smoothed CK by
+    matrix composition.  The one-way time-of-flight from the laser range
+    is added to the laser fire time to obtain the bounce point time, and
+    the calibrated one-way range vector is projected from the spacecraft
+    state at this time along the boresight to obtain the surface bounce
+    point position in inertial coordinates with respect to the asteroid
+    center of mass.  The inertial position is then rotated to the
+    asteroid body-fixed coordinate system using satellite/planet
+    position and orientation files (PCK) supplied by the project.
+ 
+    The asteroid-located radius vector is given in both radial
+    coordinates and as a Cartesian position vector. The angle subtended
+    by the bounce point to NEAR spacecraft position vector and the
+    radius vector is calculated. This angle is loosely termed the
+    EMISSION_ANGLE, assuming a spherical body. Normally an emission
+    angle greater than 90 degrees would indicate a missed shot, but due
+    to the irregular shape of 433 Eros, emission angles &gt;120 degrees
+    were obtained. The angle subtended by the NEAR to Eros center vector
+    and the NEAR to bounce point vector (OFF_NADIR angle) is also
+    provided.
+ 
+    Lastly, the potential due to gravity and rotation at the shot
+    location is calculated [CHENGETAL2001] assuming a uniform density of
+    2670 kg m^-3 and the  NLR125AR.IMG shape model. The potential is
+    evaluated via a surface integral over a 2 by 2 degree grid, refined
+    to 1/4 by 1/4 degree in the vicinity of the shot.
+ 
+    Data
+    ====
+      Data are stored on CD-WO volumes. A CD volume was created
+      for delivery of data to PDS.
+ 
+      ASCII profiles are stored in the /LEVEL2/TOPO directory with file
+      names of the form LyydddNv.TAB, where yy and ddd are numeric year
+      and day-of-year, v is a version identifier, and TAB denotes that
+      this is an ASCII table.
+ 
+    Ancillary Data
+    ==============
+      None.
+ 
+    Coordinate System
+    =================
+      NLR data files use an EROS centered body-fixed coordinate
+      system with positive east longitude. The transformation from
+      inertial (J2000) coordinates to body-fixed is represented by the
+      project-supplied SPICE format attitude and orientation files
+      used to generate level 2 data products.
+ 
+    Software
+    ========
+      None.
+ 
+    Media/Format
+    ============
+      The archival data set was written on CD-WO by the NEAR/NLR
+      Project.  The CD-WO volumes conform to ISO 9660 Level 2
+      standards.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archive have been reduced as part of mission data
+      analysis activities of the NEAR/NLR Science Team.
+ 
+    Review
+    ======
+      This archival data set was reviewed by the NEAR/NLR Science
+      Team prior to final submission to the Planetary Data
+      System (PDS).
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, example data files, CATALOG files, and other
+      relevant documentation.  These materials were distributed to
+      PDS personnel, the experiment investigator, and others, as
+      appropriate.
+ 
+    Data Coverage and Quality
+    =========================
+       The data coverage was determined by the orientation of the
+       instrument X&apos; axis during science data acquisition by several
+       instruments. NLR did not control pointing for the bulk of the
+       time, so the coverage is largely unplanned. Nevertheless,
+       sufficient density of coverage was obtained in all of the orbit
+       phases to resolve topography of features greater than 50 m
+       in extent.
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>1996-008A-4</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

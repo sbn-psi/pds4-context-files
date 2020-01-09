@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ihw-c-irpol-3-rdr-halley-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IHW COMET HALLEY INFRARED POLARIMETRY, V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_halley_watch::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.irsn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:irpol.irsn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.1p-halley_1_1682_q1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ihw-c-irpol-3-rdr-halley-v2.0__browserp_ihw-c-irpol-3-rdr-halley-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zdenek (ed.), &apos;The Comet Halley Archive Summary Volume&apos;, Jet
+                   Propulsion Laboratory, California Institute of Technology, Pasadena,
+                   California, JPL D-400-450, August 1991.
+            </reference_text>
+            <description>reference.JPL_D-400-450</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>IHW-C-IRPOL-3-RDR-HALLEY-V2.0</data_set_id>
+        <data_set_name>IHW COMET HALLEY INFRARED POLARIMETRY, V2.0</data_set_name>
+        <data_set_release_date>1992-09-30</data_set_release_date>
+        <start_time>1985-09-21T13:53Z</start_time>
+        <stop_time>1986-06-01T05:56Z</stop_time>
+        <producer_full_name>GRAYZECK, E.J., KLINGLESMITH, D.A., III, NIEDNER, M.B., JR</producer_full_name>
+        <citation_text>
+            Knacke, R.F. and T. Encrenaz, IHW COMET HALLEY INFRARED
+            POLARIMETRY, V2.0, IHW-C-IRPOL-3-RDR-HALLEY-V2.0, NASA Planetary
+            Data System, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Infrared Polarimetry of comet 1P/Halley archived with the IHW
+            Infrared Studies Network
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains all the infrared polarimetry data archived
+            as part of the International Halley Watch (IHW) Infrared Studies
+            Network (IRSN). Data span the period 21 Sep 1985 to 1 June 1986.
+        </abstract_desc>
+        <data_set_desc>
+      Data Set Overview
+      =================
+      This data set contains all the infrared polarimetry data archived
+      as part of the International Halley Watch (IHW) Infrared Studies
+      Network (IRSN).  Data span the period 21 Sep 1985 to 1 June 1986.
+ 
+      The data are presented as separate tables for each set of observations
+      from an observer on a single night.
+ 
+      Modification History
+      ====================
+      As part of the IHW restoration effort, the original data were
+      reformatted, but not otherwise changed.  The reformatting
+      process included:
+ 
+        o  Converting FITS ASCII TABLE extensions into flat ASCII
+           files (i.e., with carriage-control and without blank
+           padding).
+ 
+        o  Writing new PDS labels whic incorporate all information
+           in the original FITS header, including comments and
+           history notes.
+ 
+        o  Deleting the original, detached FITS headers.
+ 
+      In addition, known errata were corrected, including both the
+      errata noted by Mikael Aronsson at JPL as he prapared the
+      IHW Printed Archive and Printed Archive Index documents (and
+      included on the HAL_0023 volume), and the errata collected
+      after publication at the PDS Small Bodies Node.
+ 
+      General Notes
+      =============
+      Times
+      -----
+      The observation times were reported as day fractions with
+      anywhere from one to five decimal places of precision.
+      These have been converted to the ISO standard format
+      (YYYY-MM-DDThh:mm:ss) to a corrsponding level of accuracy.
+ 
+      System Codes
+      ------------
+      The IHW directives for the SYSTEM keyword in the original
+      FITS files mandated a format of &apos;dooottii&apos;, where
+      d = discipline, ooo = IAU observatory code, tt = country
+      code, and ii = (optional) telescope/instrument number
+      assigned by the Infrared Studies Network.  For observatories
+      that did not have an IAU code, ooo = 500 and in most of
+      these cases ii = 00.  Thus, all U.S. observatories without
+      and IAU code will have SYSTEM = &apos;25001600&apos; in their IRSN
+      contributions.
+ 
+      23 August 2006, A.C.Raugh
+        </data_set_desc>
+        <confidence_level_note>
+      Confidence Level Overview
+      =========================
+      Error bars are included with the measurements in the files.
+      Apart from that, no additional information was provided in
+      the original archive.
+        </confidence_level_note>
+        <archive_status>IN_LIEN_RESOLUTION</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

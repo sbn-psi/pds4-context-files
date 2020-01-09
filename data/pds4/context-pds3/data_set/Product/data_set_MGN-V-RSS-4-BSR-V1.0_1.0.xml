@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rss-4-bsr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MAGELLAN BISTATIC RADAR CALIBRATED DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-4-bsr-v1.0__browserp_mgn-v-rss-4-bsr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-4-bsr-v1.0__dvo_geo_mgn-v-rss-4-bsr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.rs::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Pettengill, G.H., P.G. Ford, and R.A. Simpson, Electrical properties of the
+                   Venus surface from bistatic radar observations, Science, 272, 1628-1631, 1996.
+            </reference_text>
+            <description>reference.PETTENGILLETAL1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Simpson, R.A., G.L. Tyler, B. Haeusler, M. Paetzold, and R. Mattei, Venus
+                   Express bistatic radar: high elevation anomalous reflectivity, Journal of
+                   Geophysical Research, submitted, April 2008.
+            </reference_text>
+            <description>reference.SIMPSONETAL2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RSS-4-BSR-V1.0</data_set_id>
+        <data_set_name>MAGELLAN BISTATIC RADAR CALIBRATED DATA V1.0</data_set_name>
+        <data_set_release_date>2008-10-31</data_set_release_date>
+        <start_time>1994-06-05</start_time>
+        <stop_time>1994-06-05</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Simpson, R.A., Magellan Bistatic Radar Calibrated Data V1.0,
+            MGN-V-RSS-4-BSR-V1.0, NASA Planetary Data System, 2008.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated data from three orbits of S-Band (13 cm wavelength)
+            Magellan bistatic radar data collected with NASA antenna DSS 63
+            on 5 June 1994 when the specular point crossed Maxwell Montes.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Calibrated data from three orbits of S-Band (13 cm wavelength)
+            Magellan bistatic radar data collected with NASA antenna DSS 63
+            on 5 June 1994 when the specular point crossed Maxwell Montes.
+            Similarly processed data were used by Pettengill et al. (SCIENCE,
+            272, 1628-1631, 1996) to infer existence of a semiconductor layer
+            covering anomalously reflecting regions at high altitude on
+            Venus. This new data set includes calibrated time samples of
+            receiver output as well as calibrated power spectra and voltage
+            cross spectra (between the two received polarizations). The data
+            set was written to three DVD+R volumes for delivery to the NASA
+            Planetary Data System (PDS).
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      This archive contains calibrated data from Magellan (MGN) Bistatic Radar
+      (BSR) experiments conducted on 5 June 1994 at S-Band (13 cm wavelength)
+      using the NASA Deep Space Network (DSN) 70-m antenna near Madrid, Spain
+      (DSS 63).
+ 
+      During these experiments the specular point crossed Maxwell Montes.  The
+      results indicated that the surface material in the Maxwell area behaved
+      as a semi-conductor (13 mhos/m) [PETTENGILLETAL1996].
+ 
+ 
+    Parameters
+    ==========
+      Raw data from the MGN BSR experiments were archived in the PDS
+      (DATA_SET_ID = MGN-V-RSS-1-BSR-V1.0), but no &apos;higher level&apos; products
+      followed during the Magellan era.  In conjunction with analysis of new
+      BSR data collected using the Venus Express spacecraft [SIMPSONETAL2008],
+      the old MGN S-Band data from Maxwell were reprocessed.  This new data
+      set contains time samples which have been calibrated in amplitude (PRR
+      directory).  A second set of files (PRT directory) has the major sources
+      of Doppler shift and other frequency effects removed, so that the echo
+      centroid appears near 12500 Hz in the 25000 Hz bandwidth.  The PRR and
+      PRT data are complex double precision time samples in binary files; the
+      right-circularly polarized (RCP) and left-circularly polarized (LCP)
+      files are coherent.
+ 
+      The SPC directory contains 10-second averages of power spectra and
+      voltage cross-spectra derived from the samples in the PRT directory.
+      The cross-spectra are between the two received polarizations (RCP and
+      LCP).  The SPC files are in ASCII format. There are three SPC files --
+      one for each MGN orbit.  The rows in an SPC file are ordered by
+      increasing time; within each time step, the rows are ordered by
+      increasing frequency.  All of the spectra have 1024 frequency bins
+      with 24.4 Hz resolution.
+ 
+      The archive also includes ancillary data: power spectra used to
+      &apos;equalize&apos; (flatten) the receiver spectral response (SRF directory),
+      polynomial coefficients to calibrate the amplitude (GNC directory) and
+      frequency (SC1 and SC2 directories) of the samples, and files useful
+      in understanding the Magellan BSR experimental geometry (BSP and SRG
+      directories).
+ 
+ 
+    Processing
+    ==========
+      The data flow in creating the calibrated files is illustrated in the
+      diagram below.  The text, which follows, describes the steps.
+ 
+ 
+                                     ODR
+                                      |
+                                      | 8-bit real samples
+                                      |
+                                      V
+                          RCP      --------      LCP
+                        ----------| PREPMO |----------
+                       |           --------           |
+        16-bit samples |                              | 16-bit samples
+                       |                              |
+                   ---------                      ---------
+                  | PREPFND |                    | PREPFND |
+                   ---------                      ---------
+                       |                              |
+                       | PRP file                     | PRP file
+                       | 64I/64Q                      | 64I/64Q
+                       |                              |
+                   ---------                      ---------
+          SRF ---&gt;|   FND   |                    |   FND   | &lt;--- SRF
+                   ---------                      ---------
+                       |                              |
+                       | PRQ file                     | PRQ file
+                       | 64I/64Q                      | 64I/64Q
+                       |                              |
+                   ---------                      ---------
+          GNC ---&gt;|   GAIN  |                    |   GAIN  | &lt;--- GNC
+                   ---------                      ---------
+                       |                              |
+  to &lt;------- PRR file |                              | PRR file -------&gt; to
+  ARCHIVE      64I/64Q |                              | 64I/64Q      ARCHIVE
+                       V                              V
+                   ---------                      ---------
+                  |  STEER  | &lt;------ SC1 ------&gt;|  STEER  |
+                   ---------                      ---------
+                       |                              |
+              PRS file |                              | PRS file
+               64I/64Q |                              | 64I/64Q
+                       V                              V
+                   ---------                      ---------
+                  |  STEER  | &lt;------ SC2 ------&gt;|  STEER  |
+                   ---------                      ---------
+                       |                              |
+  to &lt;------- PRT file |                              | PRT file -------&gt; to
+  ARCHIVE      64I/64Q |                              | 64I/64Q      ARCHIVE
+                       |          ----------          |
+                       |--------&gt;| FNDXLOOK |&lt;--------|
+                       |          ----------          |
+                       |             |                |
+                       V             | Average        V
+                   ---------         | Cross      ---------
+                  | FNDLOOK |        | Spectrum  | FNDLOOK |
+                   ---------         |            ---------
+                       |             |                |
+               Average |             V                |  Average
+              RCP Power|         ------------         | LCP Power
+              Spectrum  -------&gt;| BSRMAT2TAB |&lt;-------  Spectrum
+                                 ------------
+                                       |
+                                       | SPC file
+                                       V
+                                  to ARCHIVE
+ 
+ 
+      The ODR (Original Data Record) files are from the raw data archive
+      (MGN-V-RSS-1-BSR-V1.0).  Program PREPMO unpacks the 8-bit real samples
+      and stores them in 16-bit words with separate files for RCP and LCP.
+ 
+      Program PREPFND was designed to reduce the bandwidth of 16-bit sample
+      streams by powers of 2 using a bandpass set at an arbitrary location
+      within the original bandwidth.  Here we are not interested in reducing
+      bandwidth; but the program does allow us to convert from 16-bit real
+      samples to double precision complex samples (64I/64Q) in a format which
+      can be used as input to other software.  The &apos;preprocessed&apos; files from
+      PREPFND have the file name extension PRP.
+ 
+      The FND program does roughly the same thing as PREPFND except that (1)
+      it expects complex double precision input and (2) it allows the user to
+      &apos;equalize&apos; the spectrum. The input time samples are Fourier transformed,
+      the spectrum is divided by the square root of a noise power spectrum
+      (SRF file), and the inverse transform is taken to create new time
+      samples.  To reduce instabilities in the inversion, there is 50 percent
+      overlap in the transforms and only the central 50 percent of the time
+      samples from each operation are retained.  Since there is no overlap at
+      the beginning of the first block and at the end of the last block, a few
+      samples at the beginning and end of the file must be thrown away.
+      Output files from FND have a flat frequency response over the central 80
+      percent of the window if the reference noise power spectrum (SRF) is
+      representative of the receiver filtering.  Names of files coming from
+      FND have extension PRQ.
+ 
+      The GAIN program uses polynomial coefficients from a GNC file to compute
+      an amplitude scale factor for the time samples in a PRQ file.  The
+      coefficients account for changes in attenuator settings in the receiver
+      system and also include a scale factor so that an output power spectrum
+      is absolutely calibrated in units of zeptowatts (10^-21 W).  Output
+      files from GAIN have file name extension PRR.
+ 
+        Note to Users: To ensure that scaling between Stanford and other
+        processing software is the same, compare your output with the
+        following calculations of average noise power density.  The first 10
+        seconds of the file was Fourier transformed (1024-point spectra), the
+        244 power spectra were computed and averaged, and then the frequency
+        bins indicated were averaged.  Bins from both the lower and upper
+        halves of the spectrum were included and care was taken to avoid
+        spacecraft, echo, and interference signals.  Units of power density
+        are zeptowatts per hertz (where 1 zW = 10^-21 W).
+ 
+             PRR File          Noise Bins       Average Noise Power Density
+           ------------   -------------------   ---------------------------
+           4156130B.PRR   121-173 and 743-892     0.30199+/-0.00136 zW/Hz
+           4156161D.PRR   321-460 and 777-916     0.27723+/-0.00106 zW/Hz
+           4156191B.PRR   121-260 and 777-916     0.33472+/-0.00128 zW/Hz
+ 
+      The STEER program uses polynomial coefficients to synthesize a digital
+      signal which is &apos;mixed&apos; with the bistatic radar samples.  In the first
+      STEER operation, the coefficients are computed to predict the frequency
+      of the directly propagating carrier from the spacecraft to the DSN
+      antenna in the 25000 Hz bandwidth.  Within the STEER program, it is the
+      predicted phase which is actually computed at each sample time.  When
+      the predicted phase is subtracted from the sample phase, the frequency
+      of the entire spectrum is shifted.  If the prediction is perfect, the
+      directly propagating carrier will be shifted to exactly 12500 Hz, the
+      center of the frequency window.  All other signals in the spectrum will
+      be shifted an equal amount, effectively &apos;rotating&apos; the spectrum so that
+      signals shifted out of the high end of the window reappear at the low
+      end.  The first STEER operation uses coefficients from the SC1
+      directory; output files from this processing have file name extensions
+      PRS.
+ 
+      In the second stage of STEER processing, the frequency differential
+      between the carrier and the surface echo is computed from polynominal
+      coefficients in the SC2 directory.  In the output the centroid of the
+      surface echo is moved to the center of the frequency window.  Output
+      files from this step have files names with extensions PRT.
+ 
+      The FNDLOOK program computes average power spectra from time samples
+      in the PRT file. If the amplitude scaling has been carried out correctly
+      in the GAIN step, the spectra will accurately reflect the power reaching
+      the receiver in each frequency bin of the spectrum.
+ 
+      The FNDXLOOK program computes the average cross spectrum between the RCP
+      and LCP receiver channels.  If R(f) is a single voltage spectrum from
+      the RCP receiver and  conj{L(f)} is the complex conjugate of the
+      corresponding voltage spectrum from the LCP receiver, then the cross
+      spectrum is
+ 
+                                 R(f)*conj{L(f)}
+ 
+      and a time average of the cross spectrum can be denoted as
+ 
+                                &lt;R(f)*conj{L(f)}&gt;
+ 
+      Because the cross spectrum is a complex number, its average is computed
+      by averaging the real part of the individual spectra, averaging the
+      imaginary part of the individual spectra, and constructing a new complex
+      value from the averages of the two parts.
+ 
+        Note: Because the processing steps are identical for the RCP and LCP
+              signals (and the SC1 and SC2 coefficents are applied in the same
+              way), the PRT files for RCP and LCP remain coherent.  There may
+              be small errors in the frequencies of the surface echoes, but
+              both RCP and LCP have the same errors and a cross-correlation
+              of the PRT files from each channel will show the same phase
+              relationship as was true at the receiving antenna.
+ 
+      BSRMAT2TAB takes the RCP power spectra, the LCP power spectra, and the
+      cross spectra and constructs an ASCII file in which they are organized
+      first according to time and secondly by frequency.  Each row in the
+      output (SPC) file contains an RCP power, an LCP power, a magnitude of
+      the cross spectrum, and a phase of the cross spectrum for a single
+      time and frequency.  The design of the SPC file allows for inclusion of
+      both X-Band and S-Band values; since no X-Band data were included in
+      this reprocessing effort, the X-Band columns have been set to zero.
+ 
+ 
+    Data
+    ====
+      PRR Data: Amplitude-corrected time samples are a primary data type for
+      this archive; these are found in the PRR directory.  A power spectrum
+      computed from a PRR file should be absolutely calibrated in units of
+      zeptowatts (10^-21 W).  PRR files have a single header record followed
+      by many data records containing double-precision complex time samples.
+      Each file is defined as a pair of PDS TABLE objects with the first
+      TABLE corresponding to the header record and the remaining (data)
+      records making up the second TABLE.  A typical PRR file contains
+      16 minutes of data with a complex I/Q pair of samples every 40
+      microseconds (25000 samples per second).  A single (binary) complex
+      sample requires 16 bytes for storage; the volume of a 16-minute file
+      is 383975424 bytes.  File names have the form  ydddhhMC.PRR  where  y
+      is the one-digit year (4),  ddd  is the three-digit day of year (156),
+      hh  is  the two-digit hour,  and  M  is the tens of minutes when the
+      file started.  C  is a letter denoting frequency band and polarization
+      of the data in the file; valid choices are  B  for S-Band RCP and  D
+      for S-Band LCP.  Each PRR file is accompanied by a detached ASCII PDS
+      label which describes both the content and format of the file and has
+      file name  ydddhhMC.LBL.
+ 
+      PRT Data: Amplitude-corrected time samples which have also been
+      corrected for the major sources of Doppler shift and other frequency
+      effects are the second primary data type; these are found in the PRT
+      directory.  The corrections for Doppler and other frequency effects
+      should place the surface echo centroid in the range 10000-15000 Hz,
+      where the total bandwidth is 25000 Hz.  The structure and naming of
+      PRT files is identical to that for PRR files except for the file name
+      extension (PRT).  Each PRT file is accompanied by a detached PDS
+      label which describes both the content and format of the file and
+      has file name  ydddhhMC.LBL.
+ 
+      SPC Data:  The third type of primary data is the SPC file.  These are
+      ASCII files containing power spectra, cross-spectrum magnitudes, and
+      cross-spectrum phases. There are three SPC files -- one for each MGN
+      orbit.  The first 8 or 12 rows in an SPC file contain a header (a PDS
+      TABLE object) listing source files (receiver channel, PRP file name,
+      SRF file name, and GNC file name).  The remaining rows contain the
+      power and voltage cross-spectra measurements (a second PDS TABLE).
+      The rows are ordered by time; within each time step, the rows are
+      ordered by frequency.  Columns in the data part of an SPC file give:
+ 
+         spectrum number
+         center time for the average spectrum (seconds)
+         frequency bin number
+         frequency corresponding to the bin number (Hz)
+         average X-Band RCP power (set to zero in this archive)
+         average X-Band LCP power (set to zero in this archive)
+         average S-Band RCP power (zeptowatts)
+         average S-Band LCP power (zeptowatts)
+         average X-Band cross-spectrum magnitude (set to zero)
+         average X-Band cross-spectrum phase (set to zero)
+         average S-Band cross-spectrum magnitude (zeptowatts)
+         average S-Band cross-spectrum phase (radians)
+ 
+      All of the spectra have 1024 frequency bins with 24.4 Hz resolution.
+      For the first BSR orbit there are 192 time steps of 10 seconds each; for
+      the second and third orbits, there are 288 time steps of 10 seconds
+      each.
+ 
+      SPC files have names of the form ydddhhMB.SPC where &apos;y&apos;, &apos;ddd&apos;, and &apos;M&apos;
+      are the same as for PRR files and &apos;B&apos; indicates that these are the
+      second versions created of each file.  The &apos;A&apos; versions were preliminary
+      and have not been included in the archive.
+ 
+ 
+    Ancillary Data
+    ==============
+      Ancillary files were used directly in the calibration process (GNC, SC1,
+      SC2, and SRF directories) or could be used during interpretation (BSP
+      and SRG directories).  They are described briefly below in the order in
+      which they might be encountered during calibration.
+ 
+      The SRF directory contains power spectra for the RCP (4156134B.SRF) and
+      LCP (4156134D.SRF) channels which were used to &apos;equalize&apos; (flatten) the
+      spectral response of the filters in the receiving system.  Each file is
+      a 1024-point power spectrum computed from 227 seconds of noise data.
+      Since the filtering is entirely digital, there is no reason to believe
+      that the RCP and LCP noise power spectra would differ; but separate SRF
+      files have been derived for the two channels.  Standard deviation of
+      individual frequency bins is about 1.3 percent of the mean.  Each file
+      includes an attached PDS label.
+ 
+      The GNC directory contains ASCII files of coefficients for polynomials
+      used to adjust the amplitude of the samples from a single receiver
+      channel.  The gain calibration accounts for changes in receiver
+      attenuator settings and the system temperature of the channel.  File
+      4156130B.GNC contains gain coefficients for all S-RCP observations on
+      5 June 1994; file 4156130D.GNC contains coefficients for all S-LCP
+      observations.  Each GNC file is accompanied by a detached PDS label
+      having the same file name except for the extension (LBL).
+ 
+      The SC1 directory contains ASCII files of coefficients for polynomials
+      used to adjust the frequency of the directly propagating carrier signal
+      so that it is approximately centered in the 25000 Hz output bandwidth.
+      Each SC1 file covers approximately 16 minutes in (nominally) one
+      second steps and is valid for both RCP and LCP.  The SC1 files were
+      created in the 1990&apos;s and were reformatted for archive in 2008.  File
+      names have the form  ydddhhmm.SC1  where &apos;y&apos; and &apos;ddd&apos; are the same as
+      for PRR files and &apos;hh&apos; and &apos;mm&apos; give the start hour and minute,
+      respectively, for the data in each file.  Each SC1 file is accompanied
+      by a PDS detached label having the same name except for the extension
+      (LBL).
+ 
+      The SC2 directory contains ASCII files of coefficients for polynomials
+      used to adjust the frequency of the surface echo so that it is
+      approximately centered in the 25000 Hz output bandwidth.  It is assumed
+      that the directly propagating carrier was centered in the previous
+      processing step, so this is a differential frequency correction.
+      Each SC2 file covers a single MGN orbit in (nominally) 10 second
+      steps and is valid for both RCP and LCP.  The SC2 files were created
+      in the 1990&apos;s and were reformatted for archive in 2008.  File names
+      have the form  ydddhhmm.SC2,  where the components have the same
+      meaning as for SC1 files.  Each file is accompanied by a PDS detached
+      label having the same name except for the extension (LBL).
+ 
+      The BSP directory contains the spacecraft and planetary ephemerides
+      for 5 June 1994 (4156156A.BSP).  The spacecraft ephemerides were
+      derived from a Magellan &apos;SPK&apos; file (CYCLE6.BSP), obtained from the
+      Navigation and Ancillary Information Facility (NAIF) at the NASA
+      Jet Propulsion Laboratory (JPL).  The spacecraft ephemerides were
+      then merged with the JPL DE-421 solar system ephemeris (DE421.BSP),
+      also obtained from NAIF.  The BSP file is accompanied by a PDS
+      minimal label which points to additional information on NAIF, its
+      products and tools, and documentation on this &apos;SPK&apos; file.
+ 
+      The SRG directory contains a single file (4156156A.SRG) summarizing
+      the MGN BSR experiment geometry at one minute time increments over
+      eight hours starting at 1994-06-05T13:00:00.  This is an ASCII file
+      containing a single header row followed by 480 data rows.  The SRG
+      file is accompanied by a PDS label (4156156A.LBL) which describes the
+      content and format of the data file.
+ 
+      The SRG header row gives:
+ 
+        01) DSN antenna number (63)
+        02) input BSP file name (4156156A.BSP)
+        03) assumed spherical radius of Venus (6051800 m)
+        04) assumed speed of light in vacuum (299792458 m/s)
+        05) latitude of a specific target (arbitrarily set to +70 deg))
+        06) longitude of a specific target (arbitrarily set to 0 deg)
+        07) time spacing between rows in the data table (60 seconds)
+ 
+      The SRG data rows contain the following.  &apos;Specific target&apos; is the
+      surface point with latitude and longitude given in positions 5-6 of
+      the header row.  &apos;Backscatter point&apos; is where a line drawn from
+      the DSN antenna through the spacecraft (and beyond) would intercept
+      the surface.  The raypath closest approach (RCA) point is where such
+      a line would be closest to Venus if there were no intercept and if
+      Venus were between the DSN and spacecraft.  The specular point is
+      where spacecraft-to-surface-to-DSN mirror-like reflection would occur.
+      If the spacecraft is in occultation, these points are not meaningful;
+      existence of the backscatter point precludes existence of the RCA
+      point.  Vectors are in J2000 coordinates, distances are in meters,
+      velocities are in m/s, and angles are in degrees.
+ 
+        01) Earth received time (ERT, seconds from midnight UTC)
+        02) corresponding transmit time at Venus (seconds from midnight)
+        03) Venus north pole vector (x,y,z components)
+        04) Venus fixed-body x-axis (x,y,z components)
+        05) Venus fixed-body y-axis (x,y,z components)
+        06) Venus center to DSN antenna vector
+        07) Venus center to MGN spacecraft vector
+        08) MGN spacecraft to DSN antenna vector
+        09) Venus center to specific target vector
+        10) Specific target to DSN antenna vector
+        11) Specific target to MGN spacecraft vector
+        12) Incidence angle at the specific target
+        13) Scattering angle at the specific target
+        14) Spacecraft-target-DSN angle
+        15) Venus center to backscatter point vector
+        16) Latitude of the backscatter point
+        17) Longitude of the backscatter point
+        18) Venus center to RCA point
+        19) Latitude of the RCA point
+        20) Longitude of the RCA point
+        21) Venus center to specular point vector
+        22) Incidence angle at the specular point
+        23) Reflection angle at the specular point
+        24) Latitude of the specular point
+        25) Longitude of the specular point
+        26) Partial derivative of (12) with respect to Venus radius
+        27) Partial derivative of (13) with respect to Venus radius
+        28) Partial derivative of (14) with respect to Venus radius
+        29) Partial derivative of (16) with respect to Venus radius
+        30) Partial derivative of (17) with respect to Venus radius
+        31) Partial derivative of (22) with respect to Venus radius
+        32) Partial derivative of (23) with respect to Venus radius
+        33) Partial derivative of (24) with respect to Venus radius
+        34) Partial derivative of (25) with respect to Venus radius
+ 
+ 
+    Coordinate System
+    =================
+      In general the J2000 inertial reference frame is used.  But the radio
+      data are not dependent on frames, and the NAIF software allows easy
+      translation among coordinate systems.  The only file for which a
+      coordinate system matters is the SRG file.
+ 
+ 
+    Software
+    ========
+      No software is included with this archival data set.
+ 
+ 
+    Media/Format
+    ============
+      This archival data set was transferred to TDK and Taiyo Yuden DVD+R
+      media using a Dell computer with a Plextor PX712A writer.  The software
+      was Padus Disc Juggler running under the Windows XP2 operating system.
+      Discs have been produced in the UDF-Bridge format with ISO 9660 Level 1
+      compatibility.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      This data set is the result of reprocessing the Magellan S-Band bistatic
+      radar data collected at DSS 63 on 5 June 1994.  These observations were
+      the most useful for assessing the behavior of the anomalously reflecting
+      materials at high elevation on Venus [PETTENGILLETAL1996].
+ 
+      Data collected at X-Band on 5 June 1994 were not processed because there
+      was little evidence that an echo had been captured (high absorption by
+      the neutral atmosphere at 3.6 cm wavelength).  No data collected on the
+      same date at DSS 14 were processed -- pointing errors at that ground
+      station reduced signals by as much as 10 dB.  Data from other dates were
+      not processed because the targets or viewing geometry appeared to be
+      less promising.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by a peer review panel prior
+      to its acceptance by the Planetary Data System (PDS).  The peer
+      review was conducted by the PDS Geosciences Node in accordance with PDS
+      procedures.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Eight quasi-specular tracks were observed using two 70-m DSN antennas
+      on 5-6 June 1994.  Each track extended from south of the Venus equator
+      to beyond Maxwell Montes in the north.  The objective was to observe
+      changes in reflected signal amplitude and dispersion as the specular
+      point moved over different surface units.  Of particular interest was
+      Maxwell Montes, targeted five days earlier in a spotlight bistatic
+      experiment.  Real-time observation of echoes at S-band and possible
+      detection (with intense non-real-time processing) of X-band echoes
+      were predicted for 5 June 1994.
+ 
+      Data were collected during six orbits using DSS 63 near Madrid; data
+      from four orbits were collected using DSS 14 near Goldstone.  Madrid
+      began by receiving S-RCP and S-LCP on the first orbit, switched to
+      X-RCP and X-LCP on the second, and continued to alternate on
+      successive orbits thereafter.  Previous experience had shown that
+      attempting to record both S-Band and X-Band signals at 25000 samples
+      per second at a single antenna led to errors.  On the fifth orbit,
+      DSS 14 began with X-RCP and X-LCP (while DSS 63 collected S-RCP and
+      S-LCP), and alternated thereafter.
+ 
+      Tuning predictions for the open-loop receivers were calculated
+      at Stanford; owing to a sign error, the predictions failed to
+      achieve the desired result, but real-time corrections to the tuning
+      (manual frequency offsets) were sufficient to keep the S-band signal
+      within the passband for all but parts of the first DSS 63 orbit.
+      S-band echoes were observed in real time from DSS 63; no X-band
+      echoes were seen.
+ 
+      At DSS 14 an error in ground antenna pointing reduced signal levels
+      considerably; those data have very little value when compared with
+      with the data from DSS 63.
+ 
+      Some of the tapes received from DSS 63 had truncated records; these
+      errors only affected the X-Band recordings. About half of the tapes
+      received from DSS 14 were unreadable.
+ 
+      The tables below summarize the data which were reprocessed and have
+      been included in the calibrated data archive.  All were from 5 June
+      1994, collected at DSS 63 using S-Band (13 cm wavelength).  The
+      notation  4156130{B,D}.PRR  means that the S-RCP file name is
+      4156130B.PRR and the S-LCP file name is 4156130D.PRR.  The &apos;missing&apos;
+      PRT files included only times when there was no surface echo.
+ 
+      =====================================================================
+        Start       Stop     Calibrated Complex   Calibrated Complex Time
+         Time       Time        Time Samples     Samples with Echo Centered
+        (ERT)      (ERT)      (PRR Directory)            in Spectrum
+                                                       (PRT Directory)
+      ---------- ---------- -------------------  --------------------------
+       13:09:31   13:25:30    4156130{B,D}.PRR        4156130{B,D}.PRT
+       13:25:31   13:41:30    4156132{B,D}.PRR        4156132{B,D}.PRT
+       13:41:31   13:48:39    4156134{B,D}.PRR
+       15:58:12   16:14:11    4156155{B,D}.PRR        4156155{B,D}.PRT
+       16:14:12   16:30:11    4156161{B,D}.PRR        4156161{B,D}.PRT
+       16:30:12   16:46:11    4156163{B,D}.PRR        4156163{B,D}.PRT
+       16:46:12   16:54:17    4156164{B,D}.PRR
+       19:10:25   19:26:24    4156191{B,D}.PRR        4156191{B,D}.PRT
+       19:26:25   19:42:24    4156192{B,D}.PRR        4156192{B,D}.PRT
+       19:42:25   19:58:24    4156194{B,D}.PRR        4156194{B,D}.PRT
+       19:58:25   20:00:23    4156195{B,D}.PRR
+      =====================================================================
+ 
+      =====================================================================
+             Start       Stop    Calibrated Power  Number    Number  of
+              Time       Time       and Voltage      of    Frequency Bins
+             (ERT)      (ERT)     Cross-Spectra     Time         per
+                                 (SPC Directory)    Steps    Time  Step
+           ---------- ---------- ----------------  ------  --------------
+            13:09:31   13:41:31    4156130B.SPC      192        1024
+            15:58:12   16:46:12    4156155B.SPC      288        1024
+            19:10:25   19:58:25    4156191B.SPC      288        1024
+      =====================================================================
+ 
+      For the three orbits which were reprocessed, the data are reasonably
+      good.  But several points are worth noting:
+ 
+        (1) Interfering signals originating on Earth passed through the
+            frequency range occupied by the surface echo; but the geometry
+            was slightly different on each orbit.  At most, only the data
+            from the first BSR orbit were seriously compromised when the
+            interfering signal passed through the surface echo at the same
+            time (13:31) as the specular point was moving across Maxwell
+            Montes.
+ 
+        (2) The masers on both S-Band channels were unstable on time scales
+            of seconds to minutes.  The S-RCP gain variation was relatively
+            unimportant, but variations in the S-LCP gain of as much as 1 dB
+            made the attempt at absolute calibration only marginally
+            successful and produced false polarization signatures for noise
+            which should have been random.  Forcing the background noise to
+            be the same on both channels might be a better procedure in a
+            future analysis even though it would lead to small errors in the
+            inferred polarization of the surface echoes.
+ 
+        (3) The GNC coefficients were chosen to give a 15 dB correction to
+            sample values when S-RCP attenuation was increased or decreased
+            by 15 dB, the nominal value.  The result is perfectly accurate
+            in the sense that no discontinuity can be seen in the output
+            S-RCP sample values after correction.  On S-LCP a 15 dB GNC
+            correction proved too much, so 14.5 dB was used instead.  In
+            retrospect, this was too little; a GNC correction of 14.75 dB
+            appears to have been the best choice.  Since the S-LCP channel
+            was already known to be unstable at the 1 dB level, no attempt
+            was made to recalibrate the amplitudes to remove the 0.25 dB
+            discontinuities and they can be seen in the PRR and PRT data.
+ 
+        (4) The frequency calibration, following procedures which have easily
+            located Voyager and other signals to 1 Hz, put Magellan BSR echoes
+            into the desired 10000-15000 Hz window but without much additional
+            precision. The most likely source of frequency error is drift of
+            Magellan&apos;s on-board frequency reference, perhaps affected by
+            temperature as the spacecraft maneuvered to maintain equal
+            illumination in the horizontal and vertical polarization planes.
+            The apparent frequency of the echo peak and its drift (as it
+            appears in the SPC files) is listed below.  Note that drift of
+            the echo does not invalidate the cross-spectrum values because
+            the same phase corrections were applied to both polarizations;
+            however, the bin location of any given cross-spectrum value will
+            be offset, just as the bins of the S-RCP and S-LCP power spectra
+            will be offset.
+ 
+                 =======================================================
+                 Experiment  Start    Start     End      End     Average
+                              Time  Frequency   Time  Frequency   Drift
+                              (s)      (Hz)     (s)      (Hz)     (Hz/s)
+                 ----------  -----  ---------  -----  ---------  -------
+                      1      47580    14150    48980    12500      -1.18
+                      2      58700    13250    60100    12000      -0.89
+                      3      69900    13000    71200    12100      -0.69
+                 =======================================================
+ 
+        (5) [PETTENGILLETAL1996] reported 1-second averaging to obtain echo
+            properties.  Partly because of software limitations, the
+            integration used here was 10 seconds.
+ 
+        (6) In spite of the issues listed above, the calibrated data do show
+            an excess of RCP echo power when the specular point was over
+            Maxwell Montes, and especially when it was near Cleopatra Patera.
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

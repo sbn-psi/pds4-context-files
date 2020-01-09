@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ch1-orb-l-mrffr-4-cdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CH1-ORB MOON MINI-RF 4 CALIBRATED DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.chandrayaan-1::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ch1-orb::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mrffr.ch1-orb::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ch1-orb-l-mrffr-4-cdr-v1.0__pds.geo.chandrayaan1.webservices::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Nozette, S., P. Spudis, B. Bussey, K. Raney, H. Winters, C.L. Lichtenberg, W.
+                   Marinelli, J. Crusan, and M. Gates, The LRO Miniature Radio Frequency (Mini-RF)
+                   technology demonstration, Space Sci. Rev., submitted, 2009.
+            </reference_text>
+            <description>reference.NOZETTEETAL2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CH1-ORB-L-MRFFR-4-CDR-V1.0</data_set_id>
+        <data_set_name>CH1-ORB MOON MINI-RF 4 CALIBRATED DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2008-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>MINI-RF POC</producer_full_name>
+        <citation_text>
+            Chandrayaan-1 Forerunner Calibrated Level 1 Data Set V1.0,
+            CH1-ORB-L-MRFFR-4-CDR-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated Level 1 data records and ancillary files from the
+            Mini-RF (Mini-SAR) Forerunner lunar mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains Level 1 archival calibrated burst mode
+            data acquired from the Mini-RF (Mini-SAR) instrument during the
+            Chandrayaan-1 mission and associated ancillary data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Mini-RF Calibrated Data Archive is a time-ordered
+      collection of calibrated Level 1 SAR images collected by the
+      Mini-RF instrument during the Chandrayaan-1mission to the Moon.
+      They also contain stokes parameters files, polarization ratio
+      files, and a browse image.
+ 
+      Please see documentation in the DOCUMENT directory for
+      additional information on the data files and their format.
+ 
+    Parameters
+    ==========
+      See individual SIS documents, which are located in the
+      DOCUMENT directory, for detailed descriptions of each file
+      contained in this data archive.
+ 
+    Processing
+    ==========
+      The POC produces Level 1 SAR CDRs by ingesting the Level 0 EDRs and
+      associated Level 0 ancillary files into the SAR processor (Level 0
+      data are intermediate products generated from raw (PDR) products.
+      Level 0 data are not archived in PDS.).  Calibration is applied.
+      A full PDS label accompanies each data file and gives
+      a detailed description of the content and format.
+ 
+    Data
+    ====
+      The Level 1 CDRs are SAR images in range and azimuth orientation
+      with pixel values in beta naught, which have been radiometrically
+      and polarmetrically calibrated. Each cross-product image file
+      contains simple lines of pixels.  Each pixel consists of four 4-byte
+      floating point numbers for a total of 16 bytes.  The first two
+      floating point numbers are the image intensity values for the
+      horizontal (H) and vertical (V) channel receive.  The second two
+      numbers are the real and imaginary parts of the single complex number
+      which gives the cross power intensity image between the H &amp; V receive.
+      H &amp; V represent the complex amplitudes of the horizontal and vertically
+      polarized backscatter respectively. An &apos;*&apos; represents a complex
+      conjugate of H or V.  The Level 1 products are the lowest level usable
+      science data products.
+ 
+      All Level 1 CDR image products are each accompanied by four stokes
+      parameters files. Mini-RF transmits a right circular polarized signal,
+      and receives Horizontal and vertical polarized signals, and the phase
+      between the polarizations.  The Level 1 file consists of four pieces
+      of information per pixel.  The received power on the horizontal
+      polarization (ERH), the received power in the vertical polarization
+      (ERV) and the real and imaginary portions of the cross product between
+      the two polarization signals (Re ERH ERV* &amp; Im ERH ERV* ).
+ 
+      The four stokes parameters (S1, S2, S3, and S4) are related to the
+      data in the level 1 files by the following equations:
+ 
+      S1   =   ERH + ERV
+      S2   =   ERH - ERV
+      S3   =   2 Re  ERH ERV*
+      S4   =   -2 Im  ERH ERV*
+ 
+      These data are stored in the DATA/SAR/&lt;orbit&gt;/LEVEL1 directory on
+      archival volumes. File names are described in MRFFR_DP_SIS.PDF.
+ 
+    Ancillary Data
+    ==============
+      Each science product is accompanied by a text metadata file
+      that contains the parameters that describe the state the instrument
+      was in at the time of data collection and location and timing
+      information about the data set.  This file is referenced in the
+      PDS label associated with the science data product.
+ 
+    Calibration Data
+    ================
+      Calibration files produced by the Vexcel(TM) CalPro processor are
+      included with the Level 1 data set.  Consult the Mini-RF Calibration
+      Plan included in the DOCUMENT directory of this archive and the
+      MRF_INST.CAT file for details.
+ 
+    Coordinate System
+    =================
+      Level 1 data products are not dependent on definition of a
+      coordinate system.
+ 
+    Software
+    ========
+      No software is included with this archival data set.
+ 
+    Media/Format
+    ============
+ 
+      These products are delivered on a hard-drive or by ftp and
+      not on a specific formatted medium.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this data are collected from orbits around the Moon.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the Mini-RF
+      Team prior to submission to the Planetary Data System (PDS).
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications.  These materials were distributed to PDS
+      personnel, the experiment investigator, and others,
+      as appropriate.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The coverage on each archival volume is associated with the
+      orbit number.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

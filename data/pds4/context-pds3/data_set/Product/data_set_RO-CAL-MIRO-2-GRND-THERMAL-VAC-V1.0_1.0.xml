@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-cal-miro-2-grnd-thermal-vac-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER CAL MIRO 2 GRND THERMAL-VAC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:miro.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-cal-miro-2-grnd-thermal-vac-v1.0__browserp_ro-cal-miro-2-grnd-thermal-vac-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gulkis, S., et al., MIRO: Microwave Instrument for Rosetta Orbiter, Space Sci.
+                   Rev., 128(1-4), 561-597, Feb. 2007.
+            </reference_text>
+            <description>reference.GULKISETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-CAL-MIRO-2-GRND-THERMAL-VAC-V1.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER CAL MIRO 2 GRND THERMAL-VAC V1.0</data_set_name>
+        <data_set_release_date>2006-11-15</data_set_release_date>
+        <start_time>2001-05-21T10:28:00Z</start_time>
+        <stop_time>2001-06-29T10:43:00Z</stop_time>
+        <producer_full_name>Dr. Samuel Gulkis</producer_full_name>
+        <citation_text>
+            Gulkis, S., Backus, C.R., Janssen, M.A., Kamp, L.W. et al.,
+            ROSETTA MIRO INSTRUMENT RAW DATA FOR THE GROUND-TESTING PHASE,
+            RO-CAL-MIRO-2-GRND-THERMAL-VAC-V1.0, ESA PLANETARY SCIENCE
+            ARCHIVE AND NASA PLANETARY DATA SYSTEM 2008
+        </citation_text>
+        <data_set_terse_desc>
+            Data from thermal-vacuum testing of MIRO at NASA/JPL
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains Spectroscopic, Continuum and Engineering
+            data, in the form of table files, for the ground thermal-vacuum
+            tests performed at NASA/JPL for the MIRO instrument of the
+            Rosetta mission.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+ 
+    This data set contains spectroscopic, continuum and engineering
+    (housekeeping) data acquired by the MIRO instrument during
+    ground testing
+    in the thermal- vacuum facility at NASA&apos;s Jet Propulsion
+    Laboratory.  These tests were designed by Sam Gulkis, Peg
+    Frerking, Cindy Kahn and Timothy Koch.  The entire MIRO team at
+    JPL participated (in shifts) in these tests, since the
+    instrument was on for many weeks continuously and required
+    round-the clock monitoring.
+ 
+    The main objectives of these tests were:
+ 
+      1) to characterize the performance of the MIRO instrument
+         throughout the the temperature range in which it is expected
+         to operate (-15C to +55C).
+ 
+      2) to test the software algorithms for operations and onboard
+         data handling.
+ 
+    Hardware tests were performed in thermal vacuum to determine
+    radiometry characteristics and temperature suceptabilities.
+    Software commands were ckecked to ensure functionality of
+    commands in TV environment.
+ 
+    It should be emphasized that this data set was not used to
+    attempt to perform a radiometric or frequency calibration of the
+    MIRO data.  These calibrations are performed in flight, by
+    observations of known astronomical targets.
+ 
+    The procedure description (CALIBRATION_PROC) and log files for
+    these tests are included in the DOCUMENT directory of this data
+    set.
+ 
+  Author List
+  ===========
+ 
+    The author list in the CITATION_DESC includes only those persons
+    who worked on preparing this archive dataset for delivery.  The
+    full list of all persons involved in the MIRO experiment is
+    (taken from the GULKISETAL2007 reference):
+    S. Gulkis, Frerking, M., Crovisier, J., Beaudin, G., Hartogh, P.,
+    Encrenaz, P., Koch, T., Kahn, C., Salinas, Y., Nowicki, R.,
+    Irigoyen, R., Janssen, M., Stek, P., Hofstadter, M., Allen, M.,
+    Backus, C., Kamp, L., Jarchow, C., Steinmetz, E., Deschamps, A.,
+    Krieg, J., Gheudin, M., Bockelee-Morvan, D., Biver, N., Encrenaz,
+    T., Despois, D., Ip, W., Lellouch, E., Mann, I., Muhleman, D.,
+    Rauer, H., Schloerb, P., and Spilker, T.
+ 
+  Data Set Summary
+  ================
+ 
+    A summary of the tests is provided in the following chart.  The
+    temperatures of the instrument were primarily controlled by two
+    components whose temperatures could be set to a given value.
+    There were:
+ 
+      Large Plate:  determined MIRO&apos;s Sensor EU and USO temperatures.
+      Small Plate:  determined MIRO&apos;s OB temperature (which could
+                    not exceed 40C).
+ 
+    In this chart, the start time of each temperature cycle is
+    given, with the values requested for the two controlled
+    temperatures, in degrees C:
+ 
+      Cycle #     Time          T(Large Plate)   T(Small Plate)
+      -------     ----          --------------   --------------
+ 
+         1    2001-05-21/19:08       22              22
+         2    2001-05-22/09:36       52              37
+         3    2001-05-23/02:24       42              37
+         4    2001-05-23/18:21       32              32
+         5    2001-05-23/11:02       22              22
+         6    2001-05-25/02:59       12              12
+         7    2001-05-29/07:50        2               2
+         8    2001-05-30/06:09       -8              -8
+         9    2001-05-30/22:43      -22             -20
+        10    2001-05-31/17:58      -14             -10
+        11    2001-06-01/17:58        2               2
+        12    2001-06-02/00:23       12              12
+         1    2001-06-02/20:27       22              22
+         2    2001-06-03/01:37       52              37
+         3    2001-06-03/06:06       42              37
+         4    2001-06-03/11:06       32              32
+         5    2001-06-03/16:43       22              22
+         6    2001-06-03/21:10       12              12
+         7    2001-06-04/01:25        2               2
+         8    2001-06-04/06:13       -8              -8
+         9    2001-06-04/10:45      -22             -20
+        10    2001-06-04/15:21        2               2
+        11    2001-06-04/21:13       22              22
+        12    2001-06-05/01:43       42              37
+         1    2001-06-07/09:03       22              22
+         2    2001-06-07/15:15       52              37
+         3    2001-06-07/18:55       42              37
+         4    2001-06-07/21:21       32              32
+         5    2001-06-08/08:00       22              22
+         6    2001-06-08/10:48       12              12
+         7    2001-06-08/13:44        2               2
+         8    2001-06-08/17:00       -8              -8
+         9    2001-06-08/20:05      -18             -18
+        end   2001-06-08/23:05
+ 
+    Subsequently, miscellaneous tests were carried out as described
+    in the log files.
+ 
+    Note that Thermal-Vacuum tests actually started on 2001-04-23.
+    However, a failure of the CPU occurred and all testing was
+    restarted on 2001-05-21.
+        </data_set_desc>
+        <confidence_level_note>
+These data were not processed in any way
+    other than being decommutated from the raw telemetry stream, so no
+    processing errors are expected.  For a discussion of the
+    reliability of the MIRO instrument itself, see the documentation
+    included with this and subsequent mission archives.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

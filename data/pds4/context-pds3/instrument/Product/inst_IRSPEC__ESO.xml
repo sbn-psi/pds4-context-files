@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:irspec.eso</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>INFRARED SPECTROMETER for ESO</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.eso::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>INFRARED SPECTROMETER</instrument_name>
+        <instrument_desc>
+ 
+ 
+    Instrument Overview
+    ===================
+      IRSPEC is a cryogenically cooled grating spectrometer equipped with
+      a 58 x 62 pixel SBRC InSb array with 76 micrometer pixel size. It
+      covers the 1 micrometer to 5 micrometer wavelength range at
+      resolving powers of 1000 to 5000 with a nominal slit length of 2
+      arcmin. The instrument is attached permanently to one of the F/11
+      Nasmyth foci of the New Technology Telescope (NTT) and hence free of
+      instrumental flexure effects. It employs an optical de-rotator in
+      front of the slit to counter the field rotation at the telescope
+      focus and to permit orientation of the slit at any position angle on
+      the sky.
+ 
+      IRSPEC is remotely controlled from the HP A900 &apos;New Technology
+      Instrument&apos; (NTI) host computer via form filling and &apos;mouse&apos;
+      clicking on a menu bar. An on-line display of standard instrument
+      and detector status parameters is available on a RAMTEK screen.
+      Data acquisition is performed through the pre-processing system
+      (PPS) which receives commands from the host. Images and 1-D traces
+      can be displayed in real time on a monitor connected directly to the
+      pre-processor. The display can be used for infrared &apos;peaking-up&apos;.
+      Brighter objects are centered using the NTT guide probes or the
+      IRSPEC slit viewer.
+ 
+      Final data are sent to the A900 where they are stored as individual
+      2-D IHAP files. IHAP is available on-line on the A900 with a RAMTEK
+      monitor for image display and a graphics terminal for obtaining 1D
+      spectrum plots, traces, etc.
+ 
+ 
+    Optics
+    ======
+      Light enters the spectrometer via the de-rotator which is installed
+      between the NTT adapter A and IRSPEC. The de-rotator converts the
+      NTT F/11 beam to F/8 at the slit. After passing through the entrance
+      window, the F/8 beam is converted to F/7.4 by a field lens located
+      immediately in front of the slit which also re-images the pupil onto
+      a cold stop at the off-axis parabolic collimator. The latter directs
+      the 10 cm diameter collimated beam towards one of the two
+      &apos;back-to-back&apos; mounted diffraction gratings (12 x 15 cm ruled area)
+      operated in the Littrow mode. Grating # 1 (300 lines/mm) is used in
+      the middle infrared and grating # 2 (600 lines/mm) in the near
+      infrared. The F/2 Pfund type camera then focuses the spectrum on the
+      detector array.
+ 
+      The gratings are supported in a cradle mount which permits their
+      interchange by a 180 degree rotation about an axis parallel to the
+      ruled surface and orthogonal to the rulings. Both gratings have
+      blaze angles approximately 37 degrees and can be rotated through
+      approximately 25 degrees.
+ 
+      The slit is a continuously variable moving blade system.
+      Magnification between the detector and the slit is 3.7 so a 76
+      micrometer pixel corresponds to 280 micrometers on the slit or 2.2
+      arcsec. The slit blades are polished and slightly tilted to permit
+      slit viewing with a TV camera. Behind the slit is an 8 position
+      wheel containing the order sorting filters.
+ 
+      The Littrow mount is off-axis by 10 degrees and the slit is tilted
+      by 15 degrees relative to horizontal coordinates. This particular
+      spectrometer arrangement causes a pronounced spectrum line tilt and
+      curvature. The tilt angle omega(tilt) is given by
+ 
+        omega(tilt) = arctan(sin gamma(0) x 2 tan omega) - theta      (1)
+ 
+      where
+ 
+        sin omega = m x lambda / 2D x cos gamma(0)                    (2)
+ 
+      with
+ 
+      theta    = 15 degrees, slit tilt
+      gamma(0) = 10 degrees, off-axis angle of Littrow mount
+      m        grating order
+      lambda   center wavelength
+      D        grating constant
+ 
+ 
+    Mounting
+    ========
+      All the cooled optical functions are supported by, but thermally
+      isolated from, a rigid optical bench which remains close to room
+      temperature. The optical bench supports pass through stainless steel
+      vacuum bellows attached to the vacuum vessel in order to decouple
+      the latter from the spectrometer.  Cooling of the optics to
+      approximately 80 K is by means of silver straps or copper braids
+      attached to the radiation shield which, in turn, is cooled by a
+      continuous flow of liquid N2 (LN2) through a tube attached to its
+      bottom plate. LN2 also passes through a heat exchanger sandwiched
+      between the two gratings. The LN2 is supplied from an internal
+      storage tank which is refilled twice a day. Temperature sensors
+      automatically control the nitrogen flow to limit temperature
+      gradients during cool down and to maintain the final steady state
+      temperature. The detector array is cooled to 30K by a closed cycle
+      cooler.
+ 
+ 
+    Detectors
+    =========
+      The detector at IRSPEC is a 58 x 62 pixel array from SBRC with 62
+      pixels aligned along dispersion direction. It is a hybrid type
+      detector with backside illuminated InSb diodes bump-bonded to an X-Y
+      addressed switched FET output multiplexer. The array has a quantum
+      efficiency of 0.89 at 2.85 micrometers, 99.7% of pixels operable,
+      and a well capacity of 1 x 10**6 e- .  The array is operated in DC
+      mode which is possible because of its high stability. The ADU to
+      electron conversion factor is 85 e-/ADU.
+ 
+ 
+      Dark Current and Noise
+      ----------------------
+      Two major sources of dark current are present. The diffusion
+      current, due to thermally generated charge carriers in the
+      semiconductor, and the generation-recombination current due to
+      emission of charge carriers through mid-band traps, add up to
+      approximately 200 e-/sec at 30K. The internal background of the
+      instrument increases the dark current to approximately 400 e-/sec.
+ 
+      Individual pixels exhibit noise which is due to Shot (Poisson)
+      noise, Johnson noise, and 1/f noise. Shot noise is associated with
+      statistical variations in the arrival rates of photons (i.e. the
+      rate of generation of photo current) and in the generation and drift
+      of dark current carriers across the semiconductor. Johnson noise is
+      thermodynamically fundamental to all resistances, including that of
+      the detector. 1/f noise increases as the sampling frequency is
+      lowered. Its origin is not understood. Read noise is defined as the
+      RMS deviation of the signal read out of a pixel after zero
+      integration time.  Spatial noise, i.e. pixel to pixel variations
+      present after flat fielding, determines the ultimate S/N that can be
+      achieved.
+ 
+ 
+    Data Modes
+    ==========
+      Two read out schemes are implemented for the SBRC array. Before an
+      integration, a reset switch is closed and the detector is set to an
+      initial voltage Vi. This causes the detector and FET capacitances to
+      be charged up.  An integration is started by opening the reset
+      switch. The effective capacitances are discharged by the photon and
+      dark currents. In triple correlated read out, the detector voltage
+      is sampled at reset (R1), at the beginning (S1), at the end (E1),
+      and at second reset (R2) after the end of the integration.  The main
+      contribution to the read noise results from the video line (kTC
+      noise). It varies on time scales longer than typical detector
+      integration times. This allows an interpolation of the noise during
+      the integration; the signal voltage is thus obtained by Vs = (E1-
+      R2) - (S1- R1).  The read noise in triple correlated read out is
+      approximately 680 e- RMS.
+ 
+      The read noise is significantly reduced by non destructive read out.
+      In this option, the output voltage is continuously sampled at a rate
+      of 28 s**-1 without resetting the detector. The final signal voltage
+      E1 is obtained by a least squares fit through the individual
+      measurements. For detector integration times around 10 sec, the
+      combined dark and read noise is approximately 150 e- RMS. Figure 2.2
+      shows the read noise as a function of the detector integration
+      time.  It increases for integration times above one minute due to
+      the internal background.
+ 
+      Detector Response
+      -----------------
+      Pairs of columns are read out simultaneously via two independent
+      output lines.  A pronounced odd - even effect between adjacent
+      columns appears in the detector response because the output lines
+      have different gains. The difference is corrected to first order by
+      software.
+ 
+      There is an intrinsic non-linearity of the discharge of the total
+      capacitance because both Idark and Cdet are functions of the bias
+      voltage which changes during integration. The present software does
+      not correct for the nonlinearity which is estimated to amount to 10%
+      at maximum for this array (McCaughrean 1988).
+ 
+      Acquisition and Storage
+      -----------------------
+      The central unit is the NTI A900 computer on which the IRSPEC tasks
+      are implemented. Data acquisition on the SBRC array is controlled
+      through the pre-processor (PPS). Commands and replies from the A900
+      host system are sent via a simple RS232 connection. Final data are
+      sent back to the A900 via a fast fiber link and stored as 2-D IHAP
+      files. All IRSPEC commands are issued from the LU54 instrument
+      console. Two RAMTEKs, LU38 and LU39, and a graphics terminal, LU72,
+      are used to display final images, instrument and detector status
+      parameters, and 1-D spectra.
+ 
+ 
+    Processing
+    ==========
+      The pre-processing system is based on VME hardware. It contains a
+      MC68030/25 MHz CPU board (Eltec E6) and a RAM board with 2 x 0.5
+      MBytes solid RAM disk cartridges. The software works under the OS-9
+      operating system. It handles the data acquisition, the host
+      communication and the real-time display. On the PPS, the interface
+      program CI waits for commands from the host, checks the correctness
+      and triggers one or more programs depending on the command.
+ 
+      After initialization of the acquisition hardware at start detector
+      data are continuously read out upon an interrupt of the sequencer.
+      The data are stored in an input-ring-buffer as pixel values. The
+      mean and standard deviation are calculated and the result is stored
+      into an output-ring-buffer. Individual measurements and final
+      averaged data are sent on request to the NTI A900 host system.
+ 
+      The PPS software contains a real-time graphics display task. It
+      displays data frames, 1-D plots, and various integration parameters.
+      The task has facilities like autocut (median filtered), display of
+      pixel values for the various data frames, &apos;keeping images&apos; for later
+      display, subtract fixed pattern frame, etc.
+ 
+      IRSPEC Software
+      ---------------
+      The IRSPEC software on the NTI-A900 consists of several programs:
+      The observation task IRSPC executes commands from the user or
+      external programs. Its main functions are to set up the instrument
+      and detector, to start exposures and transfer final data to tape.
+      The spectrometer control task ICTRL receives commands related to the
+      setting of spectrometer parameters sent by IRSPC. The detector
+      control task IDTRL executes detector commands. Commands from the
+      terminal are sent to the various destination programs via the
+      Terminal Handler (TH). The display of messages on the terminal
+      screen is handled by the Screen Handler (SH). It divides the
+      terminal screen into two parts: in lines 1 to 5 replies from any
+      destination program are displayed. Scrolling is disabled because of
+      the need to write asynchronous replies. The instrument control task
+      IRSPC communicates with the NTT computer via an Ethernet link.  Both
+      NTI and NTT computers keep the same, updated parameters in their
+      respective memory (twin-pool). From IRSPC, any program, both on the
+      NTI and NTT computers, can be accessed by typing its name.
+ 
+ 
+    Calibrations
+    ============
+      Flat Fielding
+      -------------
+      In a procedure similar to that employed for optical CCDs, reasonable
+      flat field corrections are obtained at wavelengths lambda &lt; 2.5
+      micrometers using a halogen lamp. It is in general sufficient to
+      obtain flat field exposures at the beginning and at the end of the
+      night. To account for the non - linearity of the array, take flat
+      fields at an exposure level similar to that of the objects. The
+      halogen lamp is bright at wavelengths between 1 micrometer and 2.5
+      micrometers and the detector saturates for DITs larger than a few
+      sec.  Perform flat field measurements for the instrument settings
+      used for the science exposures, including the various central
+      wavelengths, grating number/orders, and filters. At wavelengths
+      lambda &gt; 2.5 micrometers, the thermal emission from the calibration
+      unit provides a good flat field source.
+ 
+      The use of standard stars as flat field sources is not recommended.
+      Many of the stars previously believed to have flat continua in the
+      near IR do in fact show stellar absorption features which, at the
+      resolution of IRSPEC, have depths of a few percent.
+ 
+      The odd - even difference in the response of the array is corrected
+      to first order by software. An odd - even effect may still be
+      present at a low level after flat fielding. If your observing
+      program aims to measure spectra with high S/N, obtain science
+      exposures with central wavelengths shifted by one or any other odd
+      number of pixels. The ultimate S/N that can be achieved is limited
+      by the spatial noise of the array. It cannot be improved by the
+      accuracy with which flat field corrections are carried out nor by an
+      increase of the total integration time. Whenever spatial noise is
+      dominant, the faintest spectral features distinguishable are defined
+      only by the uniformity of the array and the intensity of the
+      background.
+ 
+ 
+    Operational Considerations
+    ==========================
+      The position angle of the slit with respect to the sky is defined in
+      the usual way: North = 0 degrees, angle measured positive to East.
+      The angle is set by specifying the rotator (i.e. adapter A) offset
+      angle (command PRSET&gt; RTOF, see section C.1). The slit is
+      conventionally set to a width of 2 pixels corresponding to 560
+      micrometers, i.e. 4.4 arcsec. This ensures an adequate sampling in
+      lambda.
+ 
+      The near infrared wavelength region accessible to ground based
+      observations may be divided into two regimes: the 1 - 2.5 micrometer
+      wavelength region and the thermal infrared at longer wavelengths.
+      The near IR is dominated by non-thermal emission by the polar
+      aurora, OH and O2 emission lines, and near IR nightglow.
+      Vibrationally excited OH is produced in a reaction of Ozone with
+      atomic hydrogen that takes place in a thin layer (approximately 10
+      km) between the mesosphere and the ionosphere (approximately 80 km
+      height). The emission is highly variable on time scales of a few
+      minutes. Pronounced diurnal intensity variations result from changes
+      in the OH photodissociation rate which depends on the Doppler shift
+      of the solar spectrum with respect to the predissociated OH
+      absorption lines. Spectral variations result from changes in the
+      rotational temperature of OH. Telluric O2 emission in the IR is
+      limited to wavelengths around 1.27 micrometers and 1.58
+      micrometers.  It arises from electronically excited O2 which is a
+      photodissociation product of Ozone.
+ 
+      The wavelength windows accessible from ground based observations are
+      determined by the atmospheric absorption lines of molecular species,
+      mainly H2O and CO2. Figure B.1 contains the transmittance of the
+      atmosphere between wavelengths of lambda = 1 - 5 micrometers.  The
+      edges of the atmospheric windows are highly variable. The
+      photometric atlas of the solar spetrum (Delbouille et al. 1981) can
+      be consulted if a detailed knowledge of the atmospheric
+      transmittance is required.
+ 
+      A proper flux calibration requires the observation of a standard
+      star with the same instrument setting used for the science
+      exposures. Hot stars have few absorption lines in the infrared, but
+      can not be used if atomic hydrogen or helium features are
+      investigated. For observations in bad atmospheric windows, choose a
+      star as close as possible in air mass to the object in order to get
+      an accurate flux calibration.
+ 
+      If the detector gets saturated, a memory of the previous image is
+      present on the array. To clean the array, perform a number of Dummy
+      read outs (e.g. 5 Dummy read outs with DITs of 1 sec). The number of
+      Dummy read outs is specified in the Exposure Parameters Form.
+ 
+      Changing from one photometric band to the other results in a motion
+      of the source along the slit by a few arcsec. The displacement can
+      be determined by the observation of a standard star at similar
+      wavelengths.
+ 
+      As a major change compared to IRSPEC observations prior to the
+      installation of the SBRC array, sky chopping and telescope beam
+      switching have been removed from the observing menu. The detector is
+      operated in DC mode, and FINALs up to several minutes on source.
+ 
+      Observations in the J, H, and K Bands
+      -------------------------------------
+      Analogous to chopping, cancellation of bright and variable sky
+      emission is achieved through observations of a reference position
+      close to the source.  For compact sources, the sky observation may
+      be obtained by observing the source at a different slit position.
+      Total integration times per position are limited to approximately 10
+      min during the night when the sky emission is stable in order to
+      obtain a proper sky line subtraction. Before and after sunset and
+      sunrise, significant variations in the sky emission can occur at
+      time scales below 5 min.
+ 
+      Note
+      ----
+      Poor cancellation of sky lines may arise from significant spectral
+      and intensity variations of the emission lines at times shorter than
+      the integration time. They may also result from small grating drifts
+      after changing the wavelength. The stability of the grating is
+      checked through the DITs stored as fixed pattern frames during
+      integration. Variations in the sky emission or grating instabilities
+      show up as deviations from a uniform, noisy pattern.
+ 
+      Observations in the Thermal Infrared
+      ------------------------------------
+      Sky lines are no longer dominant at wavelengths longer than 2.5
+      micrometers because of the large background from thermal radiation
+      from the atmosphere.  As shown in Table 3.6, the detector saturates
+      at small DITs. Shot noise of the thermal background photons dominate
+      rather than read noise. Because of this, the sensitivity is severely
+      decreased. Sources without an optical counterpart are therefore
+      searched and centered at 2 micrometers where the S/N is in most
+      cases higher. The stability of the thermal emission compared to the
+      frequency of sky observations is the limiting factor that determines
+      the sensitivity that can be achieved. Sky observations should be
+      carried out at intervals of typically one minute.
+ 
+      The actually employed detector integration time is different from
+      that specified in the Exposure Parameters Form. The correct DIT is
+      displayed in the status display after the form is exited. It is also
+      written into the header of the IHAP file stored on the NTI-A900.
+      Because of the small DITs used in the thermal infrared, the actual
+      integration time may differ significantly from the DIT specified.
+ 
+ 
+    System Performance
+    ==================
+      The resolving power R of IRSPEC at the various combinations of
+      grating number and order are listed in Table 3.8 (Melnick et al.
+      1989).   The filters are selected if the parameter Auto Filter
+      Selection in the IRSPEC Instrument Set Up Form is set to TRUE. Note
+      that the resolving power listed in Table 3.8 is given for a slit
+      width corresponding to two pixels. Higher resolving powers are
+      possible for narrower slit widths. (A graphical representation of R
+      as a function of wavelength is illustrated in Figure 3.1 of Melnick
+      et al 1989.)
+ 
+      Table 3.8 contains preliminary results of sensitivity measurements
+      at the centres of the standard photometric bands. The listed
+      limiting magnitudes and fluxes per pixel correspond to 1 sigma
+      noises derived from observations of a standard star using 60 sec of
+      integration time on the star and 60 sec on the sky. For point like
+      sources, explicit sky observations are avoided by observing the
+      source at two different slit positions. It is thus possible to gain
+      a further factor of root 2 in S/N.
+ 
+ 
+    Bibliography
+    ============
+      Wallander A.: 1993, Remote Control of the 3.5m NTT User Guide, ESO
+      Operating Manual No 17.
+ 
+      D&apos;Odorico, S., Ghigo, M., Ponz, D.: 1987, An atlas of the
+      Thorium-Argon Spectrum for CASPEC in the 3400-9000 Angstrom region,
+      ESO Scientific Report No. 6
+ 
+      Dekker. H., Delabre, B.: 1987, Applied Optics, 26, 8, 1375
+ 
+      Dekker, H., Delabre, B., D&apos;Odorico, S.: 1986, SPIE, 627, 339
+ 
+      Gilliotte, A.: 1992, Image Quality Filters Catalogue, Internal ESO
+      publication
+ 
+      Melnick, J., Dekker, H., D&apos;Odolico, S.: 1989, ESO Operating Manual
+      #4
+ 
+      Prieur, J.-L., Rupprecht, G.: 1990, Efficiencies of EMMI, ESO
+      internal report
+ 
+      Wilson, R. N., Franza F., Noethe L., Andreoni G.: 1991, Journal of
+      Modern Optics, 38, 219.
+ 
+
+        </instrument_desc>
+        <instrument_id>IRSPEC</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Spectrograph</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

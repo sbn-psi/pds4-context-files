@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.arcb-nrao-l-rtls-gbt-5-12.6cm-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ARECIBO/NRAO MOON RTLS/GBT 5 12.6CM V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.arcb::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rtls.arcb::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.arcb-nrao-l-rtls-gbt-5-12.6cm-v1.0__browserp_arcb-nrao-l-rtls-gbt-5-12.6cm-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Campbell, B.A., L.M. Carter, D.B. Campbell, M. Nolan, J. Chandler, R.R. Ghent,
+                   B.R. Hawke, R.F. Anderson, K. Wells, Earth-Based 12.6-cm Wavelength Radar
+                   Mapping of the Moon: New Views of Impact Melt Distribution and Mare Physical
+                   Properties, Icarus, 208, 565-573, DOI: 10.1016/j.icarus.2010.03.011, 2010.
+            </reference_text>
+            <description>reference.CAMPBELLETAL2010</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ARCB/NRAO-L-RTLS/GBT-5-12.6CM-V1.0</data_set_id>
+        <data_set_name>ARECIBO/NRAO MOON RTLS/GBT 5 12.6CM V1.0</data_set_name>
+        <data_set_release_date>2011-06-01</data_set_release_date>
+        <start_time>2006-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>BRUCE A. CAMPBELL</producer_full_name>
+        <citation_text>
+            Campbell, B.A., Earth-Based Dual-Polarization 12.6-cm Radar Maps
+            Of The Moon, ARCB/NRAO-L-RTLS/GBT-5-12.6CM-V1.0, NASA Planetary
+            Data System, 2011.
+        </citation_text>
+        <data_set_terse_desc>
+            This dataset contains dual-polarization, calibrated radar maps
+            for regions on the near side of the Moon, collected at a
+            wavelength of 12.6 cm.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Radar backscatter power from the lunar surface was collected at a
+            wavelength of 12.6 cm, using the 305 m Radio Telescope at Arecibo
+            to transmit and the NRAO&apos;s 105 m Robert C. Byrd Green Bank
+            Telescope to receive.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Radar backscatter power from the lunar surface was collected at a
+  wavelength of 12.6 cm, using the 305 m Radio Telescope at Arecibo to
+  transmit and the NRAO&apos;s 105 m Robert C. Byrd Green Bank Telescope to
+  receive. The first maps were acquired in May, 2008. Data acquisition to
+  fill in most remaining radar-visible areas of the lunar near side
+  continues as of the initial publication of this archive.
+ 
+  The data products in the DATA directory correspond to NASA Level 2, or PDS
+  Level 5 Derived Data. According to the PDS Standards Reference, these are
+  &apos;derived results, as maps, reports, graphics, etc.&apos; Each image has an
+  accompanying detached PDS label.
+ 
+  The data set consists of 5 image files for each region mapped during a
+  typical 29-minute radar integration period. The images are named as
+  follows: XXXXXX_SCP.IMG (same-sense circular polarization map),
+  XXXXXX_OCP.IMG (opposite-sense circular polarization map), XXXXXX_ANG.IMG
+  (map of beam angle in radians), XXXXXX_INC.IMG (map of incidence angle in
+  radians), and XXXXXX_CPR.IMG (circular polarization ratio image), where
+  XXXXXX is the center latitude and longitude of the radar pointing target
+  over the observation period. This is expressed as XX deg N (for north
+  latitude) or S (for south latitude) followed by the east longitude in
+  degrees (for example, 20N310 corresponds to 20 degrees north latitude, 310
+  degrees east longitude). North is at the top of the frame in all of these
+  images.
+ 
+  For the polarized (&apos;OCP&apos;) and depolarized (&apos;SCP&apos;) maps, the floating point
+  values represent the estimated dimensionless backscatter coefficient
+  (often called sigma-zero) of the lunar surface at a radar wavelength of
+  12.6 cm (2380 MHz frequency). &apos;Polarized&apos; refers to energy scattered from
+  the lunar surface in the opposite circular polarization sense to that
+  transmitted (the behavior expected of a flat, mirror-like reflecting
+  surface). &apos;Depolarized&apos; refers to reflected energy with the same sense of
+  circular polarization (the behavior expected from a surface with abundant
+  wavelength-scale objects that randomize the reflected polarization).
+ 
+  The data were collected by transmitting a continuous-wave, circular
+  polarized signal from the Arecibo Observatory, and receiving the lunar
+  echoes at the Robert C. Byrd Green Bank Telescope (GBT) in West Virginia.
+  The transmitted signal was a 65535-sample pseudo-random code with baud
+  length of 0.2 microseconds. The resulting 13.17-millisecond period between
+  pulses allows for the full possible range of echo time delays over the
+  Moon&apos;s surface. The reflected signals were recorded at the GBT using 4-bit
+  analog-to-digital conversion, 5-MHz sampling rate, and a 4.4-MHz Gaussian
+  lowpass filter. Pulse compression was carried out to recover the intrinsic
+  2-microsecond delay resolution. A patch focusing method was used to
+  correct for time-varying Doppler changes at lunar surface points distant
+  from the radar pointing target. Multiple independent integration periods
+  (looks) were added together to reduce radar speckle.
+ 
+  Image power values were normalized to the effective scattering area that
+  contributes to each pixel (based on a reference spherical shape) and to
+  the thermal background noise measured at the Green Bank Telescope.
+  Subtraction of this background noise level can lead to small negative
+  values of the backscatter coefficient where the signal-to-noise ratio
+  (SNR) of the echoes is close to unity. The effect of the two antenna beam
+  patterns on the gain across the lunar surface is also compensated to first
+  order, and pointing errors at Arecibo are estimated and accounted for in
+  this calibration step. Final calibration to values of the dimensionless
+  backscatter coefficient is performed by comparing the GBT thermal noise to
+  that of a quasar of known flux at 2380 MHz. To date, these calibrated
+  values are consistent over numerous radar observing periods, but are
+  systematically lower (by a factor of 6-10 in power) than values measured
+  by previous investigators. Ratios between the two circular polarization
+  channels are well calibrated, since they depend only upon determination of
+  the relative noise power in the two received channels. The &apos;OCP&apos; and &apos;SCP&apos;
+  images are further normalized to the cosine of the radar incidence angle
+  for a reference sphere (given in the &apos;INC&apos; files) at each location. The
+  stated location of the sub-radar point at 2380 MHz is an approximate value
+  at the start of the multi-look observing period.
+ 
+  In addition to the &apos;OCP&apos; and &apos;SCP&apos; images, the archive also includes &apos;CPR&apos;,
+  &apos;ANG&apos;, and &apos;INC&apos; images. The &apos;CPR&apos; image files are circular polarization
+  ratio images formed by averaging pixels over a 5x5 moving window, and
+  dividing the averaged &apos;SCP&apos; data by the averaged &apos;OCP&apos; data. No other
+  normalization is performed, so the polarization ratio images have a strong
+  decrease toward the center of the Moon (lower incidence angle). Note that
+  in areas of low SNR, occasional negative values of the CPR could occur due
+  to the subtraction of the background thermal noise. Values of unity and
+  greater are typical of rough surfaces, particularly at high incidence
+  angles where the diffuse scattering component dominates the echo.
+ 
+  The other image files (&apos;ANG&apos; and &apos;INC&apos;) display the beam angle and
+  incidence angle, respectively, in radians for each pixel. These
+  co-registered maps, in floating point format, will allow a user to reverse
+  the applied calibration steps if desired. The beam angle value for each
+  pixel represents the angle (in radians) between a vector from the observer
+  to the surface location and the vector from the observer to the radar
+  pointing target given for each map. The incidence angle value for each
+  pixel represents the angle (in radians) between a vector from the Moon&apos;s
+  center of mass (COM) to the surface location and the vector from the COM
+  that passes through the sub-radar point. Values near the radar-visible
+  limb of the Moon thus approach 90 degrees.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Known Problems =
+ 
+  The calibrated SCP and OCP backscatter coefficient values are consistent
+  over numerous radar observing periods, but are systematically lower (by a
+  factor of 6-10 in power) than values measured by previous investigators.
+  The reason for this remains uncertain. Ratios between the two circular
+  polarization channels are well calibrated, since they depend only upon
+  determination of the relative noise power in the two received channels.
+ 
+  The Arecibo system has an inherent pointing error that can cause offsets
+  of the transmitted beam from the desired location on the lunar surface. We
+  have attempted to correct for this offset using an iterative fitting
+  process that matches the locations of the first beam nulls in the
+  delay-Doppler image, but some errors may remain. These manifest as darker
+  or brighter arcuate patches along part of the edge of a mapped area.
+ 
+ 
+  This data set underwent external peer review from November 22, 2010
+  through August 1, 2011.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

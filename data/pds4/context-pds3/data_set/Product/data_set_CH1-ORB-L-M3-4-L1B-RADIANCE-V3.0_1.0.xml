@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ch1-orb-l-m3-4-l1b-radiance-v3.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CH1-ORB MOON M3 4 L1B RADIANCE NEAR-IR SPECTRAL IMAGES V3.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.chandrayaan-1::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ch1-orb::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:m3.ch1-orb::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ch1-orb-l-m3-4-l1b-radiance-v3.0__dvo_ch1-orb-l-m3-4-l1b-radiance-v3.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Pieters, C.M., J.N. Goswami, R.N. Clark, M. Annadurai, J. Boardman, B. Buratti,
+                   J.-P. Combe, M.D. Dyar, R. Green, J.W. Head, C. Hibbitts, M. Hicks, P.
+                   Isaacson, R. Klima, G, Kramer, S. Kumar, E. Livo, S. Lundeen, E. Malaret, T.
+                   McCord, J. Mustard, J. Nettles, N. Petro, C. Runyon, M. Staid, J. Sunshine,
+                   L.A. Taylor, S. Tompkins, and P. Varanasi, Character and Spatial Distribution
+                   of OH/H2O on the Surface of the Moon Seen by M3 on Chandrayaan-1, Science, Vol.
+                   326, No. 5952, 568-572, 2009, doi:10.1126/science.1178658.
+            </reference_text>
+            <description>reference.PIETERSETAL2009C</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CH1-ORB-L-M3-4-L1B-RADIANCE-V3.0</data_set_id>
+        <data_set_name>CH1-ORB MOON M3 4 L1B RADIANCE NEAR-IR SPECTRAL IMAGES V3.0</data_set_name>
+        <data_set_release_date>2011-10-21</data_set_release_date>
+        <start_time>2008-11-18T22:26:04Z</start_time>
+        <stop_time>2009-08-16T04:58:33Z</stop_time>
+        <producer_full_name>SARAH R. LUNDEEN</producer_full_name>
+        <citation_text>
+            Lundeen, S., Chandrayaan-1 Moon Mineralogy Mapper Calibration
+            Data Record, CH1-ORB-L-M3-4-L1B-RADIANCE-V3.0, NASA Planetary
+            Data System, 2011.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated spectral image cubes collected by M3 (Moon Mineralogy
+            Mapper).
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains pixel located, radiometrically-calibrated
+            data collected by M3 instrument on Chandrayaan-1.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+ 
+      This volume contains the Level 1B (L1B) Archive, a collection of
+      radiometrically-calibrated and pixel-located data products acquired
+      during from November 2008 through August 2009 by the
+      Moon Mineralogy Mapper (M3) instrument during the Chandrayaan-1 mission
+      to the Moon.The data were acquired while the instrument was operated
+      in global or targeted mode.  The documentation in the DOCUMENT
+      directory provides detailed information about the data files and their
+      format and content.
+ 
+      A M3 Level 1B Data Product consists of pixel-located, resampled,
+      calibrated data in units of spectral radiance that make up one
+      observation tagged by a unique file name. The data in one Level 1B
+      Product represent a consistent instrument configuration (frame rate,
+      pixel binning). There is a single multiple-band image
+      (BIN; suffix *_RDN.IMG) stored in one file with a detached PDS label
+      (ASCII; suffix *_L1B.LBL), and a detatched header file (ASCII;
+      suffix *_RDN.HDR), plus several files containing data related to
+      pixel location (BIN; suffix *_LOC.IMG), observation geometry (BIN;
+      suffix *_OBS.IMG), and UTC timing for each image line (ASCII;
+      suffix *_TIM.TAB).
+ 
+      As of Septemer 2011, we have developed a detector-temperature-driven
+      empirical gain adjustment to the M3 Level 1B data.  We refer to this
+      correction as the SSC_ADJ correction and it is based on a family of
+      spectral gain curves that are applied to each Level 1B radiance cube
+      after its nominal radiometric calibration. Based on the detector
+      temperature for each scene, a single curve is chosen from the family
+      of temperature-based curves and each spectrum in the radiance cube is
+      multiplied by this correction factor. This update should replace
+      versions 1.0 and 2.0 of the M3 Level 1B data products.
+ 
+ 
+    Processing
+    ==========
+ 
+      Level 1B processing involves the following operations:
+ 
+      - converts the decompressed, uncalibrated image cube data into
+        resampled, scaled, calibrated spectral radiance image cubes
+      - calculates the surface location of all pixel centers
+      - calculates the observation geometry and illumination on a
+        pixel-by-pixel basis
+      - calculates the UTC time for the middle of the integration period
+        for each frame of the image data
+ 
+    Data
+    ====
+ 
+      Under the Data directory there is a separate subdirectory based on
+      the start and end times of a 13-week imaging period. Each imaging
+      period subdirectory is further divided into subdirectories for each
+      month of an Optical Period (OP). Each OP month subdirectory is further
+      divided based on the type of data product (e.g. Level 0 or Level 1B).
+ 
+      YYYYMMDD_YYYYMMDD/YYYYMM/L1B directory:
+      ----------------------------------
+      This directory contains the following files:
+ 
+      *RDN.IMG
+      --------
+      The L1B multiple-band spectral radiance image cube has
+      dimensions of sample, line, and wavelength. The size and format of the
+      M3 spectral radiance image cube depend on the observation mode
+      (global/target).
+ 
+      M3 calibration data such as wavelength centers,
+      full-width half-max values and radiometric gain factors can be found in
+      the CALIB directory of the archive volume.
+ 
+      In target mode, the spectral radiance image cube has the following
+      characteristics:
+ 
+      32-bit floating point
+      Little endian
+      256 spectral channels
+      608 spatial samples
+      N image lines
+      Band interleaved by line
+ 
+      In global mode, the spectral radiance image cube has the following
+      characteristics:
+ 
+      32-bit floating point
+      Little endian
+      85 spectral channels
+      304 spatial samples
+      N image lines
+      Band interleaved by line
+ 
+      During the transmission and encoding/decoding of the
+      data, some data elements may be lost.  Data lost to poor compression or
+      complete packet loss are noted in the *.LOG files located in the EXTRAS
+      directory.
+ 
+      All M3 L1B spectral radiance image cubes are standardized to remove
+      the different effects of the four possible orbit limb and flight yaw
+      mode combinations: descending/forward; descending/reverse;
+      ascending/forward and ascending/reverse.  In ascending limb data the
+      lines/times are reversed, so all L1B spectral radiance image cubes
+      have the northernmost image line first. In descending/reverse and
+      ascending/forward modes the samples are reversed, so the first sample
+      is on the west side of the image and do not appear left-right mirrored.
+      In descending/forward no changes in lines or samples are performed;
+      this is the only case that matches the Level 0 data.  Refer to the
+      ORBIT_LIMB_DIRECTION and SPACECRAFT_YAW_DIRECTION keywords in the PDS
+      label (*_L1B_LBL) to reconcile a specific Level 1B spectral radiance
+      image cube with the associated Level 0 data.
+ 
+      Due to the successive loss of the two star trackers the data become
+      progressively more difficult to model.  Hence our models increase in
+      complexity and parameterization.
+ 
+      For M3 we have been forced into development of three different
+      spacecraft attitude models that describe the orientation of the
+      Chandrayaan-1 spacecraft during an orbit.  These models were developed
+      sequentially as we processed data collected during the mission.
+ 
+      A detailed description of each model and the keywords associated with
+      each model are provided in the M3 Data Product SIS.
+ 
+      *RDN.IMG.HDR
+      ------------
+      Each L1B spectral radiance image cube file will be accompanied by a
+      detached ASCII header file. A detached header provides compatibility
+      with ENVI software.
+ 
+      *L1B.LBL
+      --------
+      A spectral radiance image cube label (*_L1B.LBL) is detached and points
+      to the following L1B data products:
+ 
+      - the single multi-band image (*_RDN.IMG) and its respective detached
+        header file (*_RDN.HDR),
+      - the pixel location data (*_LOC.IMG) and its respective detached header
+        file (*_LOC.HDR),
+      - the observation geometry data (*_obs.img) and its respective detached
+        header file (*_OBS.HDR),
+      - the UTC timing data (*_TIM.TAB)
+ 
+      *LOC.IMG
+      --------
+      The pixel location data for each image are stored in a three-band, band-
+      interleaved-by-line, binary file of double precision 8-byte values, in
+      little-endian byte order.  The three bands of the file, in order, are as
+      follows:
+ 
+      1) longitude (reported in decimal degrees)
+      2) planetocentric latitude (reported in decimal degrees)
+      3) radius (reported in meters from the Moon center)
+ 
+      There are no embedded headers or other data in the file. Each
+      location file will be accompanied by a detached header file.
+      A detached header provides compatibility with ENVI software. The
+      location file is, in essence, a three-band set of &apos;detached
+      backplanes&apos; that match the sample and line spatial extent of the
+      spectral radiance image cube data.  No map correction or resampling is
+      applied to the radiance image cube; the file only reports the
+      surface locations of the unadjusted pixel centers.
+ 
+      *LOC.HDR
+      --------
+      Each location data file will be accompanied by a detached ASCII
+      header file. A detached header provides compatibility with ENVI
+      software.
+ 
+      *OBS.IMG
+      --------
+      The observation geometry data for each image are provided in a ten-band,
+      band-interleaved-by-line, binary file of single precision 4-byte values,
+      in little-endian byte order. The ten bands of the file, in order, are as
+      follows:
+ 
+      1) to-sun azimuth angle (decimal degrees, clockwise from local north)
+      2) to-sun zenith angle (decimal degrees, zero at zenith)
+      3) to-sensor azimuth angle (decimal degrees, clockwise from local north)
+      4) to-sensor zenith angle (decimal degrees, zero at zenith)
+      5) observation phase angle (decimal degrees, in plane of to-sun and
+         to-sensor rays)
+      6) to-sun path length (decimal au with scene mean subtracted and noted
+         in PDS label)
+      7) to-sensor path length (decimal meters)
+      8) surface slope from DEM (decimal degrees, zero at horizontal)
+      9) surface aspect from DEM (decimal degrees, clockwise from local north)
+      10) local cosine i (unitless, cosine of angle between to-sun and local
+          DEM facet normal vectors)
+ 
+      Similar to the location data, these files are, in essence,
+      ten-band set of &apos;detached backplanes&apos; that match the sample and line
+      spatial extent of the spectral radiance image cube data.  No map
+      correction or resampling is applied to the radiance image cube; the
+      file only reports the observation parameters of the unadjusted pixel
+      centers.
+ 
+     *OBS.HDR
+     --------
+     Each observation geometry data file will be accompanied by a detached
+     header file. A detached header provides compatibility with ENVI software.
+ 
+     *TIM.TAB
+     --------
+ 
+     The timing file (*TIM.TAB) is an ASCII file with four columns of data.
+     The first column lists the line number of the multiple-band spectral
+     radiance image cube (*RDN.IMG). The second column lists the corresponding
+     UTC time for the middle of the integration period for each spectral
+     radiance image cube line or major frame of the data and is expressed as:
+     YYYY-MM-DDTHH:MM:SS.SSSSSS.
+     The third column lists Year reference of Decimal Day of Year (DDOY) as
+     extracted from the earliest time of each spectral radiance image cube
+     line expressed as: YYYY.
+     The fourth column lists DDOY which represents the number of days elapsed
+     since 00:00 UTC of January 1 of the year associated with the time stamp
+     of the first image line. The DDOY format is as follows: DDD.dddddddddddd
+     where DDD represents the integer number of days and dddddddddddd
+     represent the fractional part of the day of year value.
+ 
+     Note that the M3 Level 0 data products have two representations of image
+     frame times captured in the 1280-byte image frame header:
+     1) a copy of the raw bytes of CH-1 and M3 binary clock tick data
+     and 2) a nominal conversion of those raw clock ticks to a UTC time in an
+     ASCII format.  This nominal conversion is built on the assumed
+     operation of the clocks in a wholly stable manner with fixed tick
+     rates and no drift or unexpected rate issues.  To achieve optimized
+     timing for subsequent processing, the Level 1B code develops
+     individual clock conversion models for each image of sufficient
+     length.  This per-image modeling accommodates any clock drift or rate
+     changes and provides the best possible frame times for the Level 1B
+     data products.  As such, the ASCII UTC times in the Level 0 data products
+     may differ from those in the Level 1B data products.  The Level 0 data
+     product times should be considered deprecated and are only approximate
+     UTC frame times.  The per-image optimized conversion used in the Level 1B
+     processing yields the most accurate image frame times and these are the
+     times reported in the timing file.
+ 
+    File Naming Convention
+    ======================
+ 
+      The file naming convention for L1B data products is as follows.
+ 
+      M3GYYYYMMDDTHHMMSS_VNN_PT.EXT
+ 
+      Or
+ 
+      M3TYYYYMMDDTHHMMSS_VNN_PT.EXT
+ 
+      M3:       The instrument.
+      G or T:   The imaging mode; G for global mode and T for target mode.
+      YYYY:     The year of the time stamp from the first image frame of the
+                image cube.
+      MM:       The month of the time stamp from the first image frame of the
+                image cube.
+      DD:       The day of the time stamp from the first frame of the image
+                cube.
+      T:        A single character string that precedes the UTC time of the
+                time stamp from the first frame of the image cube.
+      HH:       The hour in UTC of the time stamp from the first frame of the
+                image cube.
+      MM:       The minute within the hour in UTC of the time stamp from the
+                first frame of the  image cube.
+      SS:       The second within the minute in UTC of the time stamp from the
+                first frame of the image cube.
+      VNN:      The version number of the product.
+      PT:       The type of data product:
+                L0 = Level 0
+                L1B = Level 1B
+                RDN = Spectral Radiance data
+                LOC = Pixel Location data
+                OBS = Observation geometry data
+                TIM = Observation timing data
+      EXT:      The file name extension:
+                IMG = Image object
+                HDR = Detached header file
+                LBL = Detached label file
+                TAB = ASCII text file
+ 
+      All fields must occupy the allotted number of characters. Thus, if fewer
+      digits are required to express a number than are allotted, the
+      convention fills the unneeded spaces with leading zeroes.
+ 
+    Coordinate Systems
+    ==================
+ 
+      The coordinate system used is the new &apos;Standardized Lunar Coordinate
+      System for the Lunar Reconnaissance Orbiter&apos; (LRO Working Group, 2007).
+      This new lunar coordinate system is being adopted as an international
+      standard and will greatly facilitate the direct integration of data
+      from multiple missions and among international partners.  The
+      coordinate system is based on planetocentric coordinates in the Mean
+      Earth/Polar Axis (ME) reference frame.  The z-axis is the mean axis
+      of rotation with the positive direction pointing north.  The x-axis is
+      the intersection of the Equator and Prime Meridian, as defined by the
+      mean Earth direction.  The y-axis completes the frame in a right-handed
+      sense and points in the direction of +90 degrees longitude.  Latitude
+      ranges from +90 to -90 form the North Pole to the South Pole.
+      Longitude will be reported as 0 to 360 degrees increasing to the East.
+ 
+    Software
+    ========
+ 
+    The M3 team uses the commercial software packages ENVI and IDL to display
+    and analyze M3 data products. ENVI and IDL are distributed by ITT Visual
+    Information Solutions and are available at http://www.ittvis.com/.
+    In addition, PDS? NASAView Image Display Software can also be used for
+    basic image viewing of M3 L1B data products:
+    http://pds.nasa.gov/tools/nasa-view.shtml.
+    Nevertheless, the data are in no way in any proprietary format. Instead
+    they are arranged as simply and as openly as possible. The provision of
+    both ENVI and PDS labels will guarantee the data will be readily
+    accessible to the widest possible audience.
+ 
+    Media/Format
+    ============
+ 
+      The M3 archive will be made available online via Web and FTP
+      servers.  This will be the primary means of distribution.
+      Therefore the archive will be organized as a set of virtual
+      volumes, with each data set stored online as a single volume. As
+      new data products are released they will be added to the volume&apos;s
+      data directory, and the volume&apos;s index table will be updated
+      accordingly. The size of the volume will not be limited by the
+      capacity of the physical media on which it is stored; hence the
+      term virtual volume.  When it is necessary to transfer all or part
+      of a data set to other media such as DVD for distribution or for
+      offline storage, the virtual volume&apos;s contents will be written to
+      the other media according to PDS policy, possibly dividing the
+      contents among several physical volumes.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+ 
+      Confidence level information will be provided after more thorough
+      analysis of the data.
+ 
+    Review
+    ======
+ 
+      Prior to creation of the final version of this archival data set,
+      its keys elements including samples of data products, PDS labels
+      and catalog files, and the Software Interface Specifications, were
+      examined during a peer review held by PDS Imaging Node in January 2010.
+ 
+    Data Coverage and Quality
+    =========================
+ 
+      The M3 image acquisition time will be divided into peak periods or
+      Optical Periods (OP) when lighting is optimal for observation. The
+      Optical Periods occur twice a year and are understood to have two
+      central months of optimal illumination (solar beta angles -30 deg to
+      +30 deg) with two optional two-week wing periods (solar beta angles
+      +/-30 deg to +/-45 deg) on either side of the optimal 2 months (thus,
+      one Optical Period equals 13 weeks). Each 13 week optical period is
+      followed by a 13-week hiatus. The original instrument operations plan
+      included the acquisition of the entire surface of the Moon in
+      low-resolution Global Mode during the first Optical Period (OP1)
+      while OP2, OP3, OP4 were reserved for high resolution Target Mode
+      data acquisition.
+ 
+      However, the mission was cut short, just before the halfway point, in
+      August, 2009 when the spacecraft ceased operations. Despite the
+      abbreviated mission and numerous technical and scientific challenges
+      during the flight, M3 was able to cover more than 95% of the Moon in
+      Global Mode. Only minimal high-resolution Target Mode images were
+      acquired, as these were to be the focus of the second half of the
+      mission. The technical challenges encountered during the mission
+      have complicated the data processing and calibration. These challenges
+      include thermal issues, loss of the spacecraft star trackers and a
+      raising of the orbit from 100 km to 200 km on May 19, 2009. Details
+      of these challenges are currently being documented and will be
+      referenced and/or included in the delivery of the M3 PDS Archive
+      Volume. Nonetheless, the data products released in the M3 PDS Archive
+      Volume will contain optimal calibration and characterization.
+      (NOTE: If these docs are included in the archive, put them in
+      DOCUMENT directory, not EXTRAS.)
+ 
+      M3 operations were sustained for two Optical Periods. (For more
+      detailed information regarding the spacecraft operation schedule,
+      please see the MISSION.CAT.) Please see the M3 Data Product SIS for
+      more detail/information.
+ 
+ 
+    Limitations
+    ===========
+      None.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

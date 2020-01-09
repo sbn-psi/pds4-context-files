@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.local_true_solar_time</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>local_true_solar_time</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>local_true_solar_time</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>local_true_solar_time</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The LOCAL_TRUE_SOLAR_TIME element describes the local true solar time, or
+LTST.  It is one of two types of solar time used to express the time of day
+at a point on the surface of a planetary body. LTST is measured relative to
+the true position of the Sun as seen from a point on the planet&apos;s surface.
+The coordinate system used to define LTST has its origin at the center of
+the planet. Its Zaxis is the north pole vector (or spin axis) of the
+planet. The X-axis is chosen to point in the direction of the vernal
+equinox of the planet&apos;s orbit. (The vernal or autumnal equinox vectors are
+found by searching the planetary ephemeris for those times when the vector
+from the planet&apos;s center to the Sun is perpendicular to the planet&apos;s north
+pole vector. The vernal equinox is the time when the Sun appears to rise
+above the planet&apos;s equator.) Positions of points in this frame can be
+expressed as a radius and areocentric &apos;right ascension&apos; and &apos;declination&apos;
+angles. The areocentric right ascension angle, or ARA, is measured positive
+eastward in the equatorial plane from the vernal equinox vector to the
+intersection of the meridian containing the point with the equator.
+Similarly, the areocentric declination is the angle between the equatorial
+plane and the vector to the point. LTST is a function of the difference
+between the ARAs of the vectors to the Sun and to the point on the planet&apos;s
+surface. Specifically, LTST = (a(P) - a(TS)) * (24 / 360) + 12 where, LTST
+= the local true solar time in true solar hours a(P) = ARA of the point on
+the planet&apos;s surface in deg a(TS) = ARA of the true sun in degThe
+conversion factor of 24/360 is applied to transform the angular measure in
+decimal degrees into hours-minutes-seconds of arc. This standard
+representation divides 360 degrees into 24 hours, each hour into 60
+minutes, and each minute into 60 seconds of arc. The hours, minutes, and
+seconds of arc are called &apos;true solar&apos; hours, minutes, and seconds when
+used to measure LTST. The constant offset of 12 hours is added to the
+difference in ARAs to place local noon (12:00:00 in hours, minutes,
+seconds) at the point where the Sun is directly overhead; at this time, the
+ARA of the true sun is the same as that of the surface point so that a(P) -
+a(TS) = 0. The use of &apos;true solar&apos; time units can be extended to define a
+true solar day as 24 true solar hours. Due to the eccentricity of planetary
+orbits and the inclination of orbital planes to equatorial planes
+(obliquity), the Sun does not move at a uniform rate over the course of a
+planetary year. Consequently, the number of SI seconds in a true solar day,
+hour, minute or second is not constant. See also LOCAL_MEAN_SOLAR_TIME.
+(Definition adapted from [VAUGHAN1995].) This element replaces the older
+MPF_LOCAL_TIME, which should no longer be used.
+        </definition>
+        <comment>lcl_slr_time</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>local_true_solar_time</name>
+            <definition>
+The LOCAL_TRUE_SOLAR_TIME element describes the local true solar time, or
+LTST.  It is one of two types of solar time used to express the time of day
+at a point on the surface of a planetary body. LTST is measured relative to
+the true position of the Sun as seen from a point on the planet&apos;s surface.
+The coordinate system used to define LTST has its origin at the center of
+the planet. Its Zaxis is the north pole vector (or spin axis) of the
+planet. The X-axis is chosen to point in the direction of the vernal
+equinox of the planet&apos;s orbit. (The vernal or autumnal equinox vectors are
+found by searching the planetary ephemeris for those times when the vector
+from the planet&apos;s center to the Sun is perpendicular to the planet&apos;s north
+pole vector. The vernal equinox is the time when the Sun appears to rise
+above the planet&apos;s equator.) Positions of points in this frame can be
+expressed as a radius and areocentric &apos;right ascension&apos; and &apos;declination&apos;
+angles. The areocentric right ascension angle, or ARA, is measured positive
+eastward in the equatorial plane from the vernal equinox vector to the
+intersection of the meridian containing the point with the equator.
+Similarly, the areocentric declination is the angle between the equatorial
+plane and the vector to the point. LTST is a function of the difference
+between the ARAs of the vectors to the Sun and to the point on the planet&apos;s
+surface. Specifically, LTST = (a(P) - a(TS)) * (24 / 360) + 12 where, LTST
+= the local true solar time in true solar hours a(P) = ARA of the point on
+the planet&apos;s surface in deg a(TS) = ARA of the true sun in degThe
+conversion factor of 24/360 is applied to transform the angular measure in
+decimal degrees into hours-minutes-seconds of arc. This standard
+representation divides 360 degrees into 24 hours, each hour into 60
+minutes, and each minute into 60 seconds of arc. The hours, minutes, and
+seconds of arc are called &apos;true solar&apos; hours, minutes, and seconds when
+used to measure LTST. The constant offset of 12 hours is added to the
+difference in ARAs to place local noon (12:00:00 in hours, minutes,
+seconds) at the point where the Sun is directly overhead; at this time, the
+ARA of the true sun is the same as that of the surface point so that a(P) -
+a(TS) = 0. The use of &apos;true solar&apos; time units can be extended to define a
+true solar day as 24 true solar hours. Due to the eccentricity of planetary
+orbits and the inclination of orbital planes to equatorial planes
+(obliquity), the Sun does not move at a uniform rate over the course of a
+planetary year. Consequently, the number of SI seconds in a true solar day,
+hour, minute or second is not constant. See also LOCAL_MEAN_SOLAR_TIME.
+(Definition adapted from [VAUGHAN1995].) This element replaces the older
+MPF_LOCAL_TIME, which should no longer be used.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>true</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>
+N/A
+</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>12</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>Unknown</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

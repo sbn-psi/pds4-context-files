@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.stardust-cal-nc-2-preflight-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>STARDUST NAVCAM PREFLIGHT CALIB ARCHIVE</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.stardust::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:navcam.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calimg::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.stardust-cal-nc-2-preflight-v1.0__browserp_stardust-cal-nc-2-preflight-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>STARDUST-CAL-NC-2-PREFLIGHT-V1.0</data_set_id>
+        <data_set_name>STARDUST NAVCAM PREFLIGHT CALIB ARCHIVE</data_set_name>
+        <data_set_release_date>2000-03-17</data_set_release_date>
+        <start_time>1998-04-08</start_time>
+        <stop_time>1998-04-10</stop_time>
+        <producer_full_name>APPLIED COHERENT TECHNOLOGY CORPORATION</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            Pre-flight calibration images from the Stardust Navigation
+            Camera, saved for historical reasons.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the results of the preflight calibration
+            of the Stardust Navigation Camera. The images were collected in
+            an attempt to mimic the environment that the camera would
+            experience during cruise and encounter with the comet Wild-2.
+            These data are saved for historical reasons. They are not
+            considered to be of archival quality.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Stardust Navigation Camera Preflight Calibration Image Data Format:
+    ===================================================================
+ 
+ 
+    Data Set Overview:
+    =================
+ 
+        This volume contains the results of the preflight calibration of
+    the Stardust Navigation Camera.  The images were collected in an
+    attempt to mimic the environment that the camera would experience
+    during cruise and encounter with the comet Wild-2.
+ 
+        The images on this calibration volume are in standard PDS format.
+    Each file includes an attached PDS label at the beginning of the file,
+    followed by a histogram, and ending with the image itself.  The PDS
+    label contains two OBJECT definitions, which describe the storage
+    requirements for both the histogram and image objects.  The label also
+    describes the circumstances surrounding the collection of the
+    calibration image.  This meta-data is in keyword and value pairs and
+    each of these keywords is described at the end of this document.
+ 
+ 
+    Camera Description:
+    ===================
+ 
+        The camera has a 1024x1024 array as the active portion of the CCD.
+    The images that are stored on this volume, however, contain more than
+    just the active portion of the CCD.  Each line contains a sync pattern,
+    a line counter, 12 baseline stabilization pixels, the 1024 pixels from
+    the active portion of the CCD, and finally 8 over-clock pixels used to
+    measure the quantum efficiency. The number of rows for each image is
+    always 1024, no matter what compression mode is used, but the number of
+    columns for each image depends on the compression mode used.
+ 
+ 
+    Compression Modes:
+    ==================
+ 
+        The navcam images can be either 8-bit or 12-bit data.  The 12-bit
+    data is commonly referred to as &apos;uncompressed data&apos;, while the 8-bit is
+    referred to as &apos;compressed data&apos;.  This compression is accomplished by a
+    12-bit to 8-bit square-root look-up-table compression method, which is
+    implemented in the hardware of the camera electronics.  This compression
+    is lossy and the estimate of the 12-bit image can be recovered using the
+    look-up table mentioned in Appendix 3 of the Calibration Document.  Both
+    the image and histogram portions of the data file require different
+    amounts of storage space, dependent on the compression mode used.
+ 
+ 
+    Pixel storage requirements:
+    ===========================
+ 
+        In uncompressed mode with 12-bit data, the pixels are expressed in
+    two bytes, as 16 bits per pixel.  The upper nibble of the most
+    significant byte is always zero for these images.  In compressed mode
+    with 8-bit data, the pixels are expressed in a single byte.
+ 
+ 
+    Number of Columns within each Row:
+    ==================================
+ 
+        The general form of each line for each image is fixed.  The row of
+    data from the camera can be categorized into five different regions:
+ 
+        1. Sync Pattern           Always 2 bytes, with value   0x0000
+        2. Line Counter           Always 2 bytes, values from 0 to 1023
+        3. 8 BLS pixels          *Baseline Stabilization pixels, either 1 or
+                                     2 bytes per pixel
+        4. 1024 image pixels     *Either 1 or 2 bytes per pixel
+        5. 12 over-clock pixels  *Used to measure quantum efficiency, either
+                                     1 or 2 bytes per pixel
+ 
+    * The pixels are either 1 or 2 bytes per pixel dependent on the
+      compression mode.  Uncompressed, 12-bit images require 2 bytes per
+      pixel, while compressed 8-bit images require 1 byte per pixel.
+ 
+    For the uncompressed, 12-bit data, each row contains 1046 &apos;pixels&apos; of
+    data, which is exactly 2092 bytes.  This is 2 bytes for the sync, 2
+    bytes for the line counter, 8 pixels at 2 bytes per pixel, 1024 pixels
+    at 2 bytes per pixel and, finally, 12 pixels at 2 bytes per pixel.  In
+    equation form:
+ 
+        bytes_per_uncompressed_line = 2 + 2 + 2 * ( 8 + 1024 + 12 ) = 2092
+ 
+    For the compressed, 8-bit data, each row contains 1048 &apos;pixels&apos; of data,
+    which is exactly 1048 bytes.  This is 2 bytes for the sync, 2 bytes for
+    the line counter, 8 pixels at 1 byte per pixel, 1024 pixels at 1 bytes
+    per pixel and, finally, 12 pixels at 1 bytes per pixel.  In equation
+    form:
+ 
+        bytes_per_compressed_line = 2 + 2 + 1 * ( 8 + 1024 + 12 ) = 1048
+ 
+ 
+    Reading with RAW image readers:
+    =================================
+ 
+        When using any of the supported PDS readers, this extra data at the
+    beginning and end of the line is not displayed, but when reading these
+    images with a raw raster-scan style reader, this extra data at the
+    beginning and ending of each line must be taken into account.
+ 
+ 
+    Values to use when reading images with a RAW readers:
+    =====================================================
+ 
+    Compression Mode    # Rows  # Columns   Data Type
+    -----------------   ------  ---------   ------------------------------
+      Compressed         1024    1048        BYTE data
+      Uncompressed       1024    1046        MSB_Unsigned_integer (16-bit)
+ 
+ 
+    Finding the offset to the data within the file:
+    ===============================================
+ 
+        When trying to read the histogram or image arrays from the file
+    using a RAW reader, the reader must first skip all of the information
+    before the object to be read.  As an example, to read the image object
+    using a raw reader, the reader must first skip the PDS attached header,
+    as well as the histrogram data.  To determine the amount of data to
+    skip, examine two keyword pairs from the attached label.
+ 
+    To advance to the beginning of the histogram data, examine the following
+    keywords:
+            RECORD_BYTES         = 2092
+            ^IMAGE_HISTOGRAM     = 3
+    The first keyword defines the number of bytes within each record, while
+    the second keyword indicates at which record the data begins.  In this
+    example, the data starts in record #3.  This indicates that 2 other
+    records contain data prior to the start of the histogram data.  To
+    compute the data offset, account for 2 records of data:  in this
+    example, the offset is (3-1)*2092 = 4184.
+ 
+    To advance to the beginning of the image data, examine the following
+    keywords:
+            RECORD_BYTES         = 2092
+            ^IMAGE               = 11
+    As in the previous example, the first keyword defines the number of
+    bytes within each record.  The second keyword indicates the record at
+    which the image data begins.  To compute the data offset, follow the
+    example above:
+            Offset = ( ^image_histogram - 1 ) * record_bytes.
+        Ex: Offset = ( 11 - 1) * 2092 = 20920
+ 
+ 
+    A Sample PDS Attached Image Label:
+    ==================================
+ 
+       PDS_VERSION_ID       = PDS3
+       /*** FILE FORMAT ***/
+       RECORD_TYPE          = FIXED_LENGTH
+       RECORD_BYTES         = 2092
+       FILE_RECORDS         = 1034
+       /*** POINTERS TO OBJECTS IN FILE ***/
+       ^IMAGE_HISTOGRAM     = 3
+       ^IMAGE               = 11
+       /*** GENERAL DATA DESCRIPTION PARAMETERS ***/
+       MISSION_NAME         = STARDUST
+       SPACECRAFT_NAME      = STARDUST
+       DATA_SET_ID          = STARDUST-CAL-NC-2-PREFLIGHT-V1.0
+       OBSERVATION_NAME     = CALIBRATION AT MINUS 30 DEGRESS C
+       OBSERVATION_TYPE     = -30
+       PRODUCT_ID           = NC370034.IMG
+       ORIGINAL_PRODUCT_ID  = usd9898-144754.pds
+       PRODUCER_INSTITUTION_NAME = JPL/ACT
+       PRODUCT_TYPE         = EDR
+       SOFTWARE_NAME        = ACT DMAPKTDECOM 1.0
+       MISSION_PHASE_NAME   = PREFLIGHT CALIBRATION
+       TARGET_NAME          = CALIMG
+       FRAME_SEQUENCE_NUMBER = 34
+       /*** TIME PARAMETERS ***/
+       START_TIME           = 1998-04-08T14:47:54
+       STOP_TIME            = N/A
+       PRODUCT_CREATION_TIME = 2000-02-25T02:06:51
+       /*** CAMERA RELATED PARAMETERS ***/
+       INSTRUMENT_NAME      = NAVIGATION CAMERA
+       INSTRUMENT_ID        = NC
+       EXPOSURE_DURATION    = 0.020&lt;S&gt;
+       CAL_LAMP_MODE_ID     = OFF
+       QUANTIZATION_MODE_ID = OFF
+       FILTER_NUMBER        = 7
+       FILTER_NAME          = HiRes
+       CENTER_FILTER_WAVELENGTH = 596.4&lt;NM&gt;
+       FILTER_FWHM          = 200.0&lt;NM&gt;
+       /*** CALIBRATION EQUIPMENT PARAMETERS ***/
+       MEASUREMENT_SOURCE_DESC = KEITHLY 607 ELECTROMETER
+       RADIANCE             = 0.981&lt;NA&gt;
+       /*** TEMPERATURE PARAMETERS IN &lt;K&gt; ***/
+       INSTRUMENT_TEMPERATURE = 306.95&lt;K&gt;
+       FOCAL_PLANE_TEMPERATURE = 243.15&lt;K&gt;
+       /*** DESCRIPTION OF OBJECTS CONTAINED IN THE FILE ***/
+       OBJECT               = IMAGE_HISTOGRAM
+         ITEMS              = 4096
+         DATA_TYPE          = MSB_UNSIGNED_INTEGER
+         ITEM_BITS          = 32
+       END_OBJECT           = IMAGE_HISTOGRAM
+       OBJECT               = IMAGE
+         LINES              = 1024
+         LINE_SAMPLES       = 1024
+         SAMPLE_TYPE        = MSB_UNSIGNED_INTEGER
+         SAMPLE_BITS        = 16
+         SAMPLE_BIT_MASK    = 2#0000111111111111#
+         MAXIMUM            = 3063
+         MINIMUM            = 603
+         LINE_PREFIX_BYTES  = 20
+         LINE_SUFFIX_BYTES  = 24
+         MEAN               = 859.588
+         STANDARD_DEVIATION = 64.9859
+         SATURATED_PIXELS   = 0
+         CHECKSUM           = 50501490
+       END_OBJECT = IMAGE
+       END
+ 
+ 
+    General notes regarding label:
+    ==============================
+ 
+       * Strings appear in quotes.
+       * Integers and PDS Times do not take quotes.
+       * Lists are enclosed within {} type brackets.
+       * If a field is unknown, UNK may be entered.
+       * If a field is not applicable, N/A may be entered.
+       * Fields can spill freely, with or without white space, onto
+         following lines.
+ 
+ 
+    Definition of Keywords/Values from the PDS Data Dictionary:
+    ===========================================================
+ 
+       PDS_VERSION_ID             The pds_version_id keyword indicates the
+                                  version number of the PDS standards
+                                  documents that is valid when a data
+                                  product label is created.  Values for
+                                  the PDS_VERSION_ID are formed by
+                                  appending the integer for the latest
+                                  version number to the letters &apos;PDS&apos;.
+                                  Examples: PDS3, PDS4.
+ 
+       RECORD_TYPE                The record_type keyword indicates the
+                                  record format of a file.  Note:  In
+                                  the PDS, when record_type is used in a
+                                  detached label file it always
+                                  describes its corresponding detached
+                                  data file, not the label file itself.
+                                  The use of record_type along with
+                                  other file-related data elements is
+                                  fully described in the PDS Standards
+                                  Reference.
+ 
+       RECORD_BYTES               The record_bytes keyword indicates the
+                                  number of bytes in a physical file
+                                  record, including record terminators
+                                  and separators.
+ 
+       FILE_RECORDS               The file_records keyword indicates the
+                                  number of physical file records,
+                                  including both label records and data
+                                  records.
+ 
+       ^IMAGE_HISTOGRAM           The image_histogram object represents
+                                  a pointer to the image histogram.  The
+                                  value is in RECORD_BYTE units and
+                                  indicates that the data starts at the
+                                  beginning of the record mentioned.  As
+                                  an example, if the pointer value is 4,
+                                  then the 3 records are populated with
+                                  other data.  If the bytes per record
+                                  is 2092, the image histogram data
+                                  starts at byte 6276
+ 
+       ^IMAGE                     The ^image pointer represents a byte
+                                  offset to the image data.  The value
+                                  is in RECORD_BYTE units.  As an
+                                  example, if the pointer value is 11,
+                                  and the bytes per record is 2092, the
+                                  image histogram data starts at byte
+                                  20920.
+ 
+       MISSION_NAME               The mission_name element identifies a
+                                  major planetary mission or project.  A
+                                  given planetary mission may be
+                                  associated with one or more
+                                  spacecraft.
+ 
+       SPACECRAFT_NAME            The spacecraft_name element provides the
+                                  full, unabbreviated name of a spacecraft.
+ 
+       DATA_SET_ID                The data_set_id element is a unique
+                                  alphanumeric identifier for a data set
+                                  or a data product.  The data_set_id
+                                  value for a given data set or product
+                                  is constructed according to flight
+                                  project naming conventions.  In most
+                                  cases the data_set_id is an
+                                  abbreviation of the data_set_name.
+                                  Example value:
+                                  STARDUST-CAL-NC-2-PREFLIGHT-V1.0.
+                                  Note:  In the PDS, the values for both
+                                  data_set_id and data_set_name are
+                                  constructed according to standards
+                                  outlined in the Standards Reference.
+ 
+       OBSERVATION_NAME           The observation_name element provides the
+                                  identifier for an observation or
+                                  sequence of commands.  For this
+                                  dataset, this keyword has 3
+                                  possibilities, based on the day the
+                                  calibration was completed:
+                        4/08/98        CALIBRATION AT MINUS 30 DEGRESS C
+                        4/09/98        CALIBRATION AT MINUS 40 DEGRESS C
+                        4/10/98        CALIBRATION AT MINUS 50 DEGRESS C
+ 
+       OBSERVATION_TYPE           The observation_type element identifies
+                                  the general type of an observation.
+                                  This keyword has 3 possibilities,
+                                  based on the day the calibration was
+                                  completed:
+                        4/08/98        -30
+                        4/09/98        -40
+                        4/10/98        -50
+ 
+       PRODUCT_ID                 The product_id data element represents
+                                  a permanent, unique identifier
+                                  assigned to a data product by its
+                                  producer.  Note:  In the PDS, the
+                                  value assigned to product_id must be
+                                  unique within its data set.  This
+                                  value represents the actual name of
+                                  the image file on the archive.  The
+                                  output directory is also available.
+ 
+       ORIGINAL_PRODUCT_ID        The original_product_id element
+                                  provides the temporary product
+                                  identifier that was assigned to a
+                                  product during active flight
+                                  operations which was eventually
+                                  replaced by a permanent id (see
+                                  product_id).  In this dataset, this
+                                  value represents the original filename
+                                  recorded by the calibration equipment.
+                                  This name can be linked back to the
+                                  original calibration log files.
+ 
+ 
+       PRODUCER_INSTITUTION_NAME  The producer_institution_name element
+                                  identifies a university, research
+                                  center, NASA center or other
+                                  institution associated with the
+                                  production of a data set.  This would
+                                  generally be an institution associated
+                                  with the element producer_full_name.
+                                  In this dataset, this field has the
+                                  value of JPL/ACT, described as: JPL =
+                                  Jet Propulsion Laboratory.  ACT =
+                                  Applied Coherent Technology Corp.
+ 
+       PRODUCT_TYPE               The product_type data element identifies
+                                  the type or category of a data product
+                                  within a data set.  Examples: EDR,
+                                  UDR.
+ 
+       SOFTWARE_NAME              The software_name element identifies
+                                  data processing software such as a
+                                  program or a program library.
+ 
+       MISSION_PHASE_NAME         The mission_phase_name element provides
+                                  the commonly-used identifier of a
+                                  mission phase.
+ 
+       TARGET_NAME                The target_name element identifies a
+                                  target.  The target may be a planet,
+                                  satellite, ring, region, feature,
+                                  asteroid or comet. See target_type.
+                                  In this calibration dataset, the
+                                  target is CALIMG.
+ 
+       FRAME_SEQUENCE_NUMBER      The frame_sequence_number element
+                                  indicates the location within a cycle
+                                  at which a specific frame occurs.
+                                  Frames are repeated in a specific
+                                  order within each cycle.  In this
+                                  dataset, this value represents a
+                                  uniquly sequential identifier assigned
+                                  to each image of the archive.
+ 
+       START_TIME                 The start_time element provides the
+                                  date and time of the beginning of an
+                                  event or observation (whether it be a
+                                  spacecraft, ground-based, or system
+                                  event) in UTC system format.
+                                  Formation rule: YYYY-MM-DDThh:mm:ss.
+ 
+       STOP_TIME                  The stop_time element provides the
+                                  date and time of the end of an
+                                  observation or event (whether it be a
+                                  spacecraft, ground-based, or system
+                                  event) in UTC system format.
+                                  Formation rule: YYYY-MM-DDThh:mm:ss.
+ 
+       PRODUCT_CREATION_TIME      The product_creation_time element
+                                  defines the UTC system format time
+                                  when a product was created.  Formation
+                                  rule: YYYY-MM-DDThh:mm:ss.
+ 
+       INSTRUMENT_NAME            The instrument_name element provides
+                                  the full name of an instrument.  Note:
+                                  that the associated instrument_id
+                                  element provides an abbreviated name
+                                  or acronym for the instrument.
+ 
+       INSTRUMENT_HOST_NAME       The instrument_host_name element
+                                  provides the full name of the host on
+                                  which an instrument is based.  This
+                                  host can be either a spacecraft or an
+                                  earth base.  Thus, the
+                                  instrument_host_name element can
+                                  contain values which are either
+                                  spacecraft_name values or
+                                  earth_base_name values.
+ 
+       INSTRUMENT_ID              The instrument_id element provides an
+                                  abbreviated name or acronym which
+                                  identifies an instrument.  Note:  The
+                                  instrument_id is not a unique
+                                  identifier for a given instrument.
+                                  Note also that the associated
+                                  instrument_name element provides the
+                                  full name of the instrument.
+ 
+       EXPOSURE_DURATION          The exposure_duration element provides
+                                  the value of the time interval between
+                                  the opening and closing of an
+                                  instrument aperture (such as a camera
+                                  shutter).
+ 
+       CAL_LAMP_MODE_ID           The cal_lam_mode_id element provides
+                                  the value of the calibration lamp mode
+                                  at the time the image was acquired.
+                                  This value indicates whether the
+                                  calibration lamp was on or off at the
+                                  time the image was acquired.
+ 
+       QUANTIZATION_MODE_ID       The quantization_mode_id element
+                                  provides the identifier for the
+                                  quantization mode used when the image
+                                  was acquired.  This value indicates if
+                                  the original data was quantized at the
+                                  time the data was acquired.  A value
+                                  of OFF indicates that the data was not
+                                  quantized, while a value of ON
+                                  indicates that the data was quantized.
+                                  In this dataset, this value indicates
+                                  that the image was compressed with a
+                                  hardware square-root compression
+                                  technique prior to transmission.
+ 
+       FILTER_NUMBER              The filter_number element provides the
+                                  number of an instrument filter through
+                                  which an image or measurement was
+                                  acquired or which is associated with a
+                                  given instrument mode.  Note: that the
+                                  filter_number is unique, while the
+                                  filter_name is not.
+ 
+       FILTER_NAME                The filter_name element provides the
+                                  commonly- used name of the instrument
+                                  filter through which an image or
+                                  measurement was acquired or which is
+                                  associated with a given instrument
+                                  mode.  Example values:  RED, GREEN.
+                                  See also filter_number.
+ 
+       CENTER_FILTER_WAVELENGTH   The center_filter_wavelength element
+                                  provides the mid_point wavelength
+                                  value between the minimum and maximum
+                                  instrument filter wavelength values.
+ 
+        FILTER_FWHM               The filter_fwhm element provides the
+                                   measurement for the Full-width,
+                                   half-max value associated with the
+                                   filter.  This is the width of the
+                                   filter transmission curve at the
+                                   point of half of the maximum
+                                   transmission value.
+ 
+       MEASUREMENT_SOURCE_DESC    The measurement_source_desc element
+                                  describes the source of light used in
+                                  a laboratory-generated data set, or
+                                  the radar transmitter in the case of
+                                  radar astronomy experiments.
+ 
+       RADIANCE                   The radiance element describes the
+                                  amount of current recorded from the
+                                  photo-diode detector used to measure
+                                  the radiance output from the source
+                                  emitter.
+ 
+       INSTRUMENT_TEMPERATURE     The instrument_temperature element
+                                  provides the temperature, in degrees
+                                  Celcius, of an instrument or some part
+                                  of an instrument.
+ 
+       FOCAL_PLANE_TEMPERATURE    The focal_plane_temperature element
+                                  provides the temperature of the focal
+                                  plane array in degrees kelvin at the
+                                  time the observation was made.
+ 
+       OBJECT = IMAGE_HISTOGRAM   The histogram object is a sequence of
+                                  numeric values that provides the
+                                  number of occurrences of a data value
+                                  or a range of data values in a data
+                                  object.  The number of items in a
+                                  histogram will normally be equal to
+                                  the number of distinct values allowed
+                                  in a field of the data object.  (For
+                                  example, an 8-bit integer field can
+                                  have 256 values.  This would result in
+                                  a 256-item histogram.)  Histograms may
+                                  be used to bin data, in which case an
+                                  offset and scaling factor indicate the
+                                  dynamic range of the data represented.
+                                  The following equation allows the
+                                  calculation of the range of each &apos;bin&apos;
+                                  in the histogram.  &apos;bin lower
+                                  boundary&apos; = (&apos;bin element&apos; *
+                                  scaling_factor) + offset.
+ 
+       ITEMS                      The items element defines the number
+                                  of multiple, identical occurrences of
+                                  an single object, such as a column.
+                                  See also: repetitions.  Note:  In the
+                                  PDS, the data element ITEMS is used
+                                  for multiple occurrences of a single
+                                  object, such as a column.  REPETITIONS
+                                  is used for multiple occurrences of a
+                                  repeating group of objects, such as a
+                                  container.  For a fuller description
+                                  of the use of these data elements,
+                                  please refer to the Standards
+                                  Reference.
+ 
+       DATA_TYPE                  The data_type element supplies the
+                                  internal representation and/or
+                                  mathematical properties of a value
+                                  being stored.  See also:
+                                  bit_data_type, general_data_type.
+                                  Note: In the PDS, users may find a
+                                  bit-level description of each data
+                                  type in the Standards Reference
+                                  document.
+ 
+       ITEM_BITS                  The item_bits element indicates the
+                                  number of bits allocated for a
+                                  particular bit data item.  Note: In
+                                  the PDS, the item_bits element is used
+                                  when the items element specifies
+                                  multiple occurrences of an implied
+                                  item within a BIT_COLUMN object
+                                  definition.
+ 
+       END_OBJECT                 The end_object element terminates the
+                                  object description.
+ 
+       OBJECT = IMAGE             A regular array of sample values.
+                                  Image objects are normally processed
+                                  with special display tools to produce
+                                  a visual representation of the sample
+                                  values.  This is done by assigning
+                                  brightness levels or display colors to
+                                  the various sample values.  Images are
+                                  composed of LINES and SAMPLES.  They
+                                  may contain multiple bands, in one of
+                                  several storage orders.
+ 
+                                  Note: Additional engineering values
+                                  may be prepended or appended to each
+                                  LINE of an image, and are stored as
+                                  concatenated TABLE objects, which must
+                                  be named LINE_PREFIX and LINE_SUFFIX.
+                                  IMAGE objects may be associated with
+                                  other objects, including HISTOGRAMs,
+                                  PALETTEs, HISTORY, and TABLEs which
+                                  contain statistics, display
+                                  parameters, engineering values, or
+                                  other ancillary data.
+ 
+ 
+       LINES                      The lines element indicates the total
+                                  number of data instances along the
+                                  vertical axis of an image.  Note:  In
+                                  PDS label convention, the number of
+                                  lines is stored in a 32-bit integer
+                                  field.  The minimum value of 0
+                                  indicates no data received.
+ 
+       LINE_SAMPLES               The line_samples element indicates the
+                                  total number of data instances along
+                                  the horizontal axis of an image.
+ 
+       SAMPLE_TYPE                The sample_type element indicates the
+                                  data storage representation of sample
+                                  value.
+ 
+       SAMPLE_BITS                The sample_bits element indicates the
+                                  stored number of bits, or units of
+                                  binary information, contained in a
+                                  line_sample value.
+ 
+       SAMPLE_BIT_MASK            The sample_bit_mask element identifies
+                                  the active bits in a sample.  Note:
+                                  In the PDS, the domain of
+                                  sample_bit_mask is dependent upon the
+                                  currently-described value in the
+                                  sample_bits element and only applies
+                                  to integer values.  For an 8-bit
+                                  sample where all bits are active the
+                                  sample_bit_mask would be 2#11111111#.
+ 
+       MAXIMUM                    The maximum element indicates the
+                                  largest value occurring in a given
+                                  instance of the data object.
+ 
+       MINIMUM                    The minimum element indicates the
+                                  smallest value occurring in a given
+                                  instance of the data object.
+ 
+       LINE_PREFIX_BYTES          The line_prefix_bytes element
+                                  indicates the number of non-image
+                                  bytes at the beginning of each line.
+                                  The value must represent an integral
+                                  number of bytes.
+ 
+       LINE_SUFFIX_BYTES          The line_suffix_bytes element
+                                  indicates the number of non-image
+                                  bytes at the end of each line.  This
+                                  value must be an integral number of
+                                  bytes.
+ 
+       MEAN                       The mean element provides the average
+                                  of the DN values in the image array.
+ 
+       STANDARD_DEVIATION         The standard_deviation element
+                                  provides the standard deviation of the
+                                  DN values in the image array.
+ 
+       SATURATED_PIXELS           The saturated_pixels element provides
+                                  a count of the number of pixels in the
+                                  array which at the maximum DN value.
+                                  For this dataset, the non-quantized
+                                  data has a maximum value of 4095,
+                                  while the quantized data has a maximum
+                                  value of 255.
+ 
+       CHECKSUM                   The checksum element represents an
+                                  unsigned 32-bit sum of all data values
+                                  in a data object.
+ 
+       END                        End of the PDS Label.
+ 
+ 
+    Contact Information:
+    ====================
+ 
+        For any questions regarding the data format of the archive, contact:
+ 
+        Howard Taylor
+        Applied Coherent Technology Corp
+        112 Elden Street, Suite K
+        Herndon, VA 20170
+        (818) 354-5401
+        taylor@actgate.com
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    The data collected here has been prepared with the highest concern
+    for the perfectness of the data delivered.  During the processing of
+    the image data in preparation for delivery with this volume, the
+    structure of each image was verified.  This verification included
+    detection of both the sync word and the line count bytes at the
+    beginning of each line.
+ 
+    The data that was used to produce this archive was generated the
+    by the Ground Support Equipment (GSE) and was found to differ from
+    the general format of the flight image data.  The flight data is
+    organized as described above:  each row includes a sync pattern,
+    line counter, BLS pixels, image data and finally the overclock
+    pixels.  The GSE produced data that was
+ 
+ 
+        </confidence_level_note>
+        <archive_status>SAFED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-v-rss-1-tdf-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO VENUS RANGE FIX RAW DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.en::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-V-RSS-1-TDF-V1.0</data_set_id>
+        <data_set_name>GALILEO VENUS RANGE FIX RAW DATA V1.0</data_set_name>
+        <data_set_release_date>2000-01-31</data_set_release_date>
+        <start_time>1990-02-01T11:40:25Z</start_time>
+        <stop_time>1992-02-15T15:59:00Z</stop_time>
+        <producer_full_name>GALILEO CELESTIAL MECHANICS TEAM</producer_full_name>
+        <citation_text>
+            Anderson, J. D., S. W. Asmar, R. Herrera, P. Priest, and R. A.
+            Simpson, Galileo Venus Range Fix Raw Radio Tracking Data,
+            GO-V-RSS-1-TDF-V1.0 (GORS_0801 Version 3), NASA Planetary Data
+            System, 2000.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw radio tracking data from the Galileo Venus Range Fix
+            Observations conducted during the Galileo Venus flyby in 1990.
+            Included are one NASA DSN ATDF, media calibration data, and
+            documentation.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Raw radio tracking data used to determine the precise distance to
+            Venus (and improve knowledge of the Astronomical Unit) from the
+            Galileo flyby on 10 February 1990.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+ 
+      This data set contains raw radio tracking data from the Galileo
+      (GLL) Venus Range Fix Observations conducted during the GLL
+      Venus flyby centered on 10 February 1990.
+ 
+      The data set includes one NASA Deep Space Network (DSN) Archival
+      Tracking Data File (ATDF or TDF), media calibration data, and
+      documentation.
+ 
+ 
+    Parameters
+    ==========
+      Each 288-byte ATDF data record contains 117 parameters, stored
+      at rates of up to 10 records per second.  The parameters include
+      outputs from the DSN ranging system, estimates of Doppler
+      offsets, estimates of received signal strength, and status
+      information on components of the DSN system.  The ATDF is
+      described by a Software Interface Specification (SIS), included
+      as TRK_2_25.TXT in the DOCUMENT directory of the archival
+      volume.
+ 
+ 
+    Processing
+    ==========
+      Radiometric data are received by the DSN Network Operations
+      and Control Center (NOCC) Navigation Subsystem (NAV) in the
+      form of Intermediate Data Records (IDRs).  These IDRs are
+      processed to generate ATDFs.  An ATDF contains all radiometric
+      data received from the Deep Space Communications Complexes
+      (DSSCs) tracking a single spacecraft for one or more passes
+      or days.
+ 
+ 
+    Data
+    ====
+      ATDFs contain precise radio range and Doppler measurements made
+      between DSN ground stations and a spacecraft.  During the
+      Galileo Venus encounter, coded waveforms were transmitted from
+      the Earth, relayed by the on-board Galileo telecommunications
+      system, and received back on Earth.  Cross correlation between
+      the transmitted and received waveforms yielded a measurement
+      of the round trip distance, which could then be related to the
+      Earth-Venus distance during the flyby.  Doppler shift from the
+      same measurements could be interpreted as relative velocity
+      along the propagation path.
+ 
+      An ATDF has a file name of the form  ydddeeeX.TDF  where  y
+      is the least significant digit of the year and  ddd  is the
+      day-of-year for the first ATDF record.  The  eee  gives
+      day-of-year for the last data record in the ATDF, and  X  is
+      set to  &apos;A&apos;.
+ 
+      Each ATDF is accompanied by a full PDS detached label with name
+      ydddeeeX.LBL  which completely describes the contents of the
+      ATDF.  The format and contents are also described in
+      TRK_2_25.TXT in the DOCUMENT directory of each archival volume.
+      Both the ATDF and its label are stored in the TDF directory of
+      an archival volume.
+ 
+ 
+    Ancillary Data
+    ==============
+ 
+      The ancillary files are stored in the CALIB directory.  Each
+      ancillary file is accompanied by a detached PDS label having
+      the same file name except for the extension &apos;LBL&apos;.
+ 
+      Low-Gain Antenna (LGA) Radiation Pattern
+      -----------------------------------------
+        The radiation pattern of the low-gain antenna (LGA) is
+        described in files LGA1_DL.TAB and LGA1_UL.TAB. These files
+        provide the radiation patterns for downlink and uplink,
+        respectively.
+ 
+      Media Calibration Files
+      -----------------------
+        Media calibration files give model and measurement results
+        which can be used to correct radiometric tracking data for
+        effects of the Earth&apos;s ionosphere and troposphere.  Ionosphere
+        Calibration files have names of the form  ydddeeeV.ION  where
+        y  is the least significant digit in the year,  ddd  is the
+        3-digit day-of-year at the start of the file,  eee  is the
+        3-digit year at the end of the file, and V  indicates version
+        of the file (&apos;A&apos; is first, &apos;B&apos; is second, etc.).  Troposphere
+        Calibration files have file names of the form  ydddeeeV.TRO
+        where meanings are the same.  Each file is accompanied by a
+        minimal detached PDS label with the name  ydddeeeV.LBL.
+        Media Calibration files and labels are ASCII files with
+        records delimited by an carriage-return (ASCII13) line-feed
+        (ASCII 10) pair.  Files are described by TRK_2_23.TXT in
+        the DOCUMENT directory.
+ 
+      Documentation
+      -------------
+        Text and 59 TIFF files are included to provide users with
+        background on the general objectives and procedures for
+        Galileo radio Science observations.  The material is from
+        Radio Science Handbook, Volume 4, written several years after
+        the Venus Range fix data were collected.  The document which
+        would have been applicable to the Venus Range Fix data
+        acquisition was not available in electronic form when the
+        data set was archived.  A detached PDS label HANDBK4.LBL in
+        the DOCUMENT directory of the archival volume points to the
+        text and TIFF files.  It also gives a complete citation for
+        document which does describe the Venus Range fix observation.
+        Also included in the DOCUMENT directory are Software
+        Interface Specifications (SIS) for the ATDF and Media
+        Calibration files and an (incomplete) abstract mentioning the
+        Venus Range Fix results.
+ 
+    Coordinate System
+    =================
+      Most data types are not dependent on definition of a coordinate
+      system; for those that are, the user should consult the
+      appropriate SIS for information.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as these
+      has been developed at the Jet Propulsion Laboratory and
+      elsewhere.  Because parsing must be done at the bit level, its
+      implementation may be very sensitive to platform and operating
+      system.  No parsing has been written and tested on a variety of
+      platforms, so none has been included with the archival data set.
+      Users are referred to PDS labels and to Software Interface
+      Specifications for detailed information on file formats.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set is written on CD-WO media using GEAR
+      software and a Yamaha CRW4260tx writer.  The CD-WO volume
+      conforms to ISO 9660 standards.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      There are no known limitations to use of these data, subject to
+      signal-to-noise considerations which would be typical for
+      systems of this type.
+ 
+ 
+    Review
+    ======
+     Prior to creation of the final version of the archival data set,
+     key elements of the archive were distributed for preliminary
+     review.  These included electronic versions of example PDS
+     labels, CATALOG files, and Software Interface Specifications.
+     These materials were distributed to PDS personnel and the PDS
+     Radio Science advisor.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+     The data covers the Venus encounter period around 10 February
+     1990.  There are no known quality issues which would limit use
+     of these data other than the normal signal-to-noise constraints.
+ 
+ 
+    Limitations
+    ===========
+      None.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

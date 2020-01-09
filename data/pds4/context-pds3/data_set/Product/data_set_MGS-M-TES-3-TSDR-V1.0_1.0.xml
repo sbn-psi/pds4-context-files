@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-tes-3-tsdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS MARS TES SCIENCE DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:tes.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-tes-3-tsdr-v1.0__browserp_geo_mgs-m-tes-3-tsdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Christensen, P.R., Mars Global Surveyor Thermal Emission Spectrometer Data
+                   Processing User&apos;s Guide, version 1.02, February 1999.
+            </reference_text>
+            <description>reference.CHRISTENSEN1999</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-TES-3-TSDR-V1.0</data_set_id>
+        <data_set_name>MGS MARS TES SCIENCE DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>1999-02-28</data_set_release_date>
+        <start_time>1998-04-02T10:04:56Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>PHILIP R. CHRISTENSEN</producer_full_name>
+        <citation_text>
+            Christensen, P. R., MGS MARS TES SCIENCE DATA RECORD V1.0,
+            MGS-M-TES-3-TSDR-V1.0, NASA Planetary Data System, 1999
+        </citation_text>
+        <data_set_terse_desc>
+            The MGS-TES TSDR archive (V1.0) contains raw and calibrated
+            spectral radiance data, visual and thermal bolometric radiance
+            measurements, and several atmospheric and surface properties
+            derived from these data (superseded by MGS-M-TES-3-TSDR-V2.0).
+        </data_set_terse_desc>
+        <abstract_desc>
+            The TES-TSDR data product contains the raw and calibrated thermal
+            IR radiance spectra, the visual and thermal bolometric radiance
+            measurements, and several atmospheric and surface properties
+            derived from this data. Also included are the parameters that
+            describe each observations, some downlinked diagnostic
+            information, and the pointing and positional information derived
+            from the project&apos;s SPICE kernels.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The TES-TSDR data product contains the raw and calibrated
+    thermal IR radiance spectra, the visual and thermal bolometric
+    radiance measurements, and several atmospheric and surface
+    properties derived from this data.  Also included are the
+    parameters that describe each observations, some downlinked
+    diagnostic information, and the pointing and positional
+    information derived from the project&apos;s SPICE kernels.
+ 
+    The TES data is divided into 10 tables (OBS, RAD, BOL, GEO,
+    POS, TLM, IFG, CMP, SRF, LMB).  Each table is stored in a
+    separate file as a PDS TABLE structure, using fixed-length
+    binary records, with extensions to handle the variable length
+    spectra.  Every record is stored with the spacecraft time, and
+    related records can be retrieved from each table using time as
+    a common key.  In some tables, up to 6 records can be stored
+    for a given time, one for each detector.  In these cases the
+    records also include a field named &apos;detector&apos;, which with the
+    time field, uniquely identifies the record.
+ 
+    The data products on this volume may be reprocessed at the end
+    of the Mapping Phase of the mission.
+ 
+ 
+  Data
+  ====
+    Each table is stored in a PDS TABLE structure using
+    fixed-length binary records sorted time-sequentially.  Each
+    table file is prefixed with an ASCII header that describes the
+    contents and format of the table, and a pointer that indicates
+    where the binary table data starts.  The description identifies
+    each column in the table, detailing its name, starting position
+    (in bytes), size (in bytes), data type, description and scaling
+    factors if applicable.  In some cases the column being
+    described is a fixed-length array of related, homogeneous
+    values, in which case the column description also includes the
+    number of items in the array, and the size of each item.
+ 
+    Four tables (RAD, SRF, CMP, IFG) store variable length data.
+    These variable length records are stored in a file separate
+    from the fixed length records, and are addressed from the
+    fixed-length records with a pointer column.  Pointer columns
+    contain the position of the variable length data, in bytes,
+    from the start of the file it is in.
+ 
+    Fixed-length records are stored in files with a .DAT extension.
+    The variable length records that are referenced by an
+    individual .DAT file are found in a file with the same name,
+    but with a .VAR extension.
+ 
+ 
+  Coordinate System
+  =================
+    Mars areocentric, west positive
+ 
+ 
+  Software
+  ========
+    The TES project has produced a software tool that not only
+    reads the PDS table and variable length records, but is also
+    capable of joining the related records among multiple tables.
+    This piece of software is called &apos;vanilla&apos;, and is provided
+    on this cd.
+    &apos;Vanilla&apos; is also available via anonymous ftp from
+    ftp://east.la.asu.edu/pub/software/vanilla/vanilla.tar.Z.  The
+    vanilla program works on UNIX machines with integers in
+    MSB_INTEGER format and on PC platforms.
+ 
+ 
+  Media/Format
+  ============
+    CD-ROM
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Please refer to the MGS Thermal Emission Spectrometer Data
+    Processing User&apos;s Guide (CHRISTENSEN1999), which is included
+    in this data set archive.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>96-062A-00E</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

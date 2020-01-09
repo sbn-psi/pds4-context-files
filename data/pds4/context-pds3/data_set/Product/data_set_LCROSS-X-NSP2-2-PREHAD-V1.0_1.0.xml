@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lcross-x-nsp2-2-prehad-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LCROSS SUN 2ND NEAR IR SPECTROMETER 2 PREHAD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_crater_observation_and_sensing_satellite::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lcross::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nsp2.lcross::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:sun.sun::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lcross-x-nsp2-2-prehad-v1.0__geo_lcross_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lcross-x-nsp2-2-prehad-v1.0__geo_lcross_ftp_resource::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lcross-x-nsp2-2-prehad-v1.0__pds.geo.lcross.webservices::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.TBD</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LCROSS-X-NSP2-2-PREHAD-V1.0</data_set_id>
+        <data_set_name>LCROSS SUN 2ND NEAR IR SPECTROMETER 2 PREHAD V1.0</data_set_name>
+        <data_set_release_date>2010-03-17</data_set_release_date>
+        <start_time>2009-06-20T02:00:00Z</start_time>
+        <stop_time>2009-10-09T11:36:00Z</stop_time>
+        <producer_full_name>ANTHONY COLAPRETE</producer_full_name>
+        <citation_text>
+            Colaprete, A., Lunar Crater Observation and Sensing Satellite
+            Near Infrared Spectrometer 2 Pre-Hadamard Data V1.0,
+            LCROSS-X-NSP2-2-PREHAD-V1.0, NASA Planetary Data System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw, Uncalibrated, Pre-Hadamard Mask Data from the Near Infrared
+            Spectrometer 2 (NSP2) aboard the Lunar Crater Observation and
+            Sensing Satellite (LCROSS).
+        </data_set_terse_desc>
+        <abstract_desc>
+            Raw, Uncalibrated, Pre-Hadamard Mask Data from the Near Infrared
+            Spectrometer 2 (NSP2) aboard the Lunar Crater Observation and
+            Sensing Satellite (LCROSS).
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+ 
+    This data set contains raw mask data from Near Infrared
+    Spectrometer #2 on the LCROSS spacecraft from which
+    full-resolution, hadamard-mode spectra can be assembled.
+    The dataset contains one table per data collection
+    period.  Each table contains one row per
+    full-resolution, Hadamard spectrum captured during that
+    collection period.  Each row contains a timestamp and
+    256 values corresponding to 256 distinct configurations
+    of the MEMS mask within the spectrometer.
+ 
+    Conversion of raw mask data into raw spectra is
+    deterministic and involves no calibration inputs.
+    However, this form of the data makes some attributes
+    more apparent.  In particular, the check for saturation
+    is done on this form.
+ 
+    The timestamp used in each row of these tables is the
+    uncorrected spacecraft time which appears in the labels
+    for the raw and calibrated spectra as the
+    SPACECRAFT_CLOCK_STOP_COUNT attribute.
+ 
+    This dataset encompasses all pre-hadamard mask data
+    collected by NSP2 during the mission.  Note that the
+    archive&apos;s DATA directory is partitioned initially by
+    payload data collection period.  The data collection
+    period called 20091009113022_IMPACT contains the data
+    from one minute prior to the Centaur impact through the
+    end of the mission.  Other data collection periods
+    periods contain data from various calibration targets.
+ 
+    Related Data Sets
+    =================
+ 
+    This dataset is closely related to the NSP2_RAW and
+    NSP2_CAL datasets.
+ 
+    Parameters
+    ==========
+ 
+       Science
+       -------
+ 
+       No instrument parameters vary within this dataset.
+       The integration time is uniformly 0.5 seconds.
+ 
+       Housekeeping
+       ------------
+ 
+       Instrument temperature at the data collection time is
+       reported in the label file under:
+       INSTRUMENT_TEMPERATURE and
+       INSTRUMENT_TEMPERATURE_COUNT in degrees Centigrade
+       and raw counts, respectively.  This is a single
+       telemetry point most representative of the
+       instrument chassis temperature.
+ 
+    Processing
+    ==========
+ 
+    Each near-infrared spectra was digitally transmitted
+    from the spectrometer to the spacecraft in its raw
+    format, inserted into a packet uncompressed and
+    downlinked in telemetry.  On the ground, the spectra
+    were extracted from telemetry, and they were converted
+    to CSV format.  For each data collection period, the
+    LCROSS Make Archive program read these files and wrote
+    them as a PDS-formatted table (.TAB) and label (.LBL)
+    file.
+ 
+    Data
+    ====
+ 
+    The files in this dataset are PDS-formatted, ascii,
+    single-column tables with detached label files.
+ 
+    Coordinate System
+    =================
+ 
+    The label files for these spectra contain the
+    spectrometer&apos;s boresight vector in J2000 Geocentric
+    Inertial frame.
+ 
+    Software
+    ========
+ 
+    The GSEOS Version used to generate these spectra is GSEOS
+    5.2.407 (Feb 25, 2008), Python 2.2.3 (#37, Nov 28, 2003,
+    04:20:20), Project Version 6.1.064.
+ 
+    The LCROSS.py Python script used with GSEOS is Version
+    Jun 11, 2008.
+ 
+    The LCROSS Report Generator used on GSEOS created
+    CCSDS.dat files is version 114.
+ 
+    The version of Satellite Toolkit used to prepare geometric
+    information for the labels is 8.1.3.
+ 
+    The LCROSS Make Archive program used to assemble the
+    PDS-formatted submission is dated 03/14/2010.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+ 
+    The confidence level is unspecified.
+ 
+    Review
+    ======
+ 
+    This LCROSS data set was reviewed internally by the
+    LCROSS science team before delivery to PDS.  This data
+    set has passed a PDS peer review.
+ 
+    Data Coverage and Quality
+    =========================
+ 
+    This data path from spectrometer to PDS involved no
+    lossy compression and was fully error corrected.  No
+    NSP2 packets were lost in downlink.  No NSP2 spectra
+    were saturated.
+ 
+    Limitations
+    ===========
+ 
+    At low signal to noise ratios, detector noise in the
+    pre-hadamard data can result in negative raw counts for
+    some pixels.  These values are not physical but are
+    effectively a feature of the internally-performed dark
+    subtraction inherent in this spectrometer&apos;s design.
+ 
+    Data Compression
+    ===============
+ 
+    No data compression was used in the datapath from the
+    detector to the formatted files ready for submission to
+    the PDS.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

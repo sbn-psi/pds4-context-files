@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.alt_flag_group</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>alt_flag_group</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>alt_flag_group</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>alt_flag_group</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+ 
+ The ALT_FLAG_GROUP element identifies the following flag
+fields.
+AR_FIT=0x0001
+Record contains footprint values that have been
+fitted in the altimetry and radiometry
+mgmtac processing phase.
+AR_EPHC=0x0002
+Geometry values have been corrected
+for ephemeris errors in the mgmorb phase.
+AR_RHOC=0x0004
+Reflectivity values have been corrected from C-BIDR
+backscatter values in the mgmgen phase.
+AR_RS2=0x0008
+Range-sharpened values have passed the 2nd-order
+template fitting criteria in the mgmtac phase.
+AR_NRS2=0x0010
+Non-range-sharpened values have passed the 2nd-order
+template fitting criteria in the mgmtac phase.
+AR_BAD=0x0020
+Ignore this record entirely.
+AR_RBAD=0x0040
+Ignore the range-sharpened profile
+range_sharp_echo_profile[] and the associated
+derived_planetary_radius value.
+AR_CBAD=0x0080
+Ignore the non_range_sharp_echo_prof[]
+and the associated derived_rms_surface_slope and
+derived_fresnel_reflectivity values.
+AR_TMARK=0x0100
+Temporary derived_planetary_radius
+marker flag, used in the mgmdqe phase.
+AR_CMARK=0x0200
+Temporary derived_rms_surface_slope marker flag, used
+in the mgmdqe phase.
+AR_FMARK=0x0400
+Temporary derived_fresnel_reflect marker flag, used in
+the mgmdqe phase.
+AR_HAGFORS=0x0800
+ar_slope and its errors and correlations are expressed
+as Hagfors&apos; C parameter instead of degrees of RMS
+slope. This flag will not be set in any standard
+ARCDR products. It is solely used during some
+phases of internal MIT processing.
+AR_BADALTA=0x1000
+The altimetry antenna was pointed more than 5 degrees
+from its expected location as given by the nominal
+look-angle profile.
+AR_SLOPEBAD=0x2000
+The ar_slope parameter value
+is suspect, and ar_prof should also be disregarded.
+AR_RHOBAD=0x4000
+The ar_rho value is suspect.
+AR_RAD2=0x8000
+This record was created under software
+version 2 or higher, in which the data fields ar_rhofact,
+ar_radius2, ar_sqi, and ar_thresh are significant.
+        </definition>
+        <comment>mgn5</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>alt_flag_group</name>
+            <definition>
+ 
+ The ALT_FLAG_GROUP element identifies the following flag
+fields.
+AR_FIT=0x0001
+Record contains footprint values that have been
+fitted in the altimetry and radiometry
+mgmtac processing phase.
+AR_EPHC=0x0002
+Geometry values have been corrected
+for ephemeris errors in the mgmorb phase.
+AR_RHOC=0x0004
+Reflectivity values have been corrected from C-BIDR
+backscatter values in the mgmgen phase.
+AR_RS2=0x0008
+Range-sharpened values have passed the 2nd-order
+template fitting criteria in the mgmtac phase.
+AR_NRS2=0x0010
+Non-range-sharpened values have passed the 2nd-order
+template fitting criteria in the mgmtac phase.
+AR_BAD=0x0020
+Ignore this record entirely.
+AR_RBAD=0x0040
+Ignore the range-sharpened profile
+range_sharp_echo_profile[] and the associated
+derived_planetary_radius value.
+AR_CBAD=0x0080
+Ignore the non_range_sharp_echo_prof[]
+and the associated derived_rms_surface_slope and
+derived_fresnel_reflectivity values.
+AR_TMARK=0x0100
+Temporary derived_planetary_radius
+marker flag, used in the mgmdqe phase.
+AR_CMARK=0x0200
+Temporary derived_rms_surface_slope marker flag, used
+in the mgmdqe phase.
+AR_FMARK=0x0400
+Temporary derived_fresnel_reflect marker flag, used in
+the mgmdqe phase.
+AR_HAGFORS=0x0800
+ar_slope and its errors and correlations are expressed
+as Hagfors&apos; C parameter instead of degrees of RMS
+slope. This flag will not be set in any standard
+ARCDR products. It is solely used during some
+phases of internal MIT processing.
+AR_BADALTA=0x1000
+The altimetry antenna was pointed more than 5 degrees
+from its expected location as given by the nominal
+look-angle profile.
+AR_SLOPEBAD=0x2000
+The ar_slope parameter value
+is suspect, and ar_prof should also be disregarded.
+AR_RHOBAD=0x4000
+The ar_rho value is suspect.
+AR_RAD2=0x8000
+This record was created under software
+version 2 or higher, in which the data fields ar_rhofact,
+ar_radius2, ar_sqi, and ar_thresh are significant.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Integer</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

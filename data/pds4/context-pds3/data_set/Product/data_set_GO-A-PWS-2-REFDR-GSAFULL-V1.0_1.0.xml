@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-a-pws-2-refdr-gsafull-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GO A PWS REFORMATTED GASPRA SPECTRUM ANALYZER FULL V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pws.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.gaspra::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-a-pws-2-refdr-gsafull-v1.0__browserp_go-a-pws-2-refdr-gsafull-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-A-PWS-2-REFDR-GSAFULL-V1.0</data_set_id>
+        <data_set_name>GO A PWS REFORMATTED GASPRA SPECTRUM ANALYZER FULL V1.0</data_set_name>
+        <data_set_release_date>1997-01-13</data_set_release_date>
+        <start_time>1991-10-29T06:39:32.036Z</start_time>
+        <stop_time>1991-10-30T08:46:59.974Z</stop_time>
+        <producer_full_name>DR. WILLIAM S. KURTH</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>Unknown</data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+    This data set includes full resolution electric and magnetic wave spectra
+    obtained during a ~ 2-hour period of contiguous observations near the
+    closest approach to Gaspra and a number of non-contiguous spectra taken
+    prior and subsequent to closest approach.  In addition waveform survey
+    data (uncalibrated) and all instrument housekeeping data are included.
+    The parameters provided for both the electric and magnetic field spectral
+    data are uncalibrated data numbers.  Software and calibration tables
+    provided as part of this data set allow for fully calibrated data for the
+    electric field measurements in raw data numbers, voltage at the antenna
+    inputs (V), electric field (V/m), electric field spectral density
+    (V**2/m**2/Hz), or power flux (W/m**2/Hz).  The magnetic field
+    measurements can be provided in units of magnetic field spectral density
+    (nT**2/Hz).  The sources of these data are the High Frequency Receiver,
+    Sweep Frequency Receiver, and Spectrum Analyzer which make up the Low Rate
+    Science portion of the PWS.  During the included time interval, the
+    instrument cycled between the electric and magnetic antennas for the Sweep
+    Frequency Receiver and the Spectrum Analyzer.  The High Frequency Receiver
+    is always connected to the electric antenna.  Hence, for the Sweep
+    Frequency Receiver and the Spectrum Analyzer, the temporal resolution for
+    electric measurements is basically one spectrum per 37.33 seconds.  For
+    the High Frequency Receiver, the time between spectra is 18.67 seconds.
+    Note that the lowest 14 High Frequency Receiver channels are sampled twice
+    per 18.67 seconds while the remaining channels are sampled only once.  The
+    four Spectrum Analyzer channels are each sampled 7 times in an 18.67 sec
+    interval.
+ 
+    The waveform survey data are generated by the wideband receiver portion of
+    the Plasma Wave Instrument.  These data are 4-bit measurements of the
+    voltage across the preamplifier input at a rate of 201.6 k, 25.2 k or 3.2
+    k samples per second (for the 80 kHz, 10 kHz, and 1 kHz bandwidth modes,
+    respectively) using either the electric dipole or magnetic search coil
+    antennas.  An automatic gain control receiver is used to set the gain at
+    an optimum value so as to make the best use of the limited dynamic range
+    afforded by the 4-bit analog-to-digital converter.  In principle, it is
+    possible to use the Automatic Gain Control (AGC) readout contained in the
+    data set to calibrate this voltage, but this capability does not currently
+    exist for this data set.
+        </data_set_desc>
+        <confidence_level_note>
+    This data set includes all available Low Rate Science spectrum analyzer
+    data within the interval of time covered.  Included in this data set are
+    data quality flags which indicate whether the parity of the data value was
+    good or bad.  A bad parity flag indicates an error in the data value and
+    the software provided with this data set will ignore such values.
+    However, this is a simple parity scheme, hence, even numbers of bit errors
+    will not be flagged as being bad.  The magnetic spectra contain narrowband
+    interference lines at 2.4 kHz and harmonics.  Missing data are indicated
+    by zero.  The sporadic data obtained both prior to and subsequent to the
+    ~2-hour period of continuous observations correspond to data which were
+    played back along with imaging and other remote sensing information.  Due
+    to tape recorder and downlink limitations, there was no attempt to make
+    these data continuous and they are supplied here simply for completeness.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

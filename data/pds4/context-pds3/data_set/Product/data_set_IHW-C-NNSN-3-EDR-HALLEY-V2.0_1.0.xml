@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ihw-c-nnsn-3-edr-halley-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IHW COMET HALLEY NEAR NUCLEUS IMAGE DATA, V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_halley_watch::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.nnsn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nnsn.nnsn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.1p-halley_1_1682_q1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ihw-c-nnsn-3-edr-halley-v2.0__browserp_ihw-c-nnsn-3-edr-halley-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zdenek (ed.), &apos;The Comet Halley Archive Summary Volume&apos;, Jet
+                   Propulsion Laboratory, California Institute of Technology, Pasadena,
+                   California, JPL D-400-450, August 1991.
+            </reference_text>
+            <description>reference.JPL_D-400-450</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>IHW-C-NNSN-3-EDR-HALLEY-V2.0</data_set_id>
+        <data_set_name>IHW COMET HALLEY NEAR NUCLEUS IMAGE DATA, V2.0</data_set_name>
+        <data_set_release_date>1992-09-30</data_set_release_date>
+        <start_time>1982-10-16T11:12:53.856Z</start_time>
+        <stop_time>1989-04-12T06:53:45.312Z</stop_time>
+        <producer_full_name>GRAYZECK, E.J., KLINGLESMITH, D.A., III, NIEDNER, M.B., JR</producer_full_name>
+        <citation_text>
+            Larson, S.M., Z. Sekanina and J. Rahe, IHW COMET HALLEY NEAR
+            NUCLEUS IMAGE DATA, V2.0, IHW-C-NNSN-3-EDR-HALLEY-V2.0, NASA
+            Planetary Data System, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Detailed images of the nucleus of 1P/Halley colected by the IHW
+            Near-Nucleus Studies Network over the period 1982-10-16 to
+            1989-04-12. This second version includes format updates and
+            corrected errata.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set presents images of the nucleus of comet 1P/Halley
+            obtained by the various contributing observers of the
+            International Halley Watch (IHW) Near-Nucleus Studies Network
+            (NNSN) over the period 16 October 1982 to 12 April 1989.
+            Observers around the world contributed to this data set, which
+            consists of 3523 well-documented FITS images. The second version
+            includes PDS format and standard updates, as well as correction
+            of the various errata noted since the original publication.
+        </abstract_desc>
+        <data_set_desc>
+      Data Set Overview
+      =================
+      This data set presents images of the nucleus of comet 1P/Halley
+      obtained by the various contributing observers of the
+      International Halley Watch (IHW) Near-Nucleus Studies Network
+      (NNSN) over the period 16 October 1982 to 12 April 1989.
+      Observers around the world contributed to this data set,
+      which consists of 3523 well-documented FITS images.
+ 
+      The data are broken down into directories by year and month of
+      observation.  The NNSN used a standard reporting format for
+      keywords in the FITS header.  The images themselves are all
+      either 2-byte or 4-byte integer data.  Calibrated and
+      uncalibrated data appear in the same directory.
+ 
+      Modification History
+      ====================
+      Generation of the version 2.0 form of this data set consisted
+      of the following:
+ 
+        o  Concatenation of FITS headers and data segments to restore
+           compliant FITS image files.  No modifications were made to
+           either FITS headers or FITS data segments.
+ 
+        o  Generation of new PDS labels, incorporating as many keyword
+           values and comments from the FITS file headers as possible.
+ 
+        o  Sorting into monthly directories.
+ 
+        o  Creation of a summary index file for all images.
+ 
+        o  Application of the errata noted by Mikael Aronsson (JPL) as
+           he compiled the IHW Printed Archive and Printed Archive
+           Index.
+ 
+        o  Correction (where possible) or notation directly in the labels
+           of errata submitted by others since original publication.
+ 
+        o  Correction of some minor FITS header syntax issues noted while
+           working with the data files.
+ 
+      25 August 2006, A.C.Raugh
+        </data_set_desc>
+        <confidence_level_note>
+      Confidence Level Overview
+      =========================
+      A general data quality indicator was provided for each image in
+      the FITS header, carried over into the PDS label in the keyword
+      DATA_QUALITY_DESC.  The four values of this keyword are EXCELLENT,
+      GOOD, FAIR and POOR.  Images rated POOR were included only when
+      better data were not available for a particular date.
+ 
+      Users should consult &apos;The Comet Halley Archive Summary Volume&apos;
+      (JPL D-400-450) for a discussion of the completeness and of the
+      collection and overall quality considerations.
+        </confidence_level_note>
+        <archive_status>PRE_PEER_REVIEW</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-x-i0065-5-icespec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>OPTICAL CONSTANTS AND LAB SPECTRA OF WATER ICE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.lab510::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:i1083.lab510::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:terrestrial_sample.h2o_water_ice::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-x-i0065-5-icespec-v1.0__browserp_ear-x-i0065-5-icespec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mastrapa, R.M., M.P. Bernstein, S.A. Sandford, T.L. Roush, D.P. Cruikshank, D.
+                   P., and C. M. Dalle Ore, Optical constants of amorphous and crystalline H2O-ice
+                   in the near infrared from 1.1 to 2.6 microns, Icarus 197, 307-320, DOI:
+                   10.1016/j.icarus.2008.04.008, 2008.
+            </reference_text>
+            <description>reference.MASTRAPAETAL2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-X-I0065-5-ICESPEC-V1.0</data_set_id>
+        <data_set_name>OPTICAL CONSTANTS AND LAB SPECTRA OF WATER ICE V1.0</data_set_name>
+        <data_set_release_date>2010-06-07</data_set_release_date>
+        <start_time>2006-04-12</start_time>
+        <stop_time>2006-09-21</stop_time>
+        <producer_full_name>RACHEL MASTRAPA</producer_full_name>
+        <citation_text>
+            Mastrapa, R. M. E., Optical Constants and Lab Spectra of Water
+            Ice V1.0. EAR-X-I0065-5-ICESPEC-V1.0. NASA Planetary Data System,
+            2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Transmission spectra and optical constants of amorphous and
+            crystalline H2O-ice at temperatures from 20-150 K.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Transmission spectra of amorphous and crystalline H2O-ice at
+            temperatures from 20-150 K for a wavelength range from 1.11 to
+            2.63 microns. These spectra have not been continuum-corrected or
+            had the infrared interference fringes removed. Optical constants
+            (n and k values) were derived from these laboratory spectra and
+            are included in the data set.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The data set consists of 54 infrared spectra of amorphous and crystalline
+    H2O-ice collected in the laboratory. The vacuum system used has been
+    described previously (Hudgins et al., 1993; Bernstein et al., 2006). To
+    summarize, we collect infrared transmission spectra of ice samples
+    deposited on a window suspended under high vacuum (~10-8 mbar) and at low
+    cryogenic temperatures (~15 K).
+ 
+    The basic protocol for our experiments is as follows. We first cool the
+    sample window to the desired temperature and record a background spectrum
+    of 1000 scans. We vapor deposit the sample while monitoring the IR
+    spectrum and sample thickness (see below). In our experiments, the maximum
+    temperature of the sample determines the phase of H2O ice. We observe that
+    crystalline samples that were created by depositing at low temperature and
+    heating to the point of crystallization produces a spectrum that is
+    different from crystalline samples made by directly depositing gas at
+    temperatures above 140 K.  The largest change is seen in the position of
+    the band near 6050 cm-1 (1.65 microns), which shifts from 6037 cm-1 (1.656
+    microns) when deposited at 100 K to 6027 cm-1 (1.659 microns) when
+    deposited at 150 K.   Therefore, all crystalline samples are deposited on
+    a 150 K sample window, while amorphous samples are deposited on the sample
+    window at temperatures of 100 K and lower.
+ 
+    The optical constants, the real and imaginary part of the index of
+    refraction (n,k), were calculated using a Kramers-Kronig relation
+    (Mastrapa, et al. 2008).
+ 
+    The naming convention for the files is: phase_temperature.txt.  For
+    example, crystalline h2o-ice at 20 K is crys_20K.txt.  The files that
+    begin with &apos;min&apos; are the minimum values for the corresponding spectrum.
+    That is, the minimum value spectra for 20 K crystalline h2o-ice is
+    min_crys_20K.txt.  Instead of numbers, the amorphous h2o-ice files are
+    either high or low temperature.
+ 
+    Also included with the data are the original spectra used for the
+    calculation in the folder: original_spectra. These files consist of two
+    columns of tab-delimted text.  The first column is frequency in wave
+    numbers (1/cm) and the second column is % transmission. These spectra have
+    not been baseline corrected or had the infrared interference fringes
+    removed.  For each set of optical constants, several spectra were
+    averaged, resulting in a single spectrum. The spectra used for a given
+    temperature and phase are listed below.
+ 
+    Amorphous High Temperature
+    21sept06_4.txt
+    17april06_3.txt
+    17april06_4.txt
+    12april06_9.txt
+    12april06_10.txt
+ 
+    Amorphous Low Temperature
+    19sept06_2.txt
+    19sept06_3.txt
+    19sept06_4.txt
+    19sept06_5.txt
+    19sept06_6.txt
+ 
+    Crystalline 20 K
+    8sept06_14.txt
+    13sept06_14.txt
+    15sept06_2.txt
+ 
+    Crystalline 30 K
+    8sept06_15.txt
+    8sept06_13.txt
+    13sept06_13.txt
+    13sept06_15.txt
+    15sept06_3.txt
+ 
+    Crystalline 40 K
+    8sept06_16.txt
+    8sept06_12.txt
+    13sept06_12.txt
+    13sept06_16.txt
+    15sept06_4.txt
+ 
+    Crystalline 50 K
+    8sept06_17.txt
+    8sept06_11.txt
+    13sept06_11.txt
+    15sept06_5.txt
+ 
+    Crystalline 60 K
+    8sept06_10.txt
+    13sept06_10.txt
+    15sept06_6.txt
+ 
+    Crystalline 70 K
+    8sept06_9.txt
+    13sept06_9.txt
+    15sept06_7.txt
+ 
+    Crystalline 80 K
+    8sept06_8.txt
+    13sept06_8.txt
+    15sept06_8.txt
+ 
+    Crystalline 90 K
+    8sept06_7.txt
+    13sept06_7.txt
+    15sept06_9.txt
+ 
+    Crystalline 100 K
+    8sept06_6.txt
+    13sept06_6.txt
+    15sept06_10.txt
+ 
+    Crystalline 110 K
+    8sept06_5.txt
+    13sept06_5.txt
+    15sept06_11.txt
+ 
+    Crystalline 120 K
+    8sept06_4.txt
+    13sept06_4.txt
+ 
+    Crystalline 130 K
+    8sept06_3.txt
+    13sept06_3.txt
+ 
+    Crystalline 140 K
+    8sept06_2.txt
+    13sept06_2.txt
+ 
+    Crystalline 150 K
+    15sept06_1.txt
+    8sept06_1.txt
+    13sept06_1.txt
+ 
+    Reference
+    =========
+ 
+    Mastrapa, R.M., M.P. Bernstein, S.A. Sandford, T.L. Roush, D.P.
+    Cruikshank, D. P., and C. M. Dalle Ore, Optical constants of amorphous and
+    crystalline H2O-ice in the near infrared from 1.1 to 2.6 microns, Icarus
+    197, 307-320, 2008.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    In general, the signal to noise ratio for the spectra is very high. The
+    largest contribution of error is the surface scattering properties of the
+    ice samples.  This leads to variation in continuum levels and slope. There
+    are values that are near 100% transparency of the material which lead to
+    unrealistically low values of k.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

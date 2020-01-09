@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-crism-4-6-cdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO CRISM CALIBRATION DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:crism.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-crism-4-6-cdr-v1.0__browserp_mro-m-crism-4-6-cdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-crism-4-6-cdr-v1.0__browser_geo_mars_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-crism-4-6-cdr-v1.0__dvo_mro-m-crism-4-6-cdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bugby, D., J. Garzon, M. Beres, C. Stouffer, D. Mehoke, and M. Wirzburger,
+                   Cryogenic diode heat pipe system for cryocooler redundancy, in Proc. SPIE,
+                   edited by J.B. Heaney and L.G. Burriesci, Vol. 5904, pp. 321-329, 2005.
+            </reference_text>
+            <description>reference.BUGBYETAL2005</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Lees, J., E. Schaefer, and M. Fasold, Design of the CRISM cryogenic system and
+                   focal plane assembly isolation system, in Proc. SPIE, edited by A.E. Hatheway,
+                   Vol. 5877, pp. 265-275, 2005.
+            </reference_text>
+            <description>reference.LEESETAL2005</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Murchie, S., R. Arvidson, P. Bedini1, K. Beisser, J.-P. Bibring, J. Bishop, J.
+                   Boldt, T. Choo, R.T. Clancy, E.H. Darlington, D. Des Marais, R. Espiritu, M.
+                   Fasold, D. Fort, R. Green, E. Guinness, J. Hayes, C. Hash, K. Heffernan, J.
+                   Hemmler, G. Heyler, D. Humm, J. Hutchison, N. Izenberg, R. Lee, J. Lees, D.
+                   Lohr, E. Malaret, T. Martin, R. Morris, J. Mustard, E. Rhodes, M. Robinson, T.
+                   Roush, E. Schaefer, G. Seagrave, P. Silverglate, S. Slavney, M. Smith, K.
+                   Strohbehn, H. Taylor, P. Thompson, and B. Tossman, CRISM (Compact
+                   Reconnaissance Imaging Spectrometer for Mars) on MRO (Mars Reconnaissance
+                   Orbiter), Proc. SPIE, edited by C.A. Nardell, P.G. Lucey, J. Yee, and J.B.
+                   Garvin, Vol. 5660, pp. 66-77, 2004.
+            </reference_text>
+            <description>reference.MURCHIEETAL2004</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Murchie, S., R.E. Arvidson, P. Bedini, K. Beisser, J.-P. Bibring, J. Bishop, J.
+                   Boldt, P. Cavender, T. Choo, R.T. Clancy, E.H. Darlington, D. Des Marais, R.
+                   Espiritu, M. Fasold, D. Fort, R. Green, E. Guinness, J. Hayes, C. Hash, K.
+                   Heffernan, J. Hemmler, G. Heyler, D. Humm, J. Hutcheson, N. Izenberg, R. Lee,
+                   J. Lees, D. Lohr, E. Malaret, T. Martin, J.A. McGovern, R.V. Morris, J.
+                   Mustard, S. Pelkey, E. Rhodes, M. Robinson, T. Roush, E. Schaefer, G. Seagrave,
+                   F. Seelos, P. Silverglate, S. Slavney, M. Smith, K. Strohbehn, H. Taylor, P.
+                   Thompson, B. Tossman , and M. Wolff, CRISM (Compact Reconnaissance Imaging
+                   Spectrometer for Mars) on MRO (Mars Reconnaissance Orbiter), J. Geophys. Res.,
+                   submitted, 2006.
+            </reference_text>
+            <description>reference.MURCHIEETAL2006</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Pelkey, S.M., J.F. Mustard, J.-P. Bibring, R.E. Milliken, Y. Langevin, B.
+                   Gondet, A. Gendrin, F. Poulet, S. Erard, S. Murchie, R.E. Arvidson, and the
+                   OMEGA and CRISM Science Teams, Global Spectral and Compositional Diversity of
+                   Mars: A Test of CRISM Global Mapping with Mars Express OMEGA Data, Lunar and
+                   Planetary Science XXXVI, Vol. 1458, 2005.
+            </reference_text>
+            <description>reference.PELKEYETAL2005</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Silverglate, P.R., and D.E. Fort, System design of the CRISM (compact
+                   reconnaissance imaging spectrometer for Mars) hyperspectral imager, in Proc.
+                   SPIE, edited by S.S. Shen and P.E. Lewis, Vol. 5159, pp. 283-290, 2004.
+            </reference_text>
+            <description>reference.SILVERGLATE-FORT2004</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Troll, J., P. Thompson, and D. Humm, Boresight and gimbal axis alignment for
+                   the CRISM instrument, in Proc. SPIE, edited by A.E. Hatheway, Vol. 5877, pp.
+                   93-101, 2005.
+            </reference_text>
+            <description>reference.TROLLETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-CRISM-4/6-CDR-V1.0</data_set_id>
+        <data_set_name>MRO CRISM CALIBRATION DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2006-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>SCOTT MURCHIE</producer_full_name>
+        <citation_text>
+            Murchie, S., Mars Reconnaissance Orbiter Compact Reconnaissance
+            Imaging Spectrometer for Mars Calibration Data Record,
+            MRO-M-CRISM-4/6-CDR-V1.0, NASA Planetary Data System, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibration data records for IR and VNIR image cubes for CRISM
+            (Compact Reconnaissance Imaging Spectrometer for Mars).
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains CRISM VNIR and IR Calibration Data Records
+            (CDRs), which are used to convert data from raw DNs to units of
+            radiance or I/F for the CRISM instrument on MRO.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This volume contains portions of the CRISM Calibration Data Record
+      (CDR) Archive, a collection of calibration files from the Compact
+      Reconnaissance Imaging Spectrometer for Mars on the Mars
+      Reconnaissance Orbiter spacecraft.
+ 
+      CDRs are created in two ways:
+ 
+      (a) One type of calibration file, for example the wavelength
+      calibration, is either invariant or expected to change only
+      infrequently. These files are stored in directories named using a
+      2-letter acronym for the contents of the file.
+ 
+      (b) The other type of calibration file is a snapshot of some
+      attribute of the instrument that is time-variable, for example the
+      thermal background measured by the IR detector. These files are
+      stored in directories named YYYY_DOY, each one of which contains
+      subdirectories containing distinct types of calibration files.
+ 
+ 
+    Processing
+    ==========
+ 
+      EDRs containing bias measurements or measurements of background,
+      focal plane lamps, or the internal integrating sphere are
+      processed into level-4 CDRs. A level-4 CDR contains derived values
+      needed to convert a scene-viewing EDR into units of radiance.
+      These are in image format, with multiple versions corresponding to
+      different pixel binning states.  Other level 4 CDRs are derived
+      from ground measurements. A level-6 CDR contains tabulated
+      information, of two types: (a) a file list of level 4 CDRs
+      generated inflight, or (b) tabulated information, for example, for
+      correcting for detector non-linearity, converting housekeeping to
+      physical units, or converting EDRs from 12 to the original
+      at-sensor 14 bits prior to calibration.
+ 
+ 
+    Data
+    ====
+ 
+      There are two types of calibration files. CODMAC level 4 CDRs
+      (CDR4s) are in image format, and CODMAC level 6 CDRs (CDR6s) are
+      text files in ASCII format. Both types have a file name that
+      encodes the time at which they are applicable, and the
+      configuration of the data used to derive them (detector, frame
+      rate, binning, wavelength filter, exposure time parameter, etc.).
+ 
+      YYYY_DOY/BI directory:
+      ----------------------
+      This directory contains CDR4s representing measurements of the
+      response of each detector to zero signal, i.e., the detector bias.
+      These are measured as dark frames for the VNIR detector. For the
+      IR detector, these are the zero exposure-time intercept of a fit
+      of dark measurements taken at several exposure times. For each
+      detector there are separate files for each frame rate, wavelength
+      filter, and binning state, time-stamped for their mean time of
+      acquisition.
+ 
+      YYYY_DOY/BK directory:
+      ----------------------
+      This directory contains CDR4s representing thermal background
+      measured by the IR detector. These are measured as dark frames.
+      There are separate files for each frame rate, exposure time, and
+      binning state, time-stamped for their mean time of acquisition.
+ 
+      YYYY_DOY/BP directory:
+      ----------------------
+      This directory contains CDR4s representing bad pixels. There are
+      separate files for each frame rate, exposure time, wavelength
+      filter, and binning state, time-stamped for their mean time of
+      acquisition.
+ 
+      YYYY_DOY/SP directory:
+      ----------------------
+      This directory contains CDR4s representing sphere output in DN/ms
+      at the sphere&apos;s closed-loop setpoint. There are separate files for
+      each sphere bulb. For the VNIR all data are taken at 1 Hz, but
+      there are versions for each binning state. For the IR there are
+      separate versions for each frame rate, wavelength filter, and
+      binning state. Both the VNIR and IR files are time-stamped for
+      their mean time of acquisition.
+ 
+      YYYY_DOY/ST directory:
+      ----------------------
+      This directory contains a table of CRISM low-rate telemetry in raw
+      counts, from the beginning of a UTC calendar day to its end. This
+      is used in preference to the telemetry attached to each image for
+      correction of thermal effects, because of uncorrectable artifacts
+      in the raw values of critical temperature measurements in the
+      image headers.
+ 
+      YYYY_DOY/UB directory:
+      ----------------------
+      This directory contains CDR4s representing pixel-by-pixel
+      uncertainties in VNIR bias or IR background images. There are
+      separate files for each frame rate, exposure time, wavelength
+      filter, and binning state, time-stamped for their mean time of
+      acquisition. This product is not a part of the nominal data
+      processing pipeline and instead is used to monitor detector
+      health.
+ 
+      YYYY_DOY/ATF directory:
+      ----------------------
+      This directory contains a table of EDRs containing scene data and
+      the corresponding EDRs containing time-dependent calibration
+      measurements needed to calibrate the scene EDRs. It is used to
+      process calibration EDRs to CDRs, and scene EDRs to TRDRs. If
+      there is a discrepancy between the actual EDRs used for
+      calibration and the predicted EDRs (in the BTF directory), the
+      TRDRs resulting from scene EDRs are quality-flagged.
+ 
+      YYYY_DOY/BTF directory:
+      ----------------------
+      This directory contains a predicted table of EDRs containing scene
+      data and the corresponding EDRs containing time-dependent
+      calibration measurements.  It is constructed from uplinked
+      commands.
+ 
+      AS directory:
+      -------------
+      This CDR6 gives the maximum expected 14-bit scene or sphere 14-bit
+      DN level (units from the detector, after correction for the pixel
+      processing table and subtraction of bias) for core observation
+      types to be made by CRISM.  There are 5 core observation types
+      defined by combinations of frame rate, exposure time, and scene: 1
+      Hz observation, exposure parameter 27, observing the internal
+      integrating sphere; 3.75 Hz, exposure parameter 301, observing a
+      nominally non-ice region of Mars; 3.75 Hz, exposure parameter 147,
+      observing a potentially ice-containing region; 15 Hz, exposure
+      parameter 425, observing any region; and 30 Hz, exposure parameter
+      425, observing any region. The values given here are used with
+      bias images in the YYYY_DOY/BI directories to generate masks of
+      probably bad pixels (in the YYYY_DOY/BI directories).
+ 
+      AT directory:
+      -------------
+      This CDR4 gives the atmospheric transmission as measured from a
+      nadir-pointed hyperspectral scan across Olympus Mons, taken 27
+      November 2006. It is not used during calibration to radiance or
+      I/F; instead it is intended for subsequence correction for
+      atmospheric attenuation. There is a different version for each
+      detector, wavelength filter, and binning state.
+ 
+      BS directory:
+      -------------
+      This CDR6 gives the amplitude of the bias step correction for each
+      detector as a function of frame rate and quadrant. The bias step
+      is a step function in detector bias that occurs at a row number
+      (band) correlated with exposure time parameter.
+ 
+      BW directory:
+      -------------
+      This CDR6 gives the parameters to calculate the spectral profile
+      for each wavelength bin averaged over IR columns 270-369 or VNIR
+      columns 260-359.  This represents the &apos;sweet spot&apos; of each
+      detector at which spectral smile and keystone are minimum, and is
+      the preferred detector location for extraction of overlapping data
+      for analysis of emission phase functions.
+ 
+      CM directory:
+      -------------
+      This CDR4 gives the along-slit angle measured from slit center for
+      each detector. It is similar to the SPICE Instrument Kernel. There
+      is a different version for each detector, wavelength filter, and
+      binning state.
+ 
+      CT directory:
+      ------------
+      This CDR6 gives the atmospheric transmission for each wavelength
+      bin averaged over IR columns 270-369 or VNIR columns 260-359. This
+      represents the &apos;sweet spot&apos; of each detector at which spectral
+      smile and keystone are minimum, and is the preferred detector
+      location for extraction of overlapping data for analysis of
+      emission phase functions. It is a sample of the &apos;native&apos; atmospheric
+      transmission images in the AT directory.
+ 
+      DB directory:
+      -------------
+      This CDR6 gives the correction to detector bias for changes in
+      detector temperature since the last bias measurement, as a
+      function of frame rate and quadrant.
+ 
+      DM directory:
+      -------------
+      This CDR4 is a mask of detector dark columns, scattered light
+      columns, and scene columns for each detector. There is a different
+      version for each wavelength filter and binning state.
+ 
+      EB directory:
+      -------------
+      This CDR6 gives the correction to detector bias for differences in
+      focal plane electronics temperature since the last bias
+      measurement, as a function of frame rate and quadrant.
+ 
+      GH directory:
+      -------------
+      This CDR6 gives the scaling factors needed for each frame rate to
+      calculate and subtract the inter-quadrant electronics ghost in
+      each detector, using bias-corrected signal.
+ 
+      HD directory:
+      -------------
+      This CDR6 gives the coefficients for correcting raw housekeeping
+      for perturbations due to changes in lamp or cooler state and frame
+      rate. There is one file for both detectors.
+ 
+      HK directory:
+      -------------
+      This CDR6 gives the coefficients to convert housekeeping
+      parameters from raw counts to physical units.
+ 
+      HV directory:
+      -------------
+      This CDR6 gives the coefficients to correct housekeeping voltages
+      for perturbations due to changes in current.
+ 
+      LC directory:
+      -------------
+      This CDR6 gives the coefficients to correct bias-subtracted DN
+      from each detector at each frame rate for non-linearity in
+      detector response.
+ 
+      LI directory:
+      -------------
+      This CDR6 gives 8 to 12 bit lookup tables (inverse of 12 to 8).
+      These are used to restore 8-bit to 12-bit DN values.
+ 
+      LK directory:
+      -------------
+      This CDR6 gives 12 to 8 bit lookup tables loaded in the CRISM
+      instrument.
+ 
+      LL directory:
+      -------------
+      This CDR4 contains matrices to remove estimated leaked higher
+      order light in the IR detector, by scaling shorter-wavelength
+      signal and subtracting it from longer-wavelength signal.
+ 
+      NU directory:
+      -------------
+      This CDR4 is a time-tagged, row-normalized measurement of detector
+      nonuniformity. There is one version for each binning state,
+      wavelength filter, and frame rate. It is only created for the VNIR
+      detector.
+ 
+      PP directory:
+      -------------
+      This CDR6 contains the gain and offset to use for each row to
+      convert 12-bit DNs to the native 14-bit DNs produced by each
+      detector, and the 12 to 8 bit lookup tables used for each detector
+      row (band) when lossy compression is employed.
+ 
+      PS directory:
+      -------------
+      This CDR4 is used for nearest neighbor spectral resampling. It
+      gives the number of detector rows (bands) by which to shift each
+      column (sample) of an image to minimize the effects of spectral
+      smile. The effect of the pixel shift is to restore the wavelength
+      at a detector element to within one-half detector element of the
+      wavelength in the central columns of the detector.  (The
+      wavelength and spectral bandwidth in the central columns are given
+      in the SW and BW directories respectively.) There is a different
+      version for each detector, wavelength filter, and binning.
+ 
+      RA directory:
+      -------------
+      This CDR4 contains the ratio of focal plane lamp illumination to
+      an external flat field, normalized on a row-by-row basis. This is
+      a contingency and not part of the normal calibration pipeline, so
+      its creation is TBD. There is a different version for each
+      detector, wavelength filter, and binning.
+ 
+      RF directory:
+      -------------
+      This CDR4 contains a nearest-neighbor resampled solar flux image.
+      It is related to the &apos;native&apos; solar flux images in the SF
+      directory by the pixel- shifting given in the PS directory. There
+      is a different version for each detector, wavelength filter, and
+      binning.
+ 
+      RT directory:
+      -------------
+      This CDR4 gives the atmospheric transmission as measured from a
+      nadir-pointed hyperspectral scan across Olympus Mons, taken 27
+      November 2006. It has been nearest-neighbor resampled in the
+      spectral direction. It is not used during calibration to radiance or
+      I/F; instead it is intended for subsequence correction for
+      atmospheric attenuation. It is related to the &apos;native&apos; atmospheric
+      transmission images in the AT directory by the pixel- shifting
+      given in the PS directory. There is a different version for each
+      detector, wavelength filter, and binning. There is a different
+      version for each detector, wavelength filter, and binning state.
+ 
+      RW directory:
+      -------------
+      This CDR4 contains a nearest-neighbor resampled wavelength image.
+      It is related to the &apos;native&apos; wavelength images in the WA
+      directory by the pixel- shifting given in the PS directory. There
+      is a different version for each detector, wavelength filter, and
+      binning.
+ 
+      SB directory:
+      -------------
+      This CDR4 contains the spectral bandpass width for each detector
+      element.  There is a different version for each detector,
+      wavelength filter, and binning.
+ 
+      SF directory:
+      -------------
+      This CDR4 contains solar flux at 1 AU for each detector element.
+      There is a different version for each detector, wavelength filter,
+      and binning. It is used together with the solar distance given in
+      an EDR or TRDR label to calculate I/F.
+ 
+      SH directory:
+      -------------
+      This 2-layer CDR4 is used to correct flight measurements of the
+      onboard integrating sphere for effects of shutter position
+      irreproducibility. Layer 0 is a corrected sphere image from ground
+      radiometric calibration in units of 14-bit DN.  Layer 1 is a
+      shutter mirror non-repeatability correction image, a
+      multiplicative correction that gets scaled by the ratio of layer 0
+      to the measured flight sphere image. There is a different version
+      for each detector, wavelength filter, and binning.
+ 
+      SL directory:
+      -------------
+      This CDR6 gives the 14-bit DN at which each detector is saturated,
+      as a function of quadrant and frame rate.
+ 
+      SS directory:
+      -------------
+      This 3-layer CDR4 gives sphere spectral radiance at the
+      closed-loop set point for each sphere bulb, as pixel by pixel
+      coefficients to a 2nd order polynomial function of sphere
+      temperature. There is a different version for each detector,
+      wavelength filter, and binning.
+ 
+      SW directory:
+      -------------
+      This CDR6 gives the center wavelength for each wavelength bin
+      averaged over IR columns 270-369 or VNIR columns 260-359. This
+      represents the &apos;sweet spot&apos; of each detector at which spectral
+      smile and keystone are minimum, and is the preferred detector
+      location for extraction of overlapping data for analysis of
+      emission phase functions.
+ 
+      TD directory:
+      -------------
+      This CDR4 gives temperature dependence of detector responsivity,
+      as pixel by pixel coefficients to a 2nd order polynomial function
+      of detector temperature. There is a different version for each
+      detector, wavelength filter, and binning.
+ 
+      UR directory:
+      -------------
+      This CDR6 gives uncertainty in absolute and relative sphere
+      signal, for each bulb. This product is not a part of the nominal
+      data processing pipeline and its creation is TBD; it is intended
+      for end users of calibrated data as an indication of limits to
+      data interpretation.
+ 
+      VL directory:
+      -------------
+      This CDR6 gives the 14-bit DN at which each detector -
+      ON AVERAGE - is saturated. It is used together with the predicted
+      limiting case expected 14-bit scene DN levels (in the AS
+      directory) to produce bad pixel maps. It also gives additional
+      criteria for defining a bad pixel, thresholds for noise and
+      relative pixel response.
+ 
+      WA directory:
+      -------------
+      This CDR4 gives the center wavelength for each detector element.
+      There is a different version for each detector, wavelength filter,
+      and binning.
+ 
+      WV directory:
+      -------------
+      This CDR6 gives the table of detector rows (bands) loaded into
+      wavelength filters 0-3. There is one version for each detector.
+ 
+ 
+    File Naming Convention
+    ======================
+ 
+      The file naming convention for level-6 CDRs is as follows.
+ 
+      (ProductType)(Level)_(Partition)_(Time)_(Product)_
+                                    (SensorID)_version.(Ext)
+ 
+      where:
+      Product Type = CDR
+      Level = 6
+      Partition = n, partition of the spacecraft clock.
+      Time = nnnnnnnnnn, spacecraft start time of applicability of data
+             product; units are spacecraft clock counts, in units of
+             whole seconds.
+      Product = nn, acronym describing data product listed above
+      Sensor ID = S or L (or J=joint)
+      Version = 0, 1,..., 9, a,..., z
+      Ext = TAB
+ 
+      The file naming convention for level-4 CDRs is as follows.
+ 
+      (ProductType)(Level)(Partition)(Time)_
+                  (Product)(FrameRate)(Binning)
+                  (ExposureParameter)(WavelengthFilter)
+                  (Side)(SensorID)_ version.(Ext)
+ 
+      where:
+      Product Type = CDR
+      Level = 4
+      FrameRate = n, rate in Hz at which data are taken (0=1 Hz,
+                  1=3.75 Hz, 3=156 Hz, 4=30 Hz, 5 = N/A)
+      Binning = n, number of spatial pixels binned
+                  (0=unbinned, 1= 2x binned, 2= 5x binned,
+                   3= 10x binned, 4=N/A)
+      Exposure parameter = nnn, an integer 1-480 indicating commanded
+                           exposure time in units of (inverse frame
+                           rate)/480; 000 if inapplicable
+      Wavelength filter = n, and integer 0-3 indicating which onboard
+                          menu of rows of the detector are represented
+      Side = #, 1 or 2 for focal plane or sphere bulbs; or 0 if N/A
+      Ext  = IMG
+ 
+      The tables in the YYYY_DOY/ATF and YYYY_DOY/BTF directories have a
+      different file naming convention, as follows.
+ 
+      (Product)_(Sensor)_(YYYY)_(DOY)_version
+ 
+      where:
+      Product Type = BTF for before-the-fact predicted or ATF for
+                     after-the-fact actual
+      Sensor = VN or IR
+      YYYY = year
+      DOY = day of year
+      Version = nn
+ 
+ 
+    Media/Format
+    ============
+ 
+      The CRISM archive will be made available online via Web and FTP
+      servers.  This will be the primary means of distribution.
+      Therefore the archive will be organized as a set of virtual
+      volumes, with each data set stored online as a single volume. As
+      new data products are released they will be added to the volume&apos;s
+      data directory, and the volume&apos;s index table will be updated
+      accordingly. The size of the volume will not be limited by the
+      capacity of the physical media on which it is stored; hence the
+      term virtual volume.  When it is necessary to transfer all or part
+      of a data set to other media such as DVD for distribution or for
+      offline storage, the virtual volume&apos;s contents will be written to
+      the other media according to PDS policy, possibly dividing the
+      contents among several physical volumes.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      This is a TBD data set.  Known problems are TBD.
+ 
+ 
+    Review
+    ======
+      This archival data set will be examined by a peer review panel
+      prior to its acceptance by the Planetary Data System (PDS).  The
+      peer review will be conducted in accordance with PDS procedures.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+ 
+      The major data quality issue in the production of CDRs is the
+      occurrence of cosmic rays.  All of the CDRs are generated from
+      mulitiple frames in an EDR and, in some cases, from a combination
+      of mulitple EDRs.
+ 
+      The CDRs are generated by sampling multiple frames of an EDR.  In
+      order to eliminate cosmic rays, the top and bottom two DN values
+      at each pixel location are discarded.  This will also have the
+      effect of removing extraneous noise.  Filtering of the cosmic rays
+      by this method eliminates much of the systematic error in
+      producing CDRs.
+ 
+      If no valid data are available to create a particular CDR, the
+      next closest CDR created in time must be used in the processing of
+      EDRs to RDRs.  If this situation occurs, byte 12 of the Data
+      Quality Index in the resulting RDR is populated according to
+      section 2.5.2 of the Data Product Software Interface
+      Specification.
+ 
+ 
+    Limitations
+    ===========
+      None.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

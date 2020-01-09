@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.grail-l-lgrs-3-cdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GRAIL MOON LGRS CALIBRATED AND RESAMPLED SCIENCE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.gravity_recovery_and_interior_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.grail-a::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lgrs-a.grail-a::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-lgrs-3-cdr-v1.0__browserp_grail-l-lgrs-3-cdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-lgrs-3-cdr-v1.0__dvo_grail-l-lgrs-3-cdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kahan, D.S., GRAIL Data Product Software Interface Specification, Jet
+                   Propulsion Laboratory, 2012.
+            </reference_text>
+            <description>reference.KAHAN2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GRAIL-L-LGRS-3-CDR-V1.0</data_set_id>
+        <data_set_name>GRAIL MOON LGRS CALIBRATED AND RESAMPLED SCIENCE V1.0</data_set_name>
+        <data_set_release_date>2014-04-01</data_set_release_date>
+        <start_time>2012-03-01</start_time>
+        <stop_time>2012-12-18</stop_time>
+        <producer_full_name>DANIEL S. KAHAN</producer_full_name>
+        <citation_text>
+            KAHAN, D.S., GRAIL LGRS Calibrated and Resampled Science Data Set
+            V1.0, GRAIL-L-LGRS-3-CDR-V1.0, NASA Planetary Data System, 2012.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated and resampled data from the Lunar Gravity and Ranging
+            System (LGRS) on each of the two spacecraft comprising the
+            Gravity Recovery and Interior Laboratory (GRAIL) mission
+            [KAHAN2012].
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains calibrated and resampled engineering
+            (e.g., star tracker data and timing) and science data acquired
+            from the Lunar Gravity and Ranging System (LGRS) on the two
+            spacecraft comprising the Gravity Recovery and Interior
+            Laboratory (GRAIL) mission. The data in the set are at NASA Level
+            1 and have been archived for general use. Products in this set
+            have been derived from NASA Level 0 (the LGRS EDR data set) by
+            the GRAIL Science Data System (SDS). The observations were used
+            to generate high-resolution gravity field models of the Moon. The
+            data set includes all of the Level 1 LGRS data from the GRAIL
+            mission (March-December 2012).
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Gravity Recovery and Interior Laboratory (GRAIL) Lunar
+      Gravity Ranging System (LGRS) Calibrated Data Record Archive is
+      a time-ordered collection of processed data collected during the
+      GRAIL mission to the Moon.
+ 
+      The DATA_SET_ID &apos;GRAIL-L-LGRS-3-CDR-V1.0&apos; includes the following
+      components:
+          Instrument host (i.e., &apos;GRAIL&apos;)
+          Target (i.e., &apos;L&apos; for Lunar)
+          Instrument (i.e., &apos;LGRS&apos; for Lunar Gravity Ranging System)
+          CODMAC Data processing level number (i.e., &apos;3&apos;)
+          Description (i.e., &apos;CDR&apos; for Calibrated Data Record)
+          Version number (i.e., &apos;V1.0&apos;)
+ 
+      This data set was derived from data collected during
+      March-December 2012.
+ 
+      Data in this set have been created from the Level 0 files in the
+      LGRS EDR data set. They are distinguished by two processing
+      levels, 1A and 1B.
+ 
+      Level 1A comprises edited data that are still in units produced
+      by the instrument but that have been corrected so that values
+      are expressed in or are proportional to some physical unit such
+      as meters per second.
+ 
+      Level 1B data have been resampled in the time or space domains
+      in such a way that the original edited data cannot be
+      reconstructed. Some of these data may also have been calibrated
+      in addition to being resampled.
+ 
+      Typical users of GRAIL products interested in original
+      measurements will use this data set. The data of primary
+      interest will be the KBR1C and SBR1B files.
+ 
+ 
+    Parameters
+    ==========
+ 
+      All forty-three LGRS CDR file types are in ASCII format. Most of
+      the file types are spacecraft-specific. Types DEL1A, PLT1A,
+      TC61A, KBR1C, and SBR1B apply to both spacecraft together, as
+      they convey a relationship between the two.
+ 
+      Some of the parameters conveyed by the data include conversions
+      between different time frames, locations of data sources within
+      the spacecraft frame, information about spacecraft health, and
+      ranging measurements made by the LGRS. See Data section below
+      for more specific information about data parameters.
+ 
+      Each Level 1A or 1B product is accompanied by a minimal PDS
+      label that points to the relevant table in the data product
+      SIS (DPSIS.PDF, DOCUMENT directory).
+ 
+ 
+    Processing
+    ==========
+ 
+      The GRAIL Science Data System (SDS) is defined as the
+      infrastructure at NASA&apos;s Jet Propulsion Laboratory (JPL) for the
+      collection of all science and ancillary data relevant to the
+      GRAIL mission. It includes hardware, software tools, procedures,
+      and trained personnel. The SDS receives data and carries out
+      calibration, editing, and processing to produce NASA Level 1A
+      and 1B GRAIL science data
+ 
+      The SDS creates edited data that are still in units produced by
+      the instrument, but that have been corrected so that values are
+      expressed in or are proportional to some physical unit such as
+      radiance. No resampling is done, so original values can be
+      recovered.
+ 
+      Level 1B data have been resampled in the time or space domains
+      in such a way that the original edited data cannot be
+      reconstructed. They could be calibrated in addition to being
+      resampled.
+ 
+      Level 1A and 1B files have been processed from the Level 0 files
+      in the LGRS EDR data set by the GRAIL SDS at JPL; they are
+      constructed so that each file contains the data for one day.
+ 
+      The Algorithm Theoretical Basis Document (ATDB.PDF) in the
+      DOCUMENT directory describes the data processing flow from EDR
+      to CDR as implemented by the GRAIL Team.
+ 
+      GRAIL timing requires coordination of three clocks on each
+      satellite, and two time standards:
+      1. LGRS: Lunar Gravity Ranging System clock. Very stable clock
+         for on-board Ka-band ranging (KBR), X-band (RSB), and S-band
+         Time Transfer System (TTS) instruments. Driven by an
+         Ultra-Stable Oscillator (USO). Set to 0 when booted. Produces
+         a pulse per second (pps) signal. LGRS time starts at 0
+         seconds when powered on. The SDS adds a bias to LGRS time to
+         create an approximate UTC time tag. This time will be
+         referred to as LGRS + bias.
+      2. BTC: Base Clock Time. On-board satellite clock, comparable in
+         stability to a wristwatch. Roughly synced to UTC at launch
+         time.
+      3. RTC: Real Clock Time. Flight software clock. Set to 0 when
+         booted. Relatively unstable clock.
+      4. UTC: Coordinated Universal Time.
+      5. TDB: Barycentric Dynamical Time.
+ 
+ 
+    Data
+    ====
+ 
+      All forty-three LGRS CDR file types are in ASCII format.  Types
+      DEL1A, PLT1A, TC61A, KBR1C, and SBR1B apply to both spacecraft
+      together, as they convey a relationship between the two; all of
+      the other file types have separate files for each spacecraft.
+ 
+      LGRS to TDB time correlation (CLK1A)
+      ------------------------------------------------------
+        Time correlation between LGRS time + bias and TDB time.
+        Clock: LGRS time + Bias
+ 
+ 
+      Inter-satellite LGRS clock offset between spacecraft (DEL1A)
+      ------------------------------------------------------
+        Inter-satellite LGRS clock offset between spacecraft by TDB
+        time. One file combined for BOTH spacecraft.
+        Clock: LGRS time + Bias
+ 
+ 
+      Spacecraft temperature sensor data from Engineering
+      Housekeeping data (EHK1A)
+      ------------------------------------------------------
+        EHK1A contains temperature sensor data for locations near LGRS
+        instruments.
+        Clock: UTC
+ 
+      LGRS Housekeeping Data (IHK1A)
+      ------------------------------------------------------
+        Housekeeping data for the LGRS in IHK1A includes voltage,
+        temperature, and current measurements.
+        Clock: LGRS time + Bias
+ 
+      LGRS Health Status data (IHS1A)
+      ------------------------------------------------------
+        IHS1A includes other LGRS status data.
+        Clock: LGRS time + Bias
+ 
+      LGRS log messages (ILG1A)
+      ------------------------------------------------------
+        ILG1A contains log messages from the LGRS.
+        Clock: LGRS time + Bias
+ 
+      Ka-Band Ranging Data (KBR1A)
+      ------------------------------------------------------
+        KBR1A records raw carrier-phase measurements, flagged for
+        phase breaks. Gaps of up to 2 seconds are filled in by
+        quadratic interpolation; longer gaps are classified as
+        missing data.
+        Clock: LGRS time + Bias
+ 
+      Position vector and light time between one spacecraft and DSN
+      station (LTM1A)
+      ------------------------------------------------------
+        From the best ephemeris solution, spacecraft to DSN relative
+        position and light time are computed in the EME 2000
+        Lunar-Centered Solar System Barycentric Frame
+        Clock: TDB
+ 
+      Satellite Mass Data (MAS1A)
+      ------------------------------------------------------
+        MAS1A lists spacecraft mass as a function of UTC time
+        Clock: UTC
+ 
+      Phase Center to Center of Mass Correction
+      ------------------------------------------------------
+        PCI1A lists Ka-band antenna range corrections, range rate
+        corrections, and range acceleration corrections.
+        Clock: TDB
+ 
+      Position vector and light time between two spacecraft (PLT1A)
+      ------------------------------------------------------
+        From the best ephemeris solution, spacecraft to DSN relative
+        position and light time are computed in the EME 2000
+        Lunar-Centered Solar System Barycentric Frame, and spacecraft
+        to spacecraft relative position and light time are computed
+        in the DE 421 Lunar Body-Fixed Frame. One file combined for
+        BOTH spacecraft.
+        Clock: TDB
+ 
+      LGRS Pulse Per Second (PPS) Time Record (PPS1A)
+      ------------------------------------------------------
+        A PPS1A product lists the LGRS time of PPS signals.
+        Clock: LGRS time + Bias
+ 
+      Relativistic time correction (REL1A)
+      ------------------------------------------------------
+        An approximation of the relativistic time correction from TDB
+        to on-board satellite proper time is calculated in the REL1A
+        product, treating the Moon as a point mass.
+        Clock: TDB
+ 
+      Solar Array Eclipse Data (SAE1A)
+      ------------------------------------------------------
+        SAE1A lists solar array short circuit currents and voltages,
+        to identify eclipse events for spacecraft ephemeris models.
+        Clock: UTC
+ 
+      S-Band Ranging Data (SBR1A)
+      ------------------------------------------------------
+        SBR1A tracks S-Band carrier phase and a modulating range code.
+        Clock: LGRS time + Bias
+ 
+      Star Tracker Data (SCA1A)
+      ------------------------------------------------------
+        Because GRAIL-A and GRAIL-B antennas are offset from the
+        spacecraft center of mass, distance between GRAIL-A and
+        GRAIL-B Ka-band antennas depends on spacecraft attitude. An
+        on-board Kalman filter processes Star Tracker attitude data
+        and Inertial Measurement Unit (IMU) angular rotation data.
+        Filtered attitudes are saved in SCA1A.
+        Clock: BTC
+ 
+      S-Band navigation product (SNV1A)
+      ------------------------------------------------------
+        The SNV1A S-band navigation product contains ancillary
+        information for the Time Transfer System (TTS), which
+        primarily serves to tell the ground whether GRAIL-A and
+        GRAIL-B are communicating correctly with each other.
+        Clock: LGRS time + Bias
+ 
+      LGRS to BTC time correlation (TC11A)
+      ------------------------------------------------------
+        LGRS to BTC time correlation, approximated by flight software.
+        Clock: LGRS time + Bias
+ 
+      LGRS to BTC time correlation from BTC clock cycle counts (TC21A)
+      ------------------------------------------------------
+        LGRS to BTC time correlation from BTC clock cycle counts. More
+        accurate mapping than TC11A.
+        Clock: LGRS time + Bias
+ 
+      BTC to RTC time correlation (TC31A)
+      ------------------------------------------------------
+        BTC to RTC time correlation.
+        Clock: BTC
+ 
+      LGRS to RTC time correlation (TC41A)
+      ------------------------------------------------------
+        LGRS to RTC time correlation.
+        Clock: LGRS time + Bias
+ 
+      RTC to UTC time correlation (TC51A)
+      ------------------------------------------------------
+        RTC to UTC time correlation.
+        Clock: RTC
+ 
+      UTC to TDB time correlation (TC61A)
+      ------------------------------------------------------
+        UTC to TDB time correlation. One product applies to both
+        spacecraft.
+        Clock: UTC
+ 
+      Thruster Activation Data (THR1A)
+      ------------------------------------------------------
+        THR1A contains thruster activation data, including time tags,
+        cumulative work cycles by thruster, current thruster on time,
+        and cumulative thruster on time.
+        Clock: UTC SCET
+ 
+      Oscillator frequency data (USO1A)
+      ------------------------------------------------------
+        Radio Science Receivers (RSR, in RSS_EDR data set), located at
+        DSN sites, record X-band Radio Science Beacon (RSB) signals.
+        Since the LGRS clock drives the RSB, LGRS frequency at TDB
+        can be estimated for USO1A.
+        Clock: TDB
+ 
+      Center of mass displacement from spacecraft mechanical frame
+      origin (VCM1A)
+      ------------------------------------------------------
+        VCM1A describes center of mass displacement from the
+        spacecraft mechanical frame origin.
+        Clock: UTC SCET
+ 
+      Wheel Rotational Speed Data (WRS1A)
+      ------------------------------------------------------
+        WRS1A describes rotational wheel speed of each of four
+        Reaction wheels as determined by a digital tachometer.
+        Clock: UTC
+ 
+      LGRS to TDB time correleation (CLK1B)
+      ------------------------------------------------------
+        Best estimate of LGRS to TDB time correlation.
+        Clock: LGRS time + Bias
+ 
+      Spacecraft temperature sensor data from Engineering Housekeeping
+      data (EHK1B)
+      ------------------------------------------------------
+        EHK1B contains temperature sensor data for locations near LGRS
+        instruments. Same as EHK1A, except in TDB time.
+        Clock: TDB
+ 
+      GRAIL satellite orbit solution in Moon centered Inertial frame
+      (GNI1B)
+      ------------------------------------------------------
+        Best estimate of spacecraft ephemeris in EME 2000
+        Lunar-Centered Solar System Barycentric Frame.
+        Clock: TDB
+ 
+      Satellite orbit Solution in lunar body fixed frame (GNV1B)
+      ------------------------------------------------------
+        Best estimate of spacecraft ephemeris in DE 421 Lunar
+        Body-Fixed Frame.
+        Clock: TDB
+ 
+      Dual-One-Way Ka-Band Ranging Data (KBR1C)
+      ------------------------------------------------------
+        KBR1C contains biased dual one-way range between GRAIL-A and
+        GRAIL-B, digitally filtered, but not corrected for time of
+        flight or antenna offset. After the dual one-way range
+        combination has been formed, gaps of up to 20 seconds are
+        filled in by quadratic interpolation. KBR1C also contains
+        corrections for time of flight and antenna offset from center
+        of mass.
+ 
+        In addition, KBR1C also contains the first and second
+        derivatives of the biased dual one-way range between GRAIL-A
+        and -B and associated time of flight and antenna offset
+        corrections.
+ 
+        In general, the instantaneous range, range rate, and range
+        acceleration is used for scientific analysis. The
+        instantaneous range, range rate, and range acceleration are
+        computed by adding the time of flight correction and antenna
+        offset correction to the dual one-way range, range rate, or
+        range acceleration measurement.
+ 
+        This (level 1B) product is designated as &apos;1C&apos; to distinguish it
+        from earlier versions of KBR1B which did not contain an
+        additional four columns of information on the temperature range
+        corrections. The raw temperature range correction, filtered
+        temperature range correction, filtered temperature range rate
+        correction, and filtered temperature range acceleration
+        correction are the final four columns of the KBR1C product.
+ 
+        One file combined for BOTH spacecraft.
+        Clock: TDB
+ 
+      Spacecraft Mass Data (MAS1B)
+      ------------------------------------------------------
+        MAS1B lists spacecraft mass as a function of time. Same as
+        MAS1A except in TDB time rather than UTC SCET.
+        Clock: TDB
+ 
+      Solar Array Eclipse Data (SAE1B)
+      ------------------------------------------------------
+        SAE1B lists solar array short circuit currents and voltages,
+        to identify eclipse events for spacecraft ephemeris models.
+        Same as SAE1A except time-tagged by TDB rather than UTC SCET.
+        Clock: TDB
+ 
+      Dual one-way S-Band Ranging data (SBR1B)
+      ------------------------------------------------------
+        S-Band Carrier phase and a modulating range code are tracked
+        in SBR1B. In SBR1B, a more accurate range is produced by
+        carrier smoothing over each arc. One file combined for BOTH
+        spacecraft.
+        Clock: TDB
+ 
+      Star Tracker Data (SCA1B)
+      ------------------------------------------------------
+        Because GRAIL-A and GRAIL-B antennas are offset from the
+        spacecraft center of mass, distance between GRAIL-A and
+        GRAIL-B Ka-band antennas depends on spacecraft attitude. An
+        on-board Kalman filter processes Star Tracker attitude data
+        and Inertial Measurement Unit (IMU) angular rotation data.
+        Filtered attitudes are saved in SCA1B. Same as SCA1A except
+        time tagged by TDB rather than BTC time.
+        Clock: TDB
+ 
+      Thruster Activation Data (THR1B)
+      ------------------------------------------------------
+        THR1A contains thruster activation data, including time tags,
+        cumulative work cycles by thruster, current thruster on time,
+        and cumulative thruster on time. Same as THR1A except
+        time-tagged by TDB rather than UTC SCET.
+        Clock: TDB
+ 
+      USO Frequency Estimate (USO1B)
+      ------------------------------------------------------
+        Best estimate of LGRS frequency at TDB.
+        Clock: TDB
+ 
+      Center of mass displacement from spacecraft mechanical frame
+      origin (VCM1B)
+      ------------------------------------------------------
+        VCM1B describes center of mass displacement from the
+        spacecraft mechanical frame origin (See section 4.3.2 of
+        [Kahan2012]). Same as VCM1A except
+        lists results relative to TDB rather than UTC SCET.
+        Clock: TDB
+ 
+      S-Band antenna switch time (VGS1B)
+      ------------------------------------------------------
+        GRAIL transmits information to the Deep Space Network using
+        S-band. S-band communication from each GRAIL spacecraft to
+        the DSN depends on a pair of low-gain antennas (LGAs),
+        located on opposite sides of the spacecraft. At a given TDB,
+        only one antenna can communicate with the DSN. The VGS1B
+        product contains a list of the TDB times at which the antennas
+        are switched, with the Mechanical Frame (MF) vector of the
+        new transmitting antenna phase center.
+        Clock: TDB
+ 
+      X-Band antenna switch time (VGX1B)
+      ------------------------------------------------------
+        Each GRAIL spacecraft transmits an unmodulated X-band carrier
+        to the DSN through one of a pair of Radio Science Beacons
+        (RSB). The VGX1B product contains a list of the TDB times at
+        which beacons are switched, with the Mechanical Frame vector
+        of the new transmitting beacon phase center.
+        Clock: TDB
+ 
+      Ka-Band Boresight Vector (VKB1B)
+      ------------------------------------------------------
+        The VKB1B file is the Ka boresight vector, as a result of
+        Ka-Band boresight calibration analysis.
+        Clock: TDB
+ 
+      Wheel Rotational Speed Data (WRS1B)
+      ------------------------------------------------------
+        WRS1B describes rotational wheel speed of each of four
+        Reaction wheels as determined by a digital tachometer.
+        Clock: TDB
+ 
+    Naming Conventions
+    ==============================================
+      For all LGRS data, the product identifier, in conjunction with
+      either a date or a range of dates in a specified format,
+      determines the filename containing the data product.
+ 
+      The file naming convention for all Level 1A/1B LGRS products is:
+ 
+        PRDID_YYYY_MM_DD_S_VV.EXT
+ 
+        where
+ 
+        PRDID   product identification label, e.g. CLK1B
+        YYYY    year
+        MM      month
+        DD      day of month
+        S       GRAIL satellite identifier:
+                        A     GRAIL-A
+                        B     GRAIL-B
+                        X     combined product of GRAIL-A and GRAIL-B
+        VV      data product version number (starting from 00)
+        EXT     file extension indicating binary (DAT) or ASCII (ASC)
+                files
+ 
+      The Product ID (PRDID) is of the form XXXLL, where:
+        XXX     is a three-character mnemonic, and
+        LL      specifies the data product Level (00, 1A, 1B).
+ 
+ 
+    Files in the CALIB Directory
+    =============================
+      Files in the CALIB directory are those likely to have wide
+      applicability in working with the raw data.
+ 
+      One file, GRAILCOMPONENTS.TXT is included in the CALIB
+      directory. It describes the Spacecraft bus component model with
+      dimensions and orientations, as well as the spacecraft
+      components specular/diffuse reflectivity properties.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at JPL and elsewhere. Because such
+      software must usually operate at the bit-level and is written
+      for a narrow range of platforms, it is not suitable for general
+      distribution. No software is included with this archival data
+      set.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been collected to support
+      derivation of the gravity field of the Moon. These are similar
+      to data collected with the GRACE spacecraft and are believed to
+      be generally of good quality.
+ 
+ 
+    Review
+    ======
+      Data validation occurs in three steps: validation of the data
+      themselves, validation of the correctness and completeness of
+      the data set documentation, and validation of the compliance of
+      the archive with PDS standards. The primary method by which
+      Science Team members validated the various archive products was
+      by using them for science. Calibrated data files (CDRs) were
+      derived from the raw data files (EDRs) in the archive; then
+      reduced data records (RDRs) were created from the archival CDRs.
+      Errors in the raw and calibrated data products were caught by
+      the Science Team in this process.
+ 
+      In addition, this archive underwent PDS external review from
+      August 31, 2012 to November 30, 2012.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Files in this data set were constructed to cover one day each.
+ 
+      Data coverage includes the science phase (March 1, 2012, to May
+      29, 2012), the extended mission phase (August 29, 2012, to
+      December 12, 2012), and the decommissioning phase (December 12,
+      2012, to December 18, 2012) as described in the mission catalog.
+ 
+      The GRAIL science orbits for the primary mission are based on
+      Deep Space Network one-way Doppler and two-way Doppler tracking
+      data. In addition, the inter-satellite range rate measurements
+      were included in the orbit determination process. The gravity
+      field used for the GRAIL science orbits is a GRAIL internal
+      gravity field of degree and order 420 (420b8a), which had all
+      primary mission inter-satellite range data included. The
+      resulting orbit accuracy of the orbit in absolute sense is at
+      the meter level and in relative range rate error between the
+      spacecraft is better than 20 micrometers/sec.
+ 
+ 
+    Limitations
+    ===========
+      Certain spacecraft events have an impact on the science
+      processing. These events include propulsive maneuvers, Ka
+      boresight calibration attitude maneuvers, telecommunication
+      configuration changes, and Lunar Gravity Ranging System (LGRS)
+      events.
+ 
+      Both spacecraft performed propulsive maneuvers. The mass change
+      history for both spacecraft can be found in the MAS1A/B Level-1
+      products, and the thruster on-times are available in the THR1A/B
+      level-1 products. LGRS measurements are taken during the
+      propulsive maneuvers, but it is recommended to break science
+      data arcs at the propulsive maneuver event times, since the
+      velocity changes imparted on the spacecraft are not known with
+      sufficient accuracy for science processing.
+ 
+      LGRS measurements are taken during the angular momentum
+      desaturation maneuvers but it is recommended to break science
+      data arcs at the desaturation maneuver event times, since the
+      velocity changes imparted on the spacecraft are not known with
+      sufficient accuracy for science processing. For detailed
+      thruster on time histories see level-1 product THR1A/B.
+ 
+      The LGRS Gravity Processor Assemby (GPA) rebooted several times
+      resulting in the loss of Ka range and the Time Transfer System
+      (TTS) observables for about 1.5 minutes. After a GPA reboot the
+      LGRS clock is synched with the LGRS clock on the non-rebooting
+      spacecraft using the TTS system. GPA reboots will cause a gap in
+      the inter-satellite range data products (KBR1B, SBR1B) of about
+      2 minutes.
+ 
+      On GRAIL-B the TTS phase measurement is reset to zero due to a
+      software bug in the LGRS software. The TTS ranging measurement
+      is not affected, but the relative LGRS clock reconstruction
+      analysis needs to be restarted at a phase reset.
+ 
+      Due to orbital viewing geometry the GRAIL spacecraft are
+      changing between the +X and -X S-band and X-band (Radio Science
+      Beacon) antennas approximately every 14 days. The complete
+      history for the antenna change are listed in the VGS1B product
+      (S-band) and VGX1B (X-band).
+ 
+      During the primary and extended missions, the GRAIL spacecraft
+      were in nominal science attitude called orbiter point attitude
+      mode. For this mode the solar arrays of the spacecraft are
+      parallel to the orbital plane and the Ka boresight vectors (2.1
+      degrees off the -Z axis in the YZ spacecraft frame) are pointed
+      in the direction of line of sight toward the other spacecraft.
+      The GRAIL spacecraft remained in orbit point attitude mode
+      except during Ka boresight vector calibration maneuvers when the
+      spacecraft performed two orthogonal slews of 3 degrees about the
+      line of sight vector between the two spacecraft. LGRS
+      measurements are taken during the maneuvers but should not be
+      used in the science processing because the measured range change
+      is the sum of orbit geometry, lunar gravity and range change
+      induced by spacecraft attitude variation. Ka boresight vector
+      data contain range corrections for the phase center to center of
+      mass offset during the maneuvers but these corrections are not
+      reliable and should not be used.
+ 
+      For specific dates of the above events, see the operational
+      considerations section in LGRS_A_INST.CAT and LGRS_B_INST.CAT.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

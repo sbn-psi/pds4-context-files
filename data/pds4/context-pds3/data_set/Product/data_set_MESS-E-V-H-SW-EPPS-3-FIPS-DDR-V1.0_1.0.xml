@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-sw-epps-3-fips-ddr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER E/V/H/SW EPPS CALIBRATED FIPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:epps.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-sw-epps-3-fips-ddr-v1.0__browserp_mess-e-v-h-sw-epps-3-fips-ddr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Andrews, G.B., T.H. Zurbuchen, B.H. Mauk, H. Malcom, L.A. Fisk, G. Gloeckler,
+                   G.C. Ho, J.S. Kelley, P.L. Koehn, T.W. LeFevere, S.S. Livi, R.A. Lundgren, and
+                   J.M. Raines, The Energetic Particle and Plasma Spectrometer instrument on the
+                   MESSENGER spacecraft, Space Science Reviews, 131, 523-556, 2007.
+            </reference_text>
+            <description>reference.ANDREWSETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H/SW-EPPS-3-FIPS-DDR-V1.0</data_set_id>
+        <data_set_name>MESSENGER E/V/H/SW EPPS CALIBRATED FIPS V1.0</data_set_name>
+        <data_set_release_date>2014-03-07</data_set_release_date>
+        <start_time>2004-09-13</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JIM RAINES</producer_full_name>
+        <citation_text>
+            Jim Raines
+        </citation_text>
+        <data_set_terse_desc>
+            The MESSENGER EPPS/FIPS DDR observations consist of observed
+            density, energy spectra, pitch angle distributions, arrival
+            direction, and kinetic properties from plasma data collected by
+            the EPPS/FIPS instrument during orbital operations of Mercury.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== This data set consists of the MESSENGER
+            Energetic Particle and Plasma Spectrometer (EPPS) calibrated
+            observations, also known as DDRs. The system encompasses 2
+            instrument subsystems - the Energetic Particle Spectrometer (EPS)
+            and the Fast Imaging Plasma Spectrometer (FIPS). This data set
+            contains FIPS instrument data. FIPS covers the energy/charge
+            range of &lt; 46 eV/q to 13 keV/q. There are five FIPS DDR data
+            products.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The data set consists of advanced data products, also known as
+      DDR/DAPs.
+ 
+      For all the DDR products there is a detached PDS label file that
+      describes the contents of one data file. Each label file will have
+      the same base name as the data file it is describing, with the
+      extension .LBL to denote a label file. The label file defines the
+      start time and end of the observation, product creation time, and
+      the structure of the binary (or ASCII) tables. Each data product
+      is identified within the PDS label by a STANDARD_DATA_PRODUCT_ID
+      value, shown in parentheses in the table below.
+ 
+      The FIPS portion of the data archive currently consists of five
+      DDR data products. The following table shows the different FIPS
+      data products and their files. Following is a description of each
+      of the current FIPS DDRs. A more complete description of each may
+      be found in the EPPS DDR SIS document, located in the DOCUMENT
+      directory of the document volume.
+ 
+ 
+      Current FIPS Data Products:
+ 
+        FIPS Observed Density (FIPS_NOBS)
+ 
+          Contains observed density (n_obs) for all major ion species as
+          well as UTC and MESSENGER position.
+ 
+        FIPS Energy Spectra (FIPS_ESPEC)
+ 
+          Contains differential energy flux at each E/q value for selected ion
+          species during selected time periods.
+ 
+        FIPS Pitch Angle Distribution (FIPS_PITCHANG)
+ 
+          Contains histograms of pitch angle in 5 degree bins for selected ion
+          species during selected time periods.
+ 
+        FIPS Pitch Arrival Direction (FIPS_ARRDIR)
+ 
+          Contains ion flux as a function of arrival direction in units of
+          (cm^2 s keV/keV sr)^-1.
+ 
+        FIPS Kinetic Properties (FIPS_NTP)
+ 
+          Contains number density (cm^-3), temperature (K) and pressure (nPa)
+          for selected major ion species over selected time periods.
+ 
+    Instrument Overview
+    ===================
+      The FIPS sensor consists of an electrostatic analyzer (ESA), located
+      at the entrance to the sensor, a post-acceleration chamber between
+      the output of the ESA and the carbon foil, and a time-of-flight
+      telescope. The ESA at the entrance to the FIPS acts as a wide-angle
+      lens for ions. It only allows ions with a specific energy/charge band
+      to enter through its output plane.
+ 
+      See the EPPSINST.CAT file for more information and
+      [ANDREWSETAL2007] for full details.
+ 
+ 
+    Calibration Overview
+    ====================
+ 
+      This data set is calibrated and noise-corrected.  Individual ion events
+      (pulse height analyzed, PHA) have been converted to observed
+      densityCount rates have been converted from raw counts to counts/sec
+      and, where possible, to fluxes.  See the DDR SIS document for details.
+ 
+ 
+    Parameters
+    ==========
+      The energy per charge (E/q) tables are programmable as described in
+      the CDR SIS document and EDR to CDR calibration document.  The
+      various adjustable parameters used in the noise removal process are
+      described in the DDR SIS.
+ 
+ 
+    Data
+    ====
+      The FIPS DDR data set products are described as follows (the STANDARD_
+      DATA_PRODUCT_ID value is given in parentheses). The notes provided
+      in brackets give the current status of the data product in version 2
+      of the data set.  Each file has an index column which contains values
+      unique for the day.  This index can be used to exactly match data in
+      one file to data in the other two.
+ 
+      FIPS Observed Density (FIPS_NOBS) is the main DDR data product. It
+      contains observed density (n_obs) for all major ion species: H+,
+      He2+, He+, O+ group and Na+ group.  This data has been noise corrected.
+      MESSENGER position information in MSO and altitude, latitude and
+      local time is also included., as well as UTC converted from MET by
+      SPICE.
+ 
+      FIPS Energy Spectra (FIPS_ESPEC) contains differential energy flux at
+      each of the 64 E/q values (0.046 - 13.3 keV/e) for selected major
+      ion species during selected time periods.
+ 
+      FIPS Pitch Angle Distribution (FIPS_PITCHANG) contains a histogram of
+      pitch angle in 5 degree bins for selected major ion species during
+      selected time periods.  Pitch angle is the angle between the particle
+      incident and the local magnetic field vector (from MAG).
+ 
+      FIPS Arrival Direction (FIPS_ARRDIR) contains ion flux as a function of
+      arrival direction in units of (cm^2 s keV/keV sr)^-1.  This product is
+      provided for selected major ion species over selected time periods.
+      When necessary, this product is provided at a lower time resolution than
+      the fundamental instrument scan, to allow accumulation of enough raw
+      data to facilitate scientific interpretation.
+ 
+      FIPS Kinetic Properties (FIPS_NTP) contains number density (cm^-3),
+      temperature (K) and pressure (nPa) for selected major ion species over
+      selected time periods.  Also included are error measures for each
+      quantity.  This product contains the full number density, rather than
+      observed (partial) number density included in other products.  When
+      necessary, this product is provided at a lower time resolution than the
+      fundamental instrument scan, to allow accumulation of enough raw data to
+      facilitate scientific interpretation.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      The EPPS DDR data are the processed data set released for the
+      EPPS.  Data presented here are an accurate representation of the EPPS
+      data as received from the spacecraft and have been processed from
+      instrument unit to physical unit.
+ 
+ 
+    Review
+    ======
+      The EPPS DDR was reviewed internally by the EPPS team prior to
+      release to the PDS. PDS also performed an external review of the
+      EPPS DDR.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data reported are the processed data received from the
+      spacecraft during the sixteen mission phases: Launch,
+      Earth Cruise, Earth Flyby, Venus 1 Cruise, Venus 1 Flyby,
+      Venus 2 Cruise, Venus 2 Flyby, Mercury 1 Cruise, Mercury 1 Flyby,
+      Mercury 2 Cruise, Mercury 2 Flyby, Mercury 3 Cruise,
+      Mercury 3 Flyby, Mercury 4 Cruise, Mercury Orbit, Mercury Orbit
+      Year 2.  These mission phases are defined as:
+ 
+                            Start time         End time
+      Phase Name            Date (DOY)         Date (DOY)
+      -----------------     ----------------  ----------------
+      Launch                3 Aug 2004 (216)  12 Sep 2004 (256)
+      Earth Cruise         13 Sep 2004 (257)  18 Jul 2005 (199)
+      Earth Flyby          19 Jul 2005 (200)  16 Aug 2005 (228)
+      Venus 1 Cruise       17 Aug 2005 (229)   9 Oct 2006 (282)
+      Venus 1 Flyby        10 Oct 2006 (283)   7 Nov 2006 (311)
+      Venus 2 Cruise        8 Nov 2006 (312)  22 May 2007 (142)
+      Venus 2 Flyby        23 May 2007 (143)  20 Jun 2007 (171)
+      Mercury 1 Cruise     21 Jun 2007 (172)  30 Dec 2007 (364)
+      Mercury 1 Flyby      31 Dec 2007 (365)  28 Jan 2008 (028)
+      Mercury 2 Cruise     29 Jan 2008 (029)  21 Sep 2008 (265)
+      Mercury 2 Flyby      22 Sep 2008 (266)  20 Oct 2008 (294)
+      Mercury 3 Cruise     21 Oct 2008 (295)  15 Sep 2009 (258)
+      Mercury 3 Flyby      16 Sep 2009 (259)  14 Oct 2009 (287)
+      Mercury 4 Cruise     15 Oct 2009 (288)  03 Mar 2011 (062)
+      Mercury Orbit        04 Mar 2011 (063)  17 Mar 2012 (077)
+      Mercury Orbit Year 2 18 Mar 2012 (078)  17 Mar 2013 (076)
+ 
+      A dark count signature was discovered in the FIPS PHA data. These
+      counts appear in a time-of-flight -- E/q histogram of PHA data as
+      straight tracks in E/q, centered at about 8 different time-of-flights.
+      These dark counts significantly complicate the analysis of FIPS PHA
+      data, though not significantly for low mass ions (H+, He+ and He2+).
+      All data since launch is affected. This situation has been well
+      characterized by the FIPS team and models/algorithms for removing
+      these counts have been developed [Gershman et al., 2013,
+      http://hdl.handle.net/2027.42/100358].  These algorithms have been
+      used in the processing of this data.
+ 
+      In orbit (Mercury_Orbit phase), FIPS is regularly taken out of
+      nominal configuration for various spacecraft operations, such as
+      commanded momentum dumps and eclipses, typically prevent possible
+      high voltage discharge within FIPS or for power considerations.
+      On occasion, the EPPS flight software autonomously takes FIPS out
+      of nominal configuration in response to an anomaly.  There
+      intervals are marked as bad in the data quality field with a
+      value of 1.  (Good data contains a 0 in this field.)
+ 
+      FIPS regularly experiences penetrating radiation which serves as an
+      additional noise source in the start and stop single-coincidence rates.
+      These counts are identified in start and stop rate spectra as relatively
+      constant streaks across the energy spectrum, because they bypass the
+      electrostatic analyzer energy selction when they pass through the FIPS
+      solid structures to trigger the detectors.  Typically, these signals do
+      not occur in double-coincidence and therefore do not affect the science
+      data. (That is, they do not generate PHA events or add to the valid
+      event or proton rate.) When double-coincidences do occur, they are often
+      so short in duration (&lt; 1 min) that they can be ignored in all but the
+      most fine time scale analysis. Occasionally, events occur that are of
+      sufficient intensity and duration as to make the double coincidence data
+      unusable, such as long duration solar energetic particle (SEP) events.
+      These events are not suitable for normal science analysis and are
+      excluded from this data set.
+ 
+      In some scans, the pitch angle distributions show very high values in
+      one of the edge bins, 0 or 180 degrees.  These values are artifacts
+      of the processing and should not be used.
+ 
+      As of the 10th PDS delivery, FIPS CDR data has a new quality flag
+      system, which  automatically flags SEP events and other issues which
+      would affect data quality.  This quality flag is a bit field, with each
+      bit set signifying the condition  detailed below:
+ 
+     Flag                               Bit Position        Decimal Value
+     ------------------------------     ------------        -------------
+     Bad data (reason undefined)         0                      1
+     PHA hot pixel*                      1                      2
+     Scan hard limit reached*            2                      4
+     SEP event                           3                      8
+     Start rate anomaly*                 4                     16
+     Instrument off                      7                    128
+     Bad data (manually marked bad)     15                  32768
+ 
+     Multiple conditions set multiple bits, effectively adding the numbers in
+     the value column.  (This is the same as performing a logical OR on the
+     binary values.)  For example, if PHA hot pixel and SEP event are both
+     set, the flag will have the decimal value 10 (binary: 1010).  If the
+     start rate anomaly and scan hard limit reached flags are set in
+     addition, the decimal value would be 30 (binary: 11110).
+ 
+     For most science uses, only data with a quality flag value of 0 should be
+     used.  However, data with the flags marked with &apos;*&apos; above is often often
+     usable for science. Users should consult with the instrument team for
+     details.
+ 
+     From May-Sept 2013, MCP voltages higher than the nominal -2520V were
+     tested on FIPS, with a goal of recovering counting efficiency lost
+     through use thus far in the mission.  Since the counting efficiency is a
+     little different for each of these voltages, users are advised to consult
+     the actual MCP voltage stored in housekeeping when using data from this
+     period.  This effect is expected to be small.  Corrections for these
+     variations will be applied in the next release.
+ 
+ 
+    Limitations
+    ===========
+      This data set is fully processed, science quality data.  It has been
+      reviewed at high level by the FIPS instrument team.  It has not been,
+      however, manually validated on a point by point.  Users are
+      encouraged to contact the FIPS instrument team when questions about
+      the data arise.  Some analysis of this data requires detailed
+      knowledge of FIPS pointing which can be extracted from SPICE.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

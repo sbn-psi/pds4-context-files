@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_Host_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument_host:earth-based.lowell</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LOWELL OBSERVATORY</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_Host_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:phot.lowell::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.comet::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_Host_PDS3>
+        <instrument_host_name>LOWELL OBSERVATORY</instrument_host_name>
+        <instrument_host_desc>
+ 
+  Instrument Host Overview
+  ========================
+  The &apos;LOWELL&apos; instrument host is used when it is not possible to
+  determine which of the various available telescopes at Lowell
+  Observatory were used in making the observations associated with
+  a data set.
+ 
+  The following table gives the specifications of the various Lowell
+  Observatory telescopes.
+ 
+            Perkins   Hall 42in  Hall 42in
+              72in      F/16        F/8      31in        21in
+           =========  =========  =========  =========  ==========
+ 
+ Longitude  111d 32&apos;  111d 32&apos;   111d 32&apos;    111d 32&apos;    111d 39&apos;
+             09.3in     07.9in     07.9in    09.0in      59.2in
+ 
+ Latitude   +35d 05&apos;  +35d 05&apos;   +35d 05&apos;    +35d 05&apos;    +35d 12&apos;
+             48.6in     48.3in     48.3in   54.6in      10.4in
+ 
+ Altitude   7236ft.    7236ft.    7236ft.   7243ft.     7260ft.
+            (2206m)    (2206m)    (2206m)   (2208m)     (2213m)
+ 
+    Dp     72in(1.8m)42in(1.1m) 42in(1.1m)  31/29.5in    20.78
+                                           (0.79/0.75m)  (0.53m)
+   F/#        17.5      16.0        8.0      15.7        15.9
+ 
+    EFI     1256.5in    669in      334in      464in      332.5in
+           (31.93cm)  (16.99cm)  (8.48cm)   (11.78cm)    (8.44cm)
+   Scale
+  (in/mm)      6.45      12.1       24.3        17.5        24.3
+ 
+   BFI       51.5in      25in       25in       25in        20in
+            (1.30cm)  (0.63cm)   (0.63cm)   (0.63cm)    (0.51cm)
+   Fp/#       4.18       4.0        4.0        5.0         3.4
+ 
+    FLp      300.6in    168in      168in      155in      70.0in
+           (7.635cm)  (4.267cm)  (4.267cm)   (3.94cm)   (1.77cm)
+ 
+   Dsa       16.3in     9.7in      16.2in     9.0in        4.6in
+            (0.41m)    (0.25m)    (0.41m)    (0.22m)      (0.12m)
+ 
+    Is       284.1in   154.3in    128.4in      134.9in     72.7in
+            (7.22m)    (3.92m)    (3.26m)     (3.43m)     (1.85m)
+ 
+    Os       68.0in     38.7in     64.6in      45.1in       15.3in
+            (1.72m)    (0.98m)    (1.64m)     (1.14cm)     (0.39m)
+ 
+    Ms       232.6in   129.3in    103.4in      109.9in     54.7in
+            (5.91m)    (3.28m)    (2.63m)     (2.79m)     (1.39m)
+    mag       4.2        4.0        2.0        3.0         4.7
+    K1        -1.0      -2.32      -2.32       -1.00       -1.00
+    K2       -3.65      -5.96     -16.84       -5.01       -3.35
+ 
+  Notes:
+ 
+   1) Longitude and latitude are good to about +/- 0.2.
+   2) The altitudes are good to about +/- 1 meter.
+   3) The Hall F/16 is not a true Cassegrain telescope since the primary
+      is a hyperboloid.
+   4) The Hall F/8 is a Ritchey-Chretien telescope.
+   5) The 31 inch primary is F/5. However, it is stopped down to 29.5
+      inches.
+   6) Only the Hall F/8 has a known optimum back focal distance.
+   7) The conic constant is defined such that 0 is a circle and -1 is a
+      parabola.
+   8) DSA is the diameter of the axial cone at the secondary. The diameter
+      of the secondary is 1 to 2 inches larger than DSA.
+ 
+ 
+  Lowell Observatory currently maintains an informational World Wide Web
+  site at http://www.lowell.edu/.
+
+        </instrument_host_desc>
+        <instrument_host_id>LOWELL</instrument_host_id>
+        <instrument_host_type>Earth Based</instrument_host_type>
+    </Instrument_Host_PDS3>
+</Product_Instrument_Host_PDS3>

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.clem1-l-rss-5-bsr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CLEM1 INTERMEDIATE AND REDUCED BISTATIC RADAR DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.deep_space_program_science_experiment::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-rss-5-bsr-v1.0__browserc_clem1-l-rss-5-bsr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-rss-5-bsr-v1.0__browserp_geo_clem1-l-rss-5-bsr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-rss-5-bsr-v1.0__dvo_geo_clem1-l-rss-5-bsr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Campbell, D.B., J.F. Chandler, S.J. Ostro, G.H. Pettengill, and I.I. Shapiro,
+                   Galilean Satellites: 1976 Radar Results, Icarus, 34, 254-267, 1978.
+            </reference_text>
+            <description>reference.CAMPBELLETAL1978</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Harmon, J.K., M.A. Slade, R.A. Velez, A. Crespo, M.J. Dryer, and J.M.
+                   Johnson, Radar Mapping of Mercury&apos;s Polar Anomalies, Nature, 369, 213-215,
+                   1994.
+            </reference_text>
+            <description>reference.HARMONETAL1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Muhleman, D.O., B.J. Butler, A.W. Grossman, and M.A. Slade, Radar Images of
+                   Mars, Science, 253, 1508-1513, 1991.
+            </reference_text>
+            <description>reference.MUHLEMANETAL1991</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Nozette, S., P. Rustan, L.P. Pleasance, D.M. Horan, P. Regeon, E.M.
+                   Shoemaker, P.D. Spudis, C.H. Acton, D.N. Baker, J.E. Blamont, B.J.
+                   Buratti, M.P. Corson, M.E. Davies, T.C. Duxbury, E.M. Eliason, B.M.
+                   Jakosky, J.F. Kordas, I.T. Lewis, C.L. Lichtenberg, P.G. Lucey, E.
+                   Malaret, M.A. Massie, J.H. Resnick, C.J. Rollins, H.S. Park, A.S. McEwen,
+                   R.E. Priest, C.M. Pieters, R.A. Reisse, M.S. Robinson, D.E. Smith, T.C.
+                   Sorenson, R.W. Vorder Breugge, and M.T. Zuber, The Clementine Mission to
+                   the Moon: Scientific Overview, Science, 266, 1835-1839, 1994.
+            </reference_text>
+            <description>reference.NOZETTEETAL1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Nozette, S., C.L. Lichtenberg, P. Spudis, R. Bonner, W. Ort, E. Malaret,
+                   M. Robinson, and E.M. Shoemaker, The Clementine Bistatic Radar Experiment,
+                   Science, 274, 1495-1498, 1996.
+            </reference_text>
+            <description>reference.NOZETTEETAL1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Shoemaker, E., M.S. Robinson, and E.M. Eliason, The South Pole Region of
+                   the Moon as Seen by Clementine, Science, 266, 1851-1854, 1994.
+            </reference_text>
+            <description>reference.SHOEMAKERETAL1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Simpson, R.A., and G.L. Tyler, Reanalysis of Clementine bistatic radar data
+                   from the lunar South Pole, J. Geophys. Res., 104, 3845-3862, 1999.
+            </reference_text>
+            <description>reference.SIMPSON-TYLER1999</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Simpson, R.A., Spacecraft Studies of Planetary Surfaces Using Bistatic Radar,
+                   IEEE Transactions on Geoscience and Remote Sensing, 31, 465-482, March 1993.
+            </reference_text>
+            <description>reference.SIMPSON1993</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Stacy, N.J.S., High-Resolution Synthetic Aperture Radar Observations of the
+                   Moon, Ph.D. dissertation, Cornell University, May 1993.
+            </reference_text>
+            <description>reference.STACY1993</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CLEM1-L-RSS-5-BSR-V1.0</data_set_id>
+        <data_set_name>CLEM1 INTERMEDIATE AND REDUCED BISTATIC RADAR DATA V1.0</data_set_name>
+        <data_set_release_date>2000-04-30</data_set_release_date>
+        <start_time>1994-04-09T00:00:00Z</start_time>
+        <stop_time>1994-04-23T23:59:59Z</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Simpson, R. A., Clementine Intermediate and Reduced Bistatic
+            Radar Data from the Moon, CLEM1-L-RSS-5-BSR-V1.0 (CL_2101 through
+            CL_2108), NASA Planetary Data System, 2000.
+        </citation_text>
+        <data_set_terse_desc>
+            Partially and fully processed data from selected Clementine
+            bistatic radar observations in 1994. Included are echo spectra
+            and derived surface scattering functions.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Partially and fully processed data from Clementine (DSPSE)
+            bistatic radar observations of the Moon.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Clementine Bistatic Radar Intermediate and Reduced Data
+      Archive (BSR-IRDA) is a collection of partially and fully
+      reduced products from bistatic radar scattering experiments
+      conducted using the Clementine spacecraft while it orbited
+      the Moon.
+ 
+      The spacecraft radio system was used as a signal source,
+      and the spacecraft high-gain antenna beamed those signals
+      toward surface targets on the Moon.  The transmit polarization
+      along the boresight of the spacecraft antenna was right-
+      circular; the nominal wavelength was 13 cm (S-band).  Echo
+      signals were received coherently in both right- and left-
+      circular polarizations (RCP and LCP, respectively) using
+      70-m antennas at stations of the NASA Deep Space Network
+      (DSN) on Earth.
+ 
+      The scattering experiments were conducted in two
+      configurations.  For &apos;spotlight&apos; experiments a single
+      target was identified on the Moon; the spacecraft attitude
+      was controlled during the experiment so that the HGA always
+      pointed toward that target location.
+ 
+      Spotlight experiments, conducted on polar targets were
+      designed to detect and measure enhanced backscatter from
+      possible ice deposits in areas permanently shaded from
+      solar illumination.  Such enhancements have been seen in
+      Earth-based radar studies of the Galilean satellites
+      [CAMPBELLETAL1978], Mars [MUHLEMANETAL1991], and Mercury
+      [HARMONETAL1994].  Although Earth-based radar studies of
+      the Moon [STACY1993] have had considerably better
+      sensitivity and surface resolution than this experiment,
+      the Clementine geometry uniquely allowed measurements as a
+      function of the bistatic angle -- the separation angle
+      between transmitter and receiver when viewed from the target
+      [SIMPSON1993].  The angular variation of any enhancement may
+      be related to the distance the radar signal travels through
+      the ice and, hence, to the thickness and/or clarity of the
+      ice at 13 cm wavelength.
+ 
+      For &apos;quasi-specular&apos; observations, the HGA was aimed toward
+      the point on the lunar surface where mirror-like (specular)
+      reflections were expected.  Signals transmitted by the
+      spacecraft would carom from the lunar surface and be received
+      at the DSN stations.  Because the (specular) image of
+      Earth moved as Clementine orbited the Moon, the HGA
+      illuminated a swath across the surface as the spacecraft
+      advanced in its orbit.  A single quasi-specular track was
+      obtained -- in the southern hemisphere during the last set
+      of bistatic radar observations.
+ 
+      The first analysis of spotlight data was published by
+      [NOZETTEETAL1996].  The authors identified an enhancement
+      in right-circularly polarized echo power near the time
+      when the bistatic angle was zero in permanently shaded
+      regions near the South Pole.  A second analysis
+      [SIMPSON&amp;TYLER1999] focused on the data with the reported
+      enhancement but was unable to reproduce the earlier results.
+ 
+      This data set includes intermediate products from the second
+      analysis.  These are large files of double precision complex
+      time samples in both RCP and LCP.  The data cover the time
+      period 1999-04-09T18:36:45 to 18:52:45 - the time at which the
+      bistatic angle was 0 nearest the South Pole was 18:46:36.5.
+      The intermediate files are processing output after correction
+      for ripples in the receiver filters (equalization), after
+      correction for gain changes in both channels, after digitally
+      centering the carrier in the passband, and after changing the
+      frequency reference so that the South Pole frequency bin
+      would be in the center.  These 8 files are in the DATA
+      directory, which is spread over all volumes in the data set.
+ 
+      Also in the data set are more highly processed data, including
+      a subset of power spectra from the final processing stage
+      described above.  Measured echo powers in these spectra were
+      sorted to construct empirical scattering functions at 72
+      locations near the South Pole.  The spectra, the sorted power
+      values, and a table containing two versions of the scattering
+      function are in the SORT directory on the final volume.
+ 
+      In order to carry out the sorting, it was necessary to know
+      the mapping of Doppler frequencies onto the Moon&apos;s southern
+      hemisphere.  Grids of frequency and other parameters were
+      computed at 100 second time steps.  These are stored in PDS
+      IMAGE format in the IMG directory, which appears on all
+      volumes.
+ 
+      Users of the Clementine data interested in fully understanding
+      the signal processing might prefer to begin with the raw data,
+      which have been archived separately on 13 CD-R volumes as PDS
+      data set CLEM1-L-RSS-1-BSR-V1.0.  Users interested in other
+      orbits necessarily must start with the raw data, since only
+      part of a single orbit is included in this archive.
+ 
+      Users of the partially processed data could pick up the
+      processing at any stage and follow it through to completion.
+      The calibration files which were used during the Stanford
+      processing to equalize the filter response, adjust the gain,
+      and modify the frequency of the data are stored in the CALIB
+      directory.  Two versions of the list of target points for
+      constructing the scattering function(s) are included in the
+      GEOMETRY directory.
+ 
+      Users interested only in the two scattering functions
+      derived in the Stanford analysis will find them in the
+      file RATIOFN.TAB in the SORT directory.  Note, however, that
+      these are functions giving the RATIO of RCP to LCP power
+      rather than the individual powers themselves, that they were
+      derived in only two of several possible ways, and that the
+      uncertainties (based on noise in the original measurements of
+      echo power) are large.
+ 
+ 
+    Parameters
+    ==========
+      Files in the DATA directory contain double precision complex
+      time samples of receiver output in RCP and LCP between
+      1994-04-09T18:36:45 and 18:52:45, after corrections and
+      adjustments for various effects.
+ 
+      Files RCP.IMG and LCP.IMG in the SORT directory are calibrated
+      arrays (in PDS IMAGE format) giving echo power in RCP and LCP,
+      respectively.
+ 
+      Files SRTPWRR.TAB and SRTPWRL.TAB contain power measurements
+      from the arrays above, sorted according to proximity to one of
+      72 surface target points and bistatic angle at that point.
+      File SRTNPWR.TAB gives the number of measured values that
+      have been associated with each target point at each bistatic
+      angle.
+ 
+      File RATIOFN.TAB gives the RCP to LCP ratio as a function of
+      bistatic angle for the 13 target points poleward of 88 S
+      latitude.  The ratio is computed in two different ways.
+ 
+      Ephemerides were used to compute the observing geometry for a
+      700x700 grid.  Each grid point was related to a surface point
+      orthographically projected onto a plane tangent to the lunar
+      surface at the South Pole.  Various observing parameters were
+      computed at 100 second time steps and stored in PDS IMAGE
+      format.  These include:
+ 
+          BET  bistatic angle (degrees)
+          DAR  area (square meters)
+          DBR  offset from boresight at the (DSN) receiving
+                  antenna (degrees)
+          DPR  incremental received power (watts) from the
+                  surface element
+          FQZ  Doppler frequency relative to the South Pole (Hz)
+          GAM  tilt of the surface element (degrees)
+          GRX  receiving antenna gain at the surface element (dB)
+          GTX  spacecraft transmitting antenna gain at the surface
+                  element (dB)
+          RRX  distance from the receiving antenna (meters)
+          RTX  distance from the spacecraft transmitting
+                  antenna (meters)
+          SBR  offset from boresight at the spacecraft
+                  antenna (degrees)
+          SG0  assumed specific radar cross section for
+                  calculating DPR
+          THI  incidence angle at the surface element (degrees)
+          THS  scattering angle at the surface element (degrees)
+          VAL  validity mask (1 = grid point within lunar disk;
+                  0 = outside)
+          DFQ  time derivative of FQZ (Hz/sec)
+ 
+ 
+    Processing
+    ==========
+      Processing is described in more detail in the file PROCSSNG.TXT
+      in the DOCUMENT directory.  The DOCUMENT directory also
+      contains other files which may be useful in understanding the
+      processing carried out at Stanford.
+ 
+      The raw 8-bit samples from the analog-to-digital converters
+      were stored on tape during data acquisition.  Those samples
+      were separated into two computer files, corresponding to RCP
+      and LCP (also referred to as Channel 1 and Channel 3,
+      respectively, in some contexts).  This program (called PREPMO)
+      also padded the samples to 16 bits.
+ 
+      The two files of 16-bit samples were then used as input
+      (separately) to program PREPFND which carried out digital
+      filtering.  The output of this stage was a stream of double
+      precision complex time samples at half the original rate for
+      each polarization (channel).  The filtering operation in
+      PREPFND was &apos;equalization&apos;, in which signal amplitude in
+      the center 80 percent of the passband was normalized by the
+      filter response with only noise as input.
+ 
+      The output from PREPFND was fed to program GAIN which adjusted
+      the sample amplitude in each channel for changes in attenuator
+      settings during data acquisition, gain drift in the receiving
+      system, and gross differences in levels between the two
+      channels.
+ 
+      The output from GAIN was passed to program POWERFIT, which
+      located the peak signal in the passband and estimated both its
+      amplitude and frequency.  The frequency estimates were used to
+      create a file of coefficients for a piecewise continuous
+      linear approximation to the carrier frequency.
+ 
+      Using the file of coefficients, the program STEER adjusted
+      the phase of the complex output samples from GAIN so that the
+      carrier appeared to be at the center of the passband
+      (12500 Hz).
+ 
+      Using ephemerides for the spacecraft and planetary bodies,
+      the expected Doppler offset between the carrier signal and a
+      hypothetical echo from the lunar South Pole was computed.
+      This offset was converted to a second set coefficients for a
+      piecewise linear approximation to the difference frequency.
+ 
+      The second set of coefficients was used in a second
+      application of the STEER program to move the estimated
+      frequency of the South Pole to the center of the passband
+      (12500 Hz).  From this point, the South Pole frequency
+      became the reference.
+ 
+      Program FNDLOOK was used to compute 16384-point power spectra
+      from the second-order STEER results.  There was no averaging,
+      so spectra were spaced by 0.65536 seconds and frequency
+      resolution was approximately 1.5259 Hz.  A subset of the
+      frequency range (bins 7356-8379) was saved for further analysis.
+      This array of 1464 1024-point spectra had the South Pole echo
+      in bin 838.  A smoothed version of the bin 838 response (and
+      21 of its neighbors) appeared in [SIMPSON&amp;TYLER1999] as
+      Figure 10, from which the authors concluded there appeared to
+      be nothing unusual about the response of the South Pole.
+ 
+      The ephemerides were used to locate points in the
+      vicinity of the South Pole where bistatic angle went to 0
+      during the course of this observation.  72 such points,
+      spaced by 1 second, were identified, forming a track which
+      passed very close to the Pole (Figure 2 in [SIMPSON&amp;TYLER1999]).
+ 
+      The values stored in the 700x700 grids could be used to map
+      Doppler contours onto the lunar surface and to compute expected
+      echo spectra (for an assumed scattering function).  As tools
+      for interpreting the measured values, they could be used to
+      determine which of the 72 target points (if any) contributed
+      to a frequency bin at a certain offset from the South Pole
+      frequency.  And they could be used to determine the bistatic
+      angle at such a target point when the measurement was made.
+ 
+      Such an inversion was accomplished, through a number of steps,
+      leading to the sorted echo power measurements in files
+      SRTPWRR.TAB and SRTPWRL.TAB in the SORT directory.  The
+      arrays of sorted measurements for 72 targets and 101 bistatic
+      angles (with up to 42 values in each bin) were then reduced
+      to scattering functions for each of the 72 targets and for
+      aggregations of those targets.  RATIOFN.TAB in the SORT
+      directory contains two such possibilities.
+ 
+ 
+    Data
+    ====
+      The data set contains two each of the following files (one for
+      each polarization).  Each file is accompanied by a detached PDS
+      label which completely describes both the format and content
+      of the file.  Each data file has 384002048 bytes and is located
+      in the DATA directory.
+ 
+        A. PREPFND output file after filter equalization.  File
+             names: PF1.TAB (RCP) and PF3.TAB (LCP)
+        B. GAIN output file after gain corrections.  File names:
+             GN1.TAB (RCP) and GN3.TAB (LCP)
+        C. First-order STEER output file after centering carrier
+             at 12500 Hz.  File names: S11.TAB (RCP) and S13.TAB (LCP)
+        D. Second-order STEER output file after centering South
+             Pole echo.  File names: S21.TAB (RCP) and S23.TAB (LCP)
+ 
+      The data set contains two each of the following files (one for
+      each polarization).  Each file is accompanied by a detached PDS
+      label which completely describes both the format and content
+      of the file.  These files are in the SORT directory.
+ 
+        E. FNDLOOK output file converted to PDS IMAGE format. Each
+             is a 1464x1024 array of echo power density with the
+             South Pole at bin 838.  File names: RCP.IMG and LCP.IMG
+ 
+        F. Output array from the echo sorting process.  Each file is
+             a table but represents data in a three-dimensional
+             array (up to 42 valid power measurements in a 72 target
+             by 101 angle array).  File names: SRTPWRR.TAB (RCP)
+             and SRTPWRL.TAB (LCP).
+ 
+      Accompanying the sorted data are two other arrays.  Each is
+      accompanied by a detached PDS label which completely describes
+      the format and content of the data file.  These files are in
+      the SORT directory.
+ 
+        G. An array giving the number of valid measurements in
+             the two data arrays SRTPWRR.TAB and SRTPWRL.TAB.
+             File name: SRTNPWR.TAB
+ 
+        H. A table containing two empirical scattering functions.
+             File name: RATIOFN.TAB.
+ 
+      The data set contains 59 sets of 15-16 grids.  The sets are
+      spaced by 100 seconds in time, starting at 65696 seconds past
+      0 h on 1994-04-09 and covering the time during which DSS 14
+      tracked the Clementine spacecraft.  Each file occupies 980000
+      bytes and is accompanied by a PDS detached label.  Grids are
+      ordered chronologically on CD-R volumes (but with no more
+      than 256 grids per volume) and are stored in the IMG directory.
+      Because the DFQ grid is formed by differencing the EQZ grids at
+      the immediately adjacent time steps, there is no DFQ grid for
+      the first or last time step.  At each of the other steps there
+      are 16 grids.
+ 
+ 
+    Ancillary Data
+    ==============
+ 
+      Files in the CALIB directory include the following.  Each is
+      accompanied by a PDS detached label which describes the format
+      and content of the data file.
+ 
+        A. Filter equalization files with names of the form
+           FLssbpnn.SPC  where
+                     ss  is the DSN antenna number (14 or 43)
+                     f   is the frequency band (S)
+                     p   is the polarization (R or L)
+                     nn  is the sequence number (01 or 02)
+           Only data from DSS 14 (ss=14) are included in this archive;
+           only filters with sequence number nn=01 were used in the
+           Stanford processing.
+ 
+        B. Files containing coefficients for gain correction with
+           names of the form G099C14c.TAB where
+                     c   denotes the channel number (1=RCP, 3=LCP)
+ 
+        C. A file containing coefficients for centering the carrier
+           frequency with name  STEERCF1.TAB
+ 
+        D. A file with coefficients describing the difference in
+           frequency between the carrier and South Pole bin with
+           name  DF2SCM.TAB
+ 
+        E. A table of noise level measurements for calibrating system
+           gain and determining system noise temperature with
+           name  TABLE2.TAB  (see Table 2 in [SIMPSON&amp;TYLER1999])
+ 
+      Files in the GEOMETRY directory include the following.  Each is
+      accompanied by a PDS detached label which describes the format
+      and content of the data file.
+ 
+        F. A table summarizing geometry and observing conditions with
+           name  BSRGEOM.TAB
+ 
+        G. Two tables listing coordinates for 72 target points around
+           which sorting was carried out and scattering functions
+           derived.  BETAZER0.TAB lists the coordinates in radians;
+           BETAZER1.TAB lists the coordinates in degrees.
+ 
+ 
+    Coordinate System
+    =================
+      The radio measurements can be understood without reference to
+      a particular coordinate system.  For mapping measurements to
+      the lunar surface, a selenocentric system with positive east
+      longitude was used.
+ 
+ 
+    Software
+    ========
+      This data set contains no software.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set is written on CD-WO media using a
+      Yamaha CRW4260tx CD writer and GEAR software running on a
+      Sun Ultra-5 workstation.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      The calibrations, gain corrections, and frequency adjustments
+      were done with considerable care.  They have been described
+      by [SIMPSON&amp;TYLER1999] and in several documents in the
+      DOCUMENT directory.  The files in the DATA and CALIB directories
+      and the RCP.IMG and LCP.IMG files in the SORT directory fall
+      into this category.
+ 
+      The geometrical calculations were also done carefully and are
+      documented in [SIMPSON&amp;TYLER1999] and in the DOCUMENT directory
+      of this volume.  Files in the GEOMETRY and IMG directories fall
+      into this category.
+ 
+      The sorted files (SRTPWRR.TAB, SRTPWRL.TAB, and SRTNPWR.TAB)
+      and the scattering function (RATIOFN.TAB) have been done once.
+      The procedures are documented in the DOCUMENT directory and in
+      in an abstract for Lunar and Planetary Science XXXI (see
+      LPSC_ABS.LBL in the DOCUMENT directory).  But resource
+      limitations have prevented the careful scrutiny and double
+      checking that were possible in the earlier analysis.  Users
+      should view these files more skeptically.
+ 
+ 
+    Review
+    ======
+      This archival data set was distributed to a peer review
+      panel prior to its acceptance by the Planetary Data System
+      (PDS).  The review panel was appointed by the Manager
+      of the PDS Geosciences (GEO) Discipline Node (DN); the
+      review was conducted in accordance with PDS GEO
+      procedures.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The times covered by this data set are listed in the table
+      below.  The depth of coverage is given in the &apos;Analysis&apos;
+      column at the right, with entries explained below the table.
+ 
+                                              Revolution
+        Start Time (ERT)    Stop Time (ERT)     Number   DSS Analysis
+      ------------------- ------------------- ---------- --- --------
+      1994-04-09T17:48:45 1994-04-09T18:04:44     233     14     2
+      1994-04-09T18:04:45 1994-04-09T18:20:44     233     14     2
+      1994-04-09T18:20:45 1994-04-09T18:36:44     233     14     2
+      1994-04-09T18:36:45 1994-04-09T18:52:44     233     14     1
+      1994-04-09T18:52:45 1994-04-09T19:08:44     233     14     2
+      1994-04-09T19:08:45 1994-04-09T19:24:44     233     14     2
+      1994-04-09T19:24:45 1994-04-09T19:40:44     233     14     2
+      1994-04-09T19:40:45 1994-04-09T19:56:44     233     14     2
+      1994-04-09T19:56:45 1994-04-09T20:05:09     233     14     2
+      1994-04-09T23:00:55 1994-04-09T23:16:54     234     43     3
+      1994-04-09T23:16:55 1994-04-09T23:32:54     234     43     3
+      1994-04-09T23:32:55 1994-04-09T23:48:54     234     43     3
+      1994-04-09T23:48:55 1994-04-10T00:04:54     234     43     3
+      1994-04-10T00:04:55 1994-04-10T00:20:54     234     43     3
+      1994-04-10T00:20:55 1994-04-10T00:36:54     234     43     3
+      1994-04-10T00:36:55 1994-04-10T00:52:54     234     43     3
+      1994-04-10T00:52:55 1994-04-10T01:08:54     234     43     3
+      1994-04-10T01:08:55 1994-04-10T01:24:54     235     43     3
+      1994-04-10T01:24:55 1994-04-10T01:33:55     235     43     3
+      1994-04-10T04:02:22 1994-04-10T04:18:21     235     43     3
+      1994-04-10T04:18:22 1994-04-10T04:34:21     235     43     3
+      1994-04-10T04:34:22 1994-04-10T04:50:21     235     43     3
+      1994-04-10T04:50:22 1994-04-10T05:06:21     235     43     3
+      1994-04-10T05:06:22 1994-04-10T05:22:21     235     43     3
+      1994-04-10T05:22:22 1994-04-10T05:38:21     235     43     3
+      1994-04-10T05:38:22 1994-04-10T05:54:21     235     43     3
+      1994-04-10T05:54:22 1994-04-10T06:10:21     235     43     3
+      1994-04-10T06:10:22 1994-04-10T06:26:21     236     43     3
+      1994-04-10T06:26:22 1994-04-10T06:42:21     236     43     3
+      1994-04-10T06:42:22 1994-04-10T06:46:54     236     43     3
+ 
+      Analysis levels represented in the archive:
+        1  Exhaustive calibration and correction of data; data
+           values sorted into empirical scattering functions
+        2  Filter functions, gain corrections, and grids provided;
+           no data in the archive, no frequency coefficients
+           available.
+        3  Notes on gain variations observed are in the archive;
+           no calibration/correction files and no data included.
+ 
+      Only very limited work with DSS 63 data from 1994-04-10 was
+      carried out at Stanford.  And virtually nothing was attempted
+      with data from days 1994-04-23 and 1994-04-24.
+ 
+ 
+    Limitations
+    ===========
+      See section Overview and Data Coverage and Quality above.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

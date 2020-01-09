@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-rss-1-magr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO MARS RAW RADIO SCIENCE 1 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-rss-1-magr-v1.0__browserp_mro-m-rss-1-magr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-rss-1-magr-v1.0__browser_geo_mars_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-rss-1-magr-v1.0__dvo_mro-m-rss-1-magr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Deep Space Mission System (DSMS) External Interface Specification (820-013, JPL
+                   D-16765), Radio Science Receiver Standard Formatted Data Unit (SFDU), Jet
+                   Propulsion Laboratory, Pasadena, CA, 2001.
+            </reference_text>
+            <description>reference.JPLD-16765</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kahan, D.S., Mars Reconnaissance Orbiter, MRO Radio Science Receiver Software
+                   Interface Description, An Ad Hoc Revision of 820-013 Deep Space Network (DSN)
+                   External Interface Specification (JPL D-16765), Radio Science Receiver Standard
+                   Formatted Data Unit (SFDU), Jet Propulsion Laboratory, Pasadena, CA, 2009.
+            </reference_text>
+            <description>reference.KAHAN2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-RSS-1-MAGR-V1.0</data_set_id>
+        <data_set_name>MRO MARS RAW RADIO SCIENCE 1 V1.0</data_set_name>
+        <data_set_release_date>2009-06-08</data_set_release_date>
+        <start_time>2006-08-30</start_time>
+        <stop_time>2008-11-08</stop_time>
+        <producer_full_name>DANIEL S. KAHAN</producer_full_name>
+        <citation_text>
+            KAHAN, D.S., Mars Reconnaissance Orbiter Gravity Science Raw Data
+            Set V1.0, MRO-M-RSS-1-MAGR-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw radio science data and ancillary files from the Mars
+            Reconnaissance Orbiter mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival raw, partially processed, and
+            ancillary/supporting radio science data acquired during the Mars
+            Reconnaissance Orbiter (MRO) mission. The radio observations were
+            carried out using the MRO spacecraft and Earth-based receiving
+            stations of the NASA Deep Space Network (DSN). The data set was
+            designed primarily to support generation of high-resolution
+            gravity field models for Mars and secondarily for estimating
+            density and structure of the Mars atmosphere. Of most interest
+            are likely to be the Orbit Data Files and Radio Science Receiver
+            files in the ODF and RSR directories, respectively, which
+            provided the raw input to gravity and atmospheric investigations,
+            as well as the ionospheric and tropospheric media calibration
+            files in the ION and TRO directories, respectively.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Mars Reconnaissance Orbiter (MRO) Gravity Science (GR) Raw
+      Data Archive (RDA) is the set of raw and partially processed
+      radio science data collected during the MRO mission to Mars.
+ 
+      The earliest data in this data set were collected
+      on 2006-08-30.
+ 
+      Two types of measurements were conducted, known as closed- and
+      open-loop recordings. The closed-loop system used a
+      phase-lock loop in the ground receiver to track the downlink
+      signal, reporting both amplitude and frequency at rates
+      typically of 1-10 times per second. In the open-loop system,
+      the signal was simply converted to a baseband frequency range;
+      the entire passband was sampled and recorded for later
+      processing. Typical open-loop sampling rates for MRO were 1000
+      samples per second. Closed-loop data are efficient for
+      characterizing slowly changing signals and are the input to
+      operational navigation and orbit-determination processes.
+      Open-loop data (because of their much higher rate and volume)
+      are collected only when the signal is expected to be very
+      dynamic -- such as during a spacecraft maneuver or an
+      occultation.
+ 
+      The data set includes three primary data types. Tracking and
+      Navigation Service Data Files (TNFs) are the most primitive (and
+      most voluminous) product of the closed-loop system.  Orbit Data
+      Files (ODFs) are compressed versions of TNFs, specifically
+      targeted to spacecraft navigators and scientists interested in
+      gravity fields.  Radio Science Receiver records (RSRs) are the
+      primary data type from the open-loop system.
+ 
+      Typical users of these data might analyze range and Doppler
+      measurements in ODFs to reconstruct the spacecraft trajectory.
+      Relevant questions would include the measurement uncertainties
+      in range and Doppler at different DSN antennas; the uncertainties
+      could set constraints on any model of Mars&apos; gravity field developed
+      later, for example.
+ 
+      The TNF data are generally reserved for use in more sophisticated
+      investigations or where information beyond what is available in
+      the ODF may be required.  For example, the TNF may be used to
+      extract the station uplink frequency ramps, which give the
+      tuning of the uplink transmitted signal in cases when a constant
+      frequency is inadequate.
+ 
+      RSR data were collected when the signal transmitted by the
+      spacecraft was expected to be particularly dynamic, such as
+      during a radio occultation by the atmosphere.  When an
+      occultation was observed using an RSR, the spacecraft was
+      usually configured to be in a carrier-only mode (no telemetry
+      modulation) and the ground equipment was operated by the Radio
+      Science Systems Group at JPL.   Two variations of the RSR were
+      used during MRO; see the &apos;Data&apos; section below for details.
+ 
+ 
+    Parameters
+    ==========
+      The TNF is the primary output from the MRO closed-loop system.
+      In the TNF about 20 record types are defined, each designed
+      for a particular audience, although it was frequently the case
+      that users needed more than one record type. The emphasis of
+      the data is on phase of the transmitted and received signals.
+      Each TNF is accompanied by a PDS minimal label which points
+      to a software specification document (TNF_SIS.TXT) in the
+      DOCUMENT directory of the archive for detailed descriptions
+      of the records and fields.
+ 
+      The ODF is a compressed version of the TNF. It contains the most
+      important information (range, Doppler and frequency ramps)
+      needed by spacecraft investigators, and investigators interested
+      in determining gravity fields. Each ODF is accompanied by a full
+      PDS label which describes both the content and format of the
+      associated file. ODF data fields include:
+ 
+           Narrowband spacecraft VLBI, Doppler mode (cycles)
+           Narrowband spacecraft VLBI, phase mode (cycles)
+           Narrowband quasar VLBI, Doppler mode (cycles)
+           Narrowband quasar VLBI, phase mode (cycles)
+           Wideband spacecraft VLBI (nanoseconds)
+           Wideband quasar VLBI (nanoseconds)
+           One-way Doppler (Hertz)
+           Two-way Doppler (Hertz)
+           Three-way Doppler (Hertz)
+           One-way total count phase (cycles)
+           Two-way total count phase (cycles)
+           Three-way total count phase (cycles)
+           PRA planetary operational discrete spectrum range (range
+                units)
+           SRA planetary operational discrete spectrum range (range
+                units)
+           RE(GSTDN) range (nanoseconds)
+           Azimuth angle (degrees)
+           Elevation angle (degrees)
+           Hour angle (degrees)
+           Declination angle (degrees)
+ 
+      Radio Science Receiver (RSR) records contain samples of open
+      loop receiver output; the samples are complex and can have
+      1-16 bits in both the in-phase (I) and quadrature (Q)
+      components, depending on sampling rate and precision
+      requested.  Sampling rates between 1 ksps and 16 Msps may
+      be requested. Each RSR file is accompanied by a full PDS
+      label which describes both the format and the content
+      at the bit level.  RSR data collected early in the MRO mission
+      are described by original documentation [JPLD-16765].
+      Beginning on January 16, 2008, externally generated frequency
+      predictions for tuning the RSR were provided in a companion
+      downlink frequency (DLF) file, which must be used in conjunction
+      with the RSR records [KAHAN2009].
+ 
+ 
+    Processing
+    ==========
+      Typical TNFs contained data from a 24-hour period, combining
+      data from several antennas if there were multiple passes in
+      one day. The files archived for MRO were not screened for
+      &apos;bad&apos; points.
+ 
+      ODFs are abstracted from subsets of TNF data.  A full PDS label
+      accompanies each ODF file and gives a bit level description of
+      the content and format.
+ 
+      RSR data were modified during Ground Data System handling so that
+      MISSION_ID in the Primary Header CHDO was set to 5.  Data which were
+      recorded on the VLBI Science Receiver (VSR), then converted to RSR
+      format, were assigned the following values in the header(s):
+        MINOR_DATA_CLASS = 5   (normally  4) Primary Header CHDO
+        ORIGINATOR_ID    = 123 (normally 48) Secondary Header CHDO
+        LAST_MODIFIER_ID = 123 (normally 48) Secondary Header CHDO
+      A VSR was used for MRO when all of the available RSRs had been
+      assigned to other missions.
+ 
+ 
+    Data
+    ====
+      The data set contains primary data and secondary data.  Primary
+      data are those files which would normally be used to derive science
+      products and investigation results.  Secondary data are needed
+      for the processing or interpretation of primary data but are
+      not usually considered to have science value of their own.
+      There are three types of primary data.  Listings of primary and
+      secondary files can be found in INDEX/INDEX.TAB for the data set
+      (as of the most recent delivery).
+ 
+      TNFs contain the most primitive (and most voluminous) output
+      from the closed-loop radio science system; they are stored in
+      the TNF directory.  They have file names of the form
+      MROMAGRyyyy_ddd_hhmmXuuwVn.TNF  where &apos;MROMAGR&apos; identifies the
+      mission and the data set; &apos;yyyy&apos; is the four-digit year, &apos;ddd&apos;
+      is the three-digit day-of-year, &apos;hh&apos; is the two-digit hour,
+      and &apos;mm&apos; is the two-digit minute at the beginning of the file;
+      &apos;X&apos; indicates an X-Band uplink (&apos;N&apos; denotes no uplink);
+      &apos;uu&apos; indicates the uplink station (set to &apos;NN&apos; for no uplink or
+      &apos;MM&apos; for two or more uplinking stations during the time interval
+      covered), &apos;w&apos; indicates the downlink mode (&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, or &apos;M&apos;
+      for 1-way, 2-way, 3-way, or &apos;multiple&apos;, respectively), and &apos;Vn&apos;
+      indicates the version number of the file. A detached PDS minimal
+      label accompanies each TNF; label files have names of the form
+      MROMAGRyyyy_ddd_hhmmXuuwVn.LBL.  TNFs in this data set were
+      usually generated at a 1-second sampling rate.
+ 
+      ODFs are stored in the ODF directory. ODFs are edited and/or
+      compressed derivatives of TNFs.  File names are of the form
+      MROMAGRyyyy_ddd_hhmmXuuwVn.ODF where the field interpretations
+      are the same as for the TNF.  The ODF label has file name
+      MROMAGRyyyy_ddd_hhmmXuuwVn.LBL. The typical ODF contains about
+      3 Mbytes. ODFs in this data set were usually generated at a
+      1-second sampling rate.
+ 
+      RSR files are stored in the RSR directory; they are the primary
+      output of the open-loop radio science system.  RSR files have
+      names of the form  074MAOZyyyyddd_hhmmXuuYvvQS.abc  where
+      &apos;074&apos; is the spacecraft number; &apos;MAO&apos; denotes Mars occultation;
+      &apos;Z&apos; is either &apos;E&apos; for egress or &apos;I&apos; for ingress; &apos;yyyy&apos; is the
+      four-digit year, &apos;ddd&apos; is the day of year, &apos;hh&apos; is the two-digit
+      hour, and &apos;mm&apos; is the two-digit minute when data began; &apos;X&apos; is
+      the uplink band (set to &apos;N&apos; if there was no uplink);
+      &apos;uu&apos; is the uplink station
+      (or &apos;NN&apos; for none or &apos;MM&apos; for multiple); &apos;Y&apos; is the downlink band;
+      &apos;vv&apos; is the receiving station; &apos;Q&apos; is the receiving polarization
+      (&apos;R&apos; for right-circular or &apos;L&apos; for left-circular); &apos;S&apos; indicates
+      the data source (&apos;D&apos; for standard data originating on the RSR
+      [JPLD-16765], &apos;M&apos; for non-standard RSR data [KAHAN2009], &apos;V&apos;
+      for VSR data converted to RSR format, and &apos;W&apos; for wide-band VSR
+      data converted to RSR format); and &apos;abc&apos; identifies the RSR, the
+      RSR channel, and the RSR sub-channel of the recording. Each RSR
+      file is accompanied by a full PDS label which describes both the
+      format and the content of the data file; the label file name has
+      the form  074MAOZyyyyddd_hhmmXuuYvvQS.LBL.
+ 
+      NB: RSR data were collected using four versions of data acquisition
+      software, identified by &apos;S&apos; in the file name (see above). &apos;D&apos; files
+      are standard, have standard labels, and are documented in
+      [JPLD-16765].  Although &apos;V&apos; and &apos;W&apos; files were collected using
+      different systems, the data files have been converted to the
+      [JPLD-16765] format.  A few of the fields in the &apos;V&apos; and &apos;W&apos;
+      headers may have values that would not be expected in the &apos;D&apos;
+      format.  &apos;M&apos; files are non-standard, have different labels, and
+      require different processing, as documented in [KAHAN2009].
+      &apos;D&apos; files were collected early in the MRO mission; after
+      2008-01-16, all MRO RSR files were &apos;M&apos; files.  Processing of the
+      &apos;M&apos; files requires use of Downlink Frequency (DLF) Files.  The
+      documents [JPLD-16765] and [KAHAN2009] can be found in the
+      DOCUMENT directory of this archive.
+ 
+ 
+    Secondary Data
+    ==============
+      An extensive set of ancillary files is needed for proper analysis
+      and interpretation of the data.   In the paragraphs below
+      &apos;yyyy_ddd_yyyy_ddd&apos; gives the start and end dates of the data in
+      the file.  All ASCII files have records delimited by an ASCII
+      carriage-return (ASCII 13) line-feed (ASCII 10) pair.  In some cases
+      (especially for NAIF files) the &lt;CR&gt;&lt;LF&gt; may need to be converted to
+      either &lt;CR&gt; or &lt;LF&gt; before the file is used on the local machine.
+ 
+      Antenna Gimbal and Solar Array Kernel Files (AGK and SAK Directories)
+      -------------------------------------------
+        Antenna Gimbal Kernel files and Solar Array Kernel Files were
+        produced by the JPL Navigation and Ancillary Information Facility
+        (NAIF). Each AGK file contains information on the state of the
+        HGA azimuth and elevation gimbals as a function of time.  Each SAK
+        file contains information on the solar array gimbals.  These are
+        ASCII files in NAIF transfer format.  File names have the form
+        MROMAGRyyyy_ddd_yyyy_ddd.AGK  or  MROMAGRyyyy_ddd_yyyy_ddd.SAK.
+        Each AGK or SAK file is accompanied by a PDS minimal label with
+        file name MROMAGRyyyy_ddd_yyyy_ddd.LBL. Typical file sizes are
+        1 MByte.
+ 
+      Downlink Frequency Files (DLF Directory)
+      ----------------------------------------
+        Downlink Frequency files are ASCII files produced by the DSN for
+        tuning an open-loop receiver (RSR) during some radio science
+        activities.  They list the best pre-experiment estimates of the
+        spacecraft sky frequency at specific times and a set of Everett
+        polynomial coefficients for interpolation. File names have the
+        form MROMAGRyyyy_ddd_hhmmXvvwVn.DLF, where &apos;X indicates that
+        X-Band is used for downlink, &apos;vv&apos; is the downlink station number,
+        &apos;w&apos; is the downlink mode (&apos;1&apos; for one-way, &apos;2&apos; for two-way, &apos;3&apos;
+        for three-way, or &apos;M&apos; for multiple), and &apos;Vn&apos; is the version
+        number.  Each file is accompanied by a PDS detached label having
+        file name MROMAGRyyyy_ddd_hhmmXvvwVn.LBL.  Typical file size is
+        250 KB.
+ 
+      Earth Orientation Parameter Files (EOP Directory)
+      ---------------------------------------------------
+        Earth Orientation Parameter files are ASCII files produced by the
+        Kalman Earth Orientation Filter (KEOF) Group at JPL. File names have
+        the form MROMAGRyyyy_ddd_yyyy_ddd.EOP. Each EOP file is accompanied
+        by a PDS minimal label with file name MROMAGRyyyy_ddd_yyyy_ddd.LBL.
+        Typical file size is 24 KB.
+ 
+      Ionosphere Calibration Files (ION Directory)
+      ---------------------------------------------------
+        Ionosphere Calibration files are ASCII files produced by the Tracking
+        System Analytic Calibration (TSAC) Group at JPL. They provide
+        historical and predicted Earth ionospheric conditions. File
+        names have the form MROMAGRyyyy_ddd_yyyy_ddd.ION. Each ION
+        file is accompanied by a PDS minimal label with file name
+        MROMAGRyyyy_ddd_yyyy_ddd.LBL. Typical file size is 23 KB.
+ 
+      Light Time Files (LTF Directory)
+      ---------------------------------------------------
+        Light Time files were produced by the MRO Navigation Team
+        (NAV). They give radio propagation time from the spacecraft
+        to Earth vs time. These are ASCII files of fixed length
+        records. File names have the form MROMAGRyyyy_ddd_yyyy_ddd.LTF.
+        Each LTF file is accompanied by a PDS minimal label with file
+        name MROMAGRyyyy_ddd_yyyy_ddd.LBL. Typical file sizes are less
+        than 1 MB.
+ 
+      Maneuver Performance Data Files (MPD Directory)
+      ---------------------------------------------------
+        Maneuver Performance Data files were produced by the MRO
+        Spacecraft Team (SCT). They contain estimates of spacecraft
+        mass and center of mass; moments of inertia; thruster
+        locations, directions, and magnitudes; and propellant flow
+        rate. These are ASCII files of variable length records.
+        File names have the form MROMAGRyyyy_ddd_yyyy_ddd.MPD. Each MPD
+        file is accompanied by a PDS minimal label with file name
+        sssttaayyyy_ddd_yyyy_ddd.LBL. Typical file sizes are 4 kB.
+ 
+      Small Forces File (SFF Directory)
+      ---------------------------------------------------
+        Small Forces Files were created from the MRO spacecraft
+        engineering telemetry stream. These are ASCII files of
+        variable length records.  File names have the form
+        MROMAGRyyyy_ddd_yyyy_ddd.MPD.  Each SFF file is accompanied by a
+        PDS minimal label with file name MROMAGRyyyy_ddd_yyyy_ddd.LBL.
+        Typical file sizes are less than 0.1 MB. File content and
+        structure is defined by SFF_MM_SIS_031217.htm in the DOCUMENT
+        directory.
+ 
+      Spacecraft/Planetary/Satellite Ephemeris (SPK) Files
+      (SPK Directory)
+      ---------------------------------------------------
+        Spacecraft/Planetary/Satellite Ephemeris Files (also known as
+        SP kernels or SPK files) are produced by the MRO Navigation
+        Team (NAV). One file includes spacecraft, planetary, and
+        satellite ephemerides.  File names have the form
+        MROMAGRyyyy_ddd_yyyy_ddd.SPK. This SPK file is accompanied by a
+        PDS minimal label with file name having the form
+        MROMAGRyyyy_ddd_yyyy_ddd.LBL.
+ 
+      Spacecraft Attitude (CK) Files
+      (ACK, CCK, SCK, ACP, CCP, and SCP Directories)
+      ---------------------------------------------------
+        C-Kernel Files are produced by the MRO Attitude and Articulation
+        Control Subsystem team (AACS) and are in NAIF transfer format.  File
+        names have the form MROMAGRyyyy_ddd_yyyy_ddd.FFF where FFF is a
+        three-character file name extension. The ACK, CCK, and SCK
+        extensions denote the reconstructed high-gain antenna, spacecraft,
+        and solar array C-Kernels, respectively. The ACP, CCP, and SCP
+        extensions denote the predicted high-gain antenna, spacecraft, and
+        solar array C-kernels, respectively.  Each C-Kernel file is
+        accompanied by a PDS minimal label with file name
+        MROMAGRyyyy_ddd_yyyy_ddd.LBL. Typical file size is 18 MB.
+ 
+      Troposphere Calibration Files (TRO Directory)
+      ---------------------------------------------------
+        Troposphere Calibration files are ASCII files produced by the Tracking
+        System Analytic Calibration (TSAC) Group at JPL. They provide
+        historical and predicted Earth tropospheric conditions. File
+        names have the form MROMAGRyyyy_ddd_yyyy_ddd.TRO. Each TRO
+        file is accompanied by a PDS minimal label with file name
+        MROMAGRyyyy_ddd_yyyy_ddd.LBL. Typical file size is 120 KB.
+ 
+      DSN Weather Files (WEA Directory)
+      ---------------------------------------------------
+        DSN Weather files were produced by the Tracking System
+        Analytic Calibration (TSAC) Group at JPL. Files give weather
+        calibration information for DSN complexes. These are ASCII
+        files of variable length records.  File names have the form
+        MROMAGRyyyy_ddd_yyyy_ddd.WEA. WEA files were typically
+        released weekly and contain all weather data for the complex
+        since 1 January. Each WEA file is accompanied by a PDS
+        minimal label with file name MROMAGRyyyy_ddd_yyyy_ddd.LBL.
+        The files grow at the rate of approximately 90 kB per month.
+ 
+      Files in the CALIB Directory
+      ----------------------------
+        Files in the CALIB directory are those likely to have wide
+        applicability in working with the raw data. They help unpack
+        and allow use of the raw data, rather than being &apos;instrument&apos;
+        calibration data per se. They include clock conversion files,
+        tracking station locations and covariance files, a Structures
+        kernel, and leapsecond files. Each file is accompanied by
+        a PDS minimal label.  In the paragraphs below &apos;yy&apos;  is the
+        two-digit year, &apos;mm&apos; is the two-digit month, and &apos;dd&apos;  is
+        the two-digit day on which the file was created.
+ 
+        Spacecraft Clock Conversion files allow time measured by the
+        spacecraft clock to be converted to other time systems (e.g.,
+        ephemeris time or UTC). These are ASCII files with names of the
+        form:  TSC_yymmdd.CLK.  Each file TSC_yymmdd.CLK is accompanied
+        by a PDS detached minimal label with name TSC_yymmdd.LBL.
+ 
+        The Topocentric Reference Definition kernel defines topocentric
+        reference frames associated with each of the DSN stations. They
+        were produced by the JPL/PDS Navigation Ancillary Information
+        Facility (NAIF) for use with NAIF-developed and MRO-provided
+        software.  These are ASCII files with names of the form
+        EARTH_TOPO_yymmdd.TF; each is accompanied by a detached label
+        EARTH_TOPO_yymmdd.LBL.
+ 
+        The NAIF Structures kernel contains the relative locations of
+        the MRO solar array and HGA structures.  This is an ASCII file
+        in NAIF transfer format.  The file name has form MRO_yymmdd.STK.
+        The file is accompanied by a detached minimal label with name
+        MRO_yymmdd.LBL.
+ 
+        Leapsecond kernels contain a record of leap seconds (past and
+        predicted) that allows proper conversion between ephemeris time
+        and UTC.  These are ASCII files with names of the form
+        LSK_yymmdd.TLS.  Each file LSK_yymmdd.TLS is accompanied by a
+        PDS detached minimal label with name LSK_yymmdd.LBL.
+ 
+    Coordinate System
+    =================
+      SPK and CK files can be converted to a wide range of
+      coordinate frames by the NAIF reader routines.
+ 
+      Other data types are not dependent on definition of a
+      coordinate system.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at several institutions.
+      Because such software must usually operate at the bit-level and
+      is written for a narrow range of platforms, it is not suitable
+      for general distribution.  No software is included with this
+      archival data set.
+ 
+ 
+    Media/Format
+    ============
+      These data have been delivered to the PDS Geosciences Node
+      electronically.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been collected to support
+      radio science investigations, including derivation of the
+      gravity field of Mars.  These are similar to data collected
+      using other spacecraft and are believed to be generally of
+      good quality.
+ 
+ 
+    Review
+    ======
+      This data set was designed with oversight from the Planetary
+      Data System.  It was initially reviewed in May 2009 when the
+      RSR and DLF data types were added.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The ODFs in this archive contain data from all nominal MRO
+      passes. They are primarily for the gravity investigation.
+ 
+      Initially, the MRO Radio Science investigation was limited
+      to gravity science. S. Asmar saw an opportunity to acquire
+      atmospheric occultation data and inquired with key members
+      in the science community (in this specific field) who
+      supported the idea. The MRO project then accepted a proposal
+      to provide modest funding for this purpose.
+ 
+      All RSRs in this archive cover occultation
+      activities when the spacecraft signal was carrier-only for
+      Radio Science atmospheric investigations. Initial RSR files
+      follow the format described by [JPLD-16765]. Open-loop
+      (RSR) recordings for atmospheric science began March 4, 2007.
+      Approximately one orbit per day was allocated to the
+      Radio Science (Carrier Only) configuration for atmospheric
+      occultations. As such, data cover a complete range
+      of latitudes and longitudes on the Martian surface. The solar
+      zenith angle, as of this writing, varies between 70 and 120
+      degrees. Ingress recordings were done with a two-way
+      coherent signal from the spacecraft while egress recordings
+      used the USO and were one-way. Beginning on
+      January 16, 2008, RSRs conform to [KAHAN2009]. DLFs are provided
+      starting January 16, 2008, so the user can reconstruct the
+      receiver tuning. TNFs are provided for all RSRs so the user
+      has the station uplink ramps, a necessary component in deriving
+      the predicted sky frequency.
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

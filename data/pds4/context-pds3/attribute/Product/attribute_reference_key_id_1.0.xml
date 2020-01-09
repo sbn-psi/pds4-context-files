@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.reference_key_id</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>reference_key_id</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>reference_key_id</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>reference_key_id</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The reference_key_id element provides the catalog with
+an identifier for a reference document.  Additionally, it
+may be used in various catalog descriptions, for example
+in data_set_desc, as a shorthand notation of a document
+reference.
+The reference_key_id element is composed according to the
+following guidelines:
+1.  if there is an author for the publication, the general
+rule is:
+  REFERENCE_KEY_ID = &lt;author&apos;s last name&gt;&lt;year&gt;&lt;letter&gt;,
+     where
+     &lt;author&apos;s last name&gt; is a maximum of 15 characters,
+          and may need to be truncated.
+     &lt;year&gt; is 4 characters for the year published.
+     &lt;letter&gt; is optional but consists of one character
+           used to distinguish multiple papers by the
+           same author(s) in the same year.
+   The following variations apply:
+   a.  If there is one author:
+    &lt;author&apos;s last name&gt;&lt;year&gt;
+    Example value:  SCARF1980
+   b.  If there are two authors:
+    &lt;first author&apos;s last name&gt;&amp;&lt;second author&apos;s last name&gt;
+    &lt;year&gt;
+    Example value:  SCARF&amp;GURNETT1977
+  c . If there are three or more authors:
+    &lt;first author&apos;s last name&gt;ETAL&lt;year&gt;
+    Example value:  GURNETTETAL1979
+   d.  If one author has the same last name as another:
+    &lt;author&apos;s last name&gt;,&lt;author&apos;s first initial&gt;
+    &lt;year published&gt;
+    Example value:  FREUD,A1935
+   e.  If the same author(s) published more than one paper
+    in the same year:
+      &lt;author&apos;s last name&gt;&lt;year&gt;&lt;letter&gt;
+      or
+      &lt;first author&apos;s last name&gt;&amp;&lt;second author&apos;s last name&gt;
+      &lt;year&gt;&lt;letter&gt;
+      or
+      &lt;first author&apos;s last name&gt;ETAL&lt;year&gt;&lt;letter&gt;
+    Example values:  SCARF1980A
+                     SCARF&amp;GURNETT1977B
+   f.  In cases where an initial reference has been
+    catalogued and published on an Archive medium and
+    subsequent references for the same author and same
+    year are needed at a later date, the following rule
+    applies:
+    Leave the original reference as is, and add a letter
+    to the subsequent references starting with the letter
+    &apos;B&apos; since the original reference will now be assumed
+    to have an implicit &apos;A&apos;.  For example:  PFORD1991,
+    PFORD1991B.
+    Note that if the initial reference has only been
+    catalogued and not yet published, then it can be
+    modified such that the &apos;A&apos; is explicit, i.e.
+    PFORD1991A.
+2.  If there is no author for the publication, the general
+rule is:
+ REFERENCE_KEY_ID = &lt;journal name&gt;&lt;document identification&gt;
+ where
+ &lt;journal name&gt; is a maximum of 10 characters, and
+      may need to be abbreviated
+ &lt;document identification&gt; is a maximum of 10
+      characters.  This id may consist of a volume number,
+      and/or document or issue number, and/or year of
+      publication.
+     Example values:  SCIENCEV215N4532
+                      JGRV88
+                      JPLD-2468
+        </definition>
+        <comment>refkeyid</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>reference_key_id</name>
+            <definition>
+The reference_key_id element provides the catalog with
+an identifier for a reference document.  Additionally, it
+may be used in various catalog descriptions, for example
+in data_set_desc, as a shorthand notation of a document
+reference.
+The reference_key_id element is composed according to the
+following guidelines:
+1.  if there is an author for the publication, the general
+rule is:
+  REFERENCE_KEY_ID = &lt;author&apos;s last name&gt;&lt;year&gt;&lt;letter&gt;,
+     where
+     &lt;author&apos;s last name&gt; is a maximum of 15 characters,
+          and may need to be truncated.
+     &lt;year&gt; is 4 characters for the year published.
+     &lt;letter&gt; is optional but consists of one character
+           used to distinguish multiple papers by the
+           same author(s) in the same year.
+   The following variations apply:
+   a.  If there is one author:
+    &lt;author&apos;s last name&gt;&lt;year&gt;
+    Example value:  SCARF1980
+   b.  If there are two authors:
+    &lt;first author&apos;s last name&gt;&amp;&lt;second author&apos;s last name&gt;
+    &lt;year&gt;
+    Example value:  SCARF&amp;GURNETT1977
+  c . If there are three or more authors:
+    &lt;first author&apos;s last name&gt;ETAL&lt;year&gt;
+    Example value:  GURNETTETAL1979
+   d.  If one author has the same last name as another:
+    &lt;author&apos;s last name&gt;,&lt;author&apos;s first initial&gt;
+    &lt;year published&gt;
+    Example value:  FREUD,A1935
+   e.  If the same author(s) published more than one paper
+    in the same year:
+      &lt;author&apos;s last name&gt;&lt;year&gt;&lt;letter&gt;
+      or
+      &lt;first author&apos;s last name&gt;&amp;&lt;second author&apos;s last name&gt;
+      &lt;year&gt;&lt;letter&gt;
+      or
+      &lt;first author&apos;s last name&gt;ETAL&lt;year&gt;&lt;letter&gt;
+    Example values:  SCARF1980A
+                     SCARF&amp;GURNETT1977B
+   f.  In cases where an initial reference has been
+    catalogued and published on an Archive medium and
+    subsequent references for the same author and same
+    year are needed at a later date, the following rule
+    applies:
+    Leave the original reference as is, and add a letter
+    to the subsequent references starting with the letter
+    &apos;B&apos; since the original reference will now be assumed
+    to have an implicit &apos;A&apos;.  For example:  PFORD1991,
+    PFORD1991B.
+    Note that if the initial reference has only been
+    catalogued and not yet published, then it can be
+    modified such that the &apos;A&apos; is explicit, i.e.
+    PFORD1991A.
+2.  If there is no author for the publication, the general
+rule is:
+ REFERENCE_KEY_ID = &lt;journal name&gt;&lt;document identification&gt;
+ where
+ &lt;journal name&gt; is a maximum of 10 characters, and
+      may need to be abbreviated
+ &lt;document identification&gt; is a maximum of 10
+      characters.  This id may consist of a volume number,
+      and/or document or issue number, and/or year of
+      publication.
+     Example values:  SCIENCEV215N4532
+                      JGRV88
+                      JPLD-2468
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>20</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

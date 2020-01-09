@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-grns-4-ns-ddr-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER E/V/H GRNS 4 NEUTRON SPECTROMETER DDR V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ns.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-grns-4-ns-ddr-v2.0__browserp_mess-e-v-h-grns-4-ns-ddr-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-grns-4-ns-ddr-v2.0__browser_mess-e-v-h-grns-4-ns-ddr-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-grns-4-ns-ddr-v2.0__dvo_mess-e-v-h-grns-4-ns-ddr-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Goldsten, J.O., E.A. Rhodes,, W.V. Boynton, W.C. Feldman, D.J. Lawrence, J.I.
+                   Trombka, D.M. Smith, L.G. Evans, J. White, N.W. Madden, P.C. Berg, G.A. Murphy,
+                   R.S. Gurnee, K. Strohbehn, B.D. Williams, E.D. Schaefer, C.A. Monaco, C.P.
+                   Cork, J.D. Eckels, W.O. Miller, M.T. Burks, L.B. Hagler, S.J. Deteresa, and
+                   M.C. Witte, The MESSENGER Gamma-Ray and Neutron Spectrometer, Space Science
+                   Reviews, 131, 339-391, 2007.
+            </reference_text>
+            <description>reference.GOLDSTENETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H-GRNS-4-NS-DDR-V2.0</data_set_id>
+        <data_set_name>MESSENGER E/V/H GRNS 4 NEUTRON SPECTROMETER DDR V2.0</data_set_name>
+        <data_set_release_date>2016-05-06</data_set_release_date>
+        <start_time>2011-085T00:00:00Z</start_time>
+        <stop_time>2015-120T15:01:55Z</stop_time>
+        <producer_full_name>DAVID LAWRENCE</producer_full_name>
+        <citation_text>
+            D. J. LAWRENCE (APL), MESSENGER E/V/H GRNS 4 NEUTRON SPECTROMETER
+            DDR V2.0, MESS-E/V/H-GRNS-4-NS-DDR-V2.0, NASA Planetary Data
+            System, 2016.
+        </citation_text>
+        <data_set_terse_desc>
+            The MESSENGER Neutron Spectrometer (NS) Derived Data Records
+            (DDRs) consist of science and engineering data collected by the
+            NS instrument.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== This data set consists of the MESSENGER Neutron
+            Spectrometer (NS) &apos;derived&apos; data records (DDRs). The NS
+            experiment is a neutron spectrometer designed to observe neutrons
+            emitted from Mercury&apos;s surface in the energy range from 0.01
+            eV to 7 MeV. There is 1 NS DDR standard data product (Neutron
+            Count Rate, NS_DDR_NCR) and 1 NS DDR special data product
+            (Neutron Composition, NS_DDR_NCP). The NCR data products contain
+            net neutron count rates from the LG1, LG2, and BP sensors and
+            uncertainties from each of these sensors. The NCP data product
+            contains fast and epithermal count rates as a function of
+            latitude, along with simulated count rates for the cases of no
+            hydrogen and for a thick layer of 100 wt. percent water ice in
+            all radar bright regions. This is version 2 of this data set;
+            version 1 has been superceded.
+        </abstract_desc>
+        <data_set_desc>
+ 
+   Instrument Overview
+   ===================
+     The MErcury Surface, Space ENvironment, GEochemistry, and Ranging
+     (MESSENGER) Neutron Spectrometer (NS) sensor consists of three
+     scintillators, each wrapped separately and coupled to separate
+     photo-multiplier tubes. The three scintillators are sensitive to
+     neutrons of different energies: thermal neutrons (0.025 - 1 eV),
+     epithermal neutrons (1eV - 500 keV), and fast neutrons
+     (500 keV - 7 MeV). The first and third scintillators are lithium
+     (6Li)-glass scintillators (LG1 and LG2) which respond to a combination
+     of thermal and epithermal neutrons. The middle scintillator is a
+     borated plastic (BP) scintillator that responds only to epithermal and
+     fast neutrons due to its electronics setup. The interaction of galactic
+     cosmic rays (GCR) with the surface of Mercury produces neutrons, some
+     of which escape the surface and produce a neutron signal that can be
+     measured by the orbiting NS sensor. The measured neutron energy
+     spectrum reflects the transport properties of the surface composition
+     and is sensitive to depths down to about 1 m. Thermal neutrons are
+     sensitive to a variety of elements, including Fe, Ti, Gd, Sm, Cl, and
+     C. Epithermal neutrons are mostly sensitive to H abundance. Fast
+     neutrons can provide a good measure of average atomic mass. For the
+     MESSENGER mission, the NS sensor will establish and map the abundance
+     of H over most of the northern hemisphere of Mercury, providing
+     significant new information regarding the potential presence of water
+     ice within and near permanently shaded craters near the north pole.
+ 
+     See the NS_INST.CAT file for more information and [GOLDSTENETAL2007]
+     for full details.
+ 
+   Data Set Overview
+   =================
+     This data set consists of MESSENGER NS &apos;derived&apos; data records (DDRs).
+     There is 1 NS DDR standard data product (Neutron Count Rate,
+     NS_DDR_NCR) and 1 NS DDR special data product (Neutron Composition,
+     NS_DDR_NCP).
+ 
+     The NCR data products are derived data consisting of net (background
+     subtracted) neutron count rates from each of the three NS sensors,
+     namely the two lithium glass (LG) sensors and the epithermal neutron
+     singles data from the borated plastic (BP) sensor.  A single DDR NCR
+     data file contains the observations with a time tag corresponding to a
+     given Earth day. Uncertainty values for each of these net count rates
+     are also provided along with spacecraft ephemeris/geometry
+     information.  This ephemeris/geometry data are the same as given in the
+     NS CDR files.
+ 
+     The NS_DDR_NCP file contains fast and epithermal count rates as a
+     function of latitude, along with simulated count rates for the cases of
+     no hydrogen and for a thick layer of 100 wt. percent water ice in all
+     radar bright regions.
+ 
+     This is version 2 of this data set; version 1 has been superceded.
+ 
+   Processing Overview
+   ===================
+     The following operations are applied to the Calibrated Data Records
+     (DDRs) to arrive at the Derived Data Records (DDRs):
+ 
+     1) Selection of valid data to eliminate times where the backgrounds
+     from solar particle events are too high to enable net count rates to be
+     derived.
+     2) Corrections to the NS spectra for gain varations.
+     3) Background subtraction from the NS spectra to arrive at the net
+     neutron count rates.
+ 
+     These corrections are not reversible such that the DDR is not directly
+     derivable from the CDR dataset.  Details of the processing are given in
+     the document messns_processing.pdf located in the CALIB directory.
+ 
+   Coordinate Systems
+   ==================
+     For planetary orbital and flyby data, the NS-specific data also have
+     two coordinate systems (in addition to standard J2000 and
+     Planetocentric body fixed) for expressing spacecraft velocity and
+     attitude data: the nadir fixed coordinate system and the spacecraft
+     fixed coordinate system.
+ 
+     The nadir fixed coordinate system is defined as follows:
+     * The z-axis is defined as the vector from the spacecraft center to the
+     flyby or orbiting planet center.
+     * The nadir fixed y-axis is defined as the cross product of the nadir
+     z-axis and the spacecraft velocity vector (where both are expressed in
+     the J2000 coordinate system).
+     * The nadir fixed x-axis is defined as the cross product of the nadir
+     fixed y-axis with the nadir fixed z-axis.
+ 
+     The spacecraft fixed coordinate system is defined as follows:
+     * The spacecraft fixed x-axis is the vector normal to the NS LG1 sensor
+     and is parallel to the spacecraft solar panel booms.
+     * The spacecraft fixed y-axis is in the direction from the spacecraft
+     down the magnetometer boom.
+     * The spacecraft fixed z-axis is the viewing direction from the
+     instrument deck.
+ 
+   Data
+   ====
+     There is 1 NS DDR standard data product (Neutron Count Rate,
+     NS_DDR_NCR) and 1 NS DDR special data product (Neutron Composition,
+     NS_DDR_NCP).
+ 
+     The NS_DDR_NCR files contain net neutron count rate data as derived
+     from the LG and BP singles spectra.  The net count rates are given in
+     units of counts per second for each accumulation time interval.
+     Derived uncertainty values for each count rate are also provided for
+     each time step.  Each NS_DDR_NCR file is organized as an ASCII text
+     file and contains data collected over one Earth day.  In addition to
+     the count rates, spacecraft time and geometry information associated
+     with each measurement are provided.  These time and geometry values
+     are the same as is given in the CDR files for each corresponding
+     measurement.  Three main processing steps are carried out for the
+     derivation of the net neutron count rate data.  First, data selections
+     are made to exclude data taken during times of solar particle events
+     when the charged particle flux is sufficiently high to affect the
+     background in the NS sensors.  The times of these exclusions are given
+     below.  Second, gain corrections are made to the NS spectra prior to
+     deriving any net neutron counts.  Finally, background subtraction
+     algorithms are applied to the NS spectra through which the next neutron
+     counts are derived.  Details of the processing are given in the
+     document messns_processing.pdf located in the CALIB directory.  Please
+     note that DDRs were generated for data collected during the &apos;Mercury
+     Orbit&apos; phase only.
+ 
+     The general form of the NS_DDR_NCR file names is
+     &apos;NS_DDR_ZZZYYYYDDDWWW.XXX,&apos; where
+ 
+     NS       instrument identifier: represents the NS instrument.
+     DDR      data product identifier: DDR
+     ZZZ      data product name
+                NCR - Neutron Count Rates
+     YYYY     four-digit year corresponding to the start-time of the first
+                record in the NS data file.
+     DDD      three-digit day of the year corresponding to the start time of
+                the first record in the NS CDR data file.
+     WWW      reserved character string used during the course of the
+                mission as necessary to identify &apos;special&apos; data products.
+                Nominal data products are identified by ZZZ.
+     .XXX     the file extension (.DAT for binary files, .TAB for ascii
+                files).
+ 
+     The NCP data product contains latitude-binned relative neutron count
+     rates taken during the primary MESSENGER mission from 26 March 2011 to
+     25 February 2012.  Specifically, these data are the exact data points
+     given in Figure 2 and Figure 3A from Lawrence et al., Science, 339,
+     292-296, 2013.  The delivered values include measured and simulated
+     data for fast and epithermal neutron data.  The simulated data include
+     two cases: one case assumes there is no hydrogen in Mercury&apos;s north
+     polar radar bright regions; the other case assumes that the north polar
+     radar bright regions contain 100 wt. percent H2O.
+ 
+     The general form of the NS_DDR_NCP file names is
+     &apos;NS_DDR_ZZZ.XXX,&apos; where
+ 
+     NS       instrument identifier: represents the NS instrument.
+     DDR      data product identifier: DDR
+     ZZZ      data product name
+                NCP - Neutron Composition Product
+     .XXX     the file extension (.TAB).
+ 
+     See NS_CDR_DDR_SIS.PDF in the DOCUMENT folder of this volume for more
+     information.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+   Confidence Level Overview
+   =========================
+     The NS DDR data have been processed as described in the &apos;MESSENGER
+     Neutron Spectrometer (NS) EDR-to-CDR-to-DDR Processing&apos; document
+     (MESSNS_PROCESSING.PDF, CALIB directory). Data presented here are an
+     accurate representation of the NS data as processed from the CDR files,
+     where the processing includes data selection, gain correction, and
+     background subtraction.
+ 
+   Review
+   ======
+     The NS DDR was reviewed internally by the NS team prior to release to
+     the PDS.  PDS also performed an external review of the NS DDR.
+ 
+   Data Coverage and Quality
+   =========================
+     Data reported are the &apos;derived&apos; data received from the spacecraft
+     during the the following mission phases: &apos;Mercury Orbit&apos;, &apos;Mercury
+     Orbit Year 2&apos;, &apos;Mercury Orbit Year 3&apos;, &apos;Mercury Orbit Year 4&apos;, and
+     &apos;Mercury Orbit Year 5&apos;. These mission phases are defined as:
+ 
+                           Start time         End time
+     Phase Name            Date (DOY)         Date (DOY)
+     -----------------     -----------------  -----------------
+     Mercury Orbit          4 Mar 2011 (063)  17 Mar 2012 (077)
+     Mercury Orbit Year 2  18 Mar 2012 (078)  17 Mar 2013 (076)
+     Mercury Orbit Year 3  18 Mar 2013 (077)  17 Mar 2014 (076)
+     Mercury Orbit Year 4  18 Mar 2014 (077)  17 Mar 2015 (076)
+     Mercury Orbit Year 5  18 Mar 2015 (077)  30 Apr 2015 (120)
+ 
+     PDS delivery 9 included NS DDR data acquired from March 25, 2011 to
+     March 25, 2012.
+ 
+     During this data delivery phase, the NS was shut off for nine
+     consecutive days when the MESSENGER spacecraft passed through its first
+     long eclipse period. The specific off period was from May 24, 2011
+     21:34:49 to June 3, 2011 0:17:49.
+ 
+     Also during this data delivery phase, the high voltage (HV) to the LG
+     and BP sensors was shut down six times during spacecraft thrusting
+     maneuvers. Each time, the HV was shut down for approximately four hours
+     while the spacecraft was near apoapsis. The specific times for the HV
+     shut down are:
+ 
+     June 15, 2011 16:12:08 - June 15, 2011 20:30:16;
+     July 26, 2011 17:40:16 - July 26, 2011 21:55:16;
+     September 7, 2011 11:38:16 - September 7, 2011 16:05:50;
+     October 24, 2011 18:29:00 - October 24, 2011 23:16:00;
+     December 5, 2011 12:36:00 - December 5, 2011 17:18:00;
+     March 2, 2012 22:09:22 - March 3, 2012 02:47:54.
+ 
+     The HV to the LG and BP sensors was shut down during a large solar
+     particle event when the NS sensors were safed because of the large
+     charged particle flux.  The times for this HV shut down period were:
+     March 7, 2012 0:24:42 - March 12, 2012 15:50:42.
+ 
+     PDS delivery 11 included NS DDR data acquired from March 26, 2012
+     through March 17, 2013.
+ 
+     The NS HV for the BP sensor was shut down twice from September 2012 to
+     March 2013: first from September 20, 2012 at 09:40 UTC to September 24,
+     2012 at 17:38 UTC when the NS BP sensor went into safe mode due to an
+     energetic particle event; second on March 16, 2013 from 06:53 UTC to
+     08:00 UTC when the NS BP sensor went into safe mode due to an energetic
+     particle event.
+ 
+     PDS delivery 13 included NS DDR data acquired from March 18, 2013 to
+     March 17, 2014.
+ 
+     From March 18, 2013 to September 17, 2013 the NS HV was shut down six
+     times into safe mode due to high rates from energetic particles:
+     1) April 24, 2013 to April 25, 2013;
+     2) May 2, 2013, 8:45 UTC to May 2, 2013, 9:16 UTC;
+     3) May 21, 2013, 8:57 UTC to May 21, 2013, 9:32 UTC;
+     4) May 21, 2013, 17:02 UTC to May 21, 2013, 17:33 UTC;
+     5) June 21, 2013 to June 24, 2013;
+     6) August 19, 2013 to August 22, 2013.
+ 
+     From September 18, 2013 to March 17, 2014 the NS HV for the BP and/or
+     LG sensor was shut down 6 times:
+     1) for approximately two hours on October 25, 2013; 2) October 28, 2013,
+     16:00 UTC to October 29, 2013 02:00 UTC; 3) For less than an hour on
+     November 5, 2013; 4) For less than an hour on December 14, 2013;
+     5) December 26, 2013 07:00 UTC to December 31, 2013 20:00 UTC;
+     6) For less than an hour on Jan 25, 2014.
+ 
+     PDS delivery 15 included NS DDR data acquired from March 18, 2014 to
+     April 30, 2015.
+ 
+     From March 18, 2014 to September 17, 2014 the NS HV for the BP and LG
+     sensors was shut down twice for a few hours for spacecraft thrusting
+     maneuvers.  These times were June 17, 2014 at 12:00 UTC and
+     September 12, 2014 at 13:00 UTC.
+ 
+     From September 18, 2014 to April 30, 2015 the NS HV for the BP and LG
+     sensors was shut down for a few hours for spacecraft thrusting
+     maneuvers. These days were September 28, 2014 around 07:44 UTC,
+     October 24, 2014 around 16:00 UTC, and January 21, 2015 around 19:30
+     UTC.
+ 
+   Quality and Limitations
+   =======================
+     This data set has been processed as described in the &apos;MESSENGER Neutron
+     Spectrometer (NS) EDR-to-CDR-to-DDR Processing&apos; document. All data have
+     been successfully processed through the NS data processing codes and
+     all data are found to be nominal.  Other than the scheduled &apos;instrument
+     off&apos; periods described above, no data gaps or corrupted data have been
+     identified for any of the NS operational periods. Although there may be
+     some data not identified as missing or corrupted, such data should be
+     minimal and a very small fraction of the available data.
+ 
+     Regarding data quality, the primary factor that affects the quality of
+     the NS data are solar particle events.  The table below lists the times
+     during the data delivery period where it was determined that there were
+     fluxes of solar energetic particles high enough to affect the data
+     background.  The columns of the table are:  Name (numeric label for the
+     solar particle event); start time in UTC indicating the starting time
+     of the solar particle event; stop time in UTC indicating the stopping
+     time of the solar particle event; type (All stands for all sensors, LG1
+     or LG2 stands for lithium glass sensor 1 or 2 only; BPS stands for
+     borated plastic scintillator only).
+ 
+     Name    Start Time             End Time                Type
+     ------------------------------------------------------------
+     001     03/24/2011 11:48:19    03/24/2011 18:50:03     All
+     002     03/25/2011 05:52:23    03/25/2011 10:15:36     All
+     003     03/25/2011 23:01:18    03/26/2011 04:28:38     LG2
+     004     03/30/2011 17:00:00    03/30/2011 22:00:00     All
+     005     04/04/2011 09:48:40    04/04/2011 13:56:56     LG2
+     006     05/24/2011 22:00:00    06/03/2011 03:45:00     All
+     007     06/04/2011 06:13:13    06/10/2011 22:00:00     BPS
+     008     06/04/2011 06:13:13    06/12/2011 07:00:00     LG1
+     009     06/04/2011 06:13:13    06/15/2011 22:00:00     All
+     010     08/02/2011 05:39:24    08/02/2011 18:24:21     All
+     011     08/04/2011 03:33:28    08/05/2011 17:00:00     All
+     012     08/09/2011 07:00:00    08/10/2011 03:00:00     All
+     013     09/05/2011 05:39:00    09/08/2011 14:00:00     LG2
+     014     09/06/2011 04:45:00    09/06/2011 07:10:00     BPS
+     015     09/07/2011 04:01:00    09/07/2011 06:32:00     BPS
+     016     09/07/2011 18:58:00    09/08/2011 06:00:00     BPS
+     017     09/08/2011 22:20:00    09/10/2011 02:00:00     All
+     018     09/22/2011 11:25:40    09/24/2011 08:00:00     All
+     019     10/04/2011 12:53:49    10/06/2011 02:55:42     All
+     020     10/14/2011 12:56:57    10/15/2011 10:13:16     All
+     021     10/17/2011 08:10:30    10/17/2011 11:38:16     LG2
+     022     11/03/2011 22:50:16    11/06/2011 02:00:00     All
+     023     11/09/2011 12:56:40    11/09/2011 18:45:00     All
+     024     11/17/2011 20:52:37    11/18/2011 16:50:00     All
+     025     12/14/2011 14:20:00    12/14/2011 22:30:00     All
+     026     12/25/2011 17:48:00    12/26/2011 15:55:00     All
+     027     01/02/2012 14:54:00    01/03/2012 13:50:00     All
+     028     01/23/2012 05:36:00    02/06/2012 00:01:00     All
+     029     03/03/2012 20:11:00    03/17/2012 00:00:00     All
+     030     04/05/2012 21:13:05    04/06/2012 00:14:30     All
+     031     04/09/2012 11:04:13    04/09/2012 17:17:43     All
+     032     04/26/2012 08:25:36    04/26/2012 12:10:43     All
+     033     04/27/2012 16:00:00    04/28/2012 02:58:00     All
+     034     05/17/2012 02:32:33    05/19/2012 02:37:40     All
+     035     05/26/2012 20:16:48    05/30/2012 02:42:00     All
+     036     06/28/2012 16:04:00    06/29/2012 17:00:00     All
+     037     07/01/2012 18:58:00    07/02/2012 02:00:00     All
+     038     07/02/2012 10:18:10    07/02/2012 18:09:00     All
+     039     07/03/2012 03:03:15    07/03/2012 11:04:13     All
+     040     07/12/2012 16:26:11    07/14/2012 19:30:00     All
+     041     07/17/2012 17:00:00    07/21/2012 02:00:00     All
+     042     07/23/2012 03:52:00    07/29/2012 12:00:00     All
+     043     07/30/2012 18:34:28    07/30/2012 21:59:08     All
+     044     07/31/2012 21:47:30    08/01/2012 03:00:00     All
+     045     09/08/2012 11:14:27    09/08/2012 17:33:04     All
+     046     09/19/2012 10:48:00    09/25/2012 02:00:00     All
+     047     09/28/2012 09:50:00    10/01/2012 02:00:00     All
+     048     10/08/2012 12:22:25    10/09/2012 09:52:50     All
+     049     10/14/2012 00:30:30    10/14/2012 20:27:11     All
+     050     10/23/2012 02:57:19    10/23/2012 03:27:48     All
+     051     10/26/2012 11:29:47    10/26/2012 19:51:10     All
+     052     11/08/2012 01:45:18    11/08/2012 09:47:18     All
+     053     11/18/2012 03:33:20    11/18/2012 10:06:41     All
+     054     11/21/2012 13:42:49    11/22/2012 03:54:25     All
+     055     02/05/2013 08:10:15    02/05/2013 11:09:20     All
+     056     03/15/2013 17:58:39    03/17/2013 04:40:28     All
+     057     04/11/2013 05:52:06    04/13/2013 02:12:05     All
+     058     04/21/2013 06:33:02    04/23/2013 02:00:00     All
+     059     04/24/2013 21:13:05    04/26/2013 12:00:00     All
+     060     04/27/2013 21:43:47    04/28/2013 02:06:58     All
+     061     04/28/2013 12:10:43    04/28/2013 14:59:34     All
+     062     05/10/2013 18:34:28    05/11/2013 02:00:00     All
+     063     05/13/2013 15:30:16    05/14/2013 13:37:42     All
+     064     05/15/2013 03:28:50    05/15/2013 05:16:17     All
+     065     05/31/2013 19:40:00    06/01/2013 02:37:40     All
+     066     06/21/2013 03:08:22    06/25/2013 02:00:00     All
+     067     08/19/2013 22:29:50    08/22/2013 22:00:00     All
+     068     10/05/2013 06:27:55    10/07/2013 22:00:00     All
+     069     10/11/2013 06:33:02    10/16/2013 05:16:17     All
+     070     10/20/2013 06:02:20    10/20/2013 13:01:53     All
+     071     10/22/2013 20:32:00    10/23/2013 20:37:16     All
+     072     10/25/2013 07:29:00    10/27/2013 12:00:00     All
+     073     10/28/2013 04:09:00    10/31/2013 12:00:00     All
+     074     11/02/2013 04:35:00    11/03/2013 06:00:00     All
+     075     11/04/2013 05:46:00    11/05/2013 04:25:00     All
+     076     11/05/2013 21:43:00    11/05/2013 23:01:00     All
+     077     11/07/2013 10:48:00    11/09/2013 22:00:00     All
+     078     11/19/2013 09:57:00    11/21/2013 12:00:00     All
+     079     11/29/2013 03:59:00    11/29/2013 20:07:00     All
+     080     11/30/2013 02:37:00    12/02/2013 03:23:00     All
+     081     12/05/2013 11:34:00    12/05/2013 20:53:00     All
+     082     12/13/2013 20:06:00    12/15/2013 12:00:00     All
+     083     12/26/2013 03:13:00    12/31/2013 22:00:00     All
+     084     01/06/2014 07:19:05    01/11/2014 22:00:00     All
+     085     01/22/2014 03:59:32    01/23/2014 07:00:00     All
+     086     01/27/2014 22:00:00    01/31/2014 05:52:00     All
+     087     02/11/2014 03:03:15    02/11/2014 21:02:00     All
+     088     02/12/2014 06:07:27    02/12/2014 12:10:00     All
+     089     02/14/2014 15:45:00    02/15/2014 12:32:00     All
+     090     02/18/2014 00:29:45    02/19/2014 04:00:00     All
+     091     02/20/2014 07:00:00    02/21/2014 06:00:00     All
+     092     02/25/2014 03:44:11    03/05/2014 06:00:00     All
+     093     03/14/2014 21:28:00    03/14/2014 12:00:00     All
+     094     03/29/2014 16:41:00    03/30/2014 07:00:00     All
+     095     04/29/2014 19:09:00    04/29/2014 23:00:00     All
+     096     05/05/2014 14:44:00    05/05/2014 20:48:00     All
+     097     06/04/2014 19:24:00    06/05/2014 07:00:00     All
+     098     06/10/2014 11:19:00    06/10/2014 14:20:00     All
+     099     06/12/2014 21:38:00    06/13/2014 15:14:00     All
+     100     07/11/2014 12:56:46    07/11/2014 13:58:10     All
+     101     08/08/2014 12:05:36    08/09/2014 12:00:00     All
+     102     08/24/2014 11:45:00    08/24/2014 21:00:00     All
+     103     09/01/2014 08:35:00    09/07/2014 07:10:00     All
+     104     09/08/2014 20:00:00    09/09/2014 07:49:47     All
+     105     09/10/2014 16:41:00    09/13/2014 00:45:00     All
+     106     09/25/2014 00:55:00    09/28/2014 09:57:00     All
+     107     10/15/2014 14:49:00    10/17/2014 01:36:00     All
+     108     11/03/2014 09:11:00    11/05/2014 17:53:00     All
+     109     12/13/2014 10:59:00    12/23/2014 00:29:00     All
+     110     12/26/2014 09:15:00    12/27/2014 02:00:00     All
+     111     02/21/2015 09:32:00    02/23/2015 02:32:33     All
+     112     03/24/2015 08:20:29    03/28/2015 15:40:30     All
+     113     04/05/2015 04:25:07    04/05/2015 16:16:19     All
+     114     04/14/2015 00:24:38    04/16/2015 00:24:38     All
+ 
+     It has been determined that the deadtime correction for nominal solar
+     quiet conditions is minimal and is therefore not being applied.
+     Deadtime remains an important uncorrected effect for periods of intense
+     solar activity.  However, those periods of intense solar activity,
+     which are listed above, do not provide valid planetary data and are not
+     used in the normal planetary data processing.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

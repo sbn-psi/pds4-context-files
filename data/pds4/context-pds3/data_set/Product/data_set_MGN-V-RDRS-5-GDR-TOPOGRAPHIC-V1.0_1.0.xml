@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rdrs-5-gdr-topographic-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGN V RDRS 5 GLOBAL DATA RECORD TOPOGRAPHIC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rdrs.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rdrs-5-gdr-topographic-v1.0__browserp_mgn-v-rdrs-5-gdr-topographic-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rdrs-5-gdr-topographic-v1.0__dvo_geo_mgn-v-rdrs-5-gdr-topographic-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Ford, Peter G., Global Altimetry and Radiometry Data
+                   Record, Project Magellan Software Interface Specification
+                   Document, MIT-MGN-GxDR, Version 2.3, 40 p., 1991.
+            </reference_text>
+            <description>reference.FORD1991</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Saunders, R.S., G.H. Pettengill, R.E. Arvidson, W.L. Sjogren, W.T.K. Johnson,
+                   and L. Pieri, The Magellan Venus Radar Mapping Mission, Journal of Geophysical
+                   Research, Vol. 95, pp. 8339-8355, 1990.
+            </reference_text>
+            <description>reference.SAUNDERSETAL1990</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RDRS-5-GDR-TOPOGRAPHIC-V1.0</data_set_id>
+        <data_set_name>MGN V RDRS 5 GLOBAL DATA RECORD TOPOGRAPHIC V1.0</data_set_name>
+        <data_set_release_date>1992-01-15</data_set_release_date>
+        <start_time>1990-09-15T16:22:14.871Z</start_time>
+        <stop_time>1992-09-14T02:27:41.936Z</stop_time>
+        <producer_full_name>PETER G. FORD</producer_full_name>
+        <citation_text>
+            Ford, P. G., MGN V RDRS 5 GLOBAL DATA RECORD TOPOGRAPHIC V1.0,
+            MGN-V-RDRS-5-GDR-TOPOGRAPHIC-V1.0, NASA Planetary Data System,
+            1992
+        </citation_text>
+        <data_set_terse_desc>
+            The Magellan Global Topography Data Record (GTDR) archive
+            contains topographic data acquired by the Magellan spacecraft
+            during its mission to Venus.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the Magellan Global Topographic Data
+            Record (GTDR). The range to surface is derived by fitting
+            altimeter echoes from the fan-beam altimetry antenna as a
+            function of time to Hagfors&apos; radar backscatter model
+            templates. The ranges are subtracted from the spacecraft radial
+            coordinate (derived from Doppler tracking), yielding measurements
+            of planetary radius. The data are filtered to remove
+            low-frequency errors in the in-plane elements of each spacecraft
+            orbit, and then re-sampled into sinusoidal, Mercator, and north
+            and south polar stereographic projections at a resolution of
+            about 5x5 kilometers per pixel.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      Global Topographic Data Record (GTDR).  The range to surface is
+      derived by fitting altimeter echoes from the fan-beam altimetry
+      antenna as a function of time to Hagfors&apos; radar backscatter
+      model templates.  The ranges are subtracted from the spacecraft
+      radial coordinate (derived from Doppler tracking), yielding
+      measurements of planetary radius.  The data are filtered to
+      remove low-frequency errors in the in-plane elements of each
+      spacecraft orbit, and then re-sampled into sinusoidal,
+      Mercator, and north and south polar stereographic projections
+      at a resolution of about 5x5 kilometers per pixel.
+ 
+      A fifth image contains estimates of the absolute accuracy of
+      the radius values in each pixel of the sinusoidal projection.
+      This is derived by taking the root mean square of (a) the
+      statistical accuracy anticipated from the template fitting and
+      (b) the systematic errors estimated from the in-plane element
+      filtration.  Note that this is the absolute topographic
+      accuracy -- relative errors are much smaller, about 10-15
+      meters in relatively flat areas.
+ 
+      Except in the radius error image, each GTDR pixel is
+      represented by a 16-bit integer.  In sinusoidal images, pixels
+      lying outside the domain of the projection are set to zero.  In
+      all images, pixels with unknown or unmeasured values are also
+      set to zero.  The remaining values are related to the planetary
+      radius by the following equation:
+ 
+         DN = (RADIUS &lt;METERS&gt;) - 6039999.
+ 
+      In the radius error image, each pixel is represented by an
+      8-bit integer.  Pixels lying outside the domain of the
+      projection are set to zero, as are all pixels with unknown or
+      unmeasured values.  The remaining values are related to the
+      radius error by the following equation:
+ 
+         DN = (RADIUS-ERROR &lt;METERS&gt; * 0.2) + 1.
+ 
+ 
+      See: Software Interface Specification Document (Peter G.
+           Ford, 1991, Global Altimetry and Radiometry Data
+           Records, MIT-MGN-GxDR SIS Version 2.3, 40 p.) that
+           is included on the GxDR CD-ROMs.
+ 
+      Note: There exist photoproducts that are identified as GxDRP
+            (where x is E (Emissivity), S (Slope), RE (Reflectivity),
+            or T (Topography)) however, they are not generated from
+            the digital GxDR products.  They are instead produced
+            from the Magellan ARCDR (Altimetry and Radiometry
+            Composite Data Record) data files.
+ 
+      Processing Level Id            : 5
+      Software Flag                  : N
+      Processing Start Time          : 1991-06-24T20:11:00.000
+      Processing Stop Time           : 1992-12-04T00:55:49.000
+ 
+ 
+    Parameters
+    ==========
+ 
+      Data Set Parameter &apos;PLANETARY RADIUS&apos;
+      -------------------------------------
+        Radial distance from center of planet or satellite to given
+        location on the surface.
+ 
+        Data Set Parameter Name        : PLANETARY RADIUS
+        Data Set Parameter Unit        : METER
+        Sampling Parameter Name        : PIXEL
+        Sampling Parameter Unit        : METER
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 9282
+        Sampling Parameter Interval    : 4641
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : UNK
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : MGN
+      Data Set Parameter Name         : PLANETARY RADIUS
+      Instrument Parameter Name       : RADAR ECHO POWER
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID  : MGN-V-RDRS-5-CDR-ALT/RAD-V1.0
+        Software            : MGMMAP
+        Product Data Set ID : MGN-V-RDRS-5-GDR-TOPOGRAPHIC-V1.0
+ 
+ 
+      Software &apos;MGMMAP&apos;
+      -----------------
+        The MIT Altimetry and Radiometry Mapping Software (MGMMAP)
+        reads Altimetry and Radiometry Composite Data Records
+        (ARCDRs), and generates an image of a specified data field i
+        a specified map projection.  Each footprint datum is added
+        with a weight and horizontal extent proportional to the
+        appropriate ARCDR elements.  This software will be released t
+        Magellan Data Management Archive Team (DMAT) upon the
+        completion of the nominal mission.
+ 
+        Software Name               : MGMMAP
+        Software Type               : N/A
+        Software Release Date       : N/A
+        Node ID                     : N/A
+        Cognizant Engineer          : DR. PETER G. FORD
+        Software Access Description : N/A
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      UNK
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>89-033B-01J</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

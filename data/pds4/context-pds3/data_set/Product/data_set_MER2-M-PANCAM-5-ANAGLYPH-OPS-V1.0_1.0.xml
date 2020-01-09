@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer2-m-pancam-5-anaglyph-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 2 MARS PANORAMIC CAMERA ANAGLYPH RDR OPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pancam.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-pancam-5-anaglyph-ops-v1.0__browserp_mer2-m-pancam-5-anaglyph-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-pancam-5-anaglyph-ops-v1.0__browser_geo_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bell, J.F. III, The Mars Exploration Rover Athena Panoramic Camera (Pancam)
+                   Investigation, Journal of Geophysical Research, June 23, 2003.
+            </reference_text>
+            <description>reference.BELLETAL2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER2-M-PANCAM-5-ANAGLYPH-OPS-V1.0</data_set_id>
+        <data_set_name>MER 2 MARS PANORAMIC CAMERA ANAGLYPH RDR OPS V1.0</data_set_name>
+        <data_set_release_date>2004-08-03</data_set_release_date>
+        <start_time>2004-01-04T06:53:34.597Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JUSTIN MAKI</producer_full_name>
+        <citation_text>
+            Maki, Justin, MER 2 Mars Panoromic Camera Anaglyph Ops RDR V1.0,
+            NASA Planetary Data System, MER2-M-PANCAM-5-ANAGLYPH-OPS-V1.0,
+            2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 2 Panoromic Camera Stereo Anaglyph Reduced
+            Data Records, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    A stereo anaglyph is a method of displaying stereo imagery quickly
+    and conveniently using conventional display technology (no special
+    hardware) and red/blue glasses. This is done by displaying the left
+    eye of the stereo pair in the red channel, and displaying the right
+    eye in the green and blue channels. An anaglyph data product simply
+    captures that into a single 3-band color image, which can be
+    displayed using any standard image display program with no knowledge
+    that it is a stereo image. The red (first) band contains the left
+    eye image, while the green and blue (second and third) bands each
+    contain the right eye image (so the right image is duplicated in
+    the file).
+ 
+    The Anaglyph method can also apply to multi-frame mosaic products.
+    MIPL-generated mosaic Anaglyphs occasionally required some subtle
+    pixel-shifting of the right eye mosaic data to improve the stereo
+    effects. Mosaic Anaglyph products are distinguishable in the Mosaic
+    RDR filename convention.
+ 
+ 
+  Processing
+  ==========
+    Anaglyphs are created manually from CAHV linearized Full Framed
+    (FFL) stereo pair EDRs or mosaics.  Often times the images are
+    stretched prior to creating the anaglyph.  After stretching, the
+    images are converted to a VICAR cube, which creates a single
+    multi-band image. The final step involves adding the PDS label.
+ 
+ 
+  Data
+  ====
+    The RDR data product is comprised of radiometrically decalibrated
+    and/or camera model corrected and/or geometrically altered versions
+    of the raw camera data, in both single and multi-frame (mosaic)
+    form. Most RDR data products will have PDS labels, or if generated
+    by MIPL (OPGS), dual PDS/VICAR labels. Non-labeled RDRs include the
+    Terrain products (Mesh and Wedge).
+ 
+ 
+  Software
+  ========
+    The MIPL Mars Program Suite was used to generate these RDRs.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online.  Upon
+    Mission completion, the Panoromic Camera Operations RDRs will be
+    delivered to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

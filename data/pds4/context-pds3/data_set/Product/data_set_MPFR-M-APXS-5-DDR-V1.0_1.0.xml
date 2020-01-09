@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mpfr-m-apxs-5-ddr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MPF ROVER MARS ALPHA PROTON X-RAY SPECTROMETER DDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_pathfinder::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mpfr::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:apxs.mpfr::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpfr-m-apxs-5-ddr-v1.0__browserp_mpfr-m-apxs-5-ddr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mellstrom, J. and K. Lau, Mars Pathfinder AIM Phasing and Coordinate Frame
+                   Document, JPL Document 12103, PF-300-4.0-04, 38 pp., 1996.
+            </reference_text>
+            <description>reference.MELLSTROM-LAU1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Rieder, R., H. Wanke, T. Economou, and A. Turkevich, Determination of the
+                   Chemical Composition of Martian Soil and Rocks: The Alpha Proton X Ray
+                   Spectrometer, J. Geophys. Res., 102, 4027-4044, 1997.
+            </reference_text>
+            <description>reference.RIEDERETAL1997A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Rieder, R., T. Economou, H. Wanke, A. Turkevich, J. Crisp, J. Bruckner, G.
+                   Dreibus, H.Y. McSween Jr., The Chemical Composition of Martian Soil and Rocks
+                   Returned by the Mobile Alpha Proton X-ray Spectrometer: Preliminary Results
+                   from the X-ray Mode, Science, 278, 1771-1774, 1997.
+            </reference_text>
+            <description>reference.RIEDERETAL1997B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Vaughan, R., Mars Pathfinder Project Planetary Constants and Models, JPL
+                   Document 12947, PF-100-PMC-01, 136 pp., December, 1995.
+            </reference_text>
+            <description>reference.VAUGHAN1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Wellman, J.B., Imager for Mars Pathfinder Coordinate Systems and Imaging
+                   Transformations, JPL Document 15212, PF-400-9.0, 16 pp., July 25, 1996.
+            </reference_text>
+            <description>reference.WELLMAN1996B</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MPFR-M-APXS-5-DDR-V1.0</data_set_id>
+        <data_set_name>MPF ROVER MARS ALPHA PROTON X-RAY SPECTROMETER DDR V1.0</data_set_name>
+        <data_set_release_date>1998-01-04</data_set_release_date>
+        <start_time>1997-07-04T22:49:48.550Z</start_time>
+        <stop_time>1997-09-27T10:14:35.060Z</stop_time>
+        <producer_full_name>RUDY RIEDER</producer_full_name>
+        <citation_text>
+            Rieder, R., MPF ROVER MARS ALPHA PROTON X-RAY SPECTROMETER DDR
+            V1.0, MPFR-M-APXS-5-DDR-V1.0, NASA Planetary Data System, 1998
+        </citation_text>
+        <data_set_terse_desc>
+            The APXS_oxides is a listing of weight percent oxide abundances
+            derived from the X-ray portion of the APXS_EDR data from the
+            Alpha Proton X-ray Spectrometer (APXS).
+        </data_set_terse_desc>
+        <abstract_desc>
+            The APXS_oxides is a listing of weight percent oxide abundances
+            derived from the X-ray portion of the APXS_EDR data from the
+            Alpha Proton X-ray Spectrometer (APXS). This data is preliminary
+            and will be later refined as new calibration data become
+            available. Currently, there are oxide results for five rocks and
+            six soils.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The APXS_oxides is a listing of weight percent oxide abundances
+    derived from the X-ray portion of the APXS_EDR data from the
+    Alpha Proton X-ray Spectrometer (APXS).  This data is preliminary
+    and will be later refined as new calibration data become
+    available.  Currently, there are oxide results for five rocks and
+    six soils.
+ 
+    Geochemists usually express the abudance of elements in rocks and
+    minerals as weight percents of the oxides.  It is a convenience
+    that is followed because most rock forming minerals are
+    stoichiometric compounds and it makes comparison and calculations
+    easier.  It does not mean that those specific oxides are
+    necessarily found as minerals or compounds in the sample
+    analyzed; it is only a way to recast the element abundances.  Nor
+    does it mean that Fe in the sample is 2+ rather than 3+.  It is
+    simply a way of expressing the chemical abundances by
+    stoichiometric assignment to oxides.  For geochemical
+    convenience, we have recast the Pathfinder APXS elemental
+    abundances of Na, Mg, Al, Si, S, K, Ca, Ti, Fe, and Cl to weight
+    percent Na2O, MgO, Al2O3, SiO2, SO3, K2O, CaO, TiO2, FeO and Cl.
+ 
+    Futher calibration is necessary to determine oxide abundances for
+    the one other soil and four other rock measurements obtained at
+    the Pathfinder landing site.  The APXS bumper ring did not make
+    good contact with the soil during A-9 measurements, so more
+    testing is needed to determine the uncertainties on the oxides
+    for this.  The X-ray spectra for A-19, A-20, A-23, and A-27 rock
+    measurements were degraded due to the rover battery death on Sol
+    56.  The APXS_EDR data for these are available now, and oxide
+    abundances will be determined at a later date.
+ 
+ 
+  Parameters
+  ==========
+    The parameters are (1) weight percent abundances of chlorine and
+    the oxides: Na2O, MgO, Al2O3, SiO2, SO3, K2O, CaO, TiO2, and FeO;
+    (2) uncertainties on those abundances; and (3) the original sum
+    of the oxides before normalization.  The original sum varies in
+    response to the measurement geometry and is closer to 100% if
+    good contact is made between the sample and the APXS bumper ring.
+ 
+ 
+  Processing
+  ==========
+    The only input necessary for processing was APXS EDR data.  These
+    data files were the cumulative sums of data acquired from the
+    beginning of the measurement cycle until the final reading.
+    Readings occurred several times for each rock and soil that was
+    analyzed.  The first step in processing the data is to subtract
+    subsequent spectra from one another and examine the deconvolved
+    spectra to check for the possibility of any damaged data or
+    instrument drift (e.g.  by changing environmental temperature).
+    The next step is to establish any changes in energy calibration,
+    mainly due to changes in environmental temperature and shift the
+    data to correct gain and zero-offset drift.  Then the individual
+    shifted spectra are summed together.  The summed composite go
+    into a least-squares fitting program that subtracts the
+    background, finds all the peaks in the spectra, and calculates
+    the peak areas and their uncertainties.  Calibration curves (peak
+    area versus concentration) for each element are used to derive
+    abudances of each element.  These calibration curves were
+    obtained by analyzing terrestrial samples of known composition
+    during the APXS calibration in the laboratory.  Some corrections
+    for matrix effects for a few of the elements are made after this.
+    Then, to express the element abundances as oxide abundances,
+    oxygen is assigned stoichiometrically (Fe as FeO, S as SO3, etc.)
+    and the analyses are renormalized to an arbitrary value, in this
+    case 98.0%.  P2O5, Cr2O3, and MnO are not included in these
+    preliminary results because they have large errors and the final
+    calibration for these has not been completed.
+ 
+ 
+  Data
+  ====
+    All of the data in this dataset are contained in an ASCII tabular
+    file, (&apos;OX_PERC.TAB&apos;) with a detached PDS label (&apos;OX_PERC.LBL&apos;).
+ 
+    The tabular file is formatted so that it may be read directly
+    into many database management systems (DBMS) or spreadsheet
+    programs on various computers.  All fields in the table are
+    separated by commas; text fields are left justified and numeric
+    fields are right justified.  The &apos;start byte&apos; and &apos;bytes&apos; values
+    listed in the PDS label do not include the commas between fields.
+    The records are of fixed length, and the last two bytes of each
+    record contain the ASCII carriage return and line feed
+    characters.  This allows the table to be treated as a fixed
+    length record file on computers that support this file type and
+    as a normal text file on other computers.
+ 
+    The PDS label is object-oriented.  The object to which the label
+    refers (the TABLE) is denoted by a statement of the form:
+ 
+        ^object = location
+ 
+    in which the carat character (&apos;^&apos;, also called a pointer in this
+    context) indicates that the object starts at the given location.
+    For an object located outside the label file (as in this case),
+    the location denotes the name of the file containing the object.
+    For example:
+ 
+        ^TABLE = &apos;OX_PERC.TAB&apos;
+ 
+    indicates that the TABLE object is in the file OX_PERC.TAB, in
+    the same directory as the detached label file.
+ 
+    The detached label file is a stream format file, with a carriage
+    return (ASCII 13) and a line feed character (ASCII 10) at the end
+    of each record.  This allows the file to be read by the MacOS,
+    DOS, Unix, and VMS operating systems.
+ 
+ 
+  Ancillary Data
+  ==============
+    Calibration APXS measurements obtained in the laboratory.
+ 
+ 
+  Coordinate Systems
+  ==================
+    Estimates of the locations of the 5-cm diameter spots measured on
+    rocks and soils on Mars are reported as XYZ coordinates in the
+    Martian Local Level Coordinate Frame.  Only those for which the
+    oxide abudances have been determined are listed:
+ 
+    APXS
+    meas.     X         Y        Z        Rock/Soil APXS Target
+    -----    ----     -----    -----   ----------------------------
+    A-2      1.89    -1.95     0.31    soil off the end of the ramp
+    A-3      1.30    -2.45     0.18    Barnacle Bill rock
+    A-4      2.79    -2.64     0.28    soil near Yogi
+    A-5      3.29    -2.48     0.28    soil near Yogi
+    A-7      4.58    -2.91    -0.18    Yogi rock
+    A-8      2.85     1.13     0.32    Scooby Doo indurated soil or rock
+    A-10     3.74    -0.43     0.28    dark soil next to Lamb
+    A-15    -5.87     2.80     0.52    Mermaid dune
+    A-16    -3.79    -1.31     0.12    Wedge rock
+    A-17    -5.56    -3.25    -0.35    Shark rock
+    A-18    -4.81    -3.81    -0.54    Half Dome rock, first location
+ 
+    The Mars Pathfinder Lander (L) Coordinate Frame
+ 
+    The Mars Pathfinder Lander is a tetrahedral structure.  One of
+    its faces, the one upon which it sits, is called the base petal
+    and houses most of the lander equipment.  The other three faces,
+    or petals, open after surface impact to expose these systems.
+    The rover is mounted on one of these petals.  The Mars Pathfinder
+    Lander Coordinate Frame, or &apos;L&apos; Frame, has the lander base petal
+    as its reference plane and its center coincident with the
+    geometric center of the base petal.  The YL-axis of this
+    coordinate system passes through the geometric center of the
+    rover petal, and defines the reference direction.  The ZL-axis is
+    normal to the reference plane and coincident with the nominal
+    spacecraft spin vector.  When the lander is upright on the
+    surface, the ZL-axis is directed positively downward into the
+    ground.
+ 
+    The Martian Local Level (M) Coordinate Frame
+ 
+    The Martian Local Level Coordinate Frame is a right handed,
+    orthogonal, frame whose origin is co-incident with the origin of
+    the Lander Coordinate Frame.  The XM axis points north, the YM
+    axis points east, and the ZM axis points down.
+ 
+    For more information on Mars Pathfinder coordinate systems, see
+    the [MELLSTROM&amp;LAU1996], [WELLMAN1996B], and [VAUGHAN1995]
+    references.  However, please note that as of the time this
+    APXDDRDS.CAT file was written, [WELLMAN1996B] had not yet updated
+    his discussion of elevation measurements to match that agreed
+    upon by the Project.  Where he used elevation ranges of 0 to 180
+    degrees, the MPF Project used -90 to +90 degrees.
+ 
+ 
+  Software
+  ========
+    The APXS oxides data can be displayed on UNIX, Macintosh, and PC
+    platforms using any ASCII editor.
+ 
+ 
+  Media / Format
+  ==============
+    The APXS oxides data will be stored on compact disc-read only
+    memory (CD-ROM) media.  The CDs will be formatted according to
+    ISO-9660 and PDS standards.  The data files will not include
+    extended attribute records (XARs), and will therefore not be
+    readable on some older VMS operating systems.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    These oxide abundances are preliminary results for the X-ray
+    portion of the APXS_EDR data.  The confidence is indicated by the
+    uncertainties that are assigned to each of the oxides in the
+    APXS_oxides ASCII table.  These uncertainties were derived from
+    the range in differences found between recommended and measured
+    values for eight reference standards.
+ 
+ 
+  Review
+  ======
+    Prior to release, the data will be reviewed by the APXS
+    instrument team and the Planetary Data System.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    The quality of the preliminary X-ray oxide abundances is
+    indicated by the results for Murchison C2 meteorite and the
+    martian meteorite Zagami [RIEDERETAL1997B]:
+ 
+             (1)          (2)          (3)     (4)     (5)
+    Na2O     2.3      0.7 to  1.2      1.5     0.7     0.2
+    MgO      8.8      8.6 to 11.6     18.2    18.2    19.9
+    Al2O3    7.1      4.8 to  6.2      2.4     2.3     2.3
+    SiO2    49.6     48.4 to 50.9     31.0    31.0    28.5
+    SO3      0.3      0.15 to 0.29     7.8     7.8     7.9
+    K2O      0.25     0.13 to 0.24     0.06    0.04    0.04
+    CaO     10.9      9.7 to 11.1      2.0     1.8     1.9
+    TiO2     1.0      0.74 to 1.4      0.04    ----    0.06
+    FeO     17.4     18.0 to 24.5     30.2    30.2    27.1
+ 
+    (1) Zagami martian meteorite rock slice, APXS analysis for a
+    counting time of 127,470 seconds.  (2) Zagami martian meteorite,
+    five individual chips of about 0.5 g each, measured using
+    instrumental neutron activation analysis (INAA), X-ray
+    fluorescence (XRF) and carbon-sulfur analyzer (GSA) at Max-Planck
+    Institut fur Chemie.  (3) powdered Murchison C2 meteorite,
+    measured using an APXS for a counting time of 242,030 seconds.
+    (4) powdered Murchison C2 meteorite, measured using an APXS for a
+    counting time of 20,360 seconds.  (5) powdered Murchison C2
+    meteorite, measured using INAA, XRF and GSA at Max-Planck
+    Institut fur Chemie.
+ 
+    Results for the soil A-2 are not as good as the others, due to
+    poor contact with the sample by the APXS deployment mechanism and
+    lower counting rates for alpha particles, protons, and X-rays.
+    This is reflected in the lower original sum of the oxides for
+    A-2.
+ 
+    When measuring rock and soil samples, the desire was to obtain at
+    least 10 integrated hours.  Only 3 hours of nighttime measurement
+    were needed for a good X-ray analysis.  X-ray spectra obtained
+    during the night, when ambient surface temperatures were low,
+    were unaffected by electronics noise.  Ten hours of measurement
+    during the day or night provide good alpha and proton analyses.
+    Shorter times still provide useful results.  The measurement
+    times for the 11 APXS measurements that have been converted to
+    oxide abundances are shown below:
+ 
+    APXS    Measurement initial start  Integrated  APXS spectra
+    meas.   time and final stop time   meas. time  accumulation
+    number  (Local True Solar Time)      (hrs)      time (hrs)   Target
+    -----   -------------------------  ----------  ------------  ------
+    A-2     Sol 2 14:53 - Sol 3 10:00     19.6       15.9        soil
+    A-3     Sol 3 15:00 - Sol 4 07:01     16.5       13.6        rock
+    A-4     Sol 4 16:59 - Sol 5 01:32      8.8        8.1        soil
+    A-5     Sol 5 16:01 - Sol 6 06:55     15.3        9.2        soil
+    A-7     Sol 10 14:17 - Sol 11 02:37   12.7        5.7        rock
+    A-8     Sol 14 14:03 - Sol 15 02:55   13.2        5.7        soil
+    A-10    Sol 20 14:03 - Sol 21 02:59    8.3        7.0        soil
+    A-15    Sol 28 14:05 - Sol 29 02:44    8.0        5.3        soil
+    A-16    Sol 37 14:07 - Sol 38 03:05    8.2        6.5        rock
+    A-17    Sol 52 14:18 - Sol 53 03:05    8.0        7.0        rock
+    A-18    Sol 55 14:06 - Sol 56 00:05    7.2        5.9        rock
+ 
+    Measurement initial start and stop times were obtained from the
+    SCLK times in the downlink telemetry for the acknowledgement of
+    the exact commands that were issued to trigger the start and stop
+    of each APXS measurement (usually Meas_Start, Meas_Stop, Reset,
+    or Shutdown).  SCLK times were converted to Local True Solar Time
+    using the script sclk2ltmst (see Ancillary Data discussion).
+    This time is only as accurate as the rover&apos;s clock, and is a
+    close approximation to the exact intial start and stop time of
+    each APXS measurement.  In a few cases, the downlink was lost,
+    and uplink predictions were used instead.  Some of the cumulative
+    APXS measurements were interrupted by other rover activities, in
+    which case, the first accumulation start time and last stop time
+    are indicated.  Integrated measurement time, as indicated by
+    ALPHA_SAMPLING_DURATION, PROTON_SAMPLING_DURATION, and
+    XRAY_SAMPLING_DURATION in the data file headers, is always less
+    than the accumulation final stop time minus the initial start
+    time, because the sampling durations do not include quiet periods
+    when the APXS was powered off and detector &apos;dead time&apos;.
+ 
+ 
+  Limitations
+  ===========
+    Further calibration and special processing is underway to improve
+    the conversion of X-ray data to elemental and oxide abundances,
+    and to calibrate the alpha and proton portions of the data and
+    combine them with the X-ray data.
+        </confidence_level_note>
+        <archive_status>IN_QUEUE</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

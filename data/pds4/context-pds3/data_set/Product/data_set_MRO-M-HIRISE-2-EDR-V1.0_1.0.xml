@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-hirise-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO MARS HIGH RESOLUTION IMAGE SCIENCE EXPERIMENT EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hirise.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-2-edr-v1.0__browserp_mro-m-hirise-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-2-edr-v1.0__browser_geo_mars_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-2-edr-v1.0__dvo_imaging_mro-m-hirise-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Eliason, E., HiRISE EDR &amp; RDR Archive Volumes Software Interface Specification,
+                   JPL Document Number D-32005, NASA Planetary Data System, 2006.
+            </reference_text>
+            <description>reference.ELIASON2006B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Eliason, E., Castalia, B., Leis, R., Becker, K., Software Interface
+                   Specification for HiRISE Experimental Data Record Products, JPL Document Number
+                   D-32004, NASA Planetary Data System, 2006.
+            </reference_text>
+            <description>reference.ELIASONETAL2006</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-HIRISE-2-EDR-V1.0</data_set_id>
+        <data_set_name>MRO MARS HIGH RESOLUTION IMAGE SCIENCE EXPERIMENT EDR V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2006-09-29T15:16:33.333Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>ALFRED MCEWEN</producer_full_name>
+        <citation_text>
+            McEwen, A., Mars Reconnaissance Orbiter High Resolution Imaging
+            Science Experiment, Experiment Data Record,
+            MRO-M-HIRISE-2-EDR-V1.0, NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Experimental data records for MRO HiRISE (High Resolution Imaging
+            Science Experiment).
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the Experimental Data Records from the
+            HiRISE instrument on MRO. These products are the permanent record
+            of the raw images obtained by the HiRISE Instrument and contain
+            the properties of unprocessed and unrectified imaging maintaining
+            the original spacecraft viewing orientation and optical
+            distortion properties. .
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    These Experimental Data Record (EDR) products are the permanent
+    record of the raw images obtained by the HiRISE Instrument.  The
+    products contain the properties of unprocessed and unrectified
+    imaging maintaining the original spacecraft viewing orientation
+    and optical distortion properties. As part of the EDR generation
+    process, FELICS- compressed images are decompressed and organized
+    as raster images.  EDRs are organized at the channel level with
+    two EDRs needed for each operating CCD. As many as 28 EDR products
+    are needed to capture a single HiRISE observation. Maintaining an
+    archive of EDR products enables reprocessing of the raw science
+    observations as calibration and geometry processing routines
+    improve.  Investigators interested in applying advanced
+    calibration methods or needing to understand the properties of the
+    raw imaging will find the EDRs a useful product. However, most
+    science investigators will be interested in using the RDR products
+    as geometry and radiometric processing has occurred on
+    these products.
+ 
+ 
+  Processing
+  ==========
+    EDR product creation is the resposibility of the HiRISE Operations
+    Center (HiROC) at the Lunar and Planetary Laboratory, University
+    of Arizona. The products are generated by an automated pipeline
+    process called EDRgen. The pipeline is managed by the Conductor
+    software (http://pirl.lpl.arizona.edu/software/Conductor.shtml) on
+    as many HiROC systems simultaneously as seem appropriate to
+    achieve the throughput and reliability needed to meet the HiRISE
+    data production requirements. When the HiROC system detects that a
+    new HiRISE observation data channel file is available at the JPL
+    data distribution site it is automatically downloaded using the
+    JPL File Exchange Interface (FEI) and the file is registered in
+    the HiCat database as an EDRgen source ready for processing. A raw
+    data file may also be manually submitted for processing, or
+    reprocessing, by a HiROC operator.
+ 
+    Each observation data channel file is subject to automated data
+    verification. This includes consistency checks of data values and
+    identification of spacecraft downlink data gaps noted in a JPL
+    ground data system transaction log provided (and also
+    automatically delivered) for each observation. Consistency checks
+    include comparing the commanding parameters in the observation
+    headers with the uplink commanding stored in the HiCat database.
+    Other checks involve comparing the values against permitted values
+    and ranges. Files with any data verification problems are
+    automatically routed to a special processing pipeline of EDRgen.
+    Here header data redundancy for an observation, and the original
+    observation definition from the HiCat database, will be used to
+    produce a PDS label with the best representation of the
+    observation characteristics in the EDR product file. The inability
+    to generate an acceptable PDS label is a failure condition that is
+    automatically brought to the attention of a HiROC operator. The
+    downlinked data will never be changed (except for FELICS
+    decompression and even channel image data mirroring) and remains
+    available in the EDR product file. All EDR data products are
+    automatically queued for validation. Validation of a data product
+    involves visual inspection by an operator and check-off against a
+    set of acceptance criteria that are recorded in the HiCat
+    database. The successful processing of an observation data channel
+    file by EDRgen results in a PDS compliant EDR data product file
+    and the update of the HiCat database with appropriate metadata
+    from its ODL (Object Descriptor Language) label.
+ 
+ 
+  Data
+  ====
+    The format of the EDR data products is nearly identical to the
+    original form of the data stream as produced by the instrument.
+    Some processing was applied to the data for (1) FELICS
+    decompressing an image (if the data were optionally compressed on
+    the spacecraft), (2) identifying and filling gaps with &apos;no-data&apos;
+    values, (3) mirroring the pixel order of an image line for data
+    read out in reverse order for channel 1 products only, and (4)
+    adding a PDS label to the beginning of the file.
+ 
+    The EDR products are processed to NASA data processing level-0.
+    (This corresponds to level 2 for the Committee on Data Management
+    and Computation (CODMAC) data level numbering system). NASA level-
+    0 products contain time-ordered raw instrument science data at
+    full resolution with duplicate data removed and transmission
+    anomalies identified and corrected whenever possible.
+ 
+    An EDR is identified and described with PDS-labeling conventions
+    with a PDS label located at the beginning of the file. Following
+    the PDS label is the instrument data stream organized as objects
+    each described by keywords in the PDS label area. The data objects
+    store the raw image data and ancillary data needed to understand
+    and process the image. The data objects contained in the EDR
+    product were created by the HiRISE instrument flight software and
+    remain in the original format except as noted above.
+ 
+    The objects, describing various parts of the data stream, are
+    summarized here.   Pointer  keywords in the PDS label, identified
+    with a carat (^) as the first character, locate the objects in the
+    file. The SCIENCE_CHANNEL_TABLE, LOOKUP_TABLE, and
+    CPMM_ENGINEERING_TABLE objects contain metadata providing
+    commanding, engineering, and instrument operating information
+    related to the observation. The LINE_PREFIX_TABLE and
+    LINE_SUFFIX_TABLE objects contain engineering and calibration data
+    accompanying the observational data. The CALIBRATION_IMAGE
+    contains image data useful for calibrating the instrument.  The
+    IMAGE object contains the observational image data. The GAP_TABLE
+    locates gaps (missing data) in the observation.
+ 
+    Gaps consisting of missing data in the observation data stream can
+    occur whenever there is an interruption in the downlink
+    communications systems between the MRO spacecraft and the MRO
+    operations center at JPL. Data gaps in the HiRISE EDR products can
+    be identified in two ways. First, the GAP_TABLE object identifies
+    the data gap locations in the EDR products. The GAP_TABLE is a
+    binary table of two columns that specify the starting and ending
+    byte location of each gap. There is a row for each gap (see the
+    PDS example label in section 6.1 for a label description of the
+    GAP_TABLE). Additionally, gaps can be identified in the data by
+    searching for consecutive bytes with the hexadecimal value FF
+    (decimal 255). A gap is identified as any byte sequence
+    containing more than four consecutive  FF  values. HiRISE 8-bit
+    image pixels with the hexadecimal value  FF  will be a missing
+    pixel. For 16-bit pixel data, the hexadecimal value  FFFF
+    identifies the pixel as missing. This is a reliable test because
+    the HiRISE instrument can never create a  FF  8-bit pixel or a
+    FFFF  16-bit pixel.
+ 
+ 
+  Time Standards
+  ==============
+    Two time-related standards are used in HiRISE EDR PDS labels:
+    o  Spacecraft clock;
+    o  Coordinated Universal time (UTC).
+ 
+    The spacecraft clock (SCLK) is the fundamental system on MRO for
+    initiating spacecraft events (such as starting an observation for
+    one of the instruments). The SCLK has a counting unit of 1/(216)
+    seconds for each tick of its sub-seconds field. Thus there are
+    65,536 SCLK ticks per second (a time interval of 15.2588
+    microseconds).
+ 
+    The HiRISE expose-time command initiated by the spacecraft
+    contains     both the SCLK seconds and sub-seconds fields of that
+    future moment in time at which the HiRISE exposure should begin.
+    The HiRISE software will compute and store the corresponding
+    future instant (converting SCLK sub-seconds notation to that of
+    the HiRISE notation) at which time the exposure should begin. The
+    HiRISE flight software will then set a 50-millisecond exposure-
+    start software timer. Each time the expose-start timer elapses
+    (every 50 milliseconds), the HiRISE flight software will check the
+    current HiRISE time against the time at which  the exposure should
+    begin, and will start the exposure the first time it sees that
+    current HiRISE time is later in time than the exposure time. The
+    HiRISE flight software will time-stamp the actual start of an
+    exposure (placed in the science channel header) to within 50
+    milliseconds of the actual start of the exposure. This time stamp,
+    as well as all the other time stamps which the HiRISE flight
+    software produces, will all be in units of the HiRISE clock (i.e.
+    with the sub- seconds field counting in units of 16 milliseconds).
+    HiROC ground data processing converts to SCLK units when computing
+    the time at which various time-stamped HiRISE events occurred. The
+    instrument sub- second field is converted back to the SCLK sub-
+    second field and stored in the PDS labels. This conversion occurs
+    in order to allow the SPICE NAIF toolkit (see http://pds-
+    naif.jpl.nasa.gov/) to be used to process time fields. UTC times
+    can be derived from the SCLK using the NAIF toolkit time routines
+    and the SCLK kernel maintained by the MRO
+    project.
+ 
+ 
+  Data Storage Conventions
+  ========================
+    The HiRISE EDR products contain binary data. Image pixel values
+    are stored as either unsigned 8-bit or unsigned 16-bit pixel
+    values depending on the operating mode of the instrument. The PDS
+    label sections are stored as ASCII character strings conforming to
+    the requirements defined in the PDS Standards Reference. The
+    storage order is most significant byte (MSB) first. MSB ordering
+    is the order used on the MRO spacecraft and the HiRISE instrument.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+ 
+  This is a TBD data set.  Known problems are TBD.
+ 
+ 
+  Review
+  ======
+    This archival data set has been examined by a peer review panel
+    and has been accepted by the Planetary Data System (PDS). The peer
+    review will be conducted in accordance with PDS
+    procedures.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    EDR products are the permanennt record of raw and unprocessed
+    images stored in a raster format as described by the IMAGE object
+    defined in the PDS Standards Document.  The EDR contain all of the
+    inherent properties and unprocessed and unrectified imaging.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.clem1-l-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CLEMENTINE MOON SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.deep_space_program_science_experiment::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-spice-6-v1.0__browserp_clem1-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-spice-6-v1.0__browser_clem1-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-spice-6-v1.0__browser_wgc_clem1-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CLEM1-L-SPICE-6-V1.0</data_set_id>
+        <data_set_name>CLEMENTINE MOON SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2007-04-01</data_set_release_date>
+        <start_time>1994-01-26</start_time>
+        <stop_time>1994-05-07</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., and C.H. Acton, CLEMENTINE SPICE KERNELS V1.0,
+            CLEM1-L-SPICE-6-V1.0, NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for Clementine.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Clementine SPICE data
+            files (``kernel files&apos;&apos;), which can be accessed using
+            SPICE software. The SPICE data contains geometric and other
+            ancillary information needed to recover the full value of science
+            instrument data. In particular SPICE kernels provide spacecraft
+            and planetary ephemerides, instrument mounting alignments,
+            spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ Data Set Overview
+ =================
+    This data set includes the complete set of Clementine SPICE data
+    files (``kernel files&apos;&apos;), which can be accessed using SPICE
+    software. The SPICE data contains geometric and other ancillary
+    information needed to recover the full value of science
+    instrument data. In particular SPICE kernels provide spacecraft
+    and planetary ephemerides, instrument mounting alignments,
+    spacecraft orientation, spacecraft sequences of events, and data
+    needed for relevant time conversions.
+ 
+    This data set is contained on a single virtual volume, CLSP_1000,
+    including data from all mission phases and covering from the day
+    after launch, 1994-01-26, through the end of the mission,
+    1994-05-07.
+ 
+ 
+ Data Types (SPICE kernel types)
+ ===============================
+    SPK kernels contain ephemerides for spacecraft, planets,
+    satellites, comets and asteroids as well as for moving or fixed
+    spacecraft and instrument structures. They provide position and
+    velocity, given in a Cartesian reference frame. SPK files are
+    located under the ``data/spk&apos;&apos; directory of this data set.
+ 
+    PCK kernels contain certain physical, dynamical and cartographic
+    constants for target bodies, such as size and shape
+    specifications, and orientation of the spin axis and prime
+    meridian. PCK files are located under the ``data/pck&apos;&apos; directory
+    of this data set.
+ 
+    IK kernels (Instrument description kernels) give descriptive and
+    operational data peculiar to a particular scientific instrument,
+    such as internal timing relative to the spacecraft clock and
+    field-of-view model parameters. IK files are located under the
+    ``data/ik&apos;&apos; directory of this data set.
+ 
+    CK kernels describe pointing, containing a transformation
+    traditionally called the C-matrix which is used to determine
+    time-tagged pointing (orientation) angles for a spacecraft
+    structure upon which science instruments are mounted. CK files
+    are located under the ``data/ck&apos;&apos; directory of this data set.
+ 
+    EK (Events) kernels are derived from the integrated sequence of
+    events used to produce actual spacecraft commands. EK files are
+    located under the ``data/ek&apos;&apos; directory of this data set.
+ 
+    LSK (Leapseconds) kernels contain the leapseconds and the values
+    of other constants required to perform a transformation between
+    Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+    files are located under the ``data/lsk&apos;&apos; directory of this data
+    set.
+ 
+    SCLK (Spacecraft Clock) kernels contain on-board clock
+    calibration data required to perform a mapping between Ephemeris
+    time (ET) and spacecraft on-board time (SCLK.) SCLK files are
+    located under the ``data/sclk&apos;&apos; directory of this data set.
+ 
+    FK (Frame Definitions) kernels contain information required to
+    define reference frames, sources of frame orientation data and
+    inter-connections between these frames and other frames supported
+    within the SPICE system. This includes mounting alignment
+    information for each instrument. FK files are located under the
+    ``data/fk&apos;&apos; directory of this data set.
+ 
+ 
+  Kernel File Details
+  ===================
+    A brief overview of the different types of Clementine kernels
+    included in this data set is provided in the
+    CONFIDENCE_LEVEL_NOTE section of this file while details specific
+    to individual files are found in the ``*info.txt&apos;&apos; files in the
+    corresponding data directory. The most detailed description of
+    the data in each file is provided in metadata included inside the
+    file -- in the description area of text kernels or in the comment
+    area of binary kernels.
+ 
+ 
+  Software
+  ========
+    The SPICE Toolkit contains software modules needed to read SPICE
+    kernel files. SPICELIB software is highly documented via internal
+    headers. Additional documentation is available in separate ASCII
+    text files called Required Reading files. For example, the S- and
+    P- Kernel (SPK) Required Reading File, named ``spk.req&apos;&apos;, describes
+    use of the SPK kernel file readers and contains sample programs.
+ 
+    The latest SPICE Toolkit for a variety of computer platforms such
+    as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+    electronically (via anonymous FTP and WWW servers). Refer to
+    information in ``software/softinfo.txt&apos;&apos; for details regarding
+    obtaining this software. Each version of the Toolkit is also
+    archived at the NASA National Space Science Data Center.
+ 
+ 
+  Loading Kernel Files into a SPICE-based Application
+  ===================================================
+    The easiest way to make data from a collection of SPICE kernels
+    available to a SPICE-based application is to list these kernels
+    in a meta-kernel and load it into the program using the high
+    level SPICE data loader routine FURNSH. This data set provides
+    such meta-kernel(s) under the ``extras/mk&apos;&apos; directory. For more
+    information about the MGS meta-kernel(s), see the file
+    ``extras/mk/mkinfo.txt&apos;&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    This data set contains SPICE kernel files created during mission
+    operations and after mission data reconstruction and analysis.
+    Some general information about this collection follows here, but
+    the prospective user is also referred to extensive descriptions
+    about each file that are stored inside each kernel file. These
+    metadata provide detailed information regarding the information
+    source from which the data were derived, the type of processing
+    applied to the source data, applicability of the data, etc.
+    Metadata are located in the ``comment area&apos;&apos; for binary kernel
+    types (SPK, CK, ESQ), accessible using either the COMMNT or
+    SPACIT utility program found in the NAIF Toolkit. Metadata are
+    located after ``\begintext&apos;&apos; markers within the text kernel types
+    (PCK, IK, FK, LSK, SCLK, MK), accessible by using any available
+    text file display tool such as a word processor, text editor, or
+    the unix ``more&apos;&apos; or ``cat&apos;&apos; commands.
+ 
+    Where there are questions about data accuracy or ``confidence&apos;&apos;
+    not addressed herein the reader is invited to contact the NAIF
+    node of the Planetary Data System for possible further
+    information.
+ 
+ 
+  SPK Files
+  =========
+    Two kinds of SPK files are provided in this archive: SPK files
+    containing the spacecraft orbit and SPK files containing the Solar
+    System ephemerides. Each of these kinds is briefly described
+    below; more information is available in the file
+    ``data/spk/spkinfo.txt&apos;&apos;.
+ 
+    This data set includes three spacecraft orbit SPK files, each
+    from a different source: the Spacecraft Operations Team based at
+    Naval Research Laboratory (NRL), the Clementine Gravity Team from
+    Goddard Space Flight Center (GSFC), and the Solar System Dynamic
+    group of the Jet Propulsion Laboratory (JPL). All three files
+    provide trajectory covering most of the mission, with the
+    coverage of the NRL SPK starting about three weeks earlier than
+    the coverage of the other two files.
+ 
+    Of the three SPKs the NRL file is the oldest; the trajectory
+    provided in it was determined during mission. The GSFC SPK file
+    contains trajectory determined after the end of the mission, in
+    November 1994, as a part of the Clementine gravity data
+    reduction. The JPL SPK provides the most recent of the three
+    solutions, done in 2002 as a part of the Lunar gravity field
+    improvement effort.
+ 
+    Based on the coverage and history of these solutions NAIF
+    recommends that, unless there are special circumstances, the JPL
+    and NRL SPK files are used together in such way that the
+    JPL SPK providing more a recent, and likely more accurate
+    solution, is loaded last (to have higher priority) and the NRL file
+    providing the longest coverage is loaded first (to have lower
+    priority and be used only for the periods for which the JPL SPK
+    does not provide coverage).
+ 
+    The difference of the trajectories provided by the three
+    spacecraft SPK files varies greatly throughout the mission,
+    ranging from a few meters for some orbits to hundreds of meters
+    to kilometers for the fits near the propulsive maneuvers.
+    Appendix 1 of the ``data/spk/spkinfo.txt&apos;&apos; provides a summary of
+    the down-track, radial, and out-of-plane components of the
+    maximum difference for each pair of SPKs for each orbit.
+ 
+    This data set also includes the orbit number file generated using
+    the NAIF&apos;s ORBNUM utility program for the JPL SPK file for the
+    orbital phases of the mission. This file is not SPICE kernel; for
+    this reason it is provided in the ``extras/orbnum&apos;&apos; directory.
+    For more information about the Clementine orbit number file, see
+    the file ``extras/orbnum/orbinfo.txt&apos;&apos;.
+ 
+    This data set includes the DE414 SPK file, which the latest
+    version of the JPL Planetary Ephemeris available at the time when
+    this archive was created.
+ 
+ 
+  CK Files
+  ========
+    This data set includes a single CK file providing the actual
+    orientation of the Clementine spacecraft bus. This orientation is
+    based on the data from the SPQ files generated and delivered to
+    the project on a daily basis during mission operations by the
+    Spacecraft Team, NRL and converted to CK files by Applied
+    Coherent Technology (ACT) Corporation using the CPQ2CK program
+    provided by NAIF. Unfortunately the specifics of production of
+    the SPQ files had not been documented. It was suggested that the
+    SPQ files contained the ``raw&apos;&apos; orientation estimated by the
+    on-board Kalman filter using data from the star trackers and
+    gyros, sent down in housekeeping telemetry and stored ``as is&apos;&apos;
+    in the SPQ files but it is not known for sure. It is also not
+    clear whether the time tags attached to the ``raw&apos;&apos; attitude
+    telemetry suffered from the same problems as the science image
+    time tags and, if so, whether anything was done in the SPQ
+    generation pipeline to correct them.
+ 
+    More information about the Clementine CK files is available in
+    the file ``data/ck/ckinfo.txt&apos;&apos;.
+ 
+ 
+  PCK Files
+  =========
+    Two PCK files are provided in this data set, one is a text PCK
+    containing on the official IAU/IAG/COSPAR values accepted in
+    2000, the other is a binary PCK containing high-accuracy
+    orientation data for the lunar principal axes (PA) reference
+    frame, from the JPL Solar System Dynamics Group&apos;s planetary
+    ephemeris DE-403. Both files were the latest versions of the
+    files of these types distributed by NAIF at the time when this
+    archive was created. None of the PCK files used during mission
+    operations and post-mission data analysis was included in this
+    data set because they were superseded by the PCK files mentioned
+    above.
+ 
+    More information about the PCK files included in this data set is
+    available in the file ``data/pck/pckinfo.txt&apos;&apos;.
+ 
+ 
+   FK Files
+   ========
+    This data set includes the Clementine mission FK file and a number
+    of generic Lunar FK files. The Clementine FK file, created many
+    years after the end of the mission in 2000, defines the frames
+    for the Clementine spacecraft and its science instruments. The
+    instrument frames defined in it incorporate mission-era mounting
+    alignment data from the IK files included in this archive. The
+    Lunar FK files, created in 2006-2007, define a number of lunar
+    body-fixed frames associated high-accuracy lunar orientation data
+    provided by the JPL Solar System Dynamics Group&apos;s planetary
+    ephemerides and provide a mechanism to direct the SPICE system to
+    associate either the lunar ``principal axis&apos;&apos; frame or the lunar
+    ``mean Earth&apos;&apos; with the Moon.
+ 
+    More information about the Clementine FK files is available in
+    the file ``data/fk/fkinfo.txt&apos;&apos;.
+ 
+ 
+  IK Files
+  ========
+    This data set includes an IK file for each of the Clementine
+    instruments -- HIRES, UVVIS, NIR, LWIR, LIDAR, CPT, and Star
+    Trackers A and B. While these kernels were made at the time of
+    archive preparation in 2007, they incorporate the instrument
+    model parameters and mounting alignments that were derived at a
+    much earlier time, during mission operations and/or immediate
+    post mission data analysis in 1994. Although various printouts
+    and hand notes indicate that the values provided in the IKs are
+    probably the latest values derived by Thomas Duxbury, JPL at the
+    end of the mission, NAIF was not able to either confirm this or
+    to trace these value to an officially published or archived
+    document. In addition to this mission-era data each of the IKs
+    includes extensive comments and a GETFOV-type FOV definition;
+    these were added when the IKs were updated at the time of the
+    archive preparation.
+ 
+    More information about Clementine IK files is available in the
+    file ``data/ik/ikinfo.txt&apos;&apos;.
+ 
+ 
+  SCLK Files
+  ==========
+    Only one SCLK kernel is included in this data set -- the SCLK
+    kernel providing the nominal mapping of the Clementine on-board
+    clock to ET. This file was created and used during mission
+    operations. While this file is not adequate to support conversion
+    of the actual Clementine on-board time tags it is still required
+    to access data in the Clementine CK files.
+ 
+    More information about the Clementine SCLK files is available in
+    the file ``data/sclk/sclkinfo.txt&apos;&apos;.
+ 
+ 
+  LSK Files
+  =========
+    This data set includes the latest generic LSK kernel distributed
+    by NAIF at the time when this archive was created. Metadata
+    describing how the LSK data are obtained or computed is contained
+    inside the LSK text file. The time conversion provided by SPICE
+    LSK files is accurate to approximately 0.000030 seconds.
+ 
+    More information about the LSK files is available in the file
+    ``data/lsk/lskinfo.txt&apos;&apos;.
+ 
+ 
+  EK Files
+  ========
+    This data set includes a set of EK files containing the NAIF&apos;s
+    Clementine image catalog. This catalog was created by NAIF in
+    1994, after the end of the mission, to make the Clementine image
+    attributes and derived geometry information available to the NAIF
+    staff in the EK database format. It is included in this data set
+    for the record and for convenience to the future users of the
+    Clementine SPICE data who may desire to get the image times, file
+    names, and other ``basic&apos;&apos; image attributes from a SPICE kernel
+    rather than from the PDS index and/or label files. This catalog
+    contains data for all 1,900,483 images archived in the
+    CLEM1-L/E/Y-A/B/U/H/L/N-2-EDR-V1.0 data set.
+ 
+    More information about the EK files is available in the file
+    ``data/ek/ekinfo.txt&apos;&apos;.
+ 
+ 
+  Kernel Files Not Included In This Data Set
+  ===========================================
+    A number of kernel files used to process science data archived in
+    PDS were either not included in this data set because they were
+    superseded by the files provided in this archive or were included
+    into the archive under different names. These files are:
+ 
+      Type  Old file                 --&gt;  Archived file
+      ----  ----------------------  -----  ---------------------------
+      SPK   SPKMERGE_940219_940504   (S)   clem_gsfc.bsp
+            _CLEMV001b.bsp
+      SPK   SPKMER09.BSP             (R)   clem_gsfc.bsp
+      SPK   SPKMERGE_9402191254_94   (R)   clem_gsfc.bsp
+            05040324_CLEM.v002.bsp
+      SPK   clemdef.bsp              (R)   clem_nrl.bsp
+      SPK   clem_ask020625.bsp       (R)   clem_jpl.bsp
+      SPK   de245_1994.bsp           (S)   de414.bsp
+ 
+      SCLK  dspse002.tsc             (R)   clem_nom.tsc
+ 
+      CK    clem_2mn.bck             (S)   clem_act_ck3.bc
+      CK    clem_5sc.bck             (S)   clem_act_ck3.bc
+      CK    clem_act.bck             (S)   clem_act_ck3.bc
+      CK    clemdef1.bck             (S)   clem_act_ck3.bc
+ 
+      PCK   403s.bpc                 (S)   moon_pa_de403_1950_2198.bpc
+      PCK   de245lib.bpc             (S)   moon_pa_de403_1950_2198.bpc
+      PCK   pck00005.tpc             (S)   pck00008.tpc
+      PCK   pck00006.tpc             (S)   pck00008.tpc
+ 
+      FK    clem_v10.tf              (S)   clem_v20.tf
+ 
+      IK    astar005.ti              (S)   clem_astar_006.ti
+      IK    bstar005.ti              (S)   clem_bstar_006.ti
+      IK    cpt001.ti                (S)   clem_cpt_002.ti
+      IK    hires007.ti              (S)   clem_hires_008.ti
+      IK    lidar004.ti              (S)   clem_lidar_005.ti
+      IK    lwir007.ti               (S)   clem_lwir_008.ti
+      IK    nir007.ti                (S)   clem_nir_009.ti
+      IK    nir008.ti                (S)   clem_nir_009.ti
+      IK    uvvis007.ti              (S)   clem_uvvis_008.ti
+ 
+      EK    Apr15-May07.ek           (R)   clem_moon_940415_940507.bdb
+      EK    Jan27-Mar12.ek           (R)   clem_moon_940127_940312.bdb
+      EK    Mar12-Mar30.ek           (R)   clem_moon_940312_940330.bdb
+      EK    Mar30-Apr15.ek           (R)   clem_moon_940330_940415.bdb
+      EK    Sky.ek                   (R)   clem_sky_940201_940507.bdb
+ 
+    where (R) stands for ``renamed to&apos;&apos; and (S) stands for ``superseded
+    by&apos;&apos;.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>PSCM-00025</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

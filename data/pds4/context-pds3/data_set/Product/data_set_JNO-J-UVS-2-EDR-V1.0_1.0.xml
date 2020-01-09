@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.jno-j-uvs-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>JUNO JUPITER UVS 2 EXPERIMENT DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.juno::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.jno::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:uvs.jno::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gladstone, G.R., S.C. Persyn, J.S. Eterno, B.C. Walther, D.C. Slater, M.W.
+                   Davis, M.H. Versteeg, K.B. Persson, M.K. Young, G.J. Dirks, A.O. Sawka, J.
+                   Tumlinson, H. Sykes, J. Beshears, C.L. Rhoad, J.P. Cravens, G.S. Winters, R.A.
+                   Klar, W. Lockhart, B.M. Piepgrass, T.K. Greathouse, B.J. Trantham, P.M. Wilcox,
+                   and M.W. Jackson, The Ultraviolet Spectrograph on NASA&apos;s Juno Mission, Space
+                   Science Reviews, doi:10.1007/s11214-014-0040-z, 2014.
+            </reference_text>
+            <description>reference.GLADSTONEETAL2014</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>JNO-J-UVS-2-EDR-V1.0</data_set_id>
+        <data_set_name>JUNO JUPITER UVS 2 EXPERIMENT DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2016-06-21</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>BRAD TRANTHAM</producer_full_name>
+        <citation_text>
+            Trantham, B.J., JUNO J UVS EXPERIMENT DATA RECORD V1.0,
+            JNO-J-UVS-2-EDR-V1.0, NASA Planetary Data System, 2014.
+        </citation_text>
+        <data_set_terse_desc>
+            The Juno Ultraviolet Spectrograph (UVS) CODMAC Level 2 Experiment
+            Data Record is a collection of the far ultraviolet photon
+            detections obtained by the UVS instrument, in raw form.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Juno Ultraviolet Spectrograph (UVS) CODMAC Level 2 Experiment
+            Data Record is a collection of the far ultraviolet photon
+            detections obtained by the UVS instrument, in raw form. As such,
+            it constitutes the permanent record of the raw UVS data. These
+            data include both the instrument science and housekeeping data,
+            organized into extensions within files formatted according to the
+            Flexible Image Transport System (FITS) standard, version 2.1b.
+            The UVS EDR archive enables reprocessing of the raw science data
+            as radiometric and geometric calibration processing routines
+            improve. Investigators interested in applying advanced
+            calibration methods or needing to understand the properti of the
+            raw data will find the EDR products useful. Most investigators,
+            howeve will be interested in using either the UVS data products
+            contained in the CODMAC Level 3 Reduced Data Record, as
+            radiometric and geometric calibration processing has already been
+            done for these products, or the UVS CODMAC Level 5 far
+            ultraviolet map products.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  DATA SET OVERVIEW
+  =================
+The Juno Ultraviolet Spectrograph (UVS) CODMAC Level 2 Experiment Data Record
+is a collection of the far ultraviolet photon detections obtained by the UVS
+instrument, in raw form.  As such, it constitutes the permanent record of the
+raw UVS data.  These data include both the instrument science and housekeeping
+data, organized into extensions within files formatted according to the
+Flexible Image Transport System (FITS) standard, version 2.1b.  The UVS EDR
+archive enables reprocessing of the raw science data as radiometric and
+geometric calibration processing routines improve.  Investigators interested
+in applying advanced calibration methods or needing to understand the properti
+of the raw data will find the EDR products useful.  Most investigators, howeve
+will be interested in using either the UVS data products contained in the CODM
+Level 3 Reduced Data Record, as radiometric and geometric calibration processi
+has already been done for these products, or the UVS CODMAC Level 5 far ultrav
+map products.
+ 
+ 
+  PARAMETERS
+  ==========
+    The fundamental measured parameters contained in the UVS EDR data set are
+    the nearest time markers and the spatial and spectral locations on the UVS
+    detector for each of the recorded far ultraviolet photon detection events.
+    From these values raw calculated count rates (counts/sec) integrated over
+    all spatial and spectral bins are also derived.  The sampling interval for
+    the derived count rate values is determined by the commanded rate at which
+    the time markers are inserted into the data stream.  This value will
+    normally be set to 250 Hz.
+ 
+ 
+  PROCESSING
+  ==========
+    UVS EDR data products will be generated at the UVS Science Operations
+    Center (SOC), located at the Southwest Research Institute in San Antonio,
+    Texas.  The products will be generated by an automated pipeline process.
+ The UVS instrument will nominally generate one to many housekeeping telemetry
+    files and science data files per orbit.  Once per day these UVS-generated
+    files will be retrieved from the Juno spacecraft by the Juno Mission
+    Operations Center (MOC) and then transferred by the MOC to the UVS SOC.
+    The automated UVS SOC pipeline will ingest these files and invoke software
+    to process them into EDR data product files.  No calibration of the scienc
+    data will be done at this time.  Raw housekeeping telemetry values will be
+    converted to engineering units, where applicable, and these converted valu
+    will be included in the EDR data product files.
+ 
+ 
+  DATA
+  ====
+    The UVS EDR data product file will contain the following types of data:
+ 
+    1. Spectral vs. Spatial Image:  This is a reconstructed histogram generate
+  from the pixel list data in the science data file.  Photon acquisition
+  events will be binned according to their spectral and spatial components.
+  This summary image is used as a &apos;quick-look&apos; check on data quality.
+  [Extension 0 = primary FITS header and data unit (HDU)]
+ 
+    2. Spatial vs. Time Image:  This is similar to the first dataset, but the
+  data are binned based on spatial and temporal parameters.  The 360deg
+  histogram will be split into 5 panels of 72deg. A new histogram will be
+  started every time the scan mirror moves, as determined from the
+  housekeeping data. This summary image is used as a &apos;quick-look&apos; check
+  on data quality. [Extension 1]
+ 
+    3. Frame List:  This dataset contains a list of the generated frame
+  acquisitions. The list includes, for each frame, the instrument frame
+  sequence number, start and stop times, tag bytes, quality factor and
+  other instrument state information. The frame acquisition times and
+  instrument state data contained in this list are used to
+  cross-reference with the pixel list mode data for purposes of selecting
+  data and checking timing consistency. [Extension 2]
+ 
+    4. Scan Mirror Data: This dataset contains a listing of all scan mirror
+  positions and information on when the mirror entered and exited each
+  position. These data are taken from the housekeeping packets.
+  [Extension 3]
+ 
+    5. Raw Frame Data:  This dataset contains all of the raw data from the
+  science data file except for the file header. [Extension 4]
+ 
+    6. Analog Count Rate:  This dataset contains a sequence of time ordered
+  photon count rates read from the housekeeping data packets.
+  [Extension 5]
+ 
+    7. Digital Count Rate:  Similar to the previous dataset, this will
+  contain the count rate as determined from the raw science data.
+  These data will be shown as counts/second. [Extension 6]
+ 
+    8. Pulse Height Distribution (Lyman Alpha): This is one of three
+  histograms where the bins are arranged as pulse height vs. time.
+  One histogram will be created per spin. This histogram contains
+  photons whose spectra are recorded on detector columns numbered
+  between 850 and 930. [Extension 7]
+ 
+    9. Pulse Height Distribution (Stellar): This is one of three
+  histograms where the bins are arranged as pulse height vs. time.
+  One histogram will be created per spin. This histogram contains
+  photons whose spectra are recorded on detector columns numbered
+  between 931 and 1770. [Extension 8]
+ 
+    10. Pulse Height Distribution (Stim): This is one of three histograms
+  where the bins are arranged as pulse height vs. time. One histogram
+  will be created per spin. This histogram contains photons whose
+  spectra are recorded on detector columns numbered between 0 - 149
+  and 1950 - 2047. [Extension 9]
+ 
+    11. Housekeeping Data:  This dataset contains the complete housekeeping
+  dataset, both in raw format and, where applicable, in calibrated
+  engineering units. HK data are included here to assist with joint
+  instrument and data quality trending analyses (foreseen and
+  unforeseen). [Extension 10]
+ 
+    12. Parameter List: This table records the known values of the instrument
+  parameter table, as reported in the housekeeping data. [Extension 11]
+ 
+  ANCILLARY DATA
+  ==============
+    Ancillary data used in the generation of the UVS EDR data set include thos
+    values required to convert instrumental engineering quantities contained i
+    the housekeeping data from raw values to physical units.  These data have
+    been obtained from the UVS engineers at the Southwest Research Institute i
+    San Antonio, Texas.
+ 
+ 
+  COORDINATE SYSTEM
+  =================
+    The UVS EDR data product is a CODMAC Level 2 product.  As such, the scienc
+    data contained therein have not been corrected for instrumental effects,
+    calibrated, or located in space.  The data are reported according to the
+    two- dimensional detector coordinate system in X and Y (2048 x 256,
+    respectively).
+ 
+ 
+  SOFTWARE
+  ========
+    Because the UVS EDR data product files adhere to version 2.1b of the FITS
+    standard, all FITS readers up to this standard should be able to
+    successfully read these files.  There are many such FITS readers freely
+    available in the public domain.
+ 
+ 
+  MEDIA/FORMAT
+  ============
+    The UVS EDR data product files are written in FITS format, and the format
+    of each file is described in an accompanying detached PDS label.  The EDR
+    archive itself will be electronically delivered from the Juno SOC (JSOC)
+    to the PDS Imaging Node, where it will be made generally available via
+    the World Wide Web.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence level information will be provided after more thorough analysis
+  of the data.
+        </confidence_level_note>
+        <archive_status>PRE_PEER_REVIEW</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

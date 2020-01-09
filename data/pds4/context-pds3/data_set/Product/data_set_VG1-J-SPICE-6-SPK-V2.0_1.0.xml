@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg1-j-spice-6-spk-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VG1 JUPITER SPICE SPK KERNEL V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.vg1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg1-j-spice-6-spk-v2.0__browserp_vg1-j-spice-6-spk-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Acton, C.H., The SPICE System - A Brief Overview, Navigation and Ancillary
+                   Information Facility, JPL, 1994.
+            </reference_text>
+            <description>reference.ACTON1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Acton, Jr. C.H., Ancillary Data Services of NASA&apos;s Navigation and Ancillary
+                   Information Facility, Planetary and Space Sciences, 44, Number 1, pp. 65-70,
+                   1996.
+            </reference_text>
+            <description>reference.ACTON1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG1-J-SPICE-6-SPK-V2.0</data_set_id>
+        <data_set_name>VG1 JUPITER SPICE SPK KERNEL V2.0</data_set_name>
+        <data_set_release_date>1998-05-01</data_set_release_date>
+        <start_time>1979-02-05T23:59:59.999Z</start_time>
+        <stop_time>1979-04-08T23:59:59.998Z</stop_time>
+        <producer_full_name>NAVIGATION ANCILLARY INFORMATION FACILITY</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VG1 JUPITER SPICE SPK KERNEL V2.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            Version 2.0 ----------- This data set replaces the Voyager 1
+            Jupiter SPICE data set (DATA_SET_ID = VG1-J-6-SPK-V1.0).
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+ 
+    Version 2.0
+    -----------
+      This data set replaces the Voyager 1 Jupiter SPICE data set
+      (DATA_SET_ID = VG1-J-6-SPK-V1.0).
+ 
+ 
+    Data Set Description
+    --------------------
+      This data set includes the spacecraft trajectory and allied
+      planet and satellite ephemeris (SPK) kernel for the Voyager 1
+      Jupiter encounter, plus copies of the generic planetary
+      constants (PCK) kernel, and the leap seconds (LSK) kernel.
+      The SPK kernel provides ephemeris information for the period
+      1979-02-05 to 1979-04-08 for Voyager 1, Jupiter, Metis,
+      Adrastea, Thebe, Amalthea, Callisto, Ganymede, Europa, Io,
+      Earth, Moon, the Sun, and the Barycenters for all nine major
+      planets.  This file is provided in both PC binary (EBCDIC)
+      and IEEE (Sun) binary format.  The PCK kernel contains
+      information specifying Jupiter&apos;s size, shape, and
+      orientation.  The LSK kernel is used for transforming between
+      ephemeris time, the time system used in the SPK and PCK
+      files, and UTC time (also referred to as Spacecraft Event
+      Time or SCET).  Both the PCK and LSK kernels are provided in
+      ASCII format.
+ 
+      The PCK kernel is PCK_version 00003 (1990-06-25).  The LSK
+      kernel includes leap seconds through 1991-01-01.  Information
+      regarding the SPK version and contents are detailed below.
+ 
+      This data set is a NAIF SPK file, which is the realization of
+      the SPICE S and P-ephemeris kernels.  The SPICE S kernel is
+      the logical component of the SPICE kernel concept which
+      contains spacecraft trajectory data (position and velocity in
+      a Cartesian reference frame).  The SPICE P-ephemeris kernel
+      is the logical component of the SPICE kernel concept which
+      contains target (one or more of planet, satellite, comet,
+      asteroid) ephemeris data (position and velocity in a
+      Cartesian reference frame).
+ 
+      NAIF provides a software toolkit, called SPICELIB, containing
+      the Fortran 77 source code subroutines which a user needs to
+      read SPK files.  Those intending to use SPK kernel files
+      should order this SPICELIB toolkit from the PDS (if it is not
+      already on hand) and integrate appropriate modules into their
+      own applications program.  Users should NOT attempt to write
+      their own software to read SPK kernels files.
+ 
+      SPICELIB software is highly documented via internal headers,
+      and some additional documentation is available in separate
+      SPICELIB ASCII text files called Required Reading files.  The
+      SPK Required Reading File, identified as SPK.REQ, describes
+      the use of the SPK kernel readers.
+ 
+      This particular data set is a merge of five SPK source files.
+      Four of these (T790210, T790213, T790303, and T790318) were
+      made from standard Voyager NAV Team archival products which
+      were made for SEDR production.  The fifth source file was
+      (JUP024_VGR) made from a post-encounter satellite ephemeris
+      file which contains ephemeris data for satellites which were
+      not included in the standard Voyager NAV Team archival
+      products.  These source files are summarized below.
+ 
+ 
+                                                    NAIF_ID FOR EACH
+                                                    BODY INCLUDED
+  NAV ID  START TIME           STOP TIME            (See key below)
+  --------------------------------------------------------------------
+  T790210 1979 FEB 06 00:00:00 1979 FEB 13 00:00:00 1 through 10, 301,
+                                                    399, 501 through
+                                                    505, 599, -31
+  T790213 1979 FEB 13 00:00:00 1979 FEB 19 00:00:00 1 through 10, 301,
+                                                    399, 501 through
+                                                    505, 599, -31
+  T790303 1979 FEB 19 00:00:00 1979 MAR 03 00:00:00 1 through 10, 301,
+                                                    399, 501 through
+                                                    505, 599, -31
+  T790318 1979 MAR 03 00:00:00 1979 APR 09 00:00:00 1 through 10, 301,
+                                                    399, 501 through
+                                                    505, 599, -31
+  JUP...  1979 FEB 01 00:00:00 1979 NOV 03 00:00:00 505, 514 through
+   024_VGR                                          516, 599
+ 
+      NAIF body IDs are used within SPICE kernels to label data for
+      a specific body.  These IDs must be employed as arguments in
+      the SPICELIB SPK kernel readers.
+ 
+      Users might note that not all those bodies for which data are
+      available in this file are listed in the Data Set Target
+      Template below.
+ 
+      Key to NAIF_IDs:
+ 
+      1 through 9 are planet-satellite system barycenters for
+      Mercury through Pluto respectively.
+ 
+      199 through 999 are planet mass centers for Mercury through
+      Pluto.
+ 
+      10 is the SUN.
+ 
+      nxx are satellites, where n is the parent planet number.
+      Thus, n=3 for Earth, n=4 for Mars, n=5 for Jupiter, etc.
+      Satellites which may be found in this particular SPK file
+      are: 501=IO, 502=EUROPA, 503=GANYMEDE, 504=CALLISTO,
+      505=AMALTHEA, 514=THEBE, 515=ADRASTEA, 516=METIS.
+ 
+      Spacecraft are identified using the numeric IDs assigned by
+      JPL&apos;s Deep Space Network (DSN), but with a minus sign
+      preceding the number.  Thus Voyager 1 is -31 and Voyager 2 is
+      -32.
+ 
+      Processing Level Id            : 6
+      Software Flag                  : Y
+      Processing Start Time          : 1987-03-26
+      Processing Stop Time           : 1989-08-29
+ 
+ 
+  Parameters
+  ==========
+    N/A
+ 
+ 
+  Source Instrument Parameters
+  ============================
+    N/A
+ 
+ 
+  Measurement Information
+  =======================
+    N/A
+ 
+ 
+  Processing
+  ==========
+ 
+    Processing History
+    ------------------
+      Source Data Set ID          : NAIF 18
+      Software                    : SPICELIB
+      Product Data Set ID         : VG1-J-6-SPK-V1.0
+ 
+      Source Data Set ID          : NAIF 19
+      Software                    : SPICELIB
+      Product Data Set ID         : VG1-J-6-SPK-V1.0
+ 
+      Source Data Set ID          : NAIF 20
+      Software                    : SPICELIB
+      Product Data Set ID         : VG1-J-6-SPK-V1.0
+ 
+      Source Data Set ID          : NAIF 21
+      Software                    : SPICELIB
+      Product Data Set ID         : VG1-J-6-SPK-V1.0
+ 
+      Source Data Set ID          : NAIF 121
+      Software                    : SPICELIB
+      Product Data Set ID         : VG1-J-6-SPK-V1.0
+ 
+ 
+    Software &apos;SPICELIB&apos;
+    -------------------
+      SPICELIB contains hundreds of ANSI FORTRAN 77 source code
+      subroutines and functions for calculating instrument
+      observation geometry.  This software is intended to be
+      integrated into a user&apos;s own science analysis application
+      programs.  Included in this library are readers for the SPICE
+      kernels, which are the principal data sets used in computing
+      instrument viewing geometry, or for planning data taking
+      sequences.
+ 
+      Additional software is available for then computing such
+      items as latitude, longitude, phase angle, and emission angle
+      of an instrument&apos;s principal point, or nearly any other
+      geometric parameter of interest.
+ 
+      Software Name               : SPICELIB
+      Software Type               : NIN
+      Software Release Date       : 1990-02-05
+      Node ID                     : NAIF
+      Cognizant Engineer          : CHARLES H. ACTON
+      Software Access Description : NOT ACCESSIBLE THROUGH PDS
+                                    CATALOG - CONTACT PDS/NAIF NODE
+ 
+      Note that this is not the official archive for these SPICE
+      kernels.  The PDS/NAIF node plans to officially archive these
+      data on a separate volume.  These data are provided here for
+      use with software designed to generate trajectory or perform
+      coordinate transformations.
+ 
+      To learn more about SPICE, or for information about how to
+      acquire the official archive version of these kernels, or the
+      SPICELIB software, please contact Charles H.  Acton of the
+      PDS/NAIF node (INTERNET: cacton@spice.jpl.nasa.gov, DECNET:
+      NAIF::CACTON, PHONE: (818)354-3869 ) or check the PDS
+      website&apos;s (http://pds.nasa.gov/) link to the NAIF node
+      for current NAIF contact information.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    There is essentially no loss in accuracy when an SPK file is
+    made from one or several NAV source files.
+ 
+    Statistics on ephemeris accuracy are not available, but errors
+    are very small compared to normal uncertainties in
+    reconstructed pointing knowledge for the Voyager science
+    instruments.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XM-11A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:dtwg.hp</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>unk for HP</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.hp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>Unknown</instrument_name>
+        <instrument_desc>
+ 
+ 
+DTWG overview
+=============
+ 
+The responsibility of developing analysis techniques by  which the
+Huygens entry and descent trajectory is reconstructed  from the
+official NASA/ESA hand-off point at the interface altitude  of 1270
+km to the surface is given to the Huygens Descent Trajectory
+Working Group (DTWG), which was chartered in 1996 as a subgroup of
+the Huygens Science Working Team (HSWT) [ATKINSON2007].
+Membership includes  representatives from each of the Huygens probe
+science instrument teams  and the orbiter radar, the Huygens and
+Cassini project  scientists, and engineers from ESTEC, ESOC, and
+Alcatel (Cannes).
+ 
+The primary goals of the Descent Trajectory Working Group are:
+ 
+- to develop a framework between experiment teams and the Huygens
+  Mission Team for sharing and exchanging data relevant to the
+  descent trajectory analysis and modeling;
+ 
+- to develop methodologies by which the probe descent trajectory
+  and  attitude can be accurately reconstructed from the probe and
+  orbiter  science and engineering data; and
+ 
+- to provide a single, common descent profile that is consistent
+  with  all the available probe and orbiter engineering and science
+  data,  and that can be utilized by each instrument team for
+  analysis of  experiment measurements, and correlation of results
+  between  experiments.
+ 
+Reconstruction Strategy and Input Datasets
+==========================================
+ 
+The reconstruction methodology, strategy, and results are described
+in detail in [KAZEMINEJAD2007] and summarized in the
+following paragraphs.
+ 
+The reconstruction strategy adapted by the group can be summarized
+by the following three phases
+ 
+ 
+(1) The reconstruction of the probe entry phase from the interface
+    point down to an altitude of ~100 km.
+ 
+(2) The reconstruction of the probe descent phase from ~145 km down
+    to surface impact.
+ 
+(3) The entry and descent trajectory merging process, which ensured
+    a smooth transit between entry and descent phase in terms of
+    both altitude and descent speed.
+ 
+The methodology and results of each step will be discussed
+separately in the subsequent sections.
+ 
+The DTWG product is derived from two sets of input data:
+ 
+1. The DTWG Input Data, including all the relevant instrument and
+   housekeeping data  made available to the Huygens DTWG to perform
+   the reconstruction of the probe entry  and descent trajectory.
+ 
+2. The Huygens Probe Initial Conditions and Event File (see
+   EVENT_FILE_04042005.TXT in the GEOMETRY directory) provided by
+   the Project Scientist  Team (PST) to the DTWG, comprising the
+   probe initial conditions, physical constants  and epochs of
+   important events during the probe mission.
+ 
+The entry phase reconstruction is based on the following set
+of input data:
+ 
+- HASI 3-axis accelerometer measurements (only axial measurements
+  were actually used, due to measurement uncertainties of normal
+  accelerometers);
+- DWE zonal wind measurements in the altitue range ~155 - 100 km;
+ 
+The descent trajectory reconstruction is based on more than just one
+instrument dataset.  The altitude and descent speed are derived
+from:
+ 
+- HASI pressure and temperature measurements (dynamically corrected
+  derived dataset: HASI_L4_ATMO_PROFILE_DESCENT.TAB from the
+  HASI archive volume HP-SSA-HASI-2-3-4-MISSION-V1.1)
+- SSP impact measurements (time of impact)
+- GCMS molecular mass measurements
+- DWE zonal wind measurements
+- DISR meridional image based probe drift measurements
+ 
+The following instrument data were not directly ingested into the
+reconstruction process but only used for comparison of results and
+consistency check:
+ 
+- SSP speed of sound derived altitude profile
+- Radar Altimeter measurements of probe altitude
+ 
+ 
+Entry Phase Reconstruction Methodology:
+======================================
+ 
+The probe entry phase is defined as the portion of the trajectory
+starting from the official NASA/ESA interface point at nominally
+1270 km altitude down to T0, the time at which the Parachute
+Deployment  Device (PDD) was fired (at an altitude of about 155
+km).
+ 
+The probe entry phase is reconstructed by numerically integrating
+the  equations of motion in a Titan-centered EME2000 (inertial)
+coordinate system which can be written as
+ 
+a = a_g + a_Ad
+ 
+where a_g is the gravitational acceleration and a_Ad is the
+acceleration due to aerodynamic forces.
+ 
+ 
+The integration  of the equations of motion requires the knowledge
+of the full probe state vector (i.e., the cartesian position and
+velocity vector specified  in the integration reference system) at
+an initial epoch. The entry state vector is provided by the  Cassini
+Navigation team to ESA together with the estimated interface epoch
+(in Ephemeris Time) and  the corresponding state vector
+uncertainties in the form of a text kernel. This information is
+made  available to the DTWG by the PST via the Huygens Probe Initial
+Conditions and Event File (also in the  form of a NAIF text kernel)
+which is also archived.
+ 
+The gravitational forces a_g acting on the spacecraf&apos;s centre of
+mass cannot be detected by the  onboard accelerometers as those
+measurements are made in a frame fixed with respect to the
+spacecraft (referred to as the spacecraft reference system). In
+other words the spacecraft  and the accelerometers are both free
+falling at the same rate. The gravitational forces  therefore have
+to be modelled at each step of the reconstruction process.
+ 
+ 
+For the proper  transformation of the measured aerodynamic
+accelerations from the spacecraft reference system into the
+integration reference system the probe angle-of-attack (AOA) is
+required. The AOA is the  separation angle of the probe axial body
+axis and the flow velocity vector and is time dependent AOA=AOA(t).
+In planetary entry probe missions the AOA is typically estimated
+from the ratio of measured normal to axial accelerations. Those
+equal the ratio of the corresponding aerodynamic coefficients which
+in return are available in an pre-flight aerodynamic database as a
+function of AOA and Mach number Ma. Due to a sensitivity problem of
+the HASI piezoresistive accelerometers however, the measurements
+along the normal axis turned out to be too inaccurate for a
+derivation of the angle of attack via the aforementioned method and
+a zero angle of attack had therefore to be assumed for the
+reconstruction of the entire entry trajectory. In this special case
+the aerodynamic drag a_D equals the measured axial acceleration a_A.
+ 
+The lift force value a_L was neglected since the lift force vector
+co-rotated with the probe and therefore averaged to zero as the
+probe rotated. This was based on the assumption that the lift force
+remained essentially constant over an entire roll period.
+ 
+Once the norm of the drag force is known the corresponding vector
+a_Ad can be obtained from the simple fact that the drag force vector
+always points in the opposite direction of to the relative velocity
+vector v_rel of the spacecraft with respect to the atmosphere
+(expressed in the inertial frame of integration).
+ 
+a_Ad = - a_D * v_rel/norm(v_rel)
+ 
+v_rel is the relative velocity which was derived from
+ 
+v_rel = v_in - omega_p cross r_in - v_wind
+ 
+where r_in and v_in are the probe inertial position and velocity
+vectors, omega_p = 4.560678E-06 rad/sec, and v_wind is the velocity
+vector of the atmospheric wind in the inertial frame. v_wind was
+assumed to be directed into a zonal direction with  a norm of 90 m/s
+(once DWE measurements were available they were taken into account).
+ 
+ 
+Entry Phase Reconstruction Results:
+==================================
+ 
+ 
+The numerical integration was started at the interface point using
+the Cassini Navigation estimation of the probe state vector. This
+vector was adjusted in the trajectory merging process in order to
+ensure a good match of the entry and descent phase.
+ 
+It is important to keep in mind that the direction of the relative
+velocity vector v_rel was influenced by atmospheric winds.  The DWE
+zonal wind measurements were however constrained to the  descent
+phase. A parameter study showed that the assumption of a constant 90
+m/s prograde zonal wind for altitudes above 143.9 km (for lower
+altitudes DWE measurements were available) achieved the best merging
+of entry and descent phase.
+ 
+The entry phase reconstruction based on the HASI accelerometer data
+could only be achieved down to an altitude of 100 km. At lower
+altitudes the numerical integration of the equations of motion did
+not converge anymore due to the built-up error introduced by the
+integration of accelerometer measurements, which got strongly perturbed
+by the pendulum motions that was introduced by the opening of the various
+parachutes. An additional a systematic error was introduced by the
+fact that during the parachute sequence the accelerometers were
+not located at the center of gravity anymore, as the jettison of
+the backcover and the release of the parachutes introduced a non-negligible
+change of mass distribution.
+ 
+The results of the entry phase trajectory reconstruction are
+depicted in plots ENTRY_ALT.JPG and ENTRY_VEL.JPG (see BROWSE
+directory and description in BROWSE_INFO.TXT).   The altitude
+profile is shown with respect to the reference surface, which is
+considered to be at a radial distance of 2575 km from Titan&apos;s
+center. The figure shows both the reconstructed profile (solid line)
+based on the flight data and the preflight simulation trajectory as
+described by [KAZEMINEJAD2004]. (dashed line). It is
+important to point out that the preflight simulation is based on the
+initial conditions as estimated by the Cassini Navigation team
+(i.e., an altitude of exactly 1270 km at interface epoch). The
+reconstructed profile (labeled with Flight Data) used the modified
+initial state vector based on the correction that was provided by
+the entry and descent phase merging algorithm. The altitude
+difference between the two state vectors is about 22 km, which
+corresponds to  about 0.72 sigma of the specified radial error.
+ 
+ENTRY_VEL.JPG shows the norm of the inertial velocity vector for
+both the reconstructed profile (solid) and the preflight simulation
+(dashed). Although the actual velocity at the interface altitude was
+very close to the preflight prediction, the two profiles start to
+diverge slightly once the probe enters the entry deceleration pulse.
+This is due to the previously mentioned altitude difference of 22
+km: as the actual probe initial position at interface was lower than
+the predicted one (and the one used in the preflight simulation),
+the probe encountered denser atmospheric layers during the main
+deceleration pulse, which is also depicted in the plot. This implied
+a faster velocity decrease and explains the difference between the
+two velocity profiles. The two vertical dashed lines mark the T_0
+event at about 155 km altitude as well as the start of the probe
+relay transmission at about 143 km.
+ 
+Once the probe dynamics were reconstructed from the numerical
+integration of the measured aerodynamic deceleration, the
+atmospheric density could be inferred from
+ 
+rho = -2*m(t)/(C_D*A)*a_Ad/v_rel^2
+ 
+ 
+where m, A, and C_D are respectively the probe mass, cross-section
+area and drag coefficient. The probe mass was not constant during
+the entry phase due to the ablation process of heat shield material,
+which is expressed by the time dependence of m=m(t). As the Huygens heat shield
+was unfortunately not equipped with any Thermal Protection System
+(TPS) recession sensors, the ablation process could only be modeled
+taking into account the integrated mass loss that was estimated from
+preflight simulations. The time dependent mass loss was simulated
+according to the relation
+ 
+ 
+m(t)=m_0*exp(0.5*sigma*v_rel)^2-v_max^2)
+ 
+ 
+with sigma = 4.18*10E-10  m^{-2}s^2 and the initial mass m_0 = 320
+kg. v_max is the flow velocity (relative probe velocity with respect
+to the atmosphere) at the time of the start of the ablation process
+and was assumed to be the maximum probe velocity during the entry
+phase. The sigma value was adjusted to fit the estimated integrated
+ablation mass of 9.7 kg. The drag coefficient C_D is also time
+dependent and was interpolated from the preflight aerodynamic
+database [HUY-EADS-MIS-RE], which provides the Huygens entry module
+axial and normal coefficients for free molecular flow (Kn &gt; 10),
+transitional flow (0.001 &lt;= Kn &lt;= 10), and continuum flow ( Kn &lt;
+0.001), as a function of angle-of-attack AOA and Knudsen number Kn
+or Mach number Ma. Kn is given by
+ 
+Kn=1.2533 sqrt(gamma) Ma/Re
+ 
+ 
+where Re is the dimensionless Reynolds number which was derived
+using the relation
+ 
+Re =v_rel*rho*D_spc/mu_visc
+ 
+D_spc is the diameter of the probe front shield (i.e., 2.7 m) and
+mu_visc is the dynamic viscosity which was calculated (in units of
+kg/m/s) according to
+ 
+mu_visc = 1.458E-06 T^1.5/(T + 110.4)
+ 
+The Mach number Ma is simply derived from the ratio of the relative
+probe velocity and the speed of sound c_s. One can see that the
+calculation of aerodynamic parameters like the Reynolds number, the
+Mach number and the Knudsen number require the knowledge of the
+atmospheric density and temperature. The atmospheric temperature can
+be derived from the pressure profile assuming the ideal gas law,
+which is a sufficient approximation in the upper parts of the
+atmosphere due to the low density. The pressure profile can be
+derived from the density profile from the integration of the
+equation of hydrostatic equilibrium.
+ 
+The reconstruction of the atmospheric density however in return
+requires the knowledge of the aerodynamic flight regime for the
+proper interpolation of the drag coefficient C_D. The reconstruction
+of the atmospheric structure must therefore be performed in an
+iterative process starting with a constant C_D and AOA=0.
+ 
+ 
+Descent Phase Reconstruction Methodology:
+========================================
+ 
+ 
+Vertical Trajectory:
+-------------------
+ 
+The descent phase altitude and descent speed reconstruction was
+performed in an upward direction, starting from the time of probe
+impact as measured by the SSP impact penetrometer. The conversion of
+the HASI atmospheric pressure P and temperature T measurements into
+altitude z and descent speed dz/dt was based on the assumption of
+hydrostatic equilibrium and the equation of state for a real gas. It
+can be shown that the descent velocity is given by
+ 
+dz/dt = -1/g(z)*R_univ*T*zeta/(mu*P)*dP/dt
+ 
+where dP is the incremental change in atmospheric pressure, which is
+related to the corresponding incremental change in altitude dz. g(z)
+is the local acceleration of gravity, which needs to be recalculated
+at each step according to g=G*M_0/z^2 (z can be approximated by the
+previous reconstruction step z_(i-1) ). R_univ is the universal gas
+constant (8314.3 J/kmol/K). mu is the mean molecular mass
+(kg/kilomole), which can be inferred from the GCMS measured mole
+fractions of nitrogen and methane f_N2and f_CH4 according to
+ 
+ 
+mu=f_N2*mu_N2 + f_CH4*mu_CH4
+ 
+where mu_N2 and mu_CH4 are the molecular masses of respectively N_2
+and CH_4.zeta is the compressibility factor that takes into account
+the deviation of the gas behavior from an ideal gas due to particle
+interaction (van der Waals forces) and the impact of a finite
+particle volume. Especially in the altitude ranges from the surface
+up to about 70 km Titan&apos;s atmosphere is characterized by a
+combination of relatively high densities (in the order of magnitude
+of 10E-04 to 10E-02 g/cm^3 and low temperatures (100 to 93 K) which
+are both drivers for a deviation of the atmosphere from an ideal gas
+behavior. For the computation of the compressiblity we restricted
+ourselves to the second virial coefficent B_2 and its relations to
+zeta as given by [DYMOND1992]
+ 
+zeta = 1 + B_2*rho/mu
+ 
+For a gas mixture of N_2 and CH_4 the second virial coefficent was
+composed in the following manner
+ 
+B_2 (T) =   f_N2^2*B_(2,N_2)(T) +
+          + f_N2*f_CH4*B_(2,CH_4-N_2)(T) +
+          + f_CH4^2*B_(2,CH_4)(T)
+ 
+where B_(2,N_2), B_(2,CH_4), and B_(2,CH_4-N_2) are the temperature
+dependent virial coefficients for the various pure gas and
+interaction components, which were evaluated using polynomial fits of
+laboratory measurements data as tabulated by [DYMOND1992].  With the
+measured mole fractions taken from the GCMS measurements and the
+derived virial coefficients from zeta values in the range from very
+close to 1 (i.e., almost ideal gas behaviour) at altitude ranges
+above 70 km and a continious decrease to values down to 0.965 (i.e.,
+a deviation of 3.5 \% from the ideal gas law) close to the surface
+were obtained.
+ 
+Multiplying the expression for dz/dt by dt and integrating on both
+sides yields
+ 
+ 
+Delta_z=[z_i-z_(i-1)]=-1/g*R_univ*T_(i-1/2)*zeta/mu*ln[P_i/P_(i-1)]
+ 
+ 
+T was considered to be constant throughout the altitude interval
+Delta_z and was approximated by the mean value of two subsequent
+measurements, i.e., T_(i-1/2)=1/2(T_i+T_(i-1) ). Starting from the
+initial value z_0 at Titan&apos;s surface the final altitude was
+derived by simple addition of the subsequently derived altitude
+intervals Delta_z
+ 
+z_i=z_0+ sum_i Delta_z_(i-1)
+ 
+Note that the minus sign in the equation above ensures that for a
+reconstruction starting from the surface in an upward direction the
+pressure gradient has to be negative (i.e., P_i &lt; P_(i-1) and
+Delta_z therefore positive. Assuming a constant descent velocity for
+the descent interval Delta_z the descent velocity was approximated
+by
+ 
+v = dz/dt ~ Delta_z/Delta_t
+ 
+It should be noted that the atmoshperic temperature and pressure
+based altitude profile provides the radial probe distance from the
+probe impact point neglecting Titan&apos;s flattening. The integration of
+the equations of motion during the entry phase reconstruction
+however provides the distance of the probe to Titan&apos;s center, which
+requires the assumption of a planetary radius (i.e., 2575 km) to
+obtain the so called reference surface altitude.
+ 
+ 
+Horizontal Trajectory
+---------------------
+ 
+Two sources of wind drift measurements are available 1) the DWE
+zonal wind measurements, and 2) the image derived zonal and
+meridional drifts from the Descent Imager and Radial Spectrometer
+(DISR) instrument. Note that both the DWE and the DISR derived drift
+measurements required as an input the vertical probe descent profile
+(i.e., altitude and descent speed), which was provided to the
+instrument teams by the Descent Trajectory Working Group (DTWG). The
+probe horizontal motion reconstruction was therefore carried out in
+an iterative process between the DTWG, DWE, and DISR teams.
+ 
+In the body-fixed Titan system the Huygens velocity vector can be
+decomposed into its radial, zonal, and meridional components
+according to where prograde zonal is considered as the motion from
+west to east and meridional from south to north. From the kinematic
+equations for a spherical coordinate system one can easily derive
+the change in longitude and latitude caused by zonal and meridional
+drift (in radians/second)
+ 
+d lambda/dt = v_zon(t)/[ R(t)* cos phi(t) ]
+d phi/dt    = v_mer(t)/R(t)
+ 
+where R(t) is the instantaneous distance of the probe from the
+center of Titan and is simply given by R=R_P+z_i, lambda is the
+probe longitude, and phi is the planetocentric latitude. The
+independent reconstruction of the probe vertical trajectory was
+previously outlined and yields the altitude profile z_i. It can be
+seen that above equation is a system of two coupled first order
+differential equations which can be solved by numerical integration
+since all time dependent variables are known at each integration
+step. It should also be noted that the coupling in vanishes for
+small latitude ranges and could therefore in the case of Huygens
+also be solved with reasonable accuracy if no meridional drift
+measurements were available, and the latitude would have been kept
+constant over the integration time span.
+ 
+ 
+Descent Phase Reconstruction Results:
+=====================================
+ 
+The reconstructed descent phase altitude and descent speed profiles
+are plotted in DESC_ALT.JPG, DESC_VEL1.JPG, and DESC_VEL2.JPG (see
+BROWSE directory). DESC_ALT.JPG compares the reconstructed probe
+altitude (solid line) to the preflight simulation (dashed line). It
+can be readily seen that the simulated descent trajectory predicted
+the probe impact to occur about 14 minutes earlier. In large part,
+this is difference can be contributed to the uncertainties in the
+main and drogue chute aerodynamic database.
+ 
+The reconstructed descent speed profile is shown in DESC_VEL1.JPG
+and DESC_VEL2.JPG. DESC_VEL1.JPG zooms into the time of main chute
+release shown by the vertical dashed line labeled as Drogue. The
+solid line is again the reconstructed descent speed profile and the
+dashed line the preflight simulation. It can be seen that during the
+time of main chute the actual descent speed was about 5 m/s lower
+than predicted in the simulations. This is also very likely the
+cause for the longer flight time in the actual mission. Also shown
+in the same panel is the descent speed profile from the entry phase
+reconstruction. One can see that even if the descent phase velocity
+shows some oscillations during the main chute phase, the overall
+trend agrees well with the smooth velocity profile from the entry
+phase reconstruction.
+ 
+DESC_VEL2.JPG depicts the descent speed profiles during the drogue
+cute phase down to probe surface impact. The descent speed
+reconstruction predicts a probe impact speed of ~4.6 m/s. This is
+consistent with the speed derived from the altitude measurements of
+the SSP-APIS sensor, which is also shown as a single triangle.
+ 
+Comparing the reconstructed altitude profile with the Radar
+Altimeter Unit (RAU) meaurements one gets residuals from a few
+meters close to the surface up to more than 3.5 km at an altitude of
+60 km can be seen. Above 1 km altitude the error bar of the
+reconstructed trajectory is smaller than the residuals. The altitude
+discrepancy between the RAU measurements and the reconstructed
+trajectory can at this point not be fully explained. The following
+facts however speak for a higher confidence in the reconstructed
+trajectory
+ 
+- the reconstructed descent trajectory provides a much better
+  fit in the merging process with the entry phase reconstruction;
+ 
+- the reconstructed descent trajectory is consistent with the
+  descent altitude as well as derived impact speed of the SSP acoustic
+  sounder instrument;
+ 
+- the reconstructed descent trajectory could be confirmed by
+  independent reconstruction efforts (B. Blanchard and S. Streepe,
+  private communication);
+ 
+The integration of the horizontal probe drift was started at
+T_0+118.0 sec (= interface epoch + 6.44 min corresponding to an
+altitude of ~144.2 km) and the corresponding initial conditions
+are
+ 
+Epoch              = T0+ 118.0 sec
+                     T0 = ET 158965885.184
+                     T0 = UTC 2005-01-14T09:10:20.99
+Altitude           = 144.2 km w.r.t surface impact point
+West Longitude     = 195.94 deg
+South Latitude     = 10.33 deg
+ 
+ 
+Further inputs to the drift integration are the previously
+reconstructed vertical descent altitude profile, the zonal wind
+speed as provided by DWE, and the meridional drift derived from 236
+images of the DISR instrument containing significant surface detail.
+Note that even if the DISR image based drift trajectory is only well
+constrained below altitudes of 30 km the DISR team was able to
+extend the trajectory up to an altitude of 150 km, which could then
+be used in the DTWG horizontal probe drift integration.
+ 
+The residuals to the DISR based reconstruction results stay below
+0.026 deg in longitude and 7.6E-04 deg in latitude.
+ 
+The currently estimated surface impact coordinates are 192.32 +-
+0.24 deg West longitude and 10.25 +- 0.17 deg South latitude.
+ 
+ 
+Merging of Entry and Descent Phase
+==================================
+ 
+The reconstruction of the entry phase trajectory required as an
+essential input the probe state vector at the interface epoch, which
+was provided together with the estimated uncertainties by the
+Cassini navigation team (see EVENT_FILE_04042005.TXT in GEOMETRY
+directory).  After separation from the Cassini spacecraft the
+Huygens probe was on a more than 20 days coast phase with no direct
+earth-based tracking information. Prior to the mission it was
+already clear that this would increase the delivery uncertainties at
+the interface epoch. A probe imaging activity was therefore
+introduced between the period of probe separation and Orbit Delay
+Maneuver, which through the use of optical navigation images of the
+probe, reduced the state vector uncertainties at the interface
+point. Even with the probe post-separation images, the radial
+uncertainty still remained at about 30 km (without images the radial
+uncertainty was on the order of about 70 km).
+ 
+The initial state vector uncertainties introduced the following
+problems in the reconstruction effort:
+ 
+1. The initial state vector introduced a systematic error in the
+   position vector, resulting in an incorrect modeling of the
+   gravitational forces with respect to the measured accelerometer
+   values. In other words the equations of motion were filled with
+   inconsistent data, which introduced an error in the reconstructed
+   state vector. The errors at each integration step summed up and
+   finally led to a largely erroneous solution.
+ 
+2. As a result of 1., the integrated trajectory diverged significantly
+   from the descent phase trajectory in the regions of overlap.
+ 
+ 
+A strategy to merge the entry and descent phase was therefore
+developed. This method is described in detail by [KAZEMINEJAD2007]
+and only a brief overview is given here:
+ 
+The entry and descent phase trajectory portions provided profiles of
+altitude and descent speed, which for each phase was based on
+independent sets of input data and reconstruction techniques. The
+entry phase trajectory was based  on the entry state vector and the
+measured aerodynamic accelerations whereas the descent phase
+trajectory was based on the atmospheric temperature, pressure, and
+mole fraction measurements. The important key fact here is that both
+trajectories overlap in the time interval from about 6.3 to 22
+minutes past interface epoch. This corresponds to an altitude range
+of about 145 to 100 km. In this overlap region residuals in
+altitude and descent speed were calculated and used as input in a
+weighted least-squares estimation algorithm. The task of the
+statistical estimation algorithm was then to calculate initial state
+vector corrections, which would ensure a smooth transition between
+the entry and descent phase trajectory portions in terms of both
+altitude and descent speed.
+ 
+Note that the residuals in the horizontal components (i.e.,
+meridional and zonal probe drift) were not considered in the
+estimation algorithm. This simply stems from the fact that at the
+point of the algorithm design it was not expected to obtain any
+reliable measurements in the meridional direction from the probe
+scientific payload. An extension of the DTWG tool estimation
+algorithm to take into account the horizontal resiudals clearly
+remains a possibility of future improvement of the algorithm.
+ 
+The overlap of the entry and descent phase trajectory can also be
+seen by comparing the entry files (i.e.,
+HUY_DTWG_ENTRY_EME2000_POS.TAB and HUY_DTWG_ENTRY_EME2000_VEL.TAB
+with the corresponding descent files HUY_DTWG_DESCENT_POS.TAB and
+HUY_DTWG_DESCENT_VEL.TAB). The altitude difference between entry
+and descent phase reconstruction in the overlaping region
+remains less than 0.6 km. This remaining inconcistency is due to
+ 
+1. the different methodologies used for the two reconstruction
+   portions;
+2. the different instrument data sets (and their respective
+   measurement uncertainties);
+3. the different definition of altitude in the two reconstruction
+   portions: in the entry phase reconstruction the altitude is
+   considered as height above the reference surface of 2575 km,
+   whereas in the descent phase reconstruction the altitude is
+   reconstructed as height w.r.t. the impact point on the surface.
+ 
+   Note that the fact that the altitude residuals do not differ by
+   more than 0.6 km can be considered as constraint of the
+   topography in the landing site area of being not higher than 600
+   m.
+ 
+For the user it is important to note that both profiles are  (even
+if slightly different) consistent within the resepective measurement
+and reconstruction uncertainties. In case a smooth descent speed
+profile is needed in ther overlapping region (i.e., 145 - 100 km)
+the user might consider to use the results from the entry phase
+reconstruction.
+ 
+Reconstruction Uncertainties
+============================
+ 
+In both the entry and descent phase portions an error estimation of
+the reconstructed trajectory was done. In the entry phase
+reconstruction the reconstruction uncertainties were determined by
+numerical propagation of the 14 x 14 covariance matrix, which was
+provided to the project by the Cassini Navigation team (see
+EVENT_FILE_04042005.TXT in the GEOMETRY directory). The main
+contribution of the uncertainties come from the initial dispersion
+at the interface epoch.
+ 
+For the descent phase the altitude error was derived from the sum of
+the errors at each altitude interval sigma Delta_zi (see Equation
+in the description of the descent phase reconstruction).  sigma
+Delta_zi was calculated at each time interval t_i based on the law
+of error propagation. For the compuation of the altitude error the
+1-sigma uncertainties of the temperature measurements (i.e., +- 0.25
+K and +- 1 K in the measurement ranges from respectively 60K to 110K
+and 110K to 330K), the pressure measurements (i.e., 1\% of the
+measurement value), the mean molecular mass (1\% of the inferred
+value), and the gravitational acceleration $\sigma(g)$ were taken
+into account. For the evaluation of sigma(g) an error of Titan&apos;s GM
+of 0.2818 km^3/s^2 and Titan&apos;s radius of 0.5 km were taken into
+account. Note that the error of the compressibility factor zeta, the
+universal gas constant R_univ, and the ratio of specific heats gamma
+were neglected.
+ 
+IMPORTANT: The descent velocity uncertainties were simply derived
+from the time derivatives of the altitude uncertainties. Even if
+mathematically correct, the resulting uncertainties are extremely
+large (even getting to the order of magnitude of the reconstructed
+value itself). These uncertainties are not clealry not realistic and
+were just added for the sake of completeness.
+ 
+ 
+LIST OF DTWG Members
+====================
+ 
+Chair/DWE
+David H. Atkinson
+Dept. of Electrical &amp; Computer Eng.
+University of Idaho, Box 441023
+Moscow, Idaho 83844-1023
+USA
+atkinson@ece.uidaho.edu
++1 (208) 885-6870 (phone)
++1 (208) 885-7579 (fax)
+ 
+Co-Chair
+Bobby Kazeminejad
+German Space Operations Center (GSOC)
+German Aerospace Center (DLR)
+82234 Wessling, Germany
+Bobby.Kazeminejad@dlr.de
++49 8153 28 2603 (phone)
++49 8153 28 1450 (fax)
+ 
+ 
+Huygens Project Scientist
+Jean-Pierre Lebreton
+Huygens Project Division
+Keplerlaan 1, PO Box 299
+2200 AG Noordwijk, ZH
+The Netherlands
++31 71 565 3600
++31 71 565 4697
+Jean-Pierre.Lebreton@rssd.esa.int
+ 
+Huygens Operation Scientist
+Olivier Witasse
+Huygens Project Division
+Keplerlaan 1, PO Box 299
+2200 AG Noordwijk, ZH
+The Netherlands
+olivier.witasse@rssd.esa.int
+ 
+Cassini Project Scientist
+Dennis Matson
+Jet Propulsion Laboratory, M/S 230-205
+4800 Oak Grove Drive
+Pasadena, CA 91109-8099
++1 (818) 354-2253
++1 (818) 393-4495 (fax)
+dennis.l.matson@jpl.nasa.gov
+ 
+ACP
+David Coscia
+Univ. Paris 12
+AV. General de Gaulle
+94000 Creteil
+France
+coscia@lisa.univ-paris12.fr
+ 
+GCMS
+Hasso Niemann
+NASA GSFC
+Mail Code 915
+Greenbelt, Md. 20771
+Tel.: 301-614-6381
+Fax.: 301-614-6406
+Hasso.B.Niemann@nasa.gov
+ 
+HASI
+Francesca Ferri
+CISAS ?G. Colombo?, Univ. of Padova
+Via Venezia 1
+35131 Padova, Italy
+390498276798 (phone)
+390498276788 (fax)
+francesca.ferri@unipd.it
+ 
+DISR
+Chuck See
+Lunar and Planetary Laboratory
+Department of Planetary Sciences
+University of Arizona
+Tucson, AZ 85721-0092
++1 (520) 621-1097
+csee@lpl.arizona.edu
+ 
+GCMS/IDS
+Jonathan Lunine
+Lunar and Planetary Laboratory
+Department of Planetary Sciences
+University of Arizona
+Tucson, AZ 85721
+USA
+jlunine@lpl.arizona.edu
+ 
+SSP
+Brijen Hathi
+PSSRI
+The Open University
+Walton Hall
+Milton Keynes
+MK76AA
+UK
+B.Hathi@open.ac.uk
++44 (0) 1908-659593
+ 
+IDS
+Daniel Gautier
+Obs. de Paris-Meudon
+92195 Meudon, Cedex, France
+33-1-45077707 (phone)
+33-1-45077469 (fax)
+daniel.gautier@obspm.fr
+ 
+IDS
+Francois Raulin
+Lisa Universite Paris 12
+Ave. General de Gaulle
+94000 Creteil, France
+33-1-45171560 (phone)
+33-1-45171564 (fax)
+raulin@univ-paris12.fr
+ 
+Radar
+Ralph Lorenz
+Lunar and Planetary Laboratory
+Department of Planetary Sciences
+University of Arizona
+Tucson, AZ 85721
+rlorenz@lpl.arizona.edu
+ 
+Additional DTWG Support
+Michael Allison
+NASA/Goddard Institute for Space Studies
+2880 Broadway
+New York, NY 10025
+Phone: (1) 212/678-5554
+FAX: (1) 212/678-5552
+pcmda@giss.nasa.gov
+ 
+Michael K. Bird/DWE
+Radioastronomisches Institut der Universit?t Bonn
+Auf dem H?gel 71
+D-53121 Bonn
+F. R. Germany
+Phone: (49) 228 / 73-3651
+Fax: (49) 228 / 73-3672
+mbird@astro.uni-bonn.de
+ 
+Robindro Dutta-Roy/DWE
+Radioastronomisches Institut der Universit?t Bonn
+Auf dem H?gel 71
+D-53121 Bonn
+F. R. Germany
+Phone: (49) 228 / 73-3783
+Fax: (49) 228 / 73-3672
+e-mail: duttaroy@astro.uni-bonn.de
+ 
+Vincent Gaborit/HASI
+Observatoire Paris-Meudon
+5 Place Jules Janssen
+92 Meudon
+France
+vincent.gaborit@obspm.fr
+ 
+Nadeem Ghafoor/SSP
+University of Kent
+Unit for Space Sciences and Astrophysics
+Canterbury, Kent UK-CT2 7NR
+UK
+(01483) 873346
++44 (0) 08 898 8340
+nalg1@ukc.ac.uk
+n.ghafoor@sstl.co.uk
+ 
+Guy Israel/ACP
+Service d&apos;Aeronomie du CNRS
+B.P. No 3
+Verrieres-le-Buisson 91371
+France
+guy.israel@aerov.jussieu.fr
+ 
+Mark Leese/SSP
+PSSRI
+The Open University
+Walton Hall
+Milton Keynes
+MK76AA
+UK
+M.R.Leese@open.ac.uk
++44 (0) 1908-652561
+ 
+Lisa McFarlane/DISR
+Lunar and Planetary Laboratory
+Department of Planetary Sciences
+University of Arizona
+Tucson, AZ 85721-0092
+520-626-5363
+lmcfar@lpl.arizona.edu
+ 
+Miguel Perez/ESTEC PST
+Huygens Project Division
+Keplerlaan 1, PO Box 299
+2200 AG Noordwijk, ZH
+The Netherlands
+mperez@rssd.esa.int
+ 
+ 
+Mike Prout/DISR
+Lunar and Planetary Laboratory
+Department of Planetary Sciences
+University of Arizona
+Tucson, AZ 85721-0092
+prout@pirl.lpl.arizona.edu
+ 
+Bashar Rizk/DISR
+Lunar and Planetary Laboratory
+Department of Planetary Sciences
+University of Arizona
+Tucson, AZ 85721-0092
++1 (520) 621-1160
+bashar@lpl.arizona.edu
+ 
+Anne-Marie Schipper/Alcatel
+100 boulevard du Midi
+BP99
+06322 Cannes La Bocca
+France
+anne-marie.schipper@space.alcatel.fr
+ 
+Claudio Sollazzo/PST
+Jet Propulsion Laboratory
+4800 Oak Grove Drive - MS 230-250
+Pasadena, CA 91109
+USA
++1 (818) 393-3811
++1 (818) 393-4217 (fax)
+claudio.sollazzo@jpl.nasa.gov
+ 
+Marty Tomasko/DISR
+Lunar and Planetary Laboratory
+Department of Planetary Sciences
+University of Arizona
+Tucson, AZ 85721
++1 (520) 621-6919
+mtomasko@lpl.arizona.edu
+ 
+John Zarnecki/SSP
+PSSRI
+The Open University
+Walton Hall
+Milton Keynes
+MK76AA
+UK
+J.C.Zarnecki@open.ac.uk
++44 (0) 1908-659599
+ 
+ 
+
+        </instrument_desc>
+        <instrument_id>DTWG</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Unknown</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

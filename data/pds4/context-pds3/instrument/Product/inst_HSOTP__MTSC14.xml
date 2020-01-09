@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:hsotp.mtsc14</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>HIGH SPEED OCCULTATION TIMING PHOTOMETER for MTSC14</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.mtsc14::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>HIGH SPEED OCCULTATION TIMING PHOTOMETER</instrument_name>
+        <instrument_desc>
+ 
+Instrument Overview
+===================
+ 
+  The High-Speed Occultation Timing Photometer is operated by the
+  University of Maryland (UMD).  The system consists of a portable
+  Celestron C-14 Schmidt-Cassegrain telescope, a photometry package
+  (optics, selectable apertures, eyepiece, and detector), and
+  an electronics package for operating the system and recording data.
+ 
+ 
+Optics
+======
+ 
+  The following optical parameters can be found at manufacturer&apos;s
+  (Company 7) web site, http://www.company7.com/celectron/products:
+ 
+    Design               : Schmidt-Cassegrain Catadioptric
+    Effective Aperture   : 14 inches, 355.6 millimeters
+    Nominal Focal Length : 154 inches, 3910 millimeters
+    Nominal Focal Ratio  : f/11
+    Primary Mirror       : 14.25-inch diameter, f/2.14, spherical
+    Secondary Mirror     : 3.5-inch diameter, spherical
+    Central Obstruction  : 4.5 inches overall
+    Optical Tube         : 30 inches long, 16-inch diameter
+    Back Focus           : 14 inches from apex of primary mirror
+    Optimum back focus   : Approximately 4 inches
+    Finder scope         : 5-inch diameter
+ 
+  For observations with the photomultiplier detector, any one of
+  four apertures is inserted into the focal plane of the telescope,
+  to select a field of view of 30 arcseconds.  The aperture is
+  positioned over the target of interest, and all light passing
+  through is recorded by the photomultiplier tube and electronics
+  as a function of time.
+ 
+ 
+Detector
+========
+ 
+  The detector is an EMI 9892B/350 bi-alkali, borosilicate
+  photomultiplier tube with end-on illumination.  For observations
+  made without filters, the responsivity is determined mainly by
+  the combination of the photocathode response with the borosilicate
+  transmission curve:  peak response occurs near 375 nm and
+  half-quantum-efficiency points occur near 310 nm and 520 nm.
+  The resultant bandpass of the telescope and photometer system
+  ranges from 312 to 615 nanometers with an effective wavelength of
+  453 nanometers.
+ 
+ 
+Electronics
+===========
+ 
+  The electronics package first converts signal (from the target) and
+  reference currents to voltages, then to audio signals using a
+  voltage-to-frequency converter.  The electronics combine the
+  audio signal with an audio timing broadcast and voice comments,
+  then record these data on a four-track audiotape recorder.
+ 
+  The audio timing track is typically time and frequency information
+  broadcast by the WWV radio station operated by the National Institute
+  of Standards and Technology (NIST).  Information about WWV is available
+  at the NIST Time and Frequency web site:
+ 
+    http://tf.nist.gov/timefreq/index.html
+ 
+  During data collection, the observers record the UTC time associated
+  with selected WWV seconds ticks.  Later, the four-track audiotapes
+  are digitized, and the recorded UTC times are used to synchronize
+  the data.  The resulting digitized data are considered to be raw.
+ 
+  Before the D/Shoemaker-Levy 9 impact expedition to Mt. Singleton,
+  the UMD high-speed digital electronics were inoperable.  A similar
+  occultation timing system with the same high-speed analog electronics
+  was borrowed from Lowell Observatory and used on this expedition.
+ 
+ 
+Measured Parameters
+===================
+ 
+  For the D/Shoemaker-Levy 9 expedition to Mt. Singleton, the goal
+  was to measure the light curves of Io and Europa during the impacts
+  of several fragments of the comet with Jupiter.  The following data
+  were recorded directly onto a four-track audiotape:
+ 
+    1. Data counts produced the photometer, recorded as a frequency
+    2. WWV time signals
+    3. A 60Hz reference signal
+    4. Voice comments of the observers
+ 
+ 
+Operational Considerations
+==========================
+ 
+  To perform tracking, the target should first be centered in the field
+  of view.  Then, an observer looks through the five-inch finder scope
+  attached to the telescope and uses a hand paddle to guide on the target.
+  Wind may interfere with tracking if the system is unprotected.
+
+        </instrument_desc>
+        <instrument_id>HSOTP</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Photometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

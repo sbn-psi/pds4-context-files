@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-rad-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS RADIATION ASSESSMENT DETECTOR EDR</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rad.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rad-2-edr-v1.0__browserp_msl-m-rad-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hassler, D.M., C. Zeitlin, R.F. Wimmer-Schweingruber, S. Bottcher, C. Martin,
+                   J. Andrews, E. Bohm, D. E. Brinza, M. A. Bullock, S. Burmeister, B. Ehresmann,
+                   M. Epperly, D. Grinspoon, J. Kohler, O. Kortmann, K. Neal, J. Peterson, A.
+                   Posner, S. Rafkin, L. Seimetz, K. D. Smith, Y. Tyler, G. Weigle, G. Reitz, and
+                   F.A. Cucinotta, The Radiation Assessment Detector (RAD) Investigation, Space
+                   Sci. Rev, Vol. 170, pp. 503-558, 2012, doi:10.1007s/11214-012-9913-1
+            </reference_text>
+            <description>reference.HASSLERETAL2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-RAD-2-EDR-V1.0</data_set_id>
+        <data_set_name>MSL MARS RADIATION ASSESSMENT DETECTOR EDR</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2011-11-20T18:16:19.455Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JPL OPGS</producer_full_name>
+        <citation_text>
+            S. Rafkin, J. Peterson, C. Zeitlin, B. Ehresmann, E. Weigle, and
+            D.M. Hassler, MSL MARS RADIATION ASSESSMENT DETECTOR EDR V1.0,
+            MSL-M-RAD-2-EDR-V1.0, NASA Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Science Laboratory Radiation Assessment Detector Experiment
+            Data Record
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the EDR data from the MSL Radiation
+            Assessment Detector (RAD) instrument. The EDR data are raw data
+            reconstructed from telemetry data products.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+   Data Set Overview
+   =================
+ 
+This data set contains data that is useful for determining
+the energetic particle environment experienced by the Mars Science
+Laboratory rover at the surface of Mars. The EDR data products are
+raw data reconstructed from telemetry data products and formatted
+according to the RAD EDR Software Interface Specification (EDR
+SIS).
+ 
+ 
+   Processing
+   ==========
+ 
+The Committee On Data Management and Computation (CODMAC) data
+level numbering system is used to describe the processing level of
+the EDR data product.  RAD EDR data products are considered CODMAC Level
+2 or Edited Data (equivalent to NASA level 0) products.  The EDR
+data files are generated from Level 1 or Raw Data, which are the
+telemetry packets.  After stripping away telemetry wrappers, the binary
+RAD observational data packets are split into individual data
+products and then concatenated in chronological order. The data
+are further organized into sols.  Therefore, an EDR data file contains a
+single data product from all the RAD observations taken over a
+Mars sol, as determined by the start time of the observation. It is
+possible that an observation may begin in one sol and extend into
+the next, 	but it will be archived only as data within the
+starting sol.  If data from one or more sols is incomplete, missing, or
+corrupted, the file will exclude these data.  An updated EDR will
+be generated if and when the data becomes available.
+ 
+ 
+   Data
+   ====
+ 
+Each RAD EDR product consists of two files.  The first file is an
+ASCII formatted detached PDS label. The second file is a binary
+data file for a RAD product.  The data in a RAD EDR file is a copy of
+what was in the RAD memory buffer. That is, the EDR consists of
+unprocessed experiment data stored in binary format.  EDR data products
+are of one of two types, as identified in the EDR SIS:
+ 
+   High Priority Science Data = &apos;EHP&apos;
+   Science Data = &apos;ESD&apos;
+ 
+ 
+   Software
+   ========
+ 
+No software support is provided.
+ 
+ 
+   Media/Format
+   ============
+ 
+The data set will be delivered and kept online.
+        </data_set_desc>
+        <confidence_level_note>
+EDR Data have been reviewed by the RAD team to check for data set
+completeness and screened for non-physical values such as negative
+energy.  RAD finds no obvious errors in the data at this time.
+        </confidence_level_note>
+        <archive_status>IN_LIEN_RESOLUTION</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

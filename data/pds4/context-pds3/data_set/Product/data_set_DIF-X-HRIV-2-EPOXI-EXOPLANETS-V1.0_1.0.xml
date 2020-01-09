@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dif-x-hriv-2-epoxi-exoplanets-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>EPOXI EXOPLANET TRANSIT OBS - HRIV RAW IMAGES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.epoxi::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dif::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hriv.dif::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.gj_436::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.hat-p-4::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.hat-p-7::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.tres-2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.tres-3::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.wasp-3::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.xo-2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.xo-3::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dif-x-hriv-2-epoxi-exoplanets-v1.0__browserp_dif-x-hriv-2-epoxi-exoplanets-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Ballard, S., D. Charbonneau, M.F. A&apos;Hearn, D. Deming, M.J. Holman, J.L.
+                   Christiansen, D.T.F. Weldrake, R.K. Barry, M.J. Kuchner, T.A. Livengood, J.
+                   Pedelty, A. Schultz, T. Hewagama, J.M. Sunshine, D.D. Wellnitz, D.L. Hampton,
+                   C.M. Lisse, S. Seager, and J.F. Veverka, Transiting Exoplanet Results from the
+                   NASA EPOXI Mission, American Astronomical Society, AAS Meeting #213, #402.11,
+                   Bulletin of the American Astronomical Society, Vol. 41, p.192, 2009.
+            </reference_text>
+            <description>reference.BALLARDETAL2009</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Ballard, S., D. Charbonneau, M.F. A&apos;Hearn, D. Deming, M.J. Holman, J.L.
+                   Christiansen, D.T.F. Weldrake, R.K. Barry, M.J. Kuchner, T.A. Livengood, J.
+                   Pedelty, A. Schultz, T. Hewagama, J.M. Sunshine, D.D. Wellnitz, D.L. Hampton,
+                   C.M. Lisse, S. Seager, and J.F. Veverka, Preliminary Results on HAT-P-4,
+                   TrES-3, XO-2, and GJ 436 from the NASA EPOXI Mission in Transiting Planets,
+                   Proceedings of the International Astronomical Union, IAU Symposium, Volume 253,
+                   470-473, 2009, doi:10.1017/S1743921308026963.
+            </reference_text>
+            <description>reference.BALLARDETAL2009B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Christiansen, J.L., D. Charbonneau, M.F. A&apos;Hearn, D. Deming, M.J. Holman, S.
+                   Ballard, D.T.F. Weldrake, R.K. Barry, M.J. Kuchner, T.A. Livengood, J. Pedelty,
+                   A. Schultz, T. Hewagama, J.M. Sunshine, D.D. Wellnitz, D.L. Hampton, C.M.
+                   Lisse, S. Seager, and J.F. Veverka, The NASA EPOXI mission of opportunity to
+                   gather ultraprecise photometry of known transiting exoplanets in Transiting
+                   Planets, Proceedings of the International Astronomical Union, IAU Symposium,
+                   Volume 253, 301-307, 2009, doi:10.1017/S1743921308026525.
+            </reference_text>
+            <description>reference.CHRISTIANSENETAL2009</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hampton, D.L., J.W. Baer, M.A. Huisjen, C.C. Varner, A. Delamere, D.D.
+                   Wellnitz, M.F. A&apos;Hearn, and K.P. Klaasen, An Overview of the Instrument Suite
+                   for the Deep Impact Mission, Space Science Reviews, 117, 43-93, 2005,
+                   doi:10.1007/s11214-005-3390-8.
+            </reference_text>
+            <description>reference.HAMPTONETAL2005</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Klaasen, K.P., M.F. A&apos;Hearn, M. Baca, A. Delamere, M. Desnoyer, T. Farnham, O.
+                   Groussin, D. Hampton, S. Ipatov, J. Li, C. Lisse, N. Mastrodemos, S.
+                   McLaughlin, J. Sunshine, P. Thomas, and D. Wellnitz, Deep Impact Instrument
+                   Calibration, Rev. Sci. Instrum., 79, 091301, 2008, doi:10.1063/1.2972112.
+            </reference_text>
+            <description>reference.KLAASENETAL2006</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Lindler, D., I. Busko, M.F. A&apos;Hearn, and R.L. White, Restoration of Images of
+                   Comet 9P/Tempel 1 Taken with the Deep Impact High Resolution Instrument, PASP,
+                   119, 427-436, 2007, doi:10.1086/516829.
+            </reference_text>
+            <description>reference.LINDLERETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DIF-X-HRIV-2-EPOXI-EXOPLANETS-V1.0</data_set_id>
+        <data_set_name>EPOXI EXOPLANET TRANSIT OBS - HRIV RAW IMAGES V1.0</data_set_name>
+        <data_set_release_date>2009-09-30</data_set_release_date>
+        <start_time>2008-01-22T00:22:53.769Z</start_time>
+        <stop_time>2008-08-31T12:44:54.196Z</stop_time>
+        <producer_full_name>STEPHANIE MCLAUGHLIN</producer_full_name>
+        <citation_text>
+            McLaughlin, S.A., B. Carcich, D. Deming, D.D. Wellnitz, and K.P.
+            Klaasen, EPOXI EXOPLANET TRANSIT OBS - HRIV RAW IMAGES V1.0,
+            DIF-X-HRIV-2-EPOXI-EXOPLANETS-V1.0, NASA Planetary Data System,
+            2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw clear filter images of transiting planet systems HAT-P-4,
+            HAT-P-7, GJ 436, TrES-2, TrES-3, XO-2, XO-3 and WASP-3 acquired
+            from 22 Jan through 31 Aug 2008 by the Deep Impact High
+            Resolution Visible CCD during the EPOCh phase of the EPOXI mission
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set set contains raw images of eight known transiting
+            extrasolar planetary systems (hot Jupiters) acquired by the Deep
+            Impact High Resolution Visible CCD during the EPOCh phase of the
+            EPOXI mission. From 22 January through 31 August 2008 the HRIV
+            CCD collected over 172,000 usable, photometric-quality visible
+            light images of these transiting planet systems: HAT-P-4,
+            HAT-P-7, GJ 436, TrES-2, TrES-3, XO-2, XO-3, and WASP-3. Time
+            series of continuous 50-second integrations were used with the
+            clear filter (#6) to observe each system for about three weeks,
+            typically covering five or more transits as well as secondary
+            eclipses. An exception was XO-3 which was only observed briefly
+            due to the spacecraft entering safe mode. The transiting planet
+            systems were observed in the integrated light of the planet and
+            star; no spatially resolved image of the planet was possible.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set set contains raw images of eight known transiting
+    extrasolar planetary systems (hot Jupiters) acquired by the Deep Impact
+    High Resolution Visible CCD (HRIV) during the EPOCh phase of the EPOXI
+    mission.  From 22 January through 31 August 2008, EPOCh took advantage
+    of the permanent on-orbit defocus of the HRI telescope by using the
+    HRIV CCD to collect over 172,000 usable, photometric-quality, visible
+    light images of these exoplanet systems:  HAT-P-4, HAT-P-7, GJ 436,
+    TrES-2, TrES-3, XO-2, XO-3, and WASP-3.  Time series of continuous
+    50-second integrations in a subframe mode of 128x128 or 256x256 pixels
+    with the clear #6 optical filter (350 to 1000 nanometers) were used to
+    observe each system for about three weeks, typically covering five or
+    more transits as well as secondary eclipses; an exception is XO-3 which
+    was observed only briefly before the spacecraft unexpectedly entered
+    safe mode.  For most observations the 128x128-pixel subarray was used.
+    The larger subarray of 256x256 pixels was commanded during some transit
+    and secondary eclipse periods to ensure that pointing jitter did not
+    cause the star to fall beyond the edges of the subarray.  The transiting
+    planet systems were observed in the integrated light of the planet and
+    star; no spatially resolved image of the planet was possible.  The
+    out-of-focus HRIV telescope defocuses the images to about 10 pixels or
+    4 arcseconds at full-width half-max and introduces visible structure.
+ 
+    The following table chronologically lists the EPOCh transiting exoplanet
+    observations.  For most targets, preview imaging was performed to
+    determine if the pointing bias needed to be modified for that target
+    series.
+ 
+        Target   Start Date/DOY  Stop Date/DOY   Comments
+        -------  --------------  --------------  --------------------------
+        HAT-P-4  2008-01-22/022  2008-02-12/043
+        XO-3     2008-02-12/043  2008-02-17/048  S/C entered safe mode
+        TRES-3   2008-03-06/066  2008-03-08/068
+        XO-2     2008-03-09/069  2008-03-11/071  Preview for pointing bias
+        TRES-3   2008-03-11/071  2008-03-18/078
+        XO-2     2008-03-20/080  2008-03-28/088
+        GJ 436   2008-05-04/125  2008-05-27/148
+        TRES-2   2008-06-28/180  2008-06-29/181  Preview for pointing bias
+        HAT-P-4  2008-06-29/181  2008-07-08/190
+        TRES-2   2008-07-08/190  2008-07-17/199
+        WASP-3   2008-07-17/199  2008-07-19/201  Preview for pointing bias
+        TRES-2   2008-07-20/202  2008-07-30/212
+        WASP-3   2008-07-30/212  2008-08-08/221
+        HAT-P-7  2008-08-08/221  2008-08-10/223  Preview for pointing bias
+        WASP-3   2008-08-10/223  2008-08-16/229
+        HAT-P-7  2008-08-16/229  2008-08-31/244
+ 
+    The time series for each target was typically bracketed by a set of
+    dark and internal stimulator lamp frames to monitor changes in the
+    CCD detector and to aid transit photometry.  These data are archived
+    separately in the raw EPOXI calibrations data set,
+    DIF-CAL-HRIV-2-EPOXI-CALIBRATIONS-V1.0.
+ 
+    The general characteristics of the observed planetary systems as
+    described by Ballard, et al. (2009) [BALLARDETAL2009] is provided
+    here:
+ 
+         Stellar       #Transits
+        Target  V_mag  Observed Points of Interest
+        ------- ----- --------- -------------------------------------------
+        HAT-P-4 11.22     10    Low density planet, large radius for
+                                its mass
+        XO-3     9.91      1    Eccentric orbit, second planet suspected
+        TrES-3  12.40      7    Short period (31 hours), reflected light
+                                target
+        XO-2    11.18      3    Fainter component in wide visual binary,
+                                metal rich
+        GJ 436  10.67      8    Eccentric orbit, unseen planet suspected,
+                                star is M-dwarf
+        TrES-2  11.41      7    Kepler target, additional planets possible
+        WASP-3  10.64      8    Strongly heated, reflected light and
+                                visible thermal emission possible
+        HAT-P-7 10.50      8    Kepler target, even more strongly heated
+                                than WASP-3
+ 
+ 
+    Required Reading
+    ---------------
+      The following documents are essential for the understanding and
+      interpretation of this data set.  Please note the most recent
+      version of these documents, including other formats such as ASCII
+      text, can be found in the Deep Impact and EPOXI documentation data set,
+      DI-C-HRII-HRIV-MRI-ITS-6-DOC-SET-V2.0.
+ 
+      EPOXI_SIS.PDF
+        - The Archive Volume and Data Product Software Interface
+          Specifications document (SIS) describes the the data set, the
+          science data products, and defines keywords in the PDS labels.
+ 
+      CALIBRATION_PAPER_DRAFT.PDF
+        - The Deep Impact instrument calibration paper by Klaasen, et al.
+          (2008) [KLAASENETAL2006] describes how the instruments were
+          calibrated for Deep Impact and similarly for EPOXI and explains
+          the calibration process used for both missions.  The published
+          version should be available online in the Review of Scientific
+          Instruments by the American Institute of Physics.  The EPOXI
+          archive provides only an incomplete draft.
+ 
+      INSTRUMENTS_HAMPTON.PDF
+        - The Deep Impact instruments paper by Hampton, et al. (2005)
+          [HAMPTONETAL2005] provides very detailed descriptions of the
+          instruments.
+ 
+      EPOCH_OVERVIEW.PDF
+        - This presentation provides an overview of the EPOCh phase of
+          the EPOXI mission.
+ 
+      EPOCH_TRANSIT_OBS.PDF
+        - This document describes of the EPOCh stellar transit observations
+          although most of the information is captured in this data set
+          catalog file you are reading.
+ 
+      EPOCH_TRANSIT_OBS_SCLK2BJD.PDF
+        - This report describes the calibration of spacecraft clock timing
+          and reduction to Barycentric Dynamic Time Julian Date for EPOCh
+          observations of transiting extrasolar planets.
+ 
+      HRIV_2_EPOXI_GJ436.TAB
+      HRIV_2_EPOXI_HATP4.TAB
+      HRIV_2_EPOXI_HATP7.TAB
+      HRIV_2_EPOXI_TRES2.TAB
+      HRIV_2_EPOXI_TRES3.TAB
+      HRIV_2_EPOXI_WASP3.TAB
+      HRIV_2_EPOXI_XO2.TAB
+      HRIV_2_EPOXI_XO3.TAB
+        - These ASCII tables provide image parameters such as the mid-obs
+          Julian date, exposure time, mission activity type, and
+          description or purpose for each observation (i.e., data product)
+          in this data set.
+ 
+      Publications of the preliminary photometry results based on the
+      transiting planet observations include Ballard, et al. (2009)
+      [BALLARDETAL2009B] and Christiansen, et al. (2009)
+      [CHRISTIANSENETAL2009].
+ 
+ 
+    Related Data Sets
+    -----------------
+      The following PDS data sets are related to this one and may be useful
+      for research:
+ 
+      DIF-E-HRIV-3-EPOXI-EXOPLANETS-V1.0
+        - Calibrated HRIV extrasolar planet transit observations
+ 
+      DIF-CAL-HRIV-2-EPOXI-CALIBRATIONS-V1.0
+        - Raw HRIV dark frames (exposure IDs 9600000 and 9600001) and
+          internal stimulator lamp images (exposure IDs 9600002 and 9600003)
+          acquired to monitor changes in the CCD detector for EPOCh transit
+          photometry purposes
+ 
+      DI-C-HRII-HRIV-MRI-ITS-6-DOC-SET-V2.0
+        - Deep Impact and EPOXI documentation set
+ 
+      DIF-C/E/X-SPICE-6-V1.0
+        - EPOXI SPICE kernels
+ 
+      DIF-CAL-HRII/HRIV/MRI-6-EPOXI-TEMPS-V1.0
+        - HRII, HRIV, and MRI instrument thermal telemetry data for EPOXI
+          which may be useful for determining how temperature fluctuations
+          affect the science instruments, in particular the IR spectrometer
+ 
+ 
+  Processing
+  ==========
+    The raw two-dimensional FITS CCD images and PDS labels in this data
+    set were generated by the Deep Impact/EPOXI data pipeline, maintained
+    by the project&apos;s Science Data Center (SDC) at Cornell University.
+    The FITS data were assembled from raw telemetry packets sent down by
+    the flyby spacecraft.  Information from the embedded spacecraft
+    header (the first 100 bytes of quadrant A image data) was extracted
+    and stored in the primary FITS header.  Geometric parameters were
+    computed using the best available SPICE kernels and the results were
+    also stored in the FITS header.  If telemetry packets were missing,
+    the corresponding pixels were flagged as missing in the quality map
+    included as a FITS image extension.  The quadrant nomenclature and
+    the image quality map are described in the Deep Impact instrument
+    calibration document and the EPOXI SIS document included in this data
+    set.  The SDC did not apply any type of correction or decompression
+    algorithm to the raw data.
+ 
+ 
+  Data
+  ====
+ 
+    FITS Images and PDS Labels
+    --------------------------
+      Each raw HRIV image is stored as FITS.  The primary data unit contains
+      the two-dimensional CCD image.  It is followed by one image extension
+      that contains a two-dimensional pixel-by-pixel quality map.  This
+      extension uses one byte of eight bit flags to indicate the quality of
+      each pixel in the primary image.  The data label provides a short
+      description of each bit.  For more information about the FITS primary
+      image and its extension or for examples of how to access and use the
+      quality flags, refer to the EPOXI SIS document or the Deep Impact
+      instrument calibration document.
+ 
+      Each FITS file is accompanied by a detached PDS data label.  The
+      EPOXI SIS document provides definitions for the keywords found in a
+      data label.
+ 
+ 
+    File Naming Convention
+    ----------------------
+      The naming convention for the raw data labels and FITS files is
+      HVyymmddhh_eeeeeee_nnn.LBL or FIT where &apos;HV&apos; identifies the HRIV
+      instrument, yymmddhh provides the UTC year, month, day, and hour at
+      the mid-point of the observation, eeeeeee is the exposure ID
+      (OBSERVATION_ID in data labels), and nnn provides the image number
+      (IMAGE_NUMBER in the data labels) within the exposure ID.
+ 
+      Up to 999 individual images or frames can be commanded for one
+      exposure ID.  Therefore, nnn in the file name provides the
+      sequentially increasing frame number within an exposure ID and
+      corresponds to IMAGE_NUMBER in the data labels.  For example, if 32
+      frames were commanded for a scan with an exposure ID of 1000001, the
+      first FITS file name would be HV08051200_9200003_000.FIT and the
+      last would be HV08051200_9200003_032.FIT.
+ 
+ 
+    Image Compression
+    -----------------
+      Although raw data numbers for HRIV frames could be compressed on
+      board the flyby spacecraft by use of a lookup table then downlinked,
+      processed, and archived in the same format,  EPOCh exoplanet transit
+      images acquired during the time period covered by this data set were
+      never compressed.  Therefore the COMPRESSED_IMAGE_VALUE keyword in
+      the data labels is always set to &apos;UNCOMPRESSED&apos;.  For more
+      information about this topic, see the image compression section of
+      the Deep Impact instrument calibration documents.
+ 
+ 
+    Image Orientation
+    -----------------
+      A true-sky &apos;as seen by the observer&apos; view is achieved by displaying
+      the image using the standard FITS convention:  the fastest-varying
+      axis (samples) increasing to the right in the display
+      window and the slowest-varying axis (lines)
+      increasing to the top.  This convention is identified in the data
+      labels:  the SAMPLE_DISPLAY_DIRECTION keyword is set to RIGHT and
+      LINE_DISPLAY_DIRECTION to UP.
+ 
+      The direction to celestial north, ecliptic north, and the Sun is
+      provided in data labels by CELESTIAL_NORTH_CLOCK_ANGLE,
+      ECLIPTIC_NORTH_CLOCK_ANGLE, and SUN_DIRECTION_CLOCK_ANGLE keywords
+      and are measured clockwise from the top of the image when is
+      displayed in the correct orientation as defined by
+      SAMPLE_DISPLAY_DIRECTION and LINE_DISPLAY_DIRECTION.  Please note
+      the aspect of the North celestial pole in an image can be computed
+      by adding 90 degrees to the boresight declination given by
+      DECLINATION in the data labels.
+ 
+      For a comparison of the orientation FITS image data from the three
+      science instruments, see the quadrant nomenclature section of the
+      Deep Impact instrument calibration document.  Also the EPOXI SIS
+      has a brief discussion of this topic.
+ 
+ 
+  Parameters
+  ==========
+ 
+    Data Units
+    ----------
+      Raw image data have units of raw data numbers.
+ 
+ 
+    Imaging Modes
+    -------------
+      Two HRIV image modes were used for the EPOCh transiting planet
+      observations:
+ 
+                     X-Size  Y-Size
+        Mode Name    (pix)   (pix)   Comments
+        ---- ------  ------  ------  -------------------------------
+          3  SF2S      256    256    Sub-frame, shuttered
+          5  SF3S      128    128    Sub-frame, shuttered
+ 
+      All modes are unbinned.  For most observations the 128x128 mode was
+      used. The larger subarray of 256x256 pixels was commanded during
+      some transit and secondary eclipse periods and for preview imaging
+      to ensure that pointing jitter did not cause the star to fall beyond
+      the edges of the subarray.  For a thorough description of the
+      imaging modes, please see the Deep Impact instruments document or
+      the Deep Impact instrument calibration document.  Also the EPOXI SIS
+      has a brief discussion of this topic.
+ 
+      Most image modes have a set of bias overclock rows and columns,
+      located around the edges of the image array.  All overclock pixels
+      were excluded from the calculation of the values for MINIMUM,
+      MAXIMUM, MEDIAN, and STANDARD_DEVIATION in the data labels.  These
+      overclock areas described in the Deep Impact instruments document
+      and the Deep Impact instrument calibration document.
+ 
+ 
+    Filters
+    -------
+      One HRIV image mode was used for the EPOCh transiting planet
+      observations:
+ 
+        Filter         Center Width
+        #  Name        (nm)   (nm)   Comments
+        -  ----------  -----  -----  -------------------------------
+        6  CLEAR6       650   &gt;700   Not band limited
+ 
+      For more information about the filter, see the Deep Impact
+      instruments document or the Deep Impact instrument calibration
+      document.  Also the EPOXI SIS has a brief discussion of this topic.
+ 
+ 
+    Time- and Geometry-Related Keywords
+    -----------------------------------
+      All time-related keywords in the data labels, except
+      EARTH_OBSERVER_MID_TIME, are based on the clock on board the flyby
+      spacecraft.  EARTH_OBSERVER_MID_TIME provides the UTC when an
+      Earth-based observer should have been able to see an event recorded
+      by the instrument.
+ 
+      It is important to note that the spacecraft clock is affected by a
+      systematic drift relative to ground clocks due to the changing
+      thermal environment of the spacecraft.  The EPOCh team calibrated
+      the spacecraft clock versus ground clocks, and the corrected times
+      were computed for each transiting system (giving Julian Date and
+      Barycentric Julian Date by image file name).  However to aid
+      transit timing analysis, the computation was implemented in the
+      data pipeline, and the EPOCh team verified that the resulting
+      values were consistent with theirs.  Thus the Barycentric Dynamic
+      Time Julian Date (BJD) for the mid-point of an observation when
+      light reaches the solar system barycenter is provided by the
+      KPKSSBJT keyword in the FITS header of each data product.  For more
+      information about calculating the BJD, please see the document
+      EPOCH_TRANSIT_OBS_SCLK2BJD.PDF.  The pipeline also computed the
+      Barycentric Dynamic Time at the mid-point of the observation at the
+      spacecraft; it is provided as a Julian Date in the FITS header
+      keyword OBSMIDJT.  The project elected to omit these two
+      barycentric-related values from the PDS labels.
+ 
+      The SDC pipeline was not able to automatically determine the proper
+      geometric information for the target of choice in some cases.  When
+      these parameters could not be computed, the corresponding keywords
+      in the data labels are set to a value of unknown, &apos;UNK&apos;.  Also if
+      GEOMETRY_QUALITY_FLAG is set to &apos;BAD&apos; or GEOMETRY_TYPE is set to
+      &apos;PREDICTED&apos; in the PDS labels, then this indicates the geometry
+      values may not be accurate and should be used with caution.  For
+      example, some HAT-P-4 observations have inaccurate values for
+      boresight RIGHT_ASCENSION and DECLINATION because only predicted
+      pointing information, and not final reconstructed pointing, was
+      available to the data pipeline.  The value &apos;N/A&apos; is used for some
+      geometry-related keywords in the data labels because these
+      parameters are not applicable for certain calibration targets.
+ 
+      Observational geometry parameters provided in the data labels were
+      computed at the epoch specified by the mid-obs UTC, IMAGE_MID_TIME,
+      in the data labels.  The exceptions are the target-to-sun values
+      that were calculated for the time when the light arrived at the
+      target and the earth-observer-to-target values that were calculated
+      for the time when the light left the target.
+ 
+      The flyby spacecraft clock SPICE kernels (SCLK) used to convert to
+      UTC and to calculate geometry-related parameters for this data set
+      have a known accuracy of no better than 0.5 seconds.  However as
+      this data set was being produced, the mission operations team
+      figured out how to correct raw clock correlation data for the
+      flyby spacecraft to allow timing fits that are accurate to at
+      least the sub-second level.  The project plans to generate a
+      complete, corrected set of correlations since launch.  This will
+      ultimately result in a future version of a SCLK kernel that will
+      retroactively change correlation for **all** Deep Impact and EPOXI
+      data.  When this kernel is available, it will be added to the
+      SPICE data sets for the two missions and posted on the NAIF/SPICE
+      web site at http://naif.jpl.nasa.gov/naif/.
+ 
+ 
+  Ancillary Data
+  ==============
+    The geometric parameters included in the data labels and FITS headers
+    were computed using the best available SPICE kernels at the time the
+    data products were generated.  NAIF used these kernels to produce the
+    EPOXI SPICE data set, DIF-C/E/X-SPICE-6-V1.0.
+ 
+ 
+  Coordinate System
+  =================
+    Earth Mean Equator and Vernal Equinox of J2000 (EME J2000) is the
+    inertial reference system used to specify observational geometry
+    parameters in the data labels, unless specified otherwise (e.g,
+    SUB_SPACECRAFT_LONGITUDE).
+ 
+ 
+  Software
+  ========
+    The observations in this data set are in standard FITS format with PDS
+    labels, and can be viewed by a number of PDS-provided and commercial
+    programs.  For this reason no special software is provided with this
+    data set.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    The data files in this data set were reviewed internally by the EPOXI
+    project.
+ 
+ 
+  Review
+  ======
+    This data set is archived at the PDS Small Bodies Node (SBN) and the
+    Multi-Mission Archive at STScI (MAST).  It passed a peer review held
+    by SBN on 23 July 2009; MAST personnel participated.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    There are no unexpected gaps in this data set.  All Earth observations
+    received on the ground were processed and included in this data set.
+ 
+    Horizontal striping through some images indicates missing data.  The
+    image quality map extension identifies where pixels are missing.  If
+    the second most-significant bit of a pixel in the image quality map is
+    turned on, then data for the corresponding image pixel is missing.  For
+    more information, refer to EPOXI SIS document.
+ 
+ 
+  Limitations
+  ===========
+ 
+ 
+    HRI Telescope Focus
+    -------------------
+      Images of stars acquired early during the Deep Impact mission in
+      2005 indicated the HRI telescope was out of focus.  In-flight
+      bakeouts during late February and early March 2005 reduced the
+      defocus from about 1.0 cm to about 0.6 cm, resulting in a decrease
+      in the width of stars from about 12 pixels to 9 pixels.  For more
+      details, please see the Deep Impact instrument calibration paper by
+      Klaasen, et al. (2006) [KLAASENETAL2006] and the Deep Impact image
+      restoration paper by Lindler, et al. (2007) [LINDLERETAL2007].
+ 
+ 
+    CCD Horizontal Gap
+    ------------------
+      Calibration analysis combining Deep Impact and early EPOXI data
+      determined the two halves of the HRIV CCD - the boundary being the
+      two horizontal central lines 511 and 512 (zero based) - while
+      physically consistent across the boundary, are biased during
+      integration so that the centers of the two halves are apparently
+      1/6 pixel closer to the center, and the two boundary rows show a
+      decrease in sensitivity of 1/6.  Reconstructed image files space
+      all lines evenly, so the true image is erroneously vertically
+      pushed apart by 1/3 pixel at its center in these reconstructions.
+      When making science measurements from HRIV images, one must
+      therefore be very careful to properly account for the two flaws
+      introduced by the apparently narrow central lines on the CCD - a
+      geometric error that separates the image by an extra 1/3 pixel at
+      the horizontal quadrant boundary, and 2) insertion of extra total
+      radiance into calibrated images due to the flat-field correction,
+      which corrects for an apparent radiance deficit in the two central
+      rows because of the smaller number of photons actually incident on
+      those rows.
+ 
+ 
+    Out-of-Frame Target
+    -------------------
+      Some exoplanet transit images in this data set do not contain the
+      star because of deviations in pointing.  However the intended target
+      is specified by the TARGET_NAME keyword in the data labels.
+ 
+ 
+    Displaying Images
+    -----------------
+      Flight software writes an image header over the first 100 bytes of
+      quadrant A.  These image header pixels were included in the raw
+      FITS images.  Since the values in these pixels vary dramatically,
+      it is recommended that the values of the MINIMUM and MAXIMUM
+      keywords in the data label (or the MINPVAL and MAXPVAL in the FITS
+      header) be used to scale an image for display because these values
+      exclude the header bytes as well as the overclock rows and columns
+      located around the edge of the CCD image.  For more information,
+      see the quadrant nomenclature section of the Deep Impact instrument
+      calibration document or the EPOXI SIS document.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

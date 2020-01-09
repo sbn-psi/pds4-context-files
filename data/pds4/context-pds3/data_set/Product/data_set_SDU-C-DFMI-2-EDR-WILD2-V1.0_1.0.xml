@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.sdu-c-dfmi-2-edr-wild2-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>STARDUST DFMI WILD 2 ENCOUNTER EDR DATA</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.stardust::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:dfmi.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.81p-wild_2_1978_a2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.sdu-c-dfmi-2-edr-wild2-v1.0__browserp_sdu-c-dfmi-2-edr-wild2-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tuzzolino, A.J., T.E. Economou, R.B. McKibben, J.A. Simpson, J.A.M. McDonnell,
+                   M.J. Burchell, B.A.M. Vaughan, P. Tsou, M.S. Hanner, B.C. Clark, and D.E.
+                   Brownlee, Dust Flux Monitor Instrument for the Stardust mission to comet Wild
+                   2, J. Geophys. Res., 108, (E10), 8115, 2003, doi:10.1029/2003JE002086.
+            </reference_text>
+            <description>reference.TUZZOLINOETAL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>SDU-C-DFMI-2-EDR-WILD2-V1.0</data_set_id>
+        <data_set_name>STARDUST DFMI WILD 2 ENCOUNTER EDR DATA</data_set_name>
+        <data_set_release_date>2004-07-02</data_set_release_date>
+        <start_time>2004-01-02T19:08:15.442Z</start_time>
+        <stop_time>2004-01-02T19:41:17.725Z</stop_time>
+        <producer_full_name>STARDUST DATA MANAGEMENT AND ARCHIVE TEAM</producer_full_name>
+        <citation_text>
+            Semenov, B.V., A.J. Tuzzolino, J.A.M. McDonnell, H.W. Taylor, and
+            C.H. Acton, STARDUST DFMI WILD 2 ENCOUNTER EDR DATA,
+            SDU-C-DFMI-2-EDR-WILD2-V1.0, NASA Planetary Data System, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            EDR data collected by the STARDUST Dust Flux Monitor Instrument
+            (DFMI) during Wild 2 encounter.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains raw data collected by the Dust Flux
+            Monitor Instrument (DFMI) flown on board the STARDUST spacecraft
+            during the Wild 2 comet encounter on January 2, 2004. The data in
+            this archive are organized into one table in standard PDS format.
+            This table records dust events which resulted from the encounter
+            with the particles surrounding comet Wild 2. The data in the
+            table spans a 33 minute period surrounding the encounter with
+            Wild 2.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview:
+    =================
+      This data set contains raw data collected by the Dust Flux
+      Monitor Instrument (DFMI) flown on board the STARDUST spacecraft
+      during the Wild 2 comet encounter on January 2, 2004. The data in
+      this archive are organized into one table in standard PDS format.
+      This table records dust events which resulted from the encounter
+      with the particles surrounding comet Wild 2. The data in the
+      table spans a 33 minute period surrounding the encounter with
+      Wild 2.
+ 
+ 
+    Parameters
+    ==========
+      The primary data parameters contained in the DFMI data table are
+      counts of the particle impacts measured by the instrument
+      sensors.
+ 
+      Note Regarding Acoustic Sensor Counts
+      -------------------------------------
+      At the external peer review reviewers noted that the acoustic
+      sensor values around close approach, particularly the high and
+      low bumpers, did not seem reasonble because the cumulative count
+      was not strictly monotonically increasing.
+ 
+      The DFMI team provided the following clarification:
+ 
+        The acoustic sensor counters counted the number of time
+        intervals that the signal from the sensor exceeded a certain
+        threshold.  This meant that a large impact would produce a
+        large number of counts and a small one a small number.  Since
+        the count rate was generally expected to be very low, the
+        possibility of confusion (i.e. not knowing if the number of
+        counts was due to one, two or more actual impacts) was not
+        expected to be a major problem.  The strength of this approach
+        was that an indication of the mass of particles could be
+        obtained even when the peak signal from the sensor saturated
+        the instrument. The disadvantage was the possibility of multiple
+        impacts in a counting period (0.1 to 1 sec depending on PVDF
+        trigger) and the possibility of multiple counter overflow. As
+        the acoustic subsystem was a last minute addition after the data
+        rates had already been fixed, the counters had a full range of
+        only 0 to 255. This explains the steps in the counts.  The
+        counters start at zero and increment each time there is an
+        impact.  Several times during the encounter (~9), the counters
+        overflow. From the statistical analysis it looks as if there are
+        no multiple overflows (i.e., counts greater than 256 within a
+        time interval).
+ 
+ 
+    Processing
+    ==========
+      The Stardust DFMI instrument output consisted of binary data
+      records containing counter values for each of the sensor
+      channels. On board the spacecraft these records were packetized
+      by the spacecraft&apos;s flight software and downlinked within packets
+      in the spacecraft telemetry stream.
+ 
+      A suite of software -- developed and run by the Stardust Data
+      Management and Archive Team (DMA) and collectively referred to as
+      Stardust Science Telemetry Processing Software -- retrieved
+      packets with DFMI data from the Telemetry Data Server(s)(TDS)
+      used by the Stardust Project, stripped off ground system and
+      spacecraft packet headers, extracted counter values and
+      housekeeping information from the packets, augmented them with a
+      number of geometry parameters computed using mission SPICE
+      geometry data and operating temperature information extracted
+      from channelized telemetry, and output all the above-mentioned
+      parameters in PDS text table format.
+ 
+ 
+    Data
+    ====
+      The DFMI data file provided in this data set contains counts of
+      the particle impacts measured by the instrument sensors,
+      housekeeping values downlinked in the same packets as counts,
+      housekeeping values downlinked in the channelized telemetry, and
+      a number of geometry parameters computed using SPICE kernels.
+ 
+      This file is a plain ASCII text file containing a single
+      PDS-style table with fixed-width, comma-delimited columns. The
+      table is preceded by a CSV header. The file is accompanied by a
+      detached PDS label, described in detail in the ONLABELS.TXT
+      document included in the archive. The format of the table columns
+      is defined by an external table format file, pointed to by the
+      label.
+ 
+ 
+    Calibration
+    ===========
+      The best available calibration data as of this writing (October
+      2005) are the values listed in Table 4 of Tuzzolino, et al. (2003).
+ 
+      The DFMI team note:
+ 
+        The main uncertainty in calibration comes from the fact that
+        the calibration was done for soda lime glass and aluminum
+        particles but real particles are of different composition and
+        we do not know how well this calibration reproduces, say,
+        organic, ice, or carbon particles. Also, the calibration
+        samples were spheres whereas the real particles are irregular.
+        The influence of this is also hard to estimate quantitatively.
+        The team is convinced that the slope of the calibration lines
+        is correct but the reference point can be shifted up or down
+        by the way they cannot estimate.
+ 
+ 
+    Ancillary Data
+    ==============
+      Each of the records in the DFMI table includes a number of
+      derived geometry parameters. These parameters were computed using
+      the following SPICE kernels, archived in the Stardust SPICE data
+      set, SDU-C-SPICE-6-V1.0:
+ 
+        Kernel Type   File Name
+        ------------  ------------------------
+        LSK           naif0007.tls
+        PCK           pck00007.tpc
+        SCLK          sdu_sclkscet_00105.tsc
+        FK            sdu_v17.tf
+        SPKs          sdu_l_2003_w2.bsp
+                      sdu_w2_opnav.bsp
+        CKs           sdu_sc_rec_2003_w2_v2.bc
+                      sdu_sc_rec_w2_opnav.bc
+        ------------  ------------------------
+ 
+ 
+    Coordinate System
+    =================
+      The geometry items provided in the EDR table are relative to the
+      ecliptic reference frame of J2000 (Ecliptic North/Equinox vector
+      of 2000 JAN 01 12:00 TDB.)
+ 
+ 
+    Software
+    ========
+      The data in this data set are in standard PDS format and,
+      therefore, can be displayed by a number of PDS-provided tools or
+      loaded into commercial programs that support comma-delimited
+      formats. For this reason no special processing software is
+      included in this data set.
+ 
+ 
+    Contact Information
+    ===================
+      For any questions regarding the data in this archive, contact:
+ 
+        Dr. Tony Tuzzolino, Stardust DFMI Science Lead
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      During the processing of the data in preparation for delivery
+      with this volume, the structure of each data packet was verified.
+      This verification included detection of both the sync word and
+      the length of each packet, which assured that all packets were
+      complete and not damaged. Samples of the data were plotted to
+      help validate them.
+ 
+ 
+    Review
+    ======
+      This data was reviewed by the DFMI science team members as part
+      of the post-encounter data analysis activities.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      This set includes all data produced by the DFMI instrument during
+      the time it was on for the Wild 2 encounter. None of the packets
+      used in the production of this data were damaged in any way.
+ 
+ 
+    Limitations
+    ===========
+      None.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

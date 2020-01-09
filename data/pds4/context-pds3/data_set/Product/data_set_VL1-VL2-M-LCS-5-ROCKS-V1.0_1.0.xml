@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vl1-vl2-m-lcs-5-rocks-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VL1/VL2 MARS LANDING SITE ROCK POPULATIONS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.viking::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vl1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vl2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:cam1.vl1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:cam1.vl2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:cam2.vl1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:cam2.vl2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vl1-vl2-m-lcs-5-rocks-v1.0__browserp_geo_vl1_vl2-m-lcs-5-rocks-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vl1-vl2-m-lcs-5-rocks-v1.0__dvo_geo_vl1_vl2-m-lcs-5-rocks-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Binder, A.B., R.E. Arvidson, E.A. Guinness, K.L. Jones, E.C. Morris, T.A.
+                   Mutch, D.C. Pieri, and C.E. Sagan, The geology of the Viking Lander 1 site,
+                   J. Geophys. Res., 82, 4439-4451, 1977.
+            </reference_text>
+            <description>reference.BINDERETAL1977</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Christensen, P.R., The spatial distribution of rocks on Mars, Icarus, 68,
+                   217-238, 1986.
+            </reference_text>
+            <description>reference.CHRISTENSEN1986</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Liebes, S., and A.A. Schwartz, Viking 1975 Mars lander interactive
+                   computerized video stereophotogrammetry, J. Geophys. Res., 82, 4421-4429,
+                   1977.
+            </reference_text>
+            <description>reference.LIEBES-SCHWARTZ1977</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Liebes, S., Viking Lander Atlas of Mars, NASA Contractor Report 3568,
+                   1982.
+            </reference_text>
+            <description>reference.LIEBES1982</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moore, H.J., and B.M. Jakosky, Viking landing sites, remote sensing
+                   observations, and physical properites of Martian surface materials, Icarus,
+                   164-184, 1989.
+            </reference_text>
+            <description>reference.MOORE-JAKOSKY1989</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moore, H.J., and J.M. Keller, Surface material maps of the Viking landing
+                   sites on Mars, Rep. Planet. Geol. Geophysics Program, NASA TM-4210,
+                   533-535, 1990.
+            </reference_text>
+            <description>reference.MOORE-KELLER1990</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moore, H.J., and J.M. Keller, Surface-material maps of the Viking landing
+                   sites on Mars, Rep. Planet. Geol. Geophysics Program, NASA TM-4300,
+                   160-162, 1991.
+            </reference_text>
+            <description>reference.MOORE-KELLER1991</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moore, H.J., C.R. Spitzer, K.Z. Bradford, P.M. Cates, R.E. Hutton, and R.W.
+                   Shorthill, Sample fields of the Viking landers, physical properties, and
+                   aeolian processes, J. Geophys. Res., 84, 8365-8377, 1979.
+            </reference_text>
+            <description>reference.MOOREETAL1979</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moore, H.J., R.E. Hutton, G.D. Clow, and C.R. Spitzer, Physical properties
+                   of the surface materials at the Viking landings sites on Mars, USGS
+                   Professional Paper 1389, 1987.
+            </reference_text>
+            <description>reference.MOOREETAL1987</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sharp, R.P., and M.C. Malin, Surface geology from Viking landers on Mars: a
+                   second look, Geolog. Soc. Am. Bull., 95, 1398-1412,1984.
+            </reference_text>
+            <description>reference.SHARP-MALIN1984</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VL1/VL2-M-LCS-5-ROCKS-V1.0</data_set_id>
+        <data_set_name>VL1/VL2 MARS LANDING SITE ROCK POPULATIONS V1.0</data_set_name>
+        <data_set_release_date>1998-12-31</data_set_release_date>
+        <start_time>1976-07-20</start_time>
+        <stop_time>1982-11-13</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Simpson, R. A., VL1/VL2 MARS LANDING SITE ROCK POPULATIONS V1.0,
+            VL1/VL2-M-LCS-5-ROCKS-V1.0, NASA Planetary Data System, 1998
+        </citation_text>
+        <data_set_terse_desc>
+            The Viking Lander Rock Data Set contains locations, orientations,
+            and dimensions of rocks near the Viking Landers, derived by Henry
+            Moore from Viking Lander images, and also includes statistical
+            profiles of the rock distributions.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The imaging system on each Viking Lander consisted of two
+            identical cameras. These cameras operated throughout the mission,
+            returning nearly 6600 images. Rocks were identified in the
+            images, and their locations and dimensions were determined.
+            Statistical distributions for the rocks were derived.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Dataset Overview
+    ================
+      The imaging system on each Viking Lander consisted of two
+      identical cameras.  These cameras operated throughout the
+      mission, returning nearly 6600 images.  Rocks were identified
+      in the images, and their locations and dimensions were
+      determined.  Statistical distributions for the rocks were
+      derived.
+ 
+      This data set includes a table giving locations and dimensions
+      of 425 rocks (plus 2 possible outcrops) located near VL1 (file
+      VL1ROCKS.TAB) and a second table of 499 rocks near VL2 (file
+      VL2ROCKS.TAB).  It also includes derivative tables showing
+      number density and areal coverage as a function of rock
+      diameter (VL1NORML.TAB and VL2NORML.TAB, respectively).  The
+      VL1 population, with the two &apos;outcrops&apos; omitted, has also been
+      included as a &apos;VL0&apos; set of files.  These rock size-frequency
+      and size-area distributions are updated versions of earlier
+      work [MOORE&amp;KELLER1990] and [MOORE&amp;KELLER1991].
+ 
+      Intermediate products -- tables of axial ratios and areas for
+      rocks and of rock distributions according to surface type --
+      have also been included.  These may be of interest to users
+      seeking more details of the statistical analysis or alternative
+      descriptors of the rock population.  Tables of axial ratios
+      have file names of the form VL*AXRAT.TAB; tables of rock
+      distribution by surface type have names of the form
+      VL*SURFS.TAB.
+ 
+ 
+    Parameters
+    ==========
+      The basic tables cover 425 rocks and 2 possible outcrops at the
+      Lander 1 site and 499 rocks at Lander 2.  They include three
+      types of information: (1) the xyz-coordinates; (2) the lengths,
+      widths, and heights; and (3) a descriptor of the apparent burial
+      state of each rock.  Length  L  is the longest visible
+      (horizontal) dimension, width  W  is the orthogonal horizontal
+      dimension, and height  H  is the vertical exposure of the rock
+      above the surrounding surface.  The burial descriptors are
+      subjective and include three categories: &apos;perched,&apos; &apos;partly
+      buried,&apos; and &apos;deeply buried.&apos; For construction of rock size-
+      frequency and area-size distributions, the average rock diameter
+      D  is taken to be the geometric mean of the length and width;
+      the corresponding rock area is approximated as  (PI/4)*(D**2).
+ 
+      Derivative tables include parameters such as the average axial
+      ratio for rocks computed from each pair of rock dimensions
+      and the number density and areal coverage of rocks as a
+      function of diameter.
+ 
+ 
+    Processing
+    ==========
+      The rock size-frequency and size-area distributions were
+      obtained from images and maps of surface materials by
+      estimating the areas occupied by materials within the
+      camera fields of view.  The process involved several steps.
+      Measurements on the smallest, closest rocks were combined
+      with measurements of large rocks over great distances to
+      obtain a composite distribution function for about 80 square
+      meters at each site.
+ 
+      First, maps of surface material were divided into two regions.
+      The &apos;near field&apos; extended to about 3 meters in front of each
+      Lander and was approximately within reach of the surface
+      sampler arm.  The &apos;far field&apos; extended to about 9 meters.
+ 
+      Data on rock dimensions and locations for the near field came
+      from three sources: (1) 1/10-scale base maps that showed the
+      sizes and locations of rocks [MOOREETAL1987]; (2) unpublished
+      working maps and data; and (3) Lander camera images.  Rocks
+      and clods with dimensions larger than about 0.01 meter could
+      be measured and located in the near field.
+ 
+      Data on dimensions and locations for the far field also came
+      from three sources: (1) 1/20-scale contour maps [LIEBES1982];
+      (2) Lander camera mosaics with overlaid contours [LIEBES1982];
+      and (3) Lander camera images.  Large rocks were located
+      directly on the contour maps and the mosaics; then they were
+      measured directly from the maps.  Smaller rocks that were not
+      intersected by contours were located using stereometric
+      procedures; their sizes were calculated from their ranges and
+      from the angles they subtended.
+ 
+      Second, different types of surface materials were identified.
+      Three types of materials were mapped at both Lander sites:
+      (1) fine materials, (2) soil-like materials, and (3) rocks.
+      For the far fields of both landers, fine material included
+      uniform-appearing materials that were free of small rocks
+      and clods except along contacts with other soil-like
+      materials.  The thickness of deposits of fine material in
+      the far field, which were superposed on soil-like materials
+      and rocks at both sites, were estimated to range from 0.01
+      or 0.02 meters to more than 0.25 meters at Lander 1 and from
+      0.01 meters to about 0.3 meters at Lander 2.  Known locations
+      of large rocks permitted delineation of areas covered by fine
+      materials and rock outcrops by visual inspection.  These
+      areas were obtained graphically from the maps; allowances for
+      areas occupied by rocks within the areas of fine and soil-like
+      materials were computed.  The area of fines near footpad 2 of
+      Lander 1 were included with fines of the far field because
+      they were thick and free of small rocks.  The soil-like areas
+      in the near fields of Landers 1 and 2 contained rocks as small
+      as, or perhaps even smaller than, 0.022 meters.  Two areas at
+      the Lander 1 site were mapped as outcrops [BINDERETAL1977],
+      but it is possible that they could be large rocks
+      [SHARP&amp;MALIN1984] or a single rock about 3 meters long.
+ 
+      Third, cumulative rock distribution functions at each Lander
+      site were obtained by combining the measured distributions in
+      the near field, far field, and fine areas.  All rocks with
+      average diameters greater than 0.25 meters in the near and far
+      fields were included in the cumulative distribution.  Rocks
+      smaller than 0.25 meters in the near field were considered to
+      be representative of that size range in both the near and far
+      fields -- except where fine materials were mapped.  That is,
+      since small rocks are not resolved in the far field, areas
+      between moderate and large rocks in the far field were assumed
+      to have the same distribution as in the near field.  All rocks
+      within the deposits of fines were assumed to be large enough
+      to have been measured accurately and were included in the
+      cumulative distribution.
+ 
+      The cumulative rock distribution function was then the
+      distribution of rocks larger than 0.25 meters everywhere, plus
+      the total rock distribution from fines areas, plus the
+      distribution of rocks smaller than 0.25 meters in the near
+      field scaled to &apos;fill in&apos; the spaces among rocks larger than
+      0.25 m in the far field; this total was then normalized by the
+      total area (about 80 m**2 at both sites).  The results are
+      presented in the tables VL*NORML.TAB; the contributions from
+      the different surface types are tabulated in VL*SURFS.TAB.
+ 
+ 
+    Data
+    ====
+      Two tables contain basic rock population data derived from
+      images, maps derived from images, and other data.  Tables
+      VL1ROCKS.TAB  and  VL2ROCKS.TAB  contain the data for Landers
+      1 and 2, respectively.  Each row in the table contains an ID
+      keyed to hand-drawn overlays for the atlas of lander images
+      [LIEBES1982], an indicator of the environment in which the rock
+      was located (near field, far field, outcrop, drift material,
+      or excluded from statistical tabulations because of anomalous
+      settings), the XYZ coordinates of the rock based on the
+      Local Gravity-Normal (LGN) map grid in [LIEBES1982] in meters,
+      estimates of the dimensions of the rock (meters) and its
+      orientation in the LGN frame, a subjective evaluation of its
+      burial state (perched, partly buried, buried, or unknown),
+      and miscellaneous notes such as names associated
+      with certain well-known rocks.  The data fields are in 11
+      columns totaling 82 bytes each; each row is terminated with
+      an ASCII carriage-return line-feed pair.  Each table is
+      accompanied by a detached PDS label which fully describes
+      its format and content.
+ 
+      VL0ROCKS.TAB  is identical to  VL1ROCKS.TAB  except that the
+      two &apos;outcrops&apos; have been omitted.  It is accompanied by
+      detached PDS label  VL0ROCKS.LBL.
+ 
+      VL1AXRAT.TAB  is a table of binned results of calculations based
+      on VL1ROCKS.TAB.  The area of each rock and three axial ratios
+      were computed and binned as follows:
+ 
+       AREA = L*W*PI/4           binned according to   DLW = SQRT(L*W)
+       ARLW = MIN(L,W)/MAX(L,W)  binned according to   DLW = SQRT(L*W)
+       ARWH = MIN(W,H)/MAX(W,H)  binned according to   DWH = SQRT(W*H)
+       ARLH = MIN(L,H)/MAX(L,H)  binned according to   DLH = SQRT(L*H)
+ 
+      where
+           ARxy  denotes axial ratio of dimensions  x  and  y
+           Dxy   denotes average diameter using dimensions  x  and  y
+           L = estimated longest dimension of the rock
+           W = estimated width of the rock (orthogonal to length)
+           H = estimated vertical exposure of a perched rock, or
+                twice the exposure of a partly buried rock (see below
+                for discussion of buried rocks)
+      and
+           MIN(X,Y) is the smaller of X and Y
+           MAX(X,Y) is the larger of X and Y
+ 
+      The lowest bin boundary was set at 1/128th meter; boundaries
+      then increased by powers of SQRT(2) (0.008, 0.011, ... , 1.000,
+      1.414 m).  The area reported in VL1AXRAT.TAB is the sum of the
+      areas of all the rocks assigned to that bin.  For axial ratios
+      the quantity reported for each bin is the average and standard
+      deviation of the axial ratios of the rocks in that bin.  The
+      results are tabulated separately according to surface type
+      (drift area, far field, near field, and excluded) and burial
+      state (perched, partially buried, buried, and unknown).
+      Cumulative results for all bins were then computed for each
+      surface type and burial state combination; these are shown in
+      summary lines in the table.
+ 
+      Since there are three dimensions for each rock, axial ratios
+      were calculated using each of the three possible pairings.
+      Because the height of buried rocks is very uncertain, axial
+      ratios based on heights of buried rocks were excluded from the
+      averages and standard deviations; instead, those rocks were
+      assigned to a special &apos;undefined&apos; bin (bin number 1).
+ 
+      VL1AXRAT.TAB is composed of 16 sub-tables, one for each
+      combination of surface type and burial state. Each sub-table
+      has 19 rows; the first is for rocks which could not be binned
+      (e.g., the computation required  H  for a buried rock),
+      the next 17 are for bins in increasing average diameter, and
+      the last is a summary for all diameters.  VL1AXRAT.TAB is
+      accompanied by a detached PDS label which fully describes both
+      its content and format (VL1AXRAT.LBL).
+ 
+      VL1SURFS.TAB  is a table of VL1 rock numbers and areal coverage
+      (both incremental and cumulative) in decreasing order of rock
+      diameter for each of the three surface types -- drift material,
+      far field, and near field.
+ 
+      For each surface type (drift material, far field, and near
+      field) rocks were sorted into bins according to diameter (square
+      root of length times width), the area covered was estimated
+      (diameter squared times pi divided by 4), and a running sum was
+      accumulated.  Total area and area covered by rocks for
+      each surface type at VL1 were:
+ 
+          Surface Type    Total Area  Area Covered    Area Covered
+                                        by Rocks    by Rocks &gt;0.25m
+          --------------  ----------  ------------  ---------------
+          Drift Material  15.27 m**2   0.4102 m**2    0.0534 m**2
+          Far Field       57.85 m**2   6.7229 m**2    5.4397 m**2
+          Near Field      10.48 m**2   1.3153 m**2    0.0560 m**2
+ 
+      The inter-rock area in the far field was 52.4103 m**2, where
+      inter-rock was taken to mean area not covered by a rock of
+      diameter 0.25 meters or larger.  Inter-rock area in the near
+      field was 10.4240 m**2.  Ratio of the total inter-rock area
+      (far field plus near field) to the near field inter-rock area
+      was 6.0278; this was the scale factor used to multiply the
+      near field distribution for diameters less than 0.25 m in
+      constructing the VL1NORML.TAB table below.
+ 
+      VL1SURFS.TAB is accompanied by a detached PDS label which fully
+      describes both its content and format (VL1SURFS.LBL).
+ 
+      VL1NORML.TAB  is a table of rock number and area density for
+      the entire VL1 site.  A distribution function is first formed
+      by summing the following:
+ 
+        (1) the near field distribution of rocks larger than 0.25 m
+        (2) the far field distribution of rocks larger than 0.25 m
+        (3) 6.0278 times the near field distribution of rocks smaller
+              than 0.25 m
+        (4) the total distribution of rocks in the drift material
+ 
+      Then the density is derived by dividing the distribution by
+      the total area (83.60 m**2).  The table has columns for the
+      rock number and rock area distribution per bin, the cumulative
+      rock number and rock area as a function of bin, the rock number
+      and rock area density per bin, and the cumulative rock number
+      and rock area density per bin.  VL1NORML.TAB replicates the
+      results reported earlier by [MOORE&amp;KELLER1990] and
+      [MOORE&amp;KELLER1991], with minor corrections.
+ 
+      VL1NORML.TAB is accompanied by a detached  PDS label which
+      fully describes both its content and format (VL1NORML.TAB).
+ 
+      VL2AXRAT.TAB, VL2SURFS.TAB, and VL2NORML.TAB are the
+      respective files for the Viking Lander 2 site.  Each is
+      accompanied by a detached PDS label.
+ 
+      VL0AXRAT.TAB, VL0SURFS.TAB, and VL0NORML.TAB are the
+      respective files for the Viking Lander 1 site but with the
+      two &apos;outcrops&apos; omitted.  Each is accompanied by a detached PDS
+      label.
+ 
+ 
+    Ancillary Data
+    ==============
+      None.
+ 
+ 
+    Coordinate Systems
+    ==================
+      The photogrammetric reference points of the two cameras on each
+      Lander were separated by 0.822 m [LIEBES&amp;SCHWARTZ1977].  If the
+      Lander were resting on a perfectly flat surface, the origin of
+      the Lander Aligned Coordinate System (LACS) would be 1.583 m
+      below the midpoint of this line and 0.470 m to the rear (toward
+      Footpad 1, or in the LACS -Z direction).  The line from Camera
+      2 to Camera 1 would point in the +Y direction. LACS +X was down,
+      making a right-handed orthogonal system.  The LACS was fixed
+      with respect to the body of the Lander.
+ 
+      The LGN origin coincided with the LACS origin, but its Z axis
+      pointed toward zenith.  Its +Y axis pointed in the direction
+      of the LACS +Z projection onto the horizontal plane.  The LGN
+      +X axis completed the right-handed orthogonal frame.  Loosely
+      quoting [LIEBES1982]: &apos;To the extent that lander tilt may be
+      considered small, the LGN may be visualized as having its
+      x-axis approximately anti-parallel to the LACS y-axis (and thus
+      pointing roughly parallel to the direction from Camera 1 to
+      Camera 2).  The LGN y-axis points roughly parallel to the LACS
+      z-axis, or in the horizontal direction outward and approximately
+      forward from the lander, and roughly perpendicular to the
+      intercamera baseline.&apos;
+ 
+      For Lander 1, north was 141.91 degrees counter-clockwise about
+      the LGN Z-axis, from the LGN Y-axis.  The Lander 1 deck was
+      tilted 2.99 degrees at azimuth 285.17 degrees (clockwise) from
+      north.  For Lander 2, north was 29.14 degrees counter-clockwise
+      about the LGN Z-axis, from the LGN Y axis.  The Lander 2 deck
+      was tilted down 8.21 degrees at azimuth 277.70 degrees
+      (clockwise) from north [LIEBES1982].
+ 
+      Rock positions are given with respect to the Local Gravity-
+      Normal (LGN) map grid defined in [LIEBES1982].  Rock
+      orientations indicate the direction of the long axis of the
+      rock and are measured clockwise from the LGN Y-axis.
+ 
+ 
+    Software
+    ========
+      The SOFTWARE directory includes FORTRAN 77 source code for a
+      single program which will carry out a statistical analysis
+      of the basic rock data (e.g., VL1ROCKS.TAB) and generate the
+      corresponding derivative files (e.g., VL1AXRAT.TAB,
+      VL1SURFS.TAB, and VL1NORML.TAB).  Note that the table formats
+      produced by the program will be in somewhat different than
+      formats for the tables in the data set.
+ 
+      During assembly of the data set, the software was compiled
+      under SunSoft FORTRAN 77 4.0 and executed under Solaris 2.5.1.
+      During PDS peer review the software was compiled (but not run)
+      using Fortran PowerStation 4.0 under Windows95 and on a
+      workstation running SunOS 4.1.4.
+ 
+      Bin boundaries start at 1/128 m and increase by factors of
+      sqrt(2)[MOORE&amp;KELLER1990][MOORE&amp;KELLER1991]; results can be
+      conveniently displayed on log-log plots.  The software
+      included with this archive (see below) can easily be modified
+      for other bin definitions.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      Compilation of maps of surface materials based on images
+      from stationary cameras on landed spacecraft is limited
+      primarily by obscuration of the surface.  First, sides of
+      large rocks may be hidden from the field of view of cameras.
+      Second, areas that contain small rocks may be hidden by
+      large rocks, by surfaces that slope away from the cameras,
+      and by spacecraft parts.  Third, many small rocks in the
+      far field simply cannot be mapped because of the decrease
+      in camera resolution with increasing distance and the
+      overwhelming number of rocks.  These problems become more
+      severe with increasing distance.  Hence, only rocks larger
+      than about 0.03 to 0.05 m could be mapped in the far field,
+      and the maps were confined to areas roughly 9 m by 15 m.
+      Areas behind very large rocks were excluded from analyses
+      except where interpretation of the images suggested that
+      uniform deposits of fine materials could be confidently
+      inferred.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      As mentioned above, the burial status of each rock at a
+      landing site was defined to be either perched, partially
+      buried, or deeply buried.  Roughly 60 percent of rocks at
+      VL-1 are partially buried, with the remaining 40 percent
+      evenly split between perched and deeply buried.  For each
+      burial depth and sample region, the mean and standard
+      deviation of the axial ratios  W/L  and  H/L  were
+      calculated.  The  H/L  ratio was not calculated for deeply
+      buried rocks, since only the topmost surfaces of these
+      rocks were exposed.  While the horizontal dimensions of
+      the buried rocks are probably under-estimates, the average
+      width-to-length ratio is about 0.7, regardless of depth.
+      The vertical rock dimension is the most uncertain measurement;
+      even perched rocks likely have settled into the regolith
+      somewhat.  On average, the height-to-length ratio is about
+      0.48 for perched rocks and 0.42 for partially buried rocks
+      at VL1, with a relatively high variance in each case.
+      From these values, one can calculate that the vertical
+      exposure of partially buried rocks is about 85 percent,
+      assuming that partially buried rocks have the same average
+      axial ratios and relative orientations as perched rocks.
+      However, since a partially buried rock may be exposed on
+      one side (allowing estimation of the vertical dimension)
+      and buried on the other side, the average burial depth is
+      difficult to estimate.  Both  W/L  and  H/L  remain
+      approximately constant as a function of rock size.
+ 
+      A sophisticated analysis of measurement errors was beyond the
+      scope of the original research [MOORE&amp;KELLER1990]
+      [MOORE&amp;KELLER1991] and of this archiving effort.  It would also
+      have exceeded the needs of most investigators interested in
+      Mars rock distributions.  To carry out such an analysis a
+      photogrammetrist would measure each of 500 or so &apos;points&apos; three
+      to five times, arriving at a distribution of errors which is
+      related to base-height ratio (or range).  From that point, one
+      must consider errors in differences in ranges and then
+      elevations and differences in elevation.  The interested reader
+      is referred to Figure 10 in [LIEBES&amp;SCHWARTZ1977] for estimates
+      of errors as a function of range and azimuth in the Viking
+      Lander image data set.
+ 
+      Mapping and analyses also improve understanding of the types
+      and amounts of materials at the Lander sites.  Of particular
+      importance is the fraction of area covered by
+      uniform-appearing bright fine materials.  Casual inspection
+      of images and mosaics suggests that such deposits are small
+      and scarce, but the fraction of area covered by these fine
+      materials at VL2 is 0.298.  The fraction of area covered by
+      rocks at VL2 is 0.159 -- not significantly different from the
+      0.14 obtained by [MOOREETAL1979][MOOREETAL1987] or the 0.188
+      obtained by [MOORE&amp;JAKOSKY1989].  All values are in agreement
+      with the rock abundance 0.20+/-0.10 obtained from IRTM data
+      [CHRISTENSEN1986].
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>75-075C-06E</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

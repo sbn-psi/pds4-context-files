@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.eso-c-emmi-3-rdr-sl9-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ESO NTT EMMI IMAGE DATA FROM SL9 IMPACTS WITH JUPITER V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.ground_based_atmospheric_observations::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.eso::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:emmi.eso::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.sl9::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.eso-c-emmi-3-rdr-sl9-v1.0__browserp_eso-c-emmi-3-rdr-sl9-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Schulz, R., Th. Encrenaz, J.A. Stuewe, and G. Wiedemann. Near-IR emissions in
+                   the upper Jovian atmosphere after SL-9 impact: Indications of possible northern
+                   counterparts, Geophysical Research Letters, 22, 17, 2421-2424, 1995.
+            </reference_text>
+            <description>reference.SCHULZETAL1995</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ESO-C-EMMI-3-RDR-SL9-V1.0</data_set_id>
+        <data_set_name>ESO NTT EMMI IMAGE DATA FROM SL9 IMPACTS WITH JUPITER V1.0</data_set_name>
+        <data_set_release_date>1996-08-14</data_set_release_date>
+        <start_time>1994-07-01T03:57:22Z</start_time>
+        <stop_time>1994-07-02T04:50:19Z</stop_time>
+        <producer_full_name>DR. RITA SCHULZ</producer_full_name>
+        <citation_text>
+            Schulz, R., M. A&apos;Hearn, Th. Encrenaz, J. Stuwe, and G.
+            Wiedemann, ESO NTT EMMI IMAGE DATA FROM SL9 IMPACTS WITH JUPITER
+            V1.0, ESO-C-EMMI-3-RDR-SL9-V1.0, NASA Planetary Data System, 1996.
+        </citation_text>
+        <data_set_terse_desc>
+            ESO NTT EMMI Images of the P/Shoemaker-Levy 9 impact into Jupiter
+        </data_set_terse_desc>
+        <abstract_desc>
+            ESO MultiMode Instrument has various spectroscopic options with
+            large-field capabilities (up to 10 x 10 arcmin with a 2048**2
+            CCD).
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      ESO MultiMode Instrument has various spectroscopic options with
+      large-field capabilities (up to 10 x 10 arcmin with a 2048**2 CCD).
+ 
+      The scheduling of the observing programmes at the NTT can be adapted
+      to the sky conditions. When the image size is better than 0.7
+      arcsec, the telescope can be configured for observing with SUSI. In
+      order to take full advantage of this unique capability, ESO has now
+      introduced a special category of observing programmes which require
+      exceptional seeing and are executed in a service mode by ESO staff
+      when the sky conditions are favourable.
+ 
+ 
+    Processing
+    ==========
+      The EMMI data are calibrated broad-band (Johnson B,V,R,I) images of
+      Shoemaker-Levy 9 taken about two weeks before the impact.  They are
+      calibrated for the construction of color-index maps,  which means
+      that -2.5*log (pixel value) yields &apos;magnitudes per square arc sec&apos;.
+      The PI for the program is Rita Schulz with Joachim A. Steuwe and
+      Mike A&apos;Hearn as collaborators.
+ 
+      EMMI Observation Log
+      --------------------
+       FILE        DATE-OBS  TM-START EXPTIME AIRMASS         OBJECT
+ 
+     int0026.fit &apos;02/07/94&apos; 03:01:01  1200   1.40752  &apos;SL9 B         03x03&apos;
+     int0027.fit &apos;02/07/94&apos; 03:23:09  1200   1.53911  &apos;SL9 B         03x03&apos;
+     int0052.fit &apos;01/07/94&apos; 03:57:22   900   1.76339  &apos;SL9 V         03x03&apos;
+     int0053.fit &apos;01/07/94&apos; 04:19:03   900   2.01072  &apos;SL9 R         03x03&apos;
+     int0054.fit &apos;01/07/94&apos; 04:40:52   900   2.36040  &apos;SL9 I         03x03&apos;
+     int0092.fit &apos;02/07/94&apos; 03:48:18   900   1.71476  &apos;SL9 R         17x01&apos;
+     int0093.fit &apos;02/07/94&apos; 04:06:53   900   1.90697  &apos;SL9 I         17x02&apos;
+     int0094.fit &apos;02/07/94&apos; 04:28:38   900   2.21153  &apos;SL9 I         17x02&apos;
+     int0095.fit &apos;02/07/94&apos; 04:50:19   900   2.65173  &apos;SL9 R         17x02&apos;
+ 
+ 
+    Data structure
+    ==============
+ SIMPLE  =                    T / Standard FITS format
+ BITPIX  =                   32 / No. of bits per pixel
+ NAXIS   =                    2 / No. of axes in image
+ NAXIS1  =                 1124 / No. of pixels
+ NAXIS2  =                 1024 / No. of pixels
+ EXTEND  =                    T / FITS extension may be present
+ BLOCKED =                    T / FITS file may be blocked
+ 
+ CRPIX1  =                   1. / Reference pixel
+ CRVAL1  =                   1. / Coordinate at reference pixel
+ CDELT1  =                 0.37 / Coordinate increment per pixel
+ CTYPE1  = &apos;ArcSec          &apos;   / Units of coordinate
+ CRPIX2  =                   1. / Reference pixel
+ CRVAL2  =                   1. / Coordinate at reference pixel
+ CDELT2  =                 0.37 / Coordinate increment per pixel
+ CTYPE2  = &apos;ArcSec          &apos;   / Units of coordinate
+ BUNIT   = &apos;E-9rInt/SqArcSec&apos;   / Units of data values
+ BSCALE  =    1.51249546432E-08 / Scaling factor: r = f*i + z
+ BZERO   =        7.18707847595 / Zero offset: r = f*i + z
+ DATAMAX =        39.6676712036 / Maximum data value
+ DATAMIN =       -25.2935142517 / Minimum data value
+ 
+ ORIGIN  = &apos;ESO-MIDAS&apos;          / Written by MIDAS
+ DATE    = &apos;12/07/95&apos;           / Date of writting: DD/MM/YY
+ FILENAME= &apos;int0026.bdf&apos;        / Original file name
+ MIDASFTP= &apos;IMAGE   &apos;           / MIDAS File Type
+ 
+ OBJECT  = &apos;SL9 B         03x03&apos; / MIDAS desc.: IDENT(1)
+ RA      =            212.19111 / MIDAS desc.: O_POS(1)
+ DEC     =            -12.40573 / MIDAS desc.: O_POS(2)
+ DATE-OBS= &apos;02/07/94&apos;           / MIDAS desc.: O_TIME(1)
+ MJD-OBS =          49535.12571 / MIDAS desc.: O_TIME(4)
+ TM-START=                   0. / MIDAS desc.: O_TIME(5)
+ EXPTIME =                   1. / MIDAS desc.: O_TIME(7)
+ TELESCOP= &apos;ESONTTB &apos;           / MIDAS desc.: TELESCOP(1)
+ INSTRUME= &apos;EMMI    &apos;           / MIDAS desc.: INSTRUME(1)
+ OBSERVER= &apos;SCHULZ  &apos;           / MIDAS desc.: OBSERVER(1)
+ AIRMASS =              1.40752 / MIDAS desc.: O_AIRM(1)
+ COMMENT / Time Reference System is used only for Sidereal time
+ COMMENT / All other time info is got from instr. computer clock
+ ESO-LOG 00:00:00&gt; DATE         = &apos;1994-07-02&apos;  / Sat Jul  2, 1994
+ ESO-LOG 03:01:00&gt;-START EXPO EMMI BLUE         / Start exp. on CCD
+                                                / EMMI BLUE
+ ESO-LOG 03:01:01&gt; EXPO EMMI BLUE NO = 10923    / Exp. num. on CCD
+                                                / EMMI BLUE
+ ESO-LOG 03:21:01&gt;-STOP EXPO EMMI BLUE          / Stop exp. on CCD
+                                                / EMMI BLUE
+ HISTORY COMPUTE/IMAG ffn0026.bdf =
+ HISTORY (ntt0026.bdf-2.18000E+02)/nff0014.bdf/1.200
+ HISTORY 0E+03    COMPUTE/IMAG sub0026.bdf = ffn0026.bdf-midtemp
+ HISTORY FILTER/MEDI sub0026.bdf fil0026.bdf 1,1,0.0 NR + NNE
+ HISTORY FILTER/MEDI sub0026.bdf fil0026.bdf 1,1,0.0
+ HISTORY NR + NNE   REBIN/ROTATE fil0026.bdf rot0026.b
+ HISTORY f R2 + COMPUTE/IMAG cln0026.bdf
+ HISTORY  1.0*rot0026.bdf   proc/RelInt cln0
+ HISTORY 26.bdf int0026.bdf 8.48645E-01
+ 
+ HIERARCH ESO GEN ID = &apos;ARC-0001/1.4&apos; / Version of related document
+ HIERARCH ESO GEN PROJ ID = &apos;053.08-030&apos; / ESO program identification
+ HIERARCH ESO GEN EXPO NO =     10923 / Image Sequence Number
+ HIERARCH ESO GEN EXPO TYPE = &apos;SCI     &apos; / Type of exposure
+ HIERARCH ESO GEN EXPO LST =    61042. / Loc. Sid. time at start of ex.
+ HIERARCH ESO GEN TEMP =     280.1 / Observatory Ambient Temp. (K)
+ HIERARCH ESO GEN TEMPVAR =      -0.2 / Observatory Temp. var. (K)
+ HIERARCH ESO GEN RHUM =       20. / Observatory Ambient Humidity (%)
+ HIERARCH ESO GEN RHUMVAR =        1. / Observatory Humidity var. (%)
+ HIERARCH ESO GEN FWHM =        0. / Observatory seeing (arcsec)
+ HIERARCH ESO GEN FWHMVAR =        0. / Observatory seeing var. (arcsec)
+ HIERARCH ESO GEN WIND SPEED =      10.8 / Observatory wind speed (m/sec)
+ HIERARCH ESO GEN WIND SPEEDVA = -0.9 / Observ. wind speed var. (m/sec)
+ HIERARCH ESO GEN WIND DIREC =       23. / Wind direction (N=0 E=90)
+ HIERARCH ESO GEN WIND DIRVAR =       11. / Wind direction var.
+ HIERARCH ESO TEL ID = &apos;ESONTT  &apos; / Telescope Identification
+ HIERARCH ESO TEL FOCU ID = &apos;NASM-B  &apos; / Telescope focus ID
+ HIERARCH ESO TEL LON =  -70.7345 / Telescope Longitude (+=East)
+ HIERARCH ESO TEL LAT =  -29.2584 / Telescope Latitude (+=North)
+ HIERARCH ESO TEL HEIGHT =      2440 / Telescope height (m)
+ HIERARCH ESO TEL FOCU LEN =    38.482 / Focus length (m)
+ HIERARCH ESO TEL FOCU SCALE = 1.489 / Focus scale (deg/m) = 5.36arcsec/mm
+ HIERARCH ESO TEL TRAK RATEA =    0.0042 / Tracking rate in alpha (deg/s)
+ HIERARCH ESO TEL TRAK RATED =        0. / Tracking rate in delta (deg/s)
+ HIERARCH ESO TEL DOME TEMP =     279.1 / Tel temperature (Kelvin)
+ HIERARCH ESO TEL DOME TEMPVAR =      -0.1 / Tel temp. variation (Kelvin)
+ HIERARCH ESO TEL DOME FWHM =        0. / Tel seeing (arcsec)
+ HIERARCH ESO TEL DOME FWHMVAR =        0. / Tel seeing variation (arcsec)
+ HIERARCH ESO TEL PARANG START =     59.97 / Parallactic angle at exp start
+ HIERARCH ESO TEL PARANG END =     61.32 / Parallactic angle at exp end
+ HIERARCH ESO TEL AIRM START =    1.3561 / Airmass at exp start
+ HIERARCH ESO TEL AIRM END =   1.45894 / Airmass at exp end
+ HIERARCH ESO ADA ID = &apos;ADAPTB  &apos; / Adapter Identification
+ HIERARCH ESO ADA MODE = &apos;STD     &apos; / Mode (standard)
+ HIERARCH ESO ADA POSANG =        0. / Rotat. at the start of the exp.
+ HIERARCH ESO ADA GUID-1 X =  0.009345 / Guide probe x position (m)
+ HIERARCH ESO ADA GUID-1 Y =   -0.1371 / Guide probe y position (m)
+ HIERARCH ESO ADA GUID-2 X =   -0.1638 / Guide probe x position (m)
+ HIERARCH ESO ADA GUID-2 Y =    0.1653 / Guide probe y position (m)
+ HIERARCH ESO INS ID = &apos;EMMI #1 &apos; / Instrument Identification
+ HIERARCH ESO INS COMP ID = &apos;HP RTE-A V5&apos; / Instrument computer op. sys.
+ HIERARCH ESO INS MODE = &apos;BIMG    &apos; / Mode EMMI is in
+ HIERARCH ESO INS PATH = &apos;BLUE    &apos; / EMMI arm used
+ HIERARCH ESO INS OPTI-2 NO =         2 / Mirror Wheel position
+ HIERARCH ESO INS OPTI-2 TYPE = &apos;MIRROR  &apos; / What is this element
+ HIERARCH ESO INS OPTI-2 ID = &apos;BIMG MIR&apos; / Mirror unique identification
+ HIERARCH ESO INS OPTI-2 NAME = &apos;BIMG    &apos; / Mirror position
+ HIERARCH ESO INS MIRR-4 NAME = &apos;UPPER BLUE&apos; / Upper folding mirror blue
+ HIERARCH ESO INS MIRR-4 ST =         0 / Mirror IN when true
+ HIERARCH ESO INS OPTI-8 NO =         2 / Filter Wheel blue position
+ HIERARCH ESO INS OPTI-8 TYPE = &apos;FILTER  &apos; / What is this element
+ HIERARCH ESO INS OPTI-8 ID = &apos;#603    *&apos; / Filter unique identification
+ HIERARCH ESO INS OPTI-8 NAME = &apos;B       &apos; / Filter position
+ HIERARCH ESO INS FOCU ENC =      8518 / Blue focus unit encoder value
+ HIERARCH ESO INS FOCU MODE = &apos;USER    &apos; / Blue camera focus determination
+ HIERARCH ESO DET NAME = &apos;TK1024AB&apos; / Detector name
+ HIERARCH ESO DET ID = &apos;ccd$31  &apos; / Detector serial id.
+ HIERARCH ESO DET TYPE = &apos;CCD Tektronix&apos; / Detector type
+ HIERARCH ESO DET PIXSIZE =   2.4E-05 / Size of pixel (m)
+ HIERARCH ESO DET BITS =        16 / ADU bits per pixel
+ HIERARCH ESO DET FRAM BITS =        16 / Number of bits/pixel transfered
+ HIERARCH ESO DET FRAM NAXIS1 =      1124 / Number of pixels along x
+ HIERARCH ESO DET FRAM CRVAL1 = 1. / x coordinate of lower left pixel
+ HIERARCH ESO DET FRAM CRPIX1 = 1. / x coordinate of reference pixel
+ HIERARCH ESO DET FRAM CDELT1 = 1. / Binning factor along x
+ HIERARCH ESO DET FRAM NAXIS2 = 1024 / Number of pixels along y
+ HIERARCH ESO DET FRAM CRVAL2 = 1. / y coordinate of lower left pixel
+ HIERARCH ESO DET FRAM CRPIX2 =        1. / y coordinate of reference pixel
+ HIERARCH ESO DET FRAM CDELT2 =        1. / Binning factor along y
+ HIERARCH ESO DET DKTIME =     1200. / Dark current time (s)
+ HIERARCH ESO DET TEMP_VAR =       1.4 / Temperature drift during exposure
+ HIERARCH ESO DET TEMPMEAN =     175.2 / Mean detector temperature (K)
+ HIERARCH ESO DET COMP ID = &apos;ccdb-V4.1&apos; / A900 CCD-program name+vers
+ HIERARCH ESO DET PARM1 = &apos;CLOCK=tek1k31ad&apos;
+ HIERARCH ESO DET PARM2 = &apos;VLO1 :  -8.04    VHI1 :   2.94    VDD1 :  24.05&apos;
+ HIERARCH ESO DET PARM3 = &apos;VLO2 :  -8.02    VHI2 :   2.94    VDD2 :  23.94&apos;
+ HIERARCH ESO DET PARM4 = &apos;HLO1 :  -2.13    HHI1 :   9.86    VDR1 :  14.00&apos;
+ HIERARCH ESO DET PARM5 = &apos;HLO2 :  -2.22    HHI2 :   9.72    VDR2 :  14.04&apos;
+ HIERARCH ESO DET PARM6 = &apos;RLO1 :  -0.18    RHI1 :  12.80    VGS1 :   0.50&apos;
+ HIERARCH ESO DET PARM7 = &apos;RLO2 :  -0.14    RHI2 :  12.87    VGS2 :   0.49&apos;
+ HIERARCH ESO DET PARM8 = &apos;-15V : -14.89    +15V :  14.90    +30V :  28.45&apos;
+ HIERARCH ESO DET DATE =   1993.67 / CCD implementation date
+ HIERARCH ESO DET MODE = &apos;SLOW    &apos; / Readout mode
+ HIERARCH ESO DET OUTPUTS =         1 / On-chip outputs connected
+ HIERARCH ESO DET OUT-1 ST =         1 / If T, output enabled
+ HIERARCH ESO DET OUT-1 X =         1 / X-location for output 1
+ HIERARCH ESO DET OUT-1 Y =         1 / Y-location for output 1
+ HIERARCH ESO DET OUT-1 GAIN =         2 / Gain for output 1
+ HIERARCH ESO DET OUT-1 ADU =       1.7 / Electrons per ADU for output 1
+ HIERARCH ESO DET OUTREF =         1 / Ref. output (gives image orient.)
+ HIERARCH ESO DET UDIT =     1200. / User defined integr. time (sec)
+ HIERARCH ESO DET SHUT TMOPEN = 0.55 / Time needed to open shutter(sec)
+ HIERARCH ESO DET SHUT TMCLOS = 0.55 / Time needed to close shutter(sec)
+ 
+ HISTORY  ESO-DESCRIPTORS START   ................
+ HISTORY  &apos;TM_START&apos;       ,&apos;I*4 &apos;   ,    1,    1,&apos;7I10&apos;,&apos; &apos;,&apos; &apos;
+ HISTORY     8277165
+ HISTORY
+ HISTORY  &apos;TM_END&apos;         ,&apos;I*4 &apos;   ,    1,    1,&apos;7I10&apos;,&apos; &apos;,&apos; &apos;
+ HISTORY     8397165
+ HISTORY
+ HISTORY  &apos;STARS&apos;          ,&apos;R*4 &apos;   ,    1,   18,&apos;5E14.7&apos;,&apos; &apos;,&apos; &apos;
+ HISTORY   5.4900000E+02 7.3100000E+02 1.5027108E+00 8.9100000E+02
+ HISTORY   7.0500000E+0
+ HISTORY   3.7705088E-01 5.2700000E+02 4.9900000E+02 4.6984505E+01
+ HISTORY   6.9900000E+0
+ HISTORY   3.2300000E+02 2.5433607E+00 9.8500000E+02 1.0070000E+03
+ HISTORY   1.3809443E-0
+ HISTORY   9.5500000E+02 8.5700000E+02 2.8047466E-01
+ HISTORY
+ HISTORY  &apos;DPROFILE&apos;       ,&apos;R*4 &apos;   ,    1,   25,&apos;5E14.7&apos;,&apos; &apos;,&apos; &apos;
+ HISTORY   6.4694785E-02 1.5388322E-01 1.7471281E-01 2.3948735E-01
+ HISTORY   1.6241652E-0
+ HISTORY   3.6526257E-01 2.8000000E-01 2.5999999E-01 2.3999999E-01
+ HISTORY   2.0000000E-0
+ HISTORY   1.8000001E-01 1.6000000E-01 1.4000000E-01 1.4000000E-01
+ HISTORY   1.4000000E-0
+ HISTORY   1.4000000E-01 1.4000000E-01 1.4000000E-01 1.4000000E-01
+ HISTORY   1.4000000E-0
+ HISTORY   1.4000000E-01 1.4000000E-01 1.4000000E-01 1.4000000E-01
+ HISTORY   1.4000000E-0
+ HISTORY
+ HISTORY  &apos;LHCUTS&apos;         ,&apos;R*4 &apos;   ,    1,    4,&apos;5E14.7&apos;,&apos; &apos;,&apos; &apos;
+ HISTORY   0.0000000E+00 2.0000000E-01-2.5293514E+01 3.9667671E+01
+ HISTORY
+ HISTORY  &apos;DISPLAY_DATA&apos;   ,&apos;I*4 &apos;   ,    1,    9,&apos;7I10&apos;,&apos; &apos;,&apos; &apos;
+ HISTORY           2         2       563       513         0        -1
+ HISTORY          -         -1        -1
+ HISTORY
+ HISTORY  ESO-DESCRIPTORS END     ................
+ 
+ END
+ 
+ 
+    Software
+    ========
+      Standard IRAF reduction routines were used.
+ 
+ 
+    Media/Format
+    ============
+      This dataset is 8 MM tape submission to PDS which was referenced in
+      the Schulz et al. (1995) [SCHULZETAL1995] article.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+UNK
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3B</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

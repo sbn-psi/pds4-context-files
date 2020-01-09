@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:lo72ccd.lo72</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LOWELL 72IN VISUAL CCD CAMERA for LO72</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.lo72::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>LOWELL 72IN VISUAL CCD CAMERA</instrument_name>
+        <instrument_desc>
+ 
+ 
+Instrument Overview
+===================
+ 
+  The visible-wavelength, direct-imaging CCD system for the
+  Lowell Observatory 72-inch Perkins telescope, as well as the
+  42-inch Hall telescope, is a set of four CCD detectors that
+  can be moved between telescopes.
+ 
+  The CCDs are mounted in dewars filled with LN2, liquid nitrogen.
+  User manuals for the Lowell 72-inch and 42-inch telescopes and
+  the CCD controller software systems are available from the
+  Lowell 72-inch telescope web site:
+ 
+    http://www.lowell.edu/Research/Mesa/72inch/
+ 
+ 
+Detectors
+=========
+ 
+  Four, visible-wavelength, CCD detectors are available for direct
+  imaging, depending on the telescope chosen, the observing schedule,
+  and the type of observation to be made.  CCD detectors include:
+ 
+    - Loral 2K
+    - SITe 2K
+    - NCCD (Navy CCD)
+    - USNO CCD
+ 
+  The summary of the CCD detectors and telescope properties
+  are available at the web site noted above.  A brief description
+  each of the four CCDs is reproduced from the web site here.
+ 
+  Loral 2K CCD
+  ------------
+ 
+    The Loral 2Kx2K CCD is the default optical imaging device at
+    the 72-inch Perkins telescope.  The device is a back-illuminated
+    detector with 15-micron pixels.  The field-of-view is 3.2 by
+    3.2 arcminutes.  The unbinned system has a pixel scale of
+    0.0956 arcsec/pixel.  The chip is commonly binned at 2x2 for
+    a scale of 0.191 arcsec/pixel.  Other binnings are possible:
+    3x3 and 4x4 result in pixel scales of 0.287 arcsec/pixel or
+    0.382 arcsec/pixel, respectively.  The chip is linear up to
+    80,500 electrons or 26,000 ADU at the default gain of
+    3.1 electrons/ADS and appears to be the same either binned or
+    unbinned. The read noise depends upon the time constant.  At the
+    default setting, the read noise is 17 electrons, and the readout
+    time for a 2x2 binned image is 6 seconds.  The CCD has good
+    blue quantum efficiency: 35% at 3000 angstroms, 48% at 3500 angstroms,
+    and 79% at 4000 angstroms.  A quantum curve can be found at the
+    web site mentioned above.  A variety of filters are available
+    including UBVRI glass filters.
+ 
+    The &apos;old&apos; Loral died in early April 2001, and the chip described
+    above was put into service on 17 April 2001.
+ 
+  SITe 2K CCD
+  -----------
+ 
+    The SITe 2K x 2K CCD is a back-illuminated detector with 24-m pixels.
+    The CCD can be used either at the Perkins or at the Hall telescope,
+    although by default it is used at the Hall.  At the Perkins,
+    its one advantage over the Loral is its larger field of view:
+    5.2 by 5.2 arcminutes.  The system is capable of unbinned operation
+    at 0.153 arcsecond/pixel and 2x2 and 4x4 binned operations at
+    0.306 arcsecond/pixel and 0.612 arcsecond/pixel, respectively.
+    This chip also has good blue sensitivity.  A QE curve can be found
+    at the web site mentioned above.  Currently it is not possible to
+    read out a subframe with this system, so the read plus storage time
+    in unbinned mode is long, about 4 minutes.  This camera is normally
+    used either unbinned or binned 2x2 on the Hall telescope, and
+    binned 4x4 on the Perkins telescope without any reimaging optics.
+    The SITe CCD is cosmetically good, with two bright columns.
+    At present it suffers from some pattern noise, quite low full well
+    capacity, about 70,000 electrons, and read noise of about
+    14 electrons.  The gain is about 3.6 electrons/ADU.  The hold time
+    on the dewar in winter has been seen to be as long as 22 hours.
+    A variety of filters are available including UBVRI glass filters.
+ 
+  NCCD and USNO CCD
+  -----------------
+ 
+    These CCD cameras are based on TI 800x800 WFPC 1 CCDs with the
+    Harris electronics.  The CCDs are thinned, back-illuminated, and
+    have 15-micron pixels.  At the Perkins, the USNO CCD is
+    used with a 4:1 reduction box.  The unbinned system has
+    scale of 0.43 arcsecond/pixel and a field of view of
+    5.7 srcminutes.  The reducing optics are glass and have a
+    cutoff wavelength in the vicinity of 4000 angstroms.
+    The USNO CCD is reputed to have better UV quantum efficiency
+    than the NCCD device.  The USNO CCD is cosmetically very clean
+    and has an extremely flat bias.  The NCCD has a fingerprint on
+    it that is annoying but flattens out well . The major drawbacks
+    of the USNO CCD are that the dewar hold time is in the vicinity
+    of 13 hours.  The binning can be changed to 2x2 by flipping a
+    switch in the dewar electronics.  A variety of filters are
+    available including UBVRI glass filters.
+ 
+ 
+Filters
+=======
+ 
+  A set of standard UBVRI glass filters are available for use.
+  The prescriptions are:
+ 
+    - U: liquid CuSO4 + UG1 [42-inch has UG2]
+    - B: not: 1mm BG12 + 2mm BG39 + 1mm GG385
+    - V: 2mm GG495 + 2mm BG39
+    - R: 2mm OG570 + 2mm KG3
+    - I: Interference filter
+ 
+  The Lowell Observatory traced these filters on a Lambda 9
+  spectrophotometer of NOAO.  Filter transmission plots and
+  data, as well as plots of the filter curves convolved with
+  the CCD DQEs and compared to the standard system, are
+  available at the Lowell 72-inch telescope web site:
+ 
+    http://www.lowell.edu/Research/Mesa/72inch/
+
+        </instrument_desc>
+        <instrument_id>LO72CCD</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Camera</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

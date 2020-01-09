@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gio-c-ope-3-rdr-halley-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GIOTTO OPTICAL PROBE PHASE MEASUREMENTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.giotto::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ope.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.halley::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gio-c-ope-3-rdr-halley-v1.0__browserp_gio-c-ope-3-rdr-halley-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   The Giotto Mission, R. Reinhard and B. Battrick, ESA SP-1077, ESA Pub Div,
+                   Noordwijk, Netherlands, 1986.
+            </reference_text>
+            <description>reference.ESA-SP1077</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GIO-C-OPE-3-RDR-HALLEY-V1.0</data_set_id>
+        <data_set_name>GIOTTO OPTICAL PROBE PHASE MEASUREMENTS V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1986-03-13T23:16:10.000Z</start_time>
+        <stop_time>1986-03-14T00:02:49.000Z</stop_time>
+        <producer_full_name>INTERNATIONAL HALLEY WATCH</producer_full_name>
+        <citation_text>
+            Levasseur- Regourd, A. C., Giovane, F., M. A&apos;Hearn, E.
+            Grayzeck, and A.C. Raugh, GIOTTO OPTICAL PROBE PHASE MEASUREMENTS
+            V1.0, GIO-C-OPE-3-RDR-HALLEY-V1.0, NASA Planetary Data System,
+            1989.
+        </citation_text>
+        <data_set_terse_desc>
+            GIOTTO Optical Probe (OPE) phase measurements of 1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            The OPE photopolarimeter was designed to measure the polarized
+            components of the light in seven bandpasses or channels, ranging
+            from the near ultraviolet to the near infrared. Three channels
+            (so- called blue, green and red) were devoted to the observation
+            of the scattering of solar light by cometary dust grains, in
+            emission-free countinuum bands. Four other channels (so called
+            OH, CN, CO+, C2) were devoted to the observation of light emitted
+            by cometary gases.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The OPE photopolarimeter was designed to measure
+      the polarized components of the light in seven
+      bandpasses or channels, ranging from the near
+      ultraviolet to the near infrared.  Three channels
+      (so- called blue, green and red) were devoted to
+      the observation of the scattering of solar light by
+      cometary dust grains, in emission-free countinuum
+      bands.  Four other channels (so called OH, CN, CO+,
+      C2) were devoted to the observation of light
+      emitted by cometary gases.
+ 
+      The imaging of a mosaic of interference filters
+      (placed in front of the objective lens and
+      organized into a mosaic to compensate for the
+      chromatic effects) onto a microchannel plate
+      allowed the spectral discrimination to be achieved.
+      A polaroid analyzer, placed in front of each
+      filter, except the CO+ one, allowed the
+      polarization to be determined by the rotation of
+      the analyzer with the spin of the spacecraft.
+      During a spin period (of approximately 4 seconds),
+      eight consecutive measurements of the polarized
+      intensity, Ii, Ii+1, Ii+2, etc, (of approximately
+      half a second each), were performed in the seven
+      channels at eight so-called clock angles.
+ 
+ 
+      Absolute calibration
+ 
+ 
+      Due to the reduced amount of time available for
+      calibrations after the flight detector was
+      available, the absolute-radiance sensitivity of the
+      instrument had been inferred by considering the
+      individual spectral transmission of each optical
+      component, the field of view of the instrument, the
+      photocathode spectral sensitivity and the total
+      responsivity of the microchannel plate
+      photomultiplier (Giovane, 1991).  The results were
+      the following:
+ 
+ 
+Channel      Wavelength             Bandpass                Responsivity
+                nm                  50% peak,nm     10-7 Wm-2sr-1mm-1ct-1
+ 
+Blue            442                     5                       2.09
+Green           576                     10                      0.88
+Red		718			4			4.40
+OH		310			6			16.81
+CN		387			4			8.20
+CO+		424			4			1.34
+C2		514			4			3.75
+ 
+ 
+      The on-board calibration tritium-phosphor source
+      (mounted on the back of the baffle cover), which
+      allowed the instrument to be tested during the
+      pre-Halley-encounter cruise, was released with the
+      baffle cover prior to Halley encounter.
+ 
+      The data for Optical Probe Experiment was submitted
+      by Andrew Weisenberger for the Frank Giovane at the
+      Space Astronomy Laboratory, Univ of Florida.  The
+      data are grouped by &apos;phases&apos; into tabular form; the
+      first four columns of the table are calibrated
+      fluxes identified as P2, P3, P4, and CO+ (no
+      contribution or only a very weak one, not separable
+      from the underlying continuum exists for that gas
+      channel).  No time is specifically given but rather
+      the last column lists cometocentric distance
+      ranging from 192041 to 947 km.  Each table
+      corresponds to a specific phase.  Fluxes are
+      collected at 500 ms intervals, one phase after
+      another but are listed in each table at 4 s
+      intervals (at every rotation of the spacecraft or
+      about every 274 km along the spacecraft
+      trajectory).
+ 
+      Data for the gas are not given.  Three phases gave
+      non usable data and are thus not provided here.  In
+      all tables, the geometry relative to the comet is
+      the same.  The distance to the nucleus can be used
+      as a clock to identify the phase at which the
+      observations were taken.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      N/A
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

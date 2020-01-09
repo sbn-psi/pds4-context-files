@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.phx-m-tt-5-wind-vel-dir-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PHOENIX MARS TELLTALE WIND VELOCITY &amp; DIRECTION V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.phoenix::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:tt.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-tt-5-wind-vel-dir-v1.0__browserp_phx-m-tt-5-wind-vel-dir-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-tt-5-wind-vel-dir-v1.0__dvo_atm_phx-m-tt-5-wind-vel-dir-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gunnlaugsson, H. P., C. Holstein-Rathlou, J. P. Merrison, S. Knak Jensen, C. F.
+                   Lange, S. E. Larsen, M. B. Madsen, P. Nornberg, H. Bechtold, E. Hald, J. J.
+                   Iversen, P. Lange, F. Lykkegaard, F. Rander, M. Lemmon, N. Renno, P. Taylor, P.
+                   Smith, The Telltale Wind Experiment on Mars Phoenix Lander. J. Geophys. Res.,
+                   113, 2008, E00A04, doi:10.1029/2007JE003008.
+            </reference_text>
+            <description>reference.GUNNLAUGSSON2008</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Holstein-Rathlou, C. von, H. P. Gunnlaugsson, J. P. Merrison, Telltale
+                   Calibration Report, Version 7 (Aarhus University, Denmark, 2008).
+            </reference_text>
+            <description>reference.HOLSTEIN-RATHLOU2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PHX-M-TT-5-WIND-VEL-DIR-V1.0</data_set_id>
+        <data_set_name>PHOENIX MARS TELLTALE WIND VELOCITY &amp; DIRECTION V1.0</data_set_name>
+        <data_set_release_date>2009-04-29</data_set_release_date>
+        <start_time>2008-05-25</start_time>
+        <stop_time>2008-10-27</stop_time>
+        <producer_full_name>CHRISTINA HOLSTEIN-RATHLOU</producer_full_name>
+        <citation_text>
+            Holstein-Rathlou, C., and H. Gunnlaugsson, Phoenix Mars Lander
+            Telltale Wind Velocity and Direction Data, NASA Planetary Data
+            System, PHX-M-TT-5-WIND-VEL-DIR-V1.0, 2008.
+        </citation_text>
+        <data_set_terse_desc>
+            Phoenix Lander Telltale Wind Velocity &amp; Direction Data
+            Records, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Phoenix Telltale data set consists of a time-ordered table of
+            wind velocity and direction measurements obtained by analysis of
+            SSI images of the Telltale anemometer.
+        </abstract_desc>
+        <data_set_desc>
+      Data Set Overview
+      =================
+ 
+      The Telltale wind indicator is a mechanical anemometer designed to
+      operate on the Martian surface as part of the meteorological
+      package on the NASA Phoenix lander. It consists of a lightweight
+      cylinder suspended by Kevlar fibers and is deflected under the
+      action of wind. Imaging of the Telltale deflection allows the wind
+      speed and direction to be quantified and image blur caused by its
+      oscillations provides information about wind turbulence.
+ 
+      The Telltale data set consists of a single comma-delimited ASCII
+      table, TELLTALE.CSV, and its PDS label TELLTALE.LBL.
+ 
+      The table contains the following columns:
+ 
+      Sol             Phoenix Sol
+ 
+      LTST            Local True Time given in image header
+ 
+      LMST            Local Mean Solar Time calculated from LTST
+ 
+      v (m/s)         Wind speed in meters/second
+ 
+      dv+ (m/s)       Error in wind speed (positive)
+ 
+      dv- (m/s)       Error in wind speed (negative)
+ 
+      Dir (deg)       Wind direction in degrees given in meteorological
+                      convention (0 = from N, 90 = from E, 180 = from S,
+                      270 = from W)
+ 
+      dDir (deg)      Error in direction (given in degrees)
+ 
+      Exposure time   Exposure time by SSI in milliseconds
+ 
+      File name       SSI image filename used for the analysis
+ 
+      Processing
+      ==========
+ 
+      This data set has been generated by analysis of SSI images of the
+      Telltale. The images have been analyzed to determine the position
+      of the Kapton     tube in the Telltale reference frame. The shift
+      from rest position is calculated, and the wind velocity and errors
+      determined from the methods described in [HOLSTEIN-RATHLOU2008,
+      GUNNLAUGSSON2008]. The directions are finally converted to
+      areographic directions using the orientation of the lander. The
+      result is an ASCII table of time, wind velocity and direction,
+      errors in wind velocity and directory, and names of SSI images
+      used to derive the values.
+        </data_set_desc>
+        <confidence_level_note>
+      Confidence Level Overview
+      =========================
+ 
+      Estimated errors are included in the table.
+ 
+      Data Coverage and Quality
+      =========================
+ 
+      Data coverage during the course of the Phoenix mission is
+      dependent on when the Surface Stereo Imager could be used to
+      obtain movies of the telltale. This typically occurs one to
+      several times per sol. Quality indicators are included in the
+      table in the form of wind velocity errors.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

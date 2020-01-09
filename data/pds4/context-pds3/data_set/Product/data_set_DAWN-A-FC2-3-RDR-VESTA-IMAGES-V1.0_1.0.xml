@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dawn-a-fc2-3-rdr-vesta-images-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DAWN FC2 CALIBRATED VESTA IMAGES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.dawn_mission_to_vesta_and_ceres::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:fc2.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.4_vesta::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dawn-a-fc2-3-rdr-vesta-images-v1.0__browserp_dawn-a-fc2-3-rdr-vesta-images-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Schroeder, S.E., and P. Gutierrez-Marques, Calibration Pipeline, MPS Report
+                   DA-FC-MPAE-RP-272, Issue 2, Rev. a, 20 July 2011.
+            </reference_text>
+            <description>reference.SCHROEDER-GUTIER2011</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DAWN-A-FC2-3-RDR-VESTA-IMAGES-V1.0</data_set_id>
+        <data_set_name>DAWN FC2 CALIBRATED VESTA IMAGES V1.0</data_set_name>
+        <data_set_release_date>2013-08-12</data_set_release_date>
+        <start_time>2011-05-03T10:49:00Z</start_time>
+        <stop_time>2012-08-26T14:52:00Z</stop_time>
+        <producer_full_name>PABLO GUTIERREZ-MARQUES</producer_full_name>
+        <citation_text>
+            Nathues, A., H. Sierks, P. Gutierrez-Marques, S. Schroeder, T.
+            Maue, I. Buettner, M. Richards, U. Chistensen, U. Keller, DAWN
+            FC2 CALIBRATED VESTA IMAGES V1.0,
+            DAWN-A-FC2-3-RDR-VESTA-IMAGES-V1.0, NASA Planetary Data System,
+            2011.
+        </citation_text>
+        <data_set_terse_desc>
+            Reduced data records for Framing Camera 2 on Dawn during the
+            Vesta Encounter Phases
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== Framing Camera 2 is one of two identical units
+            flying on Dawn spacecraft. This dataset includes the Reduced Data
+            Record (RDR) version of all available images acquired during the
+            Vesta Encounter (Approach, Survey, Transfer to HAMO, HAMO,
+            Transfer to LAMO, LAMO, Transfer to HAMO2, HAMO-2, and Transfer
+            to Ceres). In addition to the imagery, anciliary information is
+            stored within the image headers, as well as a detailed account of
+            all the reference files used for the calibration. Calibration
+            files needed for further processing are archived as a separate
+            data set.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Dataset overview
+    ================
+      Framing Camera 2 is one of two identical units flying on Dawn
+      spacecraft. This dataset includes the Reduced Data Record (RDR) version
+      of all available images acquired during the Vesta Encounter (Approach,
+      Survey, Transfer to HAMO, HAMO, Transfer to LAMO, LAMO, Transfer to
+      HAMO2, HAMO-2, and Transfer to Ceres). In addition to the imagery,
+      anciliary information is stored within the image headers, as well as a
+      detailed account of all the reference files used for the calibration.
+      Calibration files needed for further processing are archived as a
+      separate data set. The images in this dataset have been radiometrically
+      calibrated by means of fully reversible procedures, transforming the
+      value of the pixels from digital units to applicable engineering units
+      without modification of the geometry.
+ 
+      For more information on the contents and organization of the volume
+      set refer to the aareadme.txt file located in the root directory of
+      the data volumes.
+ 
+    Parameters
+    ==========
+ 
+      Compression: FC images may optionally be compressed by wavelet
+      transformation.
+ 
+      Wavelet compression: Images may be integer or floating point wavelet
+      transform-compressed in the DPU. The integer approach produces lossless
+      compression, while the floating point can induce distortions of +/-1 DN.
+      The encoding of the wavelets ensures that any length of the data
+      starting at the beginning can be decoded, thus allowing to compress
+      further by discarding the trailing part.
+ 
+      Windowing: In order to manage downlink resources, up to 10 portions
+      of the image can be selected in the DPU and downlinked as subframes.
+      The subframes are allowed to overlap. During EDR construction each
+      subframe is stored separately and also mosaicked into the original
+      image.
+ 
+      Exposure Control: The exposure time of FC images is set
+      by command for each image.
+ 
+      Pointing: The Framing Cameras are fix mounted onto the Dawn Instrument
+      deck, with the nominal alignment of the optical axis with the +Z axis of
+      the spacecraft. Deviations from the nominal are documented in the
+      calibration data.
+ 
+      Filter selection: The FC has 8 filters at its disposal, numbered from F1
+      to F8. F1 is a broadband (clear) filter, sensitive in the wavelength
+      interval from 400 to 1100 nm peaking at 700 nm. The narrow-band color
+      filters are of the interference type, and have wavelengths ranging from
+      430 to 980 nm.
+ 
+    Processing
+    ==========
+      An FC image downlinked by the spacecraft unpacks into a succession of
+      one or more compressed image subframes with an attached PDS headers
+      containing housekeeping items that include full status of the instrument
+      hardware, software configuration, temperature, voltage and current
+      readings.
+ 
+      The data in one EDR consists of one or more reconstructed image frames,
+      with the accompanying header translated into text format in the label.
+      The dimensions and location (pixel coordinates) of each frame are
+      included for proper further processing. Each frame is formatted into
+      one file (suffix *.IMG), with an attached label.
+ 
+      Subframes are retained as separate entities and also are reassembled
+      into their original coordinates in the &apos;summary&apos; image. Parts of the
+      reconstructed image not included in the subframes are given a value
+      of zero.
+ 
+      The label contains all relevant housekeeping information in calibrated
+      form (e.g. degrees Celsius, volts, or amperes).
+ 
+      The calibration process is divided into several steps that aim to remove
+      the effect of different source of noise: conversion from 16-bit integer
+      to 32-bit floating point, read-out bias, dark current, read-out smear,
+      flat field non-uniformity, correction of under-sensitive pixels,
+      exposure normalization, radiometric calibration.
+ 
+      For more detailed informatin on the calibration process, please refer to
+      [SCHROEDER&amp;GUTIER2011].
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Exposure times
+    ==============
+      Due to an idiosyncracy of the proximity electronics, that takes
+      approximately 193 milliseconds from the commanding of the image
+      acquisition to the actual start of the exposure, the images report the
+      commanding time and the end of exposure. This results in a difference of
+      193 milliseconds between the usual calculation of exposure time
+      (STOP_TIME - START_TIME) and the reported EXPOSURE_DURATION, which is
+      always shorter than the difference of the other two.
+ 
+    Data Coverage
+    =============
+      The following table provides a list of major image losses and anomalies
+      which affect FC science data coverage.
+ 
+      ---------------------------------------------------------------------
+                      Start
+      Phase/Obs       Date     Description
+      ---------------------------------------------------------------------
+      VSA/OpNav #11   11/179   All images from were lost due to a spacecraft
+                               safing.
+ 
+      VSA/RC3         11/205   16 images were 0 ms exposures and are not
+                               included in the L-1B data set.
+ 
+      VSA/RC3B        11/205   16 images were 0 ms exposures and are not
+                               included in the L-1B data set.
+ 
+      VSH/Cycle 1/    11/276   104 images were tranmitted in raw format due
+      Orbit 9                  to an overflow in the number of images in
+                               camera memory.
+ 
+      VSH/Cycle 1/    11/277   68 images were tranmitted in raw format due
+      Orbit 10                 to an overflow in the number of images in
+                               camera memory.
+ 
+      VSH/Cycle 2/    11/278   All FC images from orbit 1 were lost due to a
+      Orbit 1                  delay in uploading science command sequences.
+ 
+      VTL/OpNav #2             Observation cancelled as the spacecraft was on
+                               the night side of Vesta at the scheduled time.
+ 
+      VTL/OpNav #3             Observation cancelled as the spacecraft was on
+                               the night side of Vesta at the scheduled time.
+ 
+      VSL/Cycle 1     11/347   131 images lost due to a spacecraft safing.
+ 
+      VSL/Cycle 6     12/014   All images lost due a spacecraft safing.
+ 
+      VSL/Cycle 11    12/049   40 images lost due to a spacecraft safing.
+ 
+      VSL/Cycle 13    12/063   252 images lost due to a spacecraft safing.
+      ---------------------------------------------------------------------
+ 
+      Data Quality
+      ============
+ 
+      The following table contains a list of known corrupted images. These
+      images have been omitted from the RDR data set.
+ 
+      ---------------------------------------------------------------------
+      Corrupted Images
+      ---------------------------------------------------------------------
+      Phase/Obs       Image #   Notes
+      ---------------------------------------------------------------------
+      VSA/MoonSrch    0002889   image double exposed
+      VH2/Cyc3/Orb9   0028659
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

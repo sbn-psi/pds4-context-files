@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ody-m-thm-2-visedr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ODYSSEY THEMIS VIS EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.2001_mars_odyssey::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ody::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:themis.ody::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ody-m-thm-2-visedr-v1.0__asu.themis_home_page::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ody-m-thm-2-visedr-v1.0__browserp_ody-m-thm-2-visedr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ody-m-thm-2-visedr-v1.0__dvo_asu_ody-m-thm-2-visedr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ody-m-thm-2-visedr-v1.0__dvo_imaging_ody-m-thm-2-visedr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Christensen, P. R., Calibration Report for the Thermal Emission Imaging
+                   System (THEMIS) for the Mars 2001 Odyssey Mission, September 2002.
+            </reference_text>
+            <description>reference.CHRISTENSEN2002</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ODY-M-THM-2-VISEDR-V1.0</data_set_id>
+        <data_set_name>ODYSSEY THEMIS VIS EDR V1.0</data_set_name>
+        <data_set_release_date>2002-10-01</data_set_release_date>
+        <start_time>2002-02-19T18:59:36.689Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>PHILIP R. CHRISTENSEN</producer_full_name>
+        <citation_text>
+            Christensen, P.R., ODYSSEY THEMIS VIS EDR V1.0,
+            ODY-M-THM-2-VISEDR-V1.0, Mars Odyssey THEMIS Standard Products,
+            NASA Planetary Data Systems, 2002.
+        </citation_text>
+        <data_set_terse_desc>
+            2001 ODY THEMIS VIS EDR Data Records
+        </data_set_terse_desc>
+        <abstract_desc>
+            The THEMIS VIS-EDR data set contains the raw visible
+            observations. Each qube header includes basic parameters
+            describing the observation.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The THEMIS VIS-EDR data set contains the raw visible observations. Each
+    qube header includes basic parameters describing the observation.
+ 
+    The VIS-EDR data set is one of several associated data sets included on
+    the Mars Odyssey THEMIS Standard Products volume.  These data sets
+    include the experimental, reduced, and derived data products.  Each
+    observation in the experimental (EDR) and reduced (RDR) data sets is
+    stored in a single PDS SPECTRAL_QUBE image product, while each
+    observation in the derived (BTR or ABR) data sets is stored in a single
+    PDS IMAGE product.
+ 
+    This data set may be reprocessed at the end of the Odyssey mission.
+ 
+ 
+  Data
+  ====
+    The THEMIS instrument is a combined thermal infrared (IR) and visible
+    (VIS) multispectral, pushbroom imager.  The IR and VIS detector arrays
+    are co-aligned, allowing, if desired, the simultaneous observation of the
+    same Mars surface location with each detector.
+ 
+    Each image may contain any combination of the available wavelength bands:
+    there are ten available bands in the IR detector array, and there are
+    five available bands in the VIS detector array.  IR images are 320 pixels
+    wide and vary in length from 272 to 65,296 pixels long.  VIS images are
+    acquired in framelets of size 1024 pixels wide by 192 pixels long; the
+    number of framelets per image is determined by the number of bands
+    selected, such that the total image size does not exceed 3.734 Mbytes.
+    Spatial summing may be applied after image collection, thereby reducing
+    the nominal image dimensions listed above.
+ 
+    All images follow PDS formatting standards and are stored as binary
+    images with attached ASCII label and header data objects.  The label of
+    THEMIS SPECTRAL_QUBE data products (EDRs and RDRs) contains
+    identification and observation parameters associated with the image.
+    Also in each header is a HISTORY data object, in ASCII format, detailing
+    all processing applied during the generation of the product.  For raw
+    infrared (IR EDR) products, the header also includes a second data object
+    containing binary telemetry information that was sampled regularly
+    throughout the observation.
+ 
+    The application of the THEMIS calibration algorithms transforms a raw
+    (EDR) image into a radiometrically calibrated (RDR) image with only minor
+    changes to the file format.  Then, the THEMIS derived products are
+    calculated from a single band of the corresponding RDR: the infrared
+    brightness temperature records (IR BTR) are usually derived from band 9
+    (12.57 um); the visible apparent brightness records (VIS ABR) are usually
+    derived from band 3 (0.654 um).  The results are stored as an 8-bit IMAGE
+    with an attached label containing identification and some basic geometric
+    parameters.  For more details of the THEMIS processing algorithms and the
+    data product formats, please refer to the Mars Odyssey THEMIS: Data
+    Processing User&apos;s Guide (CHRISTENSEN2009) and the Mars Odyssey THEMIS:
+    Standard Data Products SIS (CHRISTENSEN2014a), included with this data
+    set archive.
+ 
+ 
+  Coordinate System
+  =================
+    The data products included on the Mars Odyssesy THEMIS Standard Products
+    volume are not projected into any coordinate systems.  The image files
+    maintain the raw raster order produced by the instrument, reorganized to
+    group together the data from each band.  The SPECTRAL_QUBE band are not
+    spatially registered.  Layers within a single product can be out of
+    registration with each other by up to 10 lines and/or columns.
+ 
+    The geometric parameters stored in the headers of the BTR and ABR IMAGE
+    products are generated using the appropriate Odyssey SPICE kernels and
+    a THEMIS specific model in the ISIS software.  The values provided
+    represent the center of the image and are based on the Mars IAU 2000
+    aerocentric model with east positive longitude.
+ 
+ 
+  Software
+  ========
+    All data products on this volume follow the PDS standards appropriate for
+    the data type, SPECTRAL_QUBE or IMAGE.  Any software tool that
+    understands that structure should be able to open and manipulate them.
+ 
+    The THEMIS team uses the software tools DAVINCI and ISIS to display,
+    analyze, and project the data products.  DAVINCI is a data analysis
+    package for working with multi-spectral images; it is distributed by the
+    ASU Mars Space Flight Facility and is available at
+    http://davinci.asu.edu.  ISIS is an image processing package produced by
+    USGS-Flagstaff and available at http://isis.astrogeology.usgs.gov.
+ 
+ 
+  Media/Format
+  ============
+    The publication and distribution of this data set will be facilitated
+    online through the THEMIS Data Node (http://static.mars.asu.edu/pds).
+    Due to the large volume of data products expected from the mission,
+    physical copies of the data will be made for PDS long-term archive
+    purposes only.
+        </data_set_desc>
+        <confidence_level_note>
+    Please refer to the Mars Odyssey Processing User&apos;s Guide
+    (CHRISTENSEN2009), which is included with this data set archive.
+        </confidence_level_note>
+        <archive_status>IN_QUEUE</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

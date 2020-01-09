@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.clem1-l-e-y-a-b-u-h-l-n-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CLEM1-LUN/EAR/SKY-ASTAR/BSTAR/UVVIS/HRES/LWIR/NIR-2-EDR-V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.deep_space_program_science_experiment::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:a-star.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:b-star.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hires.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lwir.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nir.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:uvvis.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.sky::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-e-y-a-b-u-h-l-n-2-edr-v1.0__browserc_clem1-l-e-y-a-b-u-h-l-n-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-e-y-a-b-u-h-l-n-2-edr-v1.0__browserp_clem1-l-e-y-a-b-u-h-l-n-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-e-y-a-b-u-h-l-n-2-edr-v1.0__dvo_imaging_clem1-l-e-y-a-b-u-h-l-n-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Acton, Jr. C.H., Ancillary Data Services of NASA&apos;s Navigation and Ancillary
+                   Information Facility, Planetary and Space Sciences, 44, Number 1, pp. 65-70,
+                   1996.
+            </reference_text>
+            <description>reference.ACTON1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Eliason, E.M., E.R. Malaret, and G. Woodward, Clementine Mission: The
+                   Archive of Image Data Products and Data Processing Capabilities,
+                   (Abstract), Proceedings of the 26-th Lunar and Planetary Conference, in
+                   press, pp. 369-370, 1995.
+            </reference_text>
+            <description>reference.ELIASONETAL1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gaddis, L., A. McEwen, and M. Robinson, The Distribution of Localized Lunar
+                   Pyroclastic Deposits as Related to Crustal Thickness, Proceedings of the
+                   26-th Lunar and Planetary Conference, in press, p. 433, 1995.
+            </reference_text>
+            <description>reference.GADDISETAL1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   McEwen, A.S., and E.M. Shoemaker, Two Classes of Impact Basins on the Moon,
+                   Proceedings of the 26-th Lunar and Planetary Conference, in press, 1995.
+            </reference_text>
+            <description>reference.MCEWEN-SHOEMAKER1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   McEwen, A.S., M.S. Robinson, T.C. Duxbury, and B.J.Buratti, Global Albedo
+                   Variations on the Moon: Clementine 750-NM Observations, Proceedings of the
+                   26-th Lunar and Planetary Conference, in press, pp. 931-932, 1995.
+            </reference_text>
+            <description>reference.MCEWENETAL1995A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   McEwen, A.S., T. Becker, A. Bennett, J. Bowell, K. Edwards, E. Eliason, L.
+                   Gaddis, C. Isbell, A. Howington- Kraus, R. Kirk, E. Lee, H. Morgan, and M.
+                   Robinson, New Digital Images on the Moon, Proceedings of the 26-th Lunar
+                   and Planetary Conference, in press, p. 929, 1995.
+            </reference_text>
+            <description>reference.MCEWENETAL1995B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   McEwen, A.S., M.S.Robinson, E.M. Eliason, P.G. Lucey, B.R. Hawke, and T.C.
+                   Duxbury, Clementine and Groundbased Observations of the Aristarchus Region
+                   of the Moon, Proceedings of the 26-th Lunar and Planetary Conference, in
+                   press, p. 933, 1995.
+            </reference_text>
+            <description>reference.MCEWENETAL1995C</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Shoemaker, E., and M.S. Robinson, Clementine Observations of Melt Rocks and
+                   Volcanic Materials in the Schrodinger Basin, Proceedings of the 26-th Lunar
+                   and Planetary Conference, in press, pp. 1297-1298, 1995.
+            </reference_text>
+            <description>reference.SHOEMAKER-ROBINS1995</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CLEM1-L/E/Y-A/B/U/H/L/N-2-EDR-V1.0</data_set_id>
+        <data_set_name>CLEM1-LUN/EAR/SKY-ASTAR/BSTAR/UVVIS/HRES/LWIR/NIR-2-EDR-V1.0</data_set_name>
+        <data_set_release_date>1995</data_set_release_date>
+        <start_time>1994</start_time>
+        <stop_time>1994</stop_time>
+        <producer_full_name>NAVAL RESEARCH LABORATORY</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Clementine Imaging (UVVIS, HIRES, NIR, LWIR) Lunar Experiment
+            Data Records
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Clementine EDR (Engineering Data Record) Image Archive
+            contains 88 CD-ROM volumes with more than 1.9 million images.
+            Each volume contains approximately 3 lunar orbits but may vary in
+            the number of orbits depending on the size of each orbit. The
+            first volume in the set begins with orbit number 32--the start of
+            the systematic lunar mapping phase of the mission. The image data
+            products for the engineering checkout and operational rehearsal
+            orbits (orbits 1-31), low Earth orbits, and earth phasing loop
+            orbits are located on the last eight volumes at the end of the
+            volume set.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Clementine EDR (Engineering Data Record) Image Archive
+      contains 88 CD-ROM volumes with more than 1.9 million images.
+      Each volume contains approximately 3 lunar orbits but may vary
+      in the number of orbits depending on the size of each orbit.
+      The first volume in the set begins with orbit number 32--the
+      start of the systematic lunar mapping phase of the mission.
+      The image data products for the engineering checkout and
+      operational rehearsal orbits (orbits 1-31), low Earth orbits,
+      and earth phasing loop orbits are located on the last eight
+      volumes at the end of the volume set.  Table 1 shows the
+      contents of the CD-ROM volume set.
+ 
+ 
+      Table 1 - Volumes/Mission Phase
+      -------------------------------
+      CL_0001 through CL_0036 - Lunar Mapping/Systematic Mapping
+                                Cycle 1 (orbits 32-164)
+      CL_0037 through CL_0070 - Lunar Mapping/Systematic Mapping
+                                Cycle 2 (orbits 165-300)
+      CL_0070 through CL_0081 - Lunar Mapping/Post-Systematic
+                                Mapping (orbits 301-348)
+      CL_0081 through CL_0085 - Lunar Mapping/Engineering Checkout
+                                (orbits 1-30)
+      CL_0085                 - Low Earth Orbit
+      CL_0086 through CL_0088 - Earth Phasing Loop A
+      CL_0088                 - Earth Phasing Loop B
+ 
+      In addition to the image data, the CD-ROM volumes contain
+      documentation, software, timeline data, and index files that
+      support the collection.  The &apos;aareadme.txt&apos; file found in the
+      root directory of each volume provides the user with overview
+      information about the data volumes.  The&apos;document&apos; directory
+      contains detailed documentation about the CD-ROM contents,
+      image file formats, software, and CD-ROM directory structure.
+      The &apos;errata.txt&apos; file found in the root directory of each
+      volume provides the user with information about problems and
+      anomalies encountered with the data set during the production
+      of the CD-ROM volumes.  Volume CL_0088, the last volume in the
+      set, contains the most up-to-date software and documentation.
+ 
+      The Clementine spacecraft imaged 100% of the lunar surface at
+      resolutions that ranged from 100 meters/pixel at periselene (28
+      degrees south latitude for observations during the first month
+      and 28 degrees north latitude for the second month) to 400
+      meters/pixel at the poles.  Along the orbital track there is
+      approximately 15% overlap in image coverage between adjacent
+      images of the same spectral band.  Across track overlap is
+      approximately 10% at the equator and increases towards the
+      poles.
+ 
+      The primary scientific objective of the Clementine imaging
+      observations was to provide data for lunar mineral mapping
+      investigations.  Imaging was acquired in 12 spectral bands from
+      415 to 8750 nm.  Pole-to-Pole NAIDR observations with solar
+      phase angles kept to less than 30 degrees at mid-latitudes were
+      the predominant viewing conditions during the two month
+      systematic mapping phase of the mission.
+ 
+ 
+    Data
+    ====
+      Each Clementine EDR data file consists of a single camera
+      observation.  The image data have been depacketized and
+      reformatted with standard PDS labels but are otherwise raw.
+      Raw data contain the geometric and radiometric characteristics
+      of unprocessed and unrectified data.  To make full use of the
+      data, it is necessary to perform radiometric and geometric
+      processing on the data products.
+ 
+      The imaging sensors are framing cameras using charge couple
+      device (CCD) technology.  The Star tracker cameras (A-STAR and
+      B-STAR) were principally used for spacecraft orientation.  The
+      UVVIS, HIRES, and NIR cameras have filter wheels that allow
+      images to be acquired under six spectral filters.  The LWIR
+      camera has a single spectral filter.  Table 2 shows the pixel
+      dimensions of the images acquired by each camera and the center
+      wavelength of each filter wheel position.  Other than the image
+      dimensions, the data products of each camera are identically
+      formatted.
+ 
+      Table 2 - Characteristics of each camera showing the dimension
+      of an image in lines (rows) and samples (columns), the number
+      of filter wheel positions, and the center wavelength of each
+      filter.
+ 
+      Camera/Lines/Samples/# of filt/filt.Wavelengths(Nanometers)
+      -----------------------------------------------------------
+ 
+      UVVIS   288   384  6   415,750,900,950,1000,650(broadband)
+      HIRES   288   384  6   415,560,650,750,650(broadband), opaque
+      NIR     256   256  6   1100,1250,1500,2000,2600,2780
+      LWIR    128   128  1   8750
+      A-STAR  576   384  N/A (broad band, no filter wheel)
+      B-STAR  576   384  N/A (broad band, no filter wheel)
+ 
+ 
+      Data Compression
+      ----------------
+        Data compression was done onboard using a compression chip
+        provided by Centre National Etudes Spatiales (CNES).  Onboard
+        processing was performed on a completed image prior to
+        storage on the solid state data recorder (SSDR) when the
+        appropriate compression flag was set.  The image data are
+        stored on the CD-ROM volumes in the original compressed form
+        as sent down by the spacecraft.  In order to decompress an
+        image, it is necessary to run the decompression software
+        found on the CD-ROM volumes.
+ 
+        The compression chip developed by MATRA under CNES
+        specifications is used in two modes, which could be selected
+        via a software uplink command.  The first mode involved a
+        discrete cosine transformation (DCT), (named Clem-JPEG-1),
+        and optimized root mean square error for a nominal
+        compression.  The second (called Clem-JPEG-2) provided visual
+        optimization at a fixed compression rate.  In the first mode,
+        blocks of 8x8 pixel 8-bit data are transformed to a best fit
+        cosine series expansion in orthogonal row and column
+        directions.  This algorithm tends to preserve high frequency
+        information with less data loss than does JPEG at the same
+        compression ratio for the lunar data.  Total signal from the
+        8x8 block is preserved exactly.  The nominal amount of
+        compression was set by limiting the scene error induced by
+        compression to a fraction of the camera&apos;s temporal noises.
+        Analysis of lunar images during the first part of the mission
+        showed that the quantization matrix used by the chip was
+        optimum for the imaging cameras.
+ 
+        The HIRES camera was operated in a modified JPEG mode.  The
+        high frequency information in the HIRES scenes was spurious
+        (it was caused by gain non-uniformity of the intensifier
+        tube); eliminating high frequency content allowed higher
+        compression without harming the information content of the
+        scenes.
+ 
+        The average compression rate for all images obtained during
+        the mission was 5.5.
+ 
+ 
+    Processing
+    ==========
+ 
+      Raw Clementine Images
+      ---------------------
+        The primary data archived is the collection of raw planetary
+        images acquired by the Clementine mission.  These data are
+        pristine in the sense that they contain the artifacts and the
+        radiometric and geometric characteristics of unprocessed and
+        uncorrected data.  The only processing performed on the data
+        is to organize and format the data according to PDS
+        standards.
+ 
+ 
+      Requantization Matrices for Data Decompression
+      ----------------------------------------------
+        The requantization matrix for the DCT compression algorithm
+        is modified throughout the course of a mapping cycle as the
+        viewing conditions and science requirements change.  The
+        requantization matrix used for an image is carried as part of
+        the image object within a compressed image file.
+ 
+ 
+      Browse Images
+      -------------
+        A set of browse images is provided as part of the archive to
+        facilitate rapid viewing of the image collection.  Browse
+        images can be used to visually search for areas of interest.
+        If a browse image shows a potentially interesting scene, the
+        image can be decompressed for more detailed inspection.
+        Browse images are not in a compressed format, but they are
+        reduced in size by averaging 8x8 pixel neighborhoods of the
+        original image.  The average is stored as a single pixel in
+        the browse image.  A browse image is stored in a secondary
+        object in the image file.
+ 
+ 
+      Histograms
+      ----------
+        The histogram object is made up of a 256 element array with
+        each element stored as a 32-bit unsigned integer.  Each
+        element in the histogram object contains the count of the
+        number of pixels in the image array that corresponds to a
+        specific density number (DN) value.  The first element of the
+        histogram is the number of pixels in the image array that
+        have a DN value of 0.  The second element contains the count
+        of pixels with DN value 1, the sequence thus proceeding to
+        the 256-th element which contains a count of the number of
+        pixels with a DN value of 255.
+ 
+        Inconsistencies may exist between the histogram statistics
+        found in the image histogram object and the actual image that
+        is decompressed on your computer platform.  Subtle
+        differences in the floating point hardware among computer
+        platforms may cause the Density Number (DN) values of a
+        resulting decompressed image to be occasionally different
+        (within 1 DN) than the decompressed image used to generate
+        the image histogram object.
+ 
+ 
+    Ancillary Data and Information
+    ==============================
+ 
+      Documentation
+      -------------
+        Each volume contains detailed information about the
+        organization and contents of the Clementine EDR CD-ROM volume
+        set.  The documentation for the collection is found in the
+        &apos;document&apos; directory.  Although each volume contains a
+        &apos;document&apos; directory, use the documents found on the last
+        volume (volume CL_0088) especially to obtain the most
+        up-to-date version of the errata.txt file.
+ 
+ 
+      Software
+      --------
+        Each volume contains decompression software and simple image
+        display programs for MAC, PCDOS or SUNOS platforms.  Although
+        each volume contains a &apos;software&apos; directory, use the software
+        found on the last volume (volume CL_0088) to obtain the most
+        up-to-date version of the software.
+ 
+ 
+      Image Index
+      -----------
+        Each volume contains an image index file that describes the
+        properties of each image found on the volume.  The image
+        index file is an
+ 
+        ASCII formatted table where each row in the table corresponds
+        to an image and each column corresponds to an image
+        attribute.  The attributes associated with an image include
+        the center latitude and longitude, camera state at the time
+        of the observation, spacecraft position, viewing angles, and
+        photometric parameters.  The image index file is located in
+        the &apos;index&apos; directory of each volume.  For more information
+        on the image index file, refer to the documentation found in
+        this directory.
+ 
+        An updated Image Index of the entire Clementine EDR volume
+        set was generated by Clementine Mission Operations after
+        completion of the volume set.  The update contains
+        refinements in the SPICE kernel data providing improvements
+        in the viewing geometry information found in the table.
+        Contact the PDS Imaging Node for the most up-to-date Image
+        Index information.
+ 
+        A CD-ROM volume may contain a table of missing images which
+        lists planned image observations that are not available on
+        the Clementine EDR volume set.  An image is missing when (1)
+        the planned observation was never acquired due to a
+        spacecraft malfunction, (2) an interruption or error occurred
+        during the telemetry transmission of data to Earth, or (3)
+        data were lost due to problems in the ground processing
+        system.
+ 
+ 
+      Orbit Timeline
+      --------------
+        Each volume contains a &apos;timeline&apos; directory housing the
+        timeline files for each orbit on the volume.  The timeline
+        data describes the planned and unplanned events that occurred
+        during an orbit.  The data, organized in chronological order,
+        are formatted as Microsoft EXCEL (PC Version 5.0) spreadsheet
+        files.
+ 
+ 
+      Geometric Data
+      --------------
+        The geometric data are an essential part of the archive; they
+        contain the data and information to characterize the
+        geometric properties of the imaging systems, and to fully
+        describe the viewing geometry of a scene.  These data are
+        essential to geodetic, cartographic, and photometric
+        applications.
+ 
+        The geometric data are provided in NASA&apos;s SPICE kernel
+        formats designed by the Navigational and Ancillary
+        Information Facility (NAIF) at the Jet Propulsion Laboratory.
+        SPICE is an acronym for Spacecraft, Planet, Instrument,
+        C-matrix, and Event kernels.
+ 
+        SPICE kernels evolve and improve as further analysis is done.
+        Improvements could include correcting not-yet-discovered
+        errors and filling in missing items.  For the most up-to-date
+        and accurate SPICE information available for the Clementine
+        mission please contact the Planetary Data System NAIF Node.
+ 
+        The geometric data found in the PDS data labels and image
+        index files are based on the SPICE information available at
+        the time of product creation.  Although the geometric data
+        found on the CD-ROM volumes are satisfactory for search and
+        retrieval methods and locating images on the Lunar surface,
+        they are not the most up-to-date data available and thus
+        should not be used for precision data processing purposes.
+ 
+        Data reviewers have reported confusion about several
+        parameters that describe geometric information about the
+        observations.  The SUB_SPACECRAFT_LATITUDE,
+        SUB_SPACECRAFT_LONGITUDE, SPACECRAFT_ALTITUDE, and
+        SUB_SPACECRAFT_AZIMUTH parameters, found in the image index
+        file (IMGINDX.TAB) and the image file labels, are referenced
+        with respect to the central body which the spacecraft is
+        orbiting, not necessarily the target of the observation.
+        During the lunar mapping phase of the mission, the central
+        body is the Moon.  Thus, if the target is the Earth, the
+        above listed parameters are referenced with respect to the
+        Moon and not Earth.
+ 
+ 
+      Coordinate System
+      -----------------
+        J2000 (also called EME2000) is the inertial reference system
+        used to specify observational geometry.  Latitude and
+        longitude coordinates of target are planetocentric.
+ 
+        For a complete description of the coordinate system used for
+        the Clementine EDR data set, refer to [ACTON1996].
+ 
+ 
+      Media Format
+      ------------
+        The disk has been formatted so that a variety of computer
+        systems (e.g.  IBM/PC compatible, Macintosh, Sun) may access
+        the data.  Specifically, it is formatted according to the ISO
+        9660 level 1 Interchange Standard.  For further information,
+        refer to the ISO 9660 Standard Document: Reference Number ISO
+        9660-1988, 15 April 1988.  The extended attribute records
+        (XAR) supported by the ISO are not used in this volume set.
+        The lack of XARs on a file only affects the VAX/VMS user
+        community.  It will be necessary for VAX/VMS users to use the
+        VMS CONVERT utility to convert document and text files before
+        they can be satisfactorily accessed.  VAX/VMS users can
+        contact the PDS Imaging Node for support of the Clementine
+        EDR archive.
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+ 
+      Review/Validation Process
+      -------------------------
+      Each CD-ROM volume went through a volume review and validation
+      process.  Although the volumes were carefully checked for errors
+      and anomalies, problems with the data set not yet discovered may
+      exist in the data collection.  Please report any newly
+      discovered problems to the PDS Imaging Node.  Errors and
+      anomalies found in the data collection are reported in the
+      ERRATA.TXT file found in root directory of each volume.  The
+      ERRATA.TXT file found on the last volume (volume 88) contains a
+      complete list of problems found in the volume set.
+ 
+ 
+      Data Quality
+      ------------
+      The DATA_QUALITY_NAME element provides a measure of the quality
+      of an observation. For Clementine imaging data,
+      DATA_QUALITY_NAME and DATA_QUALITY_ID are analogous.
+ 
+      NOTE:  The data quality indicators are only available through
+      the on-line Clementine Navigator system and are not documented
+      on the CD-ROM archive.
+ 
+      The standard values for DATA_QUALITY_NAME are:
+ 
+      NOMINAL IMAGE QUALITY (DATA_QUALITY_ID 1)
+      The statistics of the image is sufficient for properly
+      characterizing the brightness variations of a scene. Less than
+      5% of the image contains saturated values and the standard
+      deviation of the density values of the image is greater than
+      4.0.
+ 
+      UNDEREXPOSED OR DARK-SIDE IMAGE (DATA_QUALITY_ID 2)
+      The integration time (exposure time) of the image is
+      insufficient for properly characterizing the brightness
+      variations of a scene or the image was acquired on the Dark Side
+      of the Moon. The standard deviation of the density values of the
+      image is less than 4.0. Images with data quality id 2 may not be
+      suitable for proper characterization of the target.
+ 
+      MODERATE IMAGE SATURATION (DATA_QUALITY_ID 3)
+      The image contains a moderate amount of saturated data. The
+      brightness variations within the brightest parts of an image
+      can not be properly characterized. The image contains greater
+      than 5% saturated data. The integration time (exposure time) of
+      the image was too long for the brightest areas of the scene to
+      be properly recorded.
+ 
+      SEVERE IMAGE SATURATION (DATA_QUALITY_ID 4)
+      The image contains greater than 25% saturated data. The
+      integration time (exposure time) of the image was too long for
+      the brightness of the scene. Additionally, it is possible that
+      the operating mode of the camera was improperly set.
+ 
+      EMPTY IMAGE (DATA_QUALITY_ID 5)
+      The LIDAR HIRES camera was acquiring altimetry observations but
+      no simultaneous image observation was made. The camera was
+      intentionally programmed to not record imaging data. In order
+      to operate the LIDAR ranging, the hardware of the HIRES camera
+      needed to remain active even though no image data were acquired.
+      Most of the LIDAR HIRES imaging data at the mid-latitudes have
+      DATA_QUALITY_ID=5. The Clementine engineers were concerned that
+      continued operation of the HIRES camera would cause
+      deteriorating performance. With the intent of preserving the
+      HIRES camera for the Geographos asteroid encounter, the imaging
+      was &apos;turned off&apos; for most of the mid-latitude lunar
+      observations.  The empty images are stored in the archive for
+      the sake of preserving all data from the mission. Perhaps the
+      only useful information in an &apos;empty&apos; image is the measure of
+      the camera dark current drift.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>94-004A-00D</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

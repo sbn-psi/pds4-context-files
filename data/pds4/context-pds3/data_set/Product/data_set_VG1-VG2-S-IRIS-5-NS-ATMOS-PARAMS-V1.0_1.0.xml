@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg1-vg2-s-iris-5-ns-atmos-params-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VOYAGER 1&amp;2 SATURN IRIS DERIVED NORTH/SOUTH PARAMETERS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:iris.vg1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:iris.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg1-vg2-s-iris-5-ns-atmos-params-v1.0__browserp_vg1-vg2-s-iris-5-ns-atmos-params-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Conrath, B.J. and P.J. Gierasch, Global Variations of the Para Hydrogen
+                   Fraction in Jupiter&apos;s Atmosphere and Implications for Dynamics on the Outer
+                   Planets, Icarus, 57, 184-204, 1984.
+            </reference_text>
+            <description>reference.CONRATH-GIERASCH1984</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG1/VG2-S-IRIS-5-NS-ATMOS-PARAMS-V1.0</data_set_id>
+        <data_set_name>VOYAGER 1&amp;2 SATURN IRIS DERIVED NORTH/SOUTH PARAMETERS V1.0</data_set_name>
+        <data_set_release_date>1995-08-01</data_set_release_date>
+        <start_time>1979-01-01</start_time>
+        <stop_time>1981-12-31</stop_time>
+        <producer_full_name>BARNEY J. CONRATH</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VOYAGER 1&amp;2 SATURN IRIS DERIVED NORTH/SOUTH PARAMETERS
+        </data_set_terse_desc>
+        <abstract_desc>
+            The data set contains Saturn atmospheric parameters derived from
+            spectra obtained with the Voyager infrared interferometer
+            spectrometer (IRIS). The data set is ordered by time as measured
+            by the Flight Data System Count (FDSC). This represents the data
+            frame number modulo 60. Also included in the data set are
+            information on pointing and associated geometry of the
+            measurements and brightness temperatures obtained from measured
+            radiances at selected wavenumbers.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The data set contains Saturn atmospheric parameters derived
+      from spectra obtained with the Voyager infrared interferometer
+      spectrometer (IRIS).  The data set is ordered by time as
+      measured by the Flight Data System Count (FDSC).  This
+      represents the data frame number; the last two digits are
+      modulo 60.  Also included in the data set are information on
+      pointing and associated geometry of the measurements and
+      brightness temperatures obtained from measured radiances at
+      selected wavenumbers.
+ 
+ 
+    Parameters
+    ==========
+      The measurements were obtained during a north/south mapping
+      sequence in which the planet was mapped in the latitude range
+      between approximately 60 S and 60 N.  The instrument was
+      repeatedly scanned from north to south as Jupiter rotated under
+      the spacecraft through approximately 360 degrees of longitude.
+      The map was taken as the spacecraft approached Saturn on the
+      day side of the planet.
+ 
+      The derived atmospheric parameters include retrieved
+      atmospheric temperatures at the 152 mbar and 286 mbar levels,
+      and the fraction of the molecular hydrogen in the para state in
+      a layer nominally centered near 300 mbar.  The methods used for
+      retrieving the para hydrogen fraction and atmospheric
+      temperatures are discussed in [CONRATH&amp;GIERASCH1984].
+ 
+      To obtain the para hydrogen fraction and the atmospheric
+      temperature in the upper troposphere, measurements were used in
+      the S(0) collision-induced spectral line of molecular hydrogen
+      and its low wave number wing.  If a measurement in the S(0)
+      line is combined with a measurement in the line wing at a
+      similar nominal optical depth, then because of the differing
+      sensitivity to the ortho-para hydrogen ratio, it is possible to
+      estimate both an atmospheric temperature and a para hydrogen
+      fraction.
+ 
+ 
+    Processing
+    ==========
+      This principle forms the basis of the algorithm used for the
+      rapid estimation of para hydrogen and temperature from the
+      measured spectra.  Measurements near 300 and 350 cm**-1 in the
+      S(0) line were first used to retrieve temperature in the upper
+      troposphere, taking into account the emission angle appropriate
+      to the measurements.  The resulting atmospheric temperatures
+      were then used to calculate theoretical brightness temperatures
+      at 250 cm**-1 for comparison with measured values to determine
+      the para hydrogen fraction.  In the interest of computational
+      speed, the synthetic brightness temperatures were calculated
+      for only two values of the para hydrogen fraction, and the
+      final para hydrogen fraction estimate is obtained from the
+      measured brightness temperature by linear interpolation.  This
+      retrieval pertains to an atmospheric layer that is nominally
+      centered near 300 mbar and moves upward with increasing
+      emission angle.
+ 
+ 
+    Ancillary Data
+    ==============
+      In addition to the retrieved atmospheric parameters, integrated
+      measurements from the broad band visible radiometer are
+      included, along with brightness temperatures associated with
+      the radiances used in the retrievals.  The emission angle and
+      the solar zenith angle for the central point of the field of
+      view projected onto the planet are provided along with the
+      slant distance (in km) from the spacecraft to the central
+      point.  The latitude and longitude of the central point are
+      given as are the coordinates of eight additional points equally
+      spaced around the periphery of the field of view.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      In evaluating the confidence level of a given data record,
+      several factors should be taken into account.  These include
+      the propagation of measurement noise, the uncertainties
+      introduced by modeling assumptions that are incorporated in the
+      algorithms, and pointing uncertainties.
+ 
+      An estimate of the error in the para hydrogen fraction from an
+      individual measurement due to instrument noise propagation only
+      is + or - 0.01 at low latitudes, increasing to + or - 0.02 at
+      high latitudes.  The formal error in the retrieved temperatures
+      due to noise propagation is approximately + or - 1 kelvin.  The
+      systematic errors due to modeling assumptions cannot be easily
+      estimated.  The user should become thoroughly familiar with
+      these assumptions, as they may pertain to his or her particular
+      application, by referring to [CONRATH&amp;GIERASCH1984].  Note the
+      data records include fields for two cloud optical depths and an
+      ammonia abundance; however, these fields do not contain
+      physically meaningful values for Saturn, but have been retained
+      to permit use of the same format for both Jupiter and Saturn
+      data sets.
+ 
+      The pointing information for each record is used both to locate
+      the data on the planet and to calculate the emission angle
+      required in the retrievals.  The quoted 3-sigma uncertainty in
+      the pointing data taken from the Supplementary Experimenter
+      Data Records (SEDR) is 0.15 degrees (compared with the 0.25
+      degree diameter IRIS field of view).  (A SEDR consists of a
+      tape of spacecraft and instrument-specific geometric
+      information supplied by the Voyager project.) In addition,
+      there are sometimes systematic errors in the SEDR pointing
+      values for entire data sequences or links that take the form of
+      approximately constant offsets in the given field of view
+      locations on the planet.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      It is believed that the pointing for the Saturn incoming
+      north/south map sequence is reasonably accurate.  The SEDRs
+      used in the construction of this data set were generated in
+      1991, and C-smithing, which makes use of imaging to introduce
+      corrections, was employed.  It should be noted that earlier
+      versions of SEDRs were used for obtaining the pointing
+      information that is included with the IRIS spectral data sets.
+      As a consequence, the pointing given in the present data set
+      may not be in exact agreement with that included with the
+      spectral data sets.
+ 
+      When attempting to correlate IRIS data with those from other
+      Voyager instruments, it may be necessary to take into account
+      the relative offsets of the centers of the fields of view of
+      the various instruments.  Offsets relative to the center of the
+      ISS Narrow Angle camera field of view are given in the tables
+      below.  Elevation is positive to the right within the imaging
+      field of view and cross elevation is positive downward.  The
+      offsets are expressed both in degrees and in Narrow Angle
+      pixels.
+ 
+        Voyager 1:
+ 
+          Instrument   Elevation    Cross-Elevation
+ 
+          IRIS         +0.020 deg     +0.024 deg
+                     (+37.7 pixels) (+45.3 pixels)
+ 
+          ISS(WA)      +0.0315 deg    +0.0247 deg
+                     (+59.4 pixels) (+46.6 pixels)
+ 
+          UVS          +0.010 deg     -0.030 deg
+                     (+18.9 pixels) (-56.6 pixels)
+ 
+ 
+        Voyager 2:
+ 
+          Instrument   Elevation    Cross-Elevation
+ 
+          IRIS         +0.016 deg     -0.009 deg
+                     (+30.2 pixels) (-17.0 pixels)
+ 
+          ISS(WA)      -0.0308 deg    -0.0068 deg
+                     (-58.1 pixels) (-12.8 pixels)
+ 
+          UVS           0.0 deg       +0.08 deg
+                       (0.0 pixels)(+150.9 pixels)
+ 
+          PPS          -0.06 deg      +0.003 deg
+                    (-113.2 pixels)  (+5.7 pixels)
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>77-076A-03I</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>77-084A-03E</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

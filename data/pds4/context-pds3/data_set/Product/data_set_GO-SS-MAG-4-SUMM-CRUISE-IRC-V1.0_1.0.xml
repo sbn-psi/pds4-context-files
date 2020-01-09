@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-ss-mag-4-summ-cruise-irc-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO MAGNETOMETER CRUISE DATA (IRC COORDINATES)</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-ss-mag-4-summ-cruise-irc-v1.0__browserp_go-ss-mag-4-summ-cruise-irc-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Khurana, K.K., E.L. Kepko, M.G. Kivelson, and R.C. Elphic, Accurate
+                   Determination of Magnetic Field Gradients from Four-Point Vector Measurements
+                   -- Part II: Use of Natural Contraints on Vector Data Obtained From Four
+                   Spinning Spacecraft, IEEE Trans. on Magnetics, 32, 5, P. 5193-5205, 1996.
+            </reference_text>
+            <description>reference.KHURANAETAL1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-SS-MAG-4-SUMM-CRUISE-IRC-V1.0</data_set_id>
+        <data_set_name>GALILEO MAGNETOMETER CRUISE DATA (IRC COORDINATES)</data_set_name>
+        <data_set_release_date>1996-06-01</data_set_release_date>
+        <start_time>1989-12-31T00:14:12.369Z</start_time>
+        <stop_time>1994-12-31T03:58:41.145Z</stop_time>
+        <producer_full_name>MARGARET G. KIVELSON</producer_full_name>
+        <citation_text>
+            Kivelson, M.G., Khurana, K.K., Russell, C.T., Walker, R.J., Joy,
+            S.P.,Green, J., GALILEO MAGNETOMETER CRUISE DATA (IRC
+            COORDINATES), GO-SS-MAG-4-SUMM-CRUISE-IRC-V1.0, NASA Planetary
+            Data System, 1996
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains data acquired by the Galileo Magnetometer
+            during the Interplanetary Cruise to Jupiter. The data are at
+            varying resolution depending on the averaging constant applied by
+            the instrument.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains data acquired by the Galileo Magnetometer
+            during the Interplanetary Cruise to Jupiter. The data are at
+            varying resolution depending on the averaging constant applied by
+            the instrument. These data have been fully processed to remove
+            instrument response function characteristics. The data are
+            provided in physical units (nanoTesla) and in 2 coordinate
+            systems. This set of data files contains data in Inertial Rotor
+            Coordinates (IRC= despun spacecraft).
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Dataset Overview
+  ================
+    This data set contains data acquired by the Galileo Magnetometer
+    during the Interplanetary Cruise to Jupiter. The data are at varying
+    resolution depending on the averaging constant applied by the
+    instrument. These data have been fully processed to remove instrument
+    response function characteristics. The data are provided in physical
+    units (nanoTesla) and in 2 coordinate systems. This set of data files
+    contains data in Inertial Rotor Coordinates (IRC= despun spacecraft).
+    These files contain some of the data processing parameters from the
+    AACS system as well as the sensor zero level for the spin aligned
+    sensor. The data are also being archived in RTN coordinates which are
+    provided on this CDROM as a separate dataset. Trajectory have been
+    provided in heliographic coordinates as a separate dataset.
+ 
+    In order to provide a more complete solar wind dataset the high
+    resolution magnetometer data from the Earth1 encounter, Earth2
+    encounter and Ida encounter was averaged down to 16 minute resolution
+    and included with this interplanetary cruise data. The 16 minute
+    averages are derived from the following datasets:
+ 
+       GO-E-MAG-3-RDR-E1-HIRES-V1.0
+       GO-E-MAG-3-RDR-E2-HIRES-V1.0
+ 
+    Data inside the earth&apos;s bowshock was excluded from the 16 min
+    averages.
+ 
+    Data Columns (IRC):
+ 
+    sc_clk    S/C clock counter given in the form rim:mod91:mod10:mod8
+    time      S/C event time (UT) given in the form yyymmddT&lt;time&gt;Z
+    Bx_sc     Magnetic field X component in S/C (IRC) coordinates &lt;nT&gt;
+    By_sc     Magnetic field Y component in S/C (IRC) coordinates &lt;nT&gt;
+    Bz_sc     Magnetic field Z component in S/C (IRC) coordinates &lt;nT&gt;
+    Bmag      |B| Magnitude of B &lt;nT&gt;
+    zoff      Offset subtracted from the z-sensor
+    avg_con   Averaging Constant (Rims)
+    rotattd   Rotor attitude declination (EME-50)
+    rotattr   Rotor attitude right ascension
+    t         Rotor twist angle (EME-50) minus Rotor spin angle(IRC
+              coordinates)
+ 
+ 
+  Data Acquisition
+  ================
+    The data for this dataset were acquired as part of the normal
+    instrument calibration activities associated with the cruise to
+    Jupiter. As such, the instrument was commonly configured in modes
+    which required calibration even though they may not have been the
+    optimal mode for science data acquisition. The Galileo magnetometer
+    has 8 possible acquisition configurations (modes). There are two
+    sensor triads mounted 7 and 11 meters from the rotor spin axis
+    (inboard and outboard) along the boom. Each of the sensor triads has
+    two gain states (high and low). In addition, the sensor triads can be
+    &apos;flipped&apos; to move the spacecraft spin-axis aligned sensor into the
+    spin plane and visa versa. Please see the instrument description for
+    full details on the instrument, sensors, and geometries. The
+    combinations of sensor, gain state, and flip direction form modes.
+ 
+   _____________________________________________________________________
+                             Mode Characteristics
+   _____________________________________________________________________
+            Mode Name            Acronym         range      quantization
+   _____________________________________________________________________
+   Inboard,  left,  high range*    ILHR      +/- 16384 nT       8.0   nT
+   Inboard,  right, high range*    IRHR      +/- 16384 nT       8.0   nT
+   Inboard,  left,  low  range*    ILLR      +/-   512 nT       0.25  nT
+   Inboard,  right, low  range*    IRLR      +/-   512 nT       0.25  nT
+   Outboard, left,  high range*    ULHR      +/-   512 nT       0.25  nT
+   Outboard, right, high range*    URHR      +/-   512 nT       0.25  nT
+   Outboard, left,  low  range*    ULLR      +/-    32 nT       0.008 nT
+   Outboard, right, low  range*    URLR      +/-    32 nT       0.008 nT
+ 
+ 
+                  __________________________________________
+                   s/c clock         date/time          mode
+                  __________________________________________
+                   00104651:00:0    89-353/20:53        ULLR
+                   00120107:00:0    89-364/17:21        URHR
+                   00120117:00:0    89-364/17:31        IRHR
+                   00120150:00:0    89-364/18:04        IRLR
+                   00120178:00:0    89-364/18:33        ILLR
+                   00120199:00:0    89-364/18:54        ILHR
+                   00120209:00:0    89-364/19:04        URHR
+                   00120231:00:0    89-364/19:26        URLR
+                   00120283:00:0    89-364/20:19        ULLR
+                   00120313:00:0    89-364/20:49        ULHR
+ 
+                   00120492:00:0    89-363/23:50        ULHR
+ 
+                   00572976:00:0    90-040/03:00        ULHR
+                   00572976:00:0    90-316/17:00        ULLR
+                   00578673:00:0    90-320/17:00        URLR
+                   00586204:00:0    90-325/23:55        URHR
+                   00592915:00:0    90-330/17:01        ILLR
+                   00597439:00:0    90-333/21:15        IRLR
+                   00610156:00:0    90-342/19:33        IRHR
+                   00610509:00:0    90-343/01:30        IRLR
+                   00615701:00:0    90-346/17:00        URLR
+                   00618550:00:0    90-348/17:00        URHR
+                   00624261:00:0    90-352/17:15        ULHR
+ 
+                   01003052:72:8    90-253/16:36        ULLR
+ 
+                   01600269:00:0    92-308/00:48        ULLR
+                   01605562:00:0    92-311/18:10        ILLR
+                   01629549:00:0    92-328/14:14        IRLR
+                   01632087:00:0    92-330/09:00        ULLR
+                   01635479:00:0    92-332/18:23        URHR
+                   01638675:00:0    92-335/00:01        URLR
+                   01639786:00:0    92-335/18:45        IRLR
+                   01639974:00:0    92-335/21:55        URLR
+                   01640958:00:0    92-336/14:30        IRLR
+                   01641285:00:0    92-336/20:40        URHR
+                   01641351:00:0    92-336/21:07        IRHR
+                   01641407:00:0    92-336/22:15        ILHR
+                   01641465:00:0    92-336/23:02        URLR
+                   01642481:00:0    92-337/16:22        ULHR
+                   01644143:00:0    92-338/20:10        IRLR
+                   01646048:00:0    92-340/04:16        ILLR
+                   01649533:00:0    92-342/15:00        ULLR
+                   01650524:00:0    92-343/07:42        ULHR
+                   01650907:00:0    92-343/14:09        ILHR
+                   01651026:00:0    92-343/16:10        ULHR
+                   01656418:00:0    92-347/11:01        ILLR
+                   01659057:00:0    92-349/07:30        ULLR
+ 
+                   02271339:18:2    94-048/05:34        URLR
+                   02378309:54:6    94-123/08:13        ULLR
+                   02618987:18:2    94-292/08:04        URLR
+                   02702827:18:2    94-351/04:56        ULLR
+ 
+ 
+ 
+    * Range is the opposite of gain - high range equals low gain
+ 
+  Coordinate Systems
+  ==================
+    The data are being archived in two coordinate systems. The first
+    coordinate system is referred to as inertial rotor coordinates (IRC).
+    This coordinate system has the Z axis along the rotor spin axis,
+    positive away from the antenna and the X and Y axes lies in the rotor
+    spin plane. In a crude sense, when the spacecraft is far from Earth,
+    +X points south, normal to the ecliptic plane, positive Y lies in the
+    ecliptic plane in the sense of Jupiter&apos;s orbital motion and positive Z
+    is in the anti-earth direction. The spacecraft antenna (negative Z
+    direction) is kept earthward pointing to about +/- 10 deg accuracy.
+ 
+    The second coordinate system is RTN coordinates. This system places Br
+    along the Sun-spacecraft line with the positive direction away from
+    the sun. Bn is along the direction of the Sun spin axis crossed with
+    the radial axis. Btangential is in the direction of Bn crossed with
+    the radial axis.
+ 
+ 
+  Onboard Spacecraft Processing
+  =============================
+    The majority of the processing of the interplanetary cruise data is
+    done onboard the spacecraft. The following procedures take place
+    onboard.
+ 
+    1) Data is recursively filtered and decimated to 4.5 vectors/second
+    2) Sensor zero levels are subtracted and gains are applied
+    3) Data is transformed from a sensor coordinate system to a spacecraft
+       coordinate system using an orthogonality matrix
+    4) Data are decimated again to 2/3 second resolution
+    5) Data are despun into inertial rotor coordinates
+    6) A recursive filter is applied and data are decimated to a variable
+       resolution
+ 
+    These steps are explained in further detail below.
+ 
+    1) Recursive filter and decimation
+ 
+       The Galileo magnetometer samples the magnetic field 30 times per
+       second. These highest rate samples are recursively filtered and
+       then resampled by the instrument at 4.5 vectors per second using a
+       7,7,6 decimation pattern.
+ 
+       Recursive Filter
+ 
+       B(t) = 1/4 Bs(t) + 3/4 B(t-1)
+ 
+       B  = output field
+       Bs = input field measured by the sensor
+       t  = sample time
+ 
+       The pattern is generated by doubling the spacecraft clock modulo 10
+       counter and then applying the decimation scheme. This gives 3
+       vectors every spacecraft minor frame (about 2/3 second) which are
+       sampled unevenly. The first vector in a minor frame is sampled
+       approximately 0.200 seconds after the last vector in the preceding
+       minor frame. The other two samples are taken approximately 0.233
+       seconds apart.
+ 
+    2) The data was processed onboard the spacecraft using a fixed zero
+       level which was provided at the start of each data acquisition
+       interval. These zero levels were determined using various methods
+       and were periodically updated as significant changes in level were
+       noted. Knowledge of the two spin plane sensor zero levels is not
+       critical. The data is generally averaged over a long enough
+       interval that any error in the zero levels is removed. Knowledge of
+       the spin aligned sensor zero level is critical. However, this can
+       be corrected for once the data has been received on the ground and
+       is discussed below under Ground Data Processing.
+ 
+    3) Orthogonality matrix applied: The determination of a calibration
+       matrix is too complex to describe here. The method employed has
+       been well described in [KHURANAETAL1996].
+ 
+    4) The data is decimated to 2/3 second resolution by keeping only the
+       first minor frame of data.
+ 
+    5) Despinning data to inertial rotor coordinates: The nominal
+       transformation to IRC from SRC is
+ 
+      (Bx)   ( cos(theta)   -sin(theta)  0 ) (Bxs)
+      (By) = ( sin(theta)    cos(theta)  0 ) (Bys)
+      (Bz)   (   0               0       1 ) (Bzs)
+ 
+       Where s denotes spinning coordinates and theta is the rotor spin
+       angle.
+ 
+    6) Recursive filter and decimation: A recursive filter is applied in
+       in the following manner.
+ 
+       Recursive Filter
+ 
+       B(t) = 1/C Bs(t) + (1-1/C) B(t-1)
+       B  = output field
+       Bs = input field measured by the sensor
+       t  = sample time
+       C  = averaging constant
+ 
+       The averaging constant is variable and is given at the start of
+       each data acquisition period. The data is then decimated. There is
+       a one to one correspondence between the averaging constant used and
+       the decimation factor as outlined below.
+ 
+   Time per sample(Rims)       Averaging constant    Decimation Factor
+   -------------------------------------------------------------------
+          1                        1024                   1
+          2                         512                   2
+          4                         256                   4
+          8                         128                   8
+         16                          64                  16
+         32                          32                  32
+         64                          16                  64
+        128                           8                 128
+        256                           4                 256
+        512                           2                 512
+       1024                           1                1024
+ 
+ 
+  Ground Data Processing
+  ======================
+    Once the data is on the ground there is very little that can be done
+    to improve the onboard processing because of the heavy filtering
+    and decimation. The following procedure is done on the ground
+    1) Data is converted to nanoTesla
+    2) The zero level of the spin aligned sensor is corrected.
+    3) Timing is set to account for a phase delay
+    4) Rotation is performed to account for phase delay
+    5) Data are transformed to RTN coordinates to
+       produce the RTN dataset.
+ 
+    These steps are outlined in greater detail below.
+ 
+    1) Conversion to nanoTesla simply requires dividing the instrument
+       data numbers by a constant scale factor. For the inboard high range
+       (low gain) mode the scale factor is 2. For the inboard low range
+       and outboard high range, the scale factor is 64. The outboard low
+       range data has a scale factor of 1024.
+ 
+    2) The zero level of the spin axis aligned sensor was determined by
+       several means. One method is to take 25 day averages of the data
+       from the spin aligned sensor. The basis of this method is that if
+       the spacecraft is relatively close to the ecliptic plane, over one
+       solar rotation the average of the suns magnetic field in the
+       spacecraft z-direction is zero. Therefore whatever remains after
+       averaging is taken to be an offset. The second method is dependent
+       on the four quadrant structure of the solar wind. For this method
+       we look only at points where By(IRC coordinates) crosses from
+       positive to negative values. Here we assume that based on the
+       four quadrant structure, as we pass from quadrant to quadrant
+       By(IRC) will change signs and Bz(IRC) will go to zero. The values
+       of Bz(IRC) where By(IRC) crosses zero are then averaged over a
+       fifty day period. For the majority of the cruise data the
+       instrument was configured in the ULLR mode. This mode puts sensor 3
+       along the spin axis. After looking at the results of these two
+       method it became apparent that the spin aligned sensor 3 offset had
+       a substantial drift that was correlated to the change in
+       temperature. The offset determinations  for sensor 3 were fit to
+       temperature. It was found that two different fits were necessary.
+       For temperatures greater than 272K a straight line fit was used.
+ 
+         zoff = -17.60926 + .02608*(Temp)
+ 
+         zoff = Offset for sensor three [nT]
+         Temp = Temperature at the outboard sensor [K]
+ 
+ 
+       For temperatures less than 272K a second fit was determined.
+ 
+         zoff = 22.9016799 + (2511.27490/Temp) - (3176088.25)/(Temp*Temp)
+ 
+         zoff = Offset for sensor three [nT]
+         Temp = Temperature at the outboard sensor [K]
+ 
+       A second instrument configuration commonly used during the
+       cruise to Jupiter was the URLR mode. This mode places sensor2
+       along the spin aligned axis. For unknown reasons this sensor
+       was not as susceptible to changes in temperature and showed
+       no strong zero level drifts over time. A fixed offset of
+       2.75574nT was removed from sensor 2.
+ 
+    3) In order to account for the long recursive filters applied
+       the timing of the data is corrected to be:
+ 
+       rim=rim + (avg_con - (rim % avg_con)) +1/e*avg_con
+ 
+       rim     = starting rim of the averaging interval
+       avg_con = length of the averaging interval(rims)
+ 
+    4) There is a phase delay associated with the Analog to Digital
+       converter of the instrument. This means that when the data is
+       despun onboard the spacecraft, the data and the angle used to
+       despin it are slightly out of phase. In order to correct this
+       delay the data are rotated by a phase angle. The delay is
+       equivalent to the rotation outlined below.
+ 
+       Bx&apos;= cos(delay) * Bx - sin(delay) * By
+       By&apos;= sin(delay) * Bx - cos(delay) * By
+ 
+       delay = -0.045163
+ 
+    To transform the data to RTN coordinates the following step is taken
+ 
+    5) The data are transformed first into Earth Mean Equatorial(equinox
+       1950) coordinates. This system is directly supported by the SPICE
+       software provided by the Navigation and Ancillary Information
+       Facility (NAIF) at JPL as inertial coordinate system &apos;FK4&apos;. The
+       angles required for this transformation come directly from the
+       Galileo Attitude and Articulation Control System (AACS) data. The
+       transformation matrix for this rotation is:
+ 
+   --                                                                --
+   | (cosTsinDcosR - sinTsinR)  (-sinDsinTcosR - cosTsinR)  cosDcosR  |
+   |                                                                  |
+   | (cosTsinDsinR + sinTcosR)  (-sinDsinTsinR + cosTcosR)  cosDsinR  |
+   |                                                                  |
+   | -cosDcosT                  sinTcosD                        sinD  |
+   --                                                                --
+   where
+ 
+   R = Rotor-Right Ascension
+   D = Rotor-Declination
+   T = Rotor-Twist - Rotor-Spin-angle  (despun data)
+ 
+   Once in an inertial coordinate system, SPICE software provides
+   subroutines which return the transformation matrices to GSE (G_GSETRN),
+   GSM (G_GSMTRN), or RTN (G_RTNTRN) coordinate systems for any ephemeris
+   time. These matrices have been used to perform the coordinate system
+   transformations. The spacecraft/planet (SPK) , leap second (TS), and
+   planetary constants (PCK) kernels required for these transformations
+   have been archived in the PDS by NAIF. These SPICE kernels are
+   available on the CD_ROM which contains the magnetometer data. The SPICE
+   toolkit (software) can be obtained from the NAIF node of the PDS for
+   many different platforms and operating systems.  At the time of this
+   archive, the SPICE toolkit was available via an anonymous-ftp site at
+   naif.jpl.nasa.gov
+        </data_set_desc>
+        <confidence_level_note>
+Data Quality:
+ 
+    Data quality assessment is a rather vague concept which we will try to
+    address in a somewhat qualitative manner. Each aspect of the data
+    processing sequence can be analyzed to determine its maximum possible
+    error contribution. In theory, these errors could be summed to provide
+    estimates of the maximum error for each data point. We have not taken
+    our error analysis to that level. We believe that our calibrations
+    (sensor geometry and gains) are good enough that they produce a
+    negligible source of data error. In addition, we believe that the
+    coordinate system transformations which are derived from the SPICE
+    kernels and Toolkit are negligible sources of error in the magnetic
+    field vectors. The sources of error which we feel are the most
+    significant are those associated with magnetic sources aboard the
+    spacecraft, especially those with temporal or spacecraft orientation
+    variations. The next greatest contributor of error is the data from
+    the AACS which affects our knowledge of the spacecraft orientation and
+    hence rotates the magnetic field vector. Lastly, telemetry or software
+    errors which produce &apos;spikes&apos; or bit errors in the data are error
+    sources.
+ 
+    Magnetic sources associated with the spacecraft have been identified.
+    Over the long averaging intervals of all the interplanetary cruise
+    data this source of noise is eliminated. There are some time intervals
+    when the zero levels of the spin plane sensors show large variations
+    (1-5 nT) on short time scales (minutes to hours). After a while
+    (hours to days) the offsets return to their nominal levels. The source
+    of these magnetic fields has not yet been identified. The method of
+    removing offsets does not remove these rapidly varying effects.
+ 
+    Errors associated with AACS angles have various effects on the data.
+    The rotor right ascension and declination are crucial to the
+    understanding of the spacecraft orientation. Fortunately, these angles
+    are slowly varying and can be interpolated to better than 1 degree of
+    accuracy for long (many hour) time periods except near major
+    spacecraft maneuvers.
+ 
+    During some time intervals no AACS data is available. As a result,
+    these intervals can not be transformed from spacecraft coordinates RTN
+    coordinates.
+ 
+    During several intervals of the interplanetary cruise the spacecraft
+    lost it&apos;s sector data. Sector data gives the magnetometer the
+    neccessary information to despin the magnetic field data spin plane
+    components (Bx_sc and By_sc in spacecraft coordinates). If the
+    magnetic field spin plane components are not despun they will appear
+    as a sin wave. The next step in the processing done onboard the
+    spacecraft is averaging. The data that is not despun will be averaged
+    to zero as you would expect a sin wave to be averaged over many
+    periods. The intervals where sector data was lost have not been
+    removed from the processed IRC dataset. The reason for this is that
+    these intervals can be valuable in helping to determine sensor zero
+    levels. These intervals have been cut from the processed data in RTN
+    coordinates. Below is a list of time where sector data was lost.
+ 
+ 
+    1990-Jan-26 19:35:48   to   1990-Jan-31 05:17:29
+    1991-Jan-16 20:24:58   to   1991-Jan-21 17:36:00
+    1991-Feb-12 18:47:00   to   1991-Feb-25 18:08:00
+    1993-Jan-27 09:00:40   to   1993-Jan-30 12:30:27
+ 
+ 
+    Ancillary data products:
+ 
+    TEMP  - The temperature of the outboard sensor is critical to
+            understanding the nature of the spin aligned sensor.
+ 
+        Columns in temperature files
+        --------------------------------------------------
+        name          description
+        --------------------------------------------------
+        time       S/C event time (UT) given in the form yyymmddT&lt;time&gt;Z
+        out_temp   Temperature at the outboard sensor
+        in_temp    Temperature at the inboard sensor
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-a-navcam-2-ast1-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER-STEINS-NAVCAM-2-AST1-V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:navcam.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.2867_steins::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-a-navcam-2-ast1-v1.0__browserp_ro-a-navcam-2-ast1-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-A-NAVCAM-2-AST1-V1.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER-STEINS-NAVCAM-2-AST1-V1.0</data_set_name>
+        <data_set_release_date>2010-11-11</data_set_release_date>
+        <start_time>2008-08-04T06:05:02Z</start_time>
+        <stop_time>2008-09-05T08:45:43Z</stop_time>
+        <producer_full_name>BERNHARD GEIGER</producer_full_name>
+        <citation_text>
+            Archibald, C. M. et. al., ROSETTA ORBITER NAVCAM AST1,
+            RO-A-NAVCAM-2-AST1-V1.0, ESA PSA, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            This dataset contains RAW DATA of the STEINS flyby Phase.
+            Included are the data STEINS flyby data from 4 August 2008 to 5
+            September 2008. With closest approach on 5 September 2008.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains RAW DATA of the STEINS flyby Phase from 4
+            August 2008 until 5 September 2008. The closest approach (CA)
+            took place on 5 September 2008
+        </abstract_desc>
+        <data_set_desc>
+ 
+======================================================================
+Data Set Overview:
+======================================================================
+ 
+The data from the Rosetta Navigation Camera (NavCam) was extracted by
+Berhard Geiger and Michael Kueppers; the data set was constructed and
+submitted by Colin Archibald on behalf of the Planetary Science
+Archives (PSA).
+ 
+The data have been observed and measured during the lead up to and
+flyby of the asteroid 2867 Steins.  The data arises from the time
+period 4 August 2008 and 5 September 2008 (closest approach on 5
+September 2008).
+ 
+All images in this data set are raw and uncalibrated data taken using
+the imaging mode.  The data set contains images resolved using both
+NavCams onboard the Rosetta S/C and the DATA directory is organised
+to reflect this with two sub directories:
+ - CAM1
+ - CAM2
+ 
+Each NavCam has seven different operational modes, however, only
+data acquired under the IMAGING MODE will be present in the data
+sets released and so only this mode shall be presented in any detail.
+A point of note: IMAGING MODE can be operated under the other
+available modes.
+ 
+The MODE DESCRIPTION table below outlines the details of the
+IMAGING MODE.
+ 
+======================================================================
+Mode Description:
+======================================================================
+ 
+IMAGING MODE:
+ 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|     SUB MODE      | FRAME RATE |   WINDOW SIZE  | INTEGRATION TIME |
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+| IDLE              |    1 s     |      N/A       |        N/A       |
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+| COVER POSITIONING |   0.8 s    |      N/A       |        N/A       |
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+| IMAGE ACQUISITION |    35 s    |   20 x 20 px   |       10 ms      |
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+| IMAGE ACQUISITION |    35 s    | 1024 x 1024 px |       30  s      |
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+The IDLE sub mode allows for the window size of the CCD to be set up
+before the IMAGE ACQUISITION mode begins operation.  The sizes and
+times shown here for the IMAGING MODE are the lowest and upper bounds
+there are hundreds more possibilities for WINDOW SIZE, and hence read
+out time, under this sub mode.
+ 
+Generally the rule is that if a window size is one full row (1024 px)
+spanned over one pixel then the readout time will be 4.1 ms, thus the
+full window (1024 x 1024 px) will have a total readout time of 4.2 s
+(including transfer time of 1.3 ms for the image to be received to
+the Solid State Mass Memory (SSMM)).
+ 
+======================================================================
+Filename Convention:
+======================================================================
+ 
+The filenaming convention for all data levels is given by:
+ 
+           &lt;mission&gt;_&lt;CAMx&gt;_&lt;begin time of obs&gt;.&lt;EXT&gt;
+              ROS     CAM1    YYYYMMDDThhmmss    IMG
+                      CAM2                       LBL
+                                                (JPG)
+ 
+Examples:
+        ROS_CAM1_20100530T224504.IMG
+        ROS_CAM1_20100530T224504.LBL
+       (ROS_CAM1_20100530T224504.JPG)
+        ROS_CAM2_20100620T231651.IMG
+        ROS_CAM2_20100620T231651.LBL
+       (ROS_CAM2_20100620T231651.JPG)
+ 
+(In the case of the BROWSE directory)
+ 
+======================================================================
+Geometry Information - Coordinate System:
+======================================================================
+ 
+The geometry item SC_SUN_POSITION_VECTOR provided in the label of the
+data product is relative to the ECLIPJ2000 frame. This reference frame
+is built up by  Ecliptic Coordinates related to Equinox of Epoch
+J2000.
+ 
+Orientation:
+ - X: Pointing from SUN to Vernal Equinox            &lt;km&gt;
+ - Y: perpendicular to X in Ecliptic Plane           &lt;km&gt;
+ - Z: Perpendicular to Ecliptic plane, pointing up   &lt;km&gt;.
+ 
+The items:
+ - RIGHT_ASCENSION   &lt;h&gt;
+ - DECLINATION       &lt;deg&gt;
+are given in the PLANETOCENTRIC coordinate system.
+ 
+All these geometry parameters are computed at time t = START_TIME.
+ 
+======================================================================
+        </data_set_desc>
+        <confidence_level_note>
+N/A
+        </confidence_level_note>
+        <archive_status>IN_LIEN_RESOLUTION</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

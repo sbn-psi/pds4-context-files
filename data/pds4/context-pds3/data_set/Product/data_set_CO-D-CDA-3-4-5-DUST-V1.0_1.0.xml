@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-d-cda-3-4-5-dust-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CASSINI COSMIC DUST ANALYZER CALIBRATED/RESAMPLED DATA</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:cda.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:dust.dust::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-d-cda-3-4-5-dust-v1.0__browserp_co-d-cda-3-4-5-dust-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gruen, E., H. Fechtig, M.S. Hanner, J. Kissel, B.A. Lindblad, D. Linkert, D.
+                   Maas, G.E. Morfill, and H.A. Zook, The Galileo dust detector, Space Sci. Rev.,
+                   60, 317-340, 1992.
+            </reference_text>
+            <description>reference.GRUENETAL1992A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gruen, E., H. Fechtig, J. Kissel, D. Linkert, D. Maas, J.A.M. McDonnell, G.E.
+                   Morfill, G. Schwehm, H.A. Zook, and R. H. Giese, The Ulysses dust experiment,
+                   Astron Astrophys. Suppl. Ser. 92, 411-423, 1992.
+            </reference_text>
+            <description>reference.GRUENETAL1992B</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-D-CDA-3/4/5-DUST-V1.0</data_set_id>
+        <data_set_name>CASSINI COSMIC DUST ANALYZER CALIBRATED/RESAMPLED DATA</data_set_name>
+        <data_set_release_date>2005-182</data_set_release_date>
+        <start_time>1993-03-25</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>NICOLAS ALTOBELLI</producer_full_name>
+        <citation_text>
+            Altobelli, N., S. Kempf, and R. Srama, Cassini Cosmic Dust
+            Analyser Data V1.0, CO-D-CDA-3/4/5-DUST-V1.0, NASA Planetary Data
+            System, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            Dust data from the Cosmic Dust Analyzer of the Cassini Orbiter,
+            not including the High Rate Detector.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Cosmic Dust Analyzer (CDA) is an instrument on the Cassini
+            Orbiter that studies the physical properties of dust particles
+            hitting the detector. This data set includes all data from the
+            CDA with the exception of the High Rate Detector (HRD). Please
+            refer to [SRAMAETAL2004B] (see CDAREFS.CAT) for a detailed CDA
+            description.
+        </abstract_desc>
+        <data_set_desc>
+ 
+Data Set Overview
+=================
+ 
+This data set includes all data from the Cassini Orbiter Cosmic Dust
+Analyzer (CDA), with the exception of the High Rate Detector (HRD) data
+which will be included in a separate data set.  All data
+products in this data set are in tabular format.  Each of the data
+products (or product types) are described below. CDA Area Table - The
+sensitive area of the CDA Impact Ionization Detector (IID) and Chemical
+Analyzer Target (CAT) is tabulated as a function of the incident angle
+with respect to the instrument axis. CDA Status History - Cassini
+mission and CDA configuration, tests and other events.  Records are
+triggered by change in status affecting the sensitivity of the different
+CDA subsystems and mission events. CDA events Table - Detector responses
+and derived quantities from the Cassini dust detector as well as
+spacecraft geometry information for noise or dust events. CDA Spectra
+Table - Time-of-flight mass spectra peaks for individual impact events.
+CDA MP Signal Tables - (multiple files) Time-of-flight mass spectra
+signals for individual impacts. CDA QI Signal Tables - (multiple files)
+Ion signals for individual impacts. CDA QT Signal Tables - (multiple
+files) Electron signals for individual impacts as detected on the IID
+target. CDA QC Signal Tables - (multiple files) Electron signals for
+individual impacts as detected on the CAT target CDA QP Signal Tables -
+(multiple files) Induced charge signal for individual impacts at the
+entrance grid. CDA Table Settings - Table of voltages corresponding to
+voltage level codes and Coulomb threshold settings. CDA Counter Table -
+CDA impact counter time history file. There are 19 possible counter
+values. Each event is evaluated on-board by the flight software and
+receives one counter value. During the mission, successive improved
+versions of the flight software were uploaded. Hence, the event
+evaluation by the counter values evolved with time, allowing a better
+classification of the events.
+ 
+Calibration Issues
+==================
+ 
+1. Calibration of the Impact Ionization Detector
+ 
+The calibration principle of the impact ionization detector is similar
+to the Galileo instrument and Ulysses instrument
+[GRUENETAL1992A],[GRUENETAL1992B] (see CDAREFS.CAT). The calibration of
+the velocity-dependence of the signal rise times as well as the
+calibration of the mass-velocity-dependence of the plasma charge yields
+is based upon impact experiments in ground based laboratory
+accelerators. In such facilities, impacts of particles with known mass
+and velocity onto the flight spare unit can be studied. Besides
+laboratory experiments, in-flight measurements in the well-understood
+environment at 1 AU as well as measurements of Jovian stream particles
+contributed to the instrument calibration. Up to now the interference of
+the inner target (CAT) with the outer target (IID) is not entirely
+understood. Therefore, future calibration work will be focused on this
+issue.
+ 
+2. Calibration of the Mass Analyser
+ 
+The calibration of the TOF mass spectrometer is still preliminary. In
+order to determine the mass resolution as well as the instrument
+characteristics, particles of known composition were shot in the
+Heidelberg dust accelerator onto the flight spare unit. Calibration data
+for both subsystems, will be provided in subsequent deliveries.
+ 
+ 
+Amplification Changes
+=====================
+ 
+The amplification factors of three instrument channels changed. Affected
+are the channels QC (Electron signal, Chemical Analyser Target), QA
+(Ion signal, Chemical Analyser Grid) and QT (Electron signal, Impact
+Ionisation Target).  The amplification factor determines the amount of
+measured impact charge and is given by the conversion from dn-values
+to charge values (Coulomb).
+ 
+QT channel
+----------
+In total, two amplification changes were observed.  The amplification
+droped by a factor of  195 at a time between 2008-039T14:13:55 and
+2008-039T19:50:15 (noise analysis of channel QT). The time of
+2008-039T18:00:00 is taken for the change in conversion.  A second
+change in amplification occured in the timeframe 2009-224T18:30:00 and
+2009-224T23:30:00 (noise analysis). The drop factor after this time
+range is 22.  The time of this change for archiving purposes is set to
+2008-224T22:00:00.
+ 
+Possible background/explanation:
+--------------------------------
+A RPXing occured at 2008-039T17:51 at 3.46 Saturn radii distance. On
+day 224T21:06 the Enceladus flyby occured (E4, rev 80) with an
+altitude of only 50 km above the surface.
+ 
+QC channel
+----------
+Amplification dropped by factor of 140 at a time which lies between
+2008-283T16:02:41 and 2008-283T21:31:02. The time of change for
+archiving is set to : 2008-283T20:00:00.
+ 
+Background:
+-----------
+An Enceladus flyby occured at 2008-283T19:06 (E5, rev 88) with an
+altitude of 25 km and FSW 12.2 was used.  Status as of 212-2009: Drop
+factor still 140 (amplitude of TP3 = 131 dn)
+ 
+QA channel
+----------
+The noise level of channel QA changed as well. However, this channel
+is not digitized and no raw data information is available. A noise
+test showed, that channel QA became insensitive in the time range
+between 2008-208 and 2008-261.  For overall calibration this change
+has no effect and no changes in data processing is required for DPS
+work.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Events table
+-----------------
+Some values described in the PDS label table could not be provided in
+this volume and are set to their missing constant value. PLEASE CONTACT
+THE CDA TEAM BEFORE USING THE DATA FOR AN UPDATE OF THE CONFIDENCE
+LEVEL. Efforts will be made to have those data provided in the
+subsequent delivery. The missing values are:
+ 
+- Particle speed and particle speed error factor
+ 
+The reliable determination of the impactors velocity depends on ground
+calibrations. For technical reasons, calibrations could be performed
+only with a limited amount of material. In particular, calibration data
+for ice particles are not available. However, recent measurements of icy
+E ring particles during the early Cassini tour reveal a strong
+dependance of the impact velocity determination upon impactor material,
+and allow in-flight calibration. Calibrated velocity data will therefore
+be provided only in future delivery, when a better understanding of the
+instrument response will be reached.
+ 
+- Particle mass and particle mass error factor
+ 
+As the mass determination of an impacting particle requires the
+determination of its impact velocity, the particle mass can not be
+derived accuratly right now.
+ 
+- Target flag
+ 
+This flag, indicating where a dust particle impacted on the target,
+should be provided in a future delivery, as identification routines
+become more reliable.
+ 
+- Event quality
+This flag, evalutating the quality of an event, should be provided in a
+future delivery, as event evaluation routines become more reliable.
+ 
+- Particle charge
+ 
+This value will be provided in a future delivery.
+ 
+- Particle charge error
+ 
+This value will be provided in a future delivery.
+ 
+While the counter value is provided for each event, as returned by the
+flight software, a detailed documentation about the meaning of the
+different counter values is missing. However, the CDA team plan to
+provide this documentation a bit later. This comment is also valid for
+the counter table.
+ 
+CDASPECTRA table
+-----------------
+As of the delivery date, the data contained in this table can not be
+provided. Some data (like the number and position of peaks in the TOF
+spectra) need more time to be derived reliably, and do not belong to the
+minimum PDS requirement, as level 2 data. However, they will be provided
+in a future delivery.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

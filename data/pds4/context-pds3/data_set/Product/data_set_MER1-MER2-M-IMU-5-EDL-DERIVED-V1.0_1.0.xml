@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-mer2-m-imu-5-edl-derived-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER1/MER2 MARS IMU ENTRY DESCENT &amp; LANDING DERIVED DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:imu.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:imu.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-mer2-m-imu-5-edl-derived-v1.0__browserp_mer1-mer2-m-imu-5-edl-derived-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Atkins, P. W., Physical chemistry, 6th edition. W. H. Freeman, 2002
+            </reference_text>
+            <description>reference.ATKINS2002</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Desai, P. N., P.C. Knocke, Mars Exploration Rover Entry, Descent, and Landing
+                   Trajectory Analysis. American Institute of Aeronautics and Astronautics (AIAA)
+                   paper 2004-5092. 42nd AIAA Aerospace Science Meeting, Reno, Nevada, USA, 2004
+            </reference_text>
+            <description>reference.DESAI-KNOCKE2004</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kass, D.M., Schofield, J.T., J. Crisp, E.S. Bailey, E.H. Konefat, W.J. Lee,
+                   E.C. Litty, R.M. Manning, A.M. San Martin, R.J. Willis, R.F. Beebe, J.R.
+                   Murphy, L.F. Huber, PDS volume MERIMU_0001. In: MER1/MER2-M-IMU-4-EDL-V1.0,
+                   NASA Planetary Data System, 2004.
+            </reference_text>
+            <description>reference.KASSETAL2004</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Magalhaes, J.A., J.T. Schofield and A. Seiff, Results of the Mars Pathfinder
+                   atmospheric structure investigation. Journal of Geophysical Research, 104,
+                   8943-8956, 1999.
+            </reference_text>
+            <description>reference.MAGALHAESETAL1999</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Schoenenberger, M., F.M. Cheatwood, P. . Desai, Static Aerodynamics of the Mars
+                   Exploration Rover Entry Capsule. In: American Institute of Aeronautics and
+                   Astronautics paper 2005-0056, 43rd AIAA Aerospace Sciences Meeting and Exhibit,
+                   10-13 January 2005, Reno, Nevada, USA, 2005.
+            </reference_text>
+            <description>reference.SCHOENENBERETAL2005B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tyler, G.L., G. Balmino, D.P. Hinson, W.L. Sjogren, D.E. Smith, R.A. Simpson,
+                   S.W. Asmar, P. Priest, and J.D. Twicken, Radio Science Observations with Mars
+                   Global Surveyor: orbit insertion through one year of mapping orbit, Journal of
+                   Geophysical Research, in press, 2000
+            </reference_text>
+            <description>reference.TYLERETAL2000</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Withers, P., and M.D. Smith, Atmospheric entry profiles from the Mars
+                   Exploration Rovers Spirit and Opportunity, Icarus, 185, 133-142, 2006.
+            </reference_text>
+            <description>reference.WITHERS-SMITH2006A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Withers, P. and M.D. Smith, Atmospheric entry profiles from the Mars
+                   Exploration Rovers Spirit and Opportunity. First draft of paper later published
+                   as Icarus, 185, 133-142. Manuscript as first submitted can be found at
+                   /DOCUMENT/WS2006SUB.LBL, 2006.
+            </reference_text>
+            <description>reference.WITHERS-SMITH2006B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Withers, P., M.C. Towner, B. Hathi, and J.C. Zarnecki, Analysis of entry
+                   accelerometer data: A case study of Mars Pathfinder, Planetary and Space
+                   Science, 51, 541-561, 2003.
+            </reference_text>
+            <description>reference.WITHERSETAL2003B</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1/MER2-M-IMU-5-EDL-DERIVED-V1.0</data_set_id>
+        <data_set_name>MER1/MER2 MARS IMU ENTRY DESCENT &amp; LANDING DERIVED DATA V1.0</data_set_name>
+        <data_set_release_date>2009-02-23</data_set_release_date>
+        <start_time>2004-01-04T04:20:15.543Z</start_time>
+        <stop_time>2004-01-25T04:52:53.605Z</stop_time>
+        <producer_full_name>PAUL WITHERS</producer_full_name>
+        <citation_text>
+            P. Withers, J.R. Murphy, MER1/MER2-M-IMU-5-EDL-DERIVED-V1.0, NASA
+            Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 1 and 2 Entry Trajectory and Atmospheric
+            Properties Derived Data Records, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  ==================
+ 
+    This dataset consists of data products derived from data collected
+    by Inertial Measurement Units (IMUs) on the two Mars Exploration
+    Rovers (MERs) during their entries into the martian atmosphere. The
+    DATA/ directory contains one data file for each spacecraft (MER1.TAB
+    and MER2.TAB). Each time file contains time ordered records of
+    measured acceleration, derived velocity, derived position, derived
+    atmospheric properties and other derived quantities.
+ 
+    The MER-2 rover, which was launched on the MER-A mission to Gusev
+    Crater on 10 June 2003, was later renamed Spirit. The MER-1 rover,
+    which was launched on the MER-B mission to Meridiani Planum on 7
+    July 2003, was later renamed Opportunity.
+ 
+  Parameters
+  ===========
+ 
+    Each data file contains the following items.
+ 
+    Time (Spacecraft Clock Time, seconds)            SCLK_TIME
+    Axial acceleration (m s^(-2))                    AXIAL_ACCELERATION
+    Normal acceleration (m s^(-2))                   NORMAL_ACCELERATION
+    X-component of acceleration (m s^(-2))           X_ACCELERATION
+    Y-component of acceleration (m s^(-2))           Y_ACCELERATION
+    Z-component of acceleration (m s^(-2))           Z_ACCELERATION
+    X-component of velocity (m/s)                    X_VELOCITY
+    Y-component of velocity (m/s)                    Y_VELOCITY
+    Z-component of velocity (m/s)                    Z_VELOCITY
+    Speed of spacecraft relative to atmosphere (m/s) VREL
+    X-component of position (m)                      X_POSITION
+    Y-component of position (m)                      Y_POSITION
+    Z-component of position (m)                      Z_POSITION
+    Radial distance (m)                              RADIAL_DISTANCE
+    Areocentric latitude (degrees north)             LATITUDE
+    Areocentric longitude (degrees east)             LONGITUDE
+    Axial force coefficient, CA (dimensionless)      CA
+    Normal force coefficient, CN (dimensionless)     CN
+    Angle of attack (degrees)                        ALPHA
+    Mach number (dimensionless)                      MA
+    Knudsen number (dimensionless)                   KN
+    Density (kg m^(-3))                              RHO
+    Pressure (Pa)                                    PRESS
+    Temperature (K)                                  TEMP
+ 
+    Each data file also contains 1-sigma uncertainties for those items.
+    Units for the uncertainties in item XXX are the same as for item XXX.
+    Those names, which are derived from the above names, are as follows:
+ 
+    SIGMA_SCLK_TIME
+    SIGMA_AXIAL_ACCELERATION
+    SIGMA_NORMAL_ACCELERATION
+    SIGMA_X_ACCELERATION
+    SIGMA_Y_ACCELERATION
+    SIGMA_Z_ACCELERATION
+    SIGMA_X_VELOCITY
+    SIGMA_Y_VELOCITY
+    SIGMA_Z_VELOCITY
+    SIGMA_VREL
+    SIGMA_X_POSITION
+    SIGMA_Y_POSITION
+    SIGMA_Z_POSITION
+    SIGMA_RADIAL_DISTANCE
+    SIGMA_LATITUDE
+    SIGMA_LONGITUDE
+    SIGMA_CA
+    SIGMA_CN
+    SIGMA_ALPHA
+    SIGMA_MA
+    SIGMA_KN
+    SIGMA_RHO
+    SIGMA_PRESS
+    SIGMA_TEMP
+ 
+  Timing
+  ======
+ 
+    All data products in this dataset are derived from PDS volume
+    MERIMU_1001 [KASSETAL2004], which uses Spacecraft Clock Time
+    (SCLK time) as its time reference. For consistency, all times in
+    this dataset are also SCLK times.
+ 
+  Coordinate Systems
+  ==================
+ 
+    All data products in this dataset are derived from 4 Hz backshell
+    IMU measurements in DATA/XTRANSFORMED.TAB in PDS volume MERIMU_1001
+    [KASSETAL2004], where X is either 1 or 2. These acceleration
+    measurements are given in an XYZ cartesian frame fixed relative to
+    the spacecraft. This spacecraft frame is neither inertial nor fixed
+    relative to Mars. The spacecraft is axisymmetric about the Z axis.
+ 
+    The axis to which axial and normal accelerations are referenced is
+    defined in the data processing section of this file.
+ 
+    Position, velocity and acceleration are given in an XYZ cartesian
+    frame whose origin is at the center of mass of Mars. The +Z axis
+    passes through the north pole and the +X axis passes through the
+    equator at zero degrees east areocentric longitude at a specified
+    time. The +Y axis completes a right-handed set. The specified time
+    is SCLK_TIME = 128270000.000 for MER1 and
+    SCLK_TIME = 126460000.000 for MER2. Position is also given as radial
+    distance, areocentric latitude, and areocentric longitude. This
+    is the standard spherical polar coordinate system found in
+    mathematical textbooks. Longitude increases to the east. Altitude
+    is defined as radial distance minus the radial distance from the
+    center of mass of Mars to the relevant landing site. Altitude is
+    not referenced to any equipotential surface.
+ 
+  Data Processing
+  ===============
+ 
+    Data processing is also described in [WITHERS&amp;SMITH2006A] and
+    [WITHERS&amp;SMITH2006B].
+ 
+    Four data products from DATA/XTRANSFORMED.TAB in PDS volume
+    MERIMU_1001 [KASSETAL2004], where X is either 1 or 2, were used:
+    SPACECRAFT_CLOCK_START_COUNT, BACKSHELL_IMU_ACCEL_X,
+    BACKSHELL_IMU_ACCEL_Y and BACKSHELL_IMU_ACCEL_Z. Data after
+    backshell separation were discarded. Backshell separation occurred
+    when the terminal descent radar indicated that the spacecraft was
+    about 10 m above the ground. It is reasonable to assume that the
+    position and velocity at landing are the same as the reconstructed
+    position and velocity at backshell separation due to the magnitude
+    of the errors in reconstructed position and velocity. This is
+    relevant for the determination of the entry states.
+ 
+    Backshell separation was identified as the time of the last
+    non-zero value of BACKSHELL_IMU_ACCEL_X, BACKSHELL_IMU_ACCEL_Y,
+    or BACKSHELL_IMU_ACCEL_Z. Some lines of data are duplicates (for
+    example, SPACECRAFT_CLOCK_START_COUNT=128277624.125 for MER-1). The
+    extra lines of data were discarded. The nominal sampling rate is 4
+    Hz and times usually end on .125, .375, .625, or .875 seconds.
+    However, some sections of the data have a higher sampling rate of
+    8 Hz (for example, SPACECRAFT_CLOCK_START_COUNT=128278390.000 for
+    MER-1). In order to ensure a uniform timestep, such sections were
+    reduced to a 4 Hz sampling rate by discarding any lines of data
+    where the time did not end .125, .375, .625, or .875 seconds.
+ 
+    Two lines of data are missing from 1TRANSFORMED.TAB, corresponding
+    to SPACECRAFT_CLOCK_START_COUNT=128278462.875 and
+    SPACECRAFT_CLOCK_START_COUNT=128278463.125. Values of
+    BACKSHELL_IMU_ACCEL_X, BACKSHELL_IMU_ACCEL_Y and
+    BACKSHELL_IMU_ACCEL_Z at these times were replaced by linear
+    interpolation using neighbouring data points. Two missing lines of
+    data from 2TRANSFORMED.TAB, corresponding to
+    SPACECRAFT_CLOCK_START_COUNT=126462354.625 and
+    SPACECRAFT_CLOCK_START_COUNT=126462355.875, were replaced in the
+    same way.
+ 
+    Data prior to the time of atmospheric entry were discarded. At this
+    stage in the processing, each data series begins at the time of
+    atmospheric entry and ends at backshell separation, which occurs
+    after parachute deployment. Some of the analysis described in
+    [WITHERS&amp;SMITH2006A, WITHERS&amp;SMITH2006B] used these data series,
+    including the work on determining the entry states. The data
+    products archived in this PDS volume were generated from truncated
+    versions of these data series. Data after parachute deployment were
+    discarded to form these truncated data series. These low-altitude
+    data were discarded because the assumptions made about spacecraft
+    attitude for the trajectory reconstruction are significantly less
+    reliable after parachute deployment than before.
+ 
+    The MER-1 data series from atmospheric entry to parachute
+    deployment begins at SPACECRAFT_CLOCK_START_COUNT=128278194.625
+    and ends at SPACECRAFT_CLOCK_START_COUNT=128278444.625. The MER-2
+    data series from atmospheric entry to parachute deployment begins
+    at SPACECRAFT_CLOCK_START_COUNT=126462085.625 and ends at
+    SPACECRAFT_CLOCK_START_COUNT=126462336.375.
+ 
+    SCLK_TIME equals the processed SPACECRAFT_CLOCK_START_COUNT
+    values. AXIAL_ACCELERATION equals -1 times the processed
+    BACKSHELL_IMU_ACCEL_Z values. The factor of -1 was introduced
+    for convenience. It ensures that AXIAL_ACCELERATION is positive,
+    rather than negative, at peak aerodynamic deceleration.
+    AXIAL_ACCELERATION can be positive, zero, or negative.
+    NORMAL_ACCELERATION equals the square root of the sum of the
+    squares of the processed BACKSHELL_IMU_ACCEL_X and
+    BACKSHELL_IMU_ACCEL_Y values. NORMAL_ACCELERATION can be positive or
+    zero, but cannot be negative. 1-sigma uncertainties in these
+    quantities are SIGMA_SCLK_TIME, SIGMA_AXIAL_ACCELERATION and
+    SIGMA_NORMAL_ACCELERATION.
+ 
+    Next, the trajectory was reconstructed. The total acceleration
+    acting on the spacecraft is the sum of aerodynamic and
+    gravitational accelerations. It is necessary to transform the
+    aerodynamic accelerations from a frame defined with respect to
+    the spacecraft to a frame defined with respect to Mars. It was
+    assumed that the aerodynamic acceleration consists of
+    AXIAL_ACCELERATION only, that the aerodynamic acceleration vector
+    is parallel to the velocity of the spacecraft with respect to
+    the atmosphere, and that the atmosphere rotates at the same
+    angular velocity as the solid body of Mars. Winds are thus
+    neglected. The spacecraft rotates about the axis of symmetry
+    on a timescale that is short compared to the timescale for
+    changes in accelerations normal to this axis. Therefore it is
+    reasonable to neglect NORMAL_ACCELERATION in the trajectory
+    reconstruction. The three components of the transformed
+    AXIAL_ACCELERATION are X_ACCELERATION, Y_ACCELERATION and
+    Z_ACCELERATION. 1-sigma uncertainties in these quantities
+    are SIGMA_X_ACCELERATION, SIGMA_Y_ACCELERATION and
+    SIGMA_Z_ACCELERATION.
+ 
+    Gravitational accelerations were calculated as follows:
+ 
+    g = grad(U)                                               (1)
+ 
+    U = GM/r ( 1 + (Rref/r)^2 C20 P20(cos theta) )            (2)
+ 
+    P20(x) = sqrt(5) 1/2 (3x^2 - 1)                           (3)
+ 
+    where theta = colatitude
+    GM = 4.282E14 m^3 s^(-2)
+    Rref = 3394.2 km
+    C20 = -8.5791E-4
+    [TYLERETAL2000]
+ 
+    Entry states were determined as discussed in [WITHERS&amp;SMITH2006A]
+    and [WITHERS&amp;SMITH2006B].
+ 
+    The time, position, and velocity for MER-1 at atmospheric entry are:
+    SCLK_TIME = 128278194.625 s
+    RADIAL_DISTANCE = 3522200 m
+    LATITUDE = -2.9 degrees
+    LONGITUDE = 340.9 degrees east
+    Speed relative to Mars-centered inertial frame = 5700 m/s
+    Flight-path angle = 11.5 degrees
+    (angle below horizontal of velocity vector)
+    Flight-path azimuth = 86.5 degrees
+    (angle east of north of velocity vector)
+    X_POSITION = 3410501.1 m
+    Y_POSITION = 861754.30 m
+    Z_POSITION = -178198.42 m
+    X_VELOCITY = -2449.4191 m/s
+    Y_VELOCITY = 5131.4622 m/s
+    Z_VELOCITY = 398.04798 m/s
+ 
+    The time, position, and velocity for MER-2 at atmospheric entry are:
+    SCLK_TIME = 126462085.625 s
+    RADIAL_DISTANCE = 3522200 m
+    LATITUDE = -17.7 degrees
+    LONGITUDE = 161.8 degrees east
+    Speed relative to Mars-centered inertial frame = 5630 m/s
+    Flight-path angle = 11.5 degrees
+    (angle below horizontal of velocity vector)
+    Flight-path azimuth = 79.0 degrees
+    (angle east of north of velocity vector)
+    X_POSITION = -3307198.9 m
+    Y_POSITION = 567076.35 m
+    Z_POSITION = -1070865.2 m
+    X_VELOCITY = -176.76616 m/s
+    Y_VELOCITY = -5464.3396 m/s
+    Z_VELOCITY = 1344.1153 m/s
+ 
+    After the completion of this work, alternative entry states were
+    determined independently using SPICE kernels archived elsewhere
+    at the PDS. Software used in this independent determination is
+    archived in the EXTRAS directory of this PDS volume as file
+    meraltedlandtimes.pro. According to documentation associated with
+    those SPICE kernels, the UTC times of entry for MER-1 and MER-2 were
+    2004-01-25T04:48:41.720 and 2004-01-04T04:19:51.720, respectively.
+ 
+    According to the SPICE kernels, the position and velocity of MER-1
+    at the time of entry were:
+    SCLK_TIME = 128278194.142 s
+    RADIAL_DISTANCE = 3522201.3 m
+    LATITUDE = -2.9091901 degrees
+    LONGITUDE = 340.90205 degrees east
+    Speed relative to Mars-centered inertial frame = 5698.6452 m/s
+    Flight-path angle = 11.469960 degrees
+    Flight-path azimuth = 86.503350 degrees
+ 
+    According to the SPICE kernels, the position and velocity of MER-2
+    at the time of entry were:
+    SCLK_TIME = 126462085.048
+    RADIAL_DISTANCE = 3522202.1 m
+    LATITUDE = -17.749196 degrees
+    LONGITUDE = 161.77632 degrees east
+    Speed relative to Mars-centered inertial frame = 5627.5267 m/s
+    Flight-path angle = 11.494375 degrees
+    Flight-path azimuth = 79.025420 degrees
+ 
+    These alternative entry states, which are very similar to those
+    obtained by [WITHERS&amp;SMITH2006A, WITHERS&amp;SMITH2006B], were not
+    used to produce these datasets.
+ 
+    After determination of the entry states, as described in
+    [WITHERS&amp;SMITH2006A, WITHERS&amp;SMITH2006B], the equations of
+    motion were integrated forwards in time from the initial position
+    and velocity using the total acceleration, which produced a time
+    series of position and velocity (X_POSITION, Y_POSITION, Z_POSITION,
+    RADIAL_DISTANCE, LATITUDE, LONGITUDE, X_VELOCITY, Y_VELOCITY,
+    Z_VELOCITY). This reconstructed trajectory extends from the time of
+    atmospheric entry to parachute deployment.
+ 
+    The derived velocity values are archived as X_VELOCITY,
+    Y_VELOCITY and Z_VELOCITY. 1-sigma uncertainties in these
+    quantities are SIGMA_X_VELOCITY, SIGMA_Y_VELOCITY and
+    SIGMA_Z_VELOCITY. The derived position values are archived
+    as X_POSITION, Y_POSITION and Z_POSITION. 1-sigma uncertainties
+    in these quantities are SIGMA_X_POSITION, SIGMA_Y_POSITION and
+    SIGMA_Z_POSITION. The derived position values are also archived in
+    a spherical polar coordinate system as RADIAL_DISTANCE, LATITUDE
+    and LONGITUDE. 1-sigma uncertainties in these quantities are
+    SIGMA_RADIAL_DISTANCE, SIGMA_LATITUDE and SIGMA_LONGITUDE. The
+    speed of the spacecraft relative to the atmosphere, which is
+    assumed to rotate with the same angular velocity as the solid
+    body of Mars, is important for the atmospheric structure
+    reconstruction. These values are archived as VREL and their
+    1-sigma uncertainties are archived as SIGMA_VREL. Uncertainties
+    were found using a Monte Carlo uncertainty analysis.
+ 
+    Atmospheric density is related to aerodynamic deceleration by
+    the drag equation.
+ 
+    m az = rho A vrel^2 CA / 2                                (4)
+ 
+    where m is spacecraft mass
+    az is AXIAL_ACCELERATION
+    rho is atmospheric density
+    A is the reference area of the spacecraft
+    vrel is VREL, the speed of the spacecraft with respect to the
+    atmosphere
+    CA is the axial force coefficent, usually on the order of 2
+ 
+    A for both Spirit and Opportunity was that of a disk of diameter
+    2.648 m [SCHOENENBERETAL2005B]. m was 827.0 kg for Spirit and
+    832.3 kg for Opportunity [DESAI&amp;KNOCKE2004].
+ 
+    A similar equation relates NORMAL_ACCELERATION and the normal
+    force coefficient CN, so
+    CN/CA = NORMAL_ACCELERATION / AXIAL_ACCELERATION
+ 
+    Atmospheric density can be derived from measured aerodynamic
+    decelerations using the drag equation. However, this will not
+    work at very high altitudes when densities and aerodynamic
+    decelerations are very small. Acceleration measurements are
+    dominated by errors and offsets at very high altitudes, implying
+    unphysical negative densities. Also, this will not work at very
+    low altitudes, after parachute deployment. The aerodynamic
+    behavior of the parachute-backshell-lander system is very complex
+    and it is not possible to determine CA accurately. Without an
+    accurate CA, the drag equation cannot be used to determine
+    atmospheric density from aerodynamic decelerations. So the
+    atmospheric structure reconstruction cannot be performed over
+    the entire trajectory.
+ 
+    Atmospheric pressure is related to atmospheric density by the
+    equation of hydrostatic equilibrium.
+ 
+    dp/dr = rho x (gr + cr)                                   (5)
+ 
+    where p is pressure
+    r is radial distance
+    gr, which is negative and a function of position, is the radial
+    component of equation 1
+    cr is the radial component of - Omegavec x (Omegavec x rvec)
+    Omegavec is the angular vector for the rotation of Mars
+    rvec is the spacecraft&apos;s position vector
+ 
+    Atmospheric temperature is related to atmospheric pressure and
+    density by the ideal gas law.
+ 
+    mu p = rho R T / NA                                       (6)
+ 
+    where mu is the mean molecular mass of the martian atmosphere
+    (43.49 g/mol, [MAGALHAESETAL1999])
+    R is the universal gas constant
+    T is temperature
+    NA is Avogadro&apos;s number
+ 
+    If the appropriate value of CA can be determined at each timestep,
+    then the atmospheric density can be found at each timestep using
+    known quantities and equation 1. Next, atmospheric pressure can be
+    found at each timestep using equation 5 if a boundary condition is
+    specified. The commonly-accepted boundary condition is that
+    p0 = rho0 g0 H0, where H is the measured density scale height at
+    the top of the atmosphere and the subscript 0 refers to values at
+    the top of the atmosphere. This can also be expressed as a
+    temperature, T0 = mu g0 H0 / R. Once atmospheric pressure and
+    atmospheric density are known, atmospheric temperature can then
+    be found at each timestep using equation 6.
+ 
+    Two atmospheric structure reconstructions were performed for each
+    spacecraft. One considered uncertainties, began at about 100 km
+    altitude and ended at parachute deployment. The other did not
+    consider uncertainties, began at about 120 km altitude and ended
+    at parachute deployment. The reasons for this are related to the
+    Monte Carlo uncertainty analysis and will be described shortly.
+    The atmospheric structure reconstruction that did not consider
+    uncertainties was performed first and is described next.
+ 
+    The MER-1 atmospheric structure reconstruction that did not
+    consider uncertainties used data between 128278199.625 and
+    128278444.625 seconds, inclusive. The MER-2 atmospheric structure
+    reconstruction that did not consider uncertainties used data
+    between 126462095.625 and 126462336.375 seconds, inclusive.
+ 
+    CA is a function of attitude, spacecraft shape, atmospheric
+    density, and speed of the spacecraft relative to the atmosphere.
+    Since the MER entry capsule is axisymmetric, the dependence on
+    attitude can be expressed in terms of the angle of attack, alpha,
+    which is the angle between the symmetry axis and the velocity of
+    the spacecraft with respect to the atmosphere. Alpha is small,
+    usually less than 5 degrees. MER project engineers estimated the
+    likely entry trajectory and atmospheric structure before entry
+    occurred. They used numerical simulations to determine CA as a
+    function of alpha, or CA(alpha), and CN as a function of alpha, or
+    CN(alpha), at a finite number of points along this trajectory.
+    This set of simulated coefficients is called the aerodynamic
+    database. Values of CA(alpha) and CN(alpha) between the simulated
+    points can be found by interpolation. Interpolation required the
+    velocity of the spacecraft relative to the atmosphere, the Mach
+    number and the Knudsen number.
+ 
+    Ma = vrel / sqrt( gamma p / rho )                         (7)
+ 
+    Kn = 1 / ( sqrt(2) pi d^2 n D )                           (8)
+ 
+    where Ma is Mach number
+    Kn is Knudsen number
+    vrel is VREL, the speed of the spacecraft with respect to the
+    atmosphere
+    gamma is the ratio of the heat capacity at constant pressure to the
+    heat capacity at constant volume of the martian atmosphere
+    pi is 3.14...
+    d is the diameter of an atmospheric molecule
+    n, which satisfies n = NA rho / mu, is the atmospheric number density
+    D, which satisfies pi D^2/4 = A, is the reference diameter of
+    the spacecraft
+ 
+    Values corresponding to pure CO2 were used for gamma and d, so
+    gamma = 1.4 [ATKINS2002] and d = 4.46E-10 m [SCHOENENBERETAL2005B].
+    The aerodynamic database has been published in graphical form in
+    [SCHOENENBERETAL2005B]. Several different flight regimes are
+    encompassed by the aerodynamic database: free molecular flow,
+    transitional flow, hypersonic continuum flow, and supersonic
+    continuum flow.
+ 
+    Although the aerodynamic database has been published in graphical
+    format in [SCHOENENBERETAL2005B], it is not yet possible for
+    it to be published in tabular format (personal communication,
+    Desai, 2008).
+ 
+    First, preliminary profiles of atmospheric density, pressure,
+    and temperature were obtained using CA=2. As outlined in
+    [WITHERSETAL2003B, WITHERS&amp;SMITH2006A, WITHERS&amp;SMITH2006B],
+    an iterative procedure was used to determine rho, alpha, CA and
+    CN at each timestep. Results for alpha are unreliable when the
+    ratio NORMAL_ACCELERATION / AXIAL_ACCELERATION is inaccurate,
+    which occurs at high altitudes. Alpha and CN were set equal to zero
+    for times before 128278242.125 s (MER-1) or 126462133.125 s
+    (MER-2) (about 80 km). Densities from the upper ten km of the
+    profile were used to find H0 and to provide the upper boundary
+    condition for the equation of hydrostatic equilibrium. Pressures
+    and temperatures were then obtained.
+ 
+    The results of this atmospheric structure reconstruction are
+    archived as CA, CN, ALPHA, MA, KN, RHO, PRESS and TEMP.
+    Uncertainties were obtained using a Monte Carlo technique. The
+    Monte Carlo technique generated an ensemble of values of
+    AXIAL_ACCELERATION for each timestep using the quoted nominal
+    values and their uncertainties. If values from near 120 km were
+    used, then some of these accelerations were negative, which
+    correspond to unphysical negative densities. In order to minimize
+    the occurrence of negative densities, the atmospheric structure
+    reconstruction that considered uncertainties began at about 100 km,
+    not 120 km. The MER-1 atmospheric structure reconstruction that
+    considered uncertainties used data between 128278219.625 and
+    128278444.625 seconds, inclusive. The MER-2 atmospheric structure
+    reconstruction that considered uncertainties used data between
+    126462110.625 and 126462336.375 seconds, inclusive. An ensemble of
+    values for T0 was used as the upper boundary condition in the
+    equation of hydrostatic equilibrium. This ensemble was generated
+    using the value of T0 from the atmospheric structure reconstruction
+    without uncertainties (160 K for both MER-1 and MER-2) and an
+    assumed uncertainty of 50 K. Atmospheric structure reconstructions
+    were performed as above using these ensemble inputs. Their standard
+    deviations were used to generate uncertainties for the archived
+    data products. This is an abbreviated description of the error
+    analysis, see [WITHERS&amp;SMITH2006B] for further information.
+ 
+    Derived values of atmospheric density, atmospheric pressure,
+    and atmospheric temperature are archived as RHO, PRESS and TEMP,
+    respectively. 1-sigma uncertainties in these quantities are
+    archived as SIGMA_RHO, SIGMA_PRESS and SIGMA_TEMP. Derived values
+    of CA, CN, alpha, Ma, and Kn are archived as CA, CN, ALPHA,
+    MA and KN, respectively. 1-sigma uncertainties in these quantities
+    are archived as SIGMA_CA, SIGMA_CN, SIGMA_ALPHA, SIGMA_MA and
+    SIGMA_KN.
+ 
+    Each run of a Monte Carlo error analysis leads to slightly
+    different uncertainties. Different runs were used to generate
+    the data products archived here and the data products published
+    as supplemental information to [WITHERS&amp;SMITH2006A]. The Monte
+    Carlo techniques were only used to generate those data products
+    whose names begin with &apos;SIGMA_&apos;. Data products such as LATITUDE and
+    RHO were produced without consideration of uncertainties, so they
+    do not change from one run of the data processing software to the
+    next.
+ 
+    Not all data products are defined at all timesteps. Data
+    products derived in the atmospheric structure reconstruction are
+    not defined above about 120 km and uncertainties in these data
+    products are not defined above about 100 km. Uncertainties in
+    alpha and CN are also not defined above about 80 km, where alpha
+    and CN are assumed to be zero. Such data products are given the
+    null value -1 in the data files.
+ 
+  Acronyms
+  ========
+ 
+    AAT     Atmospheric Advisory Team
+    AIAA    American Institute of Aeronautics and Astronautics
+    B-IMU   Backshell IMU
+    DIMES   Descent Image Motion Estimation System
+    EDL     Entry, Descent and Landing
+    ET      Ephemeris Time
+    HASI    Huygens Atmospheric Structure Instrument
+    IDL     Interactive Data Language, a computer programming language
+    IMU     Inertial Measurement Unit
+    ITAR    International Traffic in Arms Regulations
+    JPL     Jet Propulsion Laboratory
+    Ls      The angle between the Mars-Sun line and the Mars-Sun
+            line at the northern hemisphere vernal equinox, known as
+            the areocentric longitude of the Sun
+    LST     Local Solar Time
+    MER     Mars Exploration Rover
+    MGS     Mars Global Surveyor
+    NASA    National Aeronautics and Space Administration
+    OPP     Opportunity
+    PAET    Planetary Atmosphere Experiments Test
+    PDS     Planetary Data System
+    R-IMU   Rover IMU
+    SCLK    Spacecraft Clock
+    SPI     Spirit
+    SPICAM  Spectroscopy for the Investigation of the Characteristics
+            of the Atmosphere of Mars
+    SPICE   An information system provided by the Navigation and
+            Ancillary Information Facility
+    TES     Thermal Emission Spectrometer
+    TIRS    Transverse Impulse Rockets System
+    UTC     Coordinated Universal Time
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Data Coverage and Quality
+  =========================
+ 
+    Data coverage is excellent. The only minor gaps in the data
+    series are discussed above. None of the values of
+    SPACECRAFT_CLOCK_START_COUNT, BACKSHELL_IMU_ACCEL_X,
+    BACKSHELL_IMU_ACCEL_Y and BACKSHELL_IMU_ACCEL_Z were identified
+    as erroneous. Uncertainties in the values of
+    BACKSHELL_IMU_ACCEL_X, BACKSHELL_IMU_ACCEL_Y,
+    BACKSHELL_IMU_ACCEL_Z and other IMU measurements from PDS
+    volume MERIMU_1001 [KASSETAL2004] are discussed in
+    [WITHERS&amp;SMITH2006B].
+ 
+  Limitations and Caveats
+  =======================
+ 
+    The entry states used to generate this archived data volume are
+    not as accurate as they could be. They were determined as
+    described in [WITHERS&amp;SMITH2006A, WITHERS&amp;SMITH2006B],
+    rather than being taken from SPICE kernels. Uncertainties in the
+    entry state were assumed to be the same as for Mars Pathfinder
+    [MAGALHAESETAL1999]. There is no evidence to support this
+    assumption. The PDS volume MERIMU_1001 [KASSETAL2004] contains
+    information on spacecraft attitude during entry. This
+    reconstruction does not use that information and instead made
+    several assumptions concerning spacecraft attitude. Use of the
+    archived attitude quaternions led to a realistic reconstructed
+    trajectory for Spirit, but not Opportunity
+    [WITHERS&amp;SMITH2006A, WITHERS&amp;SMITH2006B]. These attitude
+    quaternions were derived from angular rate data recorded by
+    gyroscopes and an initial attitude. It is possible that the
+    initial attitude for Opportunity, but not Spirit, was unreliable,
+    thereby contaminating the entire time series of attitude
+    quaternions. The archived angular rate data from the gyroscopes
+    are useless, because the orientation of the gyroscope axes with
+    respect to the spacecraft coordinate frame has not been
+    published [WITHERS&amp;SMITH2006A, WITHERS&amp;SMITH2006B].
+ 
+    If the trajectory and atmospheric structure are reconstructed
+    using the alternative (SPICE) entry states, rather than the
+    [WITHERS&amp;SMITH2006A] entry states, changes are small. In this
+    discussion, the &apos;difference&apos; in a reconstructed quantity is
+    the value of that quantity for the reconstruction that used the
+    alternative (SPICE) entry state minus the value of that quantity
+    for the reconstruction that used the [WITHERS&amp;SMITH2006A] entry
+    state. The &apos;relative difference&apos; is the ratio of the &apos;difference&apos;
+    to the value of that quantity for the reconstruction that used the
+    [WITHERS&amp;SMITH2006A] entry state. For MER-1, the difference in
+    altitude, which is about +1 m at entry and +450 m at parachute
+    deployment, varies approximately linearly with altitude. The
+    difference in latitude is -0.01 degrees. The difference in
+    longitude is +0.02 degrees at entry and -0.04 degrees at parachute
+    deployment. It varies approximately linearly with time. The
+    difference in speed of the spacecraft relative to the atmosphere
+    is -1.38 m/s at entry and -1.74 m/s at parachute deployment. The
+    relative difference in density is less than 0.1% above 30 km
+    and less than 1% at all altitudes. The relative difference in
+    pressure is less than 0.5% at all altitudes. The difference in
+    temperature varies smoothly between -0.5 K at 80 km and -1.5 K at
+    parachute deployment. For MER-2, the difference in altitude, which
+    is about +2 m at entry and +100 m at parachute deployment, varies
+    approximately linearly with altitude. The difference in latitude
+    is -0.05 degrees. The difference in longitude is -0.02 degrees
+    at entry and -0.03 degrees at parachute deployment. The difference
+    in speed of the spacecraft relative to the atmosphere is between
+    -2.25 m/s and -2.45 m/s. The relative difference in density is less
+    than 0.1% above 50 km and less than 1.2% at all altitudes. The
+    relative difference in pressure is less than 0.5% at all altitudes
+    below 110 km. The difference in temperature is between 0 K and
+    -0.2 K at all altitudes between 30 km and 110 km. The difference
+    in temperature is between -0.2 K and -1.5 K at all altitudes
+    between 30 km and parachute deployment. The alternative (SPICE)
+    entry states occur about 0.5 s before the [WITHERS&amp;SMITH2006A]
+    entry states. This was neglected in the comparison.
+ 
+    There is an inconsistency between the trajectory reconstruction
+    and the atmospheric structure reconstruction. The trajectory
+    reconstruction assumes an angle of attack of zero and neglects
+    normal accelerations. The atmospheric structure reconstruction
+    determines the value of the angle of attack, which was typically
+    on the order of a few degrees. If the angle of attack is fixed
+    at 0 degrees or at 2 degrees in both the trajectory reconstruction
+    and the atmospheric structure reconstruction, then changes in the
+    inferred trajectory and atmospheric structure are generally small.
+    The changes in density and temperature at parachute deployment
+    are &lt;2% and &lt;3K. However, if the angle of attack is fixed at 5
+    degrees, then the density and temperature at 30 km change by
+    &lt;1% and &lt;3K, whereas the density, temperature, altitude, and
+    atmosphere-relative speed at parachute deployment change by 7%,
+    about 20 K, 0.2 km, and 20 m/s. These changes are similar for
+    both Spirit and Opportunity.
+ 
+    Wind speeds were assumed to be zero in the trajectory
+    reconstruction and the atmospheric structure reconstruction.
+    Since neither the mean nor the standard deviation of the zonal
+    and meridional wind speeds for the entries of Spirit and
+    Opportunity were known as functions of altitude, non-zero
+    wind speeds were not considered in the trajectory and
+    atmospheric structure Monte Carlo error analysis.
+    If the zonal wind is fixed at +30 m/s eastward throughout the
+    atmosphere, then the density and temperature at 30 km change
+    by +2% and -2K. The density, temperature, altitude, and
+    atmosphere-relative speed at parachute deployment change
+    by +15%, -20K, +0.4 km, and -30 m/s. If the wind direction
+    is reversed, then the sign of these changes is also reversed.
+    These changes are similar for both Spirit and Opportunity.
+ 
+    Three parts of the entry state were determined indirectly in
+    [WITHERS&amp;SMITH2006A, WITHERS&amp;SMITH2006B]: flight path azimuth,
+    latitude, and longitude. Changes in latitude and longitude at
+    entry by approximately 1 degree merely translate the entire
+    trajectory horizontally, with negligible change in the inferred
+    atmospheric structure. Changes in the flight path angle at entry
+    by approximately 5 degrees change the latitude at 30 km and
+    parachute deployment by approximately 1 degree; changes in
+    longitude are much smaller. Changes in the inferred atmospheric
+    structure at 30 km are negligible, but changes in density and
+    temperature at parachute deployment are 2% and 3K. These changes
+    are similar for both Spirit and Opportunity.
+ 
+    The IMU data archived in PDS volume MERIMU_1001 [KASSETAL2004]
+    are stated in that volume&apos;s DATASET.CAT file to be those
+    transmitted from the spacecraft. That is, they have not undergone
+    additional calibration. Recalibration of the MER IMU data began in
+    2004 and so these data should be considered preliminary (Desai,
+    personal communication, 2004). At the time of writing, January
+    2008, that work is ongoing (Desai, personal communication, 2008).
+    These recalibrated data will be delivered to the PDS in 2008
+    (Desai, personal communication, 2008). The reconstructed
+    trajectory and atmospheric structure archived here and based
+    on preliminary IMU data may in the future be superceded by
+    reconstructions based on the more accurate recalibrated IMU data.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-nlr-6-eros-maps-models-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR NLR LEVEL 3 DATA PRODUCTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nlr.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-nlr-6-eros-maps-models-v1.0__browserp_near-a-nlr-6-eros-maps-models-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-nlr-6-eros-maps-models-v1.0__browser_geo_near-a-nlr-6-eros-maps-models-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-nlr-6-eros-maps-models-v1.0__dvo_geo_near-a-nlr-6-eros-maps-models-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Neumann, G.A., F.G. Lemoine, D.D. Rowlands, D.E. Smith, and M.T. Zuber,
+                   Crossover Analysis of Mars Orbiter Laser Altimeter Data, J. Geophys. Res., Vol.
+                   106, pp. 23753-23768, 2001.
+            </reference_text>
+            <description>reference.NEUMANNETAL2001</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-NLR-6-EROS-MAPS-MODELS-V1.0</data_set_id>
+        <data_set_name>NEAR NLR LEVEL 3 DATA PRODUCTS V1.0</data_set_name>
+        <data_set_release_date>2001-07-13</data_set_release_date>
+        <start_time>2000-03-05T00:00:04Z</start_time>
+        <stop_time>2001-02-12T19:04:01Z</stop_time>
+        <producer_full_name>DAVID E. SMITH</producer_full_name>
+        <citation_text>
+            Neumann G., D. Smith, NEAR NLR LEVEL 3 DATA PRODUCTS V1.0,
+            NEAR-A-NLR-6-EROS-MAPS-MODELS-V1.0, NASA Planetary Data System,
+            2001.
+        </citation_text>
+        <data_set_terse_desc>
+            NLR Level 3 Data Products includes spherical harmonic shape and
+            gravity models, and gridded maps or images of those models.
+        </data_set_terse_desc>
+        <abstract_desc>
+            NLR Level 3 Data Products includes spherical harmonic shape and
+            gravity models, and gridded maps or images of those models.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The NEAR Laser Rangefinder (NLR) Level 3 Data Products includes
+      spherical harmonic shape and gravity models, and gridded maps
+      or images of those models.
+ 
+    Parameters
+    ==========
+      Spherical harmonic models are tables of coefficients GM, Cmn,
+      and Smn. ASCII data type (SHA) formats are defined. Each file
+      contains 2 tables: a header table containing general
+      parameters for the model (gravitational constant, its
+      uncertainty, degree and order of the field, normalization
+      state, reference longitude, and reference latitude) and a
+      coefficients table (degree m, order n, coefficients Cmn and
+      Smn, and their uncertainties).
+ 
+      Gridded Digital Map files are image representations
+      of shape and other parameters. Gravity and topographic values
+      may be displayed using this data type.  Data are formatted
+      as PDS image objects.
+ 
+    Processing
+    ==========
+      The Level 2 NLR profiles in the 200 by 200 km orbital phases and
+      lower are the source of the NLR shape models. Where two ground
+      tracks intersect, the residual is calculated by linear
+      interpolation between adjacent shots. The crossover residuals are
+      used as a measure of data quality and can be used to remove
+      systematic errors in spacecraft ephemeris and pointing. Crossover
+      corrections are implemented in two stages via the software described
+      in [NEUMANNETAL2001], as modified for NLR. The first stage adjusts
+      for long-wavelength errors due to mis-modeled ephemeris and pointing,
+      at a period of four cycles per asteroid revolution.
+      The second stage adjusts higher-frequency errors at a period of ~5
+      minutes, primarily due to residual pointing mismodeling. Adjustments
+      are iterated until the crossover residual root-mean-square error is
+      less than 10 m.
+ 
+      The adjusted profiles are merged by binning observations within a
+      given grid cell, uniformly spaced in longitude and latitude. The
+      median value and the number of observations in each bin comprise the
+      gridded data product.
+ 
+      The gravity field coefficients were obtained by solving systems
+      of equations with thousands of unknowns.  Radio tracking data
+      in long arcs delimited by propulsive maneuvers, occultations,
+      etc. were used in solutions that were obtained iteratively
+      and by least squares.
+ 
+    Data
+    ====
+      Data are stored on CD-WO volumes. A CD volume was created
+      for delivery of data to PDS.
+ 
+      ASCII spherical harmonic models are stored in the /LEVEL3/SHA
+      directory with file names of the form NLRknnnv.SHA, where nnn
+      is a 3-character modifier specified by the data producer, v is a
+      version identifier, and k is replaced by G for gravity field or
+      T for topography/shape field, and SHA denotes that this is an ASCII
+      file of spherical harmonic coefficients.
+ 
+      Gridded map products are stored in the /LEVEL3/IMG directory.
+      Each image is a binary array of 16-bit integers with one image line
+      per file record. The image file name is in the form NLRnnnvk.IMG,
+      where nnn is the bin size, v is a version identifier, and k is
+      replaced by C for counts or R for radius, and IMG denotes that
+      this is a PDS image object. For example, a one-eighth degree
+      resolution topography image would be named NLR125vR.IMG. Its format
+      would be described by a detached PDS label in the file NLR125vR.LBL.
+ 
+      An ASCII tabular file containing global shape data of Eros,
+      including the latitude and longitude of the NLR laser bounce
+      point, the radius, and the number of observations (counts) can be
+      found in the /LEVEL3/ASCII directory.
+ 
+    Ancillary Data
+    ==============
+      None.
+ 
+    Coordinate System
+    =================
+      NLR data files use an EROS centered body-fixed coordinate
+      system with positive east longitude. The transformation from
+      inertial (J2000) coordinates to body-fixed is represented by the
+      project-supplied SPICE format attitude and orientation files used
+      to generate level 2 data products.
+ 
+    Software
+    ========
+      None.
+ 
+    Media/Format
+    ============
+      The archival data set was written on CD-WO by the NEAR/NLR
+      Project.  The CD-WO volumes conform to ISO 9660 Level 2
+      standards.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archive have been reduced as part of mission data
+      analysis activities of the NEAR/NLR Science Team.
+ 
+    Review
+    ======
+      This archival data set was reviewed by the NEAR/NLR Science
+      Team prior to final submission to the Planetary Data
+      System (PDS).
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, example data files, CATALOG files, and other
+      relevant documentation.  These materials were distributed to
+      PDS personnel, the experiment investigator, and others, as
+      appropriate.
+ 
+    Data Coverage and Quality
+    =========================
+      These volumes contain gravity and shape models and gridded maps
+      generated from NEAR data collected through February 2001.
+      The NEAR data included tracking results from the EROS Orbit
+      Phase.
+ 
+      GTM0180A.SHA contains the coefficients for a 180x180
+      degree and order shape model produced at Goddard Space Flight
+      Center. A full error analysis is included.
+      Internal consistency, as measured by crossover point misfit,
+      is generally better than 10 m.
+ 
+      NLRG016A.SHA is a spherical harmonic gravity field model
+      complete to degree and order 16.
+ 
+      NLR125AR.IMG is a gridded shape map of Eros at a
+      resolution of 0.125 by 0.125 degrees, based on altimetry data
+      acquired by the NLR instrument. The data include edited NLR
+      observations from 200-km orbits and lower, using the NLR393
+      orbit solutions produced at NASA-GSFC.
+ 
+      NLR125AC.IMG is a data file that accompanies the shape
+      map of Eros NLR125AR.IMG at a resolution of
+      0.125 by 0.125 degrees. It contains the number of observations
+      per pixel that have been used to produce the NLR shape data
+      product. The data include edited NLR observations from 200-km
+      orbits and lower.
+ 
+      NLR100.TAB is a 1 degree resolution tabular data file that
+      contains global shape data of Eros, including the latitude and
+      longitude of the NLR laser bounce point, the radius, and the
+      number of observations (counts).
+ 
+    Limitations
+    ===========
+      There is NO gravity covariance matrix on these volumes.
+      This product is useful in understanding the errors in the gravity
+      solution. The gravity field covariance represents the complete
+      error description for the gravity field solution, including the
+      coefficient variances (sigmas^2), and the correlations between
+      all the coefficients.
+      This product was not available at the time this archive was
+      completed. The file and documentation will be available at a
+      later date on the World Wide Web/Internet at the following URL:
+           http://pds-geophys.wustl.edu/pds/near_nlr.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>1996-008A-5</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

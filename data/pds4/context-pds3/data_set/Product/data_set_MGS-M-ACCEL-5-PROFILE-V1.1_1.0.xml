@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-accel-5-profile-v1.1</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS PROFILE DATA RECORDS V1.1</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:accel.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-accel-5-profile-v1.1__browserp_mgs-m-accel-5-profile-v1.1::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cancro, G.J., R.H. Tolson and G.M. Keating, Operational Data Reduction
+                   Procedure for Determining Density and Vertical Structure of the Martian Upper
+                   Atmosphere From Mars Global Surveyor Accelerometer Measurements,
+                   NASA/CR-998-208721, October 1998.
+            </reference_text>
+            <description>reference.CANCROETAL1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Shane, R.W. and R.H. Tolson, Aerothermodynamics of the Mars Global
+                   Surveyor Spacecraft, NASA/CR-1998-206941, March 1998.
+            </reference_text>
+            <description>reference.SHANE-TOLSON1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H. et al., Application of Accelerometer Data to Mars Global
+                   Surveyor Aerobraking Operations, Journal of Spacecraft and Rockets, Vol.
+                   36, No. 3, May-June 1999, pp. 323-329.
+            </reference_text>
+            <description>reference.TOLSONETAL1999A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H. et al., Utilization of Mars Global Surveyor Accelerometer
+                   Data for Atmospheric Modeling, AAS Paper 99-386, August 1999.
+            </reference_text>
+            <description>reference.TOLSONETAL1999B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Wilmoth, R.G. et al., Rarefied Aerothermodynamic Predictions for Mars
+                   Global Surveyor, Journal of Spacecraft and Rockets, Vol. 36, No. 3,
+                   May-June 1999, pp. 314-322.
+            </reference_text>
+            <description>reference.WILMOTHETAL1999</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-ACCEL-5-PROFILE-V1.1</data_set_id>
+        <data_set_name>MGS PROFILE DATA RECORDS V1.1</data_set_name>
+        <data_set_release_date>2000-08-09</data_set_release_date>
+        <start_time>1997-11-13T00:58:24.68Z</start_time>
+        <stop_time>1999-02-04T09:12:48.01Z</stop_time>
+        <producer_full_name>GERALD M. KEATING</producer_full_name>
+        <citation_text>not applicable</citation_text>
+        <data_set_terse_desc>
+            MGS PROFILE DATA RECORDS
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    All PROFILE accelerometer data are packaged by periapsis number for
+    each aerobraking orbit.  Each orbit is identified by a folder with
+    name Pyyyy where &apos;yyyy&apos; is the four digit periapsis number.  PROFILE
+    data are provided  in a table labeled Pyyyy.tab located in its
+    respective orbit folder. PROFILE data are provided at one second
+    resolution.
+ 
+ 
+  Parameters
+  ==========
+    Time From Periapsis:            Units = seconds
+    Latitude:                       Units = degrees
+    Longitude:                      Units = degrees
+    Local Solar Time:               Units = N/A
+    Solar Zenith Angle:             Units = degrees
+    Altitude:                       Units = km
+    7 Second Density:               Units = kg/km**3
+    Sigma 7 Second Density:         Units = kg/km**3
+    40 Second Density               Units = kg/km**3
+    Sigma 40 Second Density:        Units = kg/km**3
+ 
+ 
+  Data
+  ====
+    For each orbit, PROFILE data consist of an n-by-1 array in the file
+    folder Pyyyy, where n is the number of seconds of data received
+    during the aerobraking pass.  Column 1 contains the time from
+    periapsis.  Columns  2 through 10 contain Latitude, Longitude, Local
+    Solar Time, Solar Zenith Angle, Altitude, 6.7 Second Density, Sigma
+    6.7 Second Density, 40 second density, and Sigma 40 Second Density.
+ 
+ 
+  Processing
+  ==========
+    Accelerometer data were processed in the PROFILE stage through
+    several steps and the entire process with examples is given in
+    [TOLSONETAL1999B].  First, traditional Euler terms were removed
+    using low pass rates and low pass shifted rates.  The shifted rates
+    are utilized to eliminate erroneous acceleration due to thruster
+    induced, nearly instantaneous changes in rates.  Next, high
+    frequency terms due to SAM vibration were removed using a linear
+    regression on both high pass angular rates and angular acceleration.
+    Third, accelerometer data at the time of thruster firings are
+    replaced with a local exponential fit or with a constant equal to
+    the bias.  A seven point running mean is then performed to remove
+    any remnants of the SAM vibration.
+ 
+    The 7 second averaged counts are converted into density values.
+    Because of considerable wave structure in data which do not
+    represent the &apos;mean&apos; thermosphere, a second data set is also
+    archived.  A 40 point running mean of the 7 second running mean
+    density is the final data product.
+ 
+    Density averaging was conducted in two forms. The first form,
+    seven-second running averages, are included in the data files for
+    only those instances following the final negative density inbound,
+    and prior to the first negative density value outbound.  (These
+    negative count values arise due to the offsets and biases of the
+    system at very small decelerations).  These seven second running
+    mean values account for all instantaneous measurements during this
+    seven second window.  Thus, seconds 1-7, seconds 2-8, seconds 3-9,
+    etc., are included in consecutive average values.
+ 
+    The second averaging is a running forty 7-second average mean. Here,
+    the individual 7-second average density values are accumulated for
+    40 consecutive points (seconds 1-7, 2-8, 3-9,....33-39, 34-40).
+    These 40-point averages DO include all 7-second points (including
+    those which covered negative count values; recall, the individual
+    7-second average values included in the data tables are set to zero
+    for all instances where a negative count value existed in the
+    seven-second accumulation prior to averaging). Thus, in the data
+    table, the 40-point mean values commence in the first record, while
+    the 7-second average values are zero at the beginning of and the end
+    of the table.
+ 
+    These averaging procedures, and their motivation, are described more
+    completely in [TOLSONETAL1999B].
+ 
+ 
+  Coordinate System
+  =================
+    Latitude and longitude are in the IAU Mars Centered Mars Equatorial
+    System.  Altitude is above the IAU reference ellipsoid, with
+    a=3393.4 km and f=0.0052083 and including corrections for (4,4)
+    gravitational potential.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    Standard deviations for the 7 second and 40 second running means are
+    sample standard deviations and include both natural variability and
+    data noise.
+ 
+ 
+  Review
+  ======
+    Comparisons were made with operational data sets.  Deviations were
+    within expectations founded on archiving analysis that is based on
+    (4,4) gravitational potential and numerically integrated precision
+    trajectories that were not included in operational software.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data coverage during an aerobraking pass has varied throughout the
+    mission.  Early in the mission, data were received for 500 seconds
+    on either side of periapsis.  Later, the data started between 200
+    and 250 seconds before periapsis.  This change was made to reduce
+    propulsion usage.  Though this change somewhat reduced the accuracy
+    of determining the accelerometer bias, it had the advantage of
+    reducing the corruption of the data set with thruster firings while
+    still inside the detectable atmosphere.  Not all orbits have yet
+    been included in current archiving data sets.  Omitted orbits
+    include orbits where automatic data processing procedures did not
+    produce realistic answers.  If required, many of these orbits can be
+    recovered by manual manipulation of data and data analysis
+    procedures.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

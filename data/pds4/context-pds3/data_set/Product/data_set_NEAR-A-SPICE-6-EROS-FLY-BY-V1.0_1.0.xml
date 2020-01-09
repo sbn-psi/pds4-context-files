@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-spice-6-eros-fly-by-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR SPICE KERNELS EROS/FLY/BY</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-spice-6-eros-fly-by-v1.0__browserp_near-a-spice-6-eros-fly-by-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-SPICE-6-EROS/FLY/BY-V1.0</data_set_id>
+        <data_set_name>NEAR SPICE KERNELS EROS/FLY/BY</data_set_name>
+        <data_set_release_date>2001-09-06</data_set_release_date>
+        <start_time>1998-12-23T00:00:00.000Z</start_time>
+        <stop_time>1998-12-23T23:59:59.999Z</stop_time>
+        <producer_full_name>NEAR SCIENCE DATA CENTER</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            This data set includes the complete set of SPICE data for one
+            NEAR mission phase in the form of SPICE kernels, which can be
+            accessed using SPICE software available to read these files.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of SPICE data for one
+            NEAR mission phase in the form of SPICE kernels, which can be
+            accessed using SPICE software available to read these files.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      This data set includes the complete set of SPICE data for one NEAR
+      mission phase in the form of SPICE kernels, which can be accessed
+      using SPICE software available to read these files.
+ 
+      The SPICE data contains geometric and other ancillary information
+      needed to recover the full value of science instrument data. In
+      particular SPICE kernels provide spacecraft and planetary
+      ephemerides, instrument mounting alignments, spacecraft orientation
+      and spacecraft sequences of events. Data needed for relevant time
+      conversions is also included.
+ 
+       This data set is possibly spread across multiple volumes, each
+       containing the complete set of SPICE kernels for two or more mission
+       phases, a single mission phase or a portion of a mission phase.
+       The volume coverages are summarized in the table:
+ 
+            VOLUME ID     START TIME(YYDDD)    STOP TIME(YYDDD)
+            -----------  -------------------  -------------------
+            NGERFB_0001        1998357              1998357
+ 
+ 
+ 
+    Data Types (SPICE kernel types)
+    ===============================
+      SPK kernels contain ephemerides for spacecraft, planets, satellites,
+      comets and asteroids as well as for moving or fixed spacecraft and
+      instrument structures. They provide position and velocity, given in
+      a Cartesian reference frame. SPK files are located under the
+      GEOMETRY/SPK directory.
+ 
+      PCK kernels contain certain physical, dynamical and cartographic
+      constants for target bodies, such as size and shape specifications,
+      and orientation of the spin axis and prime meridian. PCK files are
+      located under the GEOMETRY/PCK directory.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      GEOMETRY/IK directory.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft structure
+      upon which science instruments are mounted. CK files are located
+      under the GEOMETRY/CK directory.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values of
+      other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK files
+      are located under the GEOMETRY/LSK directory.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock calibration
+      data required to perform a mapping between Ephemeris time (ET) and
+      spacecraft on-board time (SCLK.) SCLK files are located under the
+      GEOMETRY/SCLK directory.
+ 
+ 
+    Software
+    ========
+      The SPICE Toolkit contains software modules needed to read SPICE
+      kernel files. SPICELIB software is highly documented via internal
+      headers. Additional documentation is available in separate ASCII
+      text files called Required Reading files. For example, the S- and P-
+      Kernel (SPK) Required Reading File, named SPK.REQ, describes use of
+      the SPK kernel file readers and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such as
+      PC, Mac, SUN, HP, SGI, VAX, DEC Alpha, NeXT, etc. is available at
+      the NAIF Node of PDS electronically (via anonymous FTP and WWW
+      servers). Each version of the Toolkit is also archived at the NASA
+      National Space Science Data Center.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      This volume contains SPICE kernel files created during mission
+      operations only. No post processing has been done on these data.
+ 
+    SPK Files
+    =========
+      Two kinds of SPK files are provided in this archive: SPK files for
+      the spacecraft orbit and SPK files for EROS, Earth and Sun.
+ 
+      Spacecraft Orbit SPK Files
+      --------------------------
+      SPK files are for the spacecraft are created by the NEAR JPL
+      Navigation team. The kernels in this archive are specifically
+      created for science users and distributed through the Science Data
+      Center. These kernels are merged from a series of operations SPK
+      kernels. The merged kernels remove all of the predicted data from
+      the operations kernel, except the final predicted segment in the
+      kernel. For science use they must be loaded sequentially by the
+      spice kernel load routines, so that the oldest are loaded first.
+      This will ensure that reconstructed values are used whenever
+      possible.
+ 
+      Solar System Body SPK Files
+      ---------------------------
+      The solar system body SPK files were provided by the JPL Navigation
+      team by way of the NAIF group.  The accuracies for the bodies in each
+      file can be obtained by inspecting the comment portion of each file
+      using the COMMNT utility from the SPICE toolkit, which is available
+      from NAIF.  The asteroid SPK files were provided directly from the
+      JPL Navigation team.  The comment portion of the Mathilde and Eros
+      SPK files provide detailed information regarding their usage and
+      accuracy.
+ 
+ 
+    CK Files
+    ========
+      C-kernel files provide orientation of the spacecraft. With the
+      exception of NIS, the NEAR instruments have fixed orientation. MSI,
+      NIS, XGRS and NLR all nominally are oriented along the spacecraft
+      positive X-axis. The Solar panels and high gain antenna are
+      nominally oriented in the positive z-axis. The small difference of
+      instrument orientation from the X-axis are given in the instrument
+      kernel (IK) files. The data Ck files are taken directly from the
+      attitude telemetry produced by the spacecraft Flight Computer (FC).
+      The FC data is reformatted at full resolution into the Ck files. No
+      interpolation is done on these data.
+ 
+ 
+    EK Files
+    ========
+      Events kernel files are often used to digitally represent an
+      experimenter&apos;s notebook( ENB EK&apos;s) or to list a summary of all
+      commands sent to a spacecraft, as is the case with Sequence EK&apos;s.
+      In the case of NEAR,  E-kernels are used in a very different way:
+      to efficiently represent the shape of EROS. This representation
+      is often referred to as a &apos;shape&apos; or &apos;plate&apos; model.  There are two
+      plate models of EROS in this delivery, one at a lower resolution,
+      having only 1566 plates and another at a higher resolution, having
+      7516 plates.  These plate E-kernels are specifically designed for
+      use with the SPICE plate library, developed specifically for NEAR.
+      This library is used to perform geometric calculations related to
+      fields of view, observing geometry, etc. for shape models defined
+      as a plate E-Kernel.  The plate library can be obtained by contacting
+      NAIF.
+ 
+ 
+    PCK Files
+    =========
+      PCK files provide size, shape and orientation data for &apos;target&apos;
+      bodies such as Mathilde and EROS. A description of these data items
+      and reference to their source is provided inside the text PCK files,
+      which is a simple text file that can be viewed using any word
+      processor, text editor or text display utility.  The binary PCK files
+      contain a comment area for each file.  SPICE Toolkit utilities like
+      SPACIT and COMMNT can be used to extract the comments from these
+      files.
+ 
+ 
+    IK Files
+    ========
+      Instrument kernel files provide specifications for the mounting
+      alignment and where applicable field-of-view size, shape and
+      orientation for the named instrument. Metadata describing these
+      estimates are provided in each IK file included in this archive.
+      Parameter values were determined from pre-launch measurements or
+      from manufacturing blueprints.
+ 
+ 
+    SCLK Files
+    ==========
+      Spacecraft Clock kernel files provide a tabulation of data needed
+      for converting time measurements between ephemeris time (ET) and
+      spacecraft clock time (SCLK). The SPICE SCLK file is produced by the
+      NEAR Mission Operations Center.
+ 
+      The time correlation accuracy provided in SCLK files is informally
+      reported by the MOPS team to be better 20 milliseconds during
+      orbital phases. This accuracy has been corroborated by independent
+      estimates to within 500ms.
+ 
+      SPICE software does not prohibit an SCLK file from being used for
+      time conversions occurring for &apos;future times&apos; (or more accurately,
+      for epochs that occur later than the epoch of the last telemetry
+      data used in producing the last correlation coefficients found in
+      the SCLK file). Such &apos;predict&apos; time conversions are likely to be
+      inaccurate (changed somewhat) once the epoch of interest has been
+      passed.
+ 
+ 
+    LSK Files
+    =========
+      Leapseconds kernel files provide a tabulation of &apos;leapseconds&apos; and
+      some other terms used in converting time measurements between
+      ephemeris time (ET) and Universal Time (UTC). &apos;Spacecraft Event
+      Time&apos; (SCET) is the commonly used name for UTC events measured at
+      the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed is
+      contained inside the LSK text file. The time conversion provided by
+      SPICE LSK files is accurate to approximately 0.000030 seconds.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>DVD-R</medium_type>
+            <nssdc_collection_id>96-008A-00A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

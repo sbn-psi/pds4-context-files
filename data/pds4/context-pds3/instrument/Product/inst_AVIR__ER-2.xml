@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:avir.er-2</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>AIRBORNE VISIBLE/IR IMAGING SPECTROMETER for ER-2</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.er-2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   G. Vane (Ed.), Airborne Visible/Infrared Imaging
+                   Spectrometer (AVIRIS). A description of the sensor, ground
+                   data processing facility, laboratory calibration, and first
+                   results, JPL Publication 1987-38, 1987.
+            </reference_text>
+            <description>reference.JPLPUB1987-38</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Macenka, S.A., and M.P. Chrisp, AVIRIS spectrometer design
+                   and performance, Int. Soc. Opt. Eng., 834, 1987.
+            </reference_text>
+            <description>reference.MACENKA-CHRISP1987</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>AIRBORNE VISIBLE/IR IMAGING SPECTROMETER</instrument_name>
+        <instrument_desc>
+ 
+ 
+    INSTRUMENT: AIRBORNE VISIBLE/IR IMAGING SPECTROMETER
+          HOST: NASA ER-2 AIRCRAFT
+ 
+ 
+    Instrument Information
+    ======================
+      Instrument Id                  : AVIR
+      Instrument Host Id             : ER-2
+      Pi Pds User Id                 : GVANE
+      Instrument Name                : AIRBORNE VISIBLE/IR IMAGING
+                                       SPECTROMETER
+      Instrument Type                : IMAGING SPECTROMETER
+      Instrument Mass                : 326.600000
+      Instrument Length              : 1.600000
+      Instrument Width               : 0.838000
+      Instrument Height              : 1.170000
+      Instrument Serial Number       : 1
+      Instrument Manufacturer Name   : JET PROPULSION LABORATORY
+ 
+ 
+    Instrument Description
+    ======================
+      The AVIRIS instrument is a group of four spectrometers that
+      view the ground through a scanner while being carried over the
+      test site in an aircraft.  Blocking filters help partition
+      reflected light among the spectrometers.  At any one moment the
+      spectrometers are viewing a spot on the ground that is 20 by 20
+      meters.  This spot is viewed simultaneously in 224 spectral
+      bands.  An image is built up through the scanner motion, which
+      defines an image line 614 pixels wide perpendicular to the
+      aircraft direction, and through the aircraft motion, which
+      defines the length of the image frame.
+ 
+      The AVIRIS foreoptics determine the spatial performance of the
+      optical system.  The foreoptics system is based on a modified
+      Kennedy scanner, which was converted to provide the correct
+      instantaneous field of view (IFOV) and to make efficient use of
+      the limited field of view required.  The scanner was initially
+      designed with a four sided rotating mirror to scan an field of
+      view (FOV) of approximately 160 degrees.  To efficiently use
+      the required 30 degrees FOV, the rotating mirror was replaced
+      by an oscillating two sided triangular mirror, giving a scan
+      efficiency of 70%.
+ 
+      Scans are taken in only one direction and the flyback speed is
+      approximately twice as great as the scan speed.  The large
+      facets on the 2 sided mirror also removed the vignetting in the
+      system, resulting in an aperture increase by a factor of about
+      1.3.  In the initial system the detectors had been placed at
+      the focus of the paraboloid mirror.  To provide the correct
+      IFOV of 1 mrad this image is magnified 1.3 times by an
+      ellipsoidal mirror, which relays the image to the fiber optics
+      focal plane.  The fibers are placed very close together so the
+      total image field angle required from the foreoptics is only 5
+      mrad.  The reduced field of view (30 degrees) for the system
+      enabled the baffling of the original design to be improved.
+ 
+      The foreoptics looks out of the aircraft through a window of
+      fused silica, which improves the thermal environment for the
+      instrument.  The fused silica is water free, to avoid the
+      absorption bands present in the infrared region.  Fiber optics
+      are used to transmit the light from the fore optics to the
+      actual spectrometers.
+ 
+ 
+    Science Objectives
+    ==================
+      AVIRIS is used to acquire high spectral resolution radiance
+      measurements in visible and near infrared wavelengths for
+      analysis of surface composition and texture.
+ 
+ 
+    Operational Considerations
+    ==========================
+      See INSTRUMENT_DESC
+ 
+ 
+    Calibration Description
+    =======================
+      Light from a filament lamp is imaged by a concave metal mirror
+      through a filter wheel onto the fiber optics leading to the
+      spectrometers.  The fibers are at the meridional focus so the
+      astigmatism of the mirror blurs the filament image, reducing
+      the sensitivity of the system to movement.  The mirror and
+      structure are monometallic so thermal effects are minimized.
+ 
+      The rotating shutter in the foreoptics enables the light from
+      the foreoptics to be shut off during calibration.  The filter
+      wheel in the calibrator has four positions, one of which cuts
+      the light off.  Two of the positions are used for neutral
+      density filters to provide two radiometric levels, and the
+      other position is used for a didymium rare earth filter to
+      provide a reference spectrum.  This spectrum is relatively
+      independent of the operating temperature.
+ 
+ 
+    Section &apos;AVIR&apos;
+    ==============
+      Total Fovs                     : 1
+      Data Rate                      : 7692308.000000
+      Scan Mode Id                   : UNK
+      Sample Bits                    : 10
+ 
+ 
+      &apos;AVIR&apos; Detectors
+      ----------------
+        SPECTROMETER A
+        SPECTROMETER B
+        SPECTROMETER C
+        SPECTROMETER D
+ 
+      &apos;AVIR&apos; Electronics
+      ------------------
+        AVIR
+ 
+ 
+      In modes
+      --------
+        OPERATING
+ 
+ 
+      &apos;AVIR&apos; Section FOV Shape &apos;LINEAR&apos;
+      ---------------------------------
+        Section Id                     : AVIR
+        Fovs                           : 1
+        Horizontal Pixel Fov           : 0.050000
+        Vertical Pixel Fov             : 0.050000
+        Horizontal Fov                 : 30.000000
+        Vertical Fov                   : 0.050000
+ 
+ 
+      &apos;AVIR&apos; Section Parameter &apos;RADIANCE&apos;
+      -----------------------------------
+        Radiance is the amount of energy per time per projected area
+        per steradian.
+ 
+        Instrument Parameter Name      : RADIANCE
+        Sampling Parameter Name        : PIXEL
+        Instrument Parameter Unit      : WATT/(METER*METER)/STERADIAN
+        Minimum Instrument Parameter   : 0.000000
+        Sampling Parameter Resolution  : 0.050000
+        Sampling Parameter Unit        : DEGREE
+ 
+ 
+      Instrument Detector &apos;SPECTROMETER A&apos;
+      ------------------------------------
+        Detector Type                  : LINE ARRAY
+        Detector Aspect Ratio          : UNK
+        Minimum Wavelength             : 0.410000
+        Maximum Wavelength             : 0.700000
+        Nominal Operating Temperature  : 80.000000
+ 
+ 
+      Description
+      -----------
+        The design is a double-pass Schmitt detector with a sampling
+        interval 9.7 nm.  There are 31 channels.  The grating is
+        117.65 l/mm.  There are 32 elements made of silicon, with 30
+        micrometers of dead space between elements.  The detector has
+        an integration time of 87 microseconds.  The active area of
+        the detector is 200 X 200 micrometers.
+ 
+ 
+      Sensitivity
+      -----------
+        See DETECTOR_DESC
+ 
+ 
+      Instrument Detector &apos;SPECTROMETER B&apos;
+      ------------------------------------
+        Detector Type                  : LINE ARRAY
+        Detector Aspect Ratio          : UNK
+        Minimum Wavelength             : 0.680000
+        Maximum Wavelength             : 1.270000
+        Nominal Operating Temperature  : 80.000000
+ 
+ 
+      Description
+      -----------
+        The detector is of a double-pass Schmitt design with a
+        sampling interval of 9.5 nm and 63 channels.  The grating is
+        128.205 l/mm.  There are 32 silicon elements with 30
+        micrometers of dead space between them.  The integration time
+        is 87 microseconds.  The detector active area is 200 x 200
+        micrometers.
+ 
+ 
+      Sensitivity
+      -----------
+        See DETECTOR_DESC
+ 
+ 
+      Instrument Detector &apos;SPECTROMETER C&apos;
+      ------------------------------------
+        Detector Type                  : LINE ARRAY
+        Detector Aspect Ratio          : UNK
+        Minimum Wavelength             : 1.250000
+        Maximum Wavelength             : 1.860000
+        Nominal Operating Temperature  : 80.000000
+ 
+ 
+      Description
+      -----------
+        The detector design is a double-pass Schmitt with a sampling
+        interval of 9.8 nm.  There are 63 channels.  The grating is
+        124.2236 l/mm.  There are 64 elements made of indium
+        antimonide with a deadspace between elements of 30
+        micrometers.  The integration time is 87 microseconds and the
+        detector active area 200 x 200 micrometers.
+ 
+ 
+      Sensitivity
+      -----------
+        See DETECTOR_DESC
+ 
+ 
+      Instrument Detector &apos;SPECTROMETER D&apos;
+      ------------------------------------
+        Detector Type                  : LINE ARRAY
+        Detector Aspect Ratio          : UNK
+        Minimum Wavelength             : 1.840000
+        Maximum Wavelength             : 2.450000
+        Nominal Operating Temperature  : 80.000000
+ 
+ 
+      Description
+      -----------
+        The design of the detector is a double-pass Schmitt having a
+        sampling interval of 9.8 nm.  There are 63 of channels.  The
+        grating is 128.6 l/mm.  There are 64 of elements made of
+        indium antimonide having a dead space of 30 micrometers.  The
+        detector has an integration time of 87 microseconds.  The
+        detector active area is 200 x 200 micrometers.
+ 
+ 
+      Sensitivity
+      -----------
+        See DETECTOR_DESC
+ 
+ 
+    Instrument Electronics &apos;AVIR&apos;
+    =============================
+ 
+      Description
+      -----------
+        The AVIRIS instrument has a separate dedicated analog signal
+        processing chain for each of its four spectrometers.  The
+        signal chains amplify low-level focal-plane line array
+        signals (5-10 mV full-scale span) in the presence of larger
+        multiplexing signals (~ 150 mV) providing the data handling
+        system a ten-bit digital word (for each spectrometer) each
+        1.3 microseconds.  This signal chain provides automatic
+        correction for the line array dark signal nonuniformity
+        (which can approach the full-scale signal span).
+ 
+ 
+    Instrument Mode &apos;OPERATING&apos;
+    ===========================
+ 
+      In sections
+      -----------
+        AVIR
+ 
+ 
+      Description
+      -----------
+        There is only one section and mode for AVIRIS.
+ 
+ 
+    Mounted On Platform &apos;NASA ER-2 AIRCRAFT&apos;
+    ========================================
+ 
+      Description
+      -----------
+        AVIRIS is mounted in a nadir-pointing position on an ER-2
+        aircraft.  The foreoptics look out of the aircraft through a
+        window of fused silica, which improves the thermal
+        environment for the instrument.  The fused silica is water
+        free, to avoid the absorption bands present in the infrared
+        region.
+ 
+
+        </instrument_desc>
+        <instrument_id>AVIR</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Imaging Spectrometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

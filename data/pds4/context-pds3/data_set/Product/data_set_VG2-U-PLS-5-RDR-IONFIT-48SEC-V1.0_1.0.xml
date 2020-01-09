@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-u-pls-5-rdr-ionfit-48sec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VG2 URA PLS DERIVED RDR ION FIT 48SEC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pls.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.uranus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-u-pls-5-rdr-ionfit-48sec-v1.0__browserp_vg2-u-pls-5-rdr-ionfit-48sec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   McNutt, R.L., Jr., R. Selesnick, and J.D. Richardson, Low
+                   Energy Plasma Observations in the Magnetosphere of Uranus,
+                   J. Geophys. Res., 92, pp. 4399-4410, 1987.
+            </reference_text>
+            <description>reference.MCNUTTETAL1987</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-U-PLS-5-RDR-IONFIT-48SEC-V1.0</data_set_id>
+        <data_set_name>VG2 URA PLS DERIVED RDR ION FIT 48SEC V1.0</data_set_name>
+        <data_set_release_date>1993-02-01</data_set_release_date>
+        <start_time>1986-01-24T15:01:48.451Z</start_time>
+        <stop_time>1986-01-24T19:55:24.431Z</stop_time>
+        <producer_full_name>JOHN D. RICHARDSON</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VG2 URA PLS DERIVED RDR ION FIT 48SEC V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the ion densities and temperatures along
+            with formal 1 Sigma errors obtained from Voyager 2 PLS data
+            (voltage range 10-5950 eV/Q) at Uranus by fitting the measured
+            spectra with isotropic Maxwellian distributions. Up to three
+            isotropic proton components (warm, hot and intermediate) were
+            used to match the observations. The plasma was assumed to be
+            rigidly corotating. Uncertainties in plasma parameters are a
+            factor of 2 in the charging region from 1939-2158 on day 24, less
+            than 20% elsewhere. A complete description of this data set is
+            given in McNutt et al. (1987) and Selesnick and McNutt (1987).
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set contains the ion densities and temperatures along
+      with formal 1 Sigma errors obtained from Voyager 2 PLS data
+      (voltage range 10-5950 eV/Q) at Uranus by fitting the measured
+      spectra with isotropic Maxwellian distributions.  Up to three
+      isotropic proton components (warm, hot and intermediate) were
+      used to match the observations.  The plasma was assumed to be
+      rigidly corotating.  Uncertainties in plasma parameters are a
+      factor of 2 in the charging region from 1939-2158 on day 24,
+      less than 20% elsewhere.  A complete description of this data
+      set is given in McNutt et al.  (1987) and Selesnick and McNutt
+      (1987).
+ 
+      DATASET PARAMETERS:
+ 
+       Each data record consists of six lines:
+ 
+       1.   Time of measurement
+            Mode (A3): L or M.
+       3-6. Cup identifier (A1): A, B, C, or D.
+            Number of sets of channels used in fit (I3).
+            Beginning and ending channel of each set (2I4
+            repeated for each set).
+       7-19.Density (CM-3) and 1 sigma uncertainty for first
+            fit component (2E10.3).
+            Same for second fit component (2E10.3).
+            Same for third fit component (2E10.3).
+            Thermal speed (KM/S) and 1 sigma uncertainty for
+            First fit component (2E10.3).
+            Same for second fit component (2E10.3).
+            Same for third fit component (2E10.3). Values of
+            1.E32 indicate that the parameter could not be
+            obtained from the data using the standard analysis
+            technique.  Additional information about this dataset
+            and the instrument which produced it can be found
+            elsewhere in this catalog. An overview of the data in
+            this data set can be found in McNutt et al. (1987)
+            and Selesnick and McNutt (1987) and a complete
+            instrument description can be found in Bridge (1977).
+ 
+      Processing Level Id            : 5
+      Software Flag                  : Y
+ 
+ 
+    Parameters
+    ==========
+ 
+      Description
+      -----------
+        A derived parameter equaling the number of ions per unit ION
+        THERMAL SPEED: A measure of the velocity associated with the
+        temperature of the ions.  It is formally defined as the
+        volume over a specified range of ion energy, energy/charge,
+        Ion Thermal Speed squared equals two times K (Boltzmann&apos;s or
+        energy/nucleon.  Discrimination with regard to mass and or
+        constant) times T (temperature of ion) divided by M (ion
+        charge state is necessary to obtain this quantity, however,
+        mass).  Each component of a plasma has a thermal speed mass
+        and charge state are often assumed due to instrument
+        limitations.  associated with it.
+ 
+        Many different forms of ion density are derived.  Some are
+        distinguished by their composition (N+, proton, ion, etc.) or
+        their method of derivation (Maxwellian fit, method of
+        moments).  In some cases, more than one type of density will
+        be provided in a single dataset.  In general, if more than
+        one ion species is analyzed, either by moment or fit, a total
+        density will be provided which is the sum of the ion
+        densities.  If a plasma component does not have a Maxwellian
+        distribution the actual distribution can be represented as
+        the sum of several Maxwellians, in which case the density of
+        each Maxwellian is given.
+ 
+        Sampling Parameter Name        : TIME
+        Data Set Parameter Name        : ION DENSITY
+        Sampling Parameter Resolution  : 48.000000
+        Sampling Parameter Interval    : 48.000000
+        Minimum Available Sampling Int : 24.000000
+        Data Set Parameter Unit        : CM-3
+        Sampling Parameter Unit        : SECOND
+ 
+ 
+      Data Set Parameter &apos;ION THERMAL SPEED&apos;
+      --------------------------------------
+        A measure of the velocity associated with the temperature of
+        the ions.  It is formally defined as the Ion Thermal Speed
+        squared equals two times K (Boltzmann&apos;s constant) times T
+        (temperature of ion) divided by M (ion mass).  Each component
+        of a plasma has a thermal speed associated with it.
+ 
+        Sampling Parameter Name        : TIME
+        Data Set Parameter Name        : ION THERMAL SPEED
+        Sampling Parameter Resolution  : 48
+        Sampling Parameter Interval    : 48
+        Minimum Available Sampling Int : 24
+        Data Set Parameter Unit        : KM/S
+        Sampling Parameter Unit        : SECOND
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ION DENSITY
+      Instrument Parameter Name       : ION RATE
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ION DENSITY
+      Instrument Parameter Name       : ION CURRENT
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ION THERMAL SPEED
+      Instrument Parameter Name       : ION RATE
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ION THERMAL SPEED
+      Instrument Parameter Name       : ION CURRENT
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ION DENSITY
+      Instrument Parameter Name       : PARTICLE MULTIPLE PARAMETERS
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID       : N/A
+        Software                 : UNK
+        Product Data Set ID      : VG2-U-PLS-5-RDR-IONFIT-48SEC-V1.0
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      This data set provides a reliable estimate of the ion density
+      and energy in the PLS energy range (10-5950 eV) throughout the
+      region where data is provided.  All ion components are fit with
+      Maxwellians although they may not be Maxwellian in nature.
+      Formal 1 sigma uncertainties for the derived densities and
+      thermal speeds are given in the data set and range from a few
+      to 20%.  Underestimate&apos;s of ion density and temperature due to
+      ions outside the PLS energy range are less than 10%.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XM-11A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

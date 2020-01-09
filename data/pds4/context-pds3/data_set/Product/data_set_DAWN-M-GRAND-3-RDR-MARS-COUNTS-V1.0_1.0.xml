@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dawn-m-grand-3-rdr-mars-counts-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DAWN GRAND CALIBRATED MARS FLYBY COUNTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.dawn_mission_to_vesta_and_ceres::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:grand.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dawn-m-grand-3-rdr-mars-counts-v1.0__browserp_dawn-m-grand-3-rdr-mars-counts-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Prettyman, T.H., W.C. Feldman, F.P. Ameduri, B.L. Barraclough, E.W. Cascio,
+                   K.R. Fuller, H.O. Funsten, D.J. Lawrence, G.W. McKinney, C.T. Russell, S.A.
+                   Soldner, S.A. Storms, C. Szeles, and R.L. Tokar, Gamma-ray and neutron
+                   spectrometer for the Dawn mission to 1 Ceres and 4 Vesta, IEEE Trans. Nucl.
+                   Sci., Volume 50, Issue 4, pp. 1190-1197, August 2003, DOI
+                   10.1109/TNS.2003.815156
+            </reference_text>
+            <description>reference.PRETTYMANETAL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DAWN-M-GRAND-3-RDR-MARS-COUNTS-V1.0</data_set_id>
+        <data_set_name>DAWN GRAND CALIBRATED MARS FLYBY COUNTS V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2009-02-17T22:33:00Z</start_time>
+        <stop_time>2009-02-18T00:45:00Z</stop_time>
+        <producer_full_name>THOMAS H. PRETTYMAN</producer_full_name>
+        <citation_text>
+            Prettyman, T.H., DAWN GRAND CALIBRATED MARS FLYBY COUNTS V1.0.
+            DAWN-M-GRAND-2-RDR-MARS-COUNTS-V1.0. NASA Planetary Data System,
+            2009.
+        </citation_text>
+        <data_set_terse_desc>
+            The GRaND Reduced Data Records (RDR) are a time-ordered
+            collection of corrected gamma ray and neutron counting data and
+            calibrated pulse height spectra.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The GRaND RDR are a time-ordered collection of corrected gamma
+            ray and neutron counting data and calibrated pulse height spectra
+            acquired by GRaND during all phases of the Dawn mission. This
+            data set is specific to Mars Gravity Assist (MGA), and includes
+            data acquired during Mars approach and flyby. The RDR is a
+            calibrated data set derived from the Experiment Data Records
+            (EDR), consisting of time-series counting rates from which
+            elemental abundances can be determined. Ancillary ephemeris and
+            pointing data needed for analysis and mapping of the time series
+            data are included in the data set.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Overview
+  ========
+ 
+The Dawn Mission&apos;s Gamma Ray and Neutron Detector
+(GRaND) is a nuclear spectrometer that will collect data needed to map
+the elemental composition of the surfaces of 4-Vesta and 1-Ceres
+[PRETTYMANETAL2003].  GRaND measures the spectrum of planetary gamma
+rays and neutrons, which originate from cosmic ray interactions and
+radioactive decay within the surface, while the spacecraft (S/C) is in
+orbit around each body. The instrument, which is mounted on the +Z deck
+of the S/C, consists of 21 sensors designed to separately measure
+radiation originating from the surface of each asteroid and background
+sources, including the space energetic particle environment and cosmic
+ray interactions with the spacecraft.  The nuclear spectroscopy data
+provided by GRaND will be analyzed to determine the abundance of major
+rock forming elements, such as O, Fe, Ti, Si, Al, Mg, Ca, Cl and
+radioactive elements, including K and Th, as well as light-elements such
+as H, C, and N, which are constituents of ices and the products of
+aqueous alteration of silicate minerals and ices.
+ 
+ 
+The GRaND Reduced Data Records (RDR) are a time-ordered
+collection of corrected gamma ray and neutron counting data and
+calibrated pulse height spectra acquired by GRaND during Mars Gravity
+Assist (MGA).  Similar products will be developed for science mapping at
+4-Vesta and 1-Ceres and for data acquired during cruise.  The RDR is a
+calibrated data product (Level 1B) that is derived from Experiment
+Data Records (EDR, Level 1A).  The objective of the RDR is to provide
+counting rates and ancillary pointing and ephemeris data needed for
+mapping.  The ancillary data includes the subsatellite point, the
+distance and direction to body center, and the spacecraft velocity
+vector relative to Mars, which is needed to account for the motion of
+low energy (thermal and epithermal) neutrons relative to the spacecraft.
+In the current version of the data set, counting rates and fluxes
+corrected for altitude and spacecraft motion, which require knowledge of
+the instrument response, are not provided; however, future versions of
+the RDR, especially for Vesta and Ceres mapping will include counting
+rates corrected for solid angle and pointing as well as incident gamma
+ ray and neutron fluxes.
+ 
+Processing steps for the RDR data set include:
+- Determination of the mid-point time of each science accumulation
+  interval and the livetime, accounting for roll-over of the dead time
+  counter; - Construction of pulse height spectra from the gamma ray and
+  neutron event data;
+- Correction of pulse height spectra for ADC differential nonlinearity;
+- Calibration and gain/offset correction of pulse height spectra to
+  provide a consistent energy scale for peak analysis;
+- Analysis of spectra to determine the net areas (counting rates) of
+  selected spectral features, including:
+        -- the 10B(n,alpha) peak area from the Category 1 (CAT1)
+           spectrum, for the +Z phoswich, which is sensitive to
+           epithermal neutrons from the target body;
+        -- the 6Li(n,t) peak area from the +Z CAT1 phoswich, which is
+           sensitive to thermal and epithermal neutrons from the target
+           body; -- the net areas of the 478 keV gamma ray full energy
+           peaks for each of the four CAT2 BGO pulse height spectra,
+           resulting from coincidences between 93 keV deposited in the
+           four boron-loaded-plastic (BLP) scintillators by the
+           10B(n,alpha)7Li* reaction and the associated gamma ray
+           (7Li*-&gt;7Li+478keV):
+                --- Because the +Z and -Z BLP scintillators are shielded
+                    by Gd and lithiated glass, their CAT2 counting rates
+                    are sensitive to epithermal neutrons;
+                --- Because the side +Y and -Y scintillators are not
+                    shielded, their counting rates are sensitive to both
+                    thermal and epithermal neutrons.
+        -- the fast neutron counting rates for each of the boron-loaded
+           plastic scintillators;
+        -- net counting rates for selected gamma rays.
+ 
+ 
+The data set consists of ASCII tables, divided by
+functionality into four categories: ephemeris and pointing data EPX
+(where X denotes the target: X=&apos;X&apos; for cruise, X=&apos;M&apos; for Mars, X=&apos;V&apos; for
+Vesta, and X=&apos;C&apos; for Ceres); neutron counting rates (NCR); gamma ray
+counting rates (GCR), and the BGO pulse height spectrum (BGO). The fast
+neutron flux spectrum (with units of neutrons/cm2/s/MeV), which can be
+unfolded from the fast neutron pulse height spectrum given the response
+function, and CZT composite spectrum will be included in future
+releases.
+ 
+The Level1b data are represented as a time series in which counting
+rates and spectra are averaged over a time-window, consisting of an odd
+number of science accumulation intervals (TELREADOUT) selected by the
+evaluator.  Note that ephemeris and pointing data are not averaged.
+Rather, their instantaneous values at the mid-point of each time window
+is reported. Two types of time series are possible: a central moving
+average (CMA), in which the averaging window is centered on each point
+in the original time series, and a result is reported for each science
+accumulation interval; and a decimated time series (DTS), in which the
+averaging window is shifted forward in time by its width, resulting a
+ data set that has fewer points than the original time series.
+ 
+The CMA is intended for mapping, for example, in cases where full
+sampling of rapidly changing counting rates and solid angles is needed.
+The DTS is useful for averaging over long periods of time, for example,
+during cruise, when counting rates are not changing rapidly.  By
+averaging over long time intervals, the DTS can be used to produce high
+precision gamma ray spectra needed for accurate peak identification,
+analysis, and calibration.
+ 
+ 
+  Parameters
+  ==========
+ 
+The RDR data are derived from the EDR files, which cover
+arbitrary and irregular time periods, generally determined by the
+pattern of downlinks from the spacecraft.  The RDR are evaluated for a
+single instrument state found in the EDR files, generally corresponding
+to the instrument fully configured for science data acquisition.
+Consequently, the value of TELREADOUT is the same for all records
+extracted from a particular EDR file.  The EDR science records need not
+be contiguous; however, time-windows containing gaps are not included in
+the RDR.  Generally, science data records with elevated counting rates
+associated with solar energetic particle (SEP) events will be excluded
+from the RDR; however, throughout MGA, solar activity was minimal and no
+records were lost.
+ 
+The RDR files are contained in a single directory.  The name of the
+directory includes the type of time series (CMA or DTS):
+ 
+     GRD-L1B-Y1M1D1-Y2M2D2_YCMCDC-CMA  (directory name for a central
+                                        moving average), or
+     GRD-L1B-Y1M1D1-Y2M2D2_YCMCDC-DTS  (directory name for a decimated
+                                        time series).
+ 
+The top level directory name contains the SCET UTC dates for the first
+and last science data records (Y1M1D1 and Y2M2D2, respectively), and the
+creation date (YCMCDC) for the archive.  For example, for
+GRD-L1B-090217-090218_090517, the first science data record was acquired
+on 17-Feb-2009.  The last science data record was acquired on
+18-Feb-2009.  The archive was created by the processing code on
+ 17-May-2009.
+ 
+The data files and formats are the same for both types of time series.
+All counting rates are reported as counts per second.  Histograms have
+units of counts/second/channel. The processing parameters, including the
+window width and the value of TELREADOUT are given in the label files.
+The following files are included (note that &apos;TSI&apos; is either &apos;CMA&apos; or
+&apos;DTS&apos;, depending on the type of time series):
+ 
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-TSI-EPM.TAB - Contains a
+     time series of ephemeris and pointing data, including the total
+     livetime, the distance and direction to body center, the velocity
+     of the spacecraft rotated into the reference frame of the
+     instrument, the subsatellite position and altitude, and the
+     fractional solid angle subtended by the body at the spacecraft.  In
+     addition, the average counting rate for the &apos;coincidence of three
+     or more sensors&apos; scaler (SCALER_SCI[15]) is provided as an
+     indicator of the interaction rate of galactic cosmic rays.
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-TSI-NCR.TAB - Contains a time series
+     of neutron counting rates determined from CAT1, CAT2, and CAT4
+     pulse height spectra.  Counting rates sensitive to neutrons in the
+     thermal, epithermal, and fast energy ranges are provided.
+     Propagated uncertainties (1-sigma) are provided.
+ 
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-TSI-GCR.TAB - Contains a
+     time series of net areas for selected full energy interaction peaks
+     from the pulse height spectrum acquired by the BGO sensor.
+     Propagated uncertainties (1-sigma) are provided.
+ 
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-TSI-BGO.TAB - Contains a
+     time series of BGO 1024-channel pulse height spectra that have been
+     adjusted so that the offset is 0 keV with a slope of 8.9
+     keV/channel.  Note that the method for determining the uncertainty
+     in the counting rates for each channel is provided in the format
+     file.
+ 
+ 
+  Processing
+  ==========
+ 
+The RDR data from each EDR data file are processed in several steps:
+1. Specification of processing parameters, including the target
+   instrument state, the time series type and window width, and
+   parameters for spectrum processing and analysis;
+2. Extracting science data records from the EDR for the selected state;
+3. Generation of the time series structure;
+4. Construction of pulse height spectra from event data;
+5. Correction of pulse height spectra in preparation for peak analysis
+   (including livetime, ADC differential nonlinearity and gain and offset
+   corrections).
+6. Determining peak areas and uncertainties from time-averaged neutron
+   and gamma ray spectra;
+7. Writing the data and labels.
+ 
+Details of the processing are described in Prettyman, T.H. and W.C.
+Feldman (2009), PDS data processing for the Dawn gamma ray and neutron
+detector, GRD_L1B_Processing_V2.0.pdf, available in the document
+directory of this volume.  A summary of the processing algorithms and
+parameters is provided here.
+ 
+The RDR time series is constructed by averaging corrected counting rates
+over a window using one of two methods: Central Moving Average (CMA) or
+Decimated Time Series (DTS).  The CMA method provides a result for each
+science data record by averaging over records on either side of the
+current point as illustrated here:
+ 
+ 
+                    Science records
+       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ... |
+        1 | | 2 |
+         | 3 |
+          | 4 |
+           | 5 |
+             ....
+where each of the time-ordered science records is indicated by an X and
+the window boundaries are indicated by the vertical bars.  The middle of
+each time series is labeled with an index (1, 2, ...).
+ 
+ 
+The DTS method marches the window through the science data
+records, resulting in a decimated time series as follows:
+ 
+ 
+      Science records
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ...| 1 || 2 || 3 || 4 || 5 |...
+ 
+The number of science data records averaged for each point in the time
+series is given by WINDOW_WIDTH, which is an odd integer.  For both
+methods, all time, ephemeris, and pointing information is determined at
+the midpoint of the window.
+ 
+ 
+A variety of spectrum analysis methods are used to extract
+peak areas recorded in the neutron and gamma ray files.  These are
+described in detail in the data processing document.  For Mars flyby,
+time-averaged background data were determined during a period of time
+for which the instrument was far from Mars and sensitive only to
+neutrons produced on board the spacecraft by galactic cosmic ray
+interactions.  In some cases (e.g., analysis of the CAT1 spectrum),
+background continuum functions were determined using a coarse time
+window (CMA), under the assumption that the background shape does not
+change as rapidly as the peak.  The window width for Mars flyby
+background subtraction was 11 science accumulation intervals.
+ 
+ 
+  Ancillary Data
+  ==============
+ 
+The Level 1B data include ancillary data in the form of
+SCET UTC strings reported in each row of the time series tables.  The
+UTC strings are determined from the spacecraft clock ticks recorded in
+each state-of-health packet and for the first packet in each science
+data record using NAIF SPICE (leap seconds kernel).  This information is
+used in Level 1B processing to accurately determine the mid-point of
+each science accumulation interval, which is used for mapping.  In
+addition, pointing and ephemeris data are provided in the Level 1B file
+at the center of each time interval:
+     - the distance and direction of body center in the instrument
+       coordinate system;
+     - the velocity of the spacecraft rotated into the reference frame
+       of the instrument
+     - the subsatellite longitude, latitude, and altitude;
+     - the fractional solid angle subtended by Mars at the spacecraft.
+The target was &apos;IAU_MARS&apos;.
+ 
+ 
+  Coordinate System
+  =================
+ 
+The instrument coordinate system (Fig. 1) determines the
+naming convention of the sensors and orientation of the instrument
+relative to the spacecraft. The use of MZ indicates a sensor on the -Z
+(zenith-facing during mapping) side of GRaND;  PZ indicates the sensor
+is on the +Z (spacecraft) side; MY indicates the sensor is on the -Y
+side (inboard) side of the instrument; and PY indicates the sensor is on
+the +Y side (outboard, towards the +Y solar panel) side of the
+instrument.  The phototube assembly, marked &apos;P&apos; on the diagram in Fig. 1
+ points along the +X axis (towards the high gain antenna).
+ 
+   .................
+   . ooooooooooooo .
+   . o           o .
+   . o           o .
+   . o    +Z     o .
+   . o   (PZ)    o .
+   . o           o .---&gt; +Y (PY)
+   . ooo       ooo .
+   .   P       P   .
+   .   P       P   .
+   .   PPPPPPPPP   .
+   .               .
+   .................
+           |
+           v
+        +X (PX)
+ 
+ 
+Figure 1. The coordinate system for GRaND is the same as
+that of the S/C. For the diagram above, the observer is looking in the
+-Z (MZ) direction and can see the outline of the phoswich assembly (o)
+on the +Z side of GRaND. The phototubes are on the +X side and the
+scintillators are on the -X side. During mapping at Vesta and Ceres, the
+planetary surface is in the +Z direction.
+ 
+ 
+  Software
+  ========
+ 
+The RDR were generated using an IDL-based processing
+code compatible with IDL Version 7.0, distributed by ITT Visual
+Information Solutions, Boulder, CO (2008).  Program name:
+GRD_L1B_Pipeline.pro. Version: 1.0. Ancillary data were generated using
+ the NAIF/ICY IDL toolkit.
+ 
+ 
+  Media/Format
+  ============
+ 
+The RDR label and data files are delivered by electronic
+transmission to the PDS.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+ 
+The RDR will be reviewed internally by the Dawn Science
+Team prior to submission to the PDS.  The PDS will also conduct an
+external peer review of the RDR prior to releasing the data to the
+general public.
+ 
+ 
+  Data Coverage/Quality
+  =====================
+ 
+The RDR does not include all of the science data
+records, only those corresponding to instrument state selected by the
+evaluator.  Science data records acquired during instrument ramp up or
+power on are typically excluded from the RDR.
+ 
+While Dawn successfully completed it&apos;s gravity assist at Mars, the
+spacecraft entered safe-mode shortly following closest approach. At that
+time, all of the instruments were shut down. All planned activities which
+had not been executed did not occur. Any data from activities which had
+taken place, but which had not yet been dumped out of instrument memory
+and into the spacecraft virtual recorder were lost. GRaND returned data
+through shortly after closest approach. FC2 returned 6 lit images of
+Mars. VIR returned no data for the Mars flyby.
+ 
+ 
+  Limitations
+  ===========
+ 
+The RDR is an intermediate data product.  While it is a time series,
+sufficient information is provided to make maps of counting rates
+corrected for altitude and pointing, suitable for scientific data
+analysis.  Determination of spatially-resolved elemental abundances
+requires knowledge of the instrument response function, which will be
+provided as a higher order data product, along with models of the
+radiation background and radiation output from the target body.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

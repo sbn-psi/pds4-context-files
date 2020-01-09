@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-m-rss-1-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS EXPLORATION ROVER 1 RADIO SCIENCE SUBSYSTEM EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-rss-1-edr-v1.0__dvo_geo_mer1-m-rss-1-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Folkner, W.M., R.D. Kahn, R.A. Preston, C.F. Yoder, E.M. Standish, J.G.
+                   Williams, C.D. Edwards, R.W. Hellings, T.M. Eubanks, and B.G. Bills, Mars
+                   Dynamics from Earth-Based Tracking of the Mars Pathfinder Lander, J. Geophys.
+                   Res., 102, 4057-4064, 1997
+            </reference_text>
+            <description>reference.FOLKNERETAL1997A</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1-M-RSS-1-EDR-V1.0</data_set_id>
+        <data_set_name>MARS EXPLORATION ROVER 1 RADIO SCIENCE SUBSYSTEM EDR V1.0</data_set_name>
+        <data_set_release_date>2004-08-14</data_set_release_date>
+        <start_time>2004-01-05</start_time>
+        <stop_time>2004-02-03</stop_time>
+        <producer_full_name>WILLIAM FOLKNER</producer_full_name>
+        <citation_text>
+            Folkner, W., Mars Exploration Rover 1 Radio Science Subsystem EDR
+            V1.0, MER1-M-RSS-1-EDR-V1.0, NASA Planetary Data System, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains Opportunity (MER 1) Radio Science Tracking
+            Experiment Data Records (EDRs) from the Mars Exploration Rover
+            Mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This archive contains raw radio science data and supporting media
+            calibration acquired during the Mars Exploration Rover surface
+            operations. The radio observations were carried out using the
+            Earth-based receiving stations of the NASA Deep Space Network
+            (DSN), providing measurements of the range-rate (Doppler) between
+            Earth and MER1 and with the Mars Odyssey orbiter, providing
+            measurements of the range-rate (Doppler) between MER1 and the
+            Odyssey orbiter.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The Mars Exploration Rover 1 (MER1) Radio Science (RS) data
+    archive contains raw radio tracking data collected during the
+    surface lifetime of the MER1 Rover. The data contain potentially
+    valuable information on the rotation dynamics of Mars,
+    extending the previous data available from the Viking and Mars
+    Pathfinder landers.  For more information on the investigations
+    see [FOLKNERETAL1997A].
+ 
+    The raw data include two primary data types. Orbit Data Files
+    (ODFs) contain measurements of the Doppler shift of the
+    MER1 radio signal as measured by tracking stations of the
+    NASA Deep Space Network. Ultra-High-Frequency Doppler Files (UHFD)
+    contain measurements of the Doppler shift of the MER1 radio signal
+    as measured by a counter on the Mars Odyssey orbiter.
+ 
+ 
+  Parameters
+  ==========
+    The ODF contains the radio tracking information
+    (range and Doppler) needed by spacecraft navigation teams and
+    investigators interested in determining gravitational fields
+    of bodies such as Mars.
+    Each ODF is accompanied by a full PDS label which describes both
+    the content and format of the associated file.  ODF fields
+    include:
+ 
+         Narrowband spacecraft VLBI, Doppler mode (cycles)
+         Narrowband spacecraft VLBI, phase mode (cycles)
+         Narrowband quasar VLBI, Doppler mode (cycles)
+         Narrowband quasar VLBI, phase mode (cycles)
+         Wideband spacecraft VLBI (nanoseconds)
+         Wideband quasar VLBI (nanoseconds)
+         One-way Doppler (Hertz)
+         Two-way Doppler (Hertz)
+         Three-way Doppler (Hertz)
+         One-way total count phase (cycles)
+         Two-way total count phase (cycles)
+         Three-way total count phase (cycles)
+         PRA planetary operational discrete spectrum range (range units)
+         SRA planetary operational discrete spectrum range (range units)
+         Azimuth angle (degrees)
+         Elevation angle (degrees)
+         Hour angle (degrees)
+         Declination angle (degrees)
+         X angle (where +X is east) (degrees)
+         Y angle (where +X is east) (degrees)
+         X angle (where +X is south) (degrees)
+         Y angle (where +X is south) (degrees)
+ 
+    The UHFD contains the measurements of the Doppler shift of the
+    MER1 radio signal received by the Mars Odyssey orbiter.
+    Each UHFD is accompanied by a full PDS label which describes
+    both the content and format of the associated file.  UHFD fields
+    include:
+ 
+         Measurement time (second past J2000)
+         Measurement reference frequency indicator flag
+         Data quality flag
+         Absolute value of Doppler shift (Hertz)
+ 
+ 
+  Processing
+  ==========
+    Minimal processing has been done on the ODF and UHFD files,
+    primarily including flagging data points that appear invalid
+     during the formatting process.
+ 
+ 
+  Data
+  ====
+   ODFs are stored in the  ODF directory.  File names are of the
+   form yyddd_eee.DAT  where  yy  is the two-digit year of the
+   first data, ddd is the three-digit day-of-year of the first data
+   point, and  eee  is the three-digit day-of-year of the
+   last data point.
+ 
+   UHFDs are stored in the  UHF directory.
+   File names are of the form ODYyyyyddd_S254.CSV  where
+   yyyy  is the four-digit year of the first data point,
+   ddd  is  the three-digit day-of-year of the first data point,
+   and S254 is a DSN designator for the Mars Exploration Rover 2.
+ 
+ 
+  Ancillary Data
+  ==============
+ 
+    Files in the CALIB Directory
+    ----------------------------
+      The CALIB directory includes files with station calibrations
+      for Earth troposphere and ionosphere effects.
+      Each file is accompanied by a PDS label.
+ 
+ 
+  Software
+  ========
+    Software for parsing, reducing, and analyzing data such as
+    these has been developed at several institutions.
+    Because such software must usually operate at the bit-level and
+    is written for a narrow range of platforms, it is not suitable
+    for general distribution.  No software is included with this
+    archival data set.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    This archive includes all radio tracking data collected from
+    MER1 beginning with landing on 2004-01-04 through 2004-02-03.
+    Most of the data in the archive have not been evaluated for
+    accuracy beyond preliminary screening.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

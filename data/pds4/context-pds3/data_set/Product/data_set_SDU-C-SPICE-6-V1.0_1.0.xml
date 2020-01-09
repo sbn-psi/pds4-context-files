@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.sdu-c-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>STARDUST SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.next::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.stardust::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.5535_annefrank::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.81p-wild_2_1978_a2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.9p-tempel_1_1867_g1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.sdu-c-spice-6-v1.0__browserp_sdu-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.sdu-c-spice-6-v1.0__browser_sdu-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.sdu-c-spice-6-v1.0__browser_wgc_sdu-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>SDU-C-SPICE-6-V1.0</data_set_id>
+        <data_set_name>STARDUST SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2003-02-01</data_set_release_date>
+        <start_time>1999-02-07T00:00:00Z</start_time>
+        <stop_time>2011-05-01T00:00:00Z</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., L.S. Elson, and C.H. Acton, STARDUST SPICE KERNELS
+            V1.0, SDU-C-SPICE-6-V1.0, NASA Planetary Data System, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the Stardust spacecraft.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Stardust SPICE data
+            files (``kernel files&apos;), which can be accessed using SPICE
+            software. The SPICE data contains geometric and other ancillary
+            information needed to recover the full value of science
+            instrument data. In particular SPICE kernels provide spacecraft
+            and planetary ephemerides, instrument mounting alignments,
+            spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of Stardust SPICE data
+      files (``kernel files&apos;) for the primary (Stardust) and extended
+      (NEXT) missions. These kernels files can be accessed using SPICE
+      software. The SPICE data contains geometric and other ancillary
+      information needed to recover the full value of science
+      instrument data. In particular SPICE kernels provide spacecraft
+      and planetary ephemerides, instrument mounting alignments,
+      spacecraft orientation, spacecraft sequences of events, and data
+      needed for relevant time conversions.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or fixed
+      spacecraft and instrument structures. They provide position and
+      velocity, given in a Cartesian reference frame. SPK files are
+      located under the ``data/spk&apos; directory of this data set.
+ 
+      PCK kernels contain certain physical, dynamical and
+      cartographic constants for target bodies, such as size and shape
+      specifications, and orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the ``data/ek&apos; directory of this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock calibration
+      data required to perform a mapping between Ephemeris time (ET)
+      and spacecraft on-board time (SCLK.) SCLK files are located under
+      the ``data/sclk&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under
+      the ``data/fk&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of Stardust kernels
+      included in this data set is provided in the
+      CONFIDENCE_LEVEL_NOTE section of this file while details specific
+      to individual files are found in the ``*info.txt&apos; files in the
+      corresponding data directory. The most detailed description of
+      the data in each file is provided in metadata included inside the
+      file -- in the description area of text kernels or in the comment
+      area of binary kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read
+      SPICE kernel files. SPICELIB software is highly documented
+      via internal headers. Additional documentation is available
+      in separate ASCII text files called Required Reading files.
+      For example, the S- and P- Kernel (SPK) Required Reading File,
+      named SPK.REQ, describes use of the SPK kernel file readers
+      and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos; directory. For more
+      information about the Stardust meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This volume contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here,
+      but the prospective user is also referred to extensive
+      descriptions about each file that are stored inside each kernel
+      file. These metadata provide detailed information regarding
+      the information source from which the data were derived, the
+      type of processing applied to the source data, applicability
+      of the data, etc. Metadata are located in the ``comment area&apos;
+      for binary kernel types (SPK, CK, ESQ), accessible using either
+      the COMMNT or SPACIT utility program found in the NAIF Toolkit.
+      Metadata are located after ``\begintext&apos; markers within the
+      text kernel types (PCK, IK, FK, LSK, SCLK), accessible by
+      using any available text file display tool such as a word
+      processor, text editor, or the unix ``more&apos; or ``cat&apos;
+      commands.
+ 
+      In some cases data accuracy information does not exist, or
+      may be estimated after mission completion.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;
+      not addressed herein the reader is invited to examine subsequent
+      SPICE archive releases associated with this data set (if such
+      exist), or to contact the NAIF node of the Planetary Data System
+      for possible further information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      Majority of the SP-Kernel files included in this data set provide
+      the trajectory of the Stardust spacecraft. These files also
+      include ephemeris data for the primary mission targets -- Wild 2
+      and Annefrank -- and the NEXT mission target -- Tempel 1 -- along
+      with ephemeris data for Earth, Moon, and Sun. The spacecraft
+      trajectory stored in these SPKs was determined by the Stardust
+      Navigation (NAV) and Optical Navigation (OPNAV) teams, both from
+      JPL.
+ 
+      According to the NAV Team post-Annefrank flyby trajectory release
+      the converged B-plane solution -- B.R (b-plane radial), B.T
+      (b-plane transversal), and CLTOF (closest approach time, ET) --
+      were -1249.9km (-+ 4km), 2813.4km (-+ 8.5km), and 2-nov-2002
+      04:51:20.8 (-+ 0.8sec). The flyby distance was 3078.5km (-+9km).
+ 
+      For the Wild 2 encounter the most accurate spacecraft trajectory
+      relative to Wild 2 was computed by the OPNAV team by fitting the
+      NAVCAM image data. Based on this solution the closest approach
+      time and distance for the encounter are 2004-01-02T19:21:32 UTC
+      and 236.5 km. This solution is provided in a separate SPK file,
+      covering just the two hour period around the encounter. While it,
+      when used together with the adjusted spacecraft attitude CK file,
+      provides the best geometry for processing of the image data, it
+      does not provide an accurate representation of the heliocentric
+      location of the spacecraft. The boundary discontinuity between
+      this image-based solution and the primary radio navigation
+      solution, which is more accurate in an absolute sense, is about
+      440 km.
+ 
+      For the Tempel 1 encounter the most accurate spacecraft
+      trajectory relative to Tempel 1 was also computed by the OPNAV
+      team by fitting the NAVCAM image data. Based on this solution the
+      closest approach time and distance for the encounter are
+      2011-02-15T04:39:12.417 UTC and 182.0 km. This solution was
+      combined with the longer arc solution based on radio tracking
+      data and delivered in the SPK covering the first four months of
+      2011.
+ 
+      One additional SP-Kernel file included in this data set provides
+      locations of the spacecraft&apos;s center of gravity and antennas with
+      respect to the spacecraft reference frame origin. This file is
+      included in the data set because it may be useful for the future
+      radio science analysis.
+ 
+      Additional information about SPK files provided in this data set
+      is available in the file ``data/spk/spkinfo.txt&apos;.
+ 
+ 
+      CK Files
+      ========
+ 
+      C-kernel files included in this data set provide orientation of
+      the spacecraft bus, Navigation Camera instrument, and dust
+      collector grid. The former two kinds of CK files are produced
+      from engineering telemetry downlinked from the spacecraft. As is
+      often the case with spacecraft engineering telemetry-based
+      measurements, considerable uncertainty exists as to the accuracy
+      of such measurements, and, data quality (accuracy and
+      completeness) can vary significantly. The latter kind of CK files
+      is produced from commanded collector angle data.
+ 
+      Spacecraft Bus CK Files
+      -----------------------
+ 
+      These CK files containing the orientation of the spacecraft bus
+      (``the spacecraft&apos;) are provided to support interpretation of
+      data obtained by all science experiments. The spacecraft
+      orientation CK file included in this data set were produced from
+      the merged stream of orientation quaternions computed on-board
+      and sent down in channelized telemetry, small forces packets, and
+      NAVCAM image headers.
+ 
+      The fact that the NAVCAM instrument could successfully point to
+      and track the desired targets (Annefrank, Wild 2, star fields,
+      etc.) and that the targets were found close to the expected
+      location in the images indicates that the accuracy of orientation
+      information sent down from the spacecraft was within the mission
+      requirements. At the same time it should be mentioned that at the
+      time of this archive release there are no known reports assessing
+      accuracy of the spacecraft orientation provided in these CK
+      files.
+ 
+      For the Wild 2 encounter the most accurate spacecraft orientation
+      was computed by the OPNAV team by fitting the NAVCAM image data.
+      This attitude solution is provided in a separate CK file,
+      covering just the 45 minute period around the encounter. When
+      used together with the OPNAV-determined spacecraft trajectory SPK
+      file, this solution provides the best geometry for processing of
+      the close encounter data, predicting the Wild 2 center position
+      in the NAVCAM images to within five to twenty pixels of the
+      actual, seen position (for the unadjusted, telemetry-based
+      spacecraft attitude CK this difference is tens of pixels.)
+ 
+      For the Tempel 1 encounter the most accurate spacecraft
+      orientation was computed by the OPNAV team by fitting the NAVCAM
+      image data. This attitude solution is provided in a separate CK
+      file, covering just 72 short intervals between to the exposure
+      start and stop times of the 72 encounter images. When used
+      together with the OPNAV-determined spacecraft trajectory SPK
+      file, this solution provides the best geometry for processing of
+      the close encounter data.
+ 
+      Navigation Camera CK Files
+      --------------------------
+ 
+      These CK files containing orientation of the NAVCAM instrument
+      relative to the spacecraft bus are provided to support the NAVCAM
+      image analysis. The orientation data in these files are comprised
+      of a number of individual transformations implementing the NAVCAM
+      pointing model defined and described in the Stardust Frames
+      Kernel (FK) file. Some of these transformations have been computed
+      from the NAVCAM mirror angle data contained in the image headers,
+      others -- using the OPNAV team pointing correction tables
+      provided in the NAVCAM IK file.
+ 
+      The original, type 1, NAVCAM CK files contain discrete data points
+      corresponding to the exact times when the images were taken and
+      cannot be used to compute the camera view direction for any other
+      times. To get these exact times users interested in computing
+      NAVCAM orientation using these CKs must start with SCLK values
+      provided in the SPACECRAFT_CLOCK_START_COUNT keywords in the
+      NAVCAM image labels and convert these SCLKs to other time
+      system(s) to access SPICE data. Starting with UTC times from the
+      NAVCAM labels will result in a small round off and the pointing
+      will not be found.
+ 
+      The type 2 NAVCAM CK files prepared for the archive contain the
+      same orientation as the original type 1 CKs but that orientation
+      covers small windows, from exposure start minus 1 SCLK tick to
+      exposure stop plus 1 SCLK tick, allowing computing NAVCAM
+      orientation at any time within the image exposures and making
+      these CKs more usable with high-level SPICE APIs. The mirror
+      orientation stored in these files is constant during each of the
+      exposure windows.
+ 
+      While OPNAV Team invested substantial effort in solving for
+      correction to be applied to the ideal NAVCAM pointing model in
+      order to estimate actual camera orientation, the correction that
+      had been derived prior to the Annefrank flyby and used to compute
+      orientation data for the NAVCAM CK files did not work well for
+      all image sequences. Even with correction applied, computed
+      pointing estimate had been off by as much as few tens of pixels
+      for some of the images.
+ 
+      Dust Collector CK File
+      ----------------------
+ 
+      This file contains commanded orientation of the collector,
+      computed from commanded collector position angles, because no
+      direct indicators of the actual collector orientation were
+      available in the spacecraft engineering telemetry. It covers both
+      ISP collection period and the Wild 2 encounter.
+ 
+      Caution on Using CK Files
+      -------------------------
+ 
+      While not a data accuracy issue, the CK user is nevertheless
+      cautioned to understand and properly use the data found and
+      tolerance arguments that are inputs to the CK reader provided
+      in the SPICE Toolkit. Descriptions about how to read CK files
+      are found in the CK reader routine headers (top of the source
+      code files) and in the ``CK Required Reading&apos; document; these
+      are contained in each SPICE Toolkit package.
+ 
+      Additional information about CK files provided in this data set
+      is available in the file ``data/ck/ckinfo.txt&apos;.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;
+      bodies such as planets, satellites, comets and asteroids. A
+      description of these data items and reference to their source is
+      provided inside the PCK file, which is a simple text file that
+      can be viewed using any word processor, text editor or text
+      display utility.
+ 
+      This data set contains generic PCK files based on the official
+      IAU/IAG/COSPAR values accepted in 1994 and 2006  and PCK files
+      for Stardust mission targets -- Wild 2 and Annefrank, -- and NEXT
+      mission target -- Tempel 1 -- that provide constants determined
+      after the encounters. While the PCK files for Wild 2 and Tempel 1
+      contains both rotation and shape data, the file for Annefrank
+      contains only the shape data because orientation of the asteroid
+      was not determined from the flyby data.
+ 
+      Additional information about PCK files provided in this data set
+      is available in the file ``data/pck/pckinfo.txt&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      Frames kernel files provide specifications for how one reference
+      frame is defined relative to another frame. The Stardust FK
+      provided in this data set contains a complete set of frame
+      definitions for the spacecraft, its structures such as antennas,
+      and all of its science instruments. Meta information provided in
+      the comments included in this file consists of the frame
+      definitions, description of the frame relationships, source of
+      and accuracy of the mounting alignment information, etc.
+ 
+      Additional information about FK files provided in this data set
+      is available in the file ``data/fk/fkinfo.txt&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      Instrument kernel files provide specifications for the optical
+      and physical instrument parameters and -- where applicable --
+      field-of-view size, shape and orientation for the named
+      instrument. Metadata describing these estimates are provided in
+      each IK file included in this archive.
+ 
+      Additional information about IK files provided in this data set
+      is available in the file ``data/ik/ikinfo.txt&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data
+      needed for converting time measurements between ephemeris time
+      (ET) and spacecraft clock time (SCLK). A SPICE SCLK file is
+      made from a similar file -- SCLK/SCET file, or SCLKvSCET
+      file -- produced by another mission entity. Each newly made SCLK
+      file fully replaces the previous SCLK file.
+ 
+      For Stardust the time correlation accuracy provided in SCLK/SCET
+      files is informally reported by the Lockheed Martin spacecraft
+      team to be better than 20 milliseconds. (NAIF has not attempted
+      to obtain or produce an independent corroboration of these LMA
+      estimates.) The SPICE SCLK file has essentially the same accuracy
+      as the SCLK/SCET file.
+ 
+      SPICE software does not prohibit an SCLK file from being used
+      for time conversions occurring for ``future times&apos; (or more
+      accurately, for epochs that occur later than the epoch of the
+      last telemetry data used in producing the last correlation
+      coefficients found in the SCLK file). Such ``predict&apos; time
+      conversions are likely to be inaccurate (changed somewhat)
+      once the epoch of interest has been passed.
+ 
+      Additional information about SCLK files provided in this data set
+      is available in the file ``data/sclk/sclkinfo.txt&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;
+      and some other terms used in converting time measurements
+      between ephemeris time (ET) and Universal Time (UTC). ``Spacecraft
+      Event Time&apos; (SCET) is the commonly used name for UTC events
+      measured at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed
+      is contained inside the LSK text file. The time conversion
+      provided by SPICE LSK files is accurate to approximately
+      0.000030 seconds.
+ 
+      Additional information about LSK files provided in this data set
+      is available in the file ``data/lsk/lskinfo.txt&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      Two kinds of Events kernel (EK) files for the primary mission are
+      included in this archive: Experimenter&apos;s Notebook EKs and
+      Sequence EKs. No EK files were made during the NEXT mission.
+ 
+      Experimenter&apos;s Notebook EKs kernels are a digital analog to
+      the traditional paper laboratory notebook. Hence Experimenter&apos;s
+      Notebook entries represent truth only as seen by the author
+      of the notes--there is no attempt made to independently validate
+      any aspect of Experimenter&apos;s Notebook information.
+ 
+      Sequence EKs comprise a summary of the commands sent to the
+      spacecraft as well as instrument state (status) summaries as
+      modeled by the sequence generation tools. This data set includes
+      Sequence EKs created from integrated sequence Predicted Events
+      Files (PEFs) produced by the Stardust spacecraft team, LMA. As
+      seen from the source product name these files contain predicted
+      information -- background sequences, as should have executed by
+      the spacecraft. Because of that the EK records have times
+      different from the actual command execution times (although very
+      close in most cases.) These EKs are also missing any commands
+      that were not part of the background sequences (real-time
+      commands).
+ 
+      Additional information about EK files provided in this data set
+      is available in the file ``data/ek/ekinfo.txt&apos;.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>PSCM-00033</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

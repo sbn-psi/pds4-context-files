@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gp-j-epi-3-entry-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO PROBE EPI RAW DATA SET</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:epi.gp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gp-j-epi-3-entry-v1.0__browserp_gp-j-epi-3-entry-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Fischer, H.M., E. Pehlke, G. Wibberenz, L.J. Lanzerotti and J.D. Mihalov,
+                   High-Energy Charged Particles in the Innermost Jovian Magnetosphere, Science
+                   272, pp. 856-858, 1996.
+            </reference_text>
+            <description>reference.FISCHERETAL1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GP-J-EPI-3-ENTRY-V1.0</data_set_id>
+        <data_set_name>GALILEO PROBE EPI RAW DATA SET</data_set_name>
+        <data_set_release_date>1996-12-08</data_set_release_date>
+        <start_time>1995-12-07T19:06:48Z</start_time>
+        <stop_time>1995-12-07T21:54:18Z</stop_time>
+        <producer_full_name>HARALD FISCHER</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            The Galileo Probe Energetic Particles Investigation (EPI) Raw
+            Data Set
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Galileo Probe Energetic Particles Investigation (EPI) Raw
+            Data Set contains two tables of the EPI raw data values sorted by
+            sampling time. The counter table contains the raw counter values
+            as measured and the countrate table contains the countrates as
+            derived from counter values, but without any correction. The
+            tables are split into omnidirectional and sectorized data. The
+            distance to Jupiter is given in Jupiter radii, Rj, and was
+            derived from the Probe trajectory data. The time of probe entry
+            is taken to be 1995-12-07T22:04:44Z when the probe reached an
+            altitude of 450 km above the 1 bar pressure level.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The Galileo Probe Energetic Particles Investigation (EPI) Raw
+    Data Set contains two tables of the EPI raw data values sorted by
+    sampling time.  The counter table contains the raw counter values
+    as measured and the countrate table contains the countrates as
+    derived from counter values, but without any correction.  The
+    tables are split into omnidirectional and sectorized data.  The
+    distance to Jupiter is given in Jupiter radii, Rj, and was
+    derived from the Probe trajectory data.  The time of probe entry
+    is taken to be 1995-12-07T22:04:44Z when the probe reached an
+    altitude of 450 km above the 1 bar pressure level.
+ 
+ 
+  Parameters
+  ==========
+    The counter values are numbers without unit, while the countrates
+    are given in counts per second.  The sampling time for the
+    omnidirectional channels E12, E22, E32, P12, P31, P32 was 17.145
+    s, for the omnidirectional HE2 channel it was 46.72 s, for the
+    omnidirectional channel HVY in sample 1 - 4 it was 128 s and for
+    the omnidirectional channels HVY1-HVY4 in sample 5-15 it was 64
+    s.  For the sectorized channels E11S, E21S, E31S, P11S, P21S,
+    P22S the sampling time was 2.143 s and for the sectorized HE1S
+    channel it was 11.43 s.
+ 
+    1 Rj = 71372 km.
+ 
+    This value for Rj was selected to be consistent with the value
+    used by the Pioneer 10 and 11 investigations.  The Pioneers were
+    the only other spacecraft to fly to low jovian altitudes.  Users
+    should be cautioned when comparing data sets organized by
+    distance when the units provided are jovian radii.  Many
+    different values have been selected by the Pioneer, Voyager,
+    Ulysses, and Galileo teams.  In particular, the value used here
+    is inconsistent with the value widely adopted by orbiter
+    scientists who use the value 71492 km.
+ 
+ 
+  Data
+  ====
+    The EPI RAW DATA SET comprises five tables:
+ 
+        (1) Counter Table - Omnidirectional
+        (2) Counter Table - Sector
+        (3) Countrate Table - Omnidirectional
+        (4) Countrate Table - Sector
+        (5) Housekeeping Table
+ 
+    (1-2) Counter Tables
+ 
+    These tables contain the raw counter values as measured. The data
+    are sorted by their distance to Jupiter given in Jupiter radii, Rj.
+ 
+    (3-4) Countrate Tables
+ 
+    These tables contain the raw countrates derived from the counter
+    values. The data are sorted by their distance to Jupiter given in
+    Jupiter radii, Rj.
+ 
+    (5) Housekeeping Table
+ 
+    This table contains the detector leakage currents and the
+    temperature of the EPI sensor.  The data are sorted by their
+    distance to Jupiter given in Jupiter radii, Rj.
+ 
+ 
+  Ancillary Data
+  ==============
+    Trajectory and timing information were obtained from the Galileo
+    Project.
+ 
+ 
+  Coordinate System
+  =================
+    The data are presented according to the radial distance of the
+    probe to Jupiter as given by the project office.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    The EPI data are transmitted completely without gaps from the
+    orbiter to Earth and the sample overwriting for the last samples
+    was done correctly.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    For the samples 5 and 6 there are no housekeeping data.  The
+    housekeeping data in these samples belong to the samples 16 and
+    17.  This is a consequence of the sample overwriting procedure,
+    which was introduced to cover in any case the region of particle
+    population down to the innermost edge of the magnetosphere
+    independently of an early or late arrival of the probe.
+ 
+ 
+  Limitations
+  ===========
+    These data are raw data.  For a correct interpretation of the
+    data the knowledge of the response functions of the instrument as
+    well as a dead-time and stray-coincidence correction are
+    necessary.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-chemin-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS CHEMISTRY &amp; MINERALOGY X-RAY INSTRUMENT 2 EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:chemin.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemin-2-edr-v1.0__browserp_msl-m-chemin-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemin-2-edr-v1.0__dvo_geo_msl-m-chemin-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemin-2-edr-v1.0__pds.geo.msl.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Vaniman, D., D. Bish, D. Blake, S.T. Elliott, P. Sarrazin, et al., Landed
+                   XRD/XRF analysis of prime targets in search for past or present Martian life,
+                   J. Geophys. Res. 103, E13, 31477-31489, 1998.
+            </reference_text>
+            <description>reference.VANIMANETAL1998</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-CHEMIN-2-EDR-V1.0</data_set_id>
+        <data_set_name>MSL MARS CHEMISTRY &amp; MINERALOGY X-RAY INSTRUMENT 2 EDR V1.0</data_set_name>
+        <data_set_release_date>2013-02-27</data_set_release_date>
+        <start_time>2012-07-16</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>DAVID VANIMAN</producer_full_name>
+        <citation_text>
+            Vaniman, D., Mars Science Laboratory Chemistry &amp; Mineralogy
+            EDR Data V1.0, MSL-M-CHEMIN-2-EDR-V1.0, NASA Planetary Data
+            System, 2012.
+        </citation_text>
+        <data_set_terse_desc>
+            Unprocessed experiment data from the CheMin instrument aboard the
+            Mars Science Laboratory rover.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Unprocessed experiment data from the CheMin instrument aboard the
+            Mars Science Laboratory rover.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+ 
+      The CheMin instrument captures diffracted and fluoresced X-rays
+      on a CCD detector. Up to 2730 individual images can be stored in
+      the instrument, but the downlink capability of the rover does
+      not support the transmission of these raw frames in their
+      entirety. Processing onboard the rover is used to reduce the
+      downlink data volume while preserving the scientific content of
+      the data.
+ 
+    Processing
+    ==========
+      CheMin EDR data products are considered CODMAC Level 2 or Edited
+      Data (equivalent to NASA level 0) products. The EDR data files
+      are generated from Level 1 or Raw Data, which are the
+      telemetry packets within the project specific Standard
+      Formatted Data Unit (SFDU) record.
+ 
+      The CheMin EDR data products will be generated by the MIPL
+      (Multimission Image Processing Laboratory) at JPL under the
+      Operations Product Generation System (OPGS). The
+      EDR data products will be raw uncalibrated data reconstructed
+      from telemetry data products in the format described by the
+      CheMin EDR SIS. Meta-data collected when the rover prepared the
+      science data for downlink will be provided in PDS label.
+ 
+      There will be multiple versions of a CheMin EDR. If telemetry
+      data are missing during the initial downlink from the rover
+      memory, partial data sets will be created and the missing data
+      will be filled with zeroes. The data will be reprocessed after
+      all data are received and the original version will be
+      overwritten. There can be up to 2 EDRs created, one with a
+      status of partial and the other with a complete status in the
+      filename.
+ 
+    Data
+    ====
+      The data types available from CheMin are described in the EDR
+      SIS and are summarized as follows:
+ 
+      1.  Diffraction - All:  Multiple (e.g., 120) raw images are
+      combined into a single array with the same dimensions as the
+      original images where only pixel values within a specified
+      window of DN values are counted. This window will typically be
+      selected to represent diffracted Co-Kalpha X-rays. This will be
+      the primary data product used for diffraction studies.
+ 
+      2.  Diffraction - Single: Same as &apos;Diffraction - All&apos; except
+      pixel values within the specified window are counted only if
+      they are surrounded entirely by pixels below a selected
+      background threshold. This data set minimizes the contribution
+      of diffracted Co-Kbeta X-rays and other extraneous events, but
+      excludes many valid X-rays.
+ 
+      3.   Diffraction - Split: Same as &apos;Diffraction-All&apos; except pixels
+      are counted only if two adjacent values sum to produce a value
+      that is within the specified window. This data set attempts to
+      recover split events (X-rays depositing charge over multiple
+      pixels) and can be used when the count-rate is low.
+ 
+      4.  Film: Multiple (e.g., 120) raw images are summed into a
+      single array. This product will have a higher background noise
+      level given that all fluoresced X-rays are added in, but it will
+      be the best product to use for diffraction studies if the grain
+      motion is poor and there is a large occurrence of pixels
+      capturing multiple diffracted X-rays within a single image.
+ 
+      5.  Energy - All: The individual pixel values from multiple
+      (e.g., 120) raw images are combined into a single energy histogram
+      representing counts versus instrumental digital number (DN) energy bins.
+ 
+      6.  Energy - Single: Same as &apos;Energy-All&apos; except pixel values
+      are added to the histogram only if they are surrounded entirely
+      by pixels below a selected background threshold. This will be
+      the primary product used for selection of the diffraction window
+      and for any chemical assessments of the data.
+ 
+      7.  Energy - Split: Same as &apos;Energy-All&apos; except the only values
+      added to the histogram are from the sum of two adjacent pixels
+      which are surrounded entirely by pixels below the background
+      threshold. This data set can be used to add counts to &apos;Energy-
+      single&apos; when the overall count rate is low.
+ 
+      8.  Raw frames: Unprocessed, single images are periodically
+      retained for downlink to allow the science team to assess the
+      performance of the onboard algorithms. One dark frame (no x-ray
+      source) is collected before and after each analysis to track the
+      health of the detector. CheMin can also be commanded to output
+      &apos;thresholded&apos; raw data where a selected range of raw frames are
+      extracted from the instrument but all pixels with values below a
+      specified threshold and all pixels with values above a second
+      specified threshold are set to zero. Even though data in this
+      format will compress well, some valuable information will be
+      discarded and the downlink requirements will still be relatively
+      large. Nonetheless, this data format could be used if issues are
+      identified in the onboard processing.
+ 
+      9.  Housekeeping: A full set of parameters, temperatures,
+      voltages, and other health/status data is captured periodically
+      for downlink.
+ 
+      10. CCD Frame: Individual CCD frames will be downlinked periodically
+      to analyze CCD dark current, hot pixels, and overall CCD health. In
+      the event that an off-nominal result is obtained such that K-alpha
+      thresholds are incorrect or some other unforeseen circumstance renders
+      the data reduction algorithms ineffectual, complete individual frames
+      can be downlinked and processed using algorithms that can be written
+      on the ground and uplinked to the rover.
+ 
+    Data File Names
+    ===============
+      Data file names in the CheMin EDR and RDR archive are named according
+      to the following scheme:
+ 
+        &lt;instr&gt;&lt;config&gt;&lt;sclk&gt;&lt;prod&gt;&lt;sol&gt;&lt;site&gt;&lt;drive&gt;&lt;seq&gt;&lt;venue&gt;&lt;ver&gt;.&lt;ext&gt;
+ 
+      where
+ 
+       &lt;instr&gt;  = CM (CheMin)
+       &lt;config&gt; = A_, B_, or __ (instrument configuration)
+       &lt;sclk&gt;   = 9-character spacecraft clock count
+       &lt;prod&gt;   = 3-character product type
+       &lt;sol&gt;    = 4-digit sol number
+       &lt;site&gt;   = 3-character site location
+       &lt;drive&gt;  = 4-character drive position
+       &lt;seq&gt;    = 7-character CheMin sequence identifier
+       &lt;venue&gt;  = 1-character producer identifier
+       &lt;ver&gt;    = 1-character version identifier
+       &lt;ext&gt;    = IMG (image), DAT (binary table), CSV (ASCII delimited table)
+ 
+      See the CheMin EDR Data Product Software Interface Specification in
+      the Document directory of the archive for details about the file
+      naming scheme.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      The data presented in the CheMin EDR is intended to be the least
+      processed, most primitive data set released for CheMin. Data
+      presented here are an accurate representation of CheMin data as
+      received from the rover.
+ 
+    Review
+    ======
+      The CheMin EDR products are reviewed internally by the CheMin team
+      prior to release to the PDS. PDS also performs an external peer
+      review of the CheMin EDR.
+ 
+    Data Coverage and Quality
+    =========================
+      This section will be updated with the first release of CheMin EDR
+      data to the PDS.
+ 
+    Limitations
+    ===========
+      The major limitation of this data set is that this is level 0,
+      minimally processed data. The data are received from the
+      spacecraft telemetry and ingested into a database. If gaps
+      exist in the telemetry, data are lost.
+ 
+    Data Compression
+    ===============
+      No data compression is used.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

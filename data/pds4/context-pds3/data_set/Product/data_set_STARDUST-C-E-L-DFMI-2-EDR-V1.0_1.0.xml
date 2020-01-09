@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.stardust-c-e-l-dfmi-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>STARDUST C/E/L DUST FLUX MONITOR INSTRUMENT-2-EDR-V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.stardust::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:dfmi.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.81p-wild_2_1978_a2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.stardust-c-e-l-dfmi-2-edr-v1.0__browserp_stardust-c-e-l-dfmi-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>STARDUST-C/E/L-DFMI-2-EDR-V1.0</data_set_id>
+        <data_set_name>STARDUST C/E/L DUST FLUX MONITOR INSTRUMENT-2-EDR-V1.0</data_set_name>
+        <data_set_release_date>2000-05-05</data_set_release_date>
+        <start_time>1999-02-19T16:51:35.891Z</start_time>
+        <stop_time>1999-09-13T17:52:33.278Z</stop_time>
+        <producer_full_name>APPLIED COHERENT TECHNOLOGY CORPORATION</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            Data collected by the Dust Flux Monitor Instrument (DFMI) of the
+            Stardust satellite, taken during the cruise phase of the mission.
+            These data were determined by peer review to be of no scientific
+            use.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Data collected by the Dust Flux Monitor Instrument (DFMI) of the
+            Stardust satellite, taken during the early cruise phase of the
+            mission. These data were determined by peer review to be of no
+            scientific use.
+        </abstract_desc>
+        <data_set_desc>
+ 
+     Stardust Dust Flux Monitor Instrument Data Description:
+     =======================================================
+ 
+ 
+     Data Set Overview:
+     =================
+ 
+     This volume contains dust events collected during the early cruise
+     phase by the Dust Flux Monitor Instrument (DFMI) flown onboard
+     the STARDUST satellite.  The data in this archive are organized
+     into two ASCII tables, using the same record layout.  The first
+     table, dfmicru001.tab, provides data readout at the &apos;&apos;CRUISE&apos;&apos; rate
+     (as often as 10 Hz but as infrequently as every 20 minutes).  The
+     second table, dfmienc001.tab, provides test data readout at the
+     &apos;&apos;ENCOUNTER&apos;&apos; rate (as often as 10 Hz but at least every second).
+ 
+ 
+     Instrument Description:
+     =======================
+ 
+     The Dust Flux Monitor Instrument (DFMI) will carry out
+     quantitative measurements of particle impact rate and particle
+     mass distribution throughout the flyby of Comet Wild-2.  There
+     are two PVDF sensor units, each measuring different mass
+     densities, as well as two acoustic sensors.  Please refer to
+     both the DFMI Calibration report and the papers provided in the
+     /EXTRAS directory on this archive.
+ 
+ 
+     General notes regarding fields of the data tables:
+     ==================================================
+ 
+        * Strings appear in quotes.
+        * Integers and PDS times do not require quotes.
+        * If a field is unknown, UNK may be entered.
+        * If a field is not applicable, N/A may be entered.
+ 
+ 
+     Definition of the fields in the data tables:
+     ============================================
+ 
+        EVENT_SEQUENCE_NUMBER:     The number associated with an
+                                   event in the file DFMICRU001.TAB,
+                                   with 1 being the first event
+                                   recorded and n being the n&apos;th
+                                   event recorded.
+ 
+        SPACECRAFT_UTC_TIME:       The time at which data was
+                                   obtained in UTC.
+ 
+        SPACECRAFT_CLOCK_TIME:     The time at which data was obtained
+                                   in seconds from 1980-01-01T00:00:00.
+ 
+        DFMI_CLOCK_TIME:           The time at which data was obtained,
+                                   with one second resolution.  This
+                                   16 bit counter rolls over to 0
+                                   after 65535.
+ 
+        DFMI_SYNC:                 This column should be equal to A5,
+                                   the sync value for the DFMI data
+                                   stream.
+ 
+        DFMI_MODE:                 Indicates if DFMI is in calibration
+                                   or normal mode.  Valid values are
+                                   NORM, IFC1, IFC2, IFC3, IFC4.  See
+                                   DFMI Calibration Document for more
+                                   details.
+ 
+        DFMI_READOUT_RATE:         Indicates the Readout rate:  valid
+                                   values are CRUISE and ENCOUNTER.
+                                   Cruise indicates that DFMI will
+                                   read out data as often as 10Hz but
+                                   as little as every 20 minutes.
+                                   Encounter indicates that data will
+                                   be read out as often as 10Hz, but
+                                   at least every second.
+ 
+        DFMI_WATCHDOG_RESET:       Indicates that a watchdog reset
+                                   prompted the reset of the DFMI
+                                   computer.  This value will only
+                                   remain set for a single readout
+                                   period.
+ 
+        DFMI_SMALL_SENSOR_GAIN:    DFMI small sensor sensitivity is
+                                   either HIGH or LOW.  If this value
+                                   is High, the sensitivity relay is
+                                   off and the small sensor is in the
+                                   low mass range.  If this value is
+                                   Low, the relay is on and the
+                                   sensor is set to the high mass
+                                   range. In the high mass range, all
+                                   electronic thresholds for the
+                                   small dust sensor are a factor 10
+                                   greater than the low mass values.
+                                   See the DFMI Calibration Document
+                                   for more details.
+ 
+        DFMI_ACOUSTIC_BUMPERLOW:   Acoustic Bumper Low is an 8-bit
+                                   counter associated with low
+                                   threshold of impact sensor 1, also
+                                   known as the Bumper acoustic
+                                   sensor.
+ 
+        DFMI_ACOUSTIC_BUMPERHIGH:  Acoustic Bumper High is an 8-bit
+                                   counter associated with high
+                                   threshold of impact sensor 1, also
+                                   known as the Bumper acoustic
+                                   sensor.
+ 
+        DFMI_ACOUSTIC_NEXTELLOW:   Acoustic Nextel Low is an 8-bit
+                                   counter associated with low
+                                   threshold of impact sensor 2, also
+                                   known as the Nextel acoustic
+                                   sensor.
+ 
+        DFMI_ACOUSTIC_NEXTELHIGH:  Acoustic Nextel High is an 8-bit
+                                   counter associated with low
+                                   threshold of impact sensor 1, also
+                                   known as the Nextel acoustic
+                                   sensor.
+ 
+        DFMI_CCC1_LARGEM1:         CCC1 is a 16-bit counter associated
+                                   with the first (lowest) large
+                                   threshold M1.  See DFMI
+                                   Calibration Document for more
+                                   details.
+ 
+        DFMI_CCC2_LARGEM2:         CCC2 is a 16-bit counter associated
+                                   with the second large sensor
+                                   threshold M2.  See DFMI
+                                   Calibration Document for more
+                                   details.
+ 
+        DFMI_CCC3_LARGEM3:         CCC3 is a 16-bit counter associated
+                                   with the third large sensor
+                                   threshold M3.  See DFMI
+                                   Calibration Document for more
+                                   details.
+ 
+        DFMI_CCC4_LARGEM4:         CCC4 is a 16-bit counter associated
+                                   with the fourth large sensor
+                                   threshold M4.  See DFMI
+                                   Calibration Document for more
+                                   details.
+ 
+        DFMI_CCC5_SMALLM1:         CCC5 is a 16-bit counter associated
+                                   with the first (lowest) small
+                                   sensor threshold m1.  See DFMI
+                                   Calibration Document for more
+                                   details.
+ 
+        DFMI_CCC6_SMALLM2:         CCC6 is a 16-bit counter associated
+                                   with the second small sensor
+                                   threshold m2.  See DFMI
+                                   Calibration Document for more
+                                   details.
+ 
+        DFMI_CCC7_SMALLM3:         CCC7 is a 16-bit counter associated
+                                   with the third small sensor
+                                   threshold m3.  See DFMI
+                                   Calibration Document for more
+                                   details.
+ 
+        DFMI_CCC8_SMALLM4:         CCC8 is a 16-bit counter associated
+                                   with the fourth small sensor
+                                   threshold m4.  See DFMI
+                                   Calibration Document for more
+                                   details.
+ 
+        DFMI_EB_TEMP:              Temperature of the DFMI Electronics
+                                   Box, measured in Kelvin units.
+ 
+        DFMI_SU_TEMP:              Temperature of the DFMI Sensor
+                                   Unit, measured in Kelvin.
+ 
+        DFMI_HEATER_POWER:         Power condition, ON or OFF, of the
+                                   DFMI Heater.
+ 
+        SC_X_POS_WRT_SUN           This element provides the x,y,z
+        SC_Y_POS_WRT_SUN           position of the spacecraft
+        SC_Z_POS_WRT_SUN:          measured with respect to the sun,
+                                   expressed in J2000 Earth Mean
+                                   Equator and Vernal Equinox
+                                   coordinates corrected for light
+                                   time and stellar aberration.
+ 
+        SC_X_VEL_WRT_SUN           This element provides the x,y,z
+        SC_Y_VEL_WRT_SUN           velocity of the spacecraft
+        SC_Z_VEL_WRT_SUN:          measured with respect to the sun,
+                                   expressed in J2000 Earth Mean
+                                   Equator and Vernal Equinox
+                                   coordinates corrected for light
+                                   time and stellar aberration.
+ 
+        SC_X_POS_WRT_WILD2         This element provides the x,y,z
+        SC_Y_POS_WRT_WILD2         position of the spacecraft
+        SC_Z_POS_WRT_WILD2:        measured with respect to Wild 2,
+                                   expressed in J2000 Earth Mean
+                                   Equator and Vernal Equinox
+                                   coordinates corrected for light
+                                   time and stellar aberration.
+ 
+        SC_X_VEL_WRT_WILD2         This element provides the x,y,z
+        SC_Y_VEL_WRT_WILD2         velocity of the spacecraft
+        SC_Z_VEL_WRT_WILD2:        measured with respect to Wild 2,
+                                   expressed in J2000 Earth Mean
+                                   Equator and Vernal Equinox
+                                   coordinates corrected for light
+                                   time and stellar aberration.
+ 
+        SC_X_POS_WRT_EARTH         This element provides the x,y,z
+        SC_Y_POS_WRT_EARTH         position of the spacecraft
+        SC_Z_POS_WRT_EARTH:        measured with respect to Earth,
+                                   expressed in J2000 Earth Mean
+                                   Equator and Vernal Equinox
+                                   coordinates corrected for light
+                                   time and stellar aberration.
+ 
+        SC_X_VEL_WRT_EARTH         This element provides the x,y,z
+        SC_Y_VEL_WRT_EARTH         velocity of the spacecraft
+        SC_Z_VEL_WRT_EARTH:        measured with respect to Earth,
+                                   expressed in J2000 Earth Mean
+                                   Equator and Vernal Equinox
+                                   coordinates corrected for light
+                                   time and stellar aberration.
+ 
+        DFMI_VELSUN_ANGLE:         This is the angular separation
+                                   between the DFMI Sensor Unit
+                                   Normal and the velocity vector of
+                                   the spacecraft which is measured
+                                   with respect to the sun.
+ 
+        DFMI_VELWILD2_ANGLE:       This is the angular separation
+                                   between the DFMI Sensor Unit
+                                   Normal and the velocity vector of
+                                   the spacecraft which is measured
+                                   with respect to the comet Wild 2.
+ 
+        DFMI_VELEARTH_ANGLE:       This is the angular separation
+                                   between the DFMI Sensor Unit
+                                   Normal and the velocity vector of
+                                   the spacecraft which is measured
+                                   with respect to the Earth.
+ 
+        DFMI_VELISP_ANGLE:         This is the angular separation
+                                   between the DFMI Sensor Unit
+                                   Normal and the velocity vector of
+                                   the spacecraft which is measured
+                                   with respect to the Interstellar
+ 
+ 
+     Contact Information:
+     ====================
+ 
+         For any questions regarding the data format of the archive,
+         contact:
+ 
+         Howard Taylor
+         Applied Coherent Technology Corp
+         112 Elden Street, Suite K
+         Herndon, VA 20170
+         (818) 354-5401
+         taylor@actgate.com
+        </data_set_desc>
+        <confidence_level_note>
+ 
+       The data collected here has been prepared with the highest
+       concern for the perfectness of the data delivered.  During the
+       processing of the data in preparation for delivery with this
+       volume, the structure of each data packet was verified.  This
+       verification included detection of both the sync word and the
+       length of each packet.
+ 
+       The data that was used to produce this archive was generated
+       on-board the spacecraft and telemetered to the NASA/JPL Deep
+       Space Network (DSN) and decommutated by Applied Coherent
+       Technology Corp for the Jet Propulsion Laboratory.  Some of
+       the data was selectively excluded from this archive by the
+       principal investigator for DFMI.  These data were selectively
+       excluded because the instrument was operating in a faulty
+       manner, not even producing a proper sync byte.  The data that
+       is included on this archive passes the data verification
+       scheme mentioned above.
+        </confidence_level_note>
+        <archive_status>SAFED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

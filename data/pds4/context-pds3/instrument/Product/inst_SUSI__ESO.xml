@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:susi.eso</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>SUPERB SEEING IMAGER for ESO</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.eso::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>SUPERB SEEING IMAGER</instrument_name>
+        <instrument_desc>
+ 
+ 
+    Instrument Overview
+    ===================
+      EMMI is a flexible instrument which allows a wide range of observing
+      modes, from wide-field imaging to high-dispersion echelle
+      spectroscopy, including long-slit and multi-object spectroscopy.
+      This manual also describes SUSI (SUperb Seeing Imager) which is
+      mounted in the other Nasmyth focus of the NTT and complements the
+      imaging capabilities of EMMI.  A brief description of the active
+      optics system of the NTT and its basic operational principles are
+      also provided in this manual.
+ 
+      The driving concepts in the instrument definition were the high
+      image quality foreseen for the NTT, the need to complement or
+      improve on the instrumentation on the 3.6m telescope, and the need
+      to minimize instrument change-overs.  The concept which was adopted
+      is that of a dual-beam instrument, fully dioptric, and based on the
+      white pupil principle.  CCD detectors were foreseen for the two arms
+      with the possibility to adapt to the geometric characteristics of
+      future detectors by changing the cameras only.  The main advantages
+      of this type of design are the high efficiency in both channels and
+      the easy conversion from wide field imaging to grism and grating
+      spectroscopy.
+ 
+      After the first observations with the NTT, it became clear that the
+      telescope and the atmosphere at La Silla could provide stellar
+      images with diameters as good as 0.3 arc sec.  Images of this
+      quality could not be sampled adequately with EMMI, which scale had
+      also to be adapted to the spectroscopic modes of observation.  Thus,
+      SUSI was designed and built for the other Nasmyth arm of the NTT.
+      The design is such that switching between EMMI and SUSI is done in a
+      matter of minutes, so that they can be considered as different parts
+      of the same instrument.
+ 
+      The Superb Seeing Imager (SUSI) is physically distinct from EMMI but
+      complements its observing capabilities.  A supporting plate is
+      mounted on the adapter of the Nasmyth A focus of the NTT. On the
+      plate, a mirror with 3 positions is mounted. The first position
+      sends the light to SUSI, the second feeds an IR camera (not
+      available), and the third position is free for the operation of
+      IRSPEC. Between the diagonal mirror and the CCD is a filter wheel
+      with 8 positions.  In the control software, SUSI is also referred to
+      as DIFA: the Direct Imaging FAcility.
+ 
+      SUSI has two advantages over EMMI. First, the small pixel scale
+      which gives a much better sampling of the point-spread function.
+      Second, the lack of optics which gives better throughput. It also
+      has two disadvantages: the CCD is much less efficient in the blue
+      than the one in th blue arm of EMMI, and the field is small. SUSI is
+      therefore well suited for either periods of good to very good
+      seeing.
+ 
+      Switching from EMMI to SUSI only takes a few minutes. However, it is
+      necessary to move the telescope to point at the zenith: only in that
+      position can M3 be turned, to move the beam from one Nasmyth
+      platform to the other. The EMMI control software should be
+      terminated, and SUSI started up as above. You will have to
+      redetermine the focus, and if you are switching because of
+      significant improvements in the seeing, a new image analysis should
+      also be done to take advantage of the new situation.
+ 
+ 
+    System Performance
+    ==================
+      Telescope focus is critical to obtain good images. The slow angle of
+      the NTT beam at the Nasmyth focus (F/11) facilitates focusing the
+      telescope with SUSI, which must be done using through-focus
+      sequences. The parameters for these sequences are entered in the
+      SUSI Exposures form.  Tests done on reasonably good seeing (0.75-1.0
+      arc sec) showed that the optimal focus step is 30 microns.  Step the
+      telescope by 10 arc sec in the most convenient direction depending
+      on the field.  7-9 focus exposures give the best results.
+ 
+      The following table gives approximate focus values for SUSI
+      filters.
+ 
+         U  -3.48mm
+         B  -3.47
+         V  -3.50
+         R  -3.47
+         I  -3.43
+         Z  -3.43
+ 
+ 
+    Calibrations
+    ============
+      As with all CCDs, the afternoon should be used to check that the CCD
+      is in good working condition. Because SUSI is not used as often as
+      EMMI, faults can go unnoticed for some time and the night is not the
+      time to find out about those! Take a few biases and check the
+      read-out noise and check for the presence of patterns. The CCD is
+      normally used in the slow mode, especially when used with binning:
+      the time gained in reading out in fast mode is 25 sec in slow mode
+      and 5 sec with 2 by 2 binning CCD is linear up to 150000
+      electrons/pixel.
+ 
+      Dome flats have been found to flatten images to about 3 %. Sky flats
+      are generally more accurate: SUSI shows some vignetting which is not
+      well removed with dome flats.  For twilight flats Tyson sequences
+      have been used with good succes: the program to calculate these is
+      available on the off-line computersystem (lw0--lw10) under the
+      directory { /astro/progr1/twilight}. Twilight flats should
+      preferably be taken in the evening.  If the background in your
+      science images is bright enough, you can also create flats out of
+      these.
+ 
+      A photometric system for SUSI has not been established. The normal
+      calibrations using the Landholt standards or other CCD standards can
+      be used, but due to the small field size it is difficult to get more
+      than one star on the CCD. If you have determined colour terms for
+      SUSI, please let us know!
+ 
+ 
+    Cameras and Detectors
+    =====================
+      Image scale for EMMI and SUSI
+ 
+    EMMI BIMG   #31 TEK 1024  F/4   24 micron/0.37 arc sec
+ 
+      CCD characteristics for EMMI and SUSI
+ 
+    # 31 slow mode  1.7e/ADU conversion  2.5ADU RON  280.2ADU BIAS 8e DARK
+             fast       3.4                  1.6         275.2         8
+ 
+      Saturation is in most cases defined by the ADU converter, at 65
+      kADU. The actual well depth is around 2 x 10^6 e so that the
+      linearity is good up to digital saturation. The exceptions are EMMI
+      red and SUSI when read out in fast mode. For EMMI red in the fast
+      mode, exposure levels should be kept below 40 kADU, and for SUSI
+      below 24kADU. Otherwise, the linearity of the CCD is better than
+      0.5%. The measured linearity curves can be found in the CCD test
+      reports.
+ 
+      The fast readout mode has as main advantage a reduced readout time.
+      This becomes important on EMMI red where fast readout saves two
+      minutes. It is much less important in SUSI. The disadvantage is
+      increased readout noise and digitization noise, and sometimes
+      increased electric interference. For broadband imaging and many
+      spectroscopic programmes, the readout noise is not important
+      compared to the photon background, and the fast readout mode would
+      be recommended.  Electronic interference could be larger in fast
+      readout:  when in doubt, it is worthwile to take a few biases in the
+      afternoon to check on the readout noise and on the presence of
+      pattern noise.  Remember that, in general, calibration frames such
+      as bias, flat fields, and darks taken with slow readout cannot be
+      used for correcting fast exposures, and vice versa.
+ 
+      CCDs have an electronic bias that can be evaluated by averaging
+      several 0s dark exposures and subtracted from the science images to
+      take it out. By using these exposures the observer can check the CCD
+      readout noise and possible pick-up patterns in the electronic
+      background.  At least one, but if possible more, long (at least 1
+      hour) dark exposures are important to monitor the dark current of
+      the CCD (if possible, take a dark longer than the longest science
+      exposure).
+ 
+ 
+    Filters
+    =======
+      The SUSI filterwheel has 8 positions of which 7 are available for
+      filters.  In contrast to EMMI, SUSI uses 60-mm filters which are the
+      same size as the ones used for EFOSC. EFOSC filters can therefore
+      also be mounted in SUSI (if they are not required by the EFOSC
+      observer!).  There are also a large number of 60-mm filters which
+      are not allocated to a particular instrument and which can be
+      requested.
+ 
+      The ESO Image Quality Filters Catalogue (Gilliotte, 1992) contains a
+      list of available filters and transmission curves.  More recently
+      (1995), a number of new filters have been acquired and all
+      transmission curves re-measured.
+ 
+ 
+    Processing
+    ==========
+      The data from the EMMI and SUSI detectors are simultaneously
+      transmitted to IHAP and MIDAS databases.  MIDAS runs on a Unix
+      workstation equipped with a DAT tape unit. IHAP uses standard
+      1/2~inch 2400~foot tapes at 6250 BPI.
+ 
+      The FITS headers of CCD files contain all the information necessary
+      for the scientific use of the data, that is all the telescope,
+      instrument, and detector parameters. Most of these parameters are
+      stored in so-called hierarchical keywords. MIDAS can read these
+      keywords, but some other packages may not since these are an
+      extension of the FITS standard. If you are not using MIDAS, it is
+      worth to check the actual FITS header for further information which
+      may be useful.
+ 
+ 
+    Electronics
+    ===========
+      The NTT is controlled by two HP1000/A900 computers, one for the
+      telescope (called NTT) and one for the instruments (called NTI).
+      The control software of EMMI is organized in such a way that EMMI is
+      presented as five sub-instruments called RILD, REMD, BIMG, BLMD, and
+      DIMD.  Depending on the type of observations, the user selects one
+      of these modes and the control software automatically moves the
+      functions to be set for this mode.  This leaves only the parameters
+      of the particular type of observation to be defined.  For instance,
+      when setting up an exposure in RILD, the required mirror unit and
+      the upper red folding mirror are automatically set. The observer
+      must only specify the camera focus, the choice of slit, filter
+      and/or grism, and exposure parameters (see section Getting
+      started).
+ 
+      The user interface (UIF) consists of a RAMTEK monitor where mouse
+      driven menus and forms are displayed, and a CRT (LU:53) monitor
+      where messages from the system about the instrument are given and
+      commands may be entered.  Parameters are entered by filling in forms
+      on the RAMTEK screen.
+ 
+      Once all optional optical elements are installed by the operation
+      group, according to the observer&apos;s request, a setup form is
+      produced. A printout of this form is left in the control room so
+      that the observer can verify the setup and can use it as reference
+      during the night.  The positions in the wheels of filters,
+      grisms,and slits, and the gratings in the housing will be displayed,
+      on the RAMTEK UIF in sofar as it is used in the chosen mode,
+      whenever a setup in that mode is defined.
+ 
+ 
+    Ancillary Data
+    ==============
+      Bias and darks
+      --------------
+      It is not safe to assume the bias to be always a scalar and
+      therefore it is recommended to take many bias exposures.
+ 
+      It has proven to be extremely difficult to isolate the CCD
+      electronics from electrical interference from components in the NTT
+      adapters/rotators. Therefore to some extent, the EMMI CCDs show
+      pick-up patterns in the electronic background (the bias).  This
+      noise is minimized in  SLOW readout mode, but may be rather strong
+      in FAST readout frames. The patterns are not stable, but change from
+      one exposure to the next, so it is difficult to remove them
+      completely by substracting bias frames.  However, some reduction can
+      be achieved and, therefore, it is recommended to take a good number
+      of bias frames throughout the observing run.  Should strong patterns
+      (i.e. more than a few ADUs) appear on  SLOW readout bias frames,
+      call the NTT coordinator (93-50).  Note that spurious patterns are
+      introduced if images are displayed with demagnification factors.
+ 
+      At least one, but preferably more, long (1 hour) dark exposures
+      should be taken to monitor the dark current and any exposure
+      dependent features.
+ 
+      Flat fields
+      -----------
+      The linearity of CCD No 31 is very good up to 160,000
+      electrons/pixel.  The most accurate results for flat fields in broad
+      band imaging are obtained using sky flats. This may be achieved by
+      median filtering of science images, if they are not too densely
+      populated with stars and do not contain very extended objects, or by
+      doing multiple exposures of sparsely populated fields, using spatial
+      offsets. A list of such fields is available in the control room.
+      Another approach is to use morning and evening twilight.
+ 
+      Shutter timing
+      --------------
+      A time delay of 0.80 seconds has been measured for the shutter in
+      the blue F/4 camera.  Because of the location of the shutter in the
+      optical path, the exposure time over the field is constant and equal
+      to the chosen time plus the average shutter delay.  If critical for
+      your application, it is recommended that you check the shutter
+      timing by either taking exposures of increasing duration on a star,
+      or using one of the internal lamps and a pinhole in the aperture
+      wheel.
+ 
+      Typical count rates
+      -------------------
+      In blue imaging the efficiency of EMMI is the product of the
+      transmission of the atmosphere, three reflections in the telescope,
+      the transmission of the blue coated optics of mode BIMG, filter, and
+      quantum efficiency of the CCD. The efficiency in B and U was checked
+      for the F/4 camera and TEK CCD No 31 in 1993.  The count rates in
+      e/sec deduced for a 15th magnitude A star with approximately zero
+      colour are U: 2200, B: 16,900 at unit airmass.
+ 
+      Wallander A.:  1993, Remote Control of the 3.5m NTT User Guide, ESO
+      Operating Manual No 17.
+ 
+      Dekker. H.,  Delabre, B.:  1987, Applied Optics, 26, 8, 1375
+ 
+      Dekker, H.,  Delabre, B.,  D&apos;Odorico, S.:  1986, SPIE, 627, 339
+ 
+      Gilliotte, A.:  1992, Image Quality Filters Catalogue, Internal ESO
+      publication
+ 
+      Melnick, J.,  Dekker, H.,  D&apos;Odorico, S.:  1989, ESO Operating
+      Manual #4
+ 
+
+        </instrument_desc>
+        <instrument_id>SUSI</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Imager</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

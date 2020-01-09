@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-ss-hic-5-ionfluxes-oct89-flare-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO SS HIC DERIVED ION FLUXES OCT89 SOLAR EVENT V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hic.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planetary_system.solar_system::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-ss-hic-5-ionfluxes-oct89-flare-v1.0__browserp_go-ss-hic-5-ionfluxes-oct89-flare-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-SS-HIC-5-IONFLUXES-OCT89-FLARE-V1.0</data_set_id>
+        <data_set_name>GALILEO SS HIC DERIVED ION FLUXES OCT89 SOLAR EVENT V1.0</data_set_name>
+        <data_set_release_date>1996-06-01</data_set_release_date>
+        <start_time>1989-10-21T02:52:48.000Z</start_time>
+        <stop_time>1989-10-28T19:26:24.000Z</stop_time>
+        <producer_full_name>THOMAS L. GARRARD</producer_full_name>
+        <citation_text>
+            Garrard, T.L., GALILEO SS HIC DERIVED ION FLUXES OCT89 SOLAR
+            EVENT V1.0, GO-SS-HIC-5-IONFLUXES-OCT89-FLARE-V1.0, NASA
+            Planetary Data System, 1996
+        </citation_text>
+        <data_set_terse_desc>
+            This data set includes values for the fluxes of heavy ions
+            associated with an energetic particle event of solar origin. The
+            values are derived from HIC data taken during the Interplanetary
+            Cruise to Jupiter.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes values for the fluxes of heavy ions
+            associated with an energetic particle event of solar origin. The
+            values are derived from HIC data taken during the Interplanetary
+            Cruise to Jupiter.
+        </abstract_desc>
+        <data_set_desc>
+    This data set includes values for the fluxes of heavy ions
+    associated with an energetic particle event of solar origin.
+ 
+    Dataset Structure / Content:
+ 
+    The data files are ASCII tables of values. Included in the label
+    file (*.LBL) is a header for each data table. The header gives the
+    data processing time, requested time intervals, the actual time
+    interval and livetime paramaters.
+ 
+    Note that while the data files have widths of more than 80
+    characters, the example data shown below has been wrapped in order
+    to conform to a 80 character line limitation.
+ 
+    Header Example:
+ 
+    Galileo HIC  Mon Sep 18 10:01:58 1995
+    Requested Interval:  28237    28384   1989/294.12 - 1989/295.67
+    Actual Interval:     28237    28384   1989/294.12 - 1989/295.67
+ 
+    LET B Livetime Parameters
+                                   doubles   triples
+    Rate Counts         :           136768    137168
+    Times               :           131488    132110
+    PHA Counts          :            43369     43369
+    Livetimes           :         4.17e+04  4.18e+04
+ 
+    LET E Livetime Parameters
+                                      TRPL    WS.L1*     WS.L1
+    Rate Counts         :             6345     14180     14180
+    Times               :           132102    132102    132102
+    PHA Counts          :             3414      7398      7398
+    Livetimes           :         7.11e+04  6.89e+04  6.89e+04
+ 
+ 
+    Element   LET Energy Width   doubles   triples  WS.L1*  WS.L1  Total    Flux
+ 
+    Oxygen    B   5.40   0.40    2252        -1     -999    -999   2252    1.53e
+    Oxygen    B   7.25   0.75      -1      2385     -999    -999   2385    8.65e
+ 
+ 
+    End Example.
+ 
+    Header Description:
+ 
+    The first line of the header gives the Spacecraft, Instrument and
+    Data processing time. The second line of the of the header gives the
+    data processing input as 4 columns. The first two columns are
+    start/stop volumes where a volume is number of 15 minute intervals
+    from the start of 1989.  The last two columns are the start/stop
+    time given in Spacecraft Event Time (UTC) computed from the
+    start/stop volumes. Volumes times are provided in year and
+    fractional day-of-year (DOY) format for the center time of the
+    interval. In other words, you can compute the fractional DOY by the
+    formula:
+ 
+    DOY = [(VOLUME * 15) - 7.5] / (24 * 60)
+ 
+    The third line of the header contains the actual values for the same
+    start stop columns as the requested interval. The actual interval
+    may be shorter than the resuested interval if data are not available
+    for the entire requested interval. Line 4 is blank and lines 5-17
+    give livetime parameters which are described in further detail
+    below. Line 18 is blank, line 19 is column headings, and line 20 is
+    a line of underscores.
+ 
+    Livetime parameters are summarized as follows:
+ 
+    Rate Counts - holds the total number of ions which triggered that
+                  detector/buffer combination
+    Times       - refers to number of seconds during which the buffer
+                  was active
+    PHA Counts  - is the number of ion event descriptions telemetered
+                  via that buffer, and
+    Livetimes   - are calculated from that info.
+ 
+    Note that fractional livetime changes substantially during the
+    flare interval, so that averaging is required. The absolute flux
+    values are subject to an additional systematic uncertainty depending
+    on the relevance of the averaging technique to the use of the flux
+    values.
+ 
+ 
+    Data Table description:
+ 
+    Column  1: Element   - The name of the ion being described.
+    Column  2: LET       - The identifier of the LET telescope, examples
+                           show telescopes B and E.
+    Column  3: Energy    - The energy center for the telescope during
+                           its energy scan &lt;MeV/nucleon&gt;
+    Column  4: Bandwidth - The width of the energy band around the
+    Column  5: Doubles   - The number of ions stopping in detector LB2
+                           in the given MeV/nucleon energy range
+    Column  6: Triples   - For LET-B, the number of ions stopping in L3
+                           in the given MeV/nucleon energy range.
+                           For LET-E, the number of events triggering
+                           L1 L2 L3 L4* L5* where * indicates a detector
+                           that was  not-triggered.
+    Column  7: WS.L1*    - a wide-stop (L1* L2 L3 L4 L5*) event which
+                           did not hit L1.
+    Column  8: WS.L1     - a wide-stop (L1 L2 L3 L4 L5*) event which did
+                           hit L1.
+    Column  9: Total     - Total number of events (sum of doubles and
+                           triples).
+    Column 10: Flux      - The calculated flux in units of
+                           particles/cm^2-sr-sec-(MeV/Nuc).
+    Column 11: Lower     - Statistical uncertainties in the flux value,
+                           giving the lower limit of the 68% confidence
+                           interval.
+    Column 12: Upper     - Statistical uncertainties in the flux value,
+                           giving the upper limit of the 68% confidence
+                           interval.
+    Column 13: Avg-LT    - Average livetime of the detector/buffer
+                           combination
+    Column 14: Geom-Fac  - Geometric factor /* Need more info here */
+ 
+    Note:   -1 indicates that a measurement was not made and 0 indicates
+              that no counts were detected,
+            -999 means the column is not applicable for this detector.
+ 
+    For LET B, the number of ions stopping in detector LB2 in the given
+    MeV/nucleon Energy-range is listed in the Doubles column, and the
+    ions stopping in LB3 are listed under Triples; the Total column sums
+    the double and triple coincidence events. The calculated value for
+    flux is given in the Flux column. Flux is given in units of
+    particles/cm^2-sr-sec-(MeV/Nuc). Lower and Upper refer to the
+    statistical uncertainties in flux values, giving the upper and lower
+    limits of the 68% confidence interval. Avg-LT is the average live
+    time of the detector/buffer combination, in seconds.
+ 
+    For telescope LET E, the columns and refer to the same parameters
+    as those previously mentioned for LET B, with the exceptions of
+    columns triple, WS.L1*, and WS.L1. These headings refer to the
+    different event types in this telescope: triple refers to an event
+    triggering L1 L2 L3 L4* L5*, where an asterisk denotes a miss;
+    WS.L1* categorizes a wide-stop (L2 L3 L4 L5*) event which did not
+    hit L1; and WS.L1 indicates the wide-stop events which do trigger
+    detector L1 (L1 L2 L3 L4* L5*).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Note that fractional livetime changes substantially during the
+    flare interval, so that averaging is required. The absolute flux
+    values are subject to an additional systematic uncertainty depending
+    on the relevance of the averaging technique to the use of the flux
+    values.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

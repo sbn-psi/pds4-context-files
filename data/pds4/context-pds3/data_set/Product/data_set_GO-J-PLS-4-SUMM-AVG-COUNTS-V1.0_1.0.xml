@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-j-pls-4-summ-avg-counts-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO JUPITER AVERAGED PLASMA COUNTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pls.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.callisto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.europa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.ganymede::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-pls-4-summ-avg-counts-v1.0__browserp_go-j-pls-4-summ-avg-counts-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Frank, L. A., K. L. Ackerson, J. A. Lee, M. R. English, and G. L. Pickett, The
+                   Plasma Instrumentation for the Galileo Mission, Sp. Sci. Rev., 60, 283-307,
+                   1992.
+            </reference_text>
+            <description>reference.FRANKETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-J-PLS-4-SUMM-AVG-COUNTS-V1.0</data_set_id>
+        <data_set_name>GALILEO JUPITER AVERAGED PLASMA COUNTS V1.0</data_set_name>
+        <data_set_release_date>2003-11-21</data_set_release_date>
+        <start_time>1995-12-07T15:30Z</start_time>
+        <stop_time>2003-09-21T18:45Z</stop_time>
+        <producer_full_name>XIANZHE JIA</producer_full_name>
+        <citation_text>
+            Frank, L.A., Paterson, W.R., Ackerson, K.L., GALILEO JUPITER
+            AVERAGED PLASMA COUNTS V1.0, GO-J-PLS-4-SUMM-AVG-COUNTS-V1.0,
+            NASA Planetary Data System, 2008.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains averaged raw data from the Plasma Science
+            instrument(PLS) on the Galileo spacecraft for all Jupiter orbits.
+            These data have been averaged and reformatted into ASCII tables
+            to facilitate data display and analysis.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains averaged raw data from the Plasma Science
+            instrument(PLS) on the Galileo spacecraft for all Jupiter orbits.
+            These data have been averaged and reformatted into ASCII tables
+            to facilitate data display and analysis.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Overview:
+    =========
+ 
+    This data set contains raw data from the Plasma Science instrument
+    (PLS) onboard the Galileo spacecraft during the Jupiter orbital
+    operations phase (December 1995 to end of mission). These data have
+    been edited, averaged, and reformatted from the raw telemetry packets into
+    a simple ASCII tabular structure to display and analysis.
+ 
+ 
+    Parameters:
+    ===========
+ 
+    This data set includes high time resolution (LPW) data recorded
+    during targeted encounters Galileo moon encounters and selected
+    magnetospheric survey itenrvals when telemetry was available.
+ 
+    The basic data set parameters are the detector count rates in units
+    of counts per second. Data are provided at the full instrument
+    sampling rate in all sampling parameters (time, detector, E/Q, M/Q).
+    The instrument has twenty (20) detectors (seven ion, seven electron,
+    six mass spectrometer) and can sample E/Q or M/Q (mass spectrometer
+    detectors only) in sixty-four (64) steps for each detector.
+ 
+ 
+    Processing:
+    ===========
+ 
+    These data have been averaged from the PLS uncalibrated full-
+    resolution data set (DATA_SET_ID = GO-J-PLS-3-RDR-FULLRES-V1.0).
+    Please refer to the data set catalog file for a full description of
+    the processing performed on that data set. The following is a
+    description of the averaging performed on this data set.
+ 
+    The uncalibrated counts have been averaged over all detectors
+    available at each time step.  The time is located at the center of the
+    interval. In order to remove data gaps between the detectors, each
+    energy channel has been fitted and with a cubic spline.  To smooth the
+    data over timesteps, a simple two point running average was used over
+    all 64 energy channels in time.  Finally, to smooth the data, an
+    average was performed over a square consisting of nine unweighted
+    points with the original data point being at the center of the square.
+    For simplicity, and due to the similar values across the detectors in
+    the E_STEP tables, only the values used in E_STEP_2.TAB were used in
+    the plotting and ascii tables.
+ 
+ 
+    Ancillary Data:
+    ===============
+ 
+    Spacecraft Events:
+ 
+    xxx_SEF.TXT   A time ordered file extracted from the As-Run
+    Spacecraft Events Files (ARSEF) that provides the timing of events
+    that are significant to the plasma experiment. These  events include
+    whether or not the instrument is &apos;on&apos;, which type of data are being
+    acquired (RTS or  LPW), the time of thruster firings, etc. The &apos;xxx&apos;
+    in the file name is the orbit name (i.e. G01 for orbit Ganymede 1).
+ 
+ 
+    Coordinate System:
+    ==================
+ 
+    Data are provided in PLS instrument coordinates. Please refer to the
+    instrument description paper [FRANKETAL1992] for a description of the
+    instrument mounting, detector fields of view, and spin phase
+    sectoring. See also the SECTOR.TAB file in the ancillary data files.
+ 
+ 
+    Software:
+    =========
+ 
+    There is no software provided with this archive.
+ 
+ 
+    Media/Format:
+    =============
+ 
+ 
+    These data are archived on either CDROM or DVDROM media. The data
+    files are stored in a simple ASCII table form that is described by a
+    detached PDS label (Table Object). Each table has the following
+    structure:
+ 
+    Col#    Name  Format   Description
+    ---------------------------------------------------------------------
+    1       UTC     A21    Spacecraft event time (UTC) at the average
+                           center
+    2-65    Counts  e10.2  Average count rates at 64 energy steps
+    66-129  Energy  e10.2  Energy for count rate channel of same array
+                           index
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Data Coverage/Quality:
+    ======================
+ 
+    The data are not continuous in time.  High resolution data were available
+    for only short intervals of about an hour each orbit.
+ 
+    The PLS instrument has two analyzers: A and B.  Each analyzer has its own
+    sensors, high voltage supplies, analyzer plates, and data paths.  The two
+    analyzers normally start a spin-mode at the same time.  And they normally
+    end a spin-mode at the same time.  Both data streams are buffered
+    internally by the PLS data system and sent out to the spacecraft in a
+    packetized telemetry scheme.  Generally, the two streams are interleaved
+    on a minor-frame-by-minor-frame basis, but if one analyzer does not have
+    data ready and the other does then the telemetry that is ready is sent.
+    (Note that the two analyzers have different numbers of sensors and create
+    different quantities of data.)
+ 
+    On the ground, the PLS telemetry stream is decommutated and separated into
+    A and B data-sets for each spin-mode.  The time tag attached to each
+    A-data-set and each B-data-set is the time of the first telemetry packet
+    containing some of that data.  As soon as a complete data set has been
+    decommutated on the ground it is written to the output file.  And this is
+    the key to understanding what is happening.  Sometimes the first data-set
+    to appear in the telemetry stream is also the first one to be completed.
+    And sometimes the first data-set to appear in the telemetry is the last to
+    be completed.  It is essentially a random thing.
+ 
+    It is crucial to note that PLS takes all of its data in a spin-
+    synchronized fashion, not in a SCLK-synchronized fashion.  We went to
+    great pains to ensure that the data were obtained in well-defined spin
+    sectors and in repeatable directions.  Differences of a couple of
+    minor-frames are not significant.  The spin-phase angles are the
+    quantities of importance.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lend-4-5-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO LUNAR EXPLORATION NEUTRON DETECTOR 4/5 RDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lend.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lend-4-5-rdr-v1.0__browserp_lro-l-lend-4-5-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lend-4-5-rdr-v1.0__dvo_geo_lro-l-lend-4-5-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lend-4-5-rdr-v1.0__pds.geo.lro.orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mitrofanov, I.G., et al., Experiment LEND of the NASA Lunar Reconnaissance
+                   Orbiter for high resolution mapping of neutron emission of the Moon,
+                   Astrobiology, 8(4):793-804, 2008.
+            </reference_text>
+            <description>reference.MITROFANOVETAL2008</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Planetary Data System Standards Reference, Jet Propulsion Laboratory Document
+                   D-7669, Part 2, 20 March 2006.
+            </reference_text>
+            <description>reference.PDSSR2006</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-LEND-4/5-RDR-V1.0</data_set_id>
+        <data_set_name>LRO LUNAR EXPLORATION NEUTRON DETECTOR 4/5 RDR V1.0</data_set_name>
+        <data_set_release_date>2010-03-15</data_set_release_date>
+        <start_time>2010-03-15</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>WILLIAM BOYNTON</producer_full_name>
+        <citation_text>
+            Boynton, W.V., 2009 Lunar Reconnaissance Orbiter Lunar
+            Exploration Neutron Detector RDR Data
+            V1.0,LRO-L-LEND-4/5-RDR-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated or converted housekeeping and scientific data
+            collected from the Lunar Exploration Neutron Detector aboard the
+            Lunar Reconnaissance Orbiter.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Calibrated or converted housekeeping and scientific data
+            collected from the Lunar Exploration Neutron Detector aboard the
+            Lunar Reconnaissance Orbiter.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+       The Lunar Reconnaissance Orbiter (LRO) Lunar Exploration
+       Neutron Detector (LEND) that will act as large orbital neutron
+       telescope for mapping the Moon&apos;s neutron albedo. LEND consists
+       of eight 3He sensors for detecting thermal and epithermal
+       neutrons, four of which are collimated to improve spatial
+       resolution. LEND also contains the Sensor for High Energy
+       Neutrons (SHEN), which is a stilbene scintillator that produces
+       a flash of light each time a high energy neutron in the energy
+       range 0.3 - 15.0 MeV collides with a hydrogen nucleus and
+       creates a recoil proton. A full description of the LRO LEND
+       instrument can be found in [MITROFANOVETAL2008].
+ 
+       The LRO LUNAR EXPLORATION NEUTRON DETECTOR 4/5 RDR data set is
+       a time series collection of rectified science data (RSCI),
+       converted housekeeping data (CHK), derived science data (DLD),
+       extended derived science data (DLX) and averaged science data
+       (ALD).
+ 
+       LEND collects a new spectrum (frame) approximately every
+       second. Approximately 86400 spectra are expected to be received
+       every day. The collection interval can be changed in the middle
+       of a time series file, which can be determined by noting the
+       difference between record timestamps. The data (both science
+       and housekeeping) are downloaded from the spacecraft. Data are
+       output to a spooler that passes them to the University of
+       Arizona (UA) database ingest process. The ingest process inputs
+       raw data into the UA database. Data are retrieved from the UA
+       database to build the LEND RDR data products.
+ 
+       The LEND RDR data set is intended to provide both intermediate
+       (RSCI, CHK) and advanced (DLD, DLX, ALD) data products for the
+       LEND instrument. This data should be useful to those scientists
+       who are experienced in neutron spectroscopy.
+ 
+    Parameters
+    ==========
+      The LEND RDR data set is composed of five data types,
+      rectified science data (RSCI), converted housekeeping data
+      (CHK), derived science data (DLD), extended derived science data
+      (DLX) and averaged science data (ALD). The RSCI data type is the
+      LEND science data with timing and spatial information added. The
+      CHK data is the housekeeping data converted from digital number
+      (as sent down from the spacecraft) to physical units. The DLD data
+      type is a time series of science data for each of the nine LEND
+      sensors that has been corrected for changes in detector efficiency
+      and changes in the Cosmic Ray flux.  In addition, records
+      corrupted by Solar Particle Events and known instrument
+      anomalies have been removed. The DLX data type is an extension of
+      the DLD data type, containing supplemental values useful for
+      interpretation of DLD data. The ALD data type takes the
+      DLD data and averages it over a spatial and temporal grid
+      as defined below.
+ 
+    Processing
+    ==========
+      A full description of the LEND data processing can be found in
+      the RDR SIS located in the document folder that accompanies
+      this release. The following paragraphs are a summary of how the
+      data are processed from data receipt through averaging.
+ 
+      LEND data are downloaded from the LRO spacecraft. The data are
+      received by a process called LEND_tl that translates LEND
+      packets from any source to any destination and examines
+      instrument health via messages. The data are checked for packet
+      type, header information, messages, or errors, and are output to
+      a spooler and to a data display IDL program called LEND Displays
+      Data sent to the spooler are passed to the UA database ingestion
+      process, which inputs raw data into the UA database. Data sent
+      to the LEND Displays program is recorded at IKI and held in a
+      data repository.
+ 
+      All data packets received by the LEND Displays program are
+      processed for timing and spatial information. Once time data
+      are extracted from the data packet, UTC time is calculated from
+      the spacecraft time (time at the middle of the collection
+      interval) by a SPICE function. The UTC time is then inserted
+      into the database. The spatial portion of the data packet is
+      calculated using other SPICE routines. The returned values are
+      all the spatial elements of an observation, including latitude
+      and longitude at the mid-point of the observation. The RSCI
+      data are output once timing and spatial elements are calculated
+      for each collection interval in a given day.
+ 
+      The LEND housekeeping data is also ingested into the LEND
+      relational database. Upon ingestion, database triggers are used
+      to convert digital numbers in the housekeeping data into
+      physical units. The CHK data is the converted housekeeping data
+      and also includes the UTC time at the mid-point of the
+      collection interval.
+ 
+      The LEND instrument collects 11 neutron signals from nine
+      independent detectors, whose response functions are sensitive
+      to different energy regions. Raw neutron counts are reported in
+      the LEND RCSI data set as a 16-channel spectrum for each of the
+      eight 3He detectors (SETN, CSETN1, CSETN2, CSETN3, CSETN4, STN1,
+      STN2, and STN3) and as 3 spectra for the stilbene detector
+      (SHEN_Low, SHEN_gamma and SHEN_High). In the DLD data set,
+      neutron counts for the 3He detectors are reported as the sum
+      of counts in channels 9-16, corrected for detector efficiency
+      and Cosmic Ray flux. The counts for the omnidirectional
+      detectors (SETN, STN1, STN2, and STN3) have also been
+      normalized to a 50km altitude.
+ 
+      The stilbene scintillator records two
+      neutron signals and a gamma signal. The neutron counts are
+      reported as the sum of counts in channels 9 and above for each of
+      the signals.
+ 
+      As of Release 25, March 15, 2016, the complete DLD data set was
+      redelivered, reflecting updated normalization procedures for
+      generating the DLD data set. The LEND DLD data set is generated from
+      the rectified science (RSCI) data set, following normalization to
+      correct for various effects.  The data are normalized to correct for
+      changes in count rate over time due to solar cycle cosmic-ray
+      variations and any possible change in detector efficiency.  The data
+      are also corrected for differences in efficiency between each of the
+      detectors. The normalization values are determined by separately
+      averaging the counts in each of the detectors measured early in the
+      mission over the polar regions (poleward of 60 degrees).
+ 
+      The background term reported for each collection interval is
+      the galactic cosmic-ray flux induced
+      background as measured in each detector during the cruise
+      phase of the mission when the spacecraft was far from both the
+      Earth and the Moon. The observed background count for the
+      detector of interest must be multiplied by (1-omega(t)/4pi) where
+      omega(t) is the solid angle subtended by Moon for the current
+      position in the spacecraft orbit. The resulting term is the
+      background counts in the particular collection interval for the
+      detector of interest.
+ 
+      Background subtracted count values for each of the eleven
+      neutron signals (SETN, CSETN1, CSETN2, CSETN3, CSETN4, STN1,
+      STN2, STN3, SHEN_Low, SHEN_gamma, and SHEN_High)
+      are temporally and spatially binned to create the ALD data.
+      This data is used to compare seasonal and geographic changes
+      in the neutron flux. The temporal binning is synodic periods
+      and the spatial binning is half degree cells above and below 80, -80
+      degrees and one degree cells elsewhere. Membership
+      in a temporal bin is determined by calculating the fraction of
+      the collection interval time spent in each temporal cell.
+      Membership in a spatial bin is determined by calculating the
+      fraction of the collection interval length in a given spatial
+      cell along the orbital trajectory projection on the Lunar
+      surface. The temporally and spatially binned counts for
+      each of the eleven signals are calculated by: 1) multiplying
+      the background subtracted counts by the collection interval
+      fraction and summing the result for each collection interval
+      within the temporal interval 2) multiplying the duration
+      (in seconds) of each collection interval by the collection
+      interval faction and summing the result for each collection
+      interval within the temporal interval 3) dividing the
+      summed counts by the summed time to yield a counting rate in
+      units of counts per second. The summed time is the EXPOSURE.
+ 
+      The averaged counting rates are then normalized by the average
+      counting rate from the region of the Moon defined as
+      above. The normalization values for each signal are the
+      *_NORMALIZATION fields given in the ALD data set. The
+      normalization calculation yields the *_RATE fields, which can
+      be used to create signal specific neutron maps. Because the
+      rates are ratios of counting rates, they are unitless. Error
+      fields, *_ERR, are also present for each of the signals. The
+      errors are simply based on the counting statistics for the raw
+      LEND counts.
+ 
+      The conversion of normalized counting rates to neutron fluxes
+      requires knowledge of the efficiency of each of the neutron
+      detectors. Efficiency functions, derived from model
+      calculations and direct calibrations, describe the directional
+      and energy dependent response of each of the nine LEND
+      detectors to bombardment by neutrons. A series of Monte-Carlo
+      simulations will be run to calculate the efficiency of each
+      LEND detector. The simulations will account for the composition
+      and geometry of the LEND instrument. In parallel, a series of
+      experimental calibration measurements will be carried out to
+      understand the quality of the Monte-Carlo simulations. Two
+      types of experiments will be performed. The first experiment
+      measures the LEND response to monoenergetic neutron sources
+      with known spectra and the second measures the LEND response
+      to energetic neutron fluxes. The combined results of the
+      numerical simulations and the experiments yield detector
+      specific efficiency functions.
+ 
+      As a further analysis of the data, calculations will be made
+      with MCNPX for various models of the Moon. The neutron flux at
+      the spacecraft predicted by these calculations will be fitted
+      with a power law, AE^-alpha. The power law spectrum is then
+      multiplied by the nine efficiency functions to obtain computed
+      counting rates in the LEND detectors. These computed counting
+      rates are compared to the real counting rates in via a Pearson
+      minimizing procedure. The values, A and alpha, for the model
+      that best satisfy the minimization criterion, are inserted into
+       the ALD as the NEUTRON_NORM and ALPHA fields.
+ 
+      The NEUTRON_NORM and ALPHA values are used to estimate
+      the neutron flux (n/(cm^2-s)) at the LRO orbit in different
+      ranges of epithermal and fast neutrons (EPITHERMAL_FLUX1
+      100 eV - 10 KeV, EPITHERMAL_FLUX2 10 KeV - 1 MeV, FAST_FLUX1
+      1 MeV - 2.5MeV, and FAST_FLUX_2 2.5 MeV - 10 MeV) for each
+      map grid by taking the integral of the
+      neutron spectrum as described by A and alpha over the energy
+      interval. See the RDR SIS located in the Documents directory
+      that accompanies this release for further details.
+ 
+    Data
+    ====
+ 
+     CHK
+     ---
+      The converted housekeeping data is simply composed of the
+      digital number to physical unit converted housekeeping data plus
+      associated timing and spatial data. The data is recorded in a
+      time-series, and is grouped by day.
+ 
+     RSCI
+     ----
+     The rectified science data is simply the LEND science data with
+     additional timing and spatial data added in. The RSCI is similar
+     to the EDR SCI data except that it includes all spacecraft
+     positional information and UTC time conversions. Data is
+     recorded as a time-series
+ 
+     DLD
+     ---
+      Derived LEND data are composed of corrected detector counts,
+      background counts, and the associated timing and
+      spatial information.  The eleven background count fields are
+      derived from count data collected during the
+      cruise phase of the mission. The eleven detector
+      count fields are the corrected  counts at the
+      detector of interest over one collection interval. Timing and
+      spatial data provided with the counts include spacecraft clock
+      values and spacecraft geometry data. The times and spatial
+      fields are all recorded at the center of the collection interval.
+ 
+     DLX
+     ---
+      Extended derived LEND data provide supplemental data for DLD
+      data, including detector count uncertainties, a calculated sum
+      of corrected counts in the 4 CSETN detectors, and the associated
+      timing information. The times are all recorded at the center of
+      the collection interval.
+ 
+     ALD
+     ----
+      Averaged LEND Data products are composed of averaged
+      normalized counting rates and the
+      associated timing, spatial and engineering information. The
+      ALDs consists of the cumulative background subtracted and
+      normalized counts of neutrons at the nine LEND detectors
+      averaged over the 0.5 latitude longitude and a synodic period.
+      Please refer to the RDR SIS located in the documents directory
+      that accompanies this release for a full description of how LEND
+      spectra are processed to yield averaged normalized counting
+      rates and orbital neutron fluxes. The timing and spatial data
+      provided with each ALD record include the time and spatial range
+      over which the average was generated.
+ 
+     ALF
+     ----
+      Averaged LEND Fluxa products are composed of orbital neutron fluxes
+      and the associated timing, spatial and engineering information. The
+      ALFs consists of the cumulative background subtracted and
+      normalized counts of neutrons at the nine LEND detectors
+      averaged over the 0.5 latitude longitude and a synodic period.
+      Please refer to the RDR SIS located in the documents directory
+      that accompanies this release for a full description of how LEND
+      spectra are processed to yield averaged normalized counting
+      rates and orbital neutron fluxes. The timing and spatial data
+      provided with each ALD record include the time and spatial range
+      over which the average was generated.
+ 
+    Ancillary Data
+    ==============
+     Ancillary data needed to understand the LEND data processing
+     can be found in the RDR SIS document located in the document
+     folder that accompanies this release.
+ 
+    Coordinate System
+    =================
+     Lunar Reconnaissance Orbiter (LRO) reduced data record (RDR)
+     data use lunar planetocentric/body-fixed coordinates with
+     east-positive longitude from 0 to 360 degrees.  A mean
+     Earth/polar axis (ME) reference system (also called the mean
+     Earth/rotation system) is used, with the z axis being the mean
+     rotational pole and with the prime meridian (zero degrees
+     longitude) defined by the mean Earth direction.
+ 
+     The ME reference system is used for all LRO archival data. This
+     LRO standard is documented in &apos;A Standardized Lunar Coordinate
+     System for the Lunar Reconnaissance Orbiter, LRO Project White
+     Paper, 451-SCI-000958, Version 3, January 30, 2008&apos;.  Using
+     coordinates in the ME system is consistent with recommendations
+     from the International Astronomical Union (IAU)/International
+     Association of Geodesy (IAG) Working Group on Cartographic
+     Coordinates and Rotational Elements.
+ 
+     A Jet Propulsion Laboratory (JPL) planetary and lunar ephemeris
+     and corresponding Euler angle set are used to define an ME frame
+     to which the LRO data are registered.  The LRO Data Working
+     Group (LDWG) determines which ephemeris and Euler angle set
+     should be used.  Alternatively, LRO data can be registered to an
+     existing or new reference frame in the ME system, via ties to
+     surface points known in the frame (examples include Lunar Laser
+     Ranging (LLR) retroreflectors, points in images and Digital
+     Elevation Models).
+ 
+     When a JPL planetary and lunar ephemeris is used, the JPL
+     Navigation and Ancillary Information Facility (NAIF) provides
+     the necessary lunar ephemeris file (SPK) and binary lunar
+     orientation file (PCK) in a Principal Axes (PA) reference frame
+     for use with the SPICE Toolkit. NAIF also provides the frames
+     kernel (FK) used for accessing the PA orientation in the PCK and
+     for transforming from the PA frame to the ME frame.
+ 
+     Alternatively, the JPL lunar ephemeris information is available
+     in an ASCII format not requiring the use of the SPICE Toolkit.
+     This information is available from a JPL website:
+     http://ssd.jpl.nasa.gov.
+ 
+    Software
+    ========
+     No LEND specific software is provided with this data set.
+ 
+     PDS-labeled images and tables can be viewed with the program
+     NASAView, developed by the PDS and available for a variety of
+     computer platforms from the PDS web site
+     http://pds.nasa.gov/tools/software_download.cfm. There is no
+     charge for NASAView.
+ 
+    Media/Format
+    ============
+      The LEND RDR will be delivered using DVD media. Formats will be
+      based on standards for such products established by the
+      Planetary Data System (PDS) [PDSSR2006].
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      The data presented in the LEND RDR is processed for engineering
+      units and combined with converted timing. Accuracy of the data
+      presented here is dependent on appropriate use of SPICE and
+      pre-flight calibration data for engineering unit conversions.
+ 
+ 
+    Review
+    ======
+      The LEND RDR was reviewed internally by the LEND team prior to
+      release to the PDS. PDS also performed an external peer
+      review of the LEND RDR.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data reported are derived from the minimally processed data
+      received from the orbiter during nominal LEND operations. All
+      data received is reformatted into one of the EDR data types.
+      RDR data is produced from the EDR data set, which by
+      definition is of good quality.
+ 
+ 
+  Limitations
+  ===========
+    The RDR data set is limited by any errors in the EDR data set.
+ 
+  Data Compression
+  ===============
+    No data compression is used.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

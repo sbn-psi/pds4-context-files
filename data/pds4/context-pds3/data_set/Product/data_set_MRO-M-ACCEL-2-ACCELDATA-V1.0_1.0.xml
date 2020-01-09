@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-accel-2-acceldata-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO ACCELEROMETER RAW DATA RECORDS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:accel.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-accel-2-acceldata-v1.0__browserp_mro-m-accel-2-acceldata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.KEATINGETAL2007</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H., G.M. Keating, R.W. Zurek, S.W. Bougher, C.G. Justus, and D.C.
+                   Fritts, Application of accelerometer data to atmospheric modeling during Mars
+                   aerobraking operations. J. Spacecraft Rockets 44, 1172-1179, 2007.
+            </reference_text>
+            <description>reference.TOLSONETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-ACCEL-2-ACCELDATA-V1.0</data_set_id>
+        <data_set_name>MRO ACCELEROMETER RAW DATA RECORDS V1.0</data_set_name>
+        <data_set_release_date>2007-04-01</data_set_release_date>
+        <start_time>2006-04-02T01:55:48.00Z</start_time>
+        <stop_time>2006-08-30T17:02:16.00Z</stop_time>
+        <producer_full_name>ROBERT TOLSON</producer_full_name>
+        <citation_text>
+            Tolson, R., MRO Accelerometer Raw Data Records V1.0,
+            MRO-M-ACCEL-0-ACCELDATA-V1.0, NASA Planetary Data System, 2007
+        </citation_text>
+        <data_set_terse_desc>
+            MRO Accelerometer raw data records
+        </data_set_terse_desc>
+        <abstract_desc>TBD</abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      All level zero accelerometer data are packaged by periapsis number for
+      each aerobraking orbit.  Each orbit is identified by a folder with name
+      Pyyy where &apos;yyy&apos; is the three digit periapsis number. Level 0 y-axis
+      accelerometer data are provided every 1.0 seconds during an interval of
+      time that generally assures that the initial and final data points are
+      taken at least 250 km above the surface of Mars.
+ 
+ 
+    Parameters
+    ==========
+      Acceleration:        Units = m/s^2
+                           Sampling Interval = 1 seconds
+      Quaternions:         Units = dimensionless
+                           Sampling Interval = 1 second
+      Body rates:          Units = rad/s
+                           Sampling Interval = 1 second
+      Thruster on-times:   Units = sec (cumulative time thruster has fired)
+                           Sampling Interval = various
+      Orbital elements:    Units = various
+                           Sampling Interval = once per orbit
+ 
+    Data
+    ====
+     For each orbit, Level 0 data consist of four arrays in four files in
+     folder Pyyy.  The array in &apos;ACCEL.TAB&apos; is n-by-2 in size, where n is the
+     number of seconds of data received during the aerobraking pass.  Column 1
+     contains the time in UTC and follows the PDS format
+     YYYY-DDDTHH:MM:SS.SSSZ where YYYY = four digit year, DDD = day of year,
+     HH = hour, MM = minute, and SS.SSS = seconds.  T is a separator for date
+     and time and the Z is the UTC Z.  Column 2 contains the 1.0 second
+     y-acceleration for the second beginning at the time stamp.
+ 
+     The array in &apos;RATEQUAT.TAB&apos; is n-by-8 in size.  Column 1 is the time
+     corresponding to the filtered rates and quaternions in the same UTC
+     format as described for the acceleration above.  Columns 2-4 contain the
+     angular rates about the x, y and z axes respectively.  Columns 5-8
+     contain the quaternions.
+ 
+     The third file, &apos;THRUSTER.TAB&apos;, is a k-by-9 array.  The first column is
+     time as described above.  The next 8 columns are the cumulative reading
+     of how long each thruster has been fired during the mission. Column two
+     corresponds to thruster number one, column 3 with thruster 2, and so on.
+     Column 9 corresponds with thruster 8.
+ 
+     The fourth file, &apos;ORBELEM.TAB&apos;, is a 1-by-6 array of osculating elements
+     at periapsis in the order semi-major axis (km), eccentricity, inclination
+     (radians), longitude of the ascending node (radians), argument of
+     periapsis (radians), and universal time of periapsis (seconds past
+     J2000).
+ 
+ 
+    Coordinate System
+    =================
+      Acceleration and rates are given in the MRO body system with the y-axis
+      along the centerline of the bus, positive z on the same side of the bus
+      as the high gain antenna and x completing the right hand system, ref.
+      MROGNC2005. The quaternions define the orientation of the body axes with
+      respect to the IAU Mars Centered Mars Equatorial at Time of Jan 1, 2000
+      12:00.  Orbital elements are given relative to the IAU system.
+ 
+ 
+    Timing
+    ======
+      The times in the data sets are UTC. For orbit calculations, ephemeris
+      time was converted to UTC using the current ET-UTC conversion. No
+      attempt was made during operations to synchronize the data types.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+     After the effects of rate filtering are included (see Limitations below),
+     the confidence level for the rate and quaternion data is sufficient for
+     reducing almost all the accelerometer data to the noise level. The only
+     exception is during a thruster firing which can introduce spikes in the
+     acceleration about 5 times the noise level. Accelerometer bias clearly
+     drifts with temperature during the pass, but the change is about 1/5 of
+     the noise level and no attempt was made to improve the calibration.
+ 
+ 
+    Review
+    ======
+      All of the data types included in the level 0 product are utilized by
+      the MRO operations to monitor the health of the spacecraft.  These data
+      are reviewed in near real time to assure MRO performance.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data coverage during an aerobraking pass varied as the orbital
+      eccentricity decreased. Except for a few orbits, data were received
+      throughout the mission for a sufficient time to cover the altitude range
+      from periapsis to an altitude of 250 km.
+ 
+ 
+    Limitations
+    ===========
+      Version 0 data are based on operational processing of the data. No
+      attempt has been made to eliminate effects due to thruster firing,
+      center of mass location errors, time lags between various data streams,
+      or what appears to be an acceleration induced by fuel slosh.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

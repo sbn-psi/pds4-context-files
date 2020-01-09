@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.iras-6-sdr-satellite-status-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IRAS POSITION AND POINTING V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.infrared_astronomical_satellite::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.iras::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:fpa.iras::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.iras-6-sdr-satellite-status-v1.0__browserp_iras-6-sdr-satellite-status-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Beichman, C.A., G. Neugebauer, H.J. Habing, P.E. Clegg, and T.J. Chester,
+                   1988, Infrared Astronomical Satellite Catalog and Atlases, Volume 1,
+                   Explanatory Supplement, NASA RP-1190.
+            </reference_text>
+            <description>reference.BEICHMANETAL1988</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Lundy, S.A. and W.I. McLaughlin, American Institute of Aeronautics and
+                   Astronautics 17th Aerospace Sciences Meeting, AIAA-79-0125, 1979.
+            </reference_text>
+            <description>reference.LUNDY-MCLAUGHLIN1979</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Neugebauer, G., H.J. Habing, R. van Duinen, H.H. Aumann, B. Baud, C.A.
+                   Beichman, D.A. Beintema, N. Boggess, P.E. Clegg, T. de Jong, J.P. Emerson, T.N.
+                   Gautier, F.C. Gillett, S. Harris, M.G. Hauser, J.R. Houck, R.E. Jennings, F.J.
+                   Low, P.L. Marsden, G. Miley, F.M. Olnon, S.R. Pottasch, E. Raimond, M.
+                   Rowan-Robinson, B.T. Soifer, R.G. Walker, P.R. Wesselius, and E. Young, The
+                   Infrared Astronomical Satellite (IRAS) Mission, Astrophysica Journal 278,
+                   L1-L6, 1984.
+            </reference_text>
+            <description>reference.NEUGEBAUERETAL1984</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>IRAS-6-SDR-SATELLITE-STATUS-V1.0</data_set_id>
+        <data_set_name>IRAS POSITION AND POINTING V1.0</data_set_name>
+        <data_set_release_date>1997-03-24</data_set_release_date>
+        <start_time>1983-02-08</start_time>
+        <stop_time>1983-11-21</stop_time>
+        <producer_full_name>MARK SYKES</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Spacecraft position vectors and individual scan parameters for
+            the IRAS mission
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data presented with this data set includes: (a) The position
+            of the satellite in its orbit about the Earth at 200 second
+            intervals in heliocentric ecliptic rectangular coordinates
+            (B1950), where the X axis points to the First Point of Ares. In
+            addition an Earth ephemeris is also included, which was generated
+            by Miles Standish at JPL using the information that was available
+            in 1983 to best approximate the knowledge of the Earth&apos;s
+            position that was used in the reduction of the IRAS data.
+            Finally, the geocentric position of the satellite is calculated
+            using the above information. (b) The IRAS Scan History File
+            describes the pointing geometry and length of each survey-mode
+            scan (by SOP OBS) over the entire mission.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+  This data presented with this data set include
+ 
+  IRASPOS.TAB - The IRAS Position File describes the position of the
+    satellite in its orbit about the Earth at 200 second intervals in
+    heliocentric ecliptic rectangular coordinates (B1950), where the
+    X axis points to the First Point of Ares. In addition an Earth
+    ephemeris is also included, which was generated by Miles Standish
+    at JPL using the information that was available in 1983 to best
+    approximate the knowledge of the Earth&apos;s position that was used
+    in the reduction of the IRAS data.  Finally, the geocentric
+    position of the satellite is calculated using the above
+    information.
+ 
+  SCAN.TAB - The IRAS Scan History File describes the pointing
+    geometry and length of each survey-mode scan (by SOP OBS) over
+    the entire mission.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Review
+  ======
+  IRASPOS.TAB underwent peer review on March 24, 1997.
+ 
+  SCAN.TAB was peer reviewed on April 26, 1993, and updated on March
+  24, 1997.
+ 
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>GD-11F</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

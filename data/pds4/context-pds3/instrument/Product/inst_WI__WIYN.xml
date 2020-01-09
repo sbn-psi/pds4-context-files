@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:wi.wiyn</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>WIYN IMAGER for WIYN</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.wiyn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Dones, L., M.R. Showalter, R.H. Durisen, R.K. Honeycutt, J.S. Jurcevic, R.
+                   Tripoli, and C. Strom, A Search for Saturnian Moonlets Using the WIYN
+                   Telescope, Unpublished, 2004
+            </reference_text>
+            <description>reference.DONESETAL2004</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Johns, M. W., and D. R. Blanco, WIYN 3.5-meter telescope project, Proc. SPIE
+                   Vol. 2199, Advanced Technology Optical Telescopes V Stepp, L. M. (Ed), pp 2-9,
+                   1994.
+            </reference_text>
+            <description>reference.JOHNS-BLANCO1994</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>WIYN IMAGER</instrument_name>
+        <instrument_desc>
+ 
+        Instrument Overview
+        ===================
+        The 3.5-m WIYN telescope (JOHNS&amp;BLANCO1994) at Kitt Peak
+        incorporates a number of features to ensure high image quality.
+        The temperatures in the dome, telescope, and mirrors are
+        maintained at very near ambient by a combination of passive
+        ventilation and active heating and cooling. The secondary
+        mirror is actively aligned using wavefront sensing, and the
+        figure of the primary mirror is similarly controlled.
+        The telescope has an altitude-azimuth mount, so the pupil
+        and diffraction spikes from the secondary mirror rotate during
+        the night. For our observations, the diffraction spikes did not
+        interfere with the ring and moons and in fact rotated further
+        away from the ring plane over the course of the night.
+ 
+        The instrument used for this work was a special adaptation
+        of the WIYN Imager (WI). The WI consists of a Filter/Shutter
+        Assembly (FSA) that mounts on the Instrument Adapter
+        Subassembly (IAS) at the Nasmyth focus of the WIYN telescope,
+        plus the CCD detector. The IAS provides for target
+        acquisition, autoguiding, and for the wavefront sensing that
+        is used to adjust the active optics of the WIYN telescope.
+        The CCD used in this work was a backside-illuminated STIS
+        2048 x 2048 pixel detector with 21-micron square pixels.
+ 
+        Data Modes
+        ==========
+        In normal non-coronagraphic mode, modules of the WI are mounted
+        at the WIYN focus in the order IAS/FSA/CCD. For this work two
+        new modules were provided, the Coronagraphic Spacer (CSP) and
+        the Re-Imaging Module (RIM). The CSP is inserted between the
+        IAS and the FSA so that the telescope is brought to focus at
+        the filter position inside the FSA, where coronagraphic masks
+        can be placed. The RIM is then inserted between the FSA and
+        the detector to form a new image of the telescope focal plane
+        at the CCD, forming the new sequence IAS/CSP/FSA/RIM/CCD.
+        The RIM incorporates its own filter wheel. Therefore, in the
+        coronagraphic configuration, the original filter wheel becomes
+        the mask wheel and a new filter wheel is provided in the RIM.
+ 
+ 
+        Optics
+        ======
+        The RIM uses two commercial lenses to collimate and re-image
+        (at 1:1) the mask focal plane located in the FSA. These
+        process lenses are 4-element Cooke type, 100 mm focal length,
+        F/1.9, marketed under the brand name S-CORONAR. The pixel scale
+        is 0.195 arcsec/pixel, corresponding to 1300 km at Saturn during
+        the observations.
+ 
+          Filters
+          -------
+ 
+          Two filter wheels were used, one integral to the RIM and one
+          integral to the coronagraph.
+ 
+          The usable wavelength range (set by the lenses) is 390-900
+          nm. The RIM filter wheel is located between these two
+          lenses, where parallel light facilitates the use of
+          narrowband filters. The RIM filter wheel accommodates 2-inch
+          square filters. For this study, the team used broadband Harris B,
+          V, R, and I filters, plus a narrowband (12 nm FWHM) methane
+          filter centered at 889 nm.
+ 
+          Array (and Subarrays)
+          ---------------------
+          The coronagraphic field-of-view is limited to approximately
+          200 arcsec on a side, corresponding to ~1000 pixels in the
+          CCD. There is about 7% vignetting at the edges of this field,
+          due mostly to the finite separation of the two lenses. The
+          FSA filter wheel accommodates 4-inch masks, including wires of
+          various diameters, straight edges in various orientations,
+          wedge masks, and wedge windows. Because we knew that bright
+          Dione would be present on several of our observing nights, we
+          created a special mask consisted of a blocking edge overhalf
+          the field with an angled wire in the open half. This could be
+          positioned to block Saturn behind the edge and Dione behind
+          the wire, leaving most of one ring ansa unobscured.
+ 
+ 
+        Operational Considerations
+        ==========================
+          At the time of these observations, the detector used for
+          active optics wavefront sensing at WIYN was the WI CCD.
+          Therefore wavefront sensing could be done through the
+          coronagraph, making available not only the best settings for
+          the active optics but also accounting (to first order) for
+          aberrations introduced by the coronagraphic re-imaging
+          lenses. When the atmosphere permitted, this procedure
+          resulted in 0.45 arcsec FWHM images through the coronagraph
+          in V and R, and 0.65 arcsec in B and I. Our median seeing of
+          0.8 was typical for WIYN.
+
+        </instrument_desc>
+        <instrument_id>WI</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Camera</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

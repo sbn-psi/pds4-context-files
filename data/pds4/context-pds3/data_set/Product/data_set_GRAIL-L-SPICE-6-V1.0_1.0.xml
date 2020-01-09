@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.grail-l-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GRAIL SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.gravity_recovery_and_interior_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.grail-a::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.grail-b::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.grail-a::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.grail-b::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-spice-6-v1.0__browserp_grail-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-spice-6-v1.0__browser_grail-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-spice-6-v1.0__browser_wgc_grail-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Acton, C.H., The SPICE System - A Brief Overview, Navigation and Ancillary
+                   Information Facility, JPL, 1994.
+            </reference_text>
+            <description>reference.ACTON1994</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GRAIL-L-SPICE-6-V1.0</data_set_id>
+        <data_set_name>GRAIL SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2012-10-30</data_set_release_date>
+        <start_time>2011-09-10T13:08:52Z</start_time>
+        <stop_time>2012-12-17T22:29:15Z</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., and C.H. Acton, GRAIL SPICE KERNELS V1.0,
+            GRAIL-L-SPICE-6-V1.0, NASA Planetary Data System, 2012.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the GRAIL spacecraft.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of GRAIL SPICE data files
+            (``kernel files&apos;), which can be accessed using SPICE
+            software. The SPICE data contain geometric and other ancillary
+            information needed to recover the full value of science
+            instrument data. In particular SPICE kernels provide spacecraft
+            and planetary ephemerides, instrument mounting alignments,
+            spacecraft orientation, and data needed for relevant time
+            conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of GRAIL SPICE data files
+      (``kernel files&apos;), which can be accessed using SPICE software.
+      The SPICE data contain geometric and other ancillary information
+      needed to recover the full value of science instrument data. In
+      particular SPICE kernels provide spacecraft and planetary
+      ephemerides, instrument mounting alignments, spacecraft
+      orientation, and data needed for relevant time conversions.
+ 
+      This data set is contained on a single virtual volume,
+      GRLSP_1000, including data from all mission phases and covering
+      from launch, 2011-09-10T13:08:52, through the end time of the
+      latest spacecraft trajectory file supplied in the data set. Until
+      the end of the spacecraft lifespan this data set is accumulating
+      with new data added according the project archive release
+      schedule.
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or fixed
+      spacecraft and instrument structures. They provide position and
+      velocity, given in a Cartesian reference frame. SPK files are
+      located under the ``data/spk&apos; directory of this data set.
+ 
+      PCK kernels contain certain physical, dynamical and cartographic
+      constants for target bodies, such as size and shape
+      specifications, and orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the ``data/ek&apos; directory of this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock
+      calibration data required to perform a mapping between Ephemeris
+      time (ET) and spacecraft on-board time (SCLK). SCLK files are
+      located under the ``data/sclk&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under the
+      ``data/fk&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of GRAIL kernels included
+      in this data set is provided in the CONFIDENCE_LEVEL_NOTE section
+      of this file while details specific to individual files are found
+      in the ``*info.txt&apos; files in the corresponding data directory.
+      The most detailed description of the data in each file is
+      provided in metadata included inside the file -- in the
+      description area of text kernels or in the comment area of binary
+      kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read SPICE
+      kernel files. SPICE software is highly documented via internal
+      headers. Additional documentation is available in separate ASCII
+      text files called Required Reading files. For example, the S- and
+      P- Kernel (SPK) Required Reading File, named SPK.REQ, describes
+      use of the SPK kernel file readers and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos; directory. For more
+      information about the GRAIL meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This data set contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here, but
+      the prospective user is also referred to extensive descriptions
+      about each file that are stored inside each kernel file. These
+      metadata provide detailed information regarding the information
+      source from which the data were derived, the type of processing
+      applied to the source data, applicability of the data, etc.
+      Metadata are located in the ``comment area&apos; for binary kernel
+      types (SPK, CK, ESQ), accessible using either the COMMNT or
+      SPACIT utility program found in the NAIF Toolkit. Metadata are
+      located after ``\begintext&apos; markers within the text kernel types
+      (PCK, IK, FK, LSK, SCLK, MK), accessible by using any available
+      text file display tool such as a word processor, text editor, or
+      the unix ``more&apos; or ``cat&apos; commands.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;
+      not addressed herein the reader is invited to contact the NAIF
+      node of the Planetary Data System for possible further
+      information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      Three kinds of SPK files are provided in this archive: SPK files
+      for the spacecraft orbit, SPK files for the crash sites, and SPK
+      files for the Solar System planets and satellites.
+ 
+      The spacecraft orbit SPK files contain the spacecraft trajectory
+      determined by the GRAIL Navigation (NAV) Team, JPL or by the
+      GRAIL Science Team, JPL.
+ 
+      The NAV spacecraft SPKs are available for all phases of the
+      mission. Since the NAV team team did not have a formal trajectory
+      reconstruction requirement, these SPKs contain a mix of
+      reconstruction and short-term prediction segments with trajectory
+      errors reaching up to a few hundred meters (based on segment
+      boundary discontinuities).
+ 
+      The science spacecraft SPKs are available for only for the
+      science phases of the mission. They are based on Deep Space
+      Network one-way Doppler and two-way Doppler tracking data and the
+      inter-satellite range rate measurements. The gravity field used
+      for the GRAIL science orbits was a GRAIL internal gravity field
+      of degree and order 420 (420b8a), which had all primary mission
+      inter-satellite range data included. The resulting orbit accuracy
+      of the orbit in absolute sense is a the meter level and in
+      relative range rate error between the spacecraft is better than
+      20 um/sec.
+ 
+      The crash site SPKs included in this data set contain the
+      locations of the spacecraft crash sites of the Moon surface
+      relative to the Moon center, and fixed, zero-offset positions of
+      the spacecraft relative to these sites, covering from the crash
+      times far into the future. The 3-sigma accuracy of the crash site
+      locations provided by the NAV team is 2.75 meters downtrack / 65
+      meters crosstrack for GRAIL-A and 3.33 meters downtrack / 17
+      meters crosstrack for GRAIL-B.
+ 
+      The DE421 planetary ephemeris SPK file included in this data set
+      contains ephemeris data for the Solar System planet barycenters,
+      Sun, Mercury, Venus, Earth, Moon, and Mars. This version of
+      ephemerides was officially used by the project during mission
+      operations. The internal comments included this SPK file provide
+      detailed accuracy information.
+ 
+      More information about GRAIL SPK files is available in the file
+      ``data/spk/spkinfo.txt&apos;.
+ 
+      This data set also includes the orbit number files generated by
+      the NAIF&apos;s ORBNUM utility program using the archive spacecraft
+      SPKs. These files are not SPICE kernels; for this reason they are
+      provided in the ``extras/orbnum&apos; directory. For more information
+      about the GRAIL orbit number files, see the file
+      ``extras/orbnum/orbinfo.txt&apos;.
+ 
+ 
+      CK Files
+      ========
+ 
+      One kind of C-kernel files is provided in this archive: the
+      reconstructed spacecraft bus (SC) orientation CKs.
+ 
+      The reconstructed spacecraft bus (SC) CK files were created from
+      engineering telemetry downlinked from the spacecraft by NAIF.
+      Neither formal nor informal accuracy estimates for the spacecraft
+      bus attitude provided in these reconstructed CK files were
+      available at the time when this archive was created.
+ 
+      More information about GRAIL CK files is available in the file
+      ``data/ck/ckinfo.txt&apos;.
+ 
+ 
+      PCK Files
+      =========
+ 
+      Two PCK files are provided in this data set, one is a text PCK
+      containing on the official IAU/IAG/COSPAR values accepted in
+      2006, the other is a binary PCK containing high-accuracy
+      orientation data for the lunar principal axes (PA) reference
+      frame, from the JPL Solar System Dynamics Group&apos;s planetary
+      ephemeris DE-421. Both files were the versions used by the
+      project during operations.
+ 
+      More information about the PCK files included in this data set is
+      available in the file ``data/pck/pckinfo.txt&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      This data set includes the GRAIL mission FK file, a generic Lunar
+      FK file, and the crash site topocentric frame FK file. The GRAIL
+      FK file defines the frames for the GRAIL spacecraft and their
+      science instruments. The instrument frames defined in it
+      incorporate the instrument mounting alignment data. The generic
+      Lunar FK file defines a number of lunar body-fixed frames
+      associated high-accuracy lunar orientation data provided by the
+      JPL Solar System Dynamics Group&apos;s planetary ephemerides. The
+      crash site topocentric frame FK file defines the topocentric frames
+      at the spacecraft crash sites.
+ 
+      More information about the GRAIL FK files is available in
+      the file ``data/fk/fkinfo.txt&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      This data set includes IK files for instruments on the GRAIL
+      spacecraft, including the Lunar Gravity Ranging System, MoonKAM
+      cameras, and the star trackers.
+ 
+      Because the sets of geometric parameters included in the IKs vary
+      from instrument to instrument users are encouraged to carefully
+      examine the IKs before using them.
+ 
+      More information about GRAIL IK files is available in the file
+      ``data/ik/ikinfo.txt&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      This data set includes the GRAIL Spacecraft Clock kernel files
+      provide a tabulation of data needed for converting time
+      measurements between ephemeris time (ET) and spacecraft clock
+      time (SCLK). The GRAIL SPICE SCLK files were made from similar
+      files--SCLK/SCET files, or SCLKvSCET files--produced by another
+      mission entity. Each newly made SCLK file fully replaces the
+      previous SCLK file.
+ 
+      For GRAIL, the time correlation accuracy provided in the SCLK
+      kernel files for the science phases is informally reported to be
+      better than 40 milliseconds.
+ 
+      SPICE software does not prohibit an SCLK file from being used for
+      time conversions occurring for ``future times&apos; (or more
+      accurately, for epochs that occur later than the epoch of the
+      last telemetry data used in producing the last correlation
+      coefficients found in the SCLK file). Such ``predict&apos; time
+      conversions are likely to be inaccurate (changed somewhat) once
+      the epoch of interest has been passed.
+ 
+      More information about the GRAIL SCLK files is available in the
+      file ``data/sclk/sclkinfo.txt&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;
+      and some other terms used in converting time measurements between
+      ephemeris time (ET) and Universal Time (UTC). ``Spacecraft Event
+      Time&apos; (SCET) is the commonly used name for UTC events measured
+      at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed is
+      contained inside the LSK text file. The time conversion provided
+      by SPICE LSK files is accurate to approximately 0.000030 seconds.
+ 
+      More information about the LSK files is available in the file
+      ``data/lsk/lskinfo.txt&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      The GRAIL project did not produce any EK files; therefore, no EKs
+      are included in this data set.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

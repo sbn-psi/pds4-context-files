@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-rems-6-adr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS ROVER ENV MONITORING STATION 6 ADR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rems.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-6-adr-v1.0__browserp_msl-m-rems-6-adr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-6-adr-v1.0__dvo_atmos_msl-m-rems-6-adr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-6-adr-v1.0__pds.geo.msl.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gomez-Elvira J, Armiens C, Castaner L, Dominguez M, Genzer M, Gomez F, Haberle
+                   R, Harri A-, Jimenez V, Kahanpaa H, Kowalski L, Lepinette A, Martin J,
+                   Martinez-Frias J, McEwan I, Mora L, Moreno J, Navarro S, de Pablo MA, Peinado
+                   V, Pena A, Polkko J, Ramos M, Renno NO, Ricart J, Richardson M,
+                   Rodriguez-Manfredi J, Romeral J, Sebastian E, Serrano J, de la Torre Juarez M,
+                   Torres J, Torrero F, Urqui R, Vazquez L, Velasco T, Verdasca J, Zorzano M-,
+                   Martin-Torres J. REMS: The environmental sensor suite for the mars science
+                   laboratory rover. Space Science Reviews 2012:1-58, 2012.
+            </reference_text>
+            <description>reference.GOMEZELVIRAETAL2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-REMS-6-ADR-V1.0</data_set_id>
+        <data_set_name>MSL MARS ROVER ENV MONITORING STATION 6 ADR V1.0</data_set_name>
+        <data_set_release_date>2015-07-31</data_set_release_date>
+        <start_time>2012-08-07T04:04:38.536Z</start_time>
+        <stop_time>2015-03-27T02:38:51.479Z</stop_time>
+        <producer_full_name>JOSE A RODRIGUEZ-MANFREDI</producer_full_name>
+        <citation_text>
+            Gomez-Elvira, J., Mars Science Laboratory Rover Environmental
+            Monitoring Station RDR Data V1.0, MSL-M-REMS-6-ADR-V1.0, NASA
+            Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            MSL Rover Environmental Monitoring Station Ancillary Data Record
+        </data_set_terse_desc>
+        <abstract_desc>
+            Ancillary data used in the processing of the data taken by the
+            sensors of the Rover Environmental Monitoring Station (REMS)
+            aboard the Mars Science Laboratory.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The REMS instrument is a meteorological suite of sensors designed
+    to provide measurements of air and ground temperatures, wind speed
+    and direction, pressure, humidity and ultraviolet radiation.
+ 
+    The REMS ADR data set contains ancillary data used in the
+    processing of REMS data. These data may come from sources external
+    to REMS (as is the case of the rover positions), or derived from
+    them (the UV dust attenuation is estimated from images of the
+    rover cameras). They are bundled together and with the rest of the
+    REMS data to make it easier its interpretation and its processing.
+ 
+    Data is a time ordered sequence of rows organized into several
+    tables. Each data product contains one sol worth of activity.
+ 
+ 
+  Parameters
+  ==========
+    This data set includes the following information:
+ 
+    - Geometry information: solar longitude angle, solar zenithal
+      angle, rover position, rover velocity, rover pitch, rover yaw,
+      rover roll, masthead location and arm status. These data are
+      provided by NAIF in SPICE kernels.
+    - Corrections information: estimated Ultraviolet Sensor signal
+      attenuation due to dust deposition.
+ 
+ 
+  Processing
+  ==========
+    Processing starts with the generation of the REMS EDRs. The REMS
+    EDR data products are generated by the MIPL (Multimission Image
+    Processing Laboratory) at JPL, under the OPGS, using the telemetry
+    processing software called MSLEdrGen. This software will convert
+    the binary data received from telemetry to ASCII. EDRs will then
+    be retrieved at Centro de Astrobiologia (INTA-CSIC) using the File
+    Exchange Interface (FEI).
+ 
+    EDR data products have a first automatic process using calibration
+    data. The result of this is the TELRDR data set, which contains
+    electrical magnitudes and thermal data. In parallel, using
+    ancillary data provided by JPL (such as rover location, sun
+    position) the ADRs (Ancillary Data Records) are generated. EDRs,
+    TELRDRs, ADRs, and calibration data are processed together to
+    obtain the ENVRDRs.
+ 
+    The level of processing of the ENVRDRs includes environmental
+    magnitudes with minimal corrections (mainly based on the
+    degradation of the sensors). Finally, applying models developed by
+    the REMS team and refining them with the confidence levels, the
+    MODRDR data set is created.
+ 
+    Some of the ADR data, such as the rover and sun geometry, are
+    provided directly by NAIF using SPICE. They are converted to ASCII
+    tables following the conventions used in the rest of REMS data
+    products.
+ 
+    Other ADR data, such as the Ultraviolet Sensor attenuation
+    estimation, implies some processing.Dust attenuation magnitude
+    over the Ultraviolet Sensor is estimated from rover cameras images
+    taken at several moments during the mission. The cameras will take
+    images of a target of the same size of the photodiodes situated
+    near them. With a robust image processing algorithm it will be
+    possible to estimate this attenuation factor.
+ 
+ 
+  Data
+  ====
+    Each REMS ADR product in the data set is concatenation of ASCII
+    tables. Each table contains similar ancillary data.
+ 
+    There are two tables: one for geometry information and another one
+    for corrections. Each one contains the information outlined in the
+    Parameters section above.
+ 
+    Columns are delimited by commas and are of fixed length. Rows are
+    time ordered and are separated by a carriage return/line
+    feed. Each table contains a sol of measurements.
+ 
+ 
+  Coordinate System
+  =================
+    This data set depends on several coordinate systems used in the MSL
+    project. These are:
+ 
+    - MSL_TOPO frame, fixed to landing site, is used to define rover
+      position.
+    - MSL_LOCAL_LEVEL, fixed to the rover, is used to define rover
+      orientation (roll, pitch and yaw angles)
+    - MSL_RSM_ZERO_AZ frame, fixed to the rover, is used to define
+      rover remote sensor mast (RSM) azimuth.
+    - MSL_RSM_ZERO_EL, fixed to the rover, is used to define rover
+      remote sensor mast (RSM) elevation.
+    - MSL_ROVER_MECH, fixed to the rover, is used to define Sun
+      position angles (azimuth and elevation)
+ 
+ 
+  Software
+  ========
+    No software is provided in this data set. The RDR tables are simple
+    ASCII files that can be displayed on UNIX, Macintosh, and PC
+    platforms with common software.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    In this data set, confidence depends on the reliability of the
+    data coming from the external sources. In the case of geometry,
+    data are SPICE kernels provided by NAIF. They are expected to be
+    released as a separate data set. In the case of dust corrections,
+    they are dependent on the quality of the rover cameras images and
+    on the algorithm developed at CAB.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    At the time of this release, due to the low number of images of
+    the Ultraviolet Sensor from sols 1 to sol 154, and the ongoing
+    work of the signal attenuation estimation algorithm, the
+    UV_DUST_ATTENUATION column is set to 1 (no attenuation) as a
+    current best estimate. This factor may be updated as soon as
+    there is more information available.
+ 
+    However, analysis of available data has revealed that the
+    accumulation of dust over the Ultraviolet Sensor after sol 155
+    causes it to be attenuated above 10%, which is beyond the sensor
+    operational requirements. When that happens, the
+    UV_DUST_ATTENUATION column is set to NULL.
+ 
+ 
+  Limitations
+  ===========
+    The major limitation of this data set is its dependency on
+    external sources.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

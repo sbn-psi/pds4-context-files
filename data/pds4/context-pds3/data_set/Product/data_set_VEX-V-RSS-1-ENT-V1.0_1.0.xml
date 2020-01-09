@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vex-v-rss-1-ent-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VEX DSN RADIO SCIENCE RAW DATA-ENT V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.venus_express::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vex::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.vex::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vex-v-rss-1-ent-v1.0__browserp_vex-v-rss-1-ent-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vex-v-rss-1-ent-v1.0__browser_vex-v-rss-1-ent-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mannucci, A.J., B.D. Wilson, D.N. Yuan, C.H. Ho, U.J. Lindqwister, and T.F.
+                   Runge, A Global Mapping Technique for GPS-Derived Ionospheric Total Electron
+                   Content Measurements, Radio Science, 33, 565-582, 1998.
+            </reference_text>
+            <description>reference.MANNUCCIETAL1998</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VEX-V-RSS-1-ENT-V1.0</data_set_id>
+        <data_set_name>VEX DSN RADIO SCIENCE RAW DATA-ENT V1.0</data_set_name>
+        <data_set_release_date>2011-02-28</data_set_release_date>
+        <start_time>2007-10-03</start_time>
+        <stop_time>2014-12-31</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Simpson, R.A., Haeusler, B., and Paetzold, M., Venus Express DSN
+            Radio Science Raw Data Archive - Extended Operations Phase,
+            VEX-V-RSS-1-ENT-V1.0, USA_NASA_SUE_VXRS_11XX, Stanford
+            University, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw and partially processed DSN radio science data and ancillary
+            files from the Extended Operations phase of the Venus Express
+            mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival raw, partially processed, and
+            ancillary/supporting radio science data acquired during the
+            Extended Operations (ENT) phase of the Venus Express (VEX)
+            mission using ground facilities of the NASA Deep Space Network
+            (DSN). This data set will be combined with other data collected
+            using antennas of the European Space Agency (ESA) and submitted
+            to the ESA Planetary Science Archive. These observations were
+            designed to determine the gravity field of Venus; density of the
+            upper atmosphere through drag measurements; the
+            temperature-pressure and absorption structure of the neutral
+            Venus atmosphere; and the electron density profile of the
+            ionosphere. No bistatic radar (BSR) and solar conjunction (SCO)
+            observations were conducted during the ENT phase because of a 15
+            dB degradation in performance of the S-Band radio system in late
+            2006 (before ENT began). Of most interest in the ENT archive will
+            be the Radio Science Receiver (RSR) files in the RSR directory,
+            which provided the raw input to the radio occultation
+            investigations of the neutral atmosphere and ionosphere, and the
+            Orbit Data Files (ODFs), which provided the raw input to gravity
+            and drag investigations. The ENT phase, for purposes of this
+            archive, began after the completion of the Routine Operations
+            Phase (2007-10-02, the end of the primary mission) and continued
+            to the end of the VEX mission.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Venus Express (VEX) Deep Space Network (DSN) Radio Science ENT
+      data set is a collection of raw and partially processed data
+      collected during the Extended Operations (ENT) phase of the VEX
+      mission to Venus.  It has been prepared following standards of the
+      NASA Planetary Data System (PDS).
+ 
+      These data were collected using the ground facilities of the NASA
+      DSN and will be combined with other data from the European Space
+      Agency (ESA) antenna at New Norcia (NNO), Australia, to become the
+      formal Venus Express Radio Science (VeRa) Team archive within the
+      ESA Planetary Science Archive (PSA).  The VEX data collected using
+      DSN facilities during the Extended Operations phase were from
+      gravity, atmospheric drag, and radio occultation observations.
+ 
+      The data set comprises several DVD+R (digital versatile disc
+      recordable) volumes.  The first volume contains raw and partially
+      processed radio science data and ancillary files from 2008 and
+      2009.  Subsequent volumes will contain data collected in 2010 and
+      later years, in approximately chronological order.
+ 
+ 
+    Parameters
+    ==========
+      DSN open-loop Radio Science Receivers (RSRs) down-converted a narrow
+      part of the microwave spectrum near the spacecraft transmitting
+      frequency.  For the most comprehensive observations, four RSRs were
+      used to capture
+ 
+        X-RCP   X-Band (3.6 cm wavelength) right circular polarization
+        S-RCP   S-Band (13 cm wavelength) right circular polarization
+        X-LCP   X-Band (3.6 cm wavelength) left circular polarization
+        S-LCP   X-Band (13 cm wavelength) left circular polarization
+ 
+      The data were saved as time series of complex (16-bit I, 16-bit Q)
+      integer samples of the receiver output voltages at (typically) 2000
+      samples per second (sps).  Because of the S-Band degradation, which
+      occurred in late 2006, the S-RCP RSR was often not used for gravity
+      and drag observations.  LCP could have been collected to support
+      studies of depolarization by the solar plasma, but no SCO
+      observations were scheduled after loss of the S-Band downlink.
+ 
+      Processing of the RSR data was limited to diagnostic tests to
+      ensure that the receivers and recording equipment were functioning
+      correctly.  Histograms of RSR samples were constructed, averaged
+      power spectra were calculated, and time averages of sample values
+      (approximating power in the sample stream) were computed.  Each of
+      these was plotted and the results can be found in BRO directories
+      in each archive volume.
+ 
+      The Tracking and Navigation File (TNF) is the primary output from
+      the DSN closed-loop receiver system.  These are large binary files,
+      accumulating at the rate of several megabytes (MB) per hour
+      of antenna operation.  The files comprise nearly 20 block types,
+      each designed to carry data of interest to a particular navigation,
+      telecommunications, or science community.  The blocks are
+      described by TNF_SIS.TXT in the DOCUMENT directory.  Fields
+      include:
+ 
+        Uplink and downlink antenna numbers
+        Spacecraft number
+        Equipment identifiers, status flags, and calibration values
+        Time tags and frequency bands
+        Transmitted and received phase and frequency
+        Transmitted and received ranging information
+        Noise levels, signal-to-noise ratios, and uncertainties
+ 
+      For many applications the TNF is too cumbersome.  The ODF is an
+      edited and partially processed version of the TNF.  It is a smaller
+      binary file, often issued in 1-3 day increments of about 0.2 MB each.
+      It contains the most important information (range and Doppler) needed
+      by spacecraft navigators and investigators interested in determining
+      gravitational fields of bodies such as Venus.  Each ODF is
+      accompanied by a full PDS label which describes both the
+      content and format of the associated file.  ODF data fields
+      include:
+ 
+           Narrowband spacecraft VLBI, Doppler mode (cycles)
+           Narrowband spacecraft VLBI, phase mode (cycles)
+           Narrowband quasar VLBI, Doppler mode (cycles)
+           Narrowband quasar VLBI, phase mode (cycles)
+           Wideband spacecraft VLBI (nanoseconds)
+           Wideband quasar VLBI (nanoseconds)
+           One-way Doppler (Hertz)
+           Two-way Doppler (Hertz)
+           Three-way Doppler (Hertz)
+           One-way total count phase (cycles)
+           Two-way total count phase (cycles)
+           Three-way total count phase (cycles)
+           PRA planetary operational discrete spectrum range (range
+                units)
+           SRA planetary operational discrete spectrum range (range
+                units)
+           RE(GSTDN) range (nanoseconds)
+           Azimuth angle (degrees)
+           Elevation angle (degrees)
+           Hour angle (degrees)           Declination angle (degrees)
+ 
+ 
+    Processing
+    ==========
+      The open-loop raw data have been assembled from individual
+      records (packets) into RSR files, which are saved in the archive
+      without further processing, except for the diagnostic tests noted
+      above, which lead to BRO files.
+ 
+      The RSR data have been Fourier transformed and averaged to create
+      BRO files of Postscript &apos;browse&apos; (BRO) plots from which users can
+      make quick judgments about data quality and suitability for further
+      study.  The plots show (1) histograms of sample values over a
+      single file, (2) a sequence of (typically) 3-minute average power
+      spectra, and (3) power in sample values averaged over one second
+      and plotted versus time.
+ 
+      There has been no processing (and no quick-look checking) of TNF
+      or ODF data.
+ 
+ 
+    Data
+    ====
+      The raw (RSR and TNF), partially processed (BRO and ODF), and
+      ancillary data are organized to fit chronologically onto a set of
+      DVD+R volumes.  All data from 2008 and 2009 fit onto the first
+      ENT DVD+R volume; subsequent years will be organized onto later
+      volumes.
+ 
+      Each scheduled observation is documented by a file in the MFT
+      (manifest) directory.  The MFT file lists the date and time of
+      the observation and all of the data files that should be
+      associated with the observation.
+ 
+      Ancillary data include the following types.  Sources are shown
+      parenthetically; &apos;SPICE&apos; denotes kernels for use with the JPL
+      Navigation and Ancillary Information Facility (NAIF) &apos;toolkit&apos;.
+ 
+       BCK  spacecraft attitude (SPICE)
+       BSP  spacecraft and planetary ephemerides (SPICE)
+       DKF  DSN keyword file (DSN)
+       ENB  experimenters notebook (Stanford)
+       EOP  Earth orientation parameters (JPL)
+       FRK  frames kernel (SPICE)
+       HEA  VeRa investigation &apos;health&apos; report (Stanford)
+       ION  ionosphere media calibration (DSN)
+       LSK  leap second kernel (SPICE)
+       MFT  file lists for specific experiments (Stanford)
+       PCK  planetary constants kernel (SPICE)
+       SCK  spacecraft clock conversion file (SPICE)
+       TRO  troposphere media calibration (DSN)
+       WEA  weather file (DSN)
+ 
+      Note that some files will not be listed in any MFT because they
+      were not associated with a scheduled radio science observation;
+      for example, monthly spacecraft and planetary ephemerides -- BSP
+      files -- may be included in the archive even though there was no
+      radio science activity during the month.  Each RSR, BRO, and TNF
+      should appear in a single MFT; ODFs can appear in multiple MFTs,
+      but only when a single ODF covers more than one radio science
+      event (this would be unusual).
+ 
+      The MFT directory includes a list of both primary and ancillary
+      data files (see below) for each observation.  Users should be
+      able to locate all files by referring to CUMINDEX.TAB in the
+      INDEX directory of the final volume of the data set.
+ 
+      Primary Data
+      ------------
+        Primary data are the measurements which come from the radio
+        science &apos;instrument&apos; or products derived directly from those
+        measurements.  For purposes of this discussion, the primary
+        data types are RSR, BRO, ODF, and TNF.
+ 
+        Radio Science Receiver Files (RSR Directory)
+        --------------------------------------------
+        Each RSR generates a stream of packets which can be assembled
+        into a file of arbitrary length.  Files a little larger than
+        500 MB are the maximum that can be easily accommodated in the
+        Stanford processing environment (32-bit machines on which the
+        next step is conversion of complex integer samples to double
+        precision complex).  A typical ENT observation generates RSRs
+        no larger than 100 MB; but the first radio occultation in 2008
+        was captured using 16000 sps (because of uncertainty about
+        receiver tuning) and those RSRs have 316 MB.
+ 
+        Each RSR file has a name of the form  ydddhhMC.RSR  where  y  is
+        the one-digit year when the data began;  ddd  is the three-digit
+        day of year when the data began;  M  is the one-digit ten-minute
+        mark when the data began (0, 1, 2, 3, 4, or 5); and  C  denotes
+        the band, polarization, and file version as shown in the table
+        below.  The corresponding PDS label file has name  ydddhhMC.LBL.
+ 
+                C Code         Meaning
+                ------    ----------------
+                   A      X-RCP, version 1
+                   B      S-RCP, version 1
+                   C      X-LCP, version 1
+                   D      S-LCP, version 1
+                   E      X-RCP, version 2
+                   F      S-RCP, version 2
+                   G      X-LCP, version 2
+                   H      S-LCP, version 2
+                           ...
+                   U      X-RCP, version 6
+                   V      S-RCP, version 6
+                   W      X-LCP, version 6
+                   X      S-LCP, version 6
+ 
+        The one-digit year is &apos;8&apos; or &apos;9&apos; for 2008 or 2009, respectively.
+        For 2010 the letter &apos;A&apos; is used, for 2011 the letter &apos;B&apos; is used,
+        and the substitution continues until &apos;Z&apos; is used for 2035.
+ 
+        Browse Files (BRO Directory)
+        ----------------------------
+        Browse files are composite PostScript files summarizing quick-look
+        processing of RSR data.  Each file has a name of the form
+        ydddhhMC.PS1  where  ydddhhMC  is identical to the character string
+        in the source RSR file.  Each BRO file is accompanied by a detached
+        PDS label with name  ydddhhMC.LBL.  Each PostScript file is sized
+        to fit on a single 8-1/2x11 inch page.  Each landscape format page
+        includes four panels showing a histogram of raw data (12-bit)
+        samples (upper left), three-minute average power spectra derived
+        from the raw samples (upper right), one-second averages of raw
+        sample power versus time (lower left), and an extract of the first
+        few lines of the source RSR PDS label (lower right).  BRO files may
+        be helpful in quickly scanning data to determine which files are
+        suitable for closer study.  Typical BRO files have volumes 300 kB.
+ 
+        Tracking and Navigation Files (TNF Directory)
+        ---------------------------------------------
+        TNFs become available within a few hours of the completion of a
+        Venus Express pass and are downloaded to Stanford.  TNFs are
+        stored in the TNF directory with file names of the form
+        ydddHssC.TNF  where  y  is the one-digit year of the first data in
+        the file,  ddd  is the three-digit day of year of the first data,
+        H  is a letter code for the hour of the first data (see table
+        below),  ss  is the DSN antenna number, and  C  is a single letter
+        (beginning with &apos;A&apos;) denoting the sequence in which files with the
+        same  ydddHss  were received (ydddHssB.TNF  should be a revision of
+        ydddHssA.TNF; but revised TNFs have been extremely rare, and there
+        may be none in this data set).  The PDS label has file name
+        ydddHssC.LBL.  Typical TNFs have volumes 2-20 MB.
+ 
+                     H Code   Start Hour
+                     ------   ----------
+                        A         00
+                        B         01
+                        C         02
+                        D         03
+                        E         04
+                        F         05
+                        G         06
+                        H         07
+                        I         08
+                        J         09
+                        K         10
+                        L         11
+                        M         12
+                        N         13
+                        O         14
+                        P         15
+                        Q         16
+                        R         17
+                        S         18
+                        T         19
+                        U         20
+                        V         21
+                        W         22
+                        X         23
+ 
+        Starting in 2010, the one-digit year is a letter, following the
+        same convention as was used in naming RSRs (above).
+ 
+        Orbit Data Files (ODF Directory)
+        --------------------------------
+        ODFs are abstracts of TNFs, often with averaging to reduce the
+        sampling rate (1 s is a common default), and with separate files
+        for S- and X-Band data.  Keyword ORIGINAL_PRODUCT_ID in the label
+        file often includes a string like &apos;S_1S&apos; or &apos;X_1S&apos;, which
+        identifies both the band and the averaging interval.
+ 
+        ODFs are stored in the ODF directory with file names of the form
+        ydddeeeC.ODF  where  y  is the one-digit year of the first data in
+        the file,  ddd  is the day of year of the first data,  eee  is the
+        day of year of the last data in the file, and  C  is a single
+        letter (beginning with &apos;A&apos;) denoting the sequence in which files
+        with the same  ydddeee  were received.  Starting in 2010, the
+        one-digit year is a letter, following the same convention as was
+        used in naming RSRs (above).  The corresponding label file has
+        name  ydddeeeC.LBL.  Typical ODFs have sizes 150-200 kB.
+ 
+ 
+      Ancillary Data
+      --------------
+        An extensive set of ancillary files is needed for proper analysis
+        and interpretation of the primary data.  These are organized in
+        parallel with the RSR, BRO, TNF, and ODF directories.  Many
+        ancillary files are obtained from the JPL Navigation and
+        Ancillary Information Facility (NAIF) which has developed a
+        software &apos;toolkit&apos; for users.  The toolkit and data files are
+        known as the &apos;SPICE&apos; system for describing observation geometry,
+        time, and events.  For more information on NAIF and SPICE see
+ 
+                       http://pds-naif.jpl.nasa.gov/
+ 
+        Binary Spacecraft Attitude Kernels (BCK Directory)
+        --------------------------------------------------
+        Spacecraft attitude files (also known as C kernels or CK files)
+        were produced by the VEX Flight Dynamics Team, then converted to
+        IEEE binary format.  C kernels represent the &apos;C&apos; in SPICE,
+        originally standing for &apos;camera.&apos;
+ 
+        BCK files have names of the form  ydddzeee.BCK  where  y  is the
+        one-digit year of the first data in the file,  ddd  is the
+        day-of-year of the first data in the file,  z  is the one-digit
+        year of the last data in the file, and  eee  is the day-of-year of
+        the last data in the file.
+ 
+        The one-digit year (&apos;y&apos; and &apos;z&apos;) is represented by a letter for
+        years starting in 2010, following the same convention as used in
+        naming RSR files (above).
+ 
+        Each BCK file is accompanied by a PDS label with file name
+        ydddeeeC.LBL.  Typical file sizes are a few MB.
+ 
+        Binary Spacecraft/Planetary Ephemeris Files (BSP Directory)
+        -----------------------------------------------------------
+        Spacecraft/planetary ephemeris files (also known as SP kernels or
+        SPK files) were produced by the VEX Flight Dynamics Team, then
+        converted to IEEE binary format.  SP kernels represent the &apos;SP&apos;
+        in SPICE.
+ 
+        BSP files have names of the form  ydddeeeC.BSP  where  y  is the
+        one-digit year of the first data in the file,  ddd  is the
+        day-of-year of the first data in the file,  eee  is the day-of-year
+        of the last data in the file, and  C  is a character denoting the
+        file sequence when more than one file with the same  ydddeee  is in
+        the data set.  For years starting in 2010, the one-digit year is
+        represented by a letter, using the same convention as was used in
+        naming RSR files (above).  The eighth character in the file name
+        C  starts from &apos;A&apos; and progresses to &apos;B&apos;, &apos;C&apos;, etc. with
+        increasing numbers of files covering the same days.  Most BSP
+        files cover approximately one month and are reconstructed
+        spacecraft trajectories merged with the JPL DE405 planetary
+        ephemeris.  Each BSP file is accompanied by a PDS label with file
+        name  ydddeeeC.LBL.  Typical file sizes are a few MB.
+ 
+      DSN Keyword File (DKF Directory)
+      --------------------------------
+        DSN keyword files contain configuration instructions and commands
+        executed by the DSN tracking station during its support of a Venus
+        Express pass.  They are ASCII files with variable length records.
+        Each record is delimited by an ASCII carriage-return line-feed pair.
+        File names have the form  ydddeeeC.DKF  where  y  is the one-digit
+        year of the first data,  ddd  is the three-digit day of year of the
+        first data,  eee  is the three-digit day of year of the last data,
+        and  C  is a letter denoting sequence of the file when  ydddeee  is
+        not unique.  For years starting in 2010, the one-digit year is
+        represented by a letter, using the same convention as is used in
+        naming RSR files (above).  The eighth character in the file name
+        C  starts with &apos;A&apos; for the first file, &apos;B&apos; for the second file,
+        etc.  Each DKF is accompanied by a PDS label with name
+        ydddeeeC.LBL.  DKFs for VEX typically covered a few days and had
+        file sizes of a few kB.  Some observations do not have DKFs.
+ 
+      Experimenters Notebook Files (ENB Directory)
+      --------------------------------------------
+        Experimenters Notebook files are e-mail messages and other
+        notes collected during and shortly after data acquisition.
+        They document expectations of various measurements and
+        anomalies discovered in subsequent analysis.  File names
+        have the form  ENBydddC.TXT,  where  y  is the one-digit
+        year,  ddd  is the three-digit day-of-year, and  C  is a letter
+        denoting sequence of the file when  yddd  is not unique.  For
+        years starting in 2010, the one-digit year is represented by a
+        letter, using the same convention as was used in naming RSR
+        files (above).  The eighth character in the file name  C  starts
+        with &apos;A&apos; for the first file, &apos;B&apos; for the second file, etc.  In
+        general the messages in file  ENBydddC.TXT  refer to activities
+        on that date regardless of when the message was sent.  These
+        are ASCII files with variable length records.  Each record
+        is delimited by an ASCII carriage-return line-feed pair.
+        ENB files have attached labels.
+ 
+      Earth Orientation Parameter Files (EOP Directory)
+      ---------------------------------------------------
+        Earth Orientation Parameter files were produced by the Time
+        and Earth Motion Precision Observation (TEMPO) Group at JPL.
+        They documented and predicted Earth rotation (rate and axis).
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        File names have the form  ydddzeee.EOP  where  y  is
+        the one-digit year of the first data in the file,  ddd  is
+        the day-of-year of the first data in the file,  z  is the
+        one-digit year of the last data, and  eee  is the day-of-year
+        of the last data in the file.  Starting in 2010, the one-digit
+        year (&apos;y&apos; and &apos;z&apos;) is represented by a letter, using the
+        same convention as was used in naming RSR files (above).
+        There are both &apos;long&apos; and &apos;short&apos; EOPs.  The long file covered
+        past motion since about 1962 and a prediction for about three
+        months into the future; these files have typical sizes of 1 MB.
+        The short file covered the most recent nine months of past
+        motion and a prediction for three months into the future; these
+        files are typically 30 kB.  Each EOP file is accompanied by a
+        PDS label with file name  ydddzeee.LBL.
+ 
+        Frames Kernels (FRK Directory)
+        ------------------------------
+        Frames kernels were produced by the JPL/PDS Navigation Ancillary
+        Information Facility (NAIF) for use with NAIF-developed software.
+        They specify coordinate frames defined for the VEX mission
+        including the spacecraft and many instruments.  These are ASCII
+        files of variable length records.  Each record is delimited by an
+        ASCII carriage-return line-feed pair, which may need to be
+        converted to either a carriage-return or line-feed alone before
+        the file is used on the local machine.  Two files are included
+        in the archive; one is mission independent, but intended for
+        use with ESA missions; the other is VEX-specific. Each is
+        accompanied by a PDS label file.
+ 
+        Daily Health Report Files (HEA Directory)
+        ---------------------------------------------------
+        Daily Health Report Files were created at Stanford; they summarize
+        analyses performed on recently acquired open loop radio science
+        data, summarize collection of closed loop data, and note any
+        anomalies found.  They were issued irregularly, usually when new
+        data became available.  HEA files are PDS TEXT objects; each has
+        an attached PDS label.
+ 
+        File names have the form  HEAydddC.TXT  where  y  is the one-digit
+        year of the report,  ddd  is the three-digit day-of-year of the
+        report,  and  C  is a character denoting sequence when more than
+        one report or version of the file was issued in a day.  Starting
+        in 2010, the one-digit year is represented by a letter, following
+        the same convention as was used in naming RSR files (above).  The
+        first report on a day would be  HEAydddA.TXT;  subsequent versions
+        would be HEAydddB.TXT,  HEAydddC.TXT,  etc.
+ 
+        Occasionally HEA files are accompanied by plots, saved as
+        Postscript files.  File names for these plot files have names of
+        the form  HEAydddC.PSn  where  y  and  ddd  are as defined above
+        and  n  is the figure number.  The PostScript files are
+        accompanied by a detached PDS label with name  HEAydddC.LBL.
+ 
+        Both Health Reports themselves and accompanying PostScript files
+        have variable length records delimited by carriage-return
+        line-feed pairs.
+ 
+        Ionosphere Calibration Files (ION Directory)
+        ---------------------------------------------------
+        Ionosphere Calibration files were produced by the Tracking System
+        Analytic Calibration (TSAC) Group at JPL.  They documented and
+        predicted Earth ionospheric conditions.  Global Ionosphere Map
+        (GIM) software created daily maps from Global Positioning System
+        (GPS) data. Each day, a final map was created for the UT day
+        three days previously and a preliminary map was created for the
+        UT day immediately before.  Also created were predict maps a
+        couple times a week by averaging recent &apos;normal&apos; days.  Then the
+        software evaluated the maps at the spacecraft line-of-sight and
+        fitted the results to a normalized polynomial versus time over
+        each spacecraft pass.  This was done for all three modes: final,
+        preliminary, and predict.  Then the software selected the best
+        available calibration for each pass (in priority order final &gt;
+        preliminary &gt; predict).  An operator ran a plotting program to
+        view all of the calibrations and overrode the default selections
+        where desired.  The mapping technique is described by
+        [MANNUCCIETAL1998].
+ 
+        ION files are ASCII files of variable length records.  Each
+        record is delimited by an ASCII line-feed &lt;LF&gt; (ASCII 10).  File
+        names have the form  ydddeeeC.ION  where components of the name
+        are the same as for BSP files.  ION files were usually released
+        at one week intervals to cover a single month; only final files
+        covering a full month are included in this archive.  Each ION
+        file is accompanied by a PDS minimal label with file name
+        ydddeeeC.LBL.  Typical file sizes are approximately 60 kB.
+ 
+        TSAC did not usually produce ION files for Venus Express.
+        Instead, files created to support the Mars Express mission have
+        been substituted where VEX files were not available.  These can
+        can be identified by ORIGINAL_PRODUCT_ID values starting with
+        &apos;gimcal_41&apos; in the PDS label.
+ 
+        Manifest Files (MFT Directory)
+        ------------------------------
+        For each scheduled radio science observation a file in the MFT
+        directory lists all of the primary data files generated and all
+        of the ancillary files that should be associated with the
+        observation.  File names are given for both the original
+        (Stanford) archive and for the archive that will be created by
+        the VeRa Team and submitted to the PSA.  MFT files are ASCII
+        text files, having variable length records delimited by ASCII
+        carriage-return line-feed pairs; they have attached PDS labels.
+ 
+        File names are of the form  ydddHssC.MFT  where  y  is the
+        one-digit year of the observation,  ddd  is the three-digit day
+        of year,  H  is a letter code giving the hour on which the
+        observation began,  ss  is the DSN station number,  and  C  is
+        a letter indicating the sequence of the file in case there is
+        more than one with  ydddHss  (&apos;A&apos; first, &apos;B&apos; second, etc.).
+        Starting in 2010, the one-digit year was represented by a letter,
+        following the same convention as was used in naming RSR files
+        (above).  The meaning of the  H  code is given here:
+ 
+                     H Code   Start Hour
+                     ------   ----------
+                        A         00
+                        B         01
+                        C         02
+                        D         03
+                        E         04
+                        F         05
+                        G         06
+                        H         07
+                        I         08
+                        J         09
+                        K         10
+                        L         11
+                        M         12
+                        N         13
+                        O         14
+                        P         15
+                        Q         16
+                        R         17
+                        S         18
+                        T         19
+                        U         20
+                        V         21
+                        W         22
+                        X         23
+ 
+        Planetary Constants Kernels (PCK Directory)
+        -------------------------------------------
+        Planetary constants files were produced by JPL/NAIF for use with
+        NAIF developed software.  The Planetary Constants file included
+        in this archive was issued for the Mars Global Surveyor (MGS)
+        project.  The archive includes MGS files because those required
+        no modifications to Stanford software, parts of which were being
+        used simultaneously by other missions.  PCK files are ASCII files
+        of variable length records.  Each record is delimited by an ASCII
+        carriage-return &lt;CR&gt; (ASCII 13) line-feed pair &lt;LF&gt; (ASCII 10),
+        which may need to be converted to either &lt;CR&gt; or &lt;LF&gt; before the
+        file is used on the local machine.  File names have the form
+        TPCnnnnZ.PCK  where  nnnn  is the sequence number in which the
+        file was released and  Z  is a character denoting sub-sequence
+        when there was more than one file with the same  nnnn.  Z  starts
+        from &apos;A&apos;  and progresses to &apos;B&apos;, &apos;C&apos;, etc.  Planetary Constants
+        files are accompanied by PDS label files having names
+        TPCnnnnZ.LBL.
+ 
+        Spacecraft Clock Kernels (SCK Directory)
+        ----------------------------------------
+        Spacecraft clock conversion files were produced by JPL/NAIF for
+        use with NAIF software.  These are ASCII files of variable length
+        records.  Each record is delimited by an ASCII carriage-return
+        &lt;CR&gt; (ASCII 13) line-feed pair &lt;LF&gt; (ASCII 10), which may need to
+        be converted to either &lt;CR&gt; or &lt;LF&gt; before the file is used on the
+        local machine.  File names have the form  TSCydddZ.SCK where  y
+        is the one-digit year in which the file was created,  ddd  is the
+        day-of-year, and  Z  is a character denoting sub-sequence when
+        there was more than one file with the same  yddd.  Starting in
+        2010, the one-digit year was represented by a letter, following
+        the convention used in naming RSR files (above).  Z  starts from
+        &apos;A&apos;  and progresses to &apos;B&apos;, &apos;C&apos;, etc.  Each Spacecraft Clock
+        Kernel is accompanied by PDS label file having name  TSCnnnnZ.LBL.
+ 
+        Troposphere Calibration Files (TRO Directory)
+        ---------------------------------------------
+        Troposphere Calibration files were produced by the Tracking System
+        Analytic Calibration (TSAC) Group at JPL.  They documented and
+        predicted Earth tropospheric conditions based on measurements
+        made using Global Positioning System (GPS) satellites.  These are
+        ASCII files of variable length records.  Each record is delimited by
+        an ASCII line-feed &lt;LF&gt; (ASCII 10).  File names have the form
+        ydddeeeC.TRO  where the file name components are the same as for BSP
+        files (above).  TRO files included in this archive typically covered
+        one month and were released early in the following month; since no
+        TRO files were created by TSAC for VEX, Mars Express files have been
+        substituted.  Each TRO file is accompanied by a PDS minimal label
+        with file name  ydddeeeC.LBL.  Typical file sizes are 240 kB.
+ 
+        DSN Weather Files (WEA Directory)
+        ---------------------------------
+        DSN Weather files were produced by the Tracking System Analytic
+        Calibration (TSAC) Group at JPL.  Files give meteorological
+        conditions at a DSN complex in 30 minute time steps. These are
+        ASCII files of variable length records.  Each record is delimited
+        by an ASCII line-feed &lt;LF&gt; (ASCII 10).  File names have the form
+        ydddeeeD.WEA  where  y  is the one-digit year of the first data in
+        the file,  ddd  is the day-of-year of the first data in the file,
+        eee  is the day-of-year of the last data in the file, and  D  is a
+        single digit denoting the DSN complex at which the data were
+        acquired (&apos;1&apos; for Goldstone, &apos;4&apos; for Canberra, or &apos;6&apos; for Madrid).
+        Starting in 2010, the one-digit year was repesented by a letter,
+        following the same convention as was used in naming RSR files
+        (above).  WEA files were typically released weekly and contain all
+        weather data for the complex since 1 January.  Each WEA file is
+        accompanied by a PDS minimal label with file name  ydddeeeC.LBL.
+        The files grow at the rate of approximately 90 kB per month.
+ 
+ 
+    Coordinate System
+    =================
+      NAIF toolkit routines can be used to make coordinate transformations
+      when SPICE files provide the ephemeris and attitude information.
+      Otherwise, the data are not dependent on the definition of a
+      coordinate system.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as these has
+      been developed at Stanford University and elsewhere.  Because such
+      software must usually operate at the bit level and is written for a
+      narrow range of platforms, it is not suitable for general
+      distribution.  No software is included with this archival data set.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set was written on DVD+R media using a Dell
+      computer running the Windows XP operating system, DiscJuggler
+      application software, and a PlexTor PC-712A writer.  The volumes
+      conform to the &apos;UDF ISO 9660 Bridge&apos; standard.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been processed as part of health
+      monitoring and preliminary analysis activities of VEX Radio Science
+      Team members at Stanford University.  In general, this is believed
+      to be a good data set.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the VEX Radio Science Team
+      members at Stanford University.  It was then used as the basis for a
+      slightly different archive (different file names and repeated
+      ancillary data for each primary observation) submitted to the VeRa
+      Deputy Principal Investigator, who in turn combined it with data
+      obtained from the ESA tracking station at New Norcia and submitted
+      the result to the ESA Planetary Science Archive (PSA).
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data are from gravity, atmospheric drag, and radio occultation
+      observations as listed below:
+ 
+         Date    DOY DSS Observation Band/Polns RSR ksps    Notes (0)
+      ---------- --- --- ----------- ---------- -------- ---------------
+      2008-01-31 031  43 Occultation   S/X RCP    2,16
+      2008-02-02 033  43 Occultation   S/X RCP    2, 8
+      2008-02-04 035  43 Occultation   S/X RCP    2, 8
+      2008-08-01 214  43 Occn + Drag   X RCP      2, 8          (1)
+      2008-08-02 215  43 Occn + Drag   X RCP      2, 8          (1)
+      2008-08-06 219  45 Drag          X RCP      2, 8          (1)
+      2008-08-08 221  45 Drag          X RCP        2
+      2008-08-09 222  45 Drag          X RCP        2
+      2008-08-18 231  45 Drag          X RCP      2, 8
+      2008-08-20 233  45 Drag          X RCP      2, 8
+      2008-08-22 235  45 Drag          X RCP        2
+      2008-11-04 309  45 Occultation   X RCP                    (2)
+      2008-11-16 321  43 Occultation   S/X RCP      2
+      2008-12-08 343  43 Occultation   X RCP        2           (3)
+      2008-12-26 361  43 Occultation   S/X RCP      2
+      2009-04-20 110  43 Gravity       X RCP        2
+      2009-04-27 117  43 Gravity       X RCP        2
+      2009-04-29 119  43 Gravity       X RCP        2
+      2009-05-01 121  43 Gravity       X RCP        2
+      2009-05-25 145  43 Gravity       X RCP        2
+      2009-05-27 147  43 Gravity       X RCP        2
+      2009-05-29 149  43 Gravity       X RCP        2
+      2009-05-31 151  43 Gravity       X RCP        2
+      2009-06-27 178  43 Gravity       S/X RCP      2
+      2009-06-29 180  43 Gravity       S/X RCP      2
+      2009-07-01 182  43 Gravity       S/X RCP      2
+      2010-02-22 053  43 Drag          X RCP        2
+      2010-02-24 055  43 Drag          X RCP        2
+      2010-02-25 056  43 Drag          X RCP        2
+      2010-02-26 057  43 Drag          X RCP        2
+      2010-02-28 059  43 Drag          X RCP        2
+      2010-06-14 165  34 Occultation   S/X RCP      2
+      2010-06-16 167  34 Occultation   S/X RCP      2
+      2010-06-26 177  34 Occultation   S/X RCP      2
+      2010-06-28 179  45 Occultation   S/X RCP      2           (4)
+      2010-07-01 182  45 Occultation   S/X RCP      2
+      2010-07-02 183  45 Occultation   S/X RCP      2
+      2010-07-03 184  45 Occultation   S/X RCP      2
+      2010-07-04 185  34 Occultation   S/X RCP      2
+      2010-07-05 186  34 Occultation   S/X RCP      2
+      2010-07-07 188  34 Occultation   S/X RCP      2
+      2010-07-08 189  45 Occultation   S/X RCP      2
+      2010-07-09 190  43 Occultation   S/X RCP      2
+      2010-07-10 191  43 Occultation   S/X RCP      2           (5)
+      2010-07-11 192  45 Occultation   S/X RCP      2
+      2010-10-17 290  45 Drag          X RCP                    (2)
+      2010-10-18 291  45 Drag          X RCP                    (2)
+      2010-10-19 292  34 Drag          X RCP                    (2)
+      2011-01-17 017  45 Occultation   S/X RCP      2
+      2011-01-19 019  45 Occultation   S/X RCP      2
+      2011-01-22 022  34 Occultation   S/X RCP      2
+      2011-01-26 026  45 Occultation   S/X RCP      2
+      2011-02-10 041  43 Occultation   S/X RCP      2
+      2011-03-05 064  34 Occultation   S/X RCP      2
+      2011-03-10 069  34 Occultation   S/X RCP      2
+      2011-03-14 073  45 Occultation   S/X RCP                  (2)
+      2011-03-21 080  45 Occultation   S/X RCP      2
+      2011-03-22 081  45 Occultation   S/X RCP      2
+      2011-05-24 144  43 Drag          X   RCP      2
+      2011-05-26 146  43 Drag          X   RCP      2
+      2011-05-28 148  43 Drag          X   RCP      2
+      2011-05-30 150  43 Drag          X   RCP      2
+      2011-06-01 152  43 Drag          X   RCP      2
+      2011-06-03 154  43 Drag          X   RCP      2
+      2011-06-14 165  45 Occultation   S/X RCP      2
+      2011-06-15 166  43 Occultation   S/X RCP      2
+      2011-06-16 167  43 Occultation   S/X RCP      2
+      2011-06-18 169  43 Occultation   S/X RCP      2
+      2011-06-20 171  43 Occultation   S/X RCP      2
+      2011-06-23 174  45 Occultation   S/X RCP      2
+      2011-06-25 176  43 Occultation   S/X RCP      2
+      2011-07-01 182  34 Occultation   S/X RCP      2
+      2011-09-17 260  43 Drag          S/X RCP      2
+      2011-09-19 262  43 Drag          S/X RCP      2
+      2011-09-23 266  43 Drag          S/X RCP      2
+ 
+ 
+      2012-01-14 014  43 Drag          S/X RCP      2           (6)
+ 
+ 
+      2012-01-15 015  43 Drag          S/X RCP      2
+ 
+ 
+      2012-01-16 016  43 Drag          S/X RCP      2
+ 
+ 
+      2012-01-17 017  43 Drag          S/X RCP      2
+ 
+ 
+      2012-01-18 018  43 Drag          S/X RCP      2
+ 
+ 
+      2012-01-19 019  43 Drag          S/X RCP      2
+      2012
+ 
+-12-04 339  45 Drag          S/X RCP      2
+      2012
+ 
+-12-06 341  45 Drag          S/X RCP      2
+      2012
+ 
+-12-08 343  45 Drag          S/X RCP      2
+      2012
+ 
+-12-10 345  45 Drag          S/X RCP      2
+      2012
+ 
+-12-14 349  45 Drag          S/X RCP      2
+ 
+      Notes:
+      (0) All S-Band data were degraded by approximately 15 dB relative
+          to design following a spacecraft radio sub-system failure in
+          late 2006.
+      (1) The early &apos;drag&apos; measurements were compromised by grazing
+          occultations and difficulty in acquiring 2-way tracking.  The
+          data did not prove to be useful for either occultation or drag
+          analysis.
+      (2) ODF and TNF X-RCP data only.
+      (3) No S-Band enabled on the spacecraft, no signal received at DSN
+      (4) Failed; ground station &apos;red&apos;
+      (5) Radio occultation ingress, but not egress (not enough time)
+      (6) Complex-wide power failure; little or no good data
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

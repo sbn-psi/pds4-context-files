@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-v-pls-4-summ-vet-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GO VEN PLS SUMM VENUS ET V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pls.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-v-pls-4-summ-vet-v1.0__browserp_go-v-pls-4-summ-vet-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Frank, L.A., K.L. Ackerson, and W.R. Patterson, Plasma Measurements at
+                   Earth With the Galileo Spacecraft, AGU Spring Meeting, Baltimore,
+                   Maryland, May 1991.
+            </reference_text>
+            <description>reference.FRANKETAL1991</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-V-PLS-4-SUMM-VET-V1.0</data_set_id>
+        <data_set_name>GO VEN PLS SUMM VENUS ET V1.0</data_set_name>
+        <data_set_release_date>1995-04-11</data_set_release_date>
+        <start_time>1990-02-10</start_time>
+        <stop_time>1990-041T06:38:02.862Z</stop_time>
+        <producer_full_name>DR L.A. FRANK</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>Unknown</data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+  This file is a listing of particle energy spectra from the Galileo Plasma
+  Instrument (PLS).  Detector reponses from ion detetors 2P, 4P, and 6P, and
+  from electron detector 4E are available through the PDS as separate files.
+  The energy resolution, angular fields of view, and nominal geometric factors
+  for the detectors are specified in the Instrument Description file.
+ 
+  For each detector the responses (Counts/Sample-Period) are given
+  for a series of energy-per-unit charge steps (E/Q, Volts).  These
+  responses are summed over spin sectors.  The instrument is programmable,
+  and operating modes are tailored for different mission phases to acquire
+  effective measurements.  The E/Q steps and Sample Periods for different
+  mission phases (through Ida) are tabled below.
+ 
+                            TABLE A
+   --------------------------------------------------------------
+    Mission Phase       Sample Period,             E/Q Steps,
+                          Seconds                    Table
+   --------------------------------------------------------------
+ 
+      Venus                 0.400                   Table B
+      Earth-1               1.333                   Table B
+      Gaspra                1.200                   Table B
+      Earth-2               1.200                   Table B
+      Ida                   1.200                   Table B
+   ---------------------------------------------------------------
+ 
+            TABLE B
+  --------------------------------
+  Step             E/Q, Volts
+ 
+              P2,P4,P6        E4
+  --------------------------------
+ 
+   17            21            19
+   19            29            27
+   21            41            38
+   23            57            53
+   25            80            74
+   27           112           104
+   29           157           146
+   31           220           204
+   33           303           281
+   35           454           422
+   37           686           638
+   39           961           893
+   41          1363          1266
+   43          1958          1819
+   45          2732          2538
+   47          3788          3519
+   49          5490          5100
+   51          7777          7225
+   53         10614          9860
+   55         15189         14110
+   57         21356         19839
+   59         29829         27710
+   61         40443         37570
+   63         52521         48790
+        </data_set_desc>
+        <confidence_level_note>
+    The Venus data set has several data gaps due to missing data and data
+    hits.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

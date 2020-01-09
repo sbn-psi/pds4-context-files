@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lola-5-shadr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO MOON LASER ALTIMETER 5 SHADR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lola.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lola-5-shadr-v1.0__browserp_lro-l-lola-5-shadr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lola-5-shadr-v1.0__dvo_geo_lro-l-lola-5-shadr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lola-5-shadr-v1.0__pds.geo.lro.orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Chin, G., et al., Lunar Reconnaissance Orbiter Overview: The Instrument Suite
+                   and Mission, Space Sci. Rev. 129:391-419, 2007.
+            </reference_text>
+            <description>reference.CHINETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-LOLA-5-SHADR-V1.0</data_set_id>
+        <data_set_name>LRO MOON LASER ALTIMETER 5 SHADR V1.0</data_set_name>
+        <data_set_release_date>2011-03-15</data_set_release_date>
+        <start_time>2009-07-03</start_time>
+        <stop_time>2011-08-10T04:36:55.073Z</stop_time>
+        <producer_full_name>GREGORY A. NEUMANN</producer_full_name>
+        <citation_text>
+            Neumann, G.A., 2009, Lunar Orbiter Laser Altimeter Spherical
+            Harmonic Model, LRO-L-LOLA-5-SHADR-V1.0, NASA Planetary Data
+            System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Spherical harmonic topographic (shape) and gravity potential
+            models from the 2009 Lunar Reconnaissance Orbiter (LRO) mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains spherical harmonic topographic (shape) and
+            gravity potential models from the Lunar Orbiter Laser Altimeter
+            instrument, LRO Laser Ranging, and radio tracking.
+        </abstract_desc>
+        <data_set_desc>
+    Data Set Overview
+    =================
+    Topographic spherical harmonic coefficients are derived from gridded
+    altimetry products via a numerical transform. The data are in the form
+    of tables with a detached label. The Reduced Data Record Software
+    Interface Specification describes the values input to the harmonic
+    transform.
+ 
+    The discrete-Fourier-transformed topography coefficients H_j(m) at
+    latitude index, times the associated Legendre polynomial P_lm, times a
+    weight proportional to the area associated with a given latitude interval,
+    are summed over all latitudes to yield the complex coefficient
+    (C_lm,S_lm). The weights are normalized so that a coefficient of unit
+    magnitude represents a harmonic whose squared amplitude integrated with
+    respect to area over a unit sphere is 4 pi.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+    Data are edited and selected before averaging so as to maintain
+    good quality. Where necessary, crossover analysis is done prior to
+    averaging so as to minimize discrepancies between individual tracks.
+ 
+    Data Coverage and Quality
+    =========================
+    Each nominal monthly orbit provides roughly two tracks per degree of
+    longitude at the equator. After each month&apos;s data are accumulated,
+    crossover adjustments are made to minimize the difference in elevation
+    between closely registered tracks and to remove along- and across-track
+    orbital errors. The resulting dataset provides better geodetic control
+    than that from individual tracks. The first release (March 15, 2010)
+    does not incorporate these adjustments, and relies on preliminary
+    trajectory solutions. Re-release with better precision and increased
+    density will occur periodically.
+ 
+    The current release does not include a gravity potential model.
+ 
+    Limitations
+    ===========
+    Density of observations increases linearly with time. Higher-resolution
+    SHADR products will be provided when data density provides coverage in a
+    majority of pixels of each data product.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

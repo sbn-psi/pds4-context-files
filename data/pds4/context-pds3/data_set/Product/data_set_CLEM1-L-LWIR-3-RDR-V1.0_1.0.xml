@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.clem1-l-lwir-3-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CLEMENTINE LWIR BRIGHTNESS TEMPERATURE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.deep_space_program_science_experiment::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lwir.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.sky::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-lwir-3-rdr-v1.0__browserc_clem1-l-lwir-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-lwir-3-rdr-v1.0__browserp_clem1-l-lwir-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-lwir-3-rdr-v1.0__dvo_geo_clem1-l-lwir-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Lawson, S.L., B.M. Jakosky, H.-S. Park, and M.T. Mellon, Brightness
+                   temperatures of the lunar surface: Calibration and global analysis of the
+                   Clementine long-wave infrared camera data, J. Geophys. Res., 105,
+                   4273-4290, 2000.
+            </reference_text>
+            <description>reference.LAWSONETAL2000</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CLEM1-L-LWIR-3-RDR-V1.0</data_set_id>
+        <data_set_name>CLEMENTINE LWIR BRIGHTNESS TEMPERATURE V1.0</data_set_name>
+        <data_set_release_date>2002-07-01</data_set_release_date>
+        <start_time>1994-02-27T07:04:02.174Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>STEFANIE L. LAWSON</producer_full_name>
+        <citation_text>
+            Lawson, S.L., B.M. Jakosky, and E.A. Guinness. &quot;Clementine
+            Long-Wave Infrared (LWIR) Brightness Temperature Data Set&quot;,
+            NASA Planetary Data System, CLEM1-L-LWIR-3-RDR-V1.0, 2000.
+        </citation_text>
+        <data_set_terse_desc>
+            The Clementine Long-Wave Infrared (LWIR) Brightness Temperature
+            data set contains calibrated brightness temperature images that
+            provide information on physical properties of the lunar surface.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This volume contains the archive of Lunar brightness temperature
+            data derived from images acquired by the Clementine Long
+            Wavelength Infrared (LWIR) camera. The LWIR camera acquired
+            approximately 220,000 thermal-infrared images of the lunar
+            surface that were used to generate the brightness temperature
+            images within this archive. The procedure for generating
+            brightness temperature values can be summarized as follows: 1)
+            original LWIR digital numbers were converted to radiance; 2) the
+            dark current signal was subtracted from the radiance values; 3) a
+            flat field correction was applied; 4) bad pixels were identified
+            and smoothed over; and 5) calibrated radiance values were
+            converted to brightness temperatures using the Planck function.
+        </abstract_desc>
+        <data_set_desc>
+ 
+Data Set Overview
+=================
+The scientific payload on the Clementine spacecraft included a
+Long-Wave Infrared (LWIR) camera with a single passband of width
+1.5 microns centered at a wavelength of 8.75 microns.  The LWIR
+spatial resolution ranged from 200 m per pixel near the poles to
+55 m per pixel at the equator.  Contiguous pole to pole imaging
+strips were obtained with approximately 10% overlap between
+adjacent frames.  However, significant longitude gaps exist
+between successive orbital passes.  During the systematic mapping
+phase of the Clementine mission, approximately 220,000 thermal-
+infrared images of the lunar surface were obtained.  This data
+set contains LWIR images where the observed radiance has been
+converted to brightness temperature, which provides information
+on various physical properties of the lunar surface.
+ 
+Processing
+==========
+Preflight calibration for the LWIR instrument was performed at
+Lawrence Livermore National Laboratory in an effort to measure
+camera characteristics such as radiometric sensitivity, gain and
+offset scale factors, temporal/spatial noise, and the dependence
+of dark-noise on focal plane array (FPA) temperatures.  Several
+steps were involved in the generation of brightness temperature
+values which included converting measured data number (DN) values
+to radiance values; identifying and eliminating bad pixels;
+correcting for pixel response variation across the detector
+array; determining the zero-flux background of the instrument;
+comparing LWIR measured radiance of the Apollo 17 landing site to
+in situ temperature measurements in order to derive absolute
+calibration adjustments; and finally, converting measured
+radiance values to brightness temperatures via the Planck
+function [LAWSONETAL2000].
+ 
+The first step in the routine to determine brightness temperature
+from LWIR images involved converting measured DN values (ranging
+from 0 to 255) to equivalent radiance values through a preflight
+calibration equation.  This equation corrected for the changing
+gain and offset states used throughout an imaging orbit in order
+to account for the increase in surface thermal emission near the
+equator.
+ 
+The primary uncertainty in the calibration was the subtraction of
+a zero-flux radiance.  The dark-frame signal was extremely large
+and varied with time in orbit and probably with lens and FPA
+temperatures.  Through the 1.5 hours of a lunar imaging orbit,
+the heat input to the spacecraft by the cryocooler increased the
+surrounding temperature and decreased the cooling effectiveness,
+resulting in rising FPA temperatures with time.  This zero-level
+background increase was much less pronounced in the first month
+of systematic mapping than in the second.  At the mid-lunar-
+mapping-mission orbital-correction burn, fuel was expended and
+the overall thermal mass of the spacecraft was reduced.  This
+resulted in an increased operational temperature and caused the
+LWIR background counts generated from the pixel dark current and
+the thermal emission from within the optical path to increase.
+Thus, after the mid-lunar-mapping orbital burn, the number of
+LWIR images taken during an orbital pass was reduced to avoid
+saturation of the detector.  In order to subtract a zero-flux
+radiance from the LWIR images, a series of space-looking frames
+(away from the Sun, Moon, and Earth) was used that were acquired
+at the beginning and end of many lunar mapping orbits.  The
+increasing background level through an orbit was accounted for by
+fitting a line, on a pixel-by-pixel basis, to the pre-mapping
+space and post-mapping space radiance values as a function of
+time.
+ 
+The next step in the process was to create bad-pixel maps and
+flat fields.  After subtracting a zero-level image from each
+lunar image, hundreds of lunar images from a single orbit were
+averaged together on a pixel-by-pixel basis.  Thus a lunar mean
+image and an associated lunar standard deviation image were
+generated.  Lunar images at latitudes higher than 70 deg were
+neglected in the calculation of the mean image because they were
+often either saturated (due to excessively high gain states) or
+they had values less than zero after the zero-level image
+subtraction.  Bad pixels were identified on the mean and standard
+deviation images as pixels that did not vary (low or zero
+standard deviation), varied randomly (high standard deviation),
+or were pegged at high values such that their dynamic range was
+limited (high mean).  Pixels with low means also appeared bad on
+lunar images.  An average of approximately 11% of the 16,384
+detector array pixels was characterized as consistently bad.
+There were approximately 10 orbits where at least one map had
+more than 20% bad pixels.
+ 
+In order to correct for pixel response variation across the
+detector array, a flat field frame was created by multiplying the
+lunar mean image and the bad-pixel map, smoothing over the bad
+pixels, and normalizing the resultant image to unity.  For an IR
+camera, the FPA signal comes not only from the signal generated
+from the lunar surface, but also from dark current generated
+internally within each pixel detector and from thermal emission
+generated from the camera optical path.  For the LWIR the
+magnitude of these contributions was very large and varied both
+through an orbit and through the mission.  Thus three separate
+bad-pixel maps and flat fields were required for each orbit.  The
+number created was constrained by the number of lunar images over
+which to average.  The minimum number of images to average was
+controlled by the need to eliminate structure due to scene
+variations that result from surface topography.  The maximum
+number of images to average was limited by the varying thermal
+emission of the lunar surface through an orbit; the measured
+radiance values were much higher near the equator than near the
+poles.  To create the mean and standard deviation images,
+latitude bins were averaged together in the following way: 70S to
+20S, 20S to 20N, and 20N to 70N.  Lunar images from latitudes
+higher than 70 degrees used flat fields and bad-pixel maps from
+adjacent latitude bins.
+ 
+Inflight absolute calibration was accomplished by comparing the
+LWIR-derived temperatures at the Apollo 17 landing site to
+temperatures determined in situ from the heat-flow experiment.
+Although in situ temperatures were also measured at the Apollo 15
+site, LWIR frames are available only for the Apollo 17 site.  The
+difference between Apollo temperatures and LWIR temperatures was
+approximately 17 K, corresponding to a 22% difference in
+radiance.  This 22% change in radiance reflects both the
+limitations of the preflight calibration and the differences
+between prelaunch and inflight calibrations. Therefore, all of
+the LWIR-derived radiance values were multiplied by 0.82.
+Brightness temperatures were then calculated using the Planck
+function assuming unit emissivity.
+ 
+The bad pixel routine did not identify all bad pixels due to
+their shifting locations from image to image.  The few remaining
+bad pixels were eliminated via a sigma-filter routine that
+replaced pixels that were greater than 3-sigma away from the mean
+of a 3 x 3 pixel region around each pixel.   Finally, the LWIR
+temperatures were corrected for the varying Sun-Moon distance
+throughout the mission.
+        </data_set_desc>
+        <confidence_level_note>
+Preflight calibration data were acquired with an automated
+calibration facility at Lawrence Livermore National Laboratory.
+The preflight calibration measurements included radiometric
+sensitivity; FPA uniformity; gain and offset scale factors;
+temporal/spatial noise; dark noise dependence on FPA
+temperatures, integration times, input voltage levels, and
+spectral response of FPA; optical distortion map; point spread
+function; electronic warm-up time; and cryocooler cool-down time.
+ 
+Absolute uncertainties were found from the zero-level radiance
+determination and are constant in radiance but vary in equivalent
+temperature throughout an orbit, being lower near the equator
+where the surface temperatures are higher.  For the entire
+mission, a typical 2-sigma uncertainty is 7 K or greater.
+Absolute uncertainties were propagated on a pixel-by-pixel basis
+throughout the calibration routine, and then image-averaged.
+Adjacent LWIR frames overlap and there is consistently less than
+a 1% difference in brightness temperature between overlapping
+regions.  Thus, the statistical uncertainty of a single
+measurement is much less than the absolute uncertainties through
+an orbit.
+ 
+The LWIR camera cannot measure temperatures below approximately
+150 K.  In the calibration routine, a zero-level image is
+subtracted from each lunar radiance image.  Sometimes this
+results in pixel values less than zero, particularly near the
+poles where the temperatures are low.  All pixel values that are
+less than zero in radiance are set to 0.0001 and then converted
+to temperature.  This results in temperatures around 45 K that
+are not real and have large associated uncertainties.
+Temperatures below 150 K are not to be trusted.
+ 
+Several orbits worth of data were not reduced, either because
+there were no space images taken for that orbit or because the
+detector saturated.  LWIR images from 95% of the orbits from the
+first month of lunar mapping and from 77% of the orbits from the
+second month of lunar mapping were reduced.  Thus data from a
+total of 86% of the 266 Clementine systematic mapping orbits was
+reduced.
+ 
+For more information on the LWIR calibration routine, see
+[LAWSONETAL2000].
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>1994-004A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

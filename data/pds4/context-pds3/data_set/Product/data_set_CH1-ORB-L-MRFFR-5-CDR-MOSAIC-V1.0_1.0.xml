@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ch1-orb-l-mrffr-5-cdr-mosaic-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CH1-ORB MOON MINI-RF 5 POLAR MOSAIC CALIBRATED DATA REC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.chandrayaan-1::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ch1-orb::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mrffr.ch1-orb::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ch1-orb-l-mrffr-5-cdr-mosaic-v1.0__pds.geo.chandrayaan1.webservices::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Nozette, S., P. Spudis, B. Bussey, K. Raney, H. Winters, C.L. Lichtenberg, W.
+                   Marinelli, J. Crusan, and M. Gates, The LRO Miniature Radio Frequency (Mini-RF)
+                   technology demonstration, Space Sci. Rev., submitted, 2009.
+            </reference_text>
+            <description>reference.NOZETTEETAL2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CH1-ORB-L-MRFFR-5-CDR-MOSAIC-V1.0</data_set_id>
+        <data_set_name>CH1-ORB MOON MINI-RF 5 POLAR MOSAIC CALIBRATED DATA REC V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2008-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>MINI-RF POC</producer_full_name>
+        <citation_text>
+            Chandrayaan-1 Forerunner Calibrated Level 3 Data Set V1.0,
+            CH1-ORB-L-MRFFR-5-CDR-MOSAIC-V1.0, NASA Planetary Data System,
+            2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated Level 3 data product and ancillary files from the
+            Mini-RF (Mini-SAR) Forerunner lunar mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains lunar polar mosaics composed of calibrated
+            data acquired from the Mini-RF (Mini-SAR) Forerunner instrument
+            during the Chandrayaan-1 mission. The mosaics are made from data
+            collected during multiple orbits.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Level 3 Burst mode data products are Derived Data Records (DDRs)
+      generated from multiple Level 2 products.  Four Level 3 mosaics are
+      produced of each lunar pole (i.e., regions above 80 deg. latitude)
+      per imaging opportunity. Unlike the lower-level products, these are
+      composed of data sets collected during multiple acquisitions.
+      Please see documentation in the DOCUMENT directory for
+      additional information on the data files and their format.
+ 
+    Parameters
+    ==========
+      See individual SIS documents, which are located in the
+      DOCUMENT directory, for detailed descriptions of each file
+      contained in this data archive.
+ 
+    Processing
+    ==========
+      The mosaics are produced manually by ingesting the Level 2 stokes
+      parameters into the ISIS software provided by the Astrogeology branch
+      of the USGS.
+ 
+      A full PDS label accompanies each data file and gives
+      a detailed description of the content and format. These products
+      are generated using the ISIS software from the USGS.
+ 
+    Data
+    ====
+      These data are stored in the DATA/SAR/MOSAICS directory on
+      archival volumes. File names are described in MRFFR_DP_SIS.PDF.
+ 
+      Every file in the directory has PDS label. Except for files
+      in the root directory and in the CATALOG directories, the
+      label is a separate file in the same directory with the same
+      name but a LBL extension.
+ 
+    Coordinate System
+    =================
+      The mosaics are produced from Level 2 products which are oriented in
+      reference to the Moon Principle Axis (PA) coordinate system, as
+      realized using NASA&apos;s SPICE products (Frames Kernel).
+ 
+    Software
+    ========
+      No software is included with this archival data set.
+ 
+    Media/Format
+    ============
+ 
+      These products are delivered on a hard-drive or by ftp and
+      not on a specific formatted medium.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this data are collected from orbits around the Moon.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the Chandrayaan-1 Mini-RF
+      Team prior to submission to the Planetary Data System (PDS).
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications.  These materials were distributed to PDS
+      personnel, the experiment investigator, and others,
+      as appropriate.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The coverage on each archival volume is associated with the
+      orbit number.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

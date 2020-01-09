@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-x-rpcmag-2-cvp-raw-v3.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER CHECK RPCMAG 2 CVP RAW V3.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rpcmag.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:unk.unk::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-x-rpcmag-2-cvp-raw-v3.0__browserp_ro-x-rpcmag-2-cvp-raw-v3.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Glassmeier, K.H., H. Boehnhardt, D. Koschny, E. Kuhrt, and I. Richter, The
+                   Rosetta Mission: Flying Towards the Origin of the Solar System, Space Science
+                   Reviews, 128(1-4), 1-21, Feb. 2007.
+            </reference_text>
+            <description>reference.GLASSMEIERETAL2007A</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-X-RPCMAG-2-CVP-RAW-V3.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER CHECK RPCMAG 2 CVP RAW V3.0</data_set_name>
+        <data_set_release_date>2009-12-01</data_set_release_date>
+        <start_time>2004-03-17T22:57:58Z</start_time>
+        <stop_time>2004-10-14T01:47:15Z</stop_time>
+        <producer_full_name>INGO RICHTER</producer_full_name>
+        <citation_text>
+            Richter, I., Glassmeier, K.H., Eichelberger. H,ROSETTA RPCMAG
+            COMMISSIONING RAW DATA RECORD V3.0, RO-X-RPCMAG-2-CVP-RAW-V3.0,
+            PDS, 2009
+        </citation_text>
+        <data_set_terse_desc>
+            This dataset contains EDITED RAW DATA of all three commissioning
+            phases CVP1,CVP2,CVP3 and also data of the interference campaign.
+        </data_set_terse_desc>
+        <abstract_desc>
+            2010-07-30 SBN:T.Barnes Updated and DATA_SET_DESCThis dataset
+            contains EDITED RAW DATA of all three commissioning phases
+            CVP1,CVP2,CVP3 and also data of the interference campaign. All
+            these phases together are labeled as Commissioning Phase CVP.
+            (Version 3.0 is the first version archived.)
+        </abstract_desc>
+        <data_set_desc>
+ 
+Data Set Overview
+=================
+ 
+ 
+The data from the ROSETTA PLASMA CONSORTIUM (RPC) Fluxgate
+Magnetometer(MAG)was submitted by Ingo Richter (TM) for the RPCMAG
+team. The PI of the team is Karl-Heinz Glassmeier.
+ 
+Note that this is the first version archived for this dataset.
+Version 1 was never archived.
+ 
+ 
+The data have been measured during
+ 
+ -the first commissioning phase CVP1 in the time period
+  March 17, 2004 - March 19, 2004
+ -the second commissioning phase CVP2 in the time period
+  May 07, 2004 - March 10, 2004
+ -the third commissioning phase CVP3 in the time period
+  September 06, 2004 - September 10, 2004
+  and
+ -the Interference Campaign in the time period
+  September 20, 2004 - October 14, 2004
+ 
+All magnetic field data are edited raw data. That means the data
+represent the 3 components of the magnetic field measured in counts of
+the used 20 bit ADC. Data are given in instrument coordinates. Neither
+any filtering nor any calibration has been applied to the data. Any
+s/c generated noise and s/c caused residual magnetic fields are not
+eliminated.
+ 
+The data are sorted by the sensor (OB: outboard sensor, IB: inboard
+sensor)and the measurement mode (M1..M6). They can uniquely be
+identified by their file names.
+ 
+Normally the OB is the Primary (Pri) and the IB is the Secondary (Sec)
+sensor. However, this order can be toggled by TCs. This feature has
+been tested especially during the commissioning phases.
+ 
+In cases were the PRIMARY and SECONDARY sensor were toggled the
+individual data files (OB/IB) will contain data measured with
+different sampling rates according to the actual sampling rates of
+the PRIMARY and SECONDARY sensors. Refer to the MODE DESCRIPTION
+table below. The actual sampling rate is the only indicator
+showing which sensor is the primary and which is the secondary
+one.
+ 
+Mode description:
+=================
+ 
+MODE SAMPLE RATE PACKET PERIOD PACKET LENGTH VECTOR RATE
+ 
+Minimum Mode M1  1/32 Hz 1024 s   32 Pri Vec 0.03125 vec/s
+                                   1 Sec Vec 0.000976 vec/s
+Normal Mode M2      1 Hz   32 s   32 Pri Vec 1 vec/s
+                                   1 Sec Vec 0.03125 vec/s
+Burst Mode M3      20 Hz   16 s  320 Pri Vec 20 vec/s
+                                  16 Sec Vec 1 vec/s
+Medium Mode M4      5 Hz   32 s  160 Pri Vec 5 vec/s
+                                   1 Sec Vec 0.03125 vec/s
+Low Mode M5      0.25 Hz  128 s   32 Pri Vec 0.25 vec/s
+                                   1 Sec Vec 0.007812 vec/s
+Test Mode M6       20 Hz   16 s  320 Pri Vec 20 vec/s
+                                   1 Sec Vec 0.0625 vec/s
+HK Mode                    32 s    8 words 0.03125 vec/s
+ 
+ 
+ 
+FILENAME CONVENTION &amp; Mode Coding
+===================================
+Due to operational constraints it might happen that the instrument
+mode or the primary sensor has to be switched during a specific
+observation.
+The actual mode and the primary sensor of the instrument can easily
+be identified by analyzing the filename of the actual data files. The
+complete filename convention is listed in the EAICD, chapter 3.1.4.
+ 
+The filenames for EDITED and CALIBRATED data are coded as follows:
+ 
+&lt;inst&gt;  &lt;begin of observation&gt;_&lt;level&gt;_&lt;sensor&gt;_&lt;inst mode&gt;.&lt;ext&gt;
+RPCMAG  yymmddThhmm             RAW       IB     M1..M6      LBL
+                                CLA       OB                 TAB
+                                CLB
+                                CLC
+ 
+Example: RPCMAG040528T1230_RAW_OB_M3.LBL
+         RPCMAG040528T1230_RAW_OB_M3.TAB
+ 
+ 
+The filenames for Housekeeping data are coded as follows:
+ 
+&lt;inst&gt;  &lt;begin of observation&gt;_&lt;datatype&gt;.&lt;ext&gt;
+RPCMAG         yymmddThhmm         HK      LBL
+                                           TAB
+ 
+Example: RPCMAG040528T1230_HK.LBL
+         RPCMAG040528T1230_HK.TAB
+ 
+ 
+ 
+ 
+Geometry Information - Coordinate System
+========================================
+The geometry items
+  SC_SUN_POSITION_VECTOR
+  SC_TARGET_POSITION_VECTOR
+  SC_TARGET_VELOCITY_VECTOR
+provided in the label of the data product are relative to the
+ECLIPJ2000 frame. This reference frame is built up by  Ecliptic
+Coordinates related to Equinox of Epoch J2000.
+Orientation:
+    X: Pointing from SUN to Vernal Equinoxe,
+    Y: perpendicular to X in Ecliptic Plane,
+    Z: Perpendicular to Ecliptic plane, pointing up
+ 
+The items
+  SUB_SPACECRAFT_LATITUDE
+  SUB_SPACECRAFT_LONGITUDE
+are given in the PLANETOCENTRIC coordinate system.
+ 
+All these geometry parameters are computed at time t=START_TIME.
+Distances are given in km, angles in degrees.
+        </data_set_desc>
+        <confidence_level_note>
+This dataset has been reviewed by two
+                        independent review teams in autumn 2008.
+                        After these reviews the dataset has been
+                        accepted by the Planetary Science Archive(PSA)
+                        of the ESA and by the Planetary Data System
+                        (PDS) of NASA for the longterm archiving.
+                        The data have been processed  on best effort
+                        base according to the procedures described in
+                        RO-IGEP-TR0028: Step by Step Calibration
+                        Procedure. Quality  flags are attached for
+                        CALIBRATED and RESAMPLED data as described in
+                        the EAICD RO-IGEP-TR0009.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-navcam-5-rdr-mosaic-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS NAVIGATION CAMERA 5 RDR MOSAIC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nav_left_a.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-navcam-5-rdr-mosaic-v1.0__browserp_msl-m-navcam-5-rdr-mosaic-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-navcam-5-rdr-mosaic-v1.0__dvo_imaging_msl-m-navcam-5-rdr-mosaic-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Alexander, D. and R. Deen, Mars Science Laboratory Project Software Interface
+                   Specification (SIS) for Camera &amp; LIBS EDR and RDR Data Products, Jet Propulsion
+                   Laboratory Document D-38107, Version 3.5, 14 August 2014.
+            </reference_text>
+            <description>reference.JPLD-38107</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Maki, J.N., et al., Mars Exploration Rover Engineering Cameras, J. Geophys.
+                   Res., 108(E12), 8071, doi:10.1029/2003JE002077, 2003.
+            </reference_text>
+            <description>reference.MAKIETAL2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Maki, J.N., et al., The Mars Science Laboratory Engineering Cameras, Space Sci.
+                   Rev. 2012, doi:10.1007/s11214-012-9882-4, 10 May 2012.
+            </reference_text>
+            <description>reference.MAKIETAL2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-NAVCAM-5-RDR-MOSAIC-V1.0</data_set_id>
+        <data_set_name>MSL MARS NAVIGATION CAMERA 5 RDR MOSAIC V1.0</data_set_name>
+        <data_set_release_date>2014-03-17</data_set_release_date>
+        <start_time>2012-01-01T12:34:56.789Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JUSTIN MAKI</producer_full_name>
+        <citation_text>
+            Maki, Justin, MSL Mars Navcam Mosaic Images RDR V1.0, NASA
+            Planetary Data System, MSL-M-NAVCAM-5-RDR-MOSAIC-V1.0, 2012.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Science Laboratory Navigation Camera Mosaic Images, Reduced
+            Data Record, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set contains images where  multiple frames are mosaicked
+    into a single RDR product. The methods for this process are applied
+    by the Multimission Instrument Processing Lab (MIPL) under the
+    Operational Product Generation Subsystem (OPGS), associating projections
+    with the mosaicking process. It should be noted that governing methods
+    and software can differ between OPGS and other operations subsystems or
+    science instrument teams. For additional information about mosaic
+    processing, including the purpose and content of ancillary files,
+    consult the MSL_CAMERA_SIS.PDF in the DOCUMENT directory of this volume.
+ 
+ 
+  Products
+  ==========
+    Below is a high level description of the types of mosaics produced to
+    support MSL rover operations:
+ 
+    - Cylindrical Projection: images are overlaid onto azimuth and
+      elevation grid lines. In this case each pixel represents a fixed angle
+      in azimuth and elevation. Rows are of constant elevation in the
+      selected Mars coordinate frame. Optionally, individual frame boundries
+      may be super-imposed and annotated by number.
+ 
+ 
+    - Camera Point Perspective: a perspective projection from a synthetic
+      camera, behaving as if the camera had a much larger field of view.
+      Point-perspective mosaics give the most natural view of small areas,
+      and are suitable for stereo viewing, but cannot be used for large
+      fields of view.  For MSL, this type of mosaic is typically computed
+      in Rover Frame, and thus may have a tilted horizon if the rover was not
+      level.
+ 
+    - Cylindrical-Perspective Projection: used for large stereo panoramas,
+      and work across a full 360 degrees of azimuth.  Stereo is preserved
+      because a baseline separation is maintained between the camera eyes
+      at different azimuths.
+ 
+    - Polar Projection: provide a quasi-overhead view that still allows
+      viewing all the way to the horizon.  Nadir is at the convergent
+      center and the horizon is corrected for lander tilt.
+ 
+    - Vertical Projection: provide a view of the surroundings as if you were
+      looking straight down.  They are useful for establishing environmental
+      context or comparing with orbital imagery, but suffer from severe
+      distortion with any variance of the scene from the surface model. In
+      particular, rocks appear elongated, and terrain is not taken into
+      account.
+ 
+    - Orthographic Projection: this type of mosaic is a generalization
+      of the vertical projection. It differs in that an arbitrary axis of
+      projection (as well as X- and Y-axes in the plane of projection)
+      can be specified.
+ 
+    - Orthorectified Projection: used to show a &apos;true&apos; view of the scene
+      from a different point of view, without distortion due to parallax.
+      The point of view is usually overhead, resulting in an image suitable
+      for comparison with satellite imagery.  The removal of parallax leads
+      to gaps in the mosaic, which do not occur in other projections.
+ 
+    - Non-image Mosaics: Normally mosaics are created using imagery, where
+      each pixel is either a raw or radiometrically corrected intensity value.
+      However, mosaics can be created using other types of pixels, e.g. XYZ,
+      surface normal (UVW), range or slope.  Any projection may be used, and
+      all output values must be defined in the same coordinate system.
+ 
+  Data
+  ====
+    The mosaics are typically 1 or 3 banded 16-bit signed integer or floating
+    point files - the actual format matches the format of the input data.
+    Each mosaic has a dual ODL3/VICAR label attached to the binary file,
+    accompanied by a detached PDS3 label.
+ 
+  Software
+  ========
+    The MIPL Mars Program Suite was used to generate these mosaics.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

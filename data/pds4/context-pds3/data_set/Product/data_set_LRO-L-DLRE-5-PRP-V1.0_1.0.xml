@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-5-prp-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO DLRE 5 POLAR RESOURCE PRODUCT</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:dlre.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-5-prp-v1.0__browserp_lro-l-dlre-5-prp-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-5-prp-v1.0__dvo_geo_lro-l-dlre-5-prp-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-5-prp-v1.0__pds.geo.lro.orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Paige, D.A., et al., Diviner Lunar Radiometer Observations of Cold Traps in the
+                   Moon&apos;s South Polar Region, Science, 330:479-482, 2010.
+            </reference_text>
+            <description>reference.PAIGEETAL2010</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-DLRE-5-PRP-V1.0</data_set_id>
+        <data_set_name>LRO DLRE 5 POLAR RESOURCE PRODUCT</data_set_name>
+        <data_set_release_date>2011-03-15</data_set_release_date>
+        <start_time>2009-07-05T16:50Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>DAVID PAIGE</producer_full_name>
+        <citation_text>
+            Paige et al., LRO DLRE LEVEL 5 PRP V1.0, NASA Planetary Data
+            System, LRO-L-DLRE-5-PRP-V1.0, 2011.
+        </citation_text>
+        <data_set_terse_desc>
+            LRO DLRE PRP, thermal model fits to first mapping year Diviner
+            polar observations
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set consists of the Diviner Lunar Radiometer Experiment
+            Polar Resource Products also known as PRPs. The DLRE is a surface
+            pushbroom mapper that measures emitted thermal radiation and
+            reflected solar radiation from the surface of the moon. Two
+            Diviner solar channels measure 0.3-3 micrometers reflected solar
+            radiation. Three Diviner channels near 8 micrometers classify
+            regolith mineralogy by mapping the location of the Christiansen
+            feature. The remaining four Diviner channels measure surface
+            temperature in four spectral bands ranging from 12.5 micrometers
+            to beyond 200 micrometers.
+        </abstract_desc>
+        <data_set_desc>
+ 
+-------------------------------------------------------------------------+
+ 
+Data Product Overview
+=====================
+ 
+The Diviner NASA Level 4 Polar Resource Products (PRP) are produced from
+thermal model fits to Diviner north and south polar observations from
+the first year of mapping orbit. The derived quantities are: annual
+average surface temperature, annual maximum surface temperature, and
+depth to water ice permafrost.  The results for the north and south
+polar regions are contained in separate ASCII files.  Each line of the
+file corresponds to a triangular mesh element in a north or south polar
+digital elevation model derived from the Kaguya laser altimeter
+experiment results (Araki et al., Science 223, 897, 2009). The mesh
+consists of 288000 triangles and covers a square region centered on the
+pole to 80 degrees latitude. The model approach and model parameters used
+generate the PRP are described in Paige et al. Science 330, 497 (2010) and
+in the online supporting material associated with this publication. The
+north polar PRP&apos;s  were produced using the same datasets, modeling
+approach and model parameters as the south polar PRP.
+ 
+ 
+Data Processing Level
+=====================
+ 
+The Diviner PRP data products are derived from models and parameters
+Diviner Reduced Data Record (RDR) data products.
+PRPs are CODMAC Level 5 (NASA Level 4).
+ 
+ 
+Data Product Generation
+=======================
+ 
+The Diviner PRP data products and labels are generated by the
+Diviner Science Team at UCLA.
+ 
+Data Flow
+=========
+ 
+The Diviner PRPs will be made available via a data release
+on March 15, 2011, six months after the end of the first year
+of mapping orbit.
+ 
+For more information please see the document DP_SIS.HTM
+(HTML format) or DP_SIS.PDF (Adobe Acrobat format) located
+in the DOCUMENT directory of this archive.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Review
+======
+ 
+This archival data set was examined by a peer review panel prior to
+its acceptance by the Planetary Data System (PDS). The peer review
+was conducted in accordance with PDS procedures.
+ 
+Prior to creation of the final version of the archival data set,
+key elements of the archive were distributed for preliminary
+review.  These included electronic versions of example PDS labels,
+CATALOG files, and Software Interface Specifications (SISs).
+These materials were distributed to PDS personnel, the experiment
+investigator, and others, as appropriate.
+ 
+ 
+ 
+Known Issues
+============
+ 
+None.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

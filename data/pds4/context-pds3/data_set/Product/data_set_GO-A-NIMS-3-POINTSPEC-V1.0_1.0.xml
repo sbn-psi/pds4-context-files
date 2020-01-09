@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-a-nims-3-pointspec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NIMS RADIANCE POINT SPECTRA OF IDA AND DACTYL V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nims.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.243_ida::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.asteroid::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.dactyl_ida_i::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-a-nims-3-pointspec-v1.0__browserp_go-a-nims-3-pointspec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Carlson, R.W., P.R. Weissman, W.D. Smythe, J.C. Mahoney, and the NIMS Science
+                   and Engineering Teams, Near-Infrared Mapping Spectrometer Experiment on
+                   Galileo, Space Science Reviews 60: 457-502, 1992.
+            </reference_text>
+            <description>reference.CARLSONETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Carlson, R.W., P.R. Weissman, M. Segura, L.W. Kamp, W. Smythe, and 9 others,
+                   Infrared imaging spectroscopy of asteroid 243 Ida and discovery spectra of
+                   satellite 1993 (243) 1, Bulletin of the American Astronomical Society 26, 1156,
+                   1994.
+            </reference_text>
+            <description>reference.CARLSONETAL1994</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-A-NIMS-3-POINTSPEC-V1.0</data_set_id>
+        <data_set_name>NIMS RADIANCE POINT SPECTRA OF IDA AND DACTYL V1.0</data_set_name>
+        <data_set_release_date>2013-06-14</data_set_release_date>
+        <start_time>1993-08-28T14:57:59Z</start_time>
+        <stop_time>1993-08-28T16:49:33Z</stop_time>
+        <producer_full_name>JAMES GRANAHAN</producer_full_name>
+        <citation_text>
+            Granahan, J.C., NIMS Radiance Point Spectra of Ida and Dactyl
+            V1.0. GO-A-NIMS-3-POINTSPEC-V1.0. NASA Planetary Data System,
+            2013.
+        </citation_text>
+        <data_set_terse_desc>
+            Radiometrically corrected point spectra of asteroid 243 Ida and a
+            spectrum of the asteroid satellite Dactyl (Ida I) acquired by
+            Galileo NIMS on August 28, 1993.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data volume contains radiometrically corrected point spectra
+            of asteroid 243 Ida and a spectrum of the asteroid satellite
+            Dactyl (Ida I) as acquired by the Galileo spacecraft Near
+            Infrared Mapping Spectrometer (NIMS) on August 28, 1993. They
+            record the spectra collected as the Galileo spacecraft approached
+            the 243 Ida system. These data are products of the calibration of
+            the raw data number files idu002tn.qub, idu005tn.qub,
+            idu006tn.qub, idu007tn.qub, idu019tn.qub, idu020tn.qub,
+            idu022tn.qub, idu028tn.qub, idu032tn.qub, idu033tn.qub, and
+            idu035tn.qub (DATA SET ID =&apos;GO-A-NIMS-3-TUBE-V1.0&apos;)
+            with calibration factors acquired during the Jovian tour of the
+            Galileo mission. These raw data .qub files are archived in the
+            Imaging Node of the NASA Planetary Data System (PDS). The
+            calibrated spectra consist of radiance and incidence/flux
+            measurements for wavelengths between 0.7 - 5.2 micrometers.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    243 Ida radiance Near Infrared Mapping Spectrometer point spectra data
+    description
+ 
+    1    -    INTRODUCTION
+ 
+    This data volume contains a radiometrically corrected point spectra of
+    asteroid 243 Ida and a spectrum of the asteroid satellite Dactyl as
+    acquired by the Galileo spacecraft Near Infrared Mapping Spectrometer
+    (NIMS, Carlson et al., 1992) on August 28, 1993 (Carlson et al., 1994).
+    They record the spectra collected as the Galileo spacecraft approached the
+    243 Ida system. These data are products of the calibration of the raw data
+    number files idu002tn.qub, idu005tn.qub, idu006tn.qub, idu007tn.qub,
+    idu019tn.qub, idu020tn.qub, idu022tn.qub, idu028tn.qub, idu032tn.qub,
+    idu033tn.qub, and idu035tn.qub (DATA SET ID =&apos;GO-A-NIMS-3-TUBE-V1.0&apos;) with
+    calibration factors (DATA SET ID = &apos;GO-J-NIMS-4-MOSAIC-V1.0&apos;) acquired
+    during the Jovian tour of the Galileo mission.  These raw data .qub files
+    are archived in the Imaging Node of the NASA Planetary Data System (PDS).
+    These calibrated spectra consist of radiance and incidence/flux
+    measurements for wavelengths between 0.7 - 5.2 micrometers.  The data
+    files are named by combining the target name, the Galileo spacecraft clock
+    value at the start of the observation, and the data product type.  For
+    instance &apos;ida2025514radiance.tab&apos; is a combination of the target name
+    &apos;Ida&apos;,  the spacecraft clock time of &apos;2025514&apos;, and the &apos;radiance&apos; data
+    type.  The .tab suffix indicates that the file is a PDS formatted text
+    table file.  The &apos;reflectance&apos; data type refers to files that contain
+    incidence/flux spectra.
+ 
+    2    -     DATA OVERVIEW TABLE
+ 
+    File                        Bands  Object  Observation Target
+                                                Start(UT)  Distance(km)
+    ida2025514radiance.tab        17   243 Ida  14:57:59   83244.2
+    ida2025514reflectance.tab     17   243 Ida  14:57:59   83244.2
+    ida2025537radiance.tab        17   243 Ida  15:21:13   66040.8
+    ida2025537reflectance.tab     17   243 Ida  15:21:13   66040.8
+    ida2025541radiance.tab        17   243 Ida  15:25:25   64069.1
+    ida2025541reflectance.tab     17   243 Ida  15:25:25   64069.1
+    ida2025552radiance.tab        17   243 Ida  15:37:07   55639.0
+    ida2025552reflectance.tab     17   243 Ida  15:37:07   55639.0
+    ida2025560radiance.tab        17   243 Ida  15:44:29   33021.8
+    ida2025560reflectance.tab     17   243 Ida  15:44:29   33021.8
+    ida2025564radiance.tab        17   243 Ida  15:48:39   47087.6
+    ida2025564reflectance.tab     17   243 Ida  15:48:39   47087.6
+    ida2025587radiance.tab        17   243 Ida  16:11:57   29819.8
+    ida2025587reflectance.tab     17   243 Ida  16:11:57   29819.8
+    ida2025605radiance.tab        379  243 Ida  16:29:54   14694.7
+    ida2025605reflectance.tab     379  243 Ida  16:29:54   14694.7
+    ida2025609radiance.tab        396  243 Ida  16:33:53   12689.3
+    ida2025609reflectance.tab     396  243 Ida  16:33:53   12689.3
+    ida2025612radiance.tab        51   243 Ida  16:37:45   10356.6
+    ida2025612reflectance.tab     51   243 Ida  16:37:45   10356.6
+    dactyl2025622radiance.tab     17   Dactyl   16:47:45   3957.0
+    dactyl2025622reflectance.tab  17   Dactyl   16:47:45   3957.0
+ 
+    3    -     GALILEO MISSION DESCRIPTION
+ 
+    Galileo was a mission to Jupiter to perform long-term studies of the
+    Jovian atmosphere and detailed studies of the Galilean satellites (Jet
+    Propulsion Laboratory Interoffice Memorandum GLL-NAV-92-90, 1992).  It
+    consisted of a two part spacecraft, an orbiter and an atmospheric probe.
+    Both components were launched from the space shuttle Atlantis on October
+    18, 1989. The orbiter contained remote sensing, particles, and wave
+    sensors.  The remote sensing instruments included the Solid State Imager
+    and the Near Infrared Mapping Spectrometer.  The atmospheric probe
+    contained in-situ sensors to directly measure the atmosphere of Jupiter.
+    The Galileo spacecraft encountered Venus (February 10, 1990), the Earth
+    Moon system (December 8, 1990 and December 8, 1992), asteroid 951 Gaspra
+    (October 29, 1991), asteroid 243 Ida (August 28, 1993) before entering the
+    orbit of Jupiter on December 8, 1995.  This data set is from the asteroid
+    243 Ida encounter. The Galileo mission investigated the Jovian system by
+    deploying its atmospheric probe on July 13, 1995 and conducting
+    observations until plunged into Jupiter on September 21, 2003.
+ 
+    4    -     INSTRUMENT DESCRIPTION
+ 
+    The Near Infrared Mapping Spectrometer (Carlson et al., 1992) instrument
+    was an imaging spectrometer covering the wavelength region 0.7 to 5.2
+    micrometers.  Its spectral resolution is 0.025 micron beyond 1 micron, and
+    0.0125 microns below 1 micron, yielding 204 spectral elements in nominal
+    mode.  The nominal pixel size is a square 0.5 x 0.5 milliradians.  The
+    instrument acquires data in the order: (1) sampling of 17 detectors, (2)
+    stepping of the scan mirror (20 elements in cross-cone), (3) stepping of
+    the grating (nominally 12 steps per cycle).  The nominal 204 wavelength
+    cycle requires 4 1/3 seconds.  The detectors (2 silicon, 15 indium
+    antimonide) sample approximately uniformly across the spectrum.  The
+    stepping of the grating provided NIMS with a variety of spectral data
+    collection modes that ranged from 17 channels (no grating step movements)
+    to 408 channels (24 grating step movements).
+ 
+    5   -      243 IDA ASTEROID ENCOUNTER NIMS OBSERVATIONS
+ 
+    The Galileo spacecraft performed a flyby encounter of the 243 Ida asteroid
+    system with its closest approach occurring at 16:52:04 on August 28, 1993
+    UTC.  The closest approach was at 243 Ida&apos;s dark
+    side, 75 degrees south ecliptic latitude, at a 2400 kilometer range.
+ 
+    NIMS conducted two types of science observations; the rotation
+    observations and the &apos;close-in&apos; observations. The rotation portion covered
+    approximate 390 degrees of 243 Ida rotation starting at -322 rims from
+    closest approach. A rim is a unit of Galileo spacecraft clock time that is
+    60 2/3 seconds in length.  NIMS acquired samples every 90 degrees (17 and
+    408 channel modes), 30 degrees (102 channel mode), and 15 degrees (102
+    channel mode) of rotation. The &apos;close-in&apos; portion covers from -28 rims
+    prior to closest approach (the end of the rotation observations) to 1 rim
+    after closest approach. At -28 rims and -22 rims, NIMS acquired two 204
+    channel mode samples. At -11 rims before closest approach, NIMS observed
+    243 Ida in the 102 channel mode to determine asteroid composition. From -5
+    rims to 1 rim, collaborative NIMS and Galileo Solid State Imager (SSI)
+    observations were taken; NIMS acquires data in a 17 channel mode at the
+    highest spatial resolution possible for the  243 Ida Encounter. NIMS also
+    rode along in the 17 channel mode on additional SSI observations from -1
+    to +1 Rim to obtain the highest possible spatial resolution data on the
+    asteroid.  Radiometric and photometric calibration observations were
+    conducted by NIMS after the completion of the science observation
+    sequence.
+ 
+    The products in this data volume are a subset of the spatially unresolved
+    NIMS observations of the 243 Ida system.  The Galileo mission at the time
+    of the 243 Ida encounter did not have an operational high gain antenna to
+    relay the data back to Earth.  The observations were recorded to a
+    spacecraft tape recorder a played back to Earth.  A subset of the
+    collected NIMS data was relayed back to Earth.  The data set was further
+    reduced in number by calibrating only the data that had significant target
+    signal.  The number of spectral channels was also reduced to those that
+    could be calibrated. This reduction was primarily due to the erroneous
+    scan platform motion that occurred during the 243 Ida encounter.  This
+    motion offset asteroid 243 Ida in the NIMS aperture/slit during the sensor
+    scan sequence.  This motion resulted in a varying intensity of the 243 Ida
+    signal as the NIMS sensor collected data. In these instances, only the
+    data from the first grating step were calibrated.
+ 
+ 
+    6   -      DATA FILE FORMAT DESCRIPTION
+ 
+    The data files for the 243 Ida radiance Near Infrared Mapping Spectrometer
+    point spectra are ASCII (American Standard Code for Information
+    Interchange) text files.  Each data file contains columns of floating
+    point numeric values separated by spaces.  The radiance files consist of
+    columns of wavelength values (micrometers), radiance
+    (microwatts*centimeters**-2*steradians** -1*micrometers**-1), and
+    instrument radiance precision (microwatts*centimeters**-2*steradians**
+    -1*micrometers**-1).  The reflectance files consist of columns of
+    wavelength values (micrometers), reflectance (a ratio of incidence/flux),
+    and instrument reflectance precision (a ratio of incidence/flux precision
+    values).  The calibration files consist of columns of wavelength values
+    (micrometers), sensitivity
+    (micrometers*steradians*centimeters**2*microwatts**-1), and dark values
+    (data number). The solar files consist of columns of wavelength values
+    (micrometers), and solar radiance (microwatts*centimeters**-2*steradians**
+    -1*micrometers**-1).
+ 
+    7   -    DATA PROCESSING HISTORY
+ 
+    The radiance data in this data volume are derived from archived NIMS
+    spectral images files available from the NASA PDS Imaging Node.  The 243
+    Ida and Dactyl NIMS observations are archived in the Imaging Node as
+    spectral image files of data number or instrument count values (DATA SET
+    ID =&apos;GO-A-NIMS-3-TUBE-V1.0&apos;). These data number values were converted into
+    radiance using the following equation: radiance value = (data number value
+    - dark value)/sensitivity value. The dark value was determined through an
+    average of background sky pixels for the observation.  The sensitivity
+    value was obtained from recorded values used to process the NIMS
+    observations of the Jupiter satellites Europa and Ganymede (DATA SET ID =
+    &apos;GO-J-NIMS-4-MOSAIC-V1.0&apos;) that employed the same instrument collection
+    modes and gains as the 243 Ida observations. The reflectance or
+    incidence/flux values were calculated through a ratio of the radiance
+    spectra over solar radiance spectrum. These reflectance values were scaled
+    by a pixel fill factor determined by the coverage of a NIMS pixel by the
+    aspect of the target as imaged by the Galileo Solid State Imager. The
+    solar radiance spectra were created through an application of the inverse
+    square law of radiance propagation to solar values archived in a NIMS Io
+    observation (DATA SET ID = &apos;GO-J-NIMS-4-MOSAIC-V1.0&apos;).  The inverse square
+    law was used to convert the solar radiance values at Io&apos;s distance to
+    those that would be observed at asteroid 243 Ida. The point spectra in
+    this data volume are the radiance or incidence/flux values of the single
+    pixel in the processed spectral image that contained data from the
+    spatially unresolved 243 Ida or Dactyl.  File specific processing
+    information can be found in the following paragraphs of this section.
+ 
+    The file ida2025514radiance.tab is derived from DN values from line 5
+    sample 11 in PDS file IDU019TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file G2C002CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025514calib.tab contains the calibration values from the PDS
+    file G2C002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025514radiance.tab.
+ 
+    The file ida2025514reflectance.tab is derived by a ratio of radiance
+    values from ida2025514radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 28%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025514solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025514reflectance.tab.  Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025537radiance.tab is derived from DN values from line 14
+    sample 11 in PDS file IDU020TN.QUB(DATA SET ID =GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file C3E001CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025537calib.tab contains the calibration values from the PDS
+    file C3E001CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025537radiance.tab.
+ 
+    The file ida2025537reflectance.tab is derived by a ratio of radiance
+    values from ida2025537radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 19%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025537solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025537reflectance.tab. Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025541radiance.tab is derived from DN values from line 4
+    sample 11 in PDS file IDU035TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file C3E001CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025541calib.tab contains the calibration values from the PDS
+    file C3E001CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025541radiance.tab.
+ 
+    The file ida2025541reflectance.tab is derived by a ratio of radiance
+    values from ida2025541radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 50%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025541solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025541reflectance.tab. Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025552radiance.tab is derived from DN values from line 6
+    sample 11 in PDS file IDU028TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file C3E001CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025552calib.tab contains the calibration values from the PDS
+    file C3E001CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025552radiance.tab.
+ 
+    The file ida2025552reflectance.tab is derived by a ratio of radiance
+    values from ida2025552radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 100%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025552solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025552reflectance.tab.  Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025560radiance.tab is derived from DN values from line 41
+    sample 12 in PDS file IDU022TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file C3E001CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025560calib.tab contains the calibration values from the PDS
+    file C3E001CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025560radiance.tab.
+ 
+    The file ida2025560reflectance.tab is derived by a ratio of radiance
+    values from ida2025560radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 100%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025560solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025560reflectance.tab.  Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025564radiance.tab is derived from DN values from line 6
+    sample 11 in PDS file IDU032TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0)
+    calibrated with values from the PDS file C3E001CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025564calib.tab contains the calibration values from the PDS
+    file C3E001CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025564radiance.tab.
+ 
+    The file ida2025564reflectance.tab is derived by a ratio of radiance
+    values from ida2025564radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 25%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025564solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025564reflectance.tab.  Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025587radiance.tab is derived from DN values from line 8
+    sample 11 in PDS file IDU033TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file C3E001CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025587calib.tab contains the calibration values from the PDS
+    file C3E001CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025587radiance.tab.
+ 
+    The file ida2025587reflectance.tab is derived by a ratio of radiance
+    values from ida2025587radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 50%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025587solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025564reflectance.tab.  Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025605radiance.tab is derived from DN values from line 4
+    sample 13 in PDS file IDU006TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file G1E003CI.QUB, C3E001CI.QUB, and
+    G7G008CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025605calib.tab contains the calibration values from the PDS
+    files G1E003CI.QUB, C3E001CI.QUB, and G7G008CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0) used to create ida2025605radiance.tab.
+ 
+    The file ida2025605reflectance.tab is derived by a ratio of radiance
+    values from ida2025605radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 100%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025605solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025605reflectance.tab.  Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025609radiance.tab is derived from DN values from line 11
+    sample 13 in PDS file IDU005TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS files G1E003CI.QUB, C3E001CI.QUB, and
+    G7G008CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025609calib.tab contains the calibration values from the PDS
+    files G1E003CI.QUB, C3E001CI.QUB, and G7G008CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0) used to create ida2025609radiance.tab.
+ 
+    The file ida2025609reflectance.tab is derived by a ratio of radiance
+    values from ida2025609radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 100%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025609solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025609reflectance.tab.  Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file ida2025612radiance.tab is derived from DN values from line 4
+    sample 16 in PDS file IDU007TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file G1E003CI.QUB, C3E001CI.QUB, and
+    G7G008CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0).
+ 
+    The file ida2025612calib.tab contains the calibration values from the PDS
+    files G1E003CI.QUB, C3E001CI.QUB, and G7G008CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0) used to create ida2025609radiance.tab.
+ 
+    The file ida2025612reflectance.tab is derived by a ratio of radiance
+    values from ida2025612radiance.tab with solar radiance values derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A 100%
+    pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file ida2025612solar.tab contains the solar radiance derived from the
+    PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    ida2025612reflectance.tab.  Sun and target distances used in the inverse
+    square law calculations to model solar values at the target used the SPICE
+    Tool Kit and the SPICE files s970311a.bsp, naif0008.tls, mips010314.tpc,
+    and mk00062a.tsc.
+ 
+    The file dactyl2025622radiance.tab is derived from DN values from line 5
+    sample 13 in PDS file IDU002TN.QUB (DATA SET ID GO-A-NIMS-3-TUBE-V1.0) and
+    calibrated with values from the PDS file C3E001CI.QUB (DATA SET ID
+    GO-J-NIMS-4-MOSAIC-V1.0).  Position vectors are the values for 243 Ida.
+    Distance and resolution values calculated from Galileo Solid State Imager
+    imagery.
+ 
+    The file dactyl2025622calib.tab contains the calibration values from the
+    PDS file C3E001CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to create
+    dactyl2025622radiance.tab.
+ 
+    The file dactyl2025622reflectance.tab is derived by a ratio of radiance
+    values from dactyl2025622radiance.tab with solar radiance values derived
+    from the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0). A
+    14% pixel fill factor was used based on corresponding Galileo Solid State
+    Imager imagery.
+ 
+    The file dactyl2025622solar.tab contains the solar radiance derived from
+    the PDS file C3I002CI.QUB (DATA SET ID GO-J-NIMS-4-MOSAIC-V1.0) used to
+    create dactyl2025622reflectance.tab.  Sun and target distances used in the
+    inverse square law calculations to model solar values at the target used
+    the SPICE Tool Kit and the SPICE files s970311a.bsp, naif0008.tls,
+    mips010314.tpc, and mk00062a.tsc.
+ 
+ 
+    8   -    POINT SPECTRA SUPPORT INFORMATION
+ 
+    The point spectra support data information can be found in the table file
+    science_index.tab.  This information includes the name of the data file,
+    the name of the source file archived in the Imaging Node of the PDS, the
+    instrument spacecraft mission name, the instrument name, the spacecraft
+    mission phase name, the target of the observation, the instrument
+    observation type/mode, the observation identifier, the observation start
+    and stop time (Universal Time), the observation start and stop time in
+    Julian date, the observation start and stop time as recorded by the
+    spacecraft clock, the instrument to target center distance (kilometers),
+    the target to Sun distance (kilometers),  the spacecraft to Sun position
+    vector in the J2000 reference frame (kilometers), the target to Sun
+    position vector in the J2000 reference frame (kilometers),  the target to
+    Earth distance (kilometers),  the spacecraft to Earth position vector in
+    the J2000 reference frame (kilometers),  the Earth to target position
+    vector in the J2000 reference frame (kilometers), the horizontal pixel
+    scale (kilometers), the vertical pixel scale (kilometers), the observation
+    phase angle (degrees), the Earth to spacecraft state vector in the J2000
+    reference frame (position in kilometers, velocity in kilometers/second),
+    and the Earth to target state vector in the J2000 reference frame
+    (position in kilometers, velocity in kilometers/second). These geometry
+    values were calculated using the SPICE Tool kit and the following SPICE
+    data files: s970311a.bsp, naif0008.tls, mips010314.tpc, and mk00062a.tsc.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    The radiance data in this data volume are in cgs units
+    (microwatts*centimeters**-2*steradians**-1*micrometers**-1).
+ 
+    The reflectance data in this volume was created through a ratio of
+    observed radiance values with modeled solar radiance values.  It does not
+    contain any photometric correction for observation geometry.  The
+    reflectance data products also include target thermal emission
+signatures.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

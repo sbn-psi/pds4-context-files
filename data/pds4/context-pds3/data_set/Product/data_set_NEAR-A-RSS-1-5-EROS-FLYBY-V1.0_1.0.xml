@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-rss-1-5-eros-flyby-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR EROS RADIO SCIENCE DATA SET - EROS/FLYBY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-rss-1-5-eros-flyby-v1.0__browserp_near-a-rss-1-5-eros-flyby-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Yeomans, D.K., P.G. Antreasian, A. Cheng, D.W. Dunham, R.W. Farquhar, R.W.
+                   Gaskell, J.D. Giorgini, C.E. Helfrich, A.S. Konopliv, J.V. McAdams, J.K.
+                   Miller, W.M. Owen, Jr., P.C. Thomas, J. Veverka, and B.G. Williams, Estimating
+                   the mass of asteroid 433 Eros during the NEAR spacecraft flyby, Science, 285,
+                   pp. 560-561, 1999.
+            </reference_text>
+            <description>reference.YEOMANSETAL1999</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-RSS-1/5-EROS/FLYBY-V1.0</data_set_id>
+        <data_set_name>NEAR EROS RADIO SCIENCE DATA SET - EROS/FLYBY V1.0</data_set_name>
+        <data_set_release_date>1999-11-30</data_set_release_date>
+        <start_time>1998-12-04</start_time>
+        <stop_time>1999-01-03</stop_time>
+        <producer_full_name>JON D. GIORGINI</producer_full_name>
+        <citation_text>
+            Yeomans D.K., Giorgini J.D., A. Konopliv, and E. Grayzeck, NEAR
+            EROS RADIO SCIENCE DATA SET - EROS/FLYBY V1.0,
+            NEAR-A-RSS-1/5-EROS/FLYBY-V1.0, NASA Planetary Data System, 1999.
+        </citation_text>
+        <data_set_terse_desc>
+            The NEAR Eros Radio Science Data Set is a time-ordered collection
+            of raw and partially processed data collected during the NEAR
+            flyby of minor planet 433 Eros.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The NEAR Eros Radio Science Data Set is a time-ordered collection
+            of raw and partially processed data collected during the NEAR
+            flyby of minor planet 433 Eros.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Near Earth Asteroid Rendevous (NEAR) Eros Radio Science
+      (RS) Data Set is a time-ordered collection of raw and partially
+      processed data collected during the NEAR flyby of minor planet
+      433 Eros. For more information on the investigation conducted,
+      including mass determinations results, see [YEOMANSETAL1999].
+ 
+      Only data collected in the span after the engine abort anomaly,
+      (with resumption of two-way lock-up Dec 21, 1998) and prior to
+      DSM-2 burn January 3, 1999 was used for the mass estimation.
+      The radio data also supported NEAR Navigation.
+ 
+      The data set includes:
+ 
+        Directory   Description
+        ---------   -----------
+           ODF      Orbit Data Files containing closed-loop (two-way)
+                     Doppler and sequential range measurements.
+           EOP      Earth-Orientation Parameter file
+           ION      Ionosphere calibration file
+           TRO      Troposphere calibration file
+           TXT      Text files describing physical model inputs
+                      and estimated solution parameters
+ 
+      Typical users of these data might analyze range and Doppler
+      measurements in the ODF to derive the NEAR trajectory during
+      the flyby.
+ 
+ 
+    Parameters
+    ==========
+      The ODF contains the most important information (range and
+      Doppler) needed by spacecraft navigators and those interested
+      in determining gravitational parameters of Eros. Each ODF
+      is accompanied by a full PDS label which describes both the
+      content and format of the associated file.  ODF data types
+      can include those listed below. Only those marked below with an
+      asterisk are present in this data set ODF.
+ 
+           Narrowband spacecraft VLBI, Doppler mode (cycles)
+           Narrowband spacecraft VLBI, phase mode (cycles)
+           Narrowband quasar VLBI, Doppler mode (cycles)
+           Narrowband quasar VLBI, phase mode (cycles)
+           Wideband spacecraft VLBI (nanoseconds)
+           Wideband quasar VLBI (nanoseconds)
+        *  One-way Doppler (Hertz)
+        *  Two-way Doppler (Hertz)
+        *  Three-way Doppler (Hertz)
+           One-way total count phase (cycles)
+           Two-way total count phase (cycles)
+           Three-way total count phase (cycles)
+           PRA planetary operational discrete spectrum range (range
+                units)
+        *  SRA planetary operational discrete spectrum range (range
+                units)
+           RE[GSTDN] range (nanoseconds)
+           Azimuth angle (degrees)
+           Elevation angle (degrees)
+           Hour angle (degrees)
+           Declination angle (degrees)
+           X angle (where +X is east) (degrees)
+           Y angle (where +X is east) (degrees)
+           X angle (where +X is south) (degrees)
+           Y angle (where +X is south) (degrees)
+ 
+ 
+    Processing
+    ==========
+      ODF&apos;s are screened for &apos;bad&apos; data points, which are removed
+      prior to analysis by the navigation or radio science teams.
+ 
+    Data
+    ====
+      ODFs were issued approximately daily prior to the NEAR Eros
+      flyby, more often after the engine abort recovery.
+ 
+      These ODFs are stored in the ODF directory. File name is of the
+      form  ydddeeeC.ODF  where y  is the one-digit year (1990s
+      implicit) of the first data, ddd is the three-digit day-of-year
+      of the first data,  eee  is the three-digit day-of-year of the
+      last data. Symbol C denotes an alphabetic character
+      distinguishing separate files issued during the same day.
+ 
+    Ancillary Data
+    ==============
+      Ancillary files are needed for proper analysis and
+      interpretation of the radio data (file type ODF).   These are
+      organized in parallel directories and stored approximately
+      chronologically.
+ 
+ 
+      Earth Orientation Parameter Files (EOP Directory)
+      ---------------------------------------------------
+        Earth Orientation Parameter files are produced by the Time
+        and Earth Motion Precision Observation (TEMPO) Group at JPL.
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        File names have the form  ydddzeee.EOP  where  y  is
+        the one-digit year of the first data in the file,  ddd  is
+        the day-of-year of the first data in the file,  z  is the
+        one-digit year of the last data, and  eee  is the day-of-year
+        of the last data in the file.  The file covers the most recent
+        nine months of past motion and a prediction for three months
+        into the future; these files are typically 30 KB.  Each EOP
+        file is accompanied by a PDS minimal label with file name
+        ydddzeee.LBL.
+ 
+ 
+      Ionosphere Calibration Files (ION Directory)
+      ---------------------------------------------------
+        Ionosphere Calibration files are produced by the
+        Tracking System Analytic Calibration (TSAC) Group at JPL.
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        File names have the form  ydddeeeC.ION  where  y  is
+        the one-digit year of the first data in the file,  ddd  is
+        the day-of-year of the first data in the file,  eee  is the
+        day-of-year of the last data in the file, and  C  is a
+        character denoting sequence when more than one file with the
+        same  ydddeee  is handled.  C  starts from &apos;A&apos; and progresses
+        to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers of similar coverage
+        files.  Frequently, ION files are released at one week
+        intervals to cover a single month;  ydddeeeA.ION  would be
+        the file released during the first week,  ydddeeeB.ION  would
+        be the file released during the second week, etc.  The files
+        archived here are monthly files that contain actuals for the
+        previous month. Each ION file is accompanied by a PDS minimal
+        label with file name ydddeeeC.LBL.  Typical file sizes are
+        less than 50 kB.
+ 
+ 
+      Troposphere Calibration Files (TRO Directory)
+      ---------------------------------------------------
+        Troposphere Calibration files are produced by the
+        Tracking System Analytic Calibration (TSAC) Group at JPL.
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        File names have the form  ydddeeeC.TRO  where  y  is
+        the one-digit year of the first data in the file,  ddd  is
+        the day-of-year of the first data in the file,  eee  is the
+        day-of-year of the last data in the file, and  C  is a
+        character denoting sequence when more than one file with the
+        same  ydddeee  is handled.  C  starts from &apos;A&apos; and progresses
+        to &apos;B&apos;, &apos;C&apos;, etc. with increasing numbers of similar coverage
+        files.  TRO files are typically released at the beginning of
+        a month and cover the previous.  Each TRO file is accompanied
+        by a PDS minimal label with file name  ydddeeeC.LBL.  Typical
+        file sizes are less than 50 kB.
+ 
+ 
+      Text Files (TXT Directory)
+      --------------------------
+        Two file types are included in the TXT directory. The first
+        type is NMLMODL.TXT and is accompanied by a minimal PDS label
+        NMLMODL.LBL. It is the nominal set of namelist parameters
+        used to define physical characteristics of the spacecraft&apos;s
+        motion and tracking observables used by the JPL orbit
+        determination software suite.  The second file is
+        PARAMSUM.TXT, accompanied by minimal PDS label PARAMSUM.LBL,
+        which is a summary of the estimated (solved-for) parameter
+        set. GM9 is the solved-for Eros GM in units of km^3/s^2.
+ 
+    Coordinate System
+    =================
+      Analysis was conducted in the frame of the DE-403 solar system
+      model, aligned with the 1993 ICRF/J2000 reference frame.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at several institutions and elsewhere.
+      Because such software must usually operate at the bit-level and
+      is written for a narrow range of platforms, it is not suitable
+      for general distribution.  No software is included with this
+      archival data set.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been processed as part of
+      the activities of the NEAR Radio Science Team. In general, this
+      is a weak to fair data set. The principal limitation is the
+      small amount of data prior to the flyby and immediately after a
+      large, unknown delta-v thrust anomaly.
+ 
+    Review
+    ======
+      This archival data set was reviewed by the NEAR Radio Science
+      Team prior to submission to the Planetary Data System (PDS).
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications.  These materials were distributed to PDS
+      personnel, the experiment investigator, and others,
+      as appropriate.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Significant events for Radio Science during Eros Flyby are
+      as follows:
+ 
+         START           STOP
+    YY/DDD UTC Time  YY/DDD UTC Time Comments
+    ------ --------  ------ -------- ----------------
+    98/354 22:00:00  98/354 22:03:20 Rendevous-1 settling burn
+    98/354 22:03:20  98/355 06:40:00 Anomaly; unknown thrust vector(s)
+    98/356 08:06:00                  Resume two-way Doppler (ERT)
+    98/357 19:43:00                  Eros close-approach
+    98/359 02:54:00                  Resumption of SRA data (ERT)
+    99/003 17:00:00                  DSM-2 maneuver
+ 
+    Limitations
+    ===========
+      The limitations in this data set derive from tracking geometry
+      and measurement data types. There are no known defects in the
+      data.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>1996-008A-5</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

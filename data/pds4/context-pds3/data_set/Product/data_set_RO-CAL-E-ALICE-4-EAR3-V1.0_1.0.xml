@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-cal-e-alice-4-ear3-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER CAL/EARTH ALICE 4 EAR3 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:alice.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-cal-e-alice-4-ear3-v1.0__browserp_ro-cal-e-alice-4-ear3-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Stern, S.A., D.C. Slater, J. Scherrer, J. Stone, M. Versteeg, M.F. A&apos;Hearn,
+                   J.L. Bertaux, P.D. Feldman, M.C. Festou, J.W. Parker, and O.H.W. Siegmund,
+                   Alice: The Rosetta Ultraviolet Imaging Spectrograph, Space Sci. Rev., 128(1-4),
+                   507-527, Feb 2007.
+            </reference_text>
+            <description>reference.STERNETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-CAL/E-ALICE-4-EAR3-V1.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER CAL/EARTH ALICE 4 EAR3 V1.0</data_set_name>
+        <data_set_release_date>2010-12-17</data_set_release_date>
+        <start_time>2009-09-18T02:01:06.914Z</start_time>
+        <stop_time>2009-11-07T10:15:42.11Z</stop_time>
+        <producer_full_name>ANDREW J. STEFFL</producer_full_name>
+        <citation_text>
+            Stern, S. A., et al., ROSETTA-ORBITER CAL/EARTH ALICE 4 EAR3 V1.0
+            RO-CAL/E-ALICE-4-EAR3-V1.0, NASA Planetary Data System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Reformatted, calibrated instrument data from the Rosetta Orbiter
+            ALICE instrument during the EAR3 mission phase
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains CODMAC level 4 data acquired by the
+            Rosetta Orbiter ALICE UV Spectrometer during the third earth
+            flyby mission phase, which took place between 2009-09-14 and
+            2009-12-13.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Required Reading
+  ================
+ 
+    The format of all Alice data are described in detail by the EAICD
+    document located in the /DOCUMENT directory. In addition, the
+    Rosetta Alice logbook file, RA_LOGBOOK_NNN.ASC, also located in
+    the DOCUMENT directory provides observational details such as
+    observation target, commanded exposure time, etc., for all Alice
+    data. The Alice team strongly recommends reading this
+    documentation before using the data.
+ 
+ 
+  Data Set Overview
+  =================
+ 
+    This data set contains reformatted, calibrated data acquired by
+    the Rosetta Orbiter ALICE UV Spectrometer during the Earth
+    Swing-by 3 mission phase, which took place between 2009-09-14 and
+    2009-12-13. It also includes data from Payload Checkout 10. A
+    detailed listing of all Alice observations is given in the
+    observation log file located in the DOCUMENT directory.
+ 
+    The following Alice observations were made during the period
+    covered by this data set:
+ 
+#
+# Payload Checkout #10 (PC10)
+# 2009 September 18 - October 8
+# Alice activity overview:
+#   * 2009 Sep 18 02:15 - AL01 (passive checkout; 2 hr)
+#   * 2009 Sep 18 04:00 - AL02A (initial decontamination; 25 hr, 22hr
+ heater + 3hr cooldown)
+#   * 2009 Sep 19 05:45 - Alice interference test repeat with MIRO,
+ OSIRIS, VIRTIS (15 min)
+#   * 2009 Sep 19 06:25 - AL04 (HV/Discriminator test [alf Gru]; 22hr
+ 40min)
+#   * 2009 Sep 20 05:10 - AL03B (Cal Star, Narrow Center [alf Gru]; 1
+ hr)
+#   * 2009 Sep 20 07:30 - AL11 (Stellar Flat field Scan [alf Gru]; 5
+ hr 25 min)
+#   * 2009 Sep 20 14:50 - AL99A (flight software patch, v2.07; 45 min)
+#   * 2009 Sep 24 10:00 - GO/NOGO for remaining Alice operations based
+ on results of AL99A patch
+#   * 2009 Sep 25 23:55 - AL99B (validation test of flight software
+ patch, v2.07; 2hr)
+#   * 2009 Sep 26 02:10 - AL03A (Cal Star, Narrow Center [Vega]; 1hr)
+#   * 2009 Sep 26 05:05 - AL06B, AL08B (Cal Star, Wide Bottom &amp; Top
+ [alf Gru]; 2 hr 10 min)
+#   * 2009 Sep 26 07:10 - AL09A/B/C (Alignment with OSIRIS [alf Gru];
+ 4 hr 15 min)
+#   * 2009 Sep 26 12:25 - AL03D/E/F/G (Deadtime cal [zet Cas, HD
+ 57682, BD +28 4211, G191 B2B, eta Uma]; 8 hr 25 min)
+#   * 2009 Sep 27 22:45 - AL03H (Cal star &amp; Deadtime Check [eps Ori];
+ 30 min)
+#   * 2009 Sep 29 06:15 - AL10D/E/I (Perpetual Pixel List cal [HD
+ 57682, BD +28 4211, 10 Lac]; 2 hr 23 min)
+#   * 2009 Sep 30 02:25 - AL07 (darks; 3 hr)
+#   * 2009 Sep 30 05:25 - AL02B (final decontamination; 25 hr, 22hr
+ heater + 3hr cooldown)
+ 
+ 
+#
+# Earth Swingby #3 (ESB3)
+# 2009 November 06 - 19
+# Alice activity overview:
+# * 2009 Nov 06, 22:00 - AL01: Passive Checkout (2 hr) without door
+ performance test
+# * 2009 Nov 07, 00:00 - AL02A: Decontamination (25 hr)
+# * 2009 Nov 08, 01:10 - AL10: Darks (2hr)
+# * 2009 Nov 08, 03:10 - AL11A: Boresight determination of the remote
+ sensing instruments (4 hr)
+# * 2009 Nov 10, 18:30 - AL03A: stellar cal; alp Gru (1 hr)
+# * 2009 Nov 10, 20:30 - AL03B: stellar cal; Vega (1 hr)
+# * 2009 Nov 11, 22:30 - AL12: Ride along with OSIRIS Earth
+ observations (24 hr)
+# * 2009 Nov 13, 01:25 - AL13: Ride along with OSIRIS Earth
+ observations and HEET data (5 hr 40 mn)
+# * 2009 Nov 13, 07:15 - AL20: HEET mode (45 mn)
+# * 2009 Nov 13, 07:45 - Earth closest approach
+# * 2009 Nov 13, 08:00 - AL06 : Earth calibrations, ride alongs, and
+ HEET data (3 hr 10 mn)
+# * 2009 Nov 13, 11:15 - AL10B and AL10C: Darks (4 hr)
+# * 2009 Nov 13, 15:25 - AL41: Moon occultation of rho Lup (30 mn)
+# * 2009 Nov 13, 15:40 - Moon closest approach
+# * 2009 Nov 13, 15:55 - AL14 : Ride along with VIRTIS Moon night side
+ observation (30 mn)
+# * 2009 Nov 13, 16:35 - AL40 : Baseline spectra of rho Lup (30 mn)
+# * 2009 Nov 13, 17:20 - AL07 : Calibration on Moon&apos;s illuminated limb
+ and ridealong with OSIRIS raster (4 hr 36 mn)
+# * 2009 Nov 13, 22:05 - AL08 : Moon scans for flat field calibration
+ (24 hr 20 mn)
+# * 2009 Nov 15, 22:00 - AL09 : Moon calibration as point source (10
+ hr)
+# * 2009 Nov 18, 06:00 - AL11B: Boresight determination of the remote
+ sensing instruments (4 hr)
+# * 2009 Nov 18, 10:03 - AL02A: Decontamination (25 hr)
+ 
+  Processing
+  ==========
+ 
+    The data in this data set are CODMAC level 4 data, and, as such,
+    have been calibrated and reformatted. Corrections for detector
+    dead time, dark counts, flatfield, and effective area have
+    generally been applied. The primary FITS header contains a list of
+    which corrections have been applied to that file. See the
+    CALIBRATION_COOKBOOK.PDF in the DOCUMENT directory for more
+    information.
+ 
+  Data
+  ====
+ 
+    The data are in FITS format and text format. Each FITS file has a
+    detached PDS label so that they can be read either by FITS or PDS
+    tools. A detailed description of the data format is given in the
+    ALICE EAICD document located in the DOCUMENT directory of this
+    data set.
+ 
+ 
+  Ancillary Data
+  ==============
+    No ancillary data included in this data set.
+ 
+ 
+  Coordinate System
+  =================
+ 
+   The geometry items SC_SUN_POSITION_VECTOR,
+   SC_TARGET_POSITION_VECTOR and SC_TARGET_VELOCITY_VECTOR provided in
+   the label of the data product are relative to the Earth Mean
+   Equator frame of J2000.
+ 
+   SUB_SPACECRAFT_LATITUDE, SUB_SPACECRAFT_LONGITUDE are given in the
+   PLANETOGRAPHIC coordinate system. These parameters are computed at
+   time t=START_TIME. Distances are given in km, angles in degrees.
+ 
+ 
+  Software
+  ========
+    All FITS readers should be able to successfully read the data.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    Data confidence is nominal, meaning that all data have been
+    validated by the Alice team and found as expected. Any exceptions
+    are noted by the DATA_QUALITY field in the label files.
+ 
+ 
+  Review
+  =====
+ 
+ 
+ 
+  Data Coverage and Quality
+  =========================
+ 
+    Data quality is good unless otherwise noted by the DATA_QUALITY
+    keyword.
+ 
+ 
+  Limitations
+  ===========
+        </confidence_level_note>
+        <archive_status>IN_LIEN_RESOLUTION</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

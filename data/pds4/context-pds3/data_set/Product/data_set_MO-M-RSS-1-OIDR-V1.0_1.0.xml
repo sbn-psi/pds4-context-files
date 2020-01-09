@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mo-m-rss-1-oidr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MO MARS RADIO SCIENCE 1 ORIGINAL/INTERMEDIATE DATA REC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_observer::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mo::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mo::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mo-m-rss-1-oidr-v1.0__browserp_mo-m-rss-1-oidr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.en::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Asmar, S.W., and R.G. Herrera, Radio Science Handbook, JPL D-7938, Volume 4,
+                   Jet Propulsion Laboratory, Pasadena, CA, 22 January 1993.
+            </reference_text>
+            <description>reference.ASMAR-HERRERA1993</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MO-M-RSS-1-OIDR-V1.0</data_set_id>
+        <data_set_name>MO MARS RADIO SCIENCE 1 ORIGINAL/INTERMEDIATE DATA REC V1.0</data_set_name>
+        <data_set_release_date>1994-07-01</data_set_release_date>
+        <start_time>1971-01-01</start_time>
+        <stop_time>1993-12-31</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Simpson, R.A., MO MARS RADIO SCIENCE 1 ORIGINAL/INTERMEDIATE DATA
+            REC V1.0, MO-M-RSS-1-OIDR-V1.0, NASA Planetary Data System, 1994
+        </citation_text>
+        <data_set_terse_desc>
+            MO MARS RADIO SCIENCE 1 ORIGINAL/INTERMEDIATE DATA REC V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            The data set consists of several CD-WO volumes which contain
+            radiometric and open loop data acquired from the Mars Observer
+            spacecraft during its Cruise between Earth and Mars. The basic
+            data are supplemented by ancillary data including DSN weather
+            files and media calibrations, spacecraft maneuver information,
+            and operations schedules. There are fourteen data types.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The data set consists of several CD-WO volumes which contain
+      radiometric and open loop data acquired from the Mars Observer
+      spacecraft during its Cruise between Earth and Mars.  The basic
+      data are supplemented by ancillary data including DSN weather
+      files and media calibrations, spacecraft maneuver information,
+      and operations schedules.  The fourteen data types are listed
+      in the table below, then explained in more detail in the
+      sections that follow.
+ 
+ 
+      Angular Momentum Desaturation Files DSN Ionosphere Calibration
+      Files DSN Troposphere Calibration Files DSN Time and Polar
+      Motion Files DSN Weather Data Light Time Files Manuever
+      Implementation Files Maneuver Performance Data Files Orbit Data
+      Files Original Data Records Original Data Streams Space Flight
+      Operations Schedules Sequence of Events Files Tracking Data
+      Files
+ 
+ 
+    Data
+    ====
+      (1) ANGULAR MOMENTUM DESATURATION FILES
+ 
+      Angular Momentum Desaturation files contain predicted times and
+      durations of angular momentum desaturation events.  The Mars
+      Observer hydrazine thrusters were used to unload momentum
+      stored by the spacecraft reaction wheels.  The files were
+      created by the Mars Observer Navigation Team under the
+      direction of P. Esposito.  They are used by Mars Observer Radio
+      Science investigators to interpret non-gravitational changes in
+      the spacecraft trajectory and/or orientation.
+ 
+      The files are described by Mars Observer Software Interface
+      Specification EAE003, except that the SFDU header record has
+      been removed and the simple &lt;line-feed&gt; delimiter specified by
+      the SIS after each record (line) has been replaced by a
+      &lt;carriage-return&gt; &lt;line-feed&gt; pair in this archival volume.
+      Otherwise, the MO Radio Science Team has no independent
+      knowledge of the content, format, or accuracy of the data in
+      these files.
+ 
+ 
+      (2) DSN IONOSPHERE CALIBRATION FILES
+ 
+      DSN Ionosphere Calibration Files are one of three types of
+      Media Calibration Files generated by the DSN Tracking System
+      Analytic Calibration Team.  The calibrations comprise
+      corrections for the effects of transmission media (troposphere,
+      ionosphere, and solar plasma) on radiometric data and are used
+      by Mars Observer Radio Science investigators and others.
+ 
+      The files are described by Mars Observer Software Interface
+      Specification DACE006, except that the SFDU header record has
+      been removed and the simple &lt;line-feed&gt; delimiter specified by
+      the SIS after each record (line) has been replaced by a
+      &lt;carriage-return&gt; &lt;line-feed&gt; pair in this archival volume.
+      Otherwise, the MO Radio Science Team has no independent
+      knowledge of the content, format, or accuracy of the data in
+      these files.
+ 
+ 
+      (3) DSN TROPOSPHERE CALIBRATION FILES
+ 
+      DSN Troposphere Calibration Files are one of three types of
+      Media Calibration Files generated by the DSN Tracking System
+      Analytic Calibration Team.  The calibrations comprise
+      corrections for the effects of transmission media (troposphere,
+      ionosphere, and solar plasma) on radiometric data and are used
+      by Mars Observer Radio Science investigators and others.
+ 
+      The files are described by Mars Observer Software Interface
+      Specification DACE006, except that the SFDU header record has
+      been removed and the simple &lt;line-feed&gt; delimiter specified by
+      the SIS after each record (line) has been replaced by a
+      &lt;carriage-return&gt; &lt;line-feed&gt; pair in this archival volume.
+      Otherwise, the MO Radio Science Team has no independent
+      knowledge of the content, format, or accuracy of the data in
+      these files.
+ 
+ 
+      (4) DSN TIME AND POLAR MOTION FILES
+ 
+      DSN Time and Polar Motion Files contain predictions and past
+      history of Earth rotation, including rate of rotation and
+      changes in the rotation axis.  These data are used in
+      performing precise orbit determinations by Mars Observer Radio
+      Science investigators and others.
+ 
+      The files are described by Mars Observer Software Interface
+      Specification DACE007, except that the SFDU header record has
+      been removed and the simple &lt;line-feed&gt; delimiter specified by
+      the SIS after each record (line) has been replaced by a
+      &lt;carriage-return&gt; &lt;line-feed&gt; pair in this archival volume.
+      Otherwise, the MO Radio Science Team has no independent
+      knowledge of the content, format, or accuracy of the data in
+      these files.
+ 
+ 
+      (5) DSN WEATHER DATA FILES
+ 
+      DSN Weather Data files contain hourly records of temperature,
+      barometric pressure, relative humidity, dew point, and water
+      vapor partial pressure at each of the three DSN communication
+      complexes.  They are compiled by the DSN Tracking System
+      Analysis Calibration Team and were deposited on a regular basis
+      in the MO PDB.
+ 
+      The files are described by Mars Observer Software Interface
+      Specification DACE022, except that the SFDU header record has
+      been removed and the simple &lt;line-feed&gt; delimiter specified by
+      the SIS after each record (line) has been replaced by a
+      &lt;carriage-return&gt; &lt;line-feed&gt; pair in this archival volume.
+      Otherwise, the MO Radio Science Team has no independent
+      knowledge of the content, format, or accuracy of the data in
+      these files.
+ 
+ 
+      (6) LIGHT TIME FILES
+ 
+      Light Time Files contain one-way light time data (set of points
+      SCE vs OWCT) between Earth (geocentric or topocentric) and the
+      Mars Observer spacecraft.  The files are produced by the Mars
+      Observer Navigation Team.
+ 
+      The files are described by Mars Observer Software Interface
+      Specification NAE002, except that the SFDU header record has
+      been removed and the simple &lt;line-feed&gt; delimiter specified by
+      the SIS after each record (line) has been replaced by a
+      &lt;carriage-return&gt; &lt;line-feed&gt; pair in this archival volume.
+      Otherwise, the MO Radio Science Team has no independent
+      knowledge of the content, format, or accuracy of the data in
+      these files.
+ 
+ 
+      (7) MANEUVER IMPLEMENTATION FILES
+ 
+      Maneuver Implementation/Reconstruction Files contain commands,
+      attitudes, velocities, and statistics associated with
+      Trajectory Change Maneuvers.  The files were produced by the
+      Mars Observer Spacecraft Team.
+ 
+      The files are described by Mars Observer Software Interface
+      Specification EAE014, except that the SFDU header record has
+      been removed and the simple &lt;line-feed&gt; delimiter specified by
+      the SIS after each record (line) has been replaced by a
+      &lt;carriage-return&gt; &lt;line-feed&gt; pair in this archival volume.
+      Otherwise, the MO Radio Science Team has no independent
+      knowledge of the content, format, or accuracy of the data in
+      these files.
+ 
+ 
+      (8) MANEUVER PERFORMANCE FILES
+ 
+      Maneuver Performance Data Files contain data necessary for the
+      Mars Observer Navigation Team to plan and design specific
+      spacecraft maneuvers.Included are spacecraft physical
+      parameters and thruster information such as mass, location of
+      the center mass, moments of inertia, effective thruster
+      directions and magnitudes, thruster locations, and propellant
+      flow rate.  Maneuver Performance Data Files were produced by
+      the Mars Observer Spacecraft Team.
+ 
+      The files are described by Mars Observer Software Interface
+      Specification EAE008, except that the SFDU header record has
+      been removed and the simple &lt;line-feed&gt; delimiter specified by
+      the SIS after each record (line) has been replaced by a
+      &lt;carriage-return&gt; &lt;line-feed&gt; pair in this archival volume.
+      Otherwise, the MO Radio Science Team has no independent
+      knowledge of the content, format, or accuracy of the data in
+      these files.
+ 
+ 
+      (9) ORBIT DATA FILES
+ 
+      Orbit Data Files contain edited radiometric and VLBI data used
+      to navigate the spacecraft.  They may also contain calibrations
+      and corrections to range data for a tracking station and
+      spacecraft signal time-delay.  Each ODF is made up of 36-byte
+      records, of which there are 13 types: 6 header types, 6 data
+      types, and one end-of-file marker.  The ODF is produced by the
+      DSN Radio Metric Data Conditioning Team.
+ 
+      Record formats are described in Mars Observer Software
+      Interface Specification DACE005.  The archival form of the ODF
+      has been modified by removal of its SFDU header.  Otherwise,
+      the MO Radio Science Team has no independent knowledge of the
+      content, format, or accuracy of the data in these files.
+ 
+ 
+      (10) ORIGINAL DATA RECORD and ORIGINAL DATA STREAM
+ 
+      Original Data Records and Original Data Streams are time-
+      ordered 8- or 12-bit samples of Open-Loop Receiver baseband
+      amplifier output voltages.  Individual records vary from 466 to
+      4166 bytes (not including SFDU headers), of which the first 166
+      bytes contain header information (time tags, settings for the
+      receiver, channel assignments, local oscillator frequency) and
+      the remaining bytes are the samples from up to four separate
+      receiver outputs.  The length of the individual records depends
+      on the sampling rate and the channel assignments.  The ODS is
+      an electronic file, the successor to the (magnetic tape)
+      Original Data Record (ODR).  The ODS is constructed from
+      packets stored in the Mars Observer Project Data Base.  The
+      format is described by Mars Observer Software Interface
+      DACE046.  The ODR is described by DSN SIS RSC-11-11.  Radio
+      science investigators use the digital data to derive amplitude
+      and phase of the signal received from the spacecraft by the
+      Deep Space Network antenna.
+ 
+      In mid-April 1993 electronic transmission of Open-Loop data
+      between the DSN stations and the Mars Observer PDB was enabled.
+      With one exception, when electronic transmission failed, ODS
+      data were obtained after that rather than ODR.
+ 
+      Unless independent information is available, each ODS must be
+      self-calibrated to determine the original signal strength,
+      frequency, and phase.
+ 
+      Summary notes on individual tests:
+ 
+      Test #1: 1992-296 (22 Oct 92) at DSS 15 Equipment incorrectly
+      configured: DSP mode 1 at 5000 samples per channel was set up
+      instead of mode 2 at 2000 samples per channel.  This proved
+      useful in analysis, however.  One A-D converter was defective;
+      the others were not linear; redundancy from mode 1
+      configuration allowed quantitative measurement of errors.  It
+      also became apparent that the A-D converters had never been
+      used/tested for 12-bit output; DSN personnel later admitted
+      that accuracy was never guaranteed for more than about 7 bits.
+ 
+      No signal for approximately the first 1000 seconds; operator
+      adjustments continued in both frequency and amplitude until
+      about 1600 secs.  Four tapes received, but none were
+      contiguous.
+ 
+      Modulation on the signal is apparent at long periods (100 min
+      from spacecraft rotation), medium periods (a few minutes,
+      perhaps from CONSCAN), and short periods.
+ 
+ 
+      Test #2: 1992-312 (7 Nov 92) at DSS 15 Similar problems to Test
+      #1, but configuration was for 2000 samples per second per
+      channel instead of 5000.  In addition, pulse modulation (17
+      percent duty cycle, 0.6 sec period with 90 deg phase shift)
+      appears on signal output.  POCA frequencies and rates were
+      inconsistent at break points.  Three tapes.
+ 
+ 
+      Test #3: 1992-325 (20 Nov 92) at DSS 15 This test was run with
+      the spacecraft in occultation configuration -- with telemetry
+      off.  Ground problems were similar to those encountered during
+      Test #1.  The first tape (of 3 total) was unreadable after
+      about 4 minutes of data and was returned to JPL for analysis.
+      60 Hz modulation was detected on the carrier.
+ 
+ 
+      Test #4: 1992-340 (5 Dec 92) at DSS 15 A-D failure was
+      repaired, but A-Ds remain non-linear and are not well matched.
+      One tape was delivered to Stanford; two others were received at
+      JPL but were not copied because they contained only about a
+      minute of data.  Long- and medium-period modulation remains,
+      presumably from spacecraft and/or ground antenna motions.
+      Inconsistent POCA frequency and rate readings are noted at POCA
+      break points.
+ 
+ 
+      HGA Calibration: 1993-008 (8 Jan 93) at DSS 65 Data acquired
+      for radio science analysis, but this was not an official test.
+      First test using facility other than DSS 15.  Many
+      operator-initiated gain changes, many artifacts of A-D non-
+      linearity, and 60 Hz modulation on carrier.  On the other hand,
+      there were no problems in POCA reading at break points in
+      tuning profile.  Three tapes received at Stanford.
+ 
+ 
+      USO Test #5: 1992-354 (19 Dec 92) at DSS 45 Failed.  No tapes
+      received.
+ 
+ 
+      USO Test #6: 1993-014 (14 Jan 93) at DSS 65 Similar to HGA
+      Calibration, but more spurious signals identified during
+      analysis.  May still be the best USO Test data so far.
+      Sticksion events identified; 1 Hz modulation found.  One ODR
+      tape covers almost 2 hrs.
+ 
+ 
+      USO Test #7: 1993-049 (18 Feb 93) at DSS 15 Similar to Test #6.
+      POCA inconsistencies seen previously at DSS 15 not present.  60
+      Hz modulation not present, but 180 Hz spurs seen.  Overall,
+      good data.
+ 
+ 
+      USO Test #8: 1993-064 (5 Mar 93) at DSS 45 Single tape
+      received, but its block size was far smaller than expected.DSN
+      personnel were unable to explain how software settings could be
+      over-ridden.  No analysis performed; tape returned to JPL for
+      investigation.
+ 
+ 
+      USO Test #9: 1993-079 (20 Mar 93) at DSS 65 Antenna stopped
+      tracking after 35 minutes; resumed after about 1 hour.Four
+      tapes of contiguous data were obtained covering more than 2-1/2
+      hrs.Spurious signals 665 Hz from carrier.  Among the best data
+      to date.
+ 
+ 
+      USO Test #10: 1993-107 (17 Apr 93) No data
+ 
+ 
+      USO Test #11: 1993-116 (26 Apr 93) at DSS 65 First attempt to
+      transfer test data electronically (ODS).  Initially many
+      records did not get through, but later queries resulted in
+      almost complete recovery of data (36001 full records).  Many
+      POCA offsets during test.
+ 
+ 
+      RS ORT Test #1: 1993-129 (9 May 93) Spacecraft in contingency
+      mode; test canceled.
+ 
+ 
+      USO Test #12: 1993-131 (11 May 93) Spacecraft in contingency
+      mode; test canceled.
+ 
+ 
+      USO Test #13: 1993-146 (26 May 93) at DSS 45 All ODS records
+      expected (28800) were recovered within 14 hrs.  Data quality,
+      with the exception of A-D conversion artifacts, was excellent.
+      Some modulation sidebands on carrier from unknown sources.  A-D
+      #3 was not operating correctly in low bits.
+ 
+ 
+      RS ORT Test #2: 1993-154 (3 Jun 93) at DSS 45 Test data were
+      collected continuously over 7 hrs rather than in short bursts
+      because Event File could not be loaded at station.  ODS
+      transfer failed after first hour; resumed 90 minutes later.
+      None of early data could ever be located, however.  Of the
+      later data, only the 10 minutes of each scheduled test interval
+      were analyzed.  Minor timing anomalies, some low level spurs,
+      and one ailing A-D converter.
+ 
+ 
+      USO Test #14: 1993-161 (10 Jun 93) at DSS 65 A few samples lost
+      at the beginning.  Otherwise, this was a very good test.
+ 
+ 
+      RS ORT Test #3: 1993-175 (24 Jun 93) at DSS 65 Nearly complete
+      ODS data recovery.  Anomalous short records found at the end of
+      data acquisition periods.  CONSCAN state was not always as
+      requested.
+ 
+ 
+      USO Test #15: 1993-177 (26 Jun 93) at DSS 45 Scattered records
+      lost, but data quality excellent otherwise.  Usual problems
+      with A-D artifacts.  170 Hz modulation spurs on each side of
+      carrier
+ 
+ 
+      USO Test #16: 1993-191 (10 Jul 93) at DSS 65 Data collected in
+      occultation configuration (spacecraft telemetry off), but ODS
+      transmission was not enabled so all data went to tape (3
+      tapes).  Some data appeared in the MO PDB NERT Cache a few days
+      later, however, but it had bad record numbers and time tags.
+      Second (ODR) tape had scattered added samples; third tape had
+      extra byte.
+ 
+ 
+      USO Test #17: 1993-203 (22 Jul 93) at DSS 15 Incorrect
+      configuration at station for first 22 minutes; otherwise data
+      quality is good.
+ 
+      (11) SPACE FLIGHT OPERATIONS SCHEDULES
+ 
+      Space Flight Operations Schedule Files contain information
+      about states and events of importance to the Mars Observer
+      Project.  Although the SFOS file itself is ASCII, it is
+      intended to be used in conjunction with the sfosedt application
+      program, which displays the operations schedule graphically.
+      SFOS Files were produced by the Mars Observer Planning and
+      Sequencing Team, typically covering two week periods but issued
+      every seven days.
+ 
+      The SFOS file format is described by Mars Observer Software
+      Interface Specification PSE003.
+ 
+      The archival form of the SFOS File has been modified by removal
+      of its original SFDU header, by removal of a leading
+      &lt;line-feed&gt; character at the beginning of the data file, and by
+      substitution of &lt;carriage-return&gt;&lt;line-feed&gt; pairs for the
+      original &lt;line-feed&gt; record/line delimiters.  The SFOS File
+      must be returned to its original format before it can be used
+      with the sfosedt utility.
+ 
+      Other than the comments above, the MO Radio Science Team has no
+      independent knowledge of the content, format, or accuracy of
+      the data in these files.
+ 
+      (12) SEQUENCE OF EVENT FILES
+ 
+      Sequence of Events Files are time-ordered lists of activities
+      of interest to the Mars Observer Project.  Although the SOE
+      file itself is ASCII, it is intended to be used in conjunction
+      with the soeedt application program, which displays the
+      schedule in a formatted table.  SOE Files were produced by the
+      Mars Observer Planning and Sequencing Team, typically covering
+      more than two week periods but issued every seven days.
+ 
+      The SOE File format is described by Mars Observer Software
+      Interface Specification PSE002.
+ 
+      The archival form of the SOE File has been modified by removal
+      of its original SFDU header, by removal of a leading
+      &lt;line-feed&gt; character at the beginning of the data file, and by
+      substitution of &lt;carriage-return&gt;&lt;line-feed&gt; pairs for the
+      original &lt;line-feed&gt; record/line delimiters.  The SOE File must
+      be returned to its original format before it can be used with
+      the soeedt utility.
+ 
+      Other than the comments above, the MO Radio Science Team has no
+      independent knowledge of the content, format, or accuracy of
+      the data in these files.
+ 
+ 
+      (13) TRACKING DATA FILES
+ 
+      Tracking Data Files contain all raw radiometric and VLBI data,
+      subject to minor editing of &apos;bad&apos; points.  Data include angle,
+      Doppler measurements, range measurements, differenced range vs
+      integrated Doppler (DRVID) values, programmed frequency data,
+      pseudo-residual data, and validation data.  A single TDF will
+      contain data for only one spacecraft, but it may contain data
+      collected from several tracking stations and for several days.
+      Each TDF is produced by the DSN Radio Metric Data Conditioning
+      Team.
+ 
+      Each TDF is made up of one File Identification Logical Record,
+      one Transponder Logical Record, and many time-ordered Tracking
+      Data Logical Records.  Each record has a length of 288 bytes.
+ 
+      Record formats are described in Mars Observer Software
+      Interface Specification DACE004.  The archival form of the TDF
+      has been modified by removal of its SFDU header.  Otherwise,
+      the MO Radio Science Team has no independent knowledge of the
+      content, format, or accuracy of the data in these files.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      Quality of the ODR/ODS data from the Mars Observer Cruise tests
+      is variable.  Initially hardware failures and incorrect
+      configurations corrupted the data.  That is, the digital
+      samples largely reflected the receiver output, but were not
+      accurate representations of the microwave signal being captured
+      by the antenna.  During later tests, the performance improved
+      but it never reached the level required for Mars Observer
+      Mapping.  See comments in DATA_SET_DESC on individual test
+      results; spacecraft operations were always nominal, but ground
+      performance varied.
+ 
+      Quality of the other data sets is unknown.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>92-063A-01A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

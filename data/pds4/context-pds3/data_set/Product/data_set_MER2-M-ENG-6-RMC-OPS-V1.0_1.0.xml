@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer2-m-eng-6-rmc-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 2 MARS ENGINEERING ROVER MOTION COUNTER OPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:eng.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-eng-6-rmc-ops-v1.0__browser_geo_mer2-m-eng-6-rmc-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-eng-6-rmc-ops-v1.0__dvo_mer2-m-eng-6-rmc-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-eng-6-rmc-ops-v1.0__pds.geo.mer.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Rover Motion Counter Master File Software
+                   Interface Specification, 2004.
+            </reference_text>
+            <description>reference.RMCSIS2004</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER2-M-ENG-6-RMC-OPS-V1.0</data_set_id>
+        <data_set_name>MER 2 MARS ENGINEERING ROVER MOTION COUNTER OPS V1.0</data_set_name>
+        <data_set_release_date>2005-10-18</data_set_release_date>
+        <start_time>2004-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>RAFAEL ALANIS</producer_full_name>
+        <citation_text>
+            Alanis, Rafael, &apos;MER 2 Mars Engineering Rover Motion Counter
+            Ops V1.0&apos;, NASA Planetary Data System,
+            MER2-M-ENG-6-RMC-OPS-V1.0, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains Spirit (MER 2) Rover Motion Counter
+            Operations data from the Mars Exploration Rover Mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This archive contains position and orientation information for
+            various coordinate systems indexed by the Rover Motion Counter
+            (RMC).
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This RDR is produced by OPGS to provide the position and
+    orientation of various coordinate systems indexed by the Rover
+    Motion Counter, or RMC.  An RMC file is nothing more than a
+    collection of coordinate system definitions expressed in an XML
+    formatted text file. Two important specializations of the file are
+    described here - Site Vector Files (SVF) and Rover Vector Files
+    (RVF). For an in depth discussion of all RMC files, please refer
+    to the MER Project Software Interface Specification (SIS), Rover
+    Motion Counter (RMC) Master File, Version 1.0, JPL D-22854,
+    August 1, 2004.
+ 
+ 
+  Processing
+  ==========
+    This Operations RDR is generated by OPGS/MIPL using the Mars Suite
+    of VICAR image processing software at Jet Propulsion Laboratory.
+    The input is a series of numbers that are used to keep track of the
+    location of a rover. Any time an actuator on the rover moves, the
+    RMC is incremented.  This allows ground software to keep track of
+    data that was acquired from the same location.
+ 
+ 
+  Data
+  ====
+    Site Vector Files
+    -----------------
+    A Site Vector File (SVF) is an RMC file that contains nothing but
+    Site Frame definitions.  Each Site is defined relative to the
+    immediately previous Site, and all Sites back to 0 must be defined
+    (Site 0 has no reference and is not in the file).  Thus the file
+    defines a continuous chain of Sites from 0 up to the current Site.
+ 
+    Site Vector Files are used to determine the relationship between
+    Sites.  Since EDR&apos;s do not contain any Site Frame definitions in
+    their labels, and RDRs may contain at most one, an SVF is required
+    any time data from more than one site is being compared or combined.
+ 
+ 
+    Rover Vector Files
+    ------------------
+    Similar to a Site Vector File, a Rover Vector File (RVF) contains
+    nothing but Rover Frame definitions.  However, instead of
+    containing _all_ Rover Frame definitions, an RVF file contains only
+    Rover Frame definitions within one Site.  Thus different RVF files
+    will exist for each Site.
+ 
+    RVF files will typically not contain an entry for each and every
+    RMC within their Site. Instead, an RVF file contains an entry for
+    every RMC at which the rover location changed.
+ 
+    If it is subsequently determined that the rover moved between
+    drives (say, the IDD moved the rover), then a solution is generated
+    for that, and an entry is created in the RVF for the RMC value at
+    which the move occurred.
+ 
+    Thus, the file contains only deltas - RMC values at which the
+    location of the rover changed.
+ 
+ 
+  Coordinate System
+  =================
+    There are several types of coordinate frames in use by MER (see
+    [EDR SIS]).  For the purposes of this document, the Site and Rover
+    frames are the most important.
+ 
+    Each type of frame has many different instances.  For example,
+    every time the rover moves, a different instance of the Rover
+    coordinate frame is created (since the Rover frame is attached to
+    the rover).  A different Site frame is created whenever the project
+    declares a Site.  The RMC is used to indicate which instance of a
+    coordinate frame is being referred to.
+ 
+ 
+  Software
+  ========
+    The OPGS/MIPL Mars Suite of VICAR image processing was used to
+    generate these RDRs.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online.  Upon
+    Mission completion, the RMC Operations RDRs will be delivered
+    to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

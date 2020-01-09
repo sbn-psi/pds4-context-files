@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.msl__image_acquire_mode</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>msl:image_acquire_mode</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>msl:image_acquire_mode</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>msl:image_acquire_mode</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+ 
+The MSL:IMAGE_ACQUIRE_MODE element describes the mode of image
+acquisition.  Valid values are defined as:
+ 
+a)  NONE  - No image acquired
+b)  SERNO - No image acquired, camera serial number returned only
+c)  IMAGE - The image was acquired
+ 
+For MSL, there are two acquisition modes pertaining to camera data:
+IMAGE and SERNO.
+ 
+The normal mode (IMAGE) acquires and transmits the image according to
+all the command parameter settings.
+ 
+The &apos;SERNO&apos; case is a mode of acquisition that does just enough to get
+the camera&apos;s hardware serial number.  Normally, such a mode should
+result in a data product with a header only and no image.  However, the
+IMG onboard sotware supercedes during acquisition and acquires data in
+hardware windowed mode, resulting in a single row of an image.  So,
+ground processing of the data product will yield a value of 1 for
+hw_numrows, but the actual image is still set as 0 rows and 0 columns.
+        </definition>
+        <comment>msl:image_ac</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>msl:image_acquire_mode</name>
+            <definition>
+ 
+The MSL:IMAGE_ACQUIRE_MODE element describes the mode of image
+acquisition.  Valid values are defined as:
+ 
+a)  NONE  - No image acquired
+b)  SERNO - No image acquired, camera serial number returned only
+c)  IMAGE - The image was acquired
+ 
+For MSL, there are two acquisition modes pertaining to camera data:
+IMAGE and SERNO.
+ 
+The normal mode (IMAGE) acquires and transmits the image according to
+all the command parameter settings.
+ 
+The &apos;SERNO&apos; case is a mode of acquisition that does just enough to get
+the camera&apos;s hardware serial number.  Normally, such a mode should
+result in a data product with a header only and no image.  However, the
+IMG onboard sotware supercedes during acquisition and acquires data in
+hardware windowed mode, resulting in a single row of an image.  So,
+ground processing of the data product will yield a value of 1 for
+hw_numrows, but the actual image is still set as 0 rows and 0 columns.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>20</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>Unknown</specified_unit_id>
+            <DD_Permissible_Value_Full>
+                <value>IMAGE</value>
+                <value_begin_date>2014-01-06T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>NONE</value>
+                <value_begin_date>2014-01-06T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>SERNO</value>
+                <value_begin_date>2014-01-06T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>image</value>
+                <value_begin_date>2014-01-03T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>none</value>
+                <value_begin_date>2014-01-03T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>serno</value>
+                <value_begin_date>2014-01-03T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-j-pos-6-summ-s3coords-v1.1</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VG2 JUP EPHEMERIS SYSTEM III (1965) COORDS BROWSE V1.1</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pos.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-j-pos-6-summ-s3coords-v1.1__browserp_vg2-j-pos-6-summ-s3coords-v1.1::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Acton, Jr. C.H., Ancillary Data Services of NASA&apos;s Navigation and Ancillary
+                   Information Facility, Planetary and Space Sciences, 44, Number 1, pp. 65-70,
+                   1996.
+            </reference_text>
+            <description>reference.ACTON1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   DESSLER, A.J. ED., PHYSICS OF JOVIAN MAGNETOSPHERE, CAMBRIDGE UNIVERSITY PRESS,
+                   LONDON, APPENDIX B - COORDINATE SYSTEMS, DESSLER, A.J., 1983.
+            </reference_text>
+            <description>reference.DESSLER1983</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-J-POS-6-SUMM-S3COORDS-V1.1</data_set_id>
+        <data_set_name>VG2 JUP EPHEMERIS SYSTEM III (1965) COORDS BROWSE V1.1</data_set_name>
+        <data_set_release_date>1997-12-01</data_set_release_date>
+        <start_time>1979-07-05T00:00:47.269Z</start_time>
+        <stop_time>1979-08-12T16:54:20.608Z</stop_time>
+        <producer_full_name>NATIONAL SPACE SCIENCE DATA CENTER</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            Voyager 2 ephemeris data in System III (1965) coordinates from
+            the Jupiter encounter. The data set provides 48 second data
+            generated from SPICE and 96 second data from SEDR.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      Version 1.1
+      -----------
+      The SEDR based data provided as part of this data set were
+      originally reviewed and archived with the NSSDC and PDS as
+      version 1.0 (DATA_SET_ID = VG2-J-POS-4-48.0SEC). Version 1.1
+      includes additional columns not present in the previous
+      version, 96 second rather than 48 second time samples, times
+      converted to &apos;PDS Style&apos; or &apos;Zulu time&apos;, and upgrading of PDS
+      labels and templates to version 3.4. The SPICE based data that
+      are also part of this data set were not previously archived
+      with the PDS. This version 1.1 data set replaces previously
+      archived versions.
+ 
+      Data Set Description
+      --------------------
+      This data set consists of Voyager 2 Jupiter encounter
+      ephemeris data in System III (1965) left handed coordinates
+      covering the period 1979-07-05 to 1979-08-12. Two versions,
+      both covering the same time period, but containing slightly
+      different data, are provided. One version was generated by the
+      Voyager MAG team from Voyager 2 SEDR, the other by the PDS/PPI
+      node using the VG2_JUP.BSP and PCK00003.TCP SPICE kernels.
+ 
+      Due to inaccuracies in Voyager SEDR, as well as changes in the
+      values of some key parameters (e.g. Jovian radius) the timing
+      is improved for the SPICE generated data. However, since much
+      of the original analysis was based upon the SEDR generated
+      ephemeris, this data has been included as well.
+ 
+      SEDR generated ephemeris
+      ------------------------
+      Instrument P.I.       : N/A
+      Data Supplier         : NSSDC
+      Data sampling rate    : 96 seconds
+      Data Set Start Time   : 1979-07-05T00:00:47.269Z
+      Data Set Stop Time    : 1979-08-12T16:54:20.608Z
+ 
+      SPICE generated ephemeris
+      -------------------------
+      Instrument P.I.       : N/A
+      Data Supplier         : S. Joy
+      Data sampling rate    : 48 seconds
+      Data Set Start Time   : 1979-07-05T00:00:47.269Z
+      Data Set Stop Time    : 1979-08-12T16:55:08.608Z
+ 
+      Parameters
+      ==========
+ 
+      SEDR generated ephemeris
+      ------------------------
+      PARAMETER  RESOLUTION/  DESCRIPTION
+      NAME       UNITS
+ 
+      time       96.0 Sec     time of the sample (UT) in the format
+                              yyyy-mm-ddThh:mm:ss.sssZ
+ 
+      m65536     counts       spacecraft clock counts
+      mod60      counts
+      fds_line   counts
+ 
+      sc_x       R[J]         jovicentric (System III) cartesian
+      sc_y       R[J]         cartesian position vectors: X, Y, and
+      sc_z       R[J]         Z
+ 
+      vel_x      km/s         jovicentric X, Y, and Z spacecraft
+      vel_y      km/s         velocity components
+      vel_z      km/s
+ 
+      sc_r       R[J]         jovicentric (System III) spherical
+      sc_lat     degrees      coordinates position vectors: range,
+      sc_lon     degrees      latitude, and longitude
+ 
+      CartSys3_to_SphSys3     cartesian system III to spherical
+                              system III coordinates rotation matrix
+                              containing 9 1pe15.8 elements
+ 
+      SC_to_CartSys3          payload (spacecraft) to cartesian
+                              system III coordinates rotation matrix
+                              containing 9 1pe15.8 elements
+ 
+      SC_to_SphSys3           payload (spacecraft) to spherical
+                              system III coordinates rotation matrix
+                              containing 9 1pe15.8 elements
+ 
+      SPICE generated ephemeris
+      -------------------------
+      PARAMETER  RESOLUTION/  DESCRIPTION
+      NAME       UNITS
+ 
+      time       48.0 Sec     time of the sample (UT) in the
+                              format yyyy-mm-ddThh:mm:ss.sssZ
+ 
+      R          AU           jovicentric (System III 1965)
+      LAT        degrees      spherical coordinates position
+      LON        degrees      range, latitude, and longitude
+ 
+      LocTime    hours        angular separation between the
+                              meridian containing the sun and the
+                              one containing the spacecraft
+                              converted to a time. The sun meridian
+                              is defined to be noon (12.000), with
+                              midnight (0.000) opposite it. Dawn
+                              (6.000) and dusk (18.000) are where
+                              the sun rises and sets according to
+                              the planet&apos;s rotation
+ 
+      Coordinate System
+      =================
+      The System III (1965) is a jovicentric left handed coordinate
+      system defined such that longitude increases with time as
+      viewed by a stationary remote observer.
+ 
+      Jovicentric cartesian (Jupiter fixed) coordinates
+ 
+      X      points along the Jupiter-Sun line in the solar
+             equatorial plane (positive towards the Sun)
+ 
+      Y      completes the right handed set
+ 
+      Z      points along the jovian spin axis, positive
+ 
+      Jovicentric System III (1965) spherical coordinates
+ 
+      R      Jupiter to spacecraft range (positive away from
+             Jupiter)
+ 
+      LAT    completes the left handed, orthogonal set
+ 
+      LON    System III (1965) east longitude (with longitude
+             increasing eastward from a specific jovian prime
+             meridian)
+ 
+      SPICE ephemeris were generated using the current definition of
+      the Jovian radius, 71492 km. The spin rate used in generating
+      these data is the same as that used for System III (1965),
+      +870.536 degrees/24 hours.
+ 
+      Data Coverage
+      =============
+Filename         Records         Start                     Stop
+-------------------------------------------------------------------
+Volume ID: VG_1502
+ SEDR_S3_96S.TAB 31288  1979-07-05T00:00:47.269Z  1979-08-12T16:54:20.608Z
+SPICE_S3_48S.TAB 62578  1979-07-05T00:00:47.269Z  1979-08-12T16:55:08.608Z
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      Confidence Level Overview
+      =========================
+ 
+      SPICE generated ephemeris
+      -------------------------
+      The SPICE generated data were derived from SPICE using
+      software that has been extensively tested. They should give as
+      accurate representation of spacecraft ephemeris as possible
+      using these kernels.
+ 
+      Comparisons between these data and other data from previous
+      Jupiter missions should be performed with caution. Some key
+      parameters, such as the Jovian radius, have changed from
+      mission to mission. Definitions for Jupiter&apos;s spin rate and
+      the orientation of its spin-axis have also changed slightly
+      since the early Pioneer days.
+ 
+      Missing Data Flag
+      =================
+      Any SEDR generated ephemeris data column whose value is
+      -9.99999999e+10 is a missing data value.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>1977-076A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

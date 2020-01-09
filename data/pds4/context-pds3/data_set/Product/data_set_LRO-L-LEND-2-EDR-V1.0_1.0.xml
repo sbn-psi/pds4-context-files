@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lend-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO LUNAR EXPLORATION NEUTRON DETECTOR 2 EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lend.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lend-2-edr-v1.0__browserp_lro-l-lend-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lend-2-edr-v1.0__dvo_geo_lro-l-lend-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lend-2-edr-v1.0__pds.geo.lro.orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mitrofanov, I.G., et al., Experiment LEND of the NASA Lunar Reconnaissance
+                   Orbiter for high resolution mapping of neutron emission of the Moon,
+                   Astrobiology, 8(4):793-804, 2008.
+            </reference_text>
+            <description>reference.MITROFANOVETAL2008</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Planetary Data System Standards Reference, Jet Propulsion Laboratory Document
+                   D-7669, Part 2, 20 March 2006.
+            </reference_text>
+            <description>reference.PDSSR2006</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-LEND-2-EDR-V1.0</data_set_id>
+        <data_set_name>LRO LUNAR EXPLORATION NEUTRON DETECTOR 2 EDR V1.0</data_set_name>
+        <data_set_release_date>2010-03-15</data_set_release_date>
+        <start_time>2009-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>WILLIAM BOYNTON</producer_full_name>
+        <citation_text>
+            Boynton, W.V., 2009 Lunar Reconnaissance Orbiter Lunar
+            Exploration Neutron Detector EDR Data V1.0,
+            LRO-L-LEND-2-EDR-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw, uncalibrated engineering, housekeeping and scientific data
+            collected from the Lunar Exploration Neutron Detector (LEND)
+            aboard the Lunar Reconnaissance Orbiter.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Raw, uncalibrated housekeeping and scientific data collected from
+            the Lunar Exploration Neutron Detector (LEND) aboard the Lunar
+            Reconnaissance Orbiter.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Lunar Reconnaissance Orbiter (LRO) Lunar Exploration
+      Neutron Detector (LEND) that will act as large orbital neutron
+      telescope for mapping the Moon&apos;s neutron albedo. LEND consists
+      of eight 3He sensors for detecting thermal and epithermal
+      neutrons, four of which are are collimated to improve spatial
+      resolution. LEND also contains the Sensor for High Energy
+      Neutrons (SHEN), which is a stilbene scintillator that produces
+      a flash of light each time a high energy neutron in the energy
+      range 0.3 - 15.0 MeV collides with a hydrogen nucleus and
+      creates a recoil proton. A full description of the LRO LEND
+      instrument can be found in [MITROFANOVETAL2008].
+ 
+      The LRO LUNAR EXPLORATION NEUTRON DETECTOR 2 EDR data set
+      is a time series collection of science and housekeeping data
+      from the LRO spacecraft. Data are sorted by type and by time.
+      Data are sorted by time, with each data file containing one
+      day&apos;s worth of data from midnight to midnight UTC. Measurements
+      are assigned to a particular day based on the end of the
+      collection interval.
+ 
+      LEND collects a new spectrum (frame) approximately every
+      second. Approximately 86400 spectra are expected to be received
+      every day. The collection interval can be changed in the middle
+      of a time series file, which can be determined by noting the
+      difference between record timestamps. The data (both science
+      and housekeeping) are downloaded from the spacecraft. Data are
+      output to a spooler that passes them to the University of
+      Arizona (UA) database ingest process. The ingest process inputs
+      raw data into the UA database. Data are retrieved from the UA
+      database to build the LEND EDR data products.
+ 
+      The LEND EDR data set is intended to be the lowest level
+      (level 0) data available for LEND. It should be useful to those
+      scientists who are experienced in neutron spectroscopy.
+ 
+    Parameters
+    ==========
+       The LEND EDR data set is composed of two data types. The
+       objective of compiling the LEND EDR is to create a record of
+       the primary data collected by LEND. The following paragraphs
+       discuss the parameters of interest in each of the data types.
+ 
+       Science
+       -------
+         The LEND SCI data are time series science records taken over
+         the course of a day. Data files are labeled with the date.
+         Individual records are a single data collection interval,
+         which lasts 1 second. Data includes spectra for all
+         collimated and uncollimated 3He detectors as well as spectra
+         for the stilbene high energy neutron detector.
+ 
+       Housekeeping
+       ------------
+          The housekeeping data are time series records for each
+          housekeeping parameter taken over the course of a day.
+          Individual records are a single data collection interval.
+          Data includes command, voltage and temperature information.
+ 
+    Processing
+    ==========
+      A process termed &apos;ingest&apos; occurs on the LEND Science Operations
+      Center computer which receives data from the LRO Mission
+      Operation Center. The ingest process verifies the consistency
+      of the data. The LEND EDR data product is output by software
+      that maps the stored relational data into the format described
+      by the LEND EDR SIS. Both processes (ingest and output) are
+      rigorously tested. Multiple versions of the data product may be
+      made available if software bugs affecting the output data are
+      uncovered and corrected. In the event of an error whose fix
+      changes released data, it is expected the data will be
+      reprocessed by the revised software and made available.
+ 
+ 
+    Data
+    ====
+      The LEND EDR data product contains two types of data.
+ 
+      LEND_SCI_DATA               Neutron Detector science data
+      LEND_HK_DATA                Neutron Detector housekeeping data
+ 
+      LEND_SCI_DATA is a time series of Neutron Detector science
+      data. LEND_HK_DATA is a time series of Neutron Detector
+      housekeeping data. Each product type is stored in a separate
+      file with a detached PDS label. All the product types are stored
+      as binary tables with fixed-length records.
+ 
+ 
+    Coordinate System
+    =================
+      Not applicable for this data set.
+ 
+    Software
+    ========
+      No LEND specific software is provided with this data set.
+ 
+      PDS-labeled images and tables can be viewed with the program
+      NASAView, developed by the PDS and available for a variety of
+      computer platforms from the PDS web site
+      http://pds.nasa.gov/tools/software_download.cfm. There is no
+      charge for NASAView.
+ 
+    Media/Format
+    ============
+      The LEND EDR will be delivered using DVD media. Formats will be
+      based on standards for such products established by the
+      Planetary Data System (PDS) [PDSSR2006].
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      The data presented in the LEND EDR is intended to be the least
+      processed, most primitive data set released for LEND. Data
+      presented here are an accurate representation of LEND data as
+      received from the spacecraft.
+ 
+ 
+    Review
+    ======
+      The LEND EDR was reviewed internally by the LEND team prior to
+      release to the PDS. PDS will also performed an external peer
+      review of the LEND EDR.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data reported are the minimally processed data received from
+      the orbiter during nominal LEND operations. All data received
+      is reformatted into one of the EDR data types. Data are by
+      definition of good quality, as damaged telemetry packets are
+      sequestered upon receipt from the spacecraft. We do not expect
+      to receive many (if any) damaged data packets.
+ 
+ 
+  Limitations
+  ===========
+    The major limitation of this data set is that this is level 0,
+    minimally processed data. The data are received from the
+    spacecraft telemetry and ingested into a database. If gaps
+    exist in the telemetry, data are lost.
+ 
+  Data Compression
+  ===============
+    No data compression is used.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.quaternion_desc</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>quaternion_desc</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>quaternion_desc</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>quaternion_desc</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+       The QUATERNION_DESC element is a pointer to an accompanying
+quaternion description file used to describe the formation rules for
+the quaternion and the specific rotation accomplished by application
+of that quaternion. This keyword is required to be used in
+conjunction with the QUATERNION keyword. The file to which this
+keyword points is to be included in the /doc subdirectory of an
+archive product.  This particular definition is focused on the PDS
+use of quaternions.
+ 
+In typical space science usage (and especially within the SPICE
+context) a quaternion is used to rotate a Cartesian 3-component
+position vector given in one reference frame (the &apos;From&apos; frame) to a
+second frame (the &apos;To&apos; frame).
+ 
+The quaternion description file must clearly provide three pieces of
+information. These items are as follows.
+ 
+   1) Define the structure or organization of the quaternion: specify
+which component provides the angle of rotation and which three
+components specify the vector about which the rotation is to occur.
+It is best if this description includes the actual equations used to
+form a rotation matrix from the quaternion elements being specified.
+As an example, in the SPICE context, the equations for forming a
+rotation matrix (a C-matrix) from the four quaternion elements are:
+ 
+            +-                                                          -+
+            |           2    2                                           |
+            | 1 - 2 ( q2 + q3 )    2 (q1 q2 - q0 q3)   2 (q1 q3 + q0 q2) |
+            |                                                            |
+            |                                                            |
+            |                               2    2                       |
+     CMAT = | 2 (q1 q2 + q0 q3)    1 - 2 ( q1 + q3 )   2 (q2 q3 - q0 q1) |
+            |                                                            |
+            |                                                            |
+            |                                                    2    2  |
+            | 2 (q1 q3 - q0 q2)    2 (q2 q3 + q0 q1)   1 - 2 ( q1 + q2 ) |
+            |                                                            |
+            +-                                                          -+
+ 
+ 
+ 
+ 
+   2) Provide a clear, unambiguous identification (and mathematical
+specification, if not readily available elsewhere) of the base frame
+(the &apos;From&apos; frame) in which an input vector is given;
+ 
+   3) Provide a clear, unambiguous identification (and mathematical
+specification, if not readily available elsewhere) of the target
+frame (the &apos;To&apos; frame) into which the input vector will be rotated by
+direct application of the quaternion.
+ 
+It is strongly suggested that equations showing how to apply the
+rotation matrix derived from the quaternion be provided.  As an
+example, in the SPICE system:
+ 
+A C-matrix is a 3x3 matrix that transforms Cartesian coordinates
+referenced to a ``base frame&apos;&apos; to coordinates in a target frame,
+which is often a frame fixed to an instrument, antenna, or other
+spacecraft structure for which knowing the orientation (&apos;the
+pointing&apos;) is important.
+ 
+The C-matrix transforms coordinates as follows: if a vector v has
+coordinates ( x, y, z ) in some base reference frame (like J2000),
+then v has coordinates ( x&apos;, y&apos;, z&apos; ) in instrument-fixed
+coordinates, where
+ 
+ 
+        [          ] [ x ]     [ x&apos;]
+        | C-matrix | | y |  =  | y&apos;|
+        [          ] [ z ]     [ z&apos;]
+ 
+ 
+ 
+With regards to the quaternion structure issue, unlike for some
+geometric quantities there is no standard for how to form a
+quaternion. Two formation rules are in common use (see below), and it
+is strongly suggested that users pick one of these.  But whatever is
+the rule being used in the particular instance must be carefully
+noted in the QUATERNION_DESC file.
+ 
+In the descriptions below, one system defines the four components
+with indices of 0 through 3. The other system uses indices 1 through
+4. The use of one or the other numbering system is not important, but
+the two schemes are shown here to be consistent with other
+documentation or SPICE code that the user may encounter.
+ 
+The first system defines components zero through three, with the 0th
+component as the scalar, and the 1st, 2nd and 3rd the vector
+components, where q0 = cos(a/2), q1 =-sin(a/2)*u1, q2 = -sin(a/2)*u2,
+q3 = -sin(a/2)*u3, where a is the angle (radians) representing the
+magnitude of the rotation, and u1, u2, u3 are components of the unit
+vector representing the axis of rotation. The order of the components
+in the QUATERNION keyword would be ( q0, q1, q2, q3 ) under this
+system.  This is the structure employed in SPICE C-Kernels and
+Toolkit subroutines, and is therefore the PDS recommended structure.
+The SPICE Toolkit provides an assortment of routines that deal with
+quaternions.
+ 
+The second system defines components one through four, with the
+fourth component as the scalar, and the 1st, 2nd and 3rd as the
+vector components, where q1 = sin(a/2)*u1, q2 = sin(a/2)*u2, q3 =
+sin(a/2)*u3, q4 = cos(a/2), where a is the angle (radians)
+representing the magnitude of the rotation, and u1, u2, u3 are
+components of the vector representing the axis of rotation. The order
+of the components in the QUATERNION keyword will be ( q1, q2, q3, q4
+) under this system.  This is the structure often found in spacecraft
+telemetry.
+ 
+The equations for forming a rotation matrix from the four quaternion
+elements as defined in this alternate scheme are:
+ 
+            +-                                                          -+
+            |           2    2                                           |
+            | 1 - 2 ( q2 + q3 )    2 (q1 q2 + q4 q3)   2 (q1 q3 - q4 q2) |
+            |                                                            |
+            |                                                            |
+            |                               2    2                       |
+     ROT  = | 2 (q1 q2 - q4 q3)    1 - 2 ( q1 + q3 )   2 (q2 q3 + q4 q1) |
+            |                                                            |
+            |                                                            |
+            |                                                    2    2  |
+            | 2 (q1 q3 + q4 q2)    2 (q2 q3 - q4 q1)   1 - 2 ( q1 + q2 ) |
+            |                                                            |
+            +-                                                          -+
+ 
+ 
+The rotation matrix transforms coordinates as follows: if a vector v
+has coordinates ( x, y, z ) in some base reference frame (like
+J2000), then v has coordinates ( x&apos;, y&apos;, z&apos; ) in instrument-fixed
+coordinates, where
+ 
+ 
+        [          ] [ x ]     [ x&apos;]
+        |   ROT    | | y |  =  | y&apos;|
+        [          ] [ z ]     [ z&apos;]
+ 
+(With ROT defined as shown above, this equation transforming a vector
+in the base frame to a vector in the target frame is the same as
+shown earlier for the SPICE-style quaternions. The name CMAT has been
+replaced with the name ROT to help emphasize that this second system
+is NOT what is used within SPICE.)
+        </definition>
+        <comment>quatern_desc</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>quaternion_desc</name>
+            <definition>
+       The QUATERNION_DESC element is a pointer to an accompanying
+quaternion description file used to describe the formation rules for
+the quaternion and the specific rotation accomplished by application
+of that quaternion. This keyword is required to be used in
+conjunction with the QUATERNION keyword. The file to which this
+keyword points is to be included in the /doc subdirectory of an
+archive product.  This particular definition is focused on the PDS
+use of quaternions.
+ 
+In typical space science usage (and especially within the SPICE
+context) a quaternion is used to rotate a Cartesian 3-component
+position vector given in one reference frame (the &apos;From&apos; frame) to a
+second frame (the &apos;To&apos; frame).
+ 
+The quaternion description file must clearly provide three pieces of
+information. These items are as follows.
+ 
+   1) Define the structure or organization of the quaternion: specify
+which component provides the angle of rotation and which three
+components specify the vector about which the rotation is to occur.
+It is best if this description includes the actual equations used to
+form a rotation matrix from the quaternion elements being specified.
+As an example, in the SPICE context, the equations for forming a
+rotation matrix (a C-matrix) from the four quaternion elements are:
+ 
+            +-                                                          -+
+            |           2    2                                           |
+            | 1 - 2 ( q2 + q3 )    2 (q1 q2 - q0 q3)   2 (q1 q3 + q0 q2) |
+            |                                                            |
+            |                                                            |
+            |                               2    2                       |
+     CMAT = | 2 (q1 q2 + q0 q3)    1 - 2 ( q1 + q3 )   2 (q2 q3 - q0 q1) |
+            |                                                            |
+            |                                                            |
+            |                                                    2    2  |
+            | 2 (q1 q3 - q0 q2)    2 (q2 q3 + q0 q1)   1 - 2 ( q1 + q2 ) |
+            |                                                            |
+            +-                                                          -+
+ 
+ 
+ 
+ 
+   2) Provide a clear, unambiguous identification (and mathematical
+specification, if not readily available elsewhere) of the base frame
+(the &apos;From&apos; frame) in which an input vector is given;
+ 
+   3) Provide a clear, unambiguous identification (and mathematical
+specification, if not readily available elsewhere) of the target
+frame (the &apos;To&apos; frame) into which the input vector will be rotated by
+direct application of the quaternion.
+ 
+It is strongly suggested that equations showing how to apply the
+rotation matrix derived from the quaternion be provided.  As an
+example, in the SPICE system:
+ 
+A C-matrix is a 3x3 matrix that transforms Cartesian coordinates
+referenced to a ``base frame&apos;&apos; to coordinates in a target frame,
+which is often a frame fixed to an instrument, antenna, or other
+spacecraft structure for which knowing the orientation (&apos;the
+pointing&apos;) is important.
+ 
+The C-matrix transforms coordinates as follows: if a vector v has
+coordinates ( x, y, z ) in some base reference frame (like J2000),
+then v has coordinates ( x&apos;, y&apos;, z&apos; ) in instrument-fixed
+coordinates, where
+ 
+ 
+        [          ] [ x ]     [ x&apos;]
+        | C-matrix | | y |  =  | y&apos;|
+        [          ] [ z ]     [ z&apos;]
+ 
+ 
+ 
+With regards to the quaternion structure issue, unlike for some
+geometric quantities there is no standard for how to form a
+quaternion. Two formation rules are in common use (see below), and it
+is strongly suggested that users pick one of these.  But whatever is
+the rule being used in the particular instance must be carefully
+noted in the QUATERNION_DESC file.
+ 
+In the descriptions below, one system defines the four components
+with indices of 0 through 3. The other system uses indices 1 through
+4. The use of one or the other numbering system is not important, but
+the two schemes are shown here to be consistent with other
+documentation or SPICE code that the user may encounter.
+ 
+The first system defines components zero through three, with the 0th
+component as the scalar, and the 1st, 2nd and 3rd the vector
+components, where q0 = cos(a/2), q1 =-sin(a/2)*u1, q2 = -sin(a/2)*u2,
+q3 = -sin(a/2)*u3, where a is the angle (radians) representing the
+magnitude of the rotation, and u1, u2, u3 are components of the unit
+vector representing the axis of rotation. The order of the components
+in the QUATERNION keyword would be ( q0, q1, q2, q3 ) under this
+system.  This is the structure employed in SPICE C-Kernels and
+Toolkit subroutines, and is therefore the PDS recommended structure.
+The SPICE Toolkit provides an assortment of routines that deal with
+quaternions.
+ 
+The second system defines components one through four, with the
+fourth component as the scalar, and the 1st, 2nd and 3rd as the
+vector components, where q1 = sin(a/2)*u1, q2 = sin(a/2)*u2, q3 =
+sin(a/2)*u3, q4 = cos(a/2), where a is the angle (radians)
+representing the magnitude of the rotation, and u1, u2, u3 are
+components of the vector representing the axis of rotation. The order
+of the components in the QUATERNION keyword will be ( q1, q2, q3, q4
+) under this system.  This is the structure often found in spacecraft
+telemetry.
+ 
+The equations for forming a rotation matrix from the four quaternion
+elements as defined in this alternate scheme are:
+ 
+            +-                                                          -+
+            |           2    2                                           |
+            | 1 - 2 ( q2 + q3 )    2 (q1 q2 + q4 q3)   2 (q1 q3 - q4 q2) |
+            |                                                            |
+            |                                                            |
+            |                               2    2                       |
+     ROT  = | 2 (q1 q2 - q4 q3)    1 - 2 ( q1 + q3 )   2 (q2 q3 + q4 q1) |
+            |                                                            |
+            |                                                            |
+            |                                                    2    2  |
+            | 2 (q1 q3 + q4 q2)    2 (q2 q3 - q4 q1)   1 - 2 ( q1 + q2 ) |
+            |                                                            |
+            +-                                                          -+
+ 
+ 
+The rotation matrix transforms coordinates as follows: if a vector v
+has coordinates ( x, y, z ) in some base reference frame (like
+J2000), then v has coordinates ( x&apos;, y&apos;, z&apos; ) in instrument-fixed
+coordinates, where
+ 
+ 
+        [          ] [ x ]     [ x&apos;]
+        |   ROT    | | y |  =  | y&apos;|
+        [          ] [ z ]     [ z&apos;]
+ 
+(With ROT defined as shown above, this equation transforming a vector
+in the base frame to a vector in the target frame is the same as
+shown earlier for the SPICE-style quaternions. The name CMAT has been
+replaced with the name ROT to help emphasize that this second system
+is NOT what is used within SPICE.)
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>true</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

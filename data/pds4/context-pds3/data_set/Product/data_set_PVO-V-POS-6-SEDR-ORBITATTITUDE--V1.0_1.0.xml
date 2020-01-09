@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.pvo-v-pos-6-sedr-orbitattitude--v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PVO V SUPP EXPERIMENTER DATA RECORD SC ORBIT/ATTITUDE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.pioneer_venus::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.pvo::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pos.pvo::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.pvo-v-pos-6-sedr-orbitattitude--v1.0__browserp_pvo-v-pos-6-sedr-orbitattitude--v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   National Aeronautics and Space Administration Ames Research
+                   Center Moffett Field, California Pioneer Venus Project
+                   Specification PC-456.O4 Pioneer Venus: Data User
+                   Requirements for Supplementary Experimenter Data Records,
+                   May 15, 1976.
+            </reference_text>
+            <description>reference.PC-456.O4</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PVO-V-POS-6-SEDR-ORBITATTITUDE--V1.0</data_set_id>
+        <data_set_name>PVO V SUPP EXPERIMENTER DATA RECORD SC ORBIT/ATTITUDE V1.0</data_set_name>
+        <data_set_release_date>1993-07-01</data_set_release_date>
+        <start_time>1978-12-05T06:55:00.000Z</start_time>
+        <stop_time>1992-10-08T18:14:07.018Z</stop_time>
+        <producer_full_name>Unknown</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            This dataset contains Pioneer Venus Orbiter (PVO) spacecraft
+            position and orientation data in Venus Solar Orbital (VSO)
+            coordinates.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+     This dataset contains the Supplemental Experimenter Data Records
+     (SEDR) as provided by the Pioneer project to the Magnetometer team
+     (C.T. Russell - PI). The dataset covers the entire period of
+     orbital operations, orbits 1-5055 (1978-12-05 to 1992-10-07). Each
+     orbit was originally provided on a separate IBM 9-track 800 bpi
+     tape which contained 6 files: 1) Standard Label file [sl] , 2)
+     Ephemeris file [ep], 3) S/C Attitude file [at], 4) Pulse Time file
+     [pt], 5) Selected Roll Reference file [sr], 6) Spin period file
+     [sp]. The original structure has been preserved within the
+     limitations of the CD-ROM media, and the PDS data archive rules.
+     The data remain in individual orbit files in IBM binary and EBCDIC
+     representations.
+ 
+     One additional file has been provided by the UCLA Magnetometer team
+     who have taken the primary responsibility for the SEDR archive.
+     There is a &apos;&apos;corrected pulse time file&apos;&apos; which is identical to the
+     original pulse time file in structure but which differs in content.
+     The data in this file have been corrected using the OEFD phase
+     information from the XXXXX channel. These data give a more accurate
+     approximation of the actual Sun pulse than is contained in the raw
+     SEDR data. When there are no OEFD data available to make this
+     correction, there is no corrected pulse time file. This situation
+     occurs near solar conjunctions.
+        </data_set_desc>
+        <confidence_level_note>
+     The original SEDR data have not been altered or corrected in any
+     way during the archive process. A &apos;&apos;corrected pulse time&apos;&apos; file has
+     been included in this archive which was not a part of the original
+     SEDR.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>78-051A-00K</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

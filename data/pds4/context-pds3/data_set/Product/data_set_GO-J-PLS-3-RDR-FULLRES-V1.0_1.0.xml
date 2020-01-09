@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-j-pls-3-rdr-fullres-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO JUPITER RDR FULL RESOLUTION PLASMA DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pls.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.callisto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.europa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.ganymede::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-pls-3-rdr-fullres-v1.0__browserp_go-j-pls-3-rdr-fullres-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Frank, L. A., K. L. Ackerson, J. A. Lee, M. R. English, and G. L. Pickett, The
+                   Plasma Instrumentation for the Galileo Mission, Sp. Sci. Rev., 60, 283-307,
+                   1992.
+            </reference_text>
+            <description>reference.FRANKETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-J-PLS-3-RDR-FULLRES-V1.0</data_set_id>
+        <data_set_name>GALILEO JUPITER RDR FULL RESOLUTION PLASMA DATA V1.0</data_set_name>
+        <data_set_release_date>2003-11-21</data_set_release_date>
+        <start_time>1995-12-07T15:30Z</start_time>
+        <stop_time>2003-09-21T18:45Z</stop_time>
+        <producer_full_name>DR. KENT ACKERSON</producer_full_name>
+        <citation_text>
+            Frank, L.A., Paterson, W.R., Ackerson, K.L., GALILEO JUPITER RDR
+            FULL RESOLUTION PLASMA DATA V1.0, GO-J-PLS-3-RDR-FULLRES-V1.0,
+            NASA Planetary Data System, 2000.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains raw data from the Plasma Science
+            instrument (PLS) on the Galileo spacecraft for all Jupiter
+            orbits. These data have been reformatted into ASCII tables to
+            facilitate data processing and analysis.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains raw data from the Plasma Science
+            instrument (PLS) on the Galileo spacecraft for all Jupiter
+            orbits. These data have been reformatted into ASCII tables to
+            facilitate data processing and analysis.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Overview:
+    =========
+ 
+    This data set contains data from the Plasma Science instrument
+    (PLS) onboard the Galileo spacecraft during the Jupiter orbital
+    operations phase (December 1995 to end of mission). These data have
+    been edited and reformatted from the raw telemetry packets into a
+    simple ASCII tabular structure to facilitate processing and analysis.
+ 
+ 
+    Parameters:
+    ===========
+ 
+    This data set includes both high time resolution (LPW) data recorded
+    during targeted encounters and real-time science (RTS) data acquired
+    during the magnetospheric survey when telemetry was available. The
+    Plasma instrument can collect either RTS data or LPW data but not
+    both simultaneously.
+ 
+    The basic data set parameters are the detector count rates in units
+    of counts per second. Data are provided at the full instrument
+    sampling rate in all sampling parameters (time, detector, E/Q, M/Q).
+    The instrument has twenty (20) detectors (seven ion, seven electron,
+    six mass spectrometer) and can sample E/Q or M/Q (mass spectrometer
+    detectors only) in sixty-four (64) steps for each detector.
+ 
+ 
+    Processing:
+    ===========
+ 
+    The final instrument packet files (IPF&apos;s) have been processed to
+    decommutate the PLS telemetry into individual instrument modes. Each mode
+    generally covers one spacecraft rotation and contains a number of energy
+    spectra (or mass spectra) at a number of angles.
+ 
+    In LPW mode an instrument cycle spans an interval of 4 RIM&apos;s (242.67
+    seconds). During this interval the instrument collects approximately
+    28 individual modes of data. In RTS operation the cycle is different,
+    and longer, due to the severely reduced telemetry rates. The
+    energies, accumulation times, and sectoring schemes all vary from
+    mode to mode, as with the LPW data.
+ 
+    A major accomplishment of the RDR processing is to recast the PLS
+    data in a format that is independent of the details of the operating
+    modes. The resulting RDR data records are much easier to use.
+ 
+    The PLS telemetry system is sensitive to data gaps. Repairing data
+    due to embedded data gaps cannot be automated.  Consequently
+    measurements with gaps in the middle of an individual modes are not
+    included in the RDR file. Fortunately, such gaps occurred
+    infrequently.  The recovery of LPW data was generally good. Multiple
+    playbacks were made on each LPW recording to fill gaps.
+ 
+    Please refer to the calibration document (CALIB.TXT) contained on the
+    PDS archive volume for a discussion of pitfalls and problems in using
+    the RDR files. This document is located on the PDS archive volumes in
+    the DOCUMENT/PLS directory.
+ 
+ 
+    Ancillary Data:
+    ===============
+ 
+    Several ancillary files are provided with these data: calibration
+    tables, a calibration document, and a spacecraft events file.
+ 
+ 
+    Calibration:
+ 
+      PLSCALIB.TXT  Describes the calibration algorithm and pitfalls.
+      PLS_DETS.TAB  maps detector numbers to detector names/functions
+      E_STEP_1.TAB  E-steps for electron detectors 14,16,18, and 20.
+      E_STEP_2.TAB  E-steps for ion dets 3,5,9,11 and mass spec dets 6,7
+      E_STEP_3.TAB  E-steps for electron detectors 15,17, and 19.
+      E_STEP_4.TAB  E-steps for ion dets 4,8,10 and mass spec dets
+      1,2,12,13 M_STEP_1.TAB  M-steps for the mass spectrometer channels
+      SECTOR.TAB    AACS sector angles
+      CALIB_1.TAB   Calibration factors to convert count rates to
+                    differential flux for electron detectors 14,16,18,
+                    and 20 CALIB_2.TAB   Calibration factors to convert
+                    count rates to differential flux for ion detectors
+                    3,5,9,11 and mass spec detectors 6 and 7.
+      CALIB_3.TAB   Calibration factors to convert count rates to
+                    differential flux for electron detectors 15,17, and
+                    19. CALIB_4.TAB   Calibration factors to convert
+                    count rates to differential flux for ion detectors
+                    4,8,10 and mass spec detectors 1,2,12 and 13.
+ 
+    Spacecraft Events:
+ 
+    xxx_SEF.TXT   A time ordered file extracted from the As-Run
+    Spacecraft Events Files (ARSEF) that provides the timing of events
+    that are significant to the plasma experiment. These  events include
+    whether or not the instrument is &apos;on&apos;, which type of data are being
+    acquired (RTS or  LPW), the time of thruster firings, etc. The &apos;xxx&apos;
+    in the file name is the orbit name (i.e. G01 for orbit Ganymede 1).
+ 
+ 
+    Coordinate System:
+    ==================
+ 
+    Data are provided in PLS instrument coordinates. Please refer to the
+    instrument description paper [FRANKETAL1992] for a description of the
+    instrument mounting, detector fields of view, and spin phase
+    sectoring. See also the SECTOR.TAB file in the ancillary data files.
+ 
+ 
+    Software:
+    =========
+ 
+    There is no software provided with this archive.
+ 
+ 
+    Media/Format:
+    =============
+ 
+ 
+    These data are archived on either CDROM or DVDROM media. The data
+    files are stored in a simple ASCII table form that is described by a
+    detached PDS label (Table Object). Each table has the following
+    structure:
+ 
+    Col#    Name  Format   Description
+-----------------------------------------------------------------------
+    1       Time    A24      Spacecraft event time (UTC)
+    2       SCLK    A11      Spacecraft clock counter (RIM:mf)
+    3       Rate    1PE8.2   Count rate (counts/sec)
+    4       DetId   I2       Detector Id (1-20)
+    5       E-Step  I2       E/Q analyzer step (0-63)
+    6       M-Step  I2       M/Q analyzer step (0-63)
+    7       Sector  I3       AACS rotor spin angle (0-255 =2 PI).
+    8       Sample  I2       Sample number
+    9       Accum   F6.4     Accumulation time in seconds
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Data Coverage/Quality:
+    ======================
+ 
+    This data set contains gaps in coverage. Many of these gaps were
+    planned (insufficient telemetry coverage to provide continuous data)
+    and others were not (telemetry dropouts, station outages, etc.).
+ 
+    Some files may not be completely continuous in time.  This is a result
+    of how the data is transmitted and received:
+ 
+    &apos;The PLS instrument has two analyzers: A and B.  Each analyzer has its own
+    sensors, high voltage supplies, analyzer plates, and data paths.  The two
+    analyzers normally start a spin-mode at the same time.  And they normally
+    end a spin-mode at the same time.  Both data streams are buffered
+    internally by the PLS data system and sent out to the spacecraft in a
+    packetized telemetry scheme.  Generally, the two streams are interleaved
+    on a minor-frame-by-minor-frame basis, but if one analyzer does not have
+    data ready and the other does then the telemetry that is ready is sent.
+    (Note that the two analyzers have different numbers of sensors and create
+    different quantities of data.)
+ 
+    On the ground, the PLS telemetry stream is decommutated and separated into
+    A and B data-sets for each spin-mode.  The time tag attached to each
+    A-data-set and each B-data-set is the time of the first telemetry packet
+    containing some of that data.  As soon as a complete data set has been
+    decommutated on the ground it is written to the output file.  And this is
+    the key to understanding what is happening.  Sometimes the first data-set
+    to appear in the telemetry stream is also the first one to be completed.
+    And sometimes the first data-set to appear in the telemetry is the last to
+    be completed.  It is essentially a random thing.
+ 
+    It is crucial to note that PLS takes all of its data in a spin-
+    synchronized fashion, not in a SCLK-synchronized fashion.  We went to
+    great pains to ensure that the data were obtained in well-defined spin
+    sectors and in repeatable directions.  Differences of a couple of
+    minor-frames are not significant.  The spin-phase angles are the
+    quantities of importance.&apos;
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

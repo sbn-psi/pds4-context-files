@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.phx-m-tega-2-eghedr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PHX MARS THERMAL EVOLVED GAS ANALYZER 2 EGHEDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.phoenix::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:tega.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-tega-2-eghedr-v1.0__browserp_phx-m-tega-2-eghedr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-tega-2-eghedr-v1.0__dvo_geo_phx-m-tega-2-eghedr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-tega-2-eghedr-v1.0__pds.geo.phx.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Boynton, W. V., H. Enos, C. Fellows, D. K. Hamara, K. Harshman, M. S. Williams,
+                   M. R. Fitzgibbon, M. Finch, G. Droege, J. Hoffman, D. W. Ming, and P. Niles,
+                   The Thermal and Evolved-Gas Analyzer on the Phoenix Mars Lander, J. Geophys.
+                   Res., in prep.
+            </reference_text>
+            <description>reference.BOYNTONETAL2008</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Planetary Data System Standards Reference, JPL Document D-7669, Part 2, Jet
+                   Propulsion Laboratory, Pasadena, CA, 2001.
+            </reference_text>
+            <description>reference.PDSSR2001</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PHX-M-TEGA-2-EGHEDR-V1.0</data_set_id>
+        <data_set_name>PHX MARS THERMAL EVOLVED GAS ANALYZER 2 EGHEDR V1.0</data_set_name>
+        <data_set_release_date>2008-07-01</data_set_release_date>
+        <start_time>2008-05-01T14:14:32.890Z</start_time>
+        <stop_time>2008-05-01T20:09:44.149Z</stop_time>
+        <producer_full_name>WILLIAM BOYNTON</producer_full_name>
+        <citation_text>
+            Boynton, W.V., 2008 Mars Phoenix Thermal Evolved Gas Analyzer 2
+            EGHEDR Data V1.0, PHX-M-TEGA-2-EGHEDR-V1.0, NASA Planetary Data
+            System, 2008.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw, uncalibrated engineering, housekeeping and scientific data
+            collected from the Thermal Evolved Gas Analyzer (TEGA) aboard the
+            2007 Mars Phoenix Lander.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Raw, uncalibrated engineering, housekeeping and scientific data
+            collected from the Thermal Evolved Gas Analyzer (TEGA) aboard the
+            2007 Mars Phoenix Lander.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Thermal Evolved Gas Analyzer (TEGA) is designed to analyze
+      ~50 mg of fine grained Martian soil or rock fragments. TEGA
+      consists of four basic components: a soil delivery system,
+      an oven/calorimeter thermal analyzer (TA), a gas storage and
+      handling system, and a mass spectrometer acting as an
+      evolved-gas analyzer (EGA). A full description of the TEGA
+      instrument can be found in [BOYNTONETAL2008].
+ 
+      The data set PHX MARS THERMAL EVOLVED GAS ANALYZER 1 EDR
+      is a time series collection of TA, EGA, engineering, and
+      commanding measurements from the TEGA aboard the Mars Phoenix
+      Lander. Data types included in this data set
+      are engineering data, calorimeter data from the TA,sweep mode
+      EGA data, mass hopping mode EGA data, LED oven fill data, and
+      instrument message log data. Data are sorted by time, with each
+      data file containing one measurement day&apos;s worth of data from
+      midnight to midnight UTC.
+ 
+      TEGA is designed to analyze 8 individual samples, one sample in
+      each of the eight single use ovens. The EGA portion of the
+      instrument will not only analyze the gases evolved from the
+      samples heated in the ovens, but will also analyzed samples of
+      the Martian atmosphere. TEGA is expected to operate for 45 days.
+      During operations the science, engineering and housekeeping data
+      are downloaded from the spacecraft by the Jet Propulsion
+      Laboratory (JPL) into the Telemetry Data System(TDS). The
+      TDS sends data to a process that translates data packets and
+      examines instrument health via messages. Data are output to a
+      spooler that passes them to the University of Arizona (UA)
+      database ingest process. The ingest process inputs raw data
+      into the UA database. Data are retrieved from the UA database
+      to build the TEGA EDR data products.
+ 
+      The TEGA EDR data set is intended to be the lowest level
+      (level 0) data available for TEGA. It should be useful to those
+      scientists who are experienced in calorimetry and mass
+      spectrometry.
+ 
+ 
+    Parameters
+    ==========
+      The TEGA EDR data set is composed of three main data types and
+      three supporting data types. The objective of compiling the
+      TEGA EDR is to create a record of the primary data collected by
+      TEGA. The following paragraphs discuss the parameters of
+      interest in each of the data types.
+ 
+      SC DATA
+      -----
+        The SC data are time series records taken over the course
+        of a measurement day. Data files are labeled with the date.
+        Individual records are a single data collection interval. SC
+        data are the science data produced by the TA.
+ 
+      EGA DATA
+      --------
+        The EGA data are time series records taken over the course of
+        a measurement day. Data files are labeled with the date.
+        Individual records are a single data collection interval.
+        EGA data are the science data produced by the EGA mass
+        spectrometer in sweep mode.
+ 
+      EGH DATA
+      --------
+        The EGH data are time series records taken over the course of
+        a measurement day. Data files are labeled with the date.
+        Individual records are a single data collection interval. EGH
+        data are the science data produced by the EGA mass
+        spectrometer in mass hopping mode.
+ 
+      The Engineering, LED fill and Message Log, data sets provide
+      supporting information.
+ 
+      Engineering Data
+      ----------------
+        The Engineering data are time series records for each
+        engineering parameter taken over the course of a measurement
+        day. Data files are grouped in the ENG folder and are labeled
+        with the engineering parameter name. Individual records are a
+        single data collection interval that is variable in duration.
+        Engineering values are reported by parameter name and include
+        collection time, and DN value. Engineering values are
+        specific monitor values recorded by TEGA.
+ 
+      Message Log
+      -----------
+        The Message Log data are time series records taken over the
+        course of a day. Data files are labeled with the date.
+        Individual records are a single data collection interval. The
+        Message Log data are messages returned from TEGA.
+ 
+      LED
+      ---
+        LED data are time series records taken over the course
+        of a measurement day. Data files are labeled with the date.
+        Individual records are a single data collection interval,
+        which is variable in duration. The LED data are the data
+        collected by the oven fill sensors, and indicate when an oven
+        is full of sample material.
+ 
+ 
+    Processing
+    ==========
+      TEGA data (both science and engineering) are downloaded from
+      the Phoenix Mars Lander by JPL into the Telemetry Data System
+      (TDS). The TDS sends the data to a process called TEGA_tl, that
+      translates GRS packets from any source to any destination and
+      examines instrument health via messages. The data are checked
+      for packet types, header information, messages, or errors.
+      Data are output to a spooler, which passes data to the UA
+      database ingestion process. The ingestion process inputs raw
+      telemetry data into the database.
+ 
+      A function reads the data header to get the total number of
+      bytes in the packet, and the sequence bytes. The rest of the
+      packet is then read. The data type, read from the common header,
+      is returned, determining the next step in the processing. One
+      of a number of different procedures is run to insert packet
+      data into the appropriate database tables. If the data type
+      returned is less than or equal to 0 an error message is
+      returned stating that the packet was not inserted. Once all
+      data packets for a measurement day are ingested into the
+      database, the EDR data products are created by reformatting
+      the raw data in accordance with the data formats specified
+      by the product labels.
+ 
+ 
+    Data
+    ====
+      The TEGA EDR data set is composed of a series of date stamped
+      files that contain 1 day&apos;s worth (24 hours, 00:00:00 UTC to
+      23:59:59 UTC) of data for 6 different data types. The following
+      sections describe each data type.
+ 
+      SC DATA
+      -------
+        SC data are composed of raw scanning calorimeter data. These
+        data include start and end time of collection, oven and shield
+        power, and associated current, potential, and pulse data.
+ 
+      EGA DATA
+      --------
+        EGA mass spectrometer data is composed of start and stop times
+        of the collection, scan type, voltage, emission energy and
+        counts at each of four collectors.
+ 
+      EGH DATA
+      --------
+        EGH data are mass hopping mode EGA data. These data include
+        start and stop times for the collection, voltage, emission
+        energy and level, and counts at the detector.
+ 
+ 
+      Engineering Data
+      ----------------
+        Engineering data are composed of the 85 different engineering
+        readings monitored in TEGA. The engineering readings can be
+        taken at several different time intervals. The following is a
+        list of all the engineering readings and a description of
+        each.
+ 
+     TA_MANIFOLD_PRES            Manifold Pressure
+     TA_PLUS_5_VREF              +5V REF
+     TA_OUTLET_PRES              Outlet Pressure
+     TA_MANIFOLD_TEMP            TA Manifold Temperature
+     TA_EGA_PLUMB_TEMP           MS Plumbing Temperature
+     TA_EGA_BAKEOUT_TEMP         Bakeout temperature
+     TA_PLUMBING_1_TEMP          Plumbing 1 Temperature
+     TA_PLUMBING_2_TEMP          Plumbing 2 Temperature
+     TA_EGA_MAN_TEMP             MS Manifold Temperature
+     TA_CAL_TANK_TEMP            Cal Tank Temperature
+     TA_CPU_TEMP                 CPU Temperature
+     TA_PWR_SPLY_1_TEMP          Power Supply 1 Temperature
+     TA_PWR_SPLY_2_TEMP          Power Supply 2 Temperature
+     TA_PWR_CNTL_1_TEMP          Power Control 1 Temperature
+     TA_PWR_CNTL_2_TEMP          Power Control 2 Temperature
+     TA_A2D_TEMP                 ADC Temperature
+     TA_COVER_1_TEMP             cover 1 temperature
+     TA_INPUT_FUNNEL_1_LO_TEMP   Funnel 1 Temperature
+     TA_PRES_SENSE_FD_BK         Pres Sense Exc. Feedback
+     TA_INPUT_FUNNEL_2_LO_TEMP   Funnel 2 Temperature
+     TA_OVEN_TEMP                Oven Temperature
+     TA_SHLD_TEMP                Shield Temperature
+     TA_EGA_ELECT_BOX_TEMP       TEB Temperature
+     TA_T_HEATER_TEMP            &apos;T&apos; Heater Temperature
+     TA_TRANS_TUBE_TEMP          Transfer Tube Temperature
+     TA_EGA_GEC_TEMP             GEC Temperature
+     TA_BUS_A_VOLT               Bus A Voltage
+     TA_AGD_0_1                  AGD_0_3 ground
+     TA_AGD_3_1                  AGD_3_1 ground
+     TA_CPU_PLUS_5_VOLT          CPU Voltage
+     TA_ANLG_PLUS_12_VOLT        Analog +12V Voltage
+     TA_ANLG_MINUS_12_VOLT       Analog -12V Voltage
+     TA_OVEN_PLUS_15_VOLT        Oven Voltage
+     TA_SHIELD_PLUS_30_VOLT      Shield Voltage
+     TA_BUS_A_CUR                Bus A Current
+     TA_BUS_B_CUR                Bus B Current
+     TA_EGA_CUR                  EGA Current
+     TA_CPU_PLUS_5_CUR           CPU Current
+     TA_ANLG_PLUS_12_CUR         Analog +12V Current
+     TA_ANLG_MINUS_12_CUR        Analog -12V Current
+     TA_OVEN_PLUS_15_CUR         Oven Current
+     TA_SHIELD_PLUS_30_CUR       Shield Current
+     TA_FULL_DETECT              Full Detect Integrated
+     TA_FULL_DETECT_RAW          Full Detect Raw
+     TA_OVEN_ERR                 Oven Error
+     TA_SHLD_ERR                 Shield Error
+     TA_CAL_TANK_COLD_TEMP       Cal Tank Cold Temperature
+     TA_COVER_2_TEMP             cover 2 Temperature
+     MEM_OVEN_INT_LO             Oven integrator val lo bytes
+     MEM_OVEN_INT_HI             Oven integrator val hi bytes
+     MEM_SHLD_INT_LO             Shield integrator val lo bytes
+     MEM_SHLD_INT_HI             Shield integrator val hi bytes
+     MEM_OVEN_VOLT               Oven voltage
+     MEM_OVEN_CUR                Oven current
+     MEM_SHLD_VOLT               Shield voltage
+     MEM_SHLD_CUR                Shield current
+     MEM_MANIFOLD_PRES           Manifold pressure
+     MEM_OVEN_ERR                Oven error
+     MEM_SHLD_ERR                Shield error
+     MEM_T_WIDTH                 T pulse width
+     COVER1_DONE                 Cover1 Limit Switch
+     COVER2_DONE                 Cover2 Limit Switch
+     MEM_OVEN_WIDTH              Oven pulse width
+     MEM_SHLD_WIDTH              Shield pulse width
+     EGA_STATUS_BITS             Status bits value
+     EGA_TRAP_CUR                Trap current monitor
+     EGA_EMISSION_CUR            Emission current monitor
+     EGA_FILAMENT_1              Filament 1 in use
+     EGA_FILAMENT_2              Filament 2 in use
+     EGA_PLUS_5_VOLT             +5 volt monitor
+     EGA_PLUS_12_VOLT            +12 volt monitor
+     EGA_MINUS_12_VOLT           -12 volt monitor
+     EGA_FILAMENT_CUR_1          Filament 1 current monitor
+     EGA_FILAMENT_CUR_2          Filament 2 current monitor
+     EGA_MULTIPLIER_VOLT         Multiplier voltage monitor
+     EGA_ION_PUMP_VOLT           Ion Pump voltage monitor
+     EGA_ION_PUMP_CUR            Ion Pump Current monitor
+     EGA_SWEEP_VOLT              Sweep voltage monitor
+     EGA_GEC_CUR                 GEC current monitor
+     EGA_MAGNET_TEMP_1           Magnet 1 temperature
+     EGA_MAGNET_TEMP_2           Magnet 2 temperature
+     EGA_PROC_TEMP               CPU temperature
+     EGA_AVG_CALLS               Average # calls to Task Queue
+     EGA_MIN_CALLS               Minimum # calls to Task Queue
+     EGA_SPARE_3                 Spare
+     EGA_SPARE_4                 Spare
+ 
+ 
+      Message Log
+      -----------
+        The Message Log data consists of the data sent from the
+        TEGA electronics in response to some action taking place
+        in the instrument. The message data includes
+        general messages and warnings as well as error messages.
+    .
+ 
+      LED DATA
+      --------
+        The LED data consists of the time of the LED reading and
+        the state of the sensor. This data is used to indicate
+        when an oven is full of sample.
+ 
+ 
+    Ancillary Data
+    ==============
+      Ancillary data are listed by data type.
+ 
+      Message Log
+      -----------
+        A list of all message ID&apos;s and their associated meanings can
+        be found in the Message Log label file. A list of message
+        detail ID&apos;s and the associated information can be found in the
+        tega_message_dict document located in the document directory.
+ 
+ 
+    Coordinate System
+    =================
+      Several coordinate systems are used by the Phoenix project. A
+      detailed description can be found in the TEGA EDR SIS document
+      found in the Documents directory.
+ 
+ 
+    Software
+    ========
+      No TEGA specific software is provided with this data set.
+ 
+      PDS-labeled images and tables can be viewed with the program
+      NASAView, developed by the PDS and available for a variety of
+      computer platforms from the PDS web site
+      http://pds.nasa.gov/tools/software_download.cfm. There is no
+      charge for NASAView.
+ 
+    Media/Format
+    ============
+      The TEGA EDR will be delivered using DVD media. Formats will be
+      based on standards for such products established by the
+      Planetary Data System (PDS) [PDSSR2001].
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      The data presented in the TEGA EDR is intended to be the least
+      processed, most primitive data set released for TEGA. Data
+      presented here are an accurate representation of TEGA data as
+      received from the spacecraft.
+ 
+ 
+    Review
+    ======
+      The TEGA EDR was reviewed internally by the TEGA team prior to
+      release to the PDS. PDS will also performed an external peer
+      review of the TEGA EDR.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data reported are the minimally processed data received from
+      the lander during nominal TEGA operations. All data received
+      is reformatted into one of the EDR data types. Data are by
+      definition of good quality, as damaged telemetry packets are
+      sequestered upon receipt from the lander. We do not expect to
+      receive many (if any)) damaged data packets.
+ 
+ 
+  Limitations
+  ===========
+    The major limitation of this data set is that this is level 0,
+    minimally processed data. The data are received from the
+    spacecraft telemetry and ingested into a database. If gaps
+    exist in the telemetry, data are lost.
+ 
+  Data Compression
+  ===============
+ 
+    No data compression is used.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

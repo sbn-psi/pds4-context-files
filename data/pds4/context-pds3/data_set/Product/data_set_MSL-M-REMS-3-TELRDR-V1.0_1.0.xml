@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-rems-3-telrdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS ROVER ENV MONITORING STATION 3 TELRDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rems.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-3-telrdr-v1.0__browserp_msl-m-rems-3-telrdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-3-telrdr-v1.0__dvo_atmos_msl-m-rems-3-telrdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-3-telrdr-v1.0__pds.geo.msl.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gomez-Elvira J, Armiens C, Castaner L, Dominguez M, Genzer M, Gomez F, Haberle
+                   R, Harri A-, Jimenez V, Kahanpaa H, Kowalski L, Lepinette A, Martin J,
+                   Martinez-Frias J, McEwan I, Mora L, Moreno J, Navarro S, de Pablo MA, Peinado
+                   V, Pena A, Polkko J, Ramos M, Renno NO, Ricart J, Richardson M,
+                   Rodriguez-Manfredi J, Romeral J, Sebastian E, Serrano J, de la Torre Juarez M,
+                   Torres J, Torrero F, Urqui R, Vazquez L, Velasco T, Verdasca J, Zorzano M-,
+                   Martin-Torres J. REMS: The environmental sensor suite for the mars science
+                   laboratory rover. Space Science Reviews 2012:1-58, 2012.
+            </reference_text>
+            <description>reference.GOMEZELVIRAETAL2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-REMS-3-TELRDR-V1.0</data_set_id>
+        <data_set_name>MSL MARS ROVER ENV MONITORING STATION 3 TELRDR V1.0</data_set_name>
+        <data_set_release_date>2015-07-31</data_set_release_date>
+        <start_time>2012-08-07T04:04:38.536Z</start_time>
+        <stop_time>2015-03-27T02:38:51.479Z</stop_time>
+        <producer_full_name>JOSE A RODRIGUEZ-MANFREDI</producer_full_name>
+        <citation_text>
+            Gomez-Elvira, J., Mars Science Laboratory Rover Environmental
+            Monitoring Station RDR Data V1.0, MSL-M-REMS-3-TELEDR-V1.0, NASA
+            Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            MSL Rover Environmental Monitoring Station Thermal and Electrical
+            Reduced Data Record
+        </data_set_terse_desc>
+        <abstract_desc>
+            Data taken by the sensors of the Rover Environmental Monitoring
+            Station (REMS) aboard the Mars Science Laboratory, in electrical
+            and thermal units.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The REMS instrument is a meteorological package designed to
+    provide measurements of air and ground temperatures, wind speed
+    and direction, pressure, humidity and ultraviolet radiation.
+ 
+    The REMS TELRDR data set contains processed REMS data where the
+    counts given by the analog/digital converters from the instrument
+    sensors have been converted to their corresponding thermal and
+    electrical values, taking into account calibration information,
+    gains and other possible electrical altering factors (such as the
+    ASIC temperature). All these data can be found in the REMS EDR
+    data set with the exception of calibration information. Whenever
+    it is possible, temperatures instead of resistances are given,
+    since conversion between them is straightforward. This implies
+    that air temperatures from the Air Temperature Sensor are already
+    present at this level.
+ 
+    Data is a time ordered sequence of rows organized into a table,
+    taken at a maximum resolution of one second. Each data product
+    contains one sol worth of activity and has information from all
+    sensors.
+ 
+    This data set represents the first intermediate processing step to
+    calculate environmental magnitudes. No external models or
+    corrections have been applied.
+ 
+ 
+  Parameters
+  ==========
+    The information included for each sensor is the following:
+ 
+    - Wind Sensor: convective powers and hot temperatures from the 12
+      transducers for each boom. Cold temperatures from the 3 boards
+      in each boom where the transducers are allocated.
+    - Ground Temperature Sensor: temperatures and voltages from the
+      3 thermophiles. Calibration plate temperature.
+    - Air Temperature Sensor: temperatures measured by each one of the
+      PT1000 sensors on each boom. There is no sensor at the base of
+      the rod at boom 1, so for that boom the third temperature is the
+      mean of the three thermopiles temperatures.
+    - Ultraviolet Sensor: photodiodes output currents and sensor
+      operating temperature.
+    - Humidity Sensor: sensor capacities for each of the 8 channels.
+    - Pressure Sensor: sensor capacities for each of the 8 channels.
+ 
+    Sampling is at 1Hz maximum, with a baseline operation of 5 minutes
+    every hour. Additional measurements can be taken on an on-demand
+    basis beyond those hourly observations. For these additional
+    measurements, and besides tactical day to day conditions and
+    resources, there is a general pattern that covers selected hours
+    of the day built by the scientific team during operations. That
+    pattern is shifted from sol to sol to cover the whole 24 hours
+    after a few sols.
+ 
+    Additionally, extended measurements can also be triggered
+    automatically if event mode is activated, in which case the REMS
+    computer will decide or not to continue measuring after the
+    regular cadence, by comparing the previous measurements with the
+    expected trend. The objective is to capture any ongoing transitory
+    atmospheric event.
+ 
+    During the first 72 sols, for each 5 minute block, the following
+    measurement strategy was used: Wind Sensor is switched off for 60
+    seconds, then it is switched on for 235 seconds, and then it is
+    switched off again for the final 5 seconds. The rest of the
+    sensors are switched on all the time. This strategy was based on
+    results obtained during pre-flight testing. However, after
+    evaluating flight data, it was determined that this strategy was
+    not necessary, so from sol 73 onwards all sensors are switched on
+    for each 5 minute block.
+ 
+    From sol 793 onwards, a new measurement strategy for Humidity
+    Sensor was introduced. It is called HS HRIM (Humidity Sensor High
+    Resolution Interval Mode) and is only used on selected one-hour
+    long observations. This new strategy intends to minimize heating
+    of the Humidity Sensor, and consists of alternately switching on
+    and off the sensor at periodic intervals. At the same time, Boom 2
+    is switched off, which means that there are no Wind Sensor and Air
+    Temperature Sensor measurements.
+ 
+ 
+  Processing
+  ==========
+    Processing starts with the generation of the REMS EDRs. The REMS
+    EDR data products are generated by the MIPL (Multimission Image
+    Processing Laboratory) at JPL, under the OPGS, using the telemetry
+    processing software called MSLEdrGen. This software will convert
+    the binary data received from telemetry to ASCII. EDRs will then
+    be retrieved at Centro de Astrobiologia (INTA-CSIC) using the File
+    Exchange Interface (FEI).
+ 
+    EDR data products have a first automatic process using calibration
+    data. The result of this is the TELRDR data set, which contains
+    electrical magnitudes and thermal data. In parallel, using
+    ancillary data provided by JPL (such as rover location, sun
+    position) the ADRs (Ancillary Data Records) are generated. EDRs,
+    TELRDRs, ADRs, and calibration data are processed together to
+    obtain the ENVRDRs.
+ 
+    The level of processing of the ENVRDRs includes environmental
+    magnitudes with minimal corrections (mainly based on the
+    degradation of the sensors). Finally, applying models developed by
+    the REMS team and refining them with the confidence levels, the
+    MODRDR data set is created.
+ 
+    In the process to convert EDRs to TELRDR, the procedure to
+    calculate the electrical magnitudes from counts varies from sensor
+    to sensor. These counts are the result of a digitization from an
+    Analog/Digital Converter, so the reverse process is done using
+    data obtained during the calibration of the instrument. These data
+    are included in the CALIB directory.
+ 
+    Three of the sensors (Wind Sensor, Ground Temperature Sensor and
+    the Air Temperature Sensor) are handled through an ASIC
+    (Application-Specific Integrated Circuit), and are affected by its
+    temperature and power conditions. These ASIC values and their
+    effects are included in the processing in addition to the
+    digital-analogical conversion. ASIC information is also included
+    in the EDRs.
+ 
+    Finally, with a one to one time match between EDRs and TELRDRs,
+    the resulting data is integrated into a single table.
+ 
+ 
+  Data
+  ====
+    Each REMS TELRDR product in the data set is an ASCII table
+    containing all sensors data, accompanied by a detached PDS
+    label. Each row contains an acquisition session, while columns
+    contain the sensors values. This makes it easy to load the data
+    products in a spreadsheet program or in a database.
+ 
+    Columns with related information are placed together, in the
+    following order: time references (REMS clock, LMST and LTST), Wind
+    Sensor, Ground Temperature Sensor, Air Temperature Sensor,
+    Ultraviolet Sensor, Humidity Sensor and Pressure Sensor.
+ 
+    REMS clock is synced with the spacecraft clock (SCLK) with a
+    maximum deviation of 30 sg. LTST is given with respect to the
+    rover position, in contrast with LTST given in REMS EDR labels and
+    in other MSL data, which is given with respect to landing site.
+ 
+    Columns are delimited by commas and are of fixed length. Rows are
+    time ordered and are separated by a carriage return/line
+    feed. Each table contains a sol of measurements.
+ 
+    Data may be set to UNK if their value is not known and it will
+    never be (such as saturation, or a specific sensor switched off
+    during acquisition). They may also be set to NULL if their value
+    is not known at the moment of the release of the data set, but it
+    is expected to be known in a future release.
+ 
+ 
+  Ancillary Data
+  ==============
+    The ancillary data used in the generation of this data set is
+    laboratory calibration data, all of which can be found in the
+    CALIB directory.
+ 
+    Calibration files are in plain ASCII text format. They are
+    structured in a PDS label-like structure, with the form DATA =
+    VALUE, each value taking up one line. A file per sensor is
+    provided.
+ 
+    The following ancillary data are needed to generate higher level
+    data and to estimate its quality:
+ 
+    Laboratory calibration data
+    Solar azimuth and elevation
+    Rover azimuth, elevation, altitude, pitch, yaw and roll
+    Rover speed
+    Masthead azimuth and elevation
+    Rover temperatures
+    UV sensor dust attenuation
+ 
+    These data can be found as part of the REMS ADR records.
+ 
+ 
+  Software
+  ========
+    No software is provided in this data set. The RDR tables are simple
+    ASCII files that can be displayed on UNIX, Macintosh, and PC
+    platforms with common software.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    The data presented in this data set has been processed by applying
+    laboratory calibration data and formulas derived from the REMS
+    electronic design. Accuracy of these data is the correspondent to
+    that one of the calibration process, although extensive tests in
+    representative conditions have been done to ensure its
+    reliability. Wind Sensor data of boards 2 and 3 in boom 1 are not
+    provided as they were damaged during landing.
+ 
+ 
+  Review
+  ======
+    The REMS RDRs were reviewed internally by the REMS team prior to
+    release to the PDS. PDS also performed an external peer review of
+    the REMS RDRs.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data reported are processed data derived from raw data received
+    during nominal REMS operations. Each TELRDRs table provides
+    sensors values measured during one sol, which are dependent of
+    pre-flight calibration data.
+ 
+    Sensors switched off at the time of measurement are set to UNK.
+    Saturated Wind Sensor data or those correspondent to damaged
+    boards are set to UNK. When the Pressure Sensor is acquiring in
+    high resolution mode, the channels not in use are set to UNK.
+ 
+ 
+  Limitations
+  ===========
+    The major limitation of this data set is that most of the data is
+    at the electrical level.
+ 
+    Missing information from Wind Sensor in the boom 1 makes it
+    difficult to estimate wind data when it is coming from behind the
+    rover mast in the boom 2 direction.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

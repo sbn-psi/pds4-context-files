@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.quaternion</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>quaternion</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>quaternion</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>quaternion</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+       The QUATERNION element specifies a quaternion, which is a
+four-component representation of a rotation matrix.  This particular
+definition is focused on the PDS use of quaternions; one should refer
+to other sources for a more complete discourse on quaternion math.
+ 
+A quaternion may be used to specify the rotation of one Cartesian
+reference frame--sometimes referred to as the base frame or the
+&apos;From&apos; frame--into coincidence with a second Cartesian reference
+frame--sometimes referred to as the target reference frame or the
+&apos;To&apos; frame. Unlike an Euler rotation where three sequential rotations
+about primary axes are used, a quaternion rotation is a single
+action, specified by a Cartesian vector used as the positive axis of
+the rotation (right hand rule) and the magnitude (an angle) of
+rotation about that axis.
+ 
+The quaternion may be thought of as defining the instantaneous
+orientation--sometimes called &apos;pointing&apos;--of a structure such as an
+instrument, antenna, solar array or spacecraft bus, given relative to
+a specified reference frame (the base frame), at an epoch of interest.
+ 
+Perhaps of more use is the concept that a quaternion may be used to
+rotate an arbitrary Cartesian 3-vector defined in one reference frame
+(e.g. an instrument&apos;s reference frame) to an equivalent vector
+defined in another reference frame (e.g. the frame tied to a
+spacecraft or the J2000 inertial reference frame).
+ 
+A quaternion has four components.  One of the components is a scalar,
+a function of the angle of rotation (cosine of half the rotation
+angle), while the remaining three components are used to specify a
+vector, given in the base reference frame, about which the rotation
+will be made. In the PDS context a quaternion has a magnitude of one,
+and so may be treated as a unit quaternion.
+ 
+In many cases a time tag (epoch) must be associated with the
+quaternion because the orientation varies over time. A time tag is
+not needed if the &apos;To&apos; and &apos;From&apos; frames have a fixed offset.
+ 
+The QUATERNION_DESC element is always to be paired with the
+QUATERNION element, and will contain a complete description of the
+formation and rotational sense of the quaternion specified with the
+QUATERNION keyword, and the structure (organization of the four
+components) of the quaternion.
+ 
+In the lingo of the NASA &apos;SPICE&apos; ancillary information system a
+rotation matrix is synonymous with a C-matrix--that which may be
+obtained from a C-kernel. The SPICE Toolkit provides an assortment of
+routines that deal with quaternions. The SPICE system also provides
+information about specification of reference frames and time tags
+suitable for use with quaternions in the SPICE context. The NAIF Node
+of the PDS can provide additional documentation on quaternions in a
+spacecraft ancillary data context (&apos;Rotations Required Reading&apos; and
+&apos;SPICE Quaternion White Paper&apos;).
+        </definition>
+        <comment>quaternion</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>quaternion</name>
+            <definition>
+       The QUATERNION element specifies a quaternion, which is a
+four-component representation of a rotation matrix.  This particular
+definition is focused on the PDS use of quaternions; one should refer
+to other sources for a more complete discourse on quaternion math.
+ 
+A quaternion may be used to specify the rotation of one Cartesian
+reference frame--sometimes referred to as the base frame or the
+&apos;From&apos; frame--into coincidence with a second Cartesian reference
+frame--sometimes referred to as the target reference frame or the
+&apos;To&apos; frame. Unlike an Euler rotation where three sequential rotations
+about primary axes are used, a quaternion rotation is a single
+action, specified by a Cartesian vector used as the positive axis of
+the rotation (right hand rule) and the magnitude (an angle) of
+rotation about that axis.
+ 
+The quaternion may be thought of as defining the instantaneous
+orientation--sometimes called &apos;pointing&apos;--of a structure such as an
+instrument, antenna, solar array or spacecraft bus, given relative to
+a specified reference frame (the base frame), at an epoch of interest.
+ 
+Perhaps of more use is the concept that a quaternion may be used to
+rotate an arbitrary Cartesian 3-vector defined in one reference frame
+(e.g. an instrument&apos;s reference frame) to an equivalent vector
+defined in another reference frame (e.g. the frame tied to a
+spacecraft or the J2000 inertial reference frame).
+ 
+A quaternion has four components.  One of the components is a scalar,
+a function of the angle of rotation (cosine of half the rotation
+angle), while the remaining three components are used to specify a
+vector, given in the base reference frame, about which the rotation
+will be made. In the PDS context a quaternion has a magnitude of one,
+and so may be treated as a unit quaternion.
+ 
+In many cases a time tag (epoch) must be associated with the
+quaternion because the orientation varies over time. A time tag is
+not needed if the &apos;To&apos; and &apos;From&apos; frames have a fixed offset.
+ 
+The QUATERNION_DESC element is always to be paired with the
+QUATERNION element, and will contain a complete description of the
+formation and rotational sense of the quaternion specified with the
+QUATERNION keyword, and the structure (organization of the four
+components) of the quaternion.
+ 
+In the lingo of the NASA &apos;SPICE&apos; ancillary information system a
+rotation matrix is synonymous with a C-matrix--that which may be
+obtained from a C-kernel. The SPICE Toolkit provides an assortment of
+routines that deal with quaternions. The SPICE system also provides
+information about specification of reference frames and time tags
+suitable for use with quaternions in the SPICE context. The NAIF Node
+of the PDS can provide additional documentation on quaternions in a
+spacecraft ancillary data context (&apos;Rotations Required Reading&apos; and
+&apos;SPICE Quaternion White Paper&apos;).
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>true</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>-1.0</minimum_value>
+            <maximum_value>1.0</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

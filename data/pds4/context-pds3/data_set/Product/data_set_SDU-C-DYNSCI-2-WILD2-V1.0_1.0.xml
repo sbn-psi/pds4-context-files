@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.sdu-c-dynsci-2-wild2-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>STARDUST WILD 2 ENCOUNTER DYNAMIC SCIENCE EXPERIMENT DATA</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.stardust::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:dynsci.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.81p-wild_2_1978_a2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.sdu-c-dynsci-2-wild2-v1.0__browserp_sdu-c-dynsci-2-wild2-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>SDU-C-DYNSCI-2-WILD2-V1.0</data_set_id>
+        <data_set_name>STARDUST WILD 2 ENCOUNTER DYNAMIC SCIENCE EXPERIMENT DATA</data_set_name>
+        <data_set_release_date>2004-09-30</data_set_release_date>
+        <start_time>2004-01-02T17:58:57.305Z</start_time>
+        <stop_time>2004-01-02T20:58:55.142Z</stop_time>
+        <producer_full_name>STARDUST DATA MANAGEMENT AND ARCHIVE TEAM</producer_full_name>
+        <citation_text>
+            Semenov, B.V., A.R. Cheuvront, K.V. Gilliland, and C.H. Acton,
+            STARDUST WILD 2 ENCOUNTER DYNAMIC SCIENCE EXPERIMENT DATA,
+            SDU-C-DYNSCI-2-WILD2-V1.0, NASA Planetary Data System, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Spacecraft attitude and thruster firing data that comprise the
+            Dynamic Science Experiment conducted during the Stardust
+            encounter with comet Wild 2.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains data from the Dynamic Science Experiment
+            conducted during the Stardust encounter with comet Wild 2 on
+            January 2, 2004. The data in this archive are organized into two
+            tables in standard PDS format. The first of these tables provides
+            high rate attitude control system (ACS) data spanning 40 minutes
+            around closest approach while the second table provides attitude
+            control thruster firing information (aka ``small
+            forces&apos;&apos;) spanning 3 hours around closest approach.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview:
+    =================
+      This archive contains data from the Dynamic Science Experiment
+      conducted during the Stardust spacecraft encounter with comet
+      Wild 2 on January 2, 2004. The data in this archive are organized
+      into two tables in standard PDS format. The first of these tables
+      provides high rate attitude control system (ACS) data spanning 40
+      minutes around closest approach while the second table provides
+      attitude control thruster firing information (aka ``small
+      forces&apos;&apos;) spanning 3 hours around closest approach. This data
+      provides a significant measure of the spacecraft&apos;s performance
+      and the attitude control system&apos;s reaction to particle impacts.
+ 
+ 
+    Parameters
+    ==========
+      The primary parameters contained in the attitude data table are
+      quaternions providing spacecraft orientation relative to the EME
+      2000 inertial reference frame (also known as the J2000 frame),
+      spacecraft angular rates given in the spacecraft-fixed reference
+      frame, and attitude and angular rate errors. The primary
+      parameters contained in the small forces data table are thruster
+      firing period begin and end times, accumulated delta-V values and
+      numbers and duration of firings for each of the thrusters.
+ 
+ 
+    Processing
+    ==========
+      The source data for both tables were generated on-board the
+      spacecraft and were sent down within packets in the spacecraft
+      telemetry stream.
+ 
+      On the ground the attitude parameters were extracted into a text
+      file containing data in tabular format using standard JPL
+      Advanced Multimission Operations System (AMMOS) tools for
+      channelized telemetry access. This text file was then slightly
+      modified -- commas delimiting columns were inserted, UTC time
+      tags were re-formatted to be in ISO format, and string column
+      values were quoted -- to fully comply with PDS requirements.
+ 
+      The small forces parameters were similarly extracted from
+      telemetry and then saved in a Small Forces File (SFF) using the
+      MAKSFF process developed and run by NAIF. For inclusion into this
+      archive the SFF file, which was a variable length line ASCII text
+      file containing a table with a fixed number of columns, was
+      augmented with two more columns (begin and end time as UTC) and
+      re-formatted similarly to the attitude data to comply with PDS
+      requirements.
+ 
+ 
+    Data
+    ====
+      Both data files in this archive are plain ASCII text files, each
+      containing a single PDS-style table with fixed-width,
+      comma-delimited columns. Each file contains a few-line text
+      header preceding the data. In the attitude data file the header
+      lines list telemetry channel IDs, names, channel data types, and
+      formats. The small forces data file header lines provide the
+      original SFF file header. Each of the two data files is
+      accompanied by a detached PDS label, described in detail in the
+      ONLABELS.TXT document included in the archive. The format of the
+      table columns is defined by an external table format file,
+      pointed to by the label.
+ 
+      Attitude Data
+      -------------
+        The channelized attitude telemetry produced by the ACS was
+        collected at different rates during encounter. The data before
+        and after closest approach was recorded at 2-second intervals.
+        For the closest approach, which occurred at 2 January 2004
+        19:21:32 UTC, from 19:09:29 through 19:36:28 UTC most of
+        attitude data was recorded at 0.1-second intervals. One
+        exception is the body rate error data, which was still recorded
+        at 2-second intervals and, therefore, appears to be ``stuck&apos;&apos;
+        at one value while all other parameters are changing.
+ 
+        The ACS_MODE channel included in the attitude data file
+        describes whether the ACS was controlling attitude according to
+        the ground-commanded reference attitude (ENCOUNTER ABSOLUTE
+        pointing mode, or ENC_ABS), or to the flight software-updated
+        trajectory (ENCOUNTER RELATIVE pointing mode, or ENC_REL).
+        Before and after the roll slews, the ACS_MODE was ENC_ABS. When
+        the roll was commanded, the mode changed to ENC_REL. After
+        closest approach, the return roll was commanded and the mode
+        changed to ENC_ABS. For about 30 seconds after these command
+        mode changes, the rate and attitude data reflects the slews. At
+        all other times it reflects the attitude close to the fixed
+        attitude that the controller was trying to maintain.
+ 
+        Body rates provided in the attitude file are filtered Inertial
+        Measurement Unit (IMU) data, and attitude errors are computed
+        from the estimated spacecraft quaternion compared to the
+        reference quaternion. Since the controller was maintaining a
+        fixed attitude (except during the slews) the body rate is the
+        same magnitude but with opposite sign of the rate error. The
+        measurement noise of about 0.00002 rad/sec is clearly seen in
+        the rate data during the whole period covered by the file.
+ 
+      Small Forces Data
+      -----------------
+        The flight software included an idealized thruster model, and
+        was configured to produce data summarizing a 1-second interval
+        of thruster activity and the resulting change in spacecraft
+        velocity. Although the control system ran at 10Hz, the 1-second
+        small forces data collection interval was chosen as a
+        compromise between providing every pulse detail with the risk
+        of overwriting the data, and not providing enough resolution
+        for analysis.
+ 
+        The small forces data included the time the packet was
+        recorded, the number of commanded thruster pulses for each
+        thruster, the total on-time for each thruster in milliseconds,
+        and the computed delta-V in the inertial EME-2000 reference
+        frame. This data was collected only when necessary; that is, if
+        no thruster commands occurred over an interval, no small forces
+        data were generated. The average spacecraft attitude quaternion
+        for the interval was also included in the packet.
+ 
+        A set of thruster calibration activities undertaken by the
+        navigation and spacecraft teams over the course of the mission
+        showed that the timing of the deltaV values computed by the
+        spacecraft was very accurate while the deltaV magnitude was
+        within +/- 30 percent of the values estimated from ground
+        tracking data.
+ 
+      Using Attitude and Small Forces Data Together
+      ---------------------------------------------
+        Individual thruster firing records from the small forces file
+        may be correlated to the attitude data by looking for a fast
+        change in the spacecraft rate immediately following the firing
+        and slower change in the spacecraft orientation for the period
+        from this truster firing to the next one. Firing of a
+        particular thruster or a set of thrusters usually results in
+        change in a particular rate component. Therefore identifying
+        the thruster(s) that fired in addition to the time of firing is
+        essential. Also, the frequency at which the thrusters were
+        firing at different times during the encounter along with the
+        information about which of the thrusters were firing may
+        indicate how much ``effort&apos;&apos; the ACS was spending to compensate
+        for the effect of the surrounding dust environment while trying
+        to maintain the commanded attitude.
+ 
+ 
+    Ancillary Data
+    ==============
+      Since neither of the two data files provided in this data set was
+      supplemented with additional geometry data prior to archiving,
+      the following SPICE kernels archived in the Stardust SPICE data
+      set, SDU-C-SPICE-6-V1.0, may be used for computing any derived
+      geometry parameters that might be needed to analyze the data:
+ 
+        Kernel Type   File Name
+        ------------  ------------------------
+        LSK           naif0007.tls
+        SCLK          sdu_sclkscet_00105.tsc
+        FK            sdu_v17.tf
+        SPKs          sdu_l_2003_w2.bsp
+                      sdu_w2_opnav.bsp
+        ------------  ------------------------
+ 
+      The spacecraft orientation data -- both quaternions and angular
+      rates -- provided in the attitude and small forces data files
+      were used in making, and are available in, the following SPICE CK
+      files provided in the Stardust SPICE data set, SDU-C-SPICE-6-V1.0:
+ 
+        Kernel Type   File Name
+        ------------  ------------------------
+        CKs           sdu_sc_rec_2003_w2_v2.bc
+                      sdu_sc_rec_w2_opnav.bc
+        ------------  ------------------------
+ 
+ 
+    Coordinate System
+    =================
+      The two reference frames, with respect to which the data included
+      in this archive are provided, are:
+ 
+        - Earth Mean Equator and Equinox vector of 2000 JAN
+          01 12:00 (EME J2000), and
+ 
+        - Stardust spacecraft reference frame shown in this diagram:
+ 
+                                                   || Dust Collector
+                         Main                      ||     Array
+          Solar Array   Shield                     ||
+            Shield        .-.         o HGA        ||
+            .-.       +Z ^| |   ._____|_____.      o
+            | |==========|====o==\=========/==o===============
+            `-&apos;          || |-------------------. .        Solar
+                         || |                   |/|        Array
+                         || | .-----.  CIDA     | |
+                 &lt;-------o| | |      &apos;          | |  Return
+               +X      +Y | | .   __/           | | Capsule
+                          | |  `. `.            |\|
+                          | |--- `. `.---- -----&apos; o---------
+                          | |      `. `.           \_______/
+                          `-&apos;        `.&apos;`.
+                                        .&apos;
+ 
+ 
+      The orientation quaternions stored in both tables provide
+      orientation of the Stardust spacecraft reference frame relative
+      to the EME J2000 reference frame. These quaternions are of the
+      popular engineering style:  Q = {r1*sin(phi/2), r2*sin(phi/2),
+      r3*sin(phi/2), cos(phi/2)}, where R = (r1, r2, r3) is a unit
+      vector specifying the rotation axis defined in the base frame.
+      (This is not the formation style used within the SPICE system.) A
+      rotation matrix formed from such a quaternion, when left
+      multiplied by some vector given in the base frame, will rotate
+      that vector into the target frame: rt = RM*rb. For help in
+      understanding quaternion syntax and use refer to the discussion
+      on quaternions provided in the PDS Standards Reference, also
+      available from the NAIF node document database as ``A Brief
+      Discussion of Quaternions as Used in Space Remote Sensing.&apos;&apos;
+ 
+      The delta V components provided in the small forces data file are
+      given with respect to the EME J2000 reference frame.
+ 
+      The angular rates and attitude and rate errors provided in the
+      attitude data file are given with respect to the Stardust
+      spacecraft reference frame.
+ 
+ 
+    Software
+    ========
+      The data in this data set are in standard PDS format and,
+      therefore, can be displayed by a number of PDS-provided tools or
+      loaded into commercial programs that support comma-delimited
+      formats. For this reason no special processing software is
+      included in this data set.
+ 
+ 
+    Contact Information
+    ===================
+      For any questions regarding the data in this archive, contact:
+ 
+        Dr. John D. Anderson, Stardust Radio Science and Dynamic
+        Science Experiment Lead
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      Overall flawless Stardust spacecraft ACS performance during the
+      Wild 2 encounter, internal consistency of the data, and
+      independent confirmation of correctness of the attitude and and
+      small forces data by processing of the tracking and images over
+      the course of the mission give a high level of confidence in
+      accuracy of this data.
+ 
+ 
+    Review
+    ======
+      This data was reviewed by the Dynamic Science Experiment team
+      members as part of the post-encounter data analysis activities.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      This set includes all high rate ACS data produced by the
+      spacecraft during the closest approach period of the Wild 2
+      encounter. No known gaps exist in the coverage provided by the
+      data products.
+ 
+      Only complete packets, the integrity of which was verified by the
+      standard JPL AMMOS telemetry tools using embedded checksums, were
+      used to generate the data products provided in this data set.
+      Consistency of the data was verified by cross-checking between
+      the attitude and small forces data products and between the
+      actual data products and the nominal encounter attitude profile.
+ 
+ 
+    Limitations
+    ===========
+      None.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gio-c-jpa-4-ddr-halley-merge-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GIOTTO JOHNSTONE PARTICLE ANALYZER MERGED DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.giotto::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:jpa.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.halley::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gio-c-jpa-4-ddr-halley-merge-v1.0__browserp_gio-c-jpa-4-ddr-halley-merge-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   The Giotto Mission, R. Reinhard and B. Battrick, ESA SP-1077, ESA Pub Div,
+                   Noordwijk, Netherlands, 1986.
+            </reference_text>
+            <description>reference.ESA-SP1077</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   &apos;Encounters with Comet Halley, The first results&apos;, Nature, Volume 321, No.
+                   6067, 15 May 1986.
+            </reference_text>
+            <description>reference.NATURE321</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GIO-C-JPA-4-DDR-HALLEY-MERGE-V1.0</data_set_id>
+        <data_set_name>GIOTTO JOHNSTONE PARTICLE ANALYZER MERGED DATA V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1986-03-12T06:09:30.000Z</start_time>
+        <stop_time>1986-03-15T02:31:28.108Z</stop_time>
+        <producer_full_name>INTERNATIONAL HALLEY WATCH</producer_full_name>
+        <citation_text>
+            Coates, A., K.H. Glassmeier, H. Reme, M. Neugebauer, E. Grayzeck,
+            and A.C. Raugh, GIOTTO JOHNSTONE PARTICLE ANALYZER MERGED DATA
+            V1.0, GIO-C-JPA-4-DDR-HALLEY-MERGE-V1.0, NASA Planetary Data
+            System, 1992
+        </citation_text>
+        <data_set_terse_desc>
+            GIOTTO Johnson Particle Analyzer (JPA) merged observations of
+            1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains results from the Implanted Ion Sensor (IIS)
+            4DH mode and the Fast Ion Sensor SW and HAR modes of the Three-
+            Dimensional Particle Analyzer (JPA) experiment on the GIOTTO
+            spacecraft for the mission to comet Halley. The results of the
+            Fast Ion Sensor (FIS - inbound) and IIS (outbound) have been
+            merged with results from other Giotto instruments. In the first
+            submitted table, magnetometer measurements are included.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+Data Set Overview
+=================
+ 
+    This dataset contains results from the Implanted Ion
+    Sensor (IIS) 4DH mode and the Fast Ion Sensor SW and
+    HAR modes of the Three- Dimensional Particle Analyzer
+    (JPA) experiment on the GIOTTO spacecraft for the
+    mission to comet Halley.  The results of the Fast Ion
+    Sensor (FIS - inbound) and IIS (outbound) have been
+    merged with results from other Giotto instruments.
+     In the first submitted table, magnetometer
+    measurements are included.  Values are given for
+    protons.
+ 
+ 
+     JPA FIS data are from two sources:
+ 
+    - up to March 13, 19:24:55 SCET, data are from the
+    solar wind mode at 8 seconds time resolution.  The
+    moments are derived from data in a 45 x 45 degree
+    field of view, centered on the nominal solar wind
+    direction.  There is continuous coverage in energy
+    and angle.  The peak remains within this reduced
+    field of view.
+ 
+     - March 13, 19:24:55 to 22:38:17 SCET, data are from
+    the HAR mode at 24 second time resolution.  This mode
+    has an angular field of view accepting ions from all
+    directions except a 20 deg cone in the ram direction.
+     Energy-angle coverage is not contiguous in this mode
+    so an assumption is made to boost the counts in each
+    bin to make the distribution appear contiguous.  The
+    peak of the solar wind flux alternates between the
+    last two 26 deg bins during this period.  Moments are
+    calculated for the regions of space sampled by the
+    detector, i.e.  up to the 20 deg ram cone, with no
+    assumption to increase the range beyond this.
+ 
+     The following assumptions hold: FIS is an
+    electrostatic analyzer and so cannot distinguish mass
+    - except in the solar wind mode where the protons and
+    alpha particles are cold enough that they separate in
+    energy/charge; in HAR mode the moment is over the
+    full FIS energy range so includes anything (all
+    protons).
+ 
+     The temperature profile from solar winds to HAR mode
+    is not continuous due to the different bin sizes
+    involved, so the sudden temperature jump at 19:24:55
+    should not be take to be correct.
+ 
+     JPA IIS data is from the 4DH mode.  In this mode,
+    the Time of Flight measurement is combined with the
+    energy level information provided by the IIS to
+    separate mass groups, e.g., 0-1.7 amu/q (presumably
+    protons).  The moments are derived from data
+    collected during one spacecraft spin, i.e., 128 s, at
+    each of 32 energy levels to obtain a complete
+    distribution.  Pickup protons are included in the
+    numbers but this is only a small effect.
+ 
+     The &apos;JPAMERGE&apos; file includes both FIS and IIS data.
+     The JPA data up to 22:38:17 are from FIS given every
+    8 s.  (At this time the sampling changes to every 64
+    s; only magnetometer values are listed in this
+    interval.) The JPA data starts again at approx 0104
+    on March 14 (MJD 13221 or day 73), and is from the
+    IIS 4DH mode.  This data has a time resolution of 128
+    seconds - in the merge file it is combined with 64s
+    magnetometer data, which is why there are two MAG
+    points for every JPA data repeated twice here.  (The
+    last 16 lines are again only magnetometer values.)
+ 
+    In the second table, the results from the FIS have
+    been merged with data from the magnetometer, the
+    RPA-Copernic plasma experiment, and the Ion Mass
+    Spectrometer (IMS) HERS instrument to form this file.
+     The original file was called GIOMERGE and its
+    explanation follows below:
+ 
+    The file contains data for the period between March
+    12, 06:09:30 to March 13, 23:36:34 SCET for the MAG,
+    RPA and IMS/HERS experiments and the JPA experiment,
+    which ended earlier (at approximately 22:38 SCET).
+ 
+ 
+     MAG 8s averaged data
+ 
+    RPA 8s averaged data
+ 
+    JPA 8s data up to March 13, 19:24:55, 24s after this
+    time
+ 
+    IMS/HERS 16s proton samples after March 13, 18:30:00
+    64s averaged alpha data
+ 
+    MAG and RPA data are available for all of the above
+    given intervals.
+ 
+     JPA FIS data are from two sources:
+ 
+    - up to March 13, 19:24:55 SCET, data are from the
+    solar wind mode at 8 seconds time resolution.  The
+    moments are derived from data in a 45 x 45 degree
+    field of view, centered on the nominal solar wind
+    direction.  There is continuous coverage in energy
+    and angle.  The peak remains within this reduced
+    field of view.
+ 
+     - March 13, 19:24:55 to 22:38:17 SCET, data are from
+    the HAR mode at 24 second time resolution.  This mode
+    has an angular field of view accepting ions from all
+    directions except a 20 deg cone in the ram direction.
+     Energy-angle coverage is not contiguous in this mode
+    so an assumption is made to boost the counts in each
+    bin to make the distribution appear contiguous.  The
+    peak of the solar wind flux alternates between the
+    last two 26 deg bins during this period.  Moments are
+    calculated for the regions of space sampled by the
+    detector, i.e.  up to the 20 deg ram cone, with no
+    assumption to increase the range beyond this.
+ 
+     The temperature profile from solar winds to HAR mode
+    is not continuous due to the different bin sizes
+    involved, so the sudden temperature jump at 19:24:55
+    should not be taken to be correct.
+ 
+     IMS proton and alpha data have been processed
+    differently:
+ 
+    - Proton data were obtained during ~1 s intervals
+    every 16 s.  Since the measurement intervals happened
+    to fall approximately midway between the 8 s times at
+    which the other data in this file are given, each
+    proton parameter is given twice -- ~4 s before the
+    measurement and ~4 s after the measurement was made.
+     Up until ~1830 on March 13, the solar wind was close
+    to or slightly beyond the proton field of view of the
+    HERS so V[z] could not be determined.  We recommend
+    using JPA proton data for this time interval, and so
+    have not included IMS proton data in the merged file
+    for this early period.
+ 
+     - Alpha data were also obtained during ~1 s
+    intervals every 16 s, but the parameters have been
+    calculated for averages over 4 such measurements;
+    each value is therefore repeated 8 times in this data
+    file.
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+Confidence Level Overview
+=========================
+    N/A
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

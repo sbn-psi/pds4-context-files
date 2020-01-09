@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dif-c-rss-1-9p-encounter-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DEEP IMPACT 9P/TEMPEL 1 ENCOUNTER - RADIO SCIENCE DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.deep_impact::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dif::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.dif::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.9p-tempel_1_1867_g1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dif-c-rss-1-9p-encounter-v1.0__browserp_dif-c-rss-1-9p-encounter-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Yeomans, D.K., J.D. Giorgini, and S.R. Chesley, The History and Dynamics of
+                   Comet 9P/Tempel 1, Space Science Reviews, 117, 123-135, 2005,
+                   doi:10.1007/s11214-005-3392-6.
+            </reference_text>
+            <description>reference.YEOMANSETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DIF-C-RSS-1-9P-ENCOUNTER-V1.0</data_set_id>
+        <data_set_name>DEEP IMPACT 9P/TEMPEL 1 ENCOUNTER - RADIO SCIENCE DATA V1.0</data_set_name>
+        <data_set_release_date>2006-06-28</data_set_release_date>
+        <start_time>2005-06-27</start_time>
+        <stop_time>2005-07-11</stop_time>
+        <producer_full_name>JON D. GIORGINI</producer_full_name>
+        <citation_text>
+            ABSTRACT_DESC and keywords andGiorgini, J. D. and D. K. Yeomans,
+            DEEP IMPACT 9P/TEMPEL 1 ENCOUNTER - RADIO SCIENCE DATA V1.0,
+            DIF-C-RSS-1-9P-ENCOUNTER-V1.0. NASA Planetary Data System, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw radio science data from the Deep Impact flyby spacecraft,
+            collected during the encounter with comet 9P/Tempel 1.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains raw radio science data from the Deep
+            Impact flyby spacecraft, collected during the encounter with
+            comet 9P/Tempel 1.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Deep Impact (DI) comet Tempel 1 Radio Science
+      (RS) Data Set is a time-ordered collection of raw and partially
+      processed data collected during the DI flyby of the
+      comet Tempel 1. Because the DI spacecraft flyby occurred at a
+      close approach distance of 500 km and at a relatively high
+      relative encounter velocity (10.1 km/s), there was no comet
+      gravity signal in the tracking data and hence no gravity
+      science.  In addition, there was no evidence in the spacecraft
+      tracking data for dust or gas drag near the time of closest
+      approach.  For information on the comet dynamics, see reference
+      Yeomans, et al. (2005) [YEOMANSETAL2005].
+ 
+ 
+      The radiometric data also supported DI Navigation.
+ 
+      The data set includes:
+ 
+        Directory   Description
+        ---------   -----------
+           ODF      Orbit Data Files containing closed-loop (two-way)
+                     Doppler and sequential range measurements.
+           EOP      Earth-Orientation Parameter file
+           ION      Ionosphere calibration file
+           TRO      Troposphere calibration files
+ 
+ 
+      Typical users of these data might analyze range and Doppler
+      measurements in the ODF to derive the DI trajectory during
+      the comet Tempel 1 flyby.
+ 
+ 
+    Parameters
+    ==========
+      The ODF contains the most important information (range and
+      Doppler) needed by spacecraft navigators. Each ODF
+      is accompanied by a full PDS label which describes both the
+      content and format of the associated file.  ODF data types
+      can include those listed below. Only those marked below with an
+      asterisk are present in this data set ODF.
+ 
+           Narrowband spacecraft VLBI, Doppler mode (cycles)
+           Narrowband spacecraft VLBI, phase mode (cycles)
+           Narrowband quasar VLBI, Doppler mode (cycles)
+           Narrowband quasar VLBI, phase mode (cycles)
+           Wideband spacecraft VLBI (nanoseconds)
+           Wideband quasar VLBI (nanoseconds)
+        *  One-way Doppler (Hertz)
+        *  Two-way Doppler (Hertz)
+        *  Three-way Doppler (Hertz)
+           One-way total count phase (cycles)
+           Two-way total count phase (cycles)
+           Three-way total count phase (cycles)
+           PRA planetary operational discrete spectrum range (range
+                units)
+        *  SRA planetary operational discrete spectrum range (range
+                units)
+           RE[GSTDN] range (nanoseconds)
+           Azimuth angle (degrees)
+           Elevation angle (degrees)
+           Hour angle (degrees)
+           Declination angle (degrees)
+           X angle (where +X is east) (degrees)
+           Y angle (where +X is east) (degrees)
+           X angle (where +X is south) (degrees)
+           Y angle (where +X is south) (degrees)
+ 
+ 
+    Processing
+    ==========
+      ODF&apos;s are screened for &apos;bad&apos; data points, which are removed
+      prior to analysis by the navigation or radio science teams.
+      However, all data are included in these archived ODF&apos;s files,
+      including &apos;bad&apos; data that may have been excluded during radio
+      science or navigation analysis.
+ 
+ 
+    Data
+    ====
+      ODFs were issued approximately daily during the flyby phase,
+      occasionally more often to support critical events such as
+      engine-firings (for maneuvers).
+ 
+      These ODFs are stored in the ODF directory. File name is of the
+      form  ydddeeeC.ODF  where  y  is the one-digit year (2005
+      implicit) of the first data, ddd is the three-digit day-of-year
+      of the first data,  eee  is the three-digit day-of-year of the
+      last data. Symbol C denotes an alphabetic character
+      distinguishing separate files issued during the same day.
+ 
+ 
+    Ancillary Data
+    ==============
+      Ancillary files are needed for proper analysis and
+      interpretation of the radio data (file type ODF). These are
+      organized in parallel directories and stored approximately
+      chronologically.
+ 
+      Earth Orientation Parameter Files (EOP Directory)
+      ---------------------------------------------------
+        Earth Orientation Parameter files are produced by the Time
+        and Earth Motion Precision Observation (TEMPO) Group at JPL.
+        They are ASCII files with variable length records.  Each
+        record is delimited by an ASCII carriage-return &lt;CR&gt;
+        (ASCII 13) and an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        EOP files, issued three times a week, include results based
+        on fits to historical data as well as extrapolated predictions
+        into the future.  Subsequent file releases gradually replaced
+        predict-intervals with data-based actual values. In this
+        archive, one file has been selected such that it covers
+        the DI flyby phase with data-based actual values.
+        The file name has the form ydddzeee.EOP  where  y  is
+        the one-digit year of the first data in the file (2000 is
+        implicit),  ddd  is the day-of-year of the first data in the
+        file,  z  is the one-digit year of the last data, and  eee  is
+        the day-of-year of the last data in the file.  The file
+        covers the previous nine months of past motion,  with
+        prediction for three months into the future; files are
+        typically 30 KB.  The EOP file is accompanied by a PDS
+        minimal label with file name  ydddzeee.LBL.
+ 
+ 
+      Ionosphere Calibration Files (ION Directory)
+      ---------------------------------------------------
+        Ionosphere Calibration files are produced by the
+        Tracking System Analytic Calibration (TSAC) Group at JPL.
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII carriage-return &lt;CR&gt;
+        (ASCII 13) and an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        The file name has the form  ydddzeee.ION  where  y  is
+        the one-digit year of the first data in the file (2000 is
+        implicit),  ddd  is the day-of-year of the first data in the
+        file, z  is the one-digit year of the last data in the file
+        (2000 is implicit), and  eee  is the day-of-year of the last
+        data in the file. ION files were released at one week
+        intervals to cover a single month and included predicts for
+        the rest of the month. The single file archived here is a
+        concatenation of file releases that were issued at the start
+        of a month, containing actual measured values for the month
+        just past.  The ION file is accompanied by a PDS minimal
+        label with file name ydddzeee.LBL.
+ 
+ 
+      Troposphere Calibration Files (TRO Directory)
+      ---------------------------------------------------
+        Troposphere Calibration files are produced by the
+        Tracking System Analytic Calibration (TSAC) Group at JPL.
+        These are ASCII files of variable length records.  Each
+        record is delimited by an ASCII carriage-return &lt;CR&gt;
+        (ASCII 13) and an ASCII line-feed &lt;LF&gt; (ASCII 10).
+        File names have the form  ydddzeee.TRO  where  y  is
+        the one-digit year of the first data in the file,  ddd  is
+        the day-of-year of the first data in the file,  z  is the
+        one-digit year of the last data in the file and  eee  is the
+        day-of-year of the last data in the file. File 51525213.TRO
+        contains measured data from 2005-June-01 to 2005-Aug-01. It is
+        a concatenation of individual files released at the beginning
+        of each month, covering the previous month. File 20018001.TRO
+        contains a seasonal/cyclical adjustment for each site,
+        interpreted by software as being applicable from 1972-Jan-1
+        to 2048-Jan-1. Each TRO file is accompanied by a PDS minimal
+        label with file name  ydddzeee.LBL.
+ 
+ 
+    Coordinate System
+    =================
+      Analysis was conducted in the frame of the DE-405 solar system
+      model, aligned with the 1993 ICRF/J2000 reference frame.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at several institutions and elsewhere.
+      Because such software must usually operate at the bit-level and
+      is written for a narrow range of platforms, it is not suitable
+      for general distribution.  No software is included with this
+      archival data set.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been processed as part of
+      the activities of the DI Navigation Team. This is an
+      excellent data set.
+ 
+    Review
+    ======
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications (SIS).  These materials were distributed to PDS
+      personnel, the experiment investigator, and others,
+      as appropriate.
+ 
+    Data Coverage and Quality
+    =========================
+      Significant events for Radio Science during Tempel 1 flyby phase
+      are as follows:
+ 
+        Summary of DI Maneuvers at comet Tempel 1
+        2005 June 23 to 2005 July 11
+ 
+                         Time    lng     DV      R.A.    Dec.  PreTCM PostTCM
+        Event     Date   (UTC)  (sec)   (m/s)   (deg.)  (deg.)  (kg)   (kg)
+        -----     ------------ ------- ------- ------- ------- ------ ------
+        TCM-3B    23 Jun 19:00  62.448   6.002  22.281 -24.717 958.40 955.47
+        TCM-5.1    3 Jul 00:00  20.912   0.322 110.460   1.785 955.42 955.43
+        Divert-D.1 3 Jul 06:12 658.470 102.569  23.976 -27.448 583.67 558.04
+ 
+        Table Column meanings:
+ 
+          lng: solved-for duration of engine firing in seconds
+          DV: solved-for velocity change (delta-V) in m/s
+          DV, R.A. and Dec. are achieved maneuver parameters w.r.t.
+          EME2000.  Right Ascension and Declination describe the
+          orientation of the maneuver velocity in the EME2000 frame.
+          Right Ascension is angle between coordinate system X-axis
+          and the maneuver (delta V) vector projected on the
+          Equatorial Plane and Declination is the angle between
+          equatorial plane and the maneuver vector.
+          PreTCM: mass before the trajectory correction maneauver (TCM) in kg
+          PostTCM: mass after the TCM in kg.
+          PreTCM and PostTCM masses were obtained from the attitidue control
+          system after each maneauver.
+ 
+    Limitations
+    ===========
+      The limitations in this data set derive from tracking geometry
+      and measurement data types.  There are no known general or
+      systematic defects in the data.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.phx-m-ase-5-edl-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PHOENIX MARS ATMOSPHERIC STRUCTURE EXP REDUCED DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.phoenix::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ase.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-ase-5-edl-rdr-v1.0__browserp_phx-m-ase-5-edl-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-ase-5-edl-rdr-v1.0__dvo_atm_phx-m-ase-5-edl-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Catling, D.C., R.F. Beebe, J.R. Murphy, and L.F. Huber, Phoenix Lander
+                   Atmospheric Stucture Experiment Data Records, Version 1.0,
+                   PHX-M-ASE-2-EDL-V1.0, NASA Planetary Data System. 2008.
+            </reference_text>
+            <description>reference.CATLINGETAL2008</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Withers, P., and J.R. Murphy, Mars Exploration Rover 1 and 2 Entry Trajectory
+                   and Atmospheric Properties Derived Data Records, Version 1.0.
+                   MER1/MER2-M-IMU-5-EDL-DERIVED-V1.0, NASA Planetary Data System, 2009.
+            </reference_text>
+            <description>reference.WITHERS-MURPHY2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PHX-M-ASE-5-EDL-RDR-V1.0</data_set_id>
+        <data_set_name>PHOENIX MARS ATMOSPHERIC STRUCTURE EXP REDUCED DATA V1.0</data_set_name>
+        <data_set_release_date>2010-04-05</data_set_release_date>
+        <start_time>2008-05-25T23:30:47.918Z</start_time>
+        <stop_time>2008-05-25T23:38:36.899Z</stop_time>
+        <producer_full_name>PAUL WITHERS</producer_full_name>
+        <citation_text>
+            P. Withers, D. C. Catling, J.R. Murphy, PHX-M-ASE-5-EDL-RDR-V1.0,
+            NASA Planetary Data System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Phoenix Entry Trajectory and Atmospheric Properties Reduced Data
+            Records, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            The purpose of this report is to describe the methodology used to
+            produce Reduced Data Records (RDRs) for the Phoenix Atmospheric
+            Structure Experiment (ASE) from its Experimental Data Records
+            (EDRs). These RDRs include vertical profiles of atmospheric
+            density, pressure, and temperature.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+Data Set Overview
+==================
+ 
+This dataset consists of data products derived from data collected
+by an Inertial Measurement Unit (IMU) on the Phoenix spacecraft
+during its entry into the martian atmosphere. The DATA/ directory
+contains two data files (PHXPROFILE.TAB and PHXCOMPACT.TAB).
+PHXPROFILE.TAB contains time ordered records of smoothed acceleration,
+derived velocity, derived position, derived atmospheric properties and
+other derived quantities. PHXCOMPACT.TAB contains position and
+atmospheric properties at 1 km vertical intervals. PHXPROFILE.TAB is
+the more comprehensive set of results. PHXCOMPACT.TAB is intended for
+those users who are only interested in the atmospheric properties.
+ 
+Parameters
+===========
+ 
+PHXPROFILE.TAB contains the following items.
+ 
+Time (relative to reference time, seconds)       UTC_TIME
+Radial distance (m)                              RADIAL_DISTANCE
+Areocentric latitude (degrees north)             LATITUDE
+Areocentric longitude (degrees east)             LONGITUDE
+X-component of position (m)                      X_POSITION
+Y-component of position (m)                      Y_POSITION
+Z-component of position (m)                      Z_POSITION
+Element 0 of quaternion (dimensionless)          Q0
+Element 1 of quaternion (dimensionless)          Q1
+Element 2 of quaternion (dimensionless)          Q2
+Element 3 of quaternion (dimensionless)          Q3
+X-component of velocity (m/s)                    X_VELOCITY
+Y-component of velocity (m/s)                    Y_VELOCITY
+Z-component of velocity (m/s)                    Z_VELOCITY
+Speed of spacecraft relative to atmosphere (m/s) VREL
+X-component of acceleration (m s^(-2))           X_ACCELERATION
+Y-component of acceleration (m s^(-2))           Y_ACCELERATION
+Z-component of acceleration (m s^(-2))           Z_ACCELERATION
+Angle of attack (degrees)                        ALPHA
+Axial force coefficient, CA (dimensionless)      CA
+Normal force coefficient, CN (dimensionless)     CN
+Mach number (dimensionless)                      MA
+Knudsen number (dimensionless)                   KN
+Density (kg m^(-3))                              RHO
+Pressure (Pa)                                    PRESS
+Temperature (K)                                  TEMP
+ 
+This data file also contains 1-sigma uncertainties for those items.
+Units for the uncertainties in item XXX are the same as for item XXX.
+Those names, which are derived from the above names, are as follows:
+ 
+SIGMA_UTC_TIME
+SIGMA_RADIAL_DISTANCE
+SIGMA_LATITUDE
+SIGMA_LONGITUDE
+SIGMA_X_POSITION
+SIGMA_Y_POSITION
+SIGMA_Z_POSITION
+SIGMA_Q0
+SIGMA_Q1
+SIGMA_Q2
+SIGMA_Q3
+SIGMA_X_VELOCITY
+SIGMA_Y_VELOCITY
+SIGMA_Z_VELOCITY
+SIGMA_VREL
+SIGMA_X_ACCELERATION
+SIGMA_Y_ACCELERATION
+SIGMA_Z_ACCELERATION
+SIGMA_ALPHA
+SIGMA_CA
+SIGMA_CN
+SIGMA_MA
+SIGMA_KN
+SIGMA_RHO
+SIGMA_PRESS
+SIGMA_TEMP
+ 
+PHXCOMPACT.TAB contains the following items.
+ 
+Radial distance (m)                              MRADIAL_DISTANCE
+Altitude (km)                                    MALTITUDE
+Density (kg m^(-3))                              MRHO
+Pressure (Pa)                                    MPRESS
+Temperature (K)                                  MTEMP
+ 
+This data file also contains 1-sigma uncertainties for those items.
+Units for the uncertainties in item XXX are the same as for item XXX.
+Those names, which are derived from the above names, are as follows:
+ 
+SIGMA_MRADIAL_DISTANCE
+SIGMA_MALTITUDE
+SIGMA_MRHO
+SIGMA_MPRESS
+SIGMA_MTEMP
+ 
+The contents of PHXCOMPACT.TAB are derived from the contents of
+PHXPROFILE.TAB as described below.
+ 
+Timing
+======
+ 
+All data products in this dataset are derived from PDS volume
+PHXASE_0001 [CATLINGETAL2008], which expresses times with respect
+to a UTC reference time of 2008-05-25T23:30:47.918. All times
+in this dataset are expressed relative to the UTC reference time
+of 2008-05-25T23:00:00.000. Thus a time of 0.000 in [CATLINGETAL2008]
+would be written as 1847.918 seconds in this dataset.
+ 
+Coordinate Systems
+==================
+ 
+All data products in this dataset are derived from 200 Hz IMU
+measurements in DATA/IMU_A_EDR_M.TAB of PDS volume PHXASE_0001
+[CATLINGETAL2008]. These acceleration measurements are given in an
+XYZ cartesian frame fixed relative to the spacecraft. Specifically,
+the Phoenix mechanical frame, also known as the PHX_LANDER frame
+or the M frame, which has NAIF ID -84001. This spacecraft
+frame is neither inertial nor fixed relative to Mars. The spacecraft
+is axisymmetric about the Z axis in this frame.
+ 
+The data products in PDS volume PHXASE_0001 [CATLINGETAL2008] were
+transmitted to Earth in a different frame, the IMU frame, and then
+transformed into the M frame before being archived. During the course
+of the preparation of this dataset, it was discovered that a preliminary
+version of the appropriate transformation matrix had been used. The
+preliminary matrix corresponds to the spacecraft as designed, not as
+built.
+ 
+The vector accelerations and angular velocities in DATA/IMU_A_EDR_M.TAB
+of PDS volume PHXASE_0001 [CATLINGETAL2008] should be multiplied by
+the following matrix to transform them into the actual M frame.
+ 
+[New X] = [ 0.99991267    -0.00087993926  -0.013188274  ] [Old X]
+[New Y] = [ 0.00090164837  0.99999798      0.0016463352 ] [Old Y]
+[New Z] = [ 0.013186473   -0.0016580001    0.99991177   ] [Old Z]
+ 
+Where the vector with components [New X, New Y, and New Z] is the
+corrected vector, the vector with components [Old X, Old Y, and Old Z]
+is the vector from DATA/IMU_A_EDR_M.TAB in PDS volume PHXASE_0001,
+and the XYZ axes refer to the M frame. Further details are given in
+DOCUMENT/REPORT.LBL.
+ 
+Acceleration measurements included in this dataset (X_ACCELERATION,
+Y_ACCELERATION, Z_ACCELERATION and associated uncertainties) are
+expressed in the Phoenix cruise frame, also known as the
+PHX_LANDER_CRUISE frame or the C frame, which has NAIF ID -84000.
+The spacecraft is axisymmetric about the X axis in this frame.
+The relationship between the M and C frames is stated in
+DOCUMENT/EDRSIS.LBL of PDS volume PHXASE_0001 [CATLINGETAL2008].
+Axial accelerations are parallel to the X axis of the C frame and
+normal accelerations are perpendicular to the X axis of the C frame.
+ 
+Position and velocity (X_POSITION, Y_POSITION, Z_POSITION and
+associated uncertainties; X_VELOCITY, Y_VELOCITY, Z_VELOCITY and
+associated uncertainties) are given in an XYZ cartesian frame
+whose origin is at the center of mass of Mars. The +Z axis
+passes through the north pole and the +X axis passes through the
+equator at zero degrees east areocentric longitude at a specified
+time. The +Y axis completes a right-handed set. The specified time
+is the UTC reference time of 2008-05-25T23:00:00.000. Position is
+also given as radial distance, areocentric latitude, and
+areocentric longitude. This is the standard spherical polar
+coordinate system found in mathematical textbooks. Longitude
+increases to the east. Altitude is defined as radial distance
+minus the radial distance from the center of mass of Mars to
+the landing site, 3376.3 km. Altitude is not referenced to any
+equipotential surface.
+ 
+The orientation of Phoenix is described by the quaternion that
+relates the C frame to the J2000 frame, which is defined by the
+Earth&apos;s mean equator and equinox at the J2000.0 epoch. The
+convention that quaternion [Q0, Q1, Q2, Q3] corresponds to a
+rotation about the axis parallel to the vector QV = [Q1, Q2, Q3]
+by an angle 2 cos-1(Q0) was adopted.
+ 
+Data Processing
+===============
+ 
+Data processing for PHXPROFILE.TAB is described in DOCUMENT/REPORT.LBL.
+Many aspects of the reconstruction were similar to the reconstruction
+reported in PDS volume MERIMU_2001 [WITHERS&amp;MURPHY2009].
+ 
+Not all data products are defined at all timesteps. Data
+products derived in the atmospheric structure reconstruction are
+not defined above about 130 km nor below about 15 km. Such data
+products are given the null value -1 in the PHXPROFILE.TAB.
+ 
+The contents of PHXCOMPACT.TAB were derived from the contents of
+PHXPROFILE.TAB. The dependent variable in PHXCOMPACT.TAB is altitude,
+which is defined as the difference between the radial distance to
+Phoenix and the radial distance to the landing site (3376.3 km). The
+prefix M is used frequently in PHXCOMPACT.TAB to distinguish variables
+in PHXCOMPACT.TAB from similar variables in PHXPROFILE.TAB. This M
+stands for mean, since many of the values contained in PHXCOMPACT.TAB
+are averages of values reported in PHXPROFILE.TAB. A series of
+altitude levels were defined as 1 km, 2 km, ..., 146 km and
+labelled as MALTITUDE. Each value of MRADIAL_DISTANCE was defined as
+the sum of the corresponding value of MALTITUDE and 3376.3 km.
+Each value of SIGMA_MRADIAL_DISTANCE was defined as the arithmetic
+mean of SIGMA_RADIAL_DISTANCE for all data points in PHXPROFILE.TAB
+whose value of RADIAL_DISTANCE is within 0.5 km of the relevant value
+of MRADIAL_DISTANCE. SIGMA_MALTITUDE was defined to equal
+SIGMA_MRADIAL_DISTANCE. Each value of MRHO was defined as the geometric
+mean of all values of RHO whose value of RADIAL_DISTANCE is within
+0.5 km of the relevant value of MRADIAL_DISTANCE. Values of SIGMA_MRHO,
+MPRESS, SIGMA_MPRESS and SIGMA_MTEMP were defined similarly. MTEMP was
+calculated from MRHO and MPRESS using the same ideal gas law as was used
+to produce TEMP in PHXPROFILE.TAB. If all DENSITY values in PHXPROFILE.TAB
+whose values of RADIAL_DISTANCE are within 0.5 km of a given value of
+MRADIAL_DISTANCE in PHXCOMPACT.TAB are null (-1), then all atmospheric
+properties at this MRADIAL_DISTANCE in PHXCOMPACT.TAB are given the null
+value -1.
+ 
+Acronyms
+========
+ 
+AAS     American Astronautical Society
+AIAA    American Institute of Aeronautics and Astronautics
+ASCII   American Standard Code for Information Interchange
+ASE     Atmospheric Structure Experiment
+ASTG    Atmospheric Science Theme Group
+BWG     Beam Wave Guide
+CA      California
+CD      Compact Disc
+CD-ROM  Compact Disc Read-Only Memory
+CM      Centre of Mass
+CO      Colorado
+D/L     Downlink
+DSN     Deep Space Network
+DVI     Device Independent file format
+EDL     Entry, Descent and Landing
+EDR     Experiment Data Record
+EDT     Eastern Daylight Time
+EPS     Encapsulated Postscript
+ET      Ephemeris Time
+FL      Florida
+HASI    Huygens Atmospheric Structure Instrument
+HEF     High Efficiency
+HIRISE  High Resolution Imaging Science Experiment
+ID      Identifier
+IDL     Interactive Data Language, a computer programming language
+IMU     Inertial Measurement Unit
+ITAR    International Traffic in Arms Regulations
+JPG     Joint Photographic Experts Group
+JPL     Jet Propulsion Laboratory
+LM      Lockheed Martin
+LMA     Lockheed Martin Astronautics
+LMST    Local Mean Solar Time
+Ls      The angle between the Mars-Sun line and the Mars-Sun
+        line at the northern hemisphere vernal equinox, known as
+        the areocentric longitude of the Sun
+LSB     Least Significant Bit
+LST     Local Solar Time
+MA      Massachusetts
+MECA    Microscopy, Electrochemistry, and Conductivity Analyzer
+MEGDR   Mission Experiment Gridded Data Records
+MET     Meteorological
+MEX     Mars Express
+MGS     Mars Global Surveyor
+MIMU    Minature IMU
+MOLA    Mars Orbiter Laser Altimeter
+MPL     Mars Polar Lander
+MRO     Mars Reconnaissance Orbiter
+MSP     Mars Surveyor Program
+NAIF    Navigation and Ancillary Information Facility
+NASA    National Aeronautics and Space Administration
+ODY     Mars Odyssey
+ORT     Operational Readiness Test
+PDF     Portable Document Format
+PDS     Planetary Data System
+PDT     Pacific Daylight Time
+PHX     Phoenix
+PS      Postscript
+RA      Robotic Arm
+RAC     Robotic Arm Camera
+RLG     Ring Laser Gyroscope
+SCLK    Spacecraft Clock
+SIS     Software Interface Specification
+SPICE   An information system provided by the Navigation and
+        Ancillary Information Facility
+SSI     Surface Stereo Imager
+TEGA    Thermal and Evolved Gas Analyzer
+TCM     Trajectory Correction Maneuver
+TBD     To be determined
+UA      University of Arizona
+UHF     Ultra High Frequency
+USA     United States of America
+UTC     Coordinated Universal Time
+WA      Washington
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Data Coverage and Quality
+=========================
+ 
+Data coverage is excellent. The only minor gaps in the data series
+are discussed in DOCUMENT/REPORT.LBL. Uncertainties in the data used
+in the reconstruction and in the resultant data products are discussed
+above, in DOCUMENT/REPORT.LBL and in [CATLINGETAL2008].
+ 
+Limitations and Caveats
+=======================
+ 
+As discussed in DOCUMENT/REPORT.LBL, the angle of attack can be
+determined by two different methods. The results obtained by the two
+methods differ by 1-2 degrees, which is relatively large. This issue has
+not been resolved.
+        </confidence_level_note>
+        <archive_status>IN_PEER_REVIEW</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

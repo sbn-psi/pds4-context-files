@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.uly-j-sce-1-tdf-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ULY JUP SCE RAW ARCHIVAL TRACKING DATA FILES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.ulysses::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.uly::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:sce.uly::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.uly-j-sce-1-tdf-v1.0__browserp_uly-j-sce-1-tdf-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bird, M.K., S.W. Asmar, P. Edenhofer, O. Funke, M. Paetzold, and H. Volland,
+                   The structure of Jupiter&apos;s Io plasma torus inferred from Ulysses radio
+                   occultation observations, Planet. Space Sci. 41, 999-1010, 1993.
+            </reference_text>
+            <description>reference.BIRDETAL1993</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   TRK-2-25: DSN Tracking System Interfaces Archival Tracking Data File
+                   Interface, DSN System Requirments Detailed Interface Design, JPL Document
+                   820-13; Rev. A, Jet Propulsion Laboratory, Pasadena, CA, January 1, 1986.
+            </reference_text>
+            <description>reference.TRK-2-25</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ULY-J-SCE-1-TDF-V1.0</data_set_id>
+        <data_set_name>ULY JUP SCE RAW ARCHIVAL TRACKING DATA FILES V1.0</data_set_name>
+        <data_set_release_date>2001-08-01</data_set_release_date>
+        <start_time>1992-02-04T20:28:18.000Z</start_time>
+        <stop_time>1992-02-09T15:44:00.000Z</stop_time>
+        <producer_full_name>MICHAEL K. BIRD</producer_full_name>
+        <citation_text>
+            Bird, M.K., ULY JUP SCE RAW ARCHIVAL TRACKING DATA FILES V1.0,
+            ULY-J-SCE-1-TDF-V1.0, NASA Planetary Data System, 2001
+        </citation_text>
+        <data_set_terse_desc>
+            Ulysses SCE raw ATDFs of the Io Plasma Torus obtained during the
+            Ulysses Jupiter flyby: 1992-02-04 20:28 to 1992-02-09 15:44.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains raw radio tracking data from the Ulysses
+            (ULY) Solar Corona Experiment (SCE) obtained during the ULY
+            Jupiter flyby. The data target the Io Plasma Torus (IPT) and
+            cover the period 1992-02-04 20:28 to 1992-02-09 15:44.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+      This data set contains raw radio tracking data from the Ulysses
+      (ULY) Solar Corona Experiment (SCE) obtained during the ULY
+      Jupiter flyby. The data target the Io Plasma Torus (IPT) and
+      cover the period 1992-02-04 20:28 to 1992-02-09 15:44.
+ 
+      The data set includes 10 NASA Deep Space Network (DSN) Archival
+      Tracking Data Files (ATDF or TDF), and documentation. The data
+      are obtained from the Radio Science Support group at JPL. There
+      are basically two types of data: ranging and Doppler (Frequency),
+      recorded as a function of UT Ground Received Time. These ranging
+      and Doppler data are obtained from the standard DSN tracking
+      receivers. Doppler data are often used to infer spacecraft radial
+      motion relative to the tracking antenna.
+ 
+      The radio downlinks from Ulysses were monitored during the
+      passage of the spacecraft through the IPT shortly after closest
+      approach to Jupiter. The electron content of the Io torus was
+      derived from the dispersive phase shift of the S-band (2.3 GHz)
+      signal with respect to the X-band (8.4 GHz) signal. Corrections
+      were applied for non-Jovian contributions to the change in
+      electron content arising from the interplanetary medium and the
+      terrestrial ionosphere. Ulysses&apos; North-to-South encounter
+      trajectory was well suited for investigating the global structure
+      of the Jovian plasma environment near Io&apos;s orbit, especially its
+      latitudinal extent and azimuthal variations. (IPT investigation
+      description adapted from [BIRDETAL1993]. For more information
+      please refer to the complete paper.)
+ 
+ 
+      Parameters
+      ==========
+      Each ATDF data record contains 117 parameters, stored in records
+      of 288 bytes. A physical record (8064 bytes) consists of 28
+      logical records. Among these parameters are signal levels (&apos;AGC&apos; =
+      automatic gain control in dBm), antenna pointing angles, frequency
+      (often referred to simply as &apos;Doppler&apos;), range, and residuals.
+ 
+      Data values are reported at rates no higher than 10 per second.
+      For the Ulysses Jupiter encounter the received frequencies at
+      S-Band and X-band were recorded at a sample time of one per
+      second.
+ 
+      The ATDF is described in section TRK-2-25 of the JPL Document
+      820-13 [TRK-2-25]. An ASCII copy of this document (TRK_2_25.TXT)
+      is included in the DOCUMENT/SCE directory of this volume.
+ 
+ 
+      Processing
+      ==========
+      ATDFs are files of radiometric data produced by the Network
+      Operations Control Center (NOCC) Navigation Subsystem (NAV). They
+      are derived from Intermediate Data Records by NAV and contain all
+      radiometric measurements received from the DSN station.
+ 
+ 
+      Data
+      ====
+      ATDFs contain precise radio range and Doppler measurements made
+      between DSN ground stations and a spacecraft. During the Ulysses
+      Jupiter encounter, coded waveforms were transmitted from the
+      Earth, relayed by the on-board Ulysses telecommunications system,
+      and received back on Earth. Cross correlation between the
+      transmitted and received waveforms yielded a measurement of the
+      round trip distance, which could then be related to the
+      Earth-Venus distance during the flyby. Doppler shift from the same
+      measurements could be interpreted as relative velocity along the
+      propagation path.
+ 
+      An ATDF has a file name of the form &apos;ydddeeeX.TDF&apos; where &apos;y&apos; is
+      the least significant digit of the year and &apos;ddd&apos; is the
+      day-of-year for the first ATDF record. The &apos;eee&apos; gives day-of-year
+      for the last data record in the ATDF. &apos;X&apos; indicates file sequence
+      when there are multiple files per start/stop day-of-year (&apos;A&apos; for
+      the first file, &apos;B&apos; for the second, etc.).
+ 
+      Each ATDF is accompanied by a full PDS detached label with name
+      ydddeeeX.LBL which completely describes the contents of the ATDF.
+      The format and contents are also described in TRK_2_25.TXT in the
+      DOCUMENT/SCE directory this volume. Both the ATDF and its label
+      are stored in the TDF directory of an archival volume.
+ 
+ 
+      Ancillary Data
+      ==============
+ 
+        Observing Geometry
+        ------------------
+        A NAIF (PDS Navigation and Ancillary Information) &apos;transfer&apos;
+        format SPK file is provided for the period 1992-01-05 to
+        1995-10-31. This file contains the positions of Ulysses, Jupiter
+        Earth, the Sun, and Jupiter&apos;s four Galilean satellites (Io,
+        Europa, Ganymede, and Callisto) in data modules that can be read
+        with software from the NAIF Toolkit. This &apos;transfer&apos; format SPK
+        file (ULY92106.XSP) is located in the GEOMETRY directory. It is
+        accompanied by a detached PDS label (ULY92106.LBL) which
+        describes some of the SPK file&apos;s characteristics.
+ 
+        Before using &apos;transfer&apos; NAIF files, the user should convert the
+        ASCII carriage-return line-feed delimiters on each record to the
+        default delimiter for text files on the local system, then use
+        the NAIF utility SPACIT to convert the archival file to local
+        binary.
+ 
+        An overview of the SPICE data system can be found in SPICE.TXT
+        located in the DOCUMENT directory of this volume.
+ 
+        For additional information on acquiring, installing, and using
+        SPICE data or software please contact the PDS NAIF node:
+ 
+          Address:  Jet Propulsion Laboratory
+                    Mail Stop 301-125L
+                    Pasadena, California 91109-8099
+ 
+          Phone:    (818) 354-3869
+ 
+          E-mail:   Charles.Acton@jpl.nasa.gov
+                      or
+                    pds_operator@naif.jpl.nasa.gov
+ 
+        Documentation
+        -------------
+        Included in the DOCUMENT directory is an ASCII version
+        (TRK_2_25.TXT) a document [TRK-2-25] describing the format of
+        the ATDF data files contained on this volume.
+ 
+ 
+      Coordinate System
+      =================
+      Most data types are not dependent on definition of a coordinate
+      system; for those that are, the user should consult the SIS for
+      information.
+ 
+ 
+      Software
+      ========
+      Software for parsing, reducing, and analyzing these data has been
+      developed at the University of Bonn (Germany), the Jet Propulsion
+      Laboratory, and other institutions. Because parsing must be done
+      at the bit level, adaptation of the software to other platforms is
+      not always easy. No software has been prepared for general
+      distribution, and none is included with this archive. Users should
+      refer to the PDS labels and Software Interface Specifications
+      (/DOCUMENT/TRK_2_25.TXT) for detailed information on file formats
+      before writing their own software.
+ 
+ 
+      Media/Format
+      ============
+      This archival data set is written on DVD-R media on a Pioneer
+      DVR-A03 recorder (a DVD-R for General, 650 nm wavelength). The
+      DVD-R volume conforms to ISO 9660 standards.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      Overview
+      ========
+      There are no known limitations to use of these data, subject to
+      signal-to-noise considerations which would be typical for systems
+      of this type.
+ 
+ 
+      Review
+      ======
+      Prior to creation of the final version of the archival data set,
+      the archive was distributed to both PDS and non-PDS personnel,
+      including the PDS Radio Science advisor, for preliminary review.
+ 
+ 
+      Data Coverage and Quality
+      =========================
+      The data cover the Jupiter encounter period from 1992-02-04 to
+      1992-02-09. Data coverage is as follows:
+ 
+      File          bytes     start time        stop time
+      ------------  --------  ----------------  ----------------
+      2035036A.TDF  31522176  1992-02-04 20:28  1992-02-05 17:00
+      2036037A.TDF  30119040  1992-02-05 15:45  1992-02-06 05:05
+      2037037A.TDF  30119040  1992-02-06 03:35  1992-02-06 14:08
+      2037038A.TDF  33755904  1992-02-06 12:53  1992-02-07 03:44
+      2038038A.TDF  32578560  1992-02-07 02:30  1992-02-07 16:15
+      2038039A.TDF  30989952  1992-02-07 15:00  1992-02-08 04:30
+      2039039A.TDF  26038656  1992-02-08 03:15  1992-02-08 12:00
+      2039040A.TDF  33763968  1992-02-08 11:45  1992-02-09 00:00
+      2039040B.TDF  33626880  1992-02-08 22:45  1992-02-09 10:15
+      2040040A.TDF  32812416  1992-02-09 09:00  1992-02-09 15:44
+ 
+      In addition to the normal signal-to-noise constraints, the
+      following known data quality issues apply to this data set:
+ 
+        S-band coverage commences at 1992-02-05 19:44 (DOY 36) and
+        terminates 1992-02-09 19:16 (DOY 40).
+ 
+      Limitations
+      ===========
+      None.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-accel-5-altitude-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS ALTITUDE DATA RECORDS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:accel.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-accel-5-altitude-v1.0__browserp_mgs-m-accel-5-altitude-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cancro, G.J., R.H. Tolson and G.M. Keating, Operational Data Reduction
+                   Procedure for Determining Density and Vertical Structure of the Martian Upper
+                   Atmosphere From Mars Global Surveyor Accelerometer Measurements,
+                   NASA/CR-998-208721, October 1998.
+            </reference_text>
+            <description>reference.CANCROETAL1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Shane, R.W. and R.H. Tolson, Aerothermodynamics of the Mars Global
+                   Surveyor Spacecraft, NASA/CR-1998-206941, March 1998.
+            </reference_text>
+            <description>reference.SHANE-TOLSON1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H. et al., Application of Accelerometer Data to Mars Global
+                   Surveyor Aerobraking Operations, Journal of Spacecraft and Rockets, Vol.
+                   36, No. 3, May-June 1999, pp. 323-329.
+            </reference_text>
+            <description>reference.TOLSONETAL1999A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H. et al., Utilization of Mars Global Surveyor Accelerometer
+                   Data for Atmospheric Modeling, AAS Paper 99-386, August 1999.
+            </reference_text>
+            <description>reference.TOLSONETAL1999B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Wilmoth, R.G. et al., Rarefied Aerothermodynamic Predictions for Mars
+                   Global Surveyor, Journal of Spacecraft and Rockets, Vol. 36, No. 3,
+                   May-June 1999, pp. 314-322.
+            </reference_text>
+            <description>reference.WILMOTHETAL1999</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-ACCEL-5-ALTITUDE-V1.0</data_set_id>
+        <data_set_name>MGS ALTITUDE DATA RECORDS V1.0</data_set_name>
+        <data_set_release_date>2000-08-09</data_set_release_date>
+        <start_time>1997-11-13T00:58:24.68Z</start_time>
+        <stop_time>1999-02-04T09:12:48.01Z</stop_time>
+        <producer_full_name>GERALD M. KEATING</producer_full_name>
+        <citation_text>not applicable</citation_text>
+        <data_set_terse_desc>
+            MGS ALTITUDE DATA RECORDS
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    All ALTITUDE data are packaged by periapsis number for each
+    aerobraking orbit.  ALTITUDE data are provided in a table labeled
+    Pyyyy.tab where &apos;yyyy&apos; is the four digit periapsis number.
+ 
+ 
+  Parameters
+  ==========
+    Altitude:               Units = km
+    Latitude:               Units = degrees
+    Longitude:              Units = degrees
+    Local Solar Time:       Units = N/A
+    Longitude of the Sun:   Units = degrees
+    Solar Zenith Angle:     Units = degrees
+    Density:                Units = kg/km**3
+    Sigma Density:          Units = kg/km**3
+    Scale Height:           Units = km
+    Sigma Scale Height:     Units = km
+ 
+ 
+  Data
+  ====
+    For each orbit, ALTITUDE data consist of an 11 by 10 array in the
+    file folder Pyyyy.  Each row gives atmospheric characteristics at a
+    constant altitude.  When applicable, inbound and outbound legs are
+    in separate rows.  The altitude levels going from row 1 to row 11
+    are:  periapsis, 1.26 nbar inbound, 1.26 nbar outbound, 130 km
+    inbound, 130 km outbound, 140 km inbound, 140 km outbound, 150 km
+    inbound, 150 km outbound, 160 km inbound, 160 km outbound.  The
+    columns from one to ten are separated as follows:  altitude,
+    latitude, longitude, local solar time, longitude of the sun, solar
+    zenith angle, density, sigma density, scale height, and sigma scale
+    height.
+ 
+ 
+  Processing
+  ==========
+    Density and density scale heights are provided at reference
+    altitudes of periapsis, 1.26 nbar, 130, 140, 150, and 160 km.  The
+    latter 4 are obtained by a least squares fit to the 40 point running
+    mean data sets that span 5 km on either side of a reference altitude
+    for both the inbound and outbound portions of the orbit.  The values
+    at periapsis are obtained by a similar fit to all data within 10km
+    of the periapsis altitude. See [TOLSONETAL1999B].
+ 
+ 
+  Coordinate System
+  =================
+    Latitude and longitude are in the IAU Mars Centered Mars Equatorial
+    System. Altitude is above the IAU reference ellipsoid, with
+    a=3393.4 km and f=0.0052083 and including corrections for (4,4)
+    gravitational potential.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    Standard deviations on density and scale height are based on the
+    formal covariance matrix for the linear regression of log density
+    and altitude.  Data noise is assumed to be the standard deviation of
+    the fit.
+ 
+ 
+  Review
+  ======
+    Comparisons were made with operational data sets.  Deviations were
+    within expectations founded on archiving analysis that is based on
+    (4,4) gravitational potential and numerically integrated precision
+    trajectories that were not included in operational software.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data coverage during an aerobraking pass has varied throughout the
+    mission. Early in the mission, data were received for 500 seconds on
+    either side of  periapsis.  Later, the data started between 200 and
+    250 seconds before periapsis.  This change was made to reduce
+    propulsion usage.  Though this  change somewhat reduced the accuracy
+    of determining the accelerometer bias, it had the advantage of
+    reducing the corruption of the data set with thruster firings while
+    still inside the detectable atmosphere.  Not all orbits have yet
+    been included in current archiving data sets.  Omitted orbits
+    include orbits where automatic data processing procedures did not
+    produce realistic answers.  If required, many of these orbits can be
+    recovered by manual manipulation of data and data analysis
+    procedures.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

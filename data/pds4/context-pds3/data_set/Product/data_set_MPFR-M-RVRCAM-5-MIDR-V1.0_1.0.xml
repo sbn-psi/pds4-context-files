@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mpfr-m-rvrcam-5-midr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MPFR MARS ROVER CAMERA 5 MOSAICKED IMAGE DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_pathfinder::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mpfr::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rcrr.mpfr::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:unk.unk::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpfr-m-rvrcam-5-midr-v1.0__browserp_mpfr-m-rvrcam-5-midr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Golombek, M.P., R.A. Cook, T. Economou, W.M. Folkner, A.F.C. Haldemann,
+                   P.H. Kallemeyn, J.M. Knudsen, R.M. Manning, H.J. Moore, T.J. Parker, R.
+                   Rieder, J.T. Schofield, P.H. Smith, and R.M. Vaughan, Overview of the Mars
+                   Pathfinder Mission and Assessment of Landing Site Predictions, Science,
+                   278, 1743-1748, 1997.
+            </reference_text>
+            <description>reference.GOLOMBEKETAL1997B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Matijevic, J., Microrover Flight Experiment Requirements, Architecture and
+                   Verification Document, JPL Document 10925, PF-R00-5.0-02, Rev B, 68 pp.,
+                   April 15, 1994.
+            </reference_text>
+            <description>reference.MATIJEVIC1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Matijevic, J.R., L.W. Avril, R.S. Banes, D.B. Bickler, R.S. Blomquist, G.S.
+                   Bolotin, D.F. Braun, D.R. Burger, B.K. Cooper, J. Crisp, F. Deligiannis,
+                   W.C. Dias, H.J. Eisen, D. Ferguson, B.H. Fujiwara, R.D. Galletly, G.S.
+                   Hickey, P. Jenkins, K.A. Jewett, E.J. Jorgensen, J. Kilecki, H.A. Kubo,
+                   G.A. Landis, W.E. Layman, L.H. Matthies, D.P. McQuarie, R.J. Menke, A.H.
+                   Mishkin, D.S. Mittman, H.J. Moore, J.C. Morrison, T.T. Nguyen, D.E. Noon,
+                   L. Oberle, T.R. Ohm, G.M. Shinn, D.L. Shirley, A.R. Sirota, C.B. Stell, S.
+                   Stevenson, H.W. Stone, L.F. Sword, H.C. Ta, A.D. Thompson, L.M. van
+                   Nieuwstadt, M.T. Wallace, L. -C. Wen, B.H. Wilcox, and Y.C. Wu, The
+                   Pathfinder Microrover, J. Geophys. Res., 102, 3989-4001, 1997.
+            </reference_text>
+            <description>reference.MATIJEVICETAL1997A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Matijevic, J.R., J. Crisp, R.S. Banes, D.B. Bickler, B.K. Cooper, H.J.
+                   Eisen, D. Ferguson, J. Gensler, A. Haldemann, F. Hartman, P. Jenkins, K.A.
+                   Jewett, J. Kolecki, G.A. Landis, S.L. Laubach, L.H. Matthies, A.H. Mishkin,
+                   H.J. Moore, J.C. Morrison, T.T. Nguyen, A.R. Sirota, H.W. Stone, S. Stride,
+                   L.F. Sword, J.A. Tarsala, A.D. Thompson, M.T. Wallace, R. Welch, E.
+                   Wellman, B.H. Wilcox, and D. Wilt, Characterization of the Martian Surface
+                   Deposits by the Mars Pathfinder Rover, Sojourner, Science, 278, 1765-1768,
+                   1997.
+            </reference_text>
+            <description>reference.MATIJEVICETAL1997B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mellstrom, J. and K. Lau, Mars Pathfinder AIM Phasing and Coordinate Frame
+                   Document, JPL Document 12103, PF-300-4.0-04, 38 pp., 1996.
+            </reference_text>
+            <description>reference.MELLSTROM-LAU1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Vaughan, R., Mars Pathfinder Project Planetary Constants and Models, JPL
+                   Document 12947, PF-100-PMC-01, 136 pp., December, 1995.
+            </reference_text>
+            <description>reference.VAUGHAN1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Wellman, J.B., Imager for Mars Pathfinder Coordinate Systems and Imaging
+                   Transformations, JPL Document 15212, PF-400-9.0, 16 pp., July 25, 1996.
+            </reference_text>
+            <description>reference.WELLMAN1996B</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MPFR-M-RVRCAM-5-MIDR-V1.0</data_set_id>
+        <data_set_name>MPFR MARS ROVER CAMERA 5 MOSAICKED IMAGE DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>1998-01-04</data_set_release_date>
+        <start_time>1997-07-05T02:18:30.266Z</start_time>
+        <stop_time>1997-09-25T04:52:07.936Z</stop_time>
+        <producer_full_name>ALLAN J. RUNKLE</producer_full_name>
+        <citation_text>
+            Runkle, A. J., MPFR MARS ROVER CAMERA 5 MOSAICKED IMAGE DATA
+            RECORD V1.0, MPFR-M-RVRCAM-5-MIDR-V1.0, NASA Planetary Data
+            System, 1998
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Pathfinder bounced down and rolled to a stop on the surface
+            of Mars on July 4, 1997.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Mars Pathfinder bounced down and rolled to a stop on the surface
+            of Mars on July 4, 1997. After a slight delay in deployment due
+            to airbags draped over one of the lander&apos;s petals, the Rover
+            rolled down onto the surface of Mars at 5:37am, July 6, 1997
+            (UTC).
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    Mars Pathfinder bounced down and rolled to a stop on the surface
+    of Mars on July 4, 1997.  After a slight delay in deployment due
+    to airbags draped over one of the lander&apos;s petals, the Rover
+    rolled down onto the surface of Mars at 5:37am, July 6, 1997
+    (UTC).
+ 
+    627 images were collected by the three cameras mounted on the
+    Microrover Flight Experiment (also known as the Mars Pathfinder
+    Rover or Sojourner).  The rover had two monochromatic cameras
+    mounted in front which provided stereo viewing, and a separate
+    &apos;color&apos; camera mounted in the rear.  The rear camera obtained
+    color pictures through the use of red, green, and blue pixels
+    arranged in a &apos;field-staggered 3G&apos; mosaic filter pattern on the
+    CCD.
+ 
+    The Rover Camera MIDR data set is composed of four different
+    kinds of products: uncorrected black and white mosaics,
+    uncorrected color mosaics, CAHV-corrected color mosaics, and
+    stereo anaglyphs.  The &apos;uncorrected&apos; mosaics have had some
+    limited radiometric corrections applied to them but no geometric
+    corrections.  The CAHV-corrected mosaics have had both
+    corrections applied.
+ 
+ 
+  Parameters
+  ==========
+    The Rover Camera MIDRs are images; the main parameter is light,
+    measured in units of data numbers or DNs.  Each CCD pixel
+    (picture element) is represented by a byte value ranging from 0
+    (dark) to 255 (saturated).  The wavelength sensitivity of the
+    front (black and white) cameras was 830 to 890 nm; the aft
+    (color) camera sensitivity was 500 to 900 nm.  Since the MIDRs
+    combine multiple EDRs acquired at varying light levels and
+    exposure durations, the MIDR pixels can have light levels greater
+    than 255.  (See the more detailed explanation in the &apos;Processing&apos;
+    section below.)
+ 
+ 
+  Processing
+  ==========
+    The input products used to generate the Rover Camera Mosaicked
+    Image Data Records (MIDRs) were the Rover Camera Experiment Data
+    Records (EDRs), (data set id MPFR-M-RVRCAM-2-EDR-V1.0), also
+    archived on this CD.  The identity of individual EDRs used as
+    input to a specific MIDR can be determined using the
+    COMMAND_SEQUENCE_NUMBER item in the PDS label of each MIDR.
+ 
+    The Rover Camera MIDRs consist of the reconstruction of multiple
+    subframes acquired at approximately the same time, from the same
+    physical location.  In other words, there was no movement of the
+    rover between subframes; there were radiometric but no spatial
+    changes from one subframe to another.  The purpose of subframing
+    was to optimize the exposure times in different portions of a
+    reconstructed image, while utilizing the full dynamic range of
+    the CCD.  For example, the top half of a Rover image may have
+    received significantly more light than the shadowed lower half,
+    and would therefore benefit from a shorter exposure time.
+ 
+    The lowest level MIDR products are the black and white
+    uncorrected mosaics.  These products were created using the VICAR
+    (Video Image Communication and Retrieval) program MPFRVRMOS.
+    MPFRVRMOS mosaicked multiple rover subframes from one image.  It
+    applied rudimentary dark current and exposure corrections to the
+    mosaic.  It did this first by subtracting a dark level from the
+    DN values of all component frames.  (This value is indicated by
+    the DARK_LEVEL_CORRECTION keyword in the labels.) It then
+    synthetically generated an &apos;output&apos; exposure duration equal to
+    the longest exposure duration of any input subframe.  It
+    equalized the exposures of the various subframes by multiplying
+    the DN values in each input frame by the ratio of the
+    synthetically generated exposure duration over the input exposure
+    duration.  The entire DN range of every input frame was retained
+    by converting the byte data to half word data at this stage.
+    Finally, the program applied a dark current correction to the
+    mosaic.  This could be done in one of two ways indicated by the
+    DARK_CURRENT_CORRECTION_TYPE keyword in the PDS labels.  The
+    valid types of correction were PRIME and BOTH; PRIME applied only
+    a vertical correction on the front camera images, or only a
+    horizontal correction on the rear camera images.  BOTH meant that
+    both a vertical and a horizontal correction were applied.
+ 
+    The products generated by this process were the &apos;.HAF&apos; images in
+    the RVR_MIDR/RVR_MOS/ directory.  These images were then
+    converted back to byte data using the VICAR program CFORM.  This
+    resulted in the &apos;.IMG&apos; images in the same directory.
+ 
+    The next level of MIDR products are the color uncorrected
+    mosaics, produced from EDRs acquired by the rear rover camera.
+    These products were essentially created through the same process
+    as the black and white mosaics, except that after the mosaic had
+    been radiometrically corrected, it was run through the program
+    MPFRVRCLR, which generated three separate color bands from the
+    single input band.  (In one case only, for image
+    RVR_MIDR_CLR-1253414310-S076054-REAR-B, the image was split into
+    three separate bands before being radiometrically corrected.) As
+    described elsewhere (see RCRRINST.CAT on this CD), the rear
+    camera CCD contained pixels sensitive to different wavelengths of
+    light, enabling it to obtain a &apos;color&apos; picture with a single
+    exposure.  This single band was split up by using a color map,
+    and applying bilinear spatial interpolation to fill in the
+    &apos;missing&apos; pixels.
+ 
+    This step of the process also resulted in both half word and byte
+    data files, stored in the directory RVR_MIDR/RVR_CLR/ on the CD.
+    (Technically, since the CFORM program only worked on
+    single-banded files, the images were split into three separate
+    red, green, and blue files using COPY, converted to byte using
+    CFORM, and recombined into a single file using MPFCOMBO.)
+ 
+    The next step of process involved the application of a geometric
+    correction to the mosaics using the CAHV camera model.  This step
+    was applied to both the black and white and the color mosaics.
+    The half word data files were used as input.  This step was
+    accomplished using the VICAR program MPFCAHV.  This program
+    converted the images from distorted (CAHVOR) to linear (CAHV)
+    coordinates.  The coordinates of each pixel in the output image
+    were transferred from CAHV to CAHVOR space.  If the pixel fell
+    within the input image, its DN value was bilinearly interpolated
+    and placed within the output image.  A full output image was
+    created even if the input image was only a subframe.  The output
+    image was converted to byte data by the MPFCAHV program.  These
+    images are stored in the RVR_MIDR/RVR_CAHV/ directory on the CD.
+ 
+    All of the above products were generated at the Multimission
+    Imaging Processing Laboratory, at the Jet Propulsion Laboratory.
+    The highest level of MIDR products, the stereo anaglyphs, were
+    generated by the Microrover Flight Experiment Team, also at JPL.
+ 
+    The Sojourner Rover anaglyphs were created using the left and
+    right images captured by the rover on Mars.  The following text,
+    provided by Tam Nguyen of the MFEX Team, describes the conversion
+    process which involved two platforms: a Sun Sparc20 and a Mac
+    PowerPC.
+ 
+    A. The Sun Sparc20 process:
+ 
+      1. The input left and right images had been previously camera
+         corrected by MIPL, applying the CAHV camera model.
+ 
+      2. These CAHV image files were then converted to PIC format using
+         the &apos;cahv2pic&apos; command (developed by Todd Litwin for the Mars
+         Pathfinder Project).  The &apos;fisheye&apos; warping effect caused by
+         the rover cameras&apos; wide angle lenses was corrected using the
+         &apos;dowarp&apos; command (also developed by Todd Litwin).
+ 
+      3. The unwarped images were then converted to GIF format using the
+         &apos;pic2gif&apos; command (again developed by Todd Litwin) for
+         compatability with Adobe PhotoShop format constraints.
+ 
+    B. The Mac PowerPC process:
+ 
+      The creation of the rover anaglyph was performed using the Adobe
+      PhotoShop Version 3.0 program on a Mac PowerPC, employing the
+      following steps:
+ 
+      1. A pair of left and right rover images in GIF format were
+         opened. The right image was converted to RGB format by
+         selecting &apos;Mode: RGB image&apos;.
+ 
+      2. The &apos;FrameImage&apos; (a dashed box) in the top left corner Tool
+         palmlet was selected, then used to frame the left image by
+         holding down the left mouse button and dragging the mouse to
+         identify the selected area of the image.
+ 
+      3. The &apos;Edit: Copy&apos; menu item was selected to copy the selected
+         image to a buffer.
+ 
+      4. The right image was selected by clicking on it.
+ 
+      5. The Layers/Channels/Paths palmlet was opened by selecting
+         &apos;Windows: Show Channels&apos;.
+ 
+      6. The &apos;Channels&apos; option in the Layers/Channels/Paths palmlet was
+         selected, then the &apos;Red&apos; channel only was selected (identified
+         by an eye in the left hand side box).  The &apos;Edit: Paste&apos;
+         command was used to paste the left image (in the buffer) into
+         the &apos;Red&apos; channel of the right image.
+ 
+      7. The &apos;Green&apos; and &apos;Blue&apos; channels of the Layers/Channels/Paths
+         palmlet, identified by the eyes in the left hand side boxes,
+         were selected to bring the green and blue colors of the right
+         image back.
+ 
+      8. Wearing red and blue stereo viewing goggles, the &apos;Move&apos; icon
+         (a hand in the top left corner of the Tool palmlet) was
+         selected.  The arrow cursor then became a hand cursor.  The
+         cursor was moved into the selected red image area, then the
+         left mouse button was held down.  The red image was dragged
+         until the anaglyph showed the desired results, then the left
+         mouse button was released.
+ 
+      9. The &apos;FrameImage&apos; feature was used to eliminate the unwanted
+         area of the anaglyph, and then the image was saved.
+ 
+    The anaglyph PDS labels were created using the PDS information
+    from the CAHV files.  The &apos;cahvlbl&apos; command (developed by Todd
+    Litwin) extracted the PDS information from the the CAHV files,
+    which was then converted into the correct PDS format using the
+    &apos;greppds&apos; command (developed in the Tcl language by Tam Nguyen
+    for the Mars Pathfinder Project).
+ 
+    Since the process of creating an anaglyph required the left and
+    right images, the PDS label of an analyph could contain the
+    information from either the left or the right image, but not
+    both.  The unwarping and anaglyph creation processes resulted in
+    anaglyphs with image sizes smaller than their original images.
+    The rover camera models of all of the pds labels were the same.
+ 
+    The anaglyph creation technique described above was developed by
+    Tim Parker for the Mars Pathfinder Project.
+ 
+ 
+  Data
+  ====
+    The Rover images on this CD are uncompressed, 8- and 16-bit
+    files, labelled in conformance with PDS standards.  Both black
+    and white and color images are present in the data set.  The
+    color images are stored as three separate bands in a single file.
+ 
+    The Rover Camera MIDRs are contained in the RVR_MIDR/ directory
+    on the CD.  The uncorrected black and white mosaics are stored in
+    the RVR_MIDR/RVR_MOS/ subdirectory, the uncorrected color mosaics
+    are stored in the RVR_MIDR/RVR_CLR/ subdirectory, the
+    CAHV-corrected mosaics are stored in the RVR_MIDR/RVR_CAHV/
+    subdirectory, and the stereo anaglyphs are stored in the
+    RVR_MIDR/RVR_GLYF/ subdirectory.
+ 
+    Individual filenames consist of the instrument identifier &apos;R&apos;,
+    followed by a five digit command sequence number, followed by a
+    single letter, used as a counter.  The command sequence number
+    used in each mosaic filename is the lowest of the command
+    sequence numbers from the input EDRs which make up that mosaic.
+    (For the stereo anaglyphs, this is the lowest of the EDRs in the
+    RIGHT frame.) The counter is used to distinguish between multiple
+    mosaics which have identical command sequence numbers.  (The only
+    time this occurrs is for command sequence &apos;0&apos;, used when the
+    rover acquired images autonomously while in an emergency mode,
+    and for command sequence numbers in the 55xx range, which were
+    erroneously repeated.)
+ 
+    For all but the anaglyph images, the filename then contains one
+    of &apos;L&apos;, &apos;C&apos;, or &apos;R&apos;, indicating a LEFT, RIGHT, or COLOR image.
+    (The anaglyphs, obviously, are combinations of both LEFT and
+    RIGHT images.)
+ 
+    Finally, this is followed by one of the two file extensions,
+    &apos;.IMG&apos; or &apos;.HAF&apos;.  The &apos;.IMG&apos; extension is used for byte (8-bit)
+    data, and the &apos;.HAF&apos; extension is used for half-word (16-bit)
+    data.
+ 
+    Note that the Rover Team delivered the stereo anaglyphs with
+    different filenames that what have been used on the CD.  The
+    files were renamed partly to comply with PDS file naming
+    guidelines, and partly to provide correspondance between these
+    images and the other MIDRs on the CD.  A mapping between the old
+    and new names is provided here for reference:
+ 
+        005101-BOTH.{jpg,pds} --&gt; R05101A.{JPG,IMG}
+        05524A-BOTH.{jpg,pds} --&gt; R05524A.{JPG,IMG}
+        05524B-BOTH.{jpg,pds} --&gt; R05524B.{JPG,IMG}
+        14099-BOTH.{jpg,pds}  --&gt; R14094A.{JPG,IMG}
+        15130-BOTH.{jpg,pds}  --&gt; R15130A.{JPG,IMG}
+        24057-BOTH.{jpg,pds}  --&gt; R24057A.{JPG,IMG}
+        27093-BOTH.{jpg,pds}  --&gt; R27093A.{JPG,IMG}
+        32092-BOTH.{jpg,pds}  --&gt; R32092A.{JPG,IMG}
+        37082-BOTH.{jpg,pds}  --&gt; R37082A.{JPG,IMG}
+ 
+    (The JPEG versions of the above files have been placed in the
+    BROWSE directory of the CD.)
+ 
+    The filenames can be used to correlate the different kinds of
+    MIDRs.  In other words, files in different directories of the CD
+    which have identical filenames, are related.  For example:
+ 
+        RVR_MOS/R24057AR.HAF  - half-word version of uncorrected black
+                                and white mosaic of EDRs in the command
+                                sequence number range of 24057 - 24060
+        RVR_MOS/R24057AR.IMG  - byte version of the same mosaic
+        RVR_CAHV/R24057AR.IMG - CAHV-corrected version of the same
+                                mosaic
+        RVR_GLYF/R24057A.IMG  - stereo anaglyph version of the same
+                                mosaic; note that this RIGHT frame
+                                mosaic is combined with the LEFT frame
+                                mosaic of EDRs in the range of
+                                24053 - 24056
+ 
+    (Note that there is NO correspondence between R00000AL.IMG and
+    R00000AR.IMG.) For all of the MIDRs, the command sequence numbers
+    of the input EDRs are included in the PDS label.  These values
+    can be used to backtrack to the raw products which make up a
+    mosaic.
+ 
+    For all MIDRs, the SPACECRAFT_CLOCK_STOP_COUNT shown in the label
+    is the SPACECRAFT_CLOCK_START_COUNT from the latest input EDR
+    used in the mosaic.
+ 
+    Note that the EXPOSURE_DURATION used in the MIDR labels has a
+    different meaning than that used in the EDR labels; it is a
+    synthetically generated value as described above in the
+    &apos;Processing&apos; section.
+ 
+    Some of the keyword values shown in the labels of the anaglyph
+    images are the values for the right frame of the mosaic; the
+    values for the left frame are not included.  (However, the
+    COMMAND_SEQUENCE_NUMBER can be used to determine all the input
+    EDRs, and therefore the missing values.)
+ 
+    The best way to identify rover images that can be used as stereo
+    pairs is to find left and right images that have the same values
+    for the ROVER_HEADING and ROVER_POSITION.  The &apos;Flight Rover
+    Image Status Report&apos;, put together by the Rover Team, may also be
+    of assistance.  This report is contained in the
+    DOCUMENT/ROVERDOC/DOWNLINK/TABLIMAG.HTM file on this CD.
+ 
+    All image files are stored with a fixed length record format.
+    There is an attached PDS label at the beginning of each image
+    file that describes the content and format of the image.  If the
+    PDS label size is not an exact multiple of the file record
+    length, padding is added after the end of the PDS label.  Thus,
+    the image object always starts on a record boundary.
+ 
+    PDS labels are object-oriented.  The object to which the label
+    refers (e.g., IMAGE, TABLE, etc.) is denoted by a statement of
+    the form:
+ 
+        ^object = location
+ 
+    in which the carat character (&apos;^&apos;, also called a pointer in this
+    context) indicates that the object starts at the given location.
+    For an object in the same file as the label (as is the case for
+    the Rover MIDRs), the location is an integer representing the
+    starting record number of the object (the first record in the
+    file is record 1).  For example:
+ 
+        ^IMAGE = 22
+ 
+    indicates that the IMAGE object begins at record 22 of the file.
+ 
+    A complete description of the PDS file format is available from
+    the Planetary Data System.  (Complete contact information for the
+    PDS is available in the AAREADME file in the root directory of
+    this CD.)
+ 
+ 
+  Coordinate Systems and Image Geometry
+  =====================================
+    The Rover heading and position are measured in the Martian Local
+    Level coordinate frame.  The heading is measured clockwise from
+    north in units of BAMs (Binary Angle Measurements), where 2**16
+    BAMs equals one revolution.  The position is provided as x and y
+    offsets in meters north and east, respectively, of the Lander.
+ 
+    The Martian Local Level Coordinate Frame is a right handed,
+    orthogonal, frame whose origin is co-incident with the origin of
+    the Lander Coordinate Frame.  The XM axis points north, the YM
+    axis points east, and the ZM axis points down.  This sytem is
+    defined relative to the Mars areocentric coordinate system.
+ 
+    For more information on Mars Pathfinder coordinate systems, see
+    the [MELLSTROM&amp;LAU1996], [WELLMAN1996B], and [VAUGHAN1995]
+    references.
+ 
+ 
+  Software
+  ========
+    The Rover MIDR images can be displayed on UNIX, Macintosh, and PC
+    platforms using the PDS developed program, NASAView.  This
+    software is freely available from the PDS Central Node and may be
+    obtained from their web site at http://pds.nasa.gov/.  For
+    more information or help in obtaining the software, contact the
+    PDS operator at the following address:
+ 
+    Address:     Planetary Data System, PDS Operator
+                 Jet Propulsion Laboratory
+                 4800 Oak Grove Drive
+                 Pasadena, CA 91109
+ 
+    Phone:       (818) 354-4321
+    Email:       pds_operator@jpl.nasa.gov
+    WWW URL:     http://pds.nasa.gov/
+ 
+    The real time processing of the VICAR-formatted Rover data was
+    done using the VICAR suite of image processing programs.  The
+    latest version of the VICAR program XVD may also be used for
+    displaying PDS formatted images.  For information on obtaining
+    VICAR, please contact:
+ 
+    Address:     Danika Jensen
+                 M/S 168-414
+                 Jet Propulsion Laboratory
+                 4800 Oak Grove Drive
+                 Pasadena, CA 91109
+ 
+    Phone:       (818) 354-6269
+    Email:       Danika.Jensen@jpl.nasa.gov
+    WWW URL:     http://www-mipl.jpl.nasa.gov/vicar.html
+ 
+ 
+  Media / Format
+  ==============
+    The Rover Camera MIDR data are stored on compact disc-read only
+    memory (CD-ROM) media.  The CD is formatted according to ISO-9660
+    and PDS standards.  The data files do not include extended
+    attribute records (XARs), and are therefore not readable on some
+    older VMS operating systems.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    Since the cameras were not adequately calibrated, some dark
+    current and dark level corrections were done for a &apos;best
+    appearance&apos;, rather for strict scientific purposes, although
+    attempts to minimize data loss were important in the process.
+ 
+ 
+  Review
+  ======
+    Prior to release, the data will be reviewed by the Rover
+    instrument team and the Planetary Data System.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Given that these products were generated from the Rover Camera
+    EDRs, all quality issues affecting the EDRs were inherited by the
+    MIDRs.  Most noticeably, the products with command sequence
+    numbers 45054, 49083, and 75077 are all missing values in their
+    labels, since those values were not present in the EDR labels.
+    Full details are provided in the ERRATA.TXT file in the root
+    directory of this CD.
+        </confidence_level_note>
+        <archive_status>IN_QUEUE</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

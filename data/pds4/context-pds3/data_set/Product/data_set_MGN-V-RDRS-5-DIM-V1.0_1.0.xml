@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rdrs-5-dim-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGN V RDRS DERIVED DIGITAL IMAGE MAP DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rdrs.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rdrs-5-dim-v1.0__browser_mgn-v-rdrs-5-dim-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rdrs-5-dim-v1.0__dvo_imaging_mgn-v-rdrs-5-dim-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kirk, R. L., K. B. Edwards, H. F. Morgan, T. L. Stoewe, Global
+                   Magellan-Image Map of Venus at Full Resolution (abstract), Lunar Planetary
+                   Science, 24, 805-806, 1993.
+            </reference_text>
+            <description>reference.KIRKETAL1993A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kirk, R. L., H. F. Morgan, J. F. Russell, Cartography of Venus with
+                   Magellan Data (abstract), Lunar Planetary Science, 24, 807, 1993.
+            </reference_text>
+            <description>reference.KIRKETAL1993B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Planetary Data System Standards Reference, Jet Propulsion Laboratory Document
+                   D-7669, Part 2, 20 November 1992
+            </reference_text>
+            <description>reference.PDSSR1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RDRS-5-DIM-V1.0</data_set_id>
+        <data_set_name>MGN V RDRS DERIVED DIGITAL IMAGE MAP DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>1994-06-01</data_set_release_date>
+        <start_time>1989-05-04</start_time>
+        <stop_time>1994-10-12</stop_time>
+        <producer_full_name>HAIG F. MORGAN</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Magellan Radar Full Resolution Global Mosaic of Venus
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the Magellan the FMAP, a full-resolution
+            (75 meters/pixel) global mosaic, produced by the U.S. Geological
+            Survey from Magellan F-BIDR data. The complete dataset consists
+            of 340 quadrangles in Sinusoidal equal-area projection.
+            Quadrangles extend approximately 12 degrees in latitude, except
+            for those between 84 and 90 degrees North and South. Quadrangles
+            near the equator extend 12 degrees in longitude longitudinal
+            extent is increased to maintain a roughly constant number of
+            samples.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The FMAP is a full-resolution (75 meters/pixel) global mosaic
+      produced by the U.S.  Geological Survey from Magellan F-BIDR
+      data.  The complete dataset consists of 340 quadrangles in
+      Sinusoidal equal-area projection.  Quadrangles extend
+      approximately 12 degrees in latitude, except for those between
+      84 and 90 degrees North and South.  Quadrangles near the
+      equator extend 12 degrees in longitude; at higer latitudes, the
+      longitudinal extent is increased to maintain a roughly constant
+      number of samples.  The data between 84 and 90 degrees North is
+      also available in Polar Stereographic projection on a separate
+      volume.
+ 
+ 
+    Parameters
+    ==========
+      N/A
+ 
+ 
+    Processing
+    ==========
+      Cosmetic techniques (spatial filtration and blending) have been
+      used to remove seams between adjacent F-BIDRs caused by
+      radiometric artifacts.
+ 
+ 
+    Ancillary Data
+    ==============
+      N/A
+ 
+ 
+    Coordinate System
+    =================
+      N/A
+ 
+ 
+    Software
+    ========
+      Refer to the SOFTINFO.TXT file in the SOFTWARE directory on
+      this CD-ROM volume for information on the software provided
+      with this data set.
+ 
+ 
+    Media/Format
+    ============
+      The FMAP dataset will be delivered to the Magellan Project (or
+      its sucessor) using CD-ROM media.  Formats will be based on
+      standards for such products established by the Planetary Data
+      System (PDS) [PDSSR1992].
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      These image mosaics should be considered a preliminary product.
+      They were assembled by the U.S.  Geological Survey from
+      Magellan Full-resolution Basic Image Data Records (F-BIDRs)
+      [Pettengill et al.  1992, Saunders et al.  1992] processed and
+      provided by the Jet Propulsion Laboratory.  There are several
+      known problems with the Magellan image data that either have
+      led to reprocessing of a subset of the FBIDRs or that may be of
+      sufficient importance to warrant future processing.  The
+      mosaics on this disk were created on a &apos;best effort&apos; basis,
+      using the most current versions of the constituent FBIDRs
+      available to the USGS at the time of processing (1993-1994).
+      Given the limitations of the available data, no other quality
+      control was possible or was attempted.  The present FMAP may be
+      superseded by later versions utilizing reprocessed and improved
+      data.  The major known problems with the Magellan image data
+      are the following:
+ 
+ 
+      The SAR Image Data
+      ------------------
+        The synthetic-aperture radar (SAR) image data were
+        reprojected from the radar coordinates (delay-doppler) onto
+        the surface of Venus by using information about the
+        spacecraft location based on a priori predictions and
+        earth-based tracking; self-consistency of the image data from
+        multiple orbits was not used to refine the ephemeris accuracy
+        as is commonly done with optical imaging data.  The FBIDR
+        data contain known positional errors of up to several
+        kilometers, and, in particular, discontinuities of this
+        magnitude between adjacent BIDRs whose ephimerides were
+        processed separately.  Reprocessing of the Magellan SAR data
+        with ephimerides refined by matching features in multiple
+        BIDRs is technically feasible and might be carried out at
+        some future date.
+ 
+        For the orientation of the Magellan spacecraft, only a priori
+        information was available.  The positional accuracy of SAR
+        imaging is not dependent upon knowledge of the spacecraft
+        orientation and hence was not affected.  Orientation
+        information is needed, however, to correct for the varying
+        sensitivity of the instrument across the width of the radar
+        beam.  There are radiometric (tonal) mismatches between
+        almost all neighboring F-BIDRS because of errors in the
+        correction for beam sensitivity.  These mismatches were
+        suppressed in the FMAP by the use of purely cosmetic
+        processing techniques: highpass spatial filtering of each
+        BIDR with a boxcar elongated in the direction of the flight
+        path, followed by linear blending of the data from adjacent
+        BIDRs in the area of overlap.  The effect of this processing
+        on absolute radiometric accuracy is not known.
+ 
+ 
+      Venus Topographical Model
+      -------------------------
+        A topographic model of the surface of Venus is needed in
+        order to project the SAR data into map coordinates.  Most
+        BIDRs were processed with a topographic model based on
+        pre-Magellan (Pioneer Venus and Venera 15/16) data; the
+        limited resolution of this dataset leads to planimetric
+        inaccuracies in the BIDRs and FMAP mosaics.  During the
+        Magellan mission, an attempt was made to process the BIDRs
+        with a higher resolution topographic model based on Magellan
+        data.  This topographic model proved to have a higher
+        resolution than could be handled by the Magellan SAR
+        processor, leading to severe interpolation errors and
+        distortion of the data.  The affected BIDRs (revs ??--??,
+        longitudes ??--??) were reprocessed with the earlier
+        topographic model, and the reprocessed versions were used in
+        this mosaic when available, but the FMAP may contain some
+        data with this defect.
+ 
+ 
+      Magellan SAR Processor
+      ----------------------
+        An error in the Magellan SAR processor resulted in the
+        production of BIDRs with limited dynamic range (specifically,
+        all data values less than about 70 DN were set to this
+        value).  This problem affected revs ??--??, of which only
+        revs ??--?? (longitudes ??--??) were obtained with
+        illumination from the west (&apos;left looking SAR&apos;) and were used
+        in the FMAP.  Again, reprocessed versions of these BIDRs were
+        incorporated in the mosaic as available, but some erroneously
+        processed data may be present.  It was not feasible to track
+        the version of each F-BIDR incorporated in the FMAP.
+ 
+ 
+    Review
+    ======
+      The FMAP will be reviewed internally by the Magellan Project
+      prior to release to the planetary community.  The FMAP will
+      also be reviewed by the PDS.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The FMAP incorporates all Magellan images of Venus obtained
+      with the nominal incidence angle profile for left-looking
+      (illuminated from the west) observations.  Data obtained during
+      the first 243-day cycle of operations cover approximately 84%
+      of the surface; some additional left-look data filling gaps in
+      this coverage were obtained in the second cycle [Saunders et
+      al. 1992].  The division of the mosaicked data into quadrangles
+      covering 12 degrees of latitude and longitude at the equator,
+      and the division of the quadrangles into tiles 2 by 2 degrees
+      at the equator is described under the keyword DATA_SET_DESC and
+      in more detail by Kirk et al. 1993b.  For a variety of reasons,
+      data may be unavailable for portions of the FMAP ranging from a
+      few kilometers in north-south extent to entire F-BIDRs.
+      Regions of missing data are flagged by a data value of 0; valid
+      data are in the range from 1 to 255.  The F-BIDRs contain
+      information flagging certain pixels as &apos;substandard&apos; because
+      they contain information from less than four statistically
+      independent &apos;looks&apos; at the surface [Petengill et al. 1991].
+      Both standard and substandard pixels were used identically in
+      producing the FMAP and are not flagged in it.
+ 
+ 
+    Limitations
+    ===========
+      N/A
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>89-033B-01p</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

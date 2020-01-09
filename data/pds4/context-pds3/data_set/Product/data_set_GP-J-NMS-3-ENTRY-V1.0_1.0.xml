@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gp-j-nms-3-entry-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO PROBE NMS RAW DATA SET</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:gpms.gp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gp-j-nms-3-entry-v1.0__browserp_gp-j-nms-3-entry-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Niemann, H.B., S.K. Atreya, G.R. Carignan, T.M. Donahue, J.A. Haberman, D.N.
+                   Harpold, R.E. Hartle, D.M. Hunten, W.T. Kasprzak, P.R. Mahaffy, T.C. Owen, N.W.
+                   Spencer, and S.H. Way, The Galileo Probe Mass Spectrometer: Composition of
+                   Jupiter&apos;s Atmosphere, Science 272, pp 846-849, 1996
+            </reference_text>
+            <description>reference.NIEMANNETAL1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GP-J-NMS-3-ENTRY-V1.0</data_set_id>
+        <data_set_name>GALILEO PROBE NMS RAW DATA SET</data_set_name>
+        <data_set_release_date>1996-12-08</data_set_release_date>
+        <start_time>1995-12-07T19:04:00Z</start_time>
+        <stop_time>1995-12-07T22:04:00Z</stop_time>
+        <producer_full_name>JOHN HABERMAN</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            GALILEO PROBE NMS RAW DATA SET
+        </data_set_terse_desc>
+        <abstract_desc>
+            This Galileo Probe Mass Spectrometer (GPMS) data set includes:
+            (1) Jupiter atmospheric entry data from December 7, 1995; (2)
+            Instrument characterization data; March - April, 1985; (3)
+            Residual background data from Earth testing; 1985 - 1989; (4)
+            Residual background data from space; 1989, 1990, 1992; (5)
+            Characterization data from the refurbished Engineering Unit (NOT
+            YET AVAILABLE - December, 1998); (6) Sequence and conversion
+            tables necessary to process the data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This Galileo Probe Mass Spectrometer (GPMS) data set includes:
+ 
+    1.  Jupiter atmospheric entry data from December 7, 1995.
+    2.  Instrument characterization data; March - April, 1985.
+    3.  Residual background data from Earth testing; 1985 - 1989.
+    4.  Residual background data from space; 1989, 1990, 1992.
+    5.  Characterization data from the refurbished Engineering Unit.
+        NOT YET AVAILABLE - December, 1998
+    6.  Sequence and conversion tables necessary to process the data.
+ 
+    This data set contains the Mass Spectrometer instrument data from
+    the Galileo Probe mission that entered the atmosphere of Jupiter
+    on December 7, 1995.  The GPMS instrument operated for
+    approximately 58 minutes (7000 steps).  Approximately 50 minutes
+    of the data are of high quality.  Also included are data files
+    necessary to characterize the operation and behavior of this
+    instrument and data files needed to demonstrate the integrity of
+    the GPMS instrument over the lengthy duration of the mission.
+    Additionally, the Engineering Unit was refurbished to flight
+    quality and has yielded data that help understand the results
+    from the mission and these data are included with this data set.
+    The data tables and conversion files required to process the raw
+    data are also included.  Documentation reviewing the steps
+    necessary to go from telemetry to more useful (meaningful) data
+    formats are included.  Finally, in the entry data set Probe time
+    and Probe descent pressure data are included.  The pressure data
+    are from the Atmosphere Structure Instrument.  These last two
+    data items will not be detailed further in this work.
+ 
+    In &apos;real&apos; time (i.e., on December 7, 1995) the data were
+    telemetered from the Galileo Probe to the Galileo Orbiter.  These
+    data were redundantly stored both in &apos;excess&apos; orbiter memory and
+    on a tape recorder.  The initial data sent to Earth, beginning on
+    December 10, 1995, were those stored in the Orbiter&apos;s memory.
+    Following this, the data stored on the tape recorder were sent to
+    Earth.  Between December 1995 and July 1996, 37 files containing
+    mission data were delivered to us.  Some of these files contained
+    unprocessed telemetry data (i.e., as it was received.) Other
+    files contained data that had been checked and &apos;bested&apos;.  (Bested
+    indicates data where error corrections have been applied.) In
+    most instances each &apos;new&apos; data file contained the existing data
+    plus some new data.  Effectively the data were &apos;redundantly&apos;
+    telemetered to the Earth *2?* times.  The most useful (complete)
+    data files are tagged with dates of February 5, April 16, and
+    July 1, 1996.  The reasons for this method of data return
+    include:
+ 
+    1.  The failure of the Orbiter high gain antenna.
+    2.  The problems with the Orbiter&apos;s (sticking) tape recorder.
+    3.  Time use allocations with the Deep Space Antenna Network.
+    4.  The fact that Jupiter and Earth were located on opposite sides
+        of the Sun in early 1996 resulting in a poor signal to noise
+        ratio.
+ 
+    The Galileo Probe Mass Spectrometer instrument steps through a
+    pre-programmed sampling sequence.  Each measurement results in a
+    count rate related to the mass programmed for that step.  The
+    nominal integration period for each step was 0.5 second.  The
+    data also yield a data bit indicating a detector sensitivity mode
+    (LOW or HIGH) for that measurement.  (At large count rates the
+    instrument automatically switches to a LOW sensitivity mode so as
+    to not overload and damage the detector.) Also returned with each
+    measurement are two data bits of instrument &apos;housekeeping&apos;
+    information.  Each GPMS Instrument minor frame (8 steps) yields
+    two (2) housekeeping parameter values.
+ 
+                        - - - - - - - - - -
+ 
+    A short mass spectrometer informational interlude.  The GPMS
+    instrument is also referred to as a Neutral Mass Spectrometer
+    (NMS).  Such an instrument is composed of an inlet system, an
+    ionizer, ion optics (lenses), a mass filter and a detector.  All
+    of this is inside of a high-vacuum chamber.  The function of the
+    inlet system is to channel your sample to the mass spectrometer
+    (ms).  Because the ms requires a good vacuum, you must allow only
+    a fraction of the incoming sample into the vacuum system.
+    Calibrated leaks are used for this purpose.  The mass filter
+    allows only those ions with the proper mass to charge ratio
+    (generally referred to as mass or Daltons or AMU) to pass.  A
+    mass filter &apos;works&apos; because in the presence of electromagnetic
+    fields in a vacuum, the trajectories of ions are predictable.
+    The ionizer is often a heated filament designed to emit electrons
+    with a defined energy (voltage).  These electrons collide with
+    gases entering the ionizer and a small fraction of the species
+    acquire a charge.  The larger the ionization energy, the more
+    violent the effects.  When all is working nicely, the ion
+    acquires a unit charge.  When the species is a molecule, it will
+    usually break up into fragments; the exact fragmentation pattern
+    is determined by bond energies and the ionization energy.  Ion
+    lenses are useful for directing the ions toward a specific
+    target.  A good detector of ions is an electron multiplier.
+ 
+    The GPMS Instrument:
+ 
+    1.  Two inlets with larger leaks used on Inlet 1 than on Inlet 2.
+        (Because the pressure is lower up high where Inlet 1 is used.)
+        Micron sized (7 channel) capillary leaks are used.
+    2.  Vacuum maintained by the use of ion and chemical getter pumps.
+    3.  Quadrupole Mass Filter
+    4.  Electron bombardment ionizer with 3 ionization energy options.
+    5.  Several lenses are used to &apos;steer&apos; the ions.
+    6.  Electron multiplier is used as the detector.
+ 
+                        - - - - - - - - - -
+ 
+    In order to translate the housekeeping data returned by the GPMS
+    instrument, a table of conversion coefficients is required.  The
+    application of these conversion coefficients yields parameters in
+    meaningful units (Volts, Amperes) instead of &apos;telemetry mystery
+    units&apos;.  Also needed is a table indicating the GPMS parameters
+    (mass, ionizer energy) associated with each step of the sampling
+    sequence.  These tables are parts of this data set.  Contained in
+    the instrument&apos;s housekeeping parameters are a GPMS SYNC PATTERN.
+    These parameters are necessary to &apos;lock&apos; the programmed sequence
+    with the returned data.
+ 
+    Most of the GPMS data are in the form of standard mass sweeps.
+    During these sequences the mass is incremented in integral (1)
+    Atomic Mass Unit (amu) steps between sample integrations.
+    Typically the sweep steps over a mass range from 2 to 150 amu
+    with the ionizer set to operate at 75 volts.  The circuitry
+    associated with the electron multiplier (detector) normally
+    starts its measurement in the HIGH sensitivity mode.  When the
+    count rate exceeds a defined threshold, (excessive signal
+    yielding too much current in the multiplier) the system switches
+    the detector to the LOW sensitivity mode.  Occasionally
+    measurements are made where the GPMS instrument is incrementing
+    in 0.125 amu steps, is operating using ionization energies of 25
+    or 15 Volts, is set to measure specific mass values at chosen
+    ionization energies, has been forced to use the LOW sensitivity
+    detection mode of operation and such.
+ 
+    The overall GPMS sequence includes the following subsequences:
+ 
+    1.  Instrument Background:  Selected residual gases (masses) in the
+        instrument are monitored as soon as power is applied and until
+        Inlet 1 and Outlet 1 are opened to the atmosphere.
+ 
+    2.  Photochemical Region:  The molecules most likely to exist in the
+        upper atmosphere probably evolved as a result of photochemical
+        processes.  Masses corresponding to the anticipated molecules
+        are monitored.  Selected masses are monitored at least once
+        every 30 seconds.  The collection of a sample by Enrichment Cell
+        1 was initiated.  The enrichment cells work by pulling a large
+        volume of sample across a sorbent material (&apos;Carbosieve&apos;).  The
+        hydrogen that dominates the Jovian atmosphere is pumped away
+        using chemical getter pumps.
+ 
+    3.  Below the Ammonia Clouds:  It was believed that the uppermost
+        clouds visible on Jupiter were composed of Ammonia and possibly
+        including Hydrogen Sulfide.  In this region a slightly modified
+        sampling scheme was used.  The inlet to the Enrichment Cell was
+        closed and processing of this sample started.
+ 
+    4.  Instrument Background:  At this phase of the mission, the
+        atmospheric entry models predicted the presence of a water
+        cloud.  To avoid problems that can arise if a drop of water
+        entered the inlet of the mass spectrometer, it was decided to
+        terminate direct atmospheric measurements and prepare the GPMS
+        instrument for important special sequences.  At this time, in
+        the sequence, valves were closed to isolate the mass
+        spectrometer from the Jovian atmosphere and instrument
+        background measurements were obtained.
+ 
+    5.  Rare Gas Measurements:  Following the charging of Enrichment
+        Cell 1, a valve was opened to allow those gases not sorbed by
+        the enrichment cell material to (volume expand) enter the Rare
+        Gas Cell.  An additional getter pump helps remove any remaining
+        hydrogen from the gas mixture.  The gases remaining were
+        expected to be primarily the Rare (Noble) gases.  Following the
+        completion of the instrument background measurements, valves
+        were opened to allow these gases into the mass spectrometer for
+        analysis.
+ 
+    6.  Enrichment Cell 1 Measurements:  The processing of the gases in
+        the enrichment cell consists of heating the cell to drive off
+        those volatile materials sorbed on the &apos;Carbosieve&apos; material.
+        These gases were added to those already in the Rare Gas Cell
+        and analyzed by the mass spectrometer.
+ 
+    7.  Instrument Background:  Following the evaluation of the contents
+        from the special cells, additional instrument background scans
+        were done.
+ 
+    8.  Inlet 2:  Inlet and Outlet 2 were opened to monitor samples
+        directly from the deeper Jovian atmosphere.  Most of the
+        sequences done in this region consist of full mass scans
+        because it was expected that more complicated molecules would
+        exist at these higher pressures.  In a similar fashion to that
+        previously noted, Enrichment Cell 2 was charged with sample.
+ 
+    9.  Enrichment Cell 2:  Following sample processing, the contents
+        from the second enrichment cell were analyzed by the mass
+        spectrometer.  These samples were superposed on the sample
+        entering from the direct atmosphere.
+ 
+    10. High Resolution Scans:  A single 0.125 amu per step mass scan
+        was multiplexed into the sequence.
+ 
+ 
+  Parameters
+  ==========
+    The GPMS measurements yield a count rate for the sampling
+    integration time; here nominally 0.5 second.  The resulting count
+    rate as a function of mass is a measure of qualitative and
+    quantitative information about the atomic and molecular species
+    entering the instrument.  The actual integration period for each
+    step is 0.48375 seconds.  The observed count rate must also be
+    corrected for the limitations of the detector circuitry.  One
+    well documented problem at higher count rates is pulse pile up
+    where the events occurring at the detector are happening faster
+    than the circuitry can recover.  Data corrected for this effect
+    are part of the data set.
+ 
+ 
+  Data - Atmospheric Entry
+  ========================
+    The operation of the GPMS instrument was expected to begin at an
+    ambient pressure of 0.1 Bars.  As the result of a probe problem,
+    the actual start of the instrument&apos;s sequence began at a pressure
+    of ca.  0.5 Bars.  The data included in the file, GPMSDATA.DAT,
+    include
+ 
+    Column 1:  Sequence Step
+    Column 2:  Probe Time (Seconds after Major Frame/Minor Frame 0/0.)
+    Column 3:  Ambient Pressure (millibars) (from ASI measurements)
+    Column 4:  Ionization (electron) Energy (electron Volts)
+    Column 5:  Mass being sampled (amu)
+    Column 6:  Detector Sensitivity (HI or LO)
+    Column 7:  Uncorrected Count Data (counts per period)
+    Column 8:  Corrected Count Data (counts per period)
+    Column 9:  (Where present)  Inlet System Operation Steps
+ 
+    The initial telemetry data forwarded by the project, in the form
+    of System Data Manager (*.SDM) files, contained errors.  (Note:
+    *.SDM files are not included in the PDS data set.) The GPMS data
+    were redundantly sent on both the &apos;A&apos; and &apos;B&apos; telemetry data
+    systems.  The Probe data were also stored both in the (excess)
+    Orbiter&apos;s memory and on the Orbiter&apos;s tape recorder.  The data
+    from each of these were independently telemetered to the Deep
+    Space Network antennas on Earth.  As new batches of data were
+    received on Earth and the Jupiter-Sun- Earth geometry improved,
+    the quality of the telemetry data plus the error correction and
+    besting procedures yielded a high quality raw data product.
+    Eventually we identified and rejected only 2 readings from the
+    final 7000+ values as being in error.
+ 
+    The data files (*.SDM files) consist of data records sized at 100
+    (8-bit) words.  (The first data word is indexed (numbered) as
+    zero.) These records are recorded as BINARY data (often referred
+    to as a DIRECT ACCESS format.) The first 36 of these data words
+    contain data system identification plus counter and time
+    information.  The remaining 64 (8-bit) words contain the
+    telemetry for 1 minor frame of Galileo Probe data.  All data not
+    related to the GPMS instrument were &apos;zeroed&apos; by the Galileo Probe
+    Project office before we received a file.
+ 
+    Extracting the Probe telemetry yields Probe data records.  The
+    GPMS data occupy positions numbered 6, 7, 14, 15, 22, 23, 30, 31,
+    38, 39, 46, 47, 54, 55, 62 and 63.  Two of the data records, from
+    the data file nms0701a.sdm (July 1, 1996), are shown next.  These
+    data records are tagged with the mission date 12/07/95 and the
+    time tag shown.  Word 0 indicates the data system used (A or B).
+    Words 36, 37 and 38 (Probe words 0, 1 and 2) show the Probe SYNC
+    pattern.  Word 40 (Probe word 4) is a counter.
+ 
+    -------------------------------------  Comments
+      6   0  92   0   1   0  64   0   0    Header (36 entries)
+      0   0   0   7 252  46  22 171  49    Data Stream &gt;B&lt;
+      7 252  46  22 171  33   7 252  46    22:46:08.247
+     22 171  33 134   5  48  22  82 227
+    248 197  73   0  66 100   0  39        Probe Data (64 Entries)
+      0   0   0   0   0   0   1 252
+    125   7   0   0   0 167   0  32
+      0   0   0   0   0   0 192  41        Multana = 3
+    168 125  93 156   0   0  64  26
+      0   0   0   0   0   0   0  29
+     81 228 205  83   0 123   0  25
+      0   0   0   0   0   0 192  24        Housekeeping = 67
+ 
+    -------------------------------------  Comments
+      5   0  92   0   1   0  64   0   0    Header (36 entries)
+      0   0   0   7 252  46  22  93  36    Data Stream &gt;A&lt;
+      7 252  46  22  93  36   7 252  46    22:48:09.093
+     22  93  36 134   5  48  22 116 228
+    248 197  73   0  65  73   0  31        Probe Data (64 Entries)
+      0   0   0   0   0   0   1 252
+      0   7   0   0   0 245   0  32
+      0   0   0   0   0   0 192  41        Multana = 3
+     14 125  93 156 122   0  64  26
+      0   0   0   0   0   0   0  29
+      0 228 206  83 204   7   0  25
+      0   0   0   0   0   0 192  24        Housekeeping = 67
+ 
+    Fortunately the Probe and GPMS minor frames are synchronized.
+    Each Probe minor frame yields one minor frame of GPMS data.  This
+    GPMS minor frame of data yields 8 count rates and associated
+    detector sensitivities plus two housekeeping parameters.  These
+    data are extracted from the data as indicated next.
+ 
+    |  HIGH (Even No. Word) |   LOW (Odd No. Word)  |
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    | 7| 6| 5| 4| 3| 2| 1| 0| 7| 6| 5| 4| 3| 2| 1| 0|   8-bit
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    |&lt;-HK&gt;| S|&lt;Exponent-&gt;|&lt;--------Mantissa--------&gt;|
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    |15|14|13|12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| 1| 0|  16-bit
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+     msb                                         lsb
+ 
+    where:
+            msb = most significant bit
+            lsb = least significant bit
+             HK = GPMS Housekeeping bits (0 - 3)
+              S = GPMS Sensitivity Bit (0 = HI, 1 = LO)
+       Exponent = Count Exponent (0 - 7)
+       Mantissa = Count mantissa (0 - 511)
+ 
+    Note:  The GPMS data are log compressed.  The success of this method
+           requires that the counter always starts at 1.
+           The combination:  Mantissa = Exponent = 0 can NEVER occur!
+ 
+    To determine the uncorrected count data, the following rules apply:
+ 
+    If Exponent = 0
+      COUNT = Mantissa - 1
+ 
+    If Exponent &gt; 0
+      COUNT = (512 + Mantissa) * 2 ^ (Exponent - 1) + 2 ^ (Exponent - 2)
+ 
+    As long as the count is less than, approximately, 1. E+7, the
+    CORRECTED count rate is derived from the following relationship:
+ 
+                    OBSERVED = TRUE * exp(-TRUE / z)
+    where:
+        OBSERVED = Raw (Observed, Uncorrected) Count data
+            TRUE = Actual (Real, Corrected) Count data
+               z = Constant value determined for this specific
+                   instrument
+               z = 2.933 E+7
+ 
+    The housekeeping parameter values are derived as follows:
+ 
+          MULTANA = 64 * W(6) + 16 * W(14) + 4 * W(22) + W(30)
+ 
+               HK = 64 * W(38) + 16 * W(46) + 4 * W(54) + W(62)
+ 
+    where:
+          MULTANA = Multiplier Analog Current:  A measure of the
+                    current from the electron multiplier.
+               HK = One of 32 repeating GPMS &apos;health&apos; parameters.
+     W(6)...W(62) = The value from the two data bits into which
+                    these housekeeping parameters are coded.
+ 
+ 
+  Data - GPMS Instrument Characterization
+  =======================================
+    THESE DATA ARE NOT CONSIDERED TO BE QUANTITATIVE!
+ 
+    The GPMS instrument&apos;s capabilities were tested in March and April
+    of 1985 in the laboratory at GSFC.  These tests were performed
+    using selected pure gases and gas mixtures to demonstrate that
+    the instrument could detect these species.  These tests were NOT
+    meant to be quantitative! During these tests the leaks used with
+    the enrichment cells were several hundred to a thousand times
+    smaller than those used during the actual Jovian atmospheric
+    entry.  (This was done to prevent damage to the fragile
+    components in the mass spectrometer&apos;s ionization source that
+    would occur in the event of an air leak or a pressure surge.) The
+    characterization gas handling system shown in the diagram
+    NMSCLBR.GIF was used.  This system is a recirculating system
+    where the pressures and temperatures of the gas sample can be
+    controlled.
+ 
+    The data file names indicate the GPMS instrument inlet (I1
+    indicates Inlet 1 and I2 indicates Inlet 2) by which the gas
+    sample was introduced as well as the identity of the gas sample.
+    The data files include the following:
+ 
+    File Name  Inlet   Gas Sample
+    i1_h2s       1     Hydrogen Sulfide
+    i1_hcn       1     Hydrogen Cyanide
+    i1_hydr      1     Mixture of inorganic Hydrides
+    i1_ph3       1     Phosphine
+    i1_rg        1     Rare Gas Mixture
+    i1_rgp       1     Rare Gas Mixture at selected pressures
+    i2_alkan     2     Mixture of saturated alkanes
+    i2_chmx      2     Mixture of saturated and unsaturated hydrocarbons
+    i2_h2nh3     2     Ammonia plus hydrogen mixture
+    i2_h2o       2     Water sample
+    i2_h2s       2     Hydrogen Sulfide
+    i2_hcn       2     Hydrogen Cyanide
+    i2_hydr      2     Mixture of inorganic Hydrides
+    i2_nh3       2     Ammonia
+    i2_ph3       2     Phosphine
+    i2_rg        2     Mixture of Rare Gases
+    i2_unsat     2     Mixture of Unsaturated Hydrocarbons
+    pfusim     1 &amp; 2   90% hydrogen 10% helium mixture introduced using
+                       a pressure profile simulating the expected entry.
+ 
+ 
+  Data - Waiting for Launch
+  =========================
+    NMS85183, NMS88201
+    A89MY15, A89MY15A, A89JL19, A89SE14, A89SE14A
+    B89MY15, B89MY15A, B89JL19, B89SE14, B89SE14A
+ 
+    These data are an important monitors of the &apos;history&apos; and
+    handling of the instrument.  The data in these files indicates
+    the cleanness of the instrument and that it remained (vacuum)
+    leak free.  (Note: files A89MY15A, B89MY15A and B89SE14A contain
+    no data, and are not included in this archive.)
+ 
+    The data files are included for both the &apos;A&apos; and the &apos;B&apos; data
+    streams and include:
+ 
+    July 2, 1985 instrument test at GSFC.  This test was done
+      immediately after the &apos;final&apos; processing and sealing of the GPMS
+      vacuum system.
+ 
+    July 19, 1988 test at GSFC. This is the last test with the
+      instrument prior to its final delivery for processing and launch.
+      The GPMS was allowed to perform a full sampling sequence with the
+      enrichment cell heaters operational during this test.
+ 
+    May 15, 1989 ground MST testing at KSC (This Mission Sequence Test
+      is intended to simulate the timeline and events expected at
+      entry.)
+ 
+    July 19, 1989 &apos;ground&apos; Probe Baseline testing at KSC.
+ 
+    September 14, 1989 &apos;onboard shuttle&apos; Probe Baseline testing at KSC.
+ 
+ 
+  Data - Cruising in Space
+  ========================
+    A89OC26, A89OC27, A90DE04, A90DE04A, A92NO20, A92NO21
+    B89OC26, B89OC27, B90DE04, B90DE04A, B92NO20, B92NO21
+ 
+    The GPMS instrument was tested three times following its launch
+    from the space shuttle.  The data from both the &apos;A&apos; and &apos;B&apos; data
+    streams is included with this data set.  (Note: files B89OC27 and
+    B90DE04 contain no data, and are not included in this archive.)
+ 
+    The data files include:
+ 
+    October 26, 1989 first turn on data from space
+    December 4, 1990 Probe Baseline test (SFT) from space
+    November 20, 1992 MST (full sequence) test from space
+ 
+ 
+  Data - Entry
+  ============
+    A95DE07
+    B95DE07
+ 
+    Also included are the &apos;A&apos; and &apos;B&apos; string data from the entry on
+    December 7, 1995.  These data files are formatted identically to
+    the files noted (above) that present the ground and space GPMS
+    instrument testing results.  The instrument&apos;s housekeeping data
+    is also included in these data files.
+ 
+ 
+  Data - Refurbished Engineering Unit
+  ===================================
+    *** NOT YET AVAILABLE at the beginning of 1999.  ***
+ 
+    The Galileo Probe Engineering Unit was refurbished to &apos;Flight
+    Quality&apos; following launch.  This instrument is in the laboratory
+    at GSFC and is being used in attempts to simulate the
+    observations from the mission.
+ 
+    *** NOT YET AVAILABLE at the beginning of 1999.  ***
+ 
+ 
+  Data - Miscellaneous
+  ====================
+    NMSCOEFF, NMSSTEPS
+ 
+    The file NMSCOEFF.TAB contains the coefficients necessary to
+    convert the GPMS raw housekeeping data into real world
+    Engineering units.  The file NMSSTEPS.TAB contains all of the
+    details that have been programmed into the GPMS instrument&apos;s
+    sampling sequence such as the mass, electron energy, and
+    sensitivity conditions used for each step.  This file also
+    documents the instrument&apos;s inlet system operations and other
+    parameters as programmed.
+ 
+ 
+  Software
+  ========
+    The (IBM PC/Clone) executable program NMSSEQ.EXE is a
+    self-extracting program that creates a set of files that display
+    a cartoon of the GPMS instrument&apos;s operation.  This file will
+    create 3 files in the subdirectory from which it is run.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    Data Quality
+    ------------
+      This data set is of high quality.  The GPMS data were
+      redundantly returned on the &apos;A&apos; and &apos;B&apos; data streams from the
+      mission.  Where data exist from both data streams, only two (2)
+      points do not agree.  The disagreements resulted at steps where
+      one of the data streams was noisy or failing so it was not
+      difficult to choose the correct data value.  Additionally, the
+      mass spectrometer and its housekeeping parameters also yielded
+      verifications with regard to the correct choice for the data
+      values.
+ 
+      CAUTIONARY NOTE: It appears that thermal problems, with either
+      the Probe transmitter or the GPMS Instrument&apos;s data system or
+      with both, caused the quality of the data to slowly degrade
+      during the final 1000 (or so) measurements from the GPMS
+      instrument.  Investigation into this problem continues.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-a-i0688-5-cmormetorb-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CMOR METEOROID STREAM SURVEY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.obs3340t1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:i0688.obs3340t1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:meteoroid.meteoroid::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-a-i0688-5-cmormetorb-v1.0__browserp_ear-a-i0688-5-cmormetorb-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Brown, P., R.J. Weryk, D.K. Wong, and J. Jones, A meteoroid stream survey using
+                   the Canadian Meteor Orbit Radar I. Methodology and radiant catalog, Icarus 195,
+                   317-339, 2008.
+            </reference_text>
+            <description>reference.BROWNETAL2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-A-I0688-5-CMORMETORB-V1.0</data_set_id>
+        <data_set_name>CMOR METEOROID STREAM SURVEY V1.0</data_set_name>
+        <data_set_release_date>2009-06-03</data_set_release_date>
+        <start_time>2002-01-01</start_time>
+        <stop_time>2006-12-31</stop_time>
+        <producer_full_name>CAROL NEESE</producer_full_name>
+        <citation_text>
+            Brown, P., Weryk, R.J., Wong, D.K., and Jones, J., CMOR Meteoroid
+            Stream Survey V1.0. EAR-A-I0688-5-CMORMETORB-V1.0. NASA Planetary
+            Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Survey of meteoroid streams by the Canadian Meteoroid Orbit Radar
+            (CMOR), published in Brown et al. (2008).
+        </data_set_terse_desc>
+        <abstract_desc>
+            A seven-year radar survey of meteor showers has been carried out
+            with the Canadian Meteor Orbit Radar (CMOR) from 2002-2006 (Brown
+            et al. 2008). This survey resulted in the unambiguous detection
+            and orbital characterization of 45 major and minor meteor
+            showers. This data set includes this list of the detected meteor
+            showers along with their orbital parameters.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+ 
+  The Canadian Meteor Orbit Radar, (CMOR), located near Tavistock, Ontario and
+  operated by the University of Western Ontario, carried out a survey of
+  meteor showers over the period 2002-2006.  A total of more than 2.5 million
+  meteoroids were detected and their orbits determined over the course of the
+  survey.  From these data, 45 meteoroid streams were identified using a
+  wavelet transform approach.  Of the identified streams, 12 are previously
+  unreported or unrecognized.
+ 
+  This data set presents the orbital parameters measured for the 45 major and
+  minor meteor streams which were unambiguously detected during the survey,
+  with multiple radar frequencies and using two
+  distinct detection methodologies.
+ 
+  Parameters
+  ==========
+ 
+  The list of the 45 detected meteor showers and their orbital elements,
+  reproduced from Brown et al. (2008) Table 6, is included in the file
+  browntab6.tab.  For each of the detected meteor showers, the file contains
+  orbital elements derived using deceleration-corrected velocities, raw mean
+  velocities, and velocities determined from a hybrid-Fresnel technique.  The
+  range in orbital parameters as determined from these three methods provides
+  a guide to the uncertainty of the measurements due to deceleration
+  corrections alone.
+ 
+  Information about the radiants of each of the detected showers is provided
+  in the file radiants.tab, extracted from Brown et al. (2008) Table 4.  The
+  file contains the solar longitude of the radiant at beginning, end, and
+  maximum of the active period, the RA and dec of the radiant at the maximum
+  of the shower, and the drift of RA and dec over the active period.
+ 
+  For a full description of the survey and derivations, and a discussion of
+  the results, see the original paper, Brown et al. (2008).
+ 
+  Brown, P., R.J. Weryk, D.K. Wong, and J. Jones, A meteoroid stream survey
+  using the Canadian Meteor Orbit Radar I. Methodology and radiant catalog,
+  Icarus 195, 317-339, 2008.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    This list of 45 meteor showers includes only those showers which were
+    detected unambiguously in multiple years, with multiple radar frequencies,
+    and using two distinct detection methodologies.  Some other minor streams
+    exist in the survey data, but only those with high confidence in their
+    existence have been included in this published set.
+ 
+    The derivation of the orbital parameters has been carried out using
+    deceleration-corrected velocities, raw mean velocities, and velocities
+    determined from a hybrid-Fresnel technique.  The range in orbital
+    parameters as determined from these three methods provides a guide to the
+    uncertainty of the measurements due to deceleration corrections alone.
+ 
+    For further discussion of the survey data and analysis, see Brown et al.
+    (2008).
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-rems-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS ROVER ENVIRONMENTAL MONITORING STATION 2 EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rems.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-2-edr-v1.0__browserp_msl-m-rems-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-2-edr-v1.0__dvo_atmos_msl-m-rems-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rems-2-edr-v1.0__pds.geo.msl.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gomez-Elvira J, Armiens C, Castaner L, Dominguez M, Genzer M, Gomez F, Haberle
+                   R, Harri A-, Jimenez V, Kahanpaa H, Kowalski L, Lepinette A, Martin J,
+                   Martinez-Frias J, McEwan I, Mora L, Moreno J, Navarro S, de Pablo MA, Peinado
+                   V, Pena A, Polkko J, Ramos M, Renno NO, Ricart J, Richardson M,
+                   Rodriguez-Manfredi J, Romeral J, Sebastian E, Serrano J, de la Torre Juarez M,
+                   Torres J, Torrero F, Urqui R, Vazquez L, Velasco T, Verdasca J, Zorzano M-,
+                   Martin-Torres J. REMS: The environmental sensor suite for the mars science
+                   laboratory rover. Space Science Reviews 2012:1-58, 2012.
+            </reference_text>
+            <description>reference.GOMEZELVIRAETAL2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-REMS-2-EDR-V1.0</data_set_id>
+        <data_set_name>MSL MARS ROVER ENVIRONMENTAL MONITORING STATION 2 EDR V1.0</data_set_name>
+        <data_set_release_date>2015-07-31</data_set_release_date>
+        <start_time>2012-08-07T04:01:16.534Z</start_time>
+        <stop_time>2015-03-27T02:38:56.480Z</stop_time>
+        <producer_full_name>JOSE A RODRIGUEZ-MANFREDI</producer_full_name>
+        <citation_text>
+            Gomez-Elvira, J., Mars Science Laboratory Rover Environmental
+            Monitoring Station EDR Data V1.0, MSL-M-REMS-2-EDR-V1.0, NASA
+            Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            MSL Rover Environmental Monitoring Station Experiment Data Record
+        </data_set_terse_desc>
+        <abstract_desc>
+            Raw, unprocessed scientific and housekeeping engineering data
+            taken from the Rover Environmental Monitoring Station (REMS)
+            aboard the Mars Science Laboratory.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The REMS instrument is a meteorological package designed to
+    provide measurements of air and ground temperatures, wind speed
+    and direction, pressure, humidity and ultraviolet radiation.
+ 
+    This data set contains the raw unprocessed data stored in the REMS
+    internal memory, as received from telemetry and formatted
+    according to the REMS EDR SIS. It consists of a collection of
+    tables that include the sensors readings as well as engineering
+    data and instrument configurations parameters.
+ 
+    The information included in this data set needs to be combined
+    using calibration and other ancillary information to get the
+    physical magnitudes. The required ancillary information can be
+    found in the RDR archive volumes.
+ 
+    Each data product in this data set contains one sol of activity
+    time, in a time ordered fashion and taken at maximum resolution of
+    one second.
+ 
+    This data set should be useful for anyone interested in knowing
+    the actual sensors electrical readings and status before any
+    processing is applied. The actual environmental magnitudes can be
+    found in the REMS RDRs.
+ 
+ 
+  Parameters
+  ==========
+    Raw data consists of measurements from all REMS sensors which have
+    been digitized from electrical data, such as voltages and
+    resistances, to digital numbers or counts using a resolution of 12
+    bits. Engineering data and instrument configuration parameters are
+    also included because some of them are required for data
+    processing, although their primary function is monitoring and
+    health assessment.
+ 
+    Data as stored in the REMS internal memory is a time ordered mixed
+    sequence of entries of the following data types:
+ 
+    Sensor Acquisition
+    Engineering
+    Humidity Sensor Regeneration Acquisition
+    Humidity Sensor Regeneration Report
+    Humidity Sensor Defrost Acquisition
+    Humidity Sensor Defrost Report
+    Ground Temperature Sensor Calibration
+    Reset
+    Sleep
+    Event Entry
+    Ground Temperature Sensor Gain Management
+    Error
+ 
+    Sensors data are included in the Sensor Acquisition
+    entries. Engineering entries contains some of their configuration
+    modes. Additional instrument configuration parameters are stored
+    in a separated area called the System Parameters. Detailed
+    specification of the data contained in each type and in the System
+    Parameters can be found in the REMS EDR SIS.
+ 
+    Sampling is taken at 1Hz maximum, for a baseline operation of 5
+    minutes every hour. Additional measurements can be taken on an
+    on-demand basis beyond those hourly observations. These additional
+    measurements can also be triggered automatically if event mode is
+    active, in which case the REMS computer will decide whether to
+    continue operating after the 5 minutes session by comparing the
+    measurements taken and the expected trend. The objective is to
+    capture any ongoing transitory atmospheric event.
+ 
+    During the first 72 sols, for each 5 minutes block, the wind
+    sensor is set off for the first minute and the last 5 seconds,
+    because it was believed it was causing noise to the rest of the
+    sensors. After sol 73, the wind sensor is always on each time REMS
+    is taking measurements.
+ 
+    From sol 793 onwards, a new measurement strategy for Humidity
+    Sensor was introduced. It is called HS HRIM (Humidity Sensor High
+    Resolution Interval Mode) and is only used on selected one-hour
+    long observations. This new strategy intends to minimize heating
+    of the Humidity Sensor, and consists of alternately switching on
+    and off the sensor at periodic intervals. At the same time, Boom 2
+    is switched off, which means that there are no Wind Sensor and Air
+    Temperature Sensor measurements.
+ 
+ 
+  Processing
+  ==========
+    The REMS EDR data products will be generated by the MIPL
+    (Multimission Image Processing Laboratory) at JPL, under the OPGS,
+    using the telemetry processing software called MSLEdrGen. This
+    software will convert the binary data received from telemetry to
+    ASCII and will generate a separate table for each of the data
+    types mentioned above. This means that there will be a table for
+    Sensor Acquisition entries, another for Engineering entries, and
+    so on. Entries will be kept in time order.
+ 
+    System Parameters tables will be generated from data provided by
+    the REMS team. In nominal operation mode, they don&apos;t need to be
+    downloaded from the instrument, since they are set from earth by
+    means of Spacecraft Commands and therefore their values are
+    known. Only on special situations data may be obtained directly
+    from the instrument.
+ 
+    Meta-data acquired from the telemetry data headers will be used to
+    populate the PDS labels. If telemetry packets are missing during
+    the initial downlink from the rover memory, partial data sets will
+    be created. The data will be reprocessed after all data are
+    received and a new version of the EDR (with a new version number)
+    will be created. With the exception of NAIF provided ancillary
+    data, all meta data stored in the label is acquired from the
+    telemetry data stream.
+ 
+ 
+  Data
+  ====
+    REMS EDRs included in this data set are a series of ASCII tables
+    converted from the instrument&apos;s internal memory and accompanied
+    with detached PDS labels. This makes it easy to load them in a
+    spreadsheet program or in a database.
+ 
+    There is a table for each of the data types entries stored in the
+    REMS memory. As for the System Parameters, instead of having one
+    big table containing all of them, they are broken down into
+    several tables for easier usage.
+ 
+    The tables for their corresponding REMS data types are:
+ 
+    ACQ                         Sensor acquisition
+    ENG                         Engineering
+    ERROR                       Error
+    EVENT                       Event Entry
+    GTS_CAL                     GT sensor calibration
+    GTS_GAIN                    GT sensor gain management
+    HS_DEF_ACQ                  Humidity sensor defrost acquisition
+    HS_DEF_REPORT               Humidity sensor defrost report
+    HS_REG_ACQ                  Humidity sensor regen acq
+    HS_REG_REPORT               Humidity sensor regen report
+    RESET                       Reset
+    SLEEP                       Sleep
+ 
+    The System Parameters tables are:
+ 
+    SP_ASICS                    ASIC configuration
+    SP_EVENTS                   Event mode configuration
+    SP_GTS                      Ground temperature sensor configuration
+    SP_HS_DEF_REG               Humidity Sensor defrost configuration
+    SP_HS_PS                    Humidity and Pressure sensors configuration
+    SP_MIS                      Miscellaneous configuration
+    SP_WS                       Wind sensor configuration
+ 
+    Each table contains one sol of activity time and data is time
+    ordered, with a timestamp reflecting the beginning of each each
+    data acquisition. System Parameters are stored for each of the
+    acquisition sessions, since their status is necessary to process
+    acquisition data.
+ 
+    One data product is created for each table, with the exception of
+    Humidity Sensor regeneration acquisition and report one side,
+    which are on the same data product, and Humidity Sensor Defrost
+    Acquistion and Report on the other side, which are also on the
+    same data product.
+ 
+ 
+  Ancillary Data
+  ==============
+    Ancillary data required to process EDRs and subsequent RDRs to get
+    environmental magnitudes are:
+ 
+    Laboratory calibration data
+    Solar azimuth an elevation
+    Rover azimuth, elevation, altitude, pitch, yaw and roll
+    Rover speed
+    Masthead azimuth and elevation
+    Temperature closest to power supply
+    Deck temperature
+    Front-right side temperature
+    UV sensor dust attenuation
+ 
+    Although some of these data can be obtained from external sources,
+    all of them are included in the RDR archive volumes, either as
+    RDRs or as separate files.
+ 
+  Software
+  ========
+    No software is provided in this data set. The EDR tables are simple
+    ASCII files that can be displayed on UNIX, Macintosh, and PC
+    platforms with common software.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    The data presented in the REMS EDR is intended to be the least
+    processed, most primitive data set released for REMS. Data
+    presented here are an accurate representation of REMS data as
+    received from the rover.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data reported are the minimally processed data received from the
+    orbiter during nominal REMS operations. All data received is
+    reformatted into one of the EDR data types. Data are by definition
+    of good quality, as damaged telemetry packets are sequestered upon
+    receipt from the spacecraft. We do not expect to receive many (if
+    any) damaged data packets.
+ 
+ 
+  Limitations
+  ===========
+    The major limitation of this data set is that this is level 0,
+    minimally processed data. The data are received from the
+    spacecraft telemetry and ingested into a database. If gaps exist
+    in the telemetry, data are lost.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mpfl-m-asimet-2-3-edr-rdr-edl-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MPFL MARS ATM STRUCT INST AND MET PKG RAW AND CALIB EDL V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_pathfinder::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mpfl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:asimet.mpfl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpfl-m-asimet-2-3-edr-rdr-edl-v1.0__browserp_mpfl-m-asimet-2-3-edr-rdr-edl-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpfl-m-asimet-2-3-edr-rdr-edl-v1.0__dvo_atmos_mpfl-m-asimet-2-3-edr-rdr-edl-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Golombek, M.P., R.A. Cook, T. Economou, W.M. Folkner, A.F.C. Haldemann,
+                   P.H. Kallemeyn, J.M. Knudsen, R.M. Manning, H.J. Moore, T.J. Parker, R.
+                   Rieder, J.T. Schofield, P.H. Smith, and R.M. Vaughan, Overview of the Mars
+                   Pathfinder Mission and Assessment of Landing Site Predictions, Science,
+                   278, 1743-1748, 1997.
+            </reference_text>
+            <description>reference.GOLOMBEKETAL1997B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mellstrom, J. and K. Lau, Mars Pathfinder AIM Phasing and Coordinate Frame
+                   Document, JPL Document 12103, PF-300-4.0-04, 38 pp., 1996.
+            </reference_text>
+            <description>reference.MELLSTROM-LAU1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Meyer, Donald, EDL Packet Telemetry Formats, JPL Interoffice Memorandum,
+                   DFM 96-XXX, October 11, 1996.
+            </reference_text>
+            <description>reference.MEYER1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.SCHOFIELD1996A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.SCHOFIELD1996B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.SCHOFIELD1997A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Schofield, J.T., J.R. Barnes, D. Crisp, R.M. Haberle, J.A. Magalhaes, J.R.
+                   Murphy, A. Seiff, S. Larsen, and G. Wilson, The Mars Pathfinder Atmospheric
+                   Structure Investigation/Meteorology (ASI/MET) Experiment, Science, 278,
+                   1752-1758, 1997.
+            </reference_text>
+            <description>reference.SCHOFIELDETAL1997</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Seiff, A., J.E. Tillman, J.R. Murphy, J.T. Schofield, D. Crisp, J.R.
+                   Barnes, C.KaBaw, C. Mahoney, J.D. Mihalov, G.R. Wilson, and R. Haberle, The
+                   Atmosphere Structure and Meteorology Instrument on the Mars Pathfinder
+                   Lander, J. Geophys. Res., 102, 4045-4056, 1997.
+            </reference_text>
+            <description>reference.SEIFFETAL1997</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Vaughan, R., Mars Pathfinder Project Planetary Constants and Models, JPL
+                   Document 12947, PF-100-PMC-01, 136 pp., December, 1995.
+            </reference_text>
+            <description>reference.VAUGHAN1995</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MPFL-M-ASIMET-2/3-EDR/RDR-EDL-V1.0</data_set_id>
+        <data_set_name>MPFL MARS ATM STRUCT INST AND MET PKG RAW AND CALIB EDL V1.0</data_set_name>
+        <data_set_release_date>1998-01-04</data_set_release_date>
+        <start_time>1997-07-04T16:36:50.172Z</start_time>
+        <stop_time>1997-07-04T18:30:06.190Z</stop_time>
+        <producer_full_name>JOHN T. SCHOFIELD</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            MPFL MARS ATM STRUCT INST AND MET PKG RAW AND CALIB EDL V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            Mars Pathfinder bounced down and rolled to a stop on the surface
+            of Mars on July 4, 1997. It landed in an ancient floodplain in
+            the Ares Vallis region of Chryse Planitia at 19.17 degrees North
+            latitude, and 33.21 degrees West longitude.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    Mars Pathfinder bounced down and rolled to a stop on the surface
+    of Mars on July 4, 1997.  It landed in an ancient floodplain in
+    the Ares Vallis region of Chryse Planitia at 19.17 degrees North
+    latitude, and 33.21 degrees West longitude.
+ 
+    The Atmospheric Structure Instrument and Meteorology Package
+    collected data during six sequential, non-overlapping, time
+    intervals while the spacecraft was descending to the surface.
+    These intervals are described below:
+ 
+      - Free-fall Data Capture
+ 
+        Commenced as a timed event exactly 15 minutes after Cruise Stage
+        separation, at an altitude in excess of 160 kilometers.
+ 
+      - Entry Data Capture
+ 
+        Commenced as a timed event exactly 29 minutes and 30 seconds
+        after Cruise Stage separation (hence 30 seconds before the
+        defined time of atmospheric entry) coincident with the start of
+        the accelerometer-based algorithm to determine the parachute
+        mortar firing time.
+ 
+      - Descent Data Capture
+ 
+        Commenced as a timed event exactly 20 seconds after parachute
+        mortar firing, coincident with the firing of the group 2
+        heatshield separation nuts pyros.
+ 
+      - Terminal Data Capture
+ 
+        Commenced as a timed event exactly 48 seconds after parachute
+        mortar firing, coincident with the enabling of the radar
+        altimeter transmitter.
+ 
+      - Landing Data Capture
+ 
+        Commenced as a timed event exactly one half second after bridle
+        cut pyro firing, coincident with powering off the radar
+        altimeter.
+ 
+      - Deployment Data Capture
+ 
+        Commenced as a timed event exactly 60 seconds after bridle cut
+        pyro firing, coincident with the start-roll-stop-algorithm
+        event, and terminated with the end-of-surface-deployment event.
+ 
+    This table shows the timing of many of the major entry events (table
+    taken from [GOLOMBEKETAL1997B]):
+ 
+     Event                       Time       Altitude    Velocity
+     -----                       ----       --------    --------
+     Cruise stage separation   L - 35 min
+     Entry                     L - 5 min     130 km     7470 m/s
+     Parachute deployment      L - 134 s     9.4 km     370 m/s, 16g
+     Heatshield separation     L - 114 s
+     Lander separation         L - 94 s
+     Radar ground acquisition  L - 28.7 s    1.6 km     68 m/s
+     Airbag inflation          L - 10.1 s    355 m
+     Rocket ignition           L - 6.1 s     98 m       61.2 m/s
+     Bridle cut                L - 3.8 s     21.5 m
+     Landing                   2:58 a.m.     0          14 m/s, 19g
+     Roll stop                 L + 2 min
+     Deflation                 L + 20 min
+     Airbag retracted          L + 74 min
+     Petals opened             L + 87 min
+ 
+    The sampling rate of ASI/MET data during EDL was determined
+    automatically by the Attitude Information Management system and
+    was linked to the EDL phase.
+ 
+    Data were directed to RAM, science EEPROM &amp; critical EEPROM, each
+    of which had different sampling rates.  The parameters directed
+    to each also varied.  No real-time data were transmitted during
+    EDL.
+ 
+    Data type   Parameters  EDL phase and duration (Seconds)  Data Vol
+                  x Bits                                      (kBytes)
+                        Free-fall Entry Descent Terminal Landing
+                            870    210    27      92      60
+ 
+                                   Samples per second
+RAM
+Accel, 3-axes      3x16      1     32     32      32      32      79.9
+Accel., Hsk.      13x16    0.125  0.125  0.125   0.125   0.125     4.3
+MET, Sci.         12x16    0.125  0.125    2       2       1      11.5
+MET, Hsk.         12x16      0      0    0.25     0.25   0.125     1.0
+                                                                  96.7
+Science EEPROM
+Accel.3-axes       3x16     0.5     8      2       2       8      17.4
+Accel., Hsk.      13x16    0.063  0.063  0.063   0.063   0.063     2.1
+MET, Sci.          4x16    0.125  0.125    1       1     0.125     2.3
+MET, Hsk.         12x16      0      0    0.125   0.125   0.125     0.6
+                                                                  22.4
+Critical EEPROM
+Accel. Z-axis      1x16    0.031    1    0.125   0.125    0.25     0.5
+Accel., Hsk.       2x16    0.031  0.031    0       0       0       0.1
+                                                                   0.6
+ 
+  Parameters
+  ==========
+    For details on the format of the EDL telemetry packets, please
+    see [MEYER1996].
+ 
+    Three ASI/MET instruments produced data during EDL.  These were
+    the science and engineering accelerometers and the MET
+    instrument.  The accelerometers each produced identical sets of
+    science and housekeeping parameters and the MET instrument
+    produced science parameters, housekeeping parameters, and
+    Aeroshell Instrumentation Package (AIP) data.
+ 
+    All data records are tagged with a spacecraft clock start count
+    and an elapsed time.
+ 
+    Spacecraft Clock Start Count - The value of the spacecraft clock
+    at the time the related data were acquired.
+ 
+    Elapsed Time - The elapsed time, in seconds, since a set time.
+    In each case, this T=0 time is specified as an SCLK and a UTC
+    time.
+ 
+ 
+    Accelerometer Data
+    ------------------
+      The accelerometer data files contain measurements of
+      acceleration and the gain states of the relevant accelerometer
+      at the time the measurement was taken.  While all six
+      accelerometer values were stored in ROM and Science EEPROM,
+      only the engineering +YZ and science Z axis accelerometer
+      values were stored in Critical EEPROM.
+ 
+      Acceleration - There are three engineering and three science
+          accelerometers.  Each set of three accelerometers is
+          orthogonal.  The engineering accelerometers measure
+          acceleration along the +YZ, -YZ, and X axes of the spacecraft.
+          (+YZ indicates halfway between the +Y and +Z axes.)  The
+          science accelerometers measure acceleration along the X, Y,
+          and Z axes.  (See section on Coordinate Systems below.)  The
+          raw acceleration values are in raw counts, while the
+          calibrated values are in units of Earth gravity,
+          9.795433 m/s**2.
+ 
+      Accelerometer Gain Range - The accelerometers can each be set to
+          one of three different gain ranges, 0.016g, 0.800g, or 40.0g
+          (where g = 1 Earth g, 9.795433 m/s**2).
+ 
+      The following accelerometer housekeeping values were also
+      recorded:
+ 
+      Accelerometer First Amplifier Temperature - The first amplifier
+          temperature sensor values are provided for each of the six
+          accelerometers.  The calibrated measurements are in units of
+          degrees Kelvin.
+ 
+      Accelerometer Head Temperature - These values provide the
+          temperature of the accelerometer head sensor for each of the
+          six accelerometers.  The calibrated values are in units of
+          degrees Kelvin.
+ 
+      Accelerometer Multiplexer Temperature - The engineering and
+          science accelerometer multiplexer temperature sensor values
+          were recorded.  The calibrated values are in units of degrees
+          Kelvin.
+ 
+      Accelerometer Volt Reference - These are the values of the 0 Volt,
+          -2.5 Volt, and 2.5 Volt references for both the engineering
+          and science accelerometers.  The calibrated values are in
+          units of Volts.
+ 
+      Accelerometer Volt Reference Temperature - These are the
+          temperatures of the +2.5 Volt reference for both the
+          engineering and science accelerometers.  The calibrated values
+          are in units of degrees Kelvin.
+ 
+      Analog to Digital Converter Temperature - These are the values of
+          the engineering and science accelerometer analog-to-digital
+          converter temperature sensors.  The calibrated values are in
+          units of degrees Kelvin.
+ 
+      Hygrometer Voltage - These are the values of the hygrometer
+          sensors for both the science and engineering accelerometers.
+          The calibrated values are in units of Volts.
+ 
+ 
+    MET Data
+    --------
+      The MET data files contain primarily measurements of
+      atmospheric pressure, temperature, and wind.  The following
+      science parameters were recorded.
+ 
+      Pressure - The air pressure was measured in two ranges, zero to
+          twelve millibars, and six to ten millibars.  Raw values are
+          reported as raw counts, and calibrated values as millibars.
+ 
+      Temperature - This was measured by four thermocouples, labeled
+          &apos;top&apos;, &apos;middle&apos;, &apos;bottom&apos;, and &apos;descent&apos;.  The top
+          thermocouple is located 103.8 cm above the plane of the lander
+          petal; the middle and bottom thermocouples are 50.8 and
+          27.3 cm above this plane.  The descent thermocouple is located
+          just below the wind sensor at the top of the mast.  Calibrated
+          units for the temperatures are degrees Kelvin.
+ 
+      Wind Sensor Element Temperature - These are the measured
+          temperatures of each of the six wind sensor segments
+          (or elements).  Calibrated values are shown in degrees Kelvin.
+ 
+      The following MET housekeeping values were also recorded:
+ 
+      +/-12 Volt Power Supply Voltage - The voltage from the twelve volt
+          power supply is provided in units of Volts.
+ 
+      +5 Volt Reference Voltage - The calibrated units for this
+          reference voltage are provided in Volts.
+ 
+      +5 Volt ADC - The voltage of the positive five Volt analog to
+          digital converter supply, measured in Volts.
+ 
+      -5 Volt ADC - The voltage of the negative five Volt analog to
+          digital converter supply, measured in Volts.
+ 
+      Circuit Board Temperature - The temperature of the MET circuit
+          board is reported in units of degrees Kelvin.
+ 
+      Wind Sensor Thermocouple Temperature - This is the measured
+          temperature of the wind sensor thermocouple.  The calibrated
+          values are shown in degrees Kelvin.
+ 
+      Wind Sensor Current - The calibrated current from the wind sensor
+          is measured in units of milliamps.
+ 
+      PRT4 Temperature, Drive Current Voltage, and Sensor Voltage - The
+          temperature of the mast base isothermal platinum resistance
+          thermometer (PRT4) is reported in units of degrees Kelvin.
+          Its drive current voltage and sensor voltage are measured in
+          Volts.
+ 
+      PRT5 Temperature and Drive Current Voltage - The temperature of
+          the pressure sensor platinum resistance thermometer (PRT5) is
+          reported in degrees Kelvin, and the drive current voltage in
+          units of Volts.
+ 
+ 
+  Processing
+  ==========
+    The raw data values in this data set have been converted from
+    14-bit binary numbers to ASCII.
+ 
+    The calibrated values have been converted from the raw counts
+    from each sensor to engineering units.  The steps used to produce
+    the engineering units vary with the type of data, but are all
+    described in the &apos;Calibration&apos; section of the ASI/MET instrument
+    description.  More information is also available in these
+    references: [SCHOFIELD1996A, SCHOFIELD1996B, and SCHOFIELD1997A].
+ 
+ 
+  Data
+  ====
+    All of the data in this data set are contained in ASCII tabular
+    files, (file extension &apos;.TAB&apos;) with detached PDS labels (file
+    extension &apos;.LBL&apos;).  The files are named as follows:
+ 
+    Critical EEPROM Engineering Accelerometer Science Data  C_EACC_S.TAB
+    Critical EEPROM Engineering Accelerometer Housekeeping  C_EACC_H.TAB
+    Critical EEPROM Science Accelerometer Science Data      C_SACC_S.TAB
+    Critical EEPROM Science Accelerometer Housekeeping      C_SACC_H.TAB
+ 
+    Science EEPROM Engineering Accelerometer Science Data   S_EACC_S.TAB
+    Science EEPROM Engineering Accelerometer Housekeeping   S_EACC_H.TAB
+    Science EEPROM Science Accelerometer Science Data       S_SACC_S.TAB
+    Science EEPROM Science Accelerometer Housekeeping       S_SACC_H.TAB
+    Science EEPROM FE &amp; DTL MET Science Data                S_MET_S.TAB
+    Science EEPROM Descent/Term/Landing MET Housekeeping    SD_MET_H.TAB
+ 
+    RAM Engineering Accelerometer Science Data              R_EACC_S.TAB
+    RAM Engineering Accelerometer Housekeeping              R_EACC_H.TAB
+    RAM Science Accelerometer Science Data                  R_SACC_S.TAB
+    RAM Science Accelerometer Housekeeping                  R_SACC_H.TAB
+    RAM Free-fall/Entry MET Science Data                    RF_MET_S.TAB
+    RAM Descent/Terminal/Landing MET Science Data           RD_MET_S.TAB
+    RAM Descent/Terminal/Landing MET Housekeeping           RD_MET_H.TAB
+ 
+    The tabular files are formatted so that they may be read directly
+    into many database management systems (DBMS) or spreadsheet
+    programs on various computers.  All fields in the tables are
+    separated by commas, and are right justified.  The &apos;start byte&apos;
+    and &apos;bytes&apos; values listed in the PDS labels do not include the
+    commas between fields.  The records are of fixed length, and the
+    last two bytes of each record contain the ASCII carriage return
+    and line feed characters.  This allows the tables to be treated
+    as fixed length record files on computers that support this file
+    type and as normal text files on other computers.
+ 
+    The PDS labels are object-oriented.  The object to which the
+    labels refer (the TABLE) is denoted by a statement of the form:
+ 
+        ^object = location
+ 
+    in which the carat character (&apos;^&apos;, also called a pointer in this
+    context) indicates that the object starts at the given location.
+    For an object located outside the label file (as in this case), the
+    location denotes the name of the file containing the object.
+    For example:
+ 
+        ^TABLE = &apos;R_SACC_S.TAB&apos;
+ 
+    indicates that the TABLE object is in the file R_SACC_S.TAB, in
+    the same directory as the detached label file.
+ 
+    The detached label files are stream format files, with a carriage
+    return (ASCII 13) and a line feed character (ASCII 10) at the end
+    of each record.  This allows the files to be read by the MacOS,
+    DOS, Unix, and VMS operating systems.
+ 
+ 
+  Coordinate System
+  =================
+    The X, Y, and Z axes of the accelerometers are those of the Mars
+    Pathfinder Entry Vehicle Coordinate System.  This coordinate
+    system is described by [MELLSTROM&amp;LAU1996].  The coordinate
+    system is right handed, orthogonal, and defined by axes Xe, Ye,
+    and Ze.  The Xe/Ye plane is defined as the plane of the entry
+    vehicle interface pads located at the top of the backshell
+    interface plate.
+ 
+    Xe lies in the entry vehicle separation plane (Xe/Ye plane),
+    positively directed outward in the entry vehicle separation plane
+    from the Ze axis and orthogonal to Ye and Ze.
+ 
+    Ye lies in the Xe/Ye plane and positively directed outward in the
+    entry vehicle separation plane outward from the Ze axis toward
+    the Star Scanner Assembly (SSA) when the entry vehicle and the
+    cruise stage are attached to each other (-Ye passes through the
+    interface bushing #1).
+ 
+    Ze is coincident with the nominal spacecraft spin axis, through
+    the geometric center of the three interface bushing holes for
+    connecting the entry vehicle to the cruise stage, and positively
+    directed outward from the spacecraft center of mass towards the
+    heatshield.
+ 
+ 
+  Software
+  ========
+    The MET EDR/RDR tables can be displayed on UNIX, Macintosh, and
+    PC platforms as simple ASCII files, or using the PDS developed
+    program, NASAView.  This software is freely available from the
+    PDS Central Node and may be obtained from their web site at
+    http://pds.nasa.gov/.  For more information or help in
+    obtaining the software, contact the PDS operator at the following
+    address:
+ 
+    Address:     Planetary Data System, PDS Operator
+                 Jet Propulsion Laboratory
+                 4800 Oak Grove Drive
+                 Pasadena, CA 91109
+ 
+    Phone:       (818) 354-4321
+    Email:       pds_operator@jpl.nasa.gov
+    WWW URL:     http://pds.nasa.gov/
+ 
+ 
+  Media / Format
+  ==============
+    The ASI/MET EDL raw and calibrated data will be stored on compact
+    disc-read only memory (CD-ROM) media.  The CD will be formatted
+    according to ISO-9660 and PDS standards.  The data files will not
+    include extended attribute records (XARs), and will therefore not
+    be readable on some older VMS operating systems.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    The quality of the raw data from the accelerometer and MET
+    instruments is good throughout EDL.  There are no gaps, and all
+    the planned data were returned to Earth.
+ 
+    The reduced/calibrated data are also complete.  In general, the
+    accuracy of calibration is best for the accelerometer and MET
+    science parameters, and is less accurate for the housekeeping
+    parameters and AIP temperatures.
+ 
+ 
+  Review
+  ======
+    The contents of this CD have been peer reviewed by the following
+    people:
+ 
+    Lyle Huber       - PDS Atmospheres Node, New Mexico State University
+    Julio Magalhaes  - MPF ASI/MET Team, NASA Ames Research Center
+    Jim Murphy       - MPF ASI/MET Team &amp; PDS Atmospheres Node, New
+                       Mexico State University
+    Tim Schofield    - MPF ASI/MET Team Lead, Jet Propulsion Laboratory
+    Rob Sullivan     - MPF Participating Scientist, Cornell University
+    Betty Sword      - PDS Central Node Data Engineer, Jet Propulsion
+                       Laboratory
+    John Wilson      - Non-MPF scientist, Geophysical Fluid Dynamics
+                       Laboratory/NOAA, Princeton University
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    The accelerometer data are of high quality throughout EDL.
+    However both raw and calibrated acceleration measurements for a
+    particular accelerometer should not be used for a period of 1
+    second following a gain change.  Gain changes produce an
+    acceleration pulse which is an artifact of the electronic time
+    constant of the sensor.  Gain changes only occur in the science
+    accelerometer measurements.
+ 
+    MET science and housekeeping data are also of good quality
+    throughout EDL.  Pressure, temperature and wind data accurately
+    describe the properties of the appropriate sensors.  However,
+    during free-fall and entry, the heatshield is in place and these
+    properties are determined less by the atmosphere than by the
+    internal lander environment.  After heatshield separation sensor
+    properties are influenced both by the atmosphere and the lander
+    environment.
+ 
+    Dynamic pressure measurements are most reliable.  The descent
+    temperature sensor is exposed for EDL but the exposure is not
+    good enough to prevent serious contamination from the lander
+    environment so that its results can not readily be converted to
+    atmospheric temperature during the parachute descent, terminal or
+    landing phases of EDL.  Measurements by the other temperature
+    sensors and the wind sensor are essentially meaningless during
+    all phases of EDL, as these sensors are designed for operation
+    after landing.
+ 
+ 
+  Limitations
+  ===========
+    The accelerometer data set has been used to reconstruct the entry
+    vehicle trajectory and derive the vertical density, pressure, and
+    temperature structure of the atmosphere above 10 km.  In order to
+    repeat this analysis various supplementary data, not included in
+    this data set, are required.  Such supplementary data include
+    spacecraft mass, cross-sectional area and aerodynamic drag
+    coefficient, as well as navigation solutions for entry vehicle
+    position and velocity relative to Mars immediately before entry.
+ 
+    Although the calibrated MET data are of good quality, only the
+    pressure measurement gives good information on the vertical
+    profile of the atmosphere during parachute descent for the
+    reasons discussed above.  As the pressure is a dynamic
+    measurement made through a Pitot tube, it must be corrected for
+    atmospheric flow velocity around the lander and orientation
+    relative to this flow before it can be converted to static
+    atmospheric pressure.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

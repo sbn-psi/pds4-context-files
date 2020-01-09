@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mex-m-mrs-5-occ-9101-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS EXPRESS MARS MRS 5 OCCULTATION 9101 V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_express::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mrs.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mex-m-mrs-5-occ-9101-v2.0__browserp_geo_mex-m-mrs-5-occ-9101-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.psa::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Fjeldbo, G., A.J. Kliore, and V.R. Eshleman, The Neutral Atmosphere of Venus as
+                   Studied with the Mariner V Radio Occultation Data, Astron. J., 76, 123-140,
+                   1971.
+            </reference_text>
+            <description>reference.FJELDBOETAL1971</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MEX-M-MRS-5-OCC-9101-V2.0</data_set_id>
+        <data_set_name>MARS EXPRESS MARS MRS 5 OCCULTATION 9101 V2.0</data_set_name>
+        <data_set_release_date>2009-12-08</data_set_release_date>
+        <start_time>2004-05-18T15:26:42.558Z</start_time>
+        <stop_time>2007-05-14T23:16:38.750Z</stop_time>
+        <producer_full_name>MARTIN PAETZOLD</producer_full_name>
+        <citation_text>
+            M. Paetzold, Mars Express MaRS Level 5 data, Experimental Data
+            acquired from COMMISSIONING, PRIME MISSION, EXTENDED MISSION 1,
+            Version V2.0, MEXMRS_HSD_9101_V2.0, ESA Planetary Science
+            Archive, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Example Mars Express radio Occultation temperature-pressure
+            profiles and electron density profiles from 2004-2007.
+        </data_set_terse_desc>
+        <abstract_desc>
+            A sampling of Mars neutral atmosphere temperature-pressure
+            profiles and ionospheric electron density profiles derived from
+            Mars Express radio occultation data collected during the first
+            three years of orbital operations (2004-2007). The data are
+            presented as ASCII tables.
+        </abstract_desc>
+        <data_set_desc>
+ 
+Data Set Overview
+================
+This data set contains neutral atmosphere temperature-pressure
+profiles and ionospheric electron density profiles derived from 12
+Mars Express radio occultations spread over the first three years of
+orbital operations (2004-2007).
+The data set was created as a prototype for future data sets
+containing a larger number of profiles.
+ 
+ 
+PARAMETERS
+==========
+The neutral atmosphere profiles are ASCII tables containing values of
+pressure, temperature, and number density (with uncertainties) as a
+function of radius from the Mars center of mass, geopotential height
+relative to a reference model, latitude, longitude, and time. Pressure
+ and temperature are derived using an inversion procedure; the results
+for three starting conditions are included.
+ 
+The ionospheric profiles are ASCII tables giving electron number
+density (and uncertainty), refractivity, and signal level as a
+function of radius, latitude, longitude, and time.
+ 
+ 
+PROCESSING
+==========
+Measurements of radio signal frequency/phase collected during an
+occultation were corrected for known Doppler effects such as motion of
+the spacecraft and ground receiving station, for drift of the
+frequency reference, and for effects of the intervening medium (such
+as Earth?s atmosphere and ionosphere).  The residual frequency shifts
+are presumed to result from refractive bending by the atmosphere of
+Mars. Variation of the bending angle, ray asymptote, and refractivity
+of the neutral atmosphere are related by an Abel transform, which can
+be inverted [FJELDBOETAL1971] using knowledge of the spacecraft
+trajectory.  If hydrostatic equilibrium and a mean molecular weight
+for the atmosphere (primarily CO2) are assumed, number density,
+pressure, and temperature can be derived from the refractivity profile
+of the neutral atmosphere.  For the ionosphere, the procedures are
+similar but assumptions such as hydrostatic equilibrium do not apply,
+so the details are more complicated. See also ESA publication
+ESA-SP-1291 for details.
+ 
+ 
+DATA
+====
+The data set comprises 12 neutral atmosphere temperature-pressure
+profiles and 12 ionospheric electron density profiles derived from
+Mars Express radio occultation measurements collected in 2004-2007.
+These are example profiles created to test analysis and archiving
+procedures, anticipating more profiles in future data sets.
+ 
+Profiles are stored in the DATA directory.  Under the DATA heading are
+ subdirectories OCC_ATMO and OCC_IONO, into which the neutral
+atmosphere and ionospheric profiles are divided.  Under these two
+headings are directories which organize the data by year (2004, 2005,
+2006, and 2007).  Under the yearly headings are directories with names
+ DOY_ddd_ooo_yyyy, where ddd is the day of year, ooo is the orbit
+number for the measurements, and yyyy is the year.
+ 
+Each directory DOY_ddd_ooo_yyyy contains an ASCII table
+(extension *.TAB) which contains the temperature-pressure or electron
+density file.  A companion PDS label (same file name, but *.LBL
+extension) describes the format and content of the table.  A third
+file with extension *.TXT gives supplementary information about the
+occultation itself and some of the initial parameters used in the
+inversion process. A fourth file is the label for the file with the
+supplementary information.
+ 
+The dataset, volume, directory, and file naming conventions are
+described in MEX_MRS_RIU_IS_3050.PDF in the DOCUMENT directory of this
+archive.
+ 
+ 
+ 
+ 
+ 
+ 
+Coordinate Systems
+==================
+ 
+Latitudes and longitudes are given in areo centric (east) longitude
+and areo centric (north) latitude. As rotation rate for Mars the
+following value was used: Omega = 7.088218081*10**-5 s**-1.
+ 
+Software
+========
+Since these are ASCII files containing high level science results,
+no software is needed to display or process these data, and none is
+included in the archive.
+ 
+ 
+ 
+Documents
+=========
+ 
+     The DOCUMENT directory contains files that provide documentation
+     and supplementary information to assist in understanding
+     and using the data products in the volume.
+ 
+  MEX-MRS-RIU-IS-3050.PDF/ASC         File naming convention for
+                                       higher Science Products
+  MEX-MRS-RIU-IS-3050 _APP.ASC        File naming convention for
+                                       higher Science Products
+                                       Appendix, PDS Example labels
+  M00SUMML03_OC1_040930000_05.TAB/LBL   Additional information about
+                                         first occultation season
+ 
+  M00SUMML03_OC2_043430000_05.TAB/LBL   Additional information about
+                                         second occultation season
+ 
+  M00SUMML03_OC3_052000000_05.TAB/LBL   Additional information about
+                                         third occultation season
+  M00SUMML03_OC7_071150000_05.TAB/LBL   Additional information about
+                                         seventh occultation season
+ 
+  MARS_OPS_LOGBOOK_04.PDF               Operations logbook 2004
+ 
+  MARS_OPS_LOGBOOK_05.PDF               Operations logbook 2005
+ 
+  MARS_OPS_LOGBOOK_06.PDF               Operations logbook 2006
+ 
+  MARS_OPS_LOGBOOK_07.PDF               Operations logbook 2007
+ 
+  MEX-MRS-IGM-MA-3008.PDF            MaRS Users Manual.
+ 
+ 
+ 
+Media/Format
+============
+      The archival data are written to hard discs for distribution.
+ 
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Overview
+========
+      Data in this archival data set have been processed as part of
+      prototyping effort to test analysis and archiving procedures for
+      reduced data from Mars Express radio occultation experiments.
+      In general, this is a good data set.
+ 
+ 
+ 
+Review
+======
+      This archival data set was reviewed by the MEX Radio Science
+      Team prior to submission to the Planetary Science Archive (PSA).
+ 
+ 
+Data Coverage and Quality
+=========================
+The products in this data set were derived from the following Mars
+Express ingress radio occultations with the spacecraft in &apos;two-way&apos;
+mode:
+ 
+                          Year  Day of Year  Orbit
+                          ----  -----------  -----
+                          2004       139       414
+                          2004       180       559
+                          2004       181       564
+                          2004       183       570
+                          2004       355      1184
+                          2004       362      1212
+                          2005       234      2061
+                          2005       268      2182
+                          2006       025      2619
+                          2006       084      2829
+                          2007       118      4253
+                          2007       134      4312
+ 
+In &apos;two-way&apos; mode, the spacecraft radio system uses a signal
+transmitted from the ground as its frequency reference when radiating
+its own signal.  The frequencies of the &apos;uplink&apos; and &apos;downlink&apos; differ
+by about 10 percent so there is no interference.  The two-way mode
+provides better frequency stability on the downlink than can be
+achieved using the spacecraft&apos;s on-board oscillator, yielding more
+accurate atmospheric profiles.  However, the fact that both the uplink
+ and downlink pass through the atmosphere of Mars complicates the
+analysis since refractive bending occurs during each passage and the
+raypaths are at slightly different altitudes.
+ 
+During an egress occultation, the spacecraft&apos;s radio system must find
+and lock onto the uplink signal before transmitting &apos;coherently&apos; back
+to Earth.  The &apos;lock-up&apos; time can be several seconds, during which the
+ raypath is traversing a significant fraction of the atmosphere. The
+uplink signal reaching the spacecraft is also somewhat unstable
+because of perturbations introduced by the atmosphere of Mars.  For
+these reasons, only ingress occultations were collected by the Mars
+Express Radio Science Team.
+ 
+ 
+ 
+ 
+Limitations
+===========
+ 
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+ 
+ 
+ACRONYMS
+========
+DSN             Deep Space Network
+ESA             European Space Agency
+IFMS            Intermediate Frequency Modulation System
+JPL             Jet Propulsion Laboratory
+MEX             Mars Express
+NNO             New Norcia Station (Perth)
+PDS             Planetary Data System
+PSA             Planetary Science Archive
+RSR             Radio Science Receiver
+S/C             Spacecraft
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

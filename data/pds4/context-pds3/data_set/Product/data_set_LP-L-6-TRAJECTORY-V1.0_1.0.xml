@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-6-trajectory-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LP MOON SPACECRAFT TRAJECTORY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_prospector::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:eng.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-6-trajectory-v1.0__browserp_lp-l-6-trajectory-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Binder, A.B., W.C. Feldman, G.S. Hubbard, A.S. Konopliv, R.P. Lin, M.H. Acuna,
+                   and L.L. Hood, Lunar Prospector searches for polar ice, a metallic core, gas
+                   release events, and the moon&apos;s origin, Eos, Trans. AGU, 79, 97, 1998.
+            </reference_text>
+            <description>reference.BINDERETAL1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Report of the IAU/IAG/COSPAR Working Group on Cartographic Coordinates and
+                   Rotational Elements of the Planets and Satellites - 1994, Celestial
+                   Mechanics and Dynamical Astronomy, 63, 2, 127-148, 1995.
+            </reference_text>
+            <description>reference.DAVIESETAL1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Russell, C.T., Geophysical coordinate transformations, Cosmic Electrodynamics,
+                   Reidel Publishing Co., Vol. 2, 184-196, 1971.
+            </reference_text>
+            <description>reference.RUSSELL1971</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LP-L-6-TRAJECTORY-V1.0</data_set_id>
+        <data_set_name>LP MOON SPACECRAFT TRAJECTORY V1.0</data_set_name>
+        <data_set_release_date>1998-06-01</data_set_release_date>
+        <start_time>1998-01-16T00:00:00Z</start_time>
+        <stop_time>1999-07-31T10:10:00Z</stop_time>
+        <producer_full_name>STEVEN P. JOY</producer_full_name>
+        <citation_text>not applicable</citation_text>
+        <data_set_terse_desc>
+            Trajectory data for the Lunar Prospector spacecraft in
+            Selenographic, SSE, GSE, and GSM coordinates. Dataset covers
+            dates 1998-01-16 to 1999-07-29.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The Lunar Prospector spacecraft trajectory data set consists of
+    spacecraft position determinations in numerous coordinate systems
+    at one minute intervals. The data set also contains the spacecraft
+    velocity as a function of time.  This data set is derived by using
+    the spacecraft position data set from the Lunar Prospector level
+    zero data archive (LP-L-6-POSITION-V1.0). The SPICE SPK kernel
+    LP_EPHEM.TSP that is included on the archive volume provides
+    ephemeris data for the Sun, Earth, and Moon. These data are combined
+    with the Lunar Prospector location relative to the Moon in order
+    to generate trajectory data that will facilitate the analysis of
+    both the magnetometer and the electron reflectometer data sets.
+ 
+    Each file in the spacecraft trajectory data set covers one month of
+    time.
+ 
+ 
+  Science Objectives
+  ==================
+    The Lunar Prospector science objectives relevant to this data set are
+    to map the Moon&apos;s surface composition and its magnetic field, and to
+    determine the frequency and location of gas release events.  A
+    special emphasis of the science objectives is to search for polar
+    water ice deposits [BINDERETAL1998].  The spacecraft position data
+    are used to locate where on the Moon science data were acquired.
+ 
+ 
+  Coordinate Systems
+  ==================
+    Selenographic: These data are a repeat of the values generated by
+    the Goddard Flight Dynamics Analysis Branch for the level zero data.
+    The selenographic coordinate system provided is an east longitude
+    system where the prime meridian is defined in [DAVIESETAL1994]. A
+    negligible amount of flattening (1x10**-30) is used for the Moon.
+    Thus, selenographic latitude is nearly equal to selenocentric
+    latitude with almost no error.  The mean radius and GM of the Moon
+    used to generate this data set are 1738 km and 4902.8014 km**3/s**2,
+    respectively. Both spherical (SG) and Cartesian (SEL) representations
+    of the selenographic coordinate system are provided. In the Cartesian
+    representation, the Z-axis is aligned with the lunar spin axis,
+    positive in the direction of angular momentum. The X-axis lies in
+    the equatorial plane and points in the direction of the prime
+    meridian. Y completes the right-handed set.
+ 
+    Selenocentric Solar Ecliptic (SSE): The SSE coordinate system has
+    its X-axis along the instantaneous Moon-Sun line, positive towards
+    the Sun. The Z-axis is parallel to the upward normal to the Earth&apos;s
+    ecliptic plane, and Y completes the right-handed set. Distances are
+    measured from the lunar center of mass and are reported in units
+    of kilometers.
+ 
+    Geocentric Solar Ecliptic (GSE): The GSE coordinate system has
+    its X-axis along the instantaneous Earth-Sun line, positive towards
+    the Sun. The Z-axis is parallel to the upward normal to the Earth&apos;s
+    ecliptic plane, and Y completes the right-handed set. Distances are
+    measured from the Earth center of mass and are reported in units
+    of Earth radii where 1 Re = 6372 km.
+ 
+    Geocentric Solar Magnetospheric (GSM): The GSM coordinate system has
+    its X-axis along the instantaneous Earth-Sun line, positive towards
+    the Sun (same as GSE X-axis!). The X-Z plane is defined to contain
+    the the Earth&apos;s dipole (passes through 78.565 deg North, 69.761 deg
+    West). Y completes the right-handed set. Distances are measured from
+    the Earth center of mass and are reported in units of Earth radii
+    where 1 Re = 6372 km.
+ 
+    Definitions of the GSE and GSM coordinate systems come from
+    [RUSSELL1971]. The Earth&apos;s dipole location used in the GSM coordinate
+    system definition is based on the 1970 IGRF model as stated in that
+    reference.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    Error bars are not provided with the original spacecraft position
+    data set. All values in this data set are reported to the nearest
+    kilometer. The actual error bars are probably larger than 1 km and
+    different in the &apos;along track&apos;, cross-track&apos;, and &apos;altitude&apos;
+    directions.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Spacecraft position data exist for the entire Lunar Prospector
+    Primary and Extended Missions.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

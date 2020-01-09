@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer2-m-mtes-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER2 MARS MINIATURE THERMAL EMISSION SPECTROMETER EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mini-tes.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-mtes-2-edr-v1.0__browser_geo_mer2-m-mtes-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-mtes-2-edr-v1.0__dvo_geo_mer2-m-mtes-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-mtes-2-edr-v1.0__pds.geo.mer.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.CHRISTENSEN2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Mini Thermal Emission Spectrometer
+                   Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.MTESSIS2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER2-M-MTES-2-EDR-V1.0</data_set_id>
+        <data_set_name>MER2 MARS MINIATURE THERMAL EMISSION SPECTROMETER EDR V1.0</data_set_name>
+        <data_set_release_date>2004-08-03</data_set_release_date>
+        <start_time>2004-01-06T03:47:45.803Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>Phil Christensen</producer_full_name>
+        <citation_text>
+            Christensen, Phil, MER 2 Mars Mini-Thermal Emission Spectrometer
+            EDR V1.0, NASA Planetary Data System, MER2-M-MTES-2-EDR-V1.0,
+            2004.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains Mini-Thermal Emission Spectrometer
+            (Mini-TES) Science Radiance and Interferogram Experiment Data
+            Records (EDRs) acquired by Spirit (MER 2) during the Mars
+            Exploration Rover Mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This archive contains Mars Exploration Rover Miniature Thermal
+            Emission Spectrometer (Mini-TES) Experiment Data Record (EDR)
+            products and ancillary files. The Mini-TES EDR products archived
+            on this volume are the original products used during mission
+            operations by the Mars Exploration Rover project.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set contains data that will help determine the mineralogy
+    of Martian rocks and soils, determine the thermophysical properties
+    of soil patches, and determine the temperature profile, dust
+    opacity, water-ice opacity, and water vapor abundance in the lower
+    boundary layer of the Martian atmosphere. The Mini-TES calibrated
+    radiance is the primary data product for the MER mission. These data
+    will be converted to effective emissivity and surface temperature by
+    fitting a Planck blackbody function to the calibrated spectrum. The
+    emissivity spectra will be converted to mineral abundance using a
+    linear deconvolution model and a matrix of mineral spectra from the
+    ASU Mineral Library and other sources. The derived surface
+    temperature will be used to produce thermal inertia images via a
+    thermal model, using data from multiple times of day where possible.
+    Attempts will be made to coordinate these diurnal observations with
+    the times of TES or THEMIS direct overflights, providing
+    simultaneous temperature observations that can be extended to
+    broader regions surrounding the rovers.
+ 
+    The Mini-TES will also view upward at angles up to 30 degrees above
+    the horizon to provide high-resolution temperature profiles of the
+    Martian boundary layer. This upward-viewing mode will yield high-
+    resolution temperature profiles through the bottom few km of the
+    atmosphere using temperatures retrieved from the wings of the 15-mm
+    CO2 band. This lowest region of the atmosphere has been difficult to
+    measure on Mars because of the nature of the weighting functions as
+    seen from orbit, and because of the difficulty of determining
+    surface contributions to radiance.
+ 
+    Atmospheric water abundance will be obtained by vertical and
+    horizontal viewing of rotational H2O lines. Separate measurements of
+    water near the ground will be obtained by viewing distant surface
+    obstacles. The broad water-ice feature centered near 800 cm^-1 will
+    allow monitoring of ground ice hazes. Together, these measurements
+    will illuminate the behavior of water in lower atmosphere and of
+    water transport between the atmosphere and surface. Atmospheric dust
+    abundance will be obtained using the redundant temperature
+    information in both sides of the 15 mm CO2 band, together with
+    differential absorption across the dust band in that region.
+ 
+ 
+  Processing
+  ==========
+    The Mini-TES data products comply with NASA processing level
+    standards.  All Mini-TES products are spectral image QUBEs derived
+    from the previous level product.
+ 
+    The Mini-TES EDRs will be generated by JPLs Multi-mission Image
+    Processing Laboratory (MIPL) under the OPGS at JPL using the
+    telemetry processing software &apos;mtes2edr&apos; provided by ASU. The EDRs
+    produced will contain raw, uncalibrated data reconstructed from
+    telemetry data products and formatted according to the EDR format
+    defined in this SIS. Meta-data acquired from the telemetry data
+    headers and a metadata database will be used to populate the PDS
+    label.
+ 
+    There will not be multiple versions of Mini-TES EDR data products.
+    Initial processing will generate an EDR data product and pad any
+    missing data with the value of CORE_NULL. Missing packets will be
+    identified and reported for retransmission as &apos;partial data sets&apos;.
+    The EDR data product will be placed into the OSS for distribution.
+    When all retransmitted &apos;partial datasets&apos; have been received on the
+    ground, the EDR file will be regenerated since the additional data
+    can not be incorporated into an existing file. The original EDR will
+    be overwritten with a new EDR, generated from both the original and
+    retransmitted packets; this new EDR data product will replace the
+    old file in the OSS for distribution.
+ 
+    RDRs, BTRs, and EMRs will be produced in succession by the Mini-TES
+    Team and placed into the OSS for distribution. If a data product
+    needs to be regenerated for any reason, the original version will be
+    overwritten with the new version. The new version may have a version
+    number revision in the file name and will contain updates to keyword
+    values and History objects within the header.
+ 
+ 
+  Data
+  ====
+    Each Mini-TES data product consists of a single file of header
+    objects attached to a spectral cube. There are 4 fundamental parts
+    of a data product:
+ 
+    1) an attached PDS label in ASCII format, composed of keyword-value
+       pairs
+ 
+    2) a History object, describing the processing history that the data
+       product has gone through; this ASCII object is a set of ODL
+       statements, similar to the PDS keyword-value pairs
+ 
+    3) a table of binary, fixed-length records (available in EDRs only);
+       table records are the internal calibration spectra and their
+       associated telemetry values
+ 
+    4) a spectral cube, containing either interferogram data or radiance
+       spectra and organized by azimuth and elevation with housekeeping
+       and telemetry values attached as suffix backplanes
+ 
+    The size of a data product will vary from sequence to sequence
+    depending upon the size of the image commanded and the processing
+    level completed. The average expected size of the data in an EDR
+    from a 2-hour panoramic scan will be approximately 1.7MB.
+ 
+ 
+  Software
+  ========
+    ASU has provided telemetry processing software, mtes2edr, which
+    generates Mini-TES EDR cubes from the raw packet data. The data
+    stream must include a proper Instrument Data Product Header (IDPH),
+    otherwise processing with be aborted. When executed, the software
+ 
+    1) will discard partial records and records with suspicious lengths.
+ 
+    2) will grid the data based on received azimuth and elevation data
+       and the expected image dimensions.
+ 
+    3) will pad the data grid with CORE_NULL (as defined in the cube
+       header) to prevent the grid from developing non-uniform cubic
+       dimensions; the backplane values associated with the padded data
+       are set to zero.
+ 
+    4) will fill the various header fields in the label by using NAIF-
+       kernels, when available.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online. Upon
+    Mission completion, the Mini-TES EDRs will be delivered to
+    PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

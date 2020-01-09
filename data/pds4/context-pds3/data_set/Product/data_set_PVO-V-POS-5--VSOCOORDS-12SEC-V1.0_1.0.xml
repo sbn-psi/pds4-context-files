@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.pvo-v-pos-5--vsocoords-12sec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PVO VENUS SC POSITION DERIVED VSO COORDS 12 SECOND VER1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.pioneer_venus::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.pvo::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pos.pvo::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.pvo-v-pos-5--vsocoords-12sec-v1.0__browserp_pvo-v-pos-5--vsocoords-12sec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   National Aeronautics and Space Administration Ames Research
+                   Center Moffett Field, California Pioneer Venus Project
+                   Specification PC-456.O4 Pioneer Venus: Data User
+                   Requirements for Supplementary Experimenter Data Records,
+                   May 15, 1976.
+            </reference_text>
+            <description>reference.PC-456.O4</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PVO-V-POS-5--VSOCOORDS-12SEC-V1.0</data_set_id>
+        <data_set_name>PVO VENUS SC POSITION DERIVED VSO COORDS 12 SECOND VER1.0</data_set_name>
+        <data_set_release_date>1993-09-01</data_set_release_date>
+        <start_time>1978-12-05T07:20:07.282Z</start_time>
+        <stop_time>1992-10-08T16:30:37.204Z</stop_time>
+        <producer_full_name>MURIEL KNIFFIN</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            This dataset contains Pioneer Venus Orbiter (PVO) spacecraft
+            position and orientation data in Venus Solar Orbital (VSO)
+            coordinates.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+  This dataset contains Pioneer Venus Orbiter (PVO) spacecraft
+  position and orientation data in Venus Solar Orbital (VSO)
+  coordinates. This dataset is sampled every 12 seconds near
+  periapsis, and at 1 minute or 10 minute rates in the solar wind,
+  the lowest rates near apoapsis.  Planetocentric and heliocentric
+  position vectors and solar zenith angle (Sun-Venus-PVO) are also
+  provided. The VSO parameters are derived from the PVO Supplemental
+  Experimenter Data Records (SEDR), other parameters are taken
+  directly from the SEDR dataset.
+ 
+ 
+                  Dataset Contents
+ 
+  column    description                              unit
+  --------------------------------------------------------
+  Time:     Seconds since 1966-01-01T00:00:00        second
+  X VSO:    VSO-X coordinate of PVO (Rv=6050 km)     Rv
+  Y VSO:    VSO-Y coordinate of PVO (Rv=6050 km)     Rv
+  Z VSO:    VSO-Z coordinate of PVO (Rv=6050 km)     Rv
+  Altitude: Venus Center to PVO Range minus 6050 km  km
+  SZA:      Solar zenith angle                       degree
+  PLONG:    Planetocentric longitude                 degree
+  PLAT:     Planetocentric latitude                  degree
+  SPX VSO:  PVO spin axis X component in VSO coords  N/A
+  SPY VSO:  PVO spin axis Y component in VSO coords  N/A
+  SPZ VSO:  PVO spin axis Z component in VSO coords  N/A
+  CLAT:     Heliocentric celestial latitude          degree
+  CLONG:    Heliocentric celestial longitude         degree
+  ELONG:    Earth&apos;s heliocentric celestial longitude degree
+  RSUN:     Sun - PVO range 1 A.U. = 149,674,000 km  AU
+ 
+  This dataset is used by the program PVROT to transform magnetic
+  field vectors from Inertial Spacecraft Coordinates (ISC) to
+  VSO Coordinates. Please refer to the coordinate system template
+  for definitions of these two coordinate systems.
+        </data_set_desc>
+        <confidence_level_note>
+This dataset
+  contains parameters which are either taken directly from the
+  Supplemental Experimenter Data Records (SEDR) or are derived
+  entirely from those parameters. The SEDR does contain some
+  gaps, spurious values, and other problems which may cause some
+  data values to be untrustworthy.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>77-051A-00J</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>78-051A-00J/-12L/-12M/-13H/-13I</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

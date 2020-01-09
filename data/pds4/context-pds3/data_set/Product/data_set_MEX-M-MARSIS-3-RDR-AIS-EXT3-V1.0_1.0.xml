@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mex-m-marsis-3-rdr-ais-ext3-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS EXPRESS MARSIS RDR ACTIVE IONOSPHERE SOUNDING EXT3 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_express::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:marsis.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mex-m-marsis-3-rdr-ais-ext3-v1.0__browserp_geo_mex-m-marsis3-rdr-ais-ext23v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mex-m-marsis-3-rdr-ais-ext3-v1.0__dvo_geo_mex-m-marsis-3-rdr-ais-ext3-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.psa::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MEX-M-MARSIS-3-RDR-AIS-EXT3-V1.0</data_set_id>
+        <data_set_name>MARS EXPRESS MARSIS RDR ACTIVE IONOSPHERE SOUNDING EXT3 V1.0</data_set_name>
+        <data_set_release_date>2011-08-29</data_set_release_date>
+        <start_time>2010-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>RICHARD L. HUFF</producer_full_name>
+        <citation_text>
+            Huff, R.L., L.J. Granroth, and D.D. Morgan, MARS EXPRESS M MARSIS
+            ACTIVE IONOSPHERIC SOUNDER, MEX- M-MARSIS-RDR-AIS-EXT3-V1.0, NASA
+            Planetary Data System, 2011.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains the Mars Express MARSIS Active Ionospheric
+            Sounder data from orbit 7690 through the end of the third
+            extended mission. The data are fully calibrated in units of
+            spectral density.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Mars Express MARSIS Active Ionospheric Sounder (AIS) full
+            resolution data set includes all spectral information calibrated
+            in units of spectral density for the Mars Express third extended
+            mission, EXT3. The data set consists of a transmit frequency
+            followed by a time series of spectral density measurements of the
+            received power. Browse products contain a spectrogram overview
+            plot and individual ionograms for each sounding activity.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    The Mars Express Mars Advanced Radar for Subsurface and Active
+    Ionospheric Sounding (MARSIS) data set includes all spectral
+    information calibrated in units of spectral density for the
+    Active Ionospheric Sounder over the third extended Mars Express
+    mission.  This data set includes calibrated values for each
+    transmit event and the corresponding temporal data for each
+    frequency channel.
+ 
+ 
+  Parameters
+  ==========
+    This data set comprises the electric field spectral densities
+    obtained via the electric dipole antenna sensor.
+ 
+ 
+  Processing
+  ==========
+    Data in this data set were processed by the use of a number of
+    software programs.  These programs re-assembled and
+    de-compressed the raw telemetry data.  These raw values were
+    then calibrated into physical units: power received by the
+    electric antenna.  The data products were calibrated using the
+    best calibration tables and algorithms available at the time
+    of data archiving.  Should a significant improvement in
+    calibration become available, an erratum will be noted in the
+    erratum section.  Later versions of the products may contain
+    better calibrations.
+ 
+  Data
+  ====
+    The AIS calibrated full resolution data set includes several
+    binary tables of wave spectra as a function of time from each of
+    the various transmit events.  Each table will contain fixed-
+    length records including columns for time, transmit frequency,
+    and spectral densities from the temporal measurements.  The
+    number of transmit frequencies is constant at 160 frequencies per
+    frame.
+ 
+ 
+  Ancillary Data
+  ==============
+    No Ancillary data are provided.
+ 
+ 
+  Coordinate System
+  =================
+    The data in this data set are measurements of wave electric
+    fields measured by the MARSIS electric sensors.  These fields are
+    presented as detected by the sensors and are not rotated into any
+    other coordinate system.  If desired the SPICE kernels can be
+    used with the SPICE toolkit to convert from the spacecraft frame
+    to virtually any frame which may be of use in analyzing these
+    data.  However, for many purposes, the wave amplitudes are
+    extremely useful and may be entirely adequate with no coordinate
+    transformations at all.
+ 
+ 
+  Software
+  ========
+    Sample code is provided with these data which demonstrates how
+    to read these files in order to build a set of time-ordered
+    wave spectra.  The sample code and algorithms are found in the
+    SOFTWARE directory.
+ 
+ 
+  Confidence Level Overview
+  =========================
+    This data set contains all active ionospheric calibrated data for
+    the Mars Express MARSIS for the interval described above.  Every
+    effort has been made to ensure that all data returned to Iowa
+    from the spacecraft is included and that the calibration is
+    accurate.
+ 
+ 
+  Review
+  ======
+    The MARSIS active ionospheric sounder data will be reviewed
+    internally by the Mars Express MARSIS team prior to release to
+    the PDS. The data set will also be peer reviewed by the PDS.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    All data in the stated interval are included to the best of our
+    knowledge and attempts to determine completeness.  In general,
+    the instrument was operated only briefly during early cruise
+    phase for the purpose of Antenna deployment and periodic
+    instrument health. During this time, flight restrictions
+    precluded any transmit events and hence no science data.
+ 
+    Beginning in June of 2005 commissioning of the instrument
+    commenced more-or-less continuously for about a month.  During
+    this period instrument gain settings and transmit frequencies
+    were optimized for maximum signal-to-noise ratios as well as
+    avoidance of interference generated by the spacecraft and by
+    other instruments.
+ 
+ 
+  Limitations
+  ===========
+    One measurement quality issue deals with the data compression
+    algorithm used by the MARSIS onboard processor, which generates
+    values of zero when the measured AIS values should be small but
+    non-zero.
+        </data_set_desc>
+        <confidence_level_note>
+Corrupted data have been flagged in data
+      files where they occurred.  The label file for each data product
+      contains an entry to flag this condition.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

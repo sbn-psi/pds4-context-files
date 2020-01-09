@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-rss-5-eros-gravity-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR EROS RADIO SCIENCE DERIVED PRODUCTS - GRAVITY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-rss-5-eros-gravity-v1.0__browserp_near-a-rss-5-eros-gravity-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Davies, M.E., V.K. Abalakin, M. Bursa, J.H. Lieske, B. Morando, D. Morrison,
+                   P.K. Seidelmann, A.T. Sinclair, B. Yallop, and Y.S. Tjuflin, Report of the
+                   IAU/IAG/COSPAR Working Group on Cartographic Coordinates and Rotational
+                   Elements of the Planets and Satellites: 1994, Celestial Mechanics and Dynamical
+                   Astronomy, 63, 127-148, 1995.
+            </reference_text>
+            <description>reference.DAVIESETAL1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Davies, M.J., V.K. Abalakin, M. Bursa, J.H. Lieske, B. Morando, D.
+                   Morrison, P.K. Seidelmann, A.T. Sinclair, B. Yallop, and Y.S. Tjuflin,
+                   Report of the IAU/IAG/COSPAR Working Group on Cartographic Coordinates and
+                   Rotational Elements of the Planets and Satellites: 1994, Celestial
+                   Mechanics and Dynamical Astronomy, 63, 127-148, 1996.
+            </reference_text>
+            <description>reference.DAVIESETAL1996A</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-RSS-5-EROS/GRAVITY-V1.0</data_set_id>
+        <data_set_name>NEAR EROS RADIO SCIENCE DERIVED PRODUCTS - GRAVITY V1.0</data_set_name>
+        <data_set_release_date>2001-07-31</data_set_release_date>
+        <start_time>2000-02-14T16:00:00Z</start_time>
+        <stop_time>2001-02-12T15:15:00Z</stop_time>
+        <producer_full_name>ALEXANDER KONOPLIV</producer_full_name>
+        <citation_text>
+            Neumann G., Giorgini J.D., Miller J.K., A. Konopliv, and E.
+            Grayzeck, NEAR EROS RADIO SCIENCE DERIVED PRODUCTS - GRAVITY
+            V1.0, NEAR-A-RSS-5-EROS/GRAVITY-V1.0, NASA Planetary Data System,
+            2001.
+        </citation_text>
+        <data_set_terse_desc>
+            NEAR Eros gravity science derived data products from JPL.
+        </data_set_terse_desc>
+        <abstract_desc>
+            NEAR Eros gravity science derived data products from JPL.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      This data set includes a 15x15 gravity model for Eros derived
+      from radio and landmark tracking of the NEAR spacecraft, several
+      images/maps, and a file of surface landmarks.  The gravity model and
+      images/maps were produced by Alex Konopliv of the NEAR
+      Radio Science Team at the NASA Jet Propulsion Laboratory.  The
+      landmark file was compiled by the NEAR Navigation Team and was
+      used in the solution for the gravity field.
+ 
+ 
+    Parameters
+    ==========
+      The gravity model is defined by a set of spherical harmonic
+      coefficients -- GM, Cmn, and Smn.  These can be evaluated to
+      give the gravitational potential of Eros.  Both ASCII (data type
+      SHA) and binary (data type SHB) formats are defined, with the
+      latter including covariance terms.  Each file contains up to
+      four tables: a header table containing general parameters for
+      the model (gravitational constant, its uncertainty, degree and
+      order of the field, normalization state, reference longitude,
+      and reference latitude); a names table, giving the order in
+      which coefficients appear; a coefficients table (degree m,
+      order n, coefficients Cmn and Smn, and their uncertainties);
+      and a covariances table giving the covariances of CijCmn,
+      SijSmn, CijSmn, and SijCmn.
+ 
+      The image files are digital maps of Bouguer anomaly and radial
+      gravity acceleration where the gravity field has been evaluated
+      to degree and order less than the full 15x15 range in the model.
+      The truncation reduces noise in the maps resulting from
+      uncertainty in the higher degree and order coefficients.
+ 
+      The landmark file contains rotation information for Eros and
+      X, Y, and Z coordinates for the centers of craters identified
+      on its surface.
+ 
+ 
+    Processing
+    ==========
+      Spherical harmonic models and maps were derived from raw radio
+      tracking data in several steps.
+ 
+      The gravity field coefficients were obtained by solving systems
+      of equations with about 5000 unknowns.  Radio tracking data
+      in long arcs were delimited mostly by propulsive maneuvers
+      and were used in solutions which were obtained iteratively
+      and by least squares.
+ 
+      Maps of vertical gravity acceleration and Bouguer anomaly were
+      generated from the spherical harmonic model(s) evaluated at
+      regular grid points.
+ 
+ 
+    Data
+    ====
+      The following files are included in this data set:
+ 
+      JGE15A01_ASC.SHA  ASCII coefficients for the 15x15 gravity model.
+ 
+      JGE15A01_BIN.SHB  Binary coefficients and covariances for the
+                        15x15 gravity model.
+ 
+      JGE15A08.IMG  Map of vertical gravity acceleration in milligals
+                    at one degree grid spacing from -89.5 to +89.5
+                    latitude and from -180 to +179 east longitude.
+                    The 15x15 gravity model was evaluated to degree
+                    and order 8 for this map.
+ 
+      JBE15A05.IMG  Map of Bouguer anomaly im milligals at one degree
+                    grid spacing from -89.5 to +89.5 latitude and
+                    from -180 to +179 east longitude.  The 15x15
+                    gravity models (observed and modeled from constant
+                    density shape model) were evaluated to degree and
+                    order 5 for this map.
+ 
+      JBE15A06.IMG  Same as above except the gravity models were
+                    evaluated to degree and order 6.
+ 
+      JBE15A07.IMG  Same as above except the gravity models were
+                    evaluated to degree and order 7.
+ 
+      LANDMARK.TAB  A table giving X, Y, and Z coordinates of the
+                    centers of craters projected onto a plane tangent
+                    to each crater&apos;s rim.
+ 
+ 
+    Ancillary Data
+    ==============
+      None.
+ 
+ 
+    Coordinate System
+    =================
+      The gravity model, maps, and landmark file use the IAU 1994
+      right ascension and declination system [DAVIESETAL1996A].
+      The Eros prime meridian is fixed at 326.08 degrees.
+ 
+ 
+    Software
+    ========
+      None.
+ 
+ 
+    Media/Format
+    ============
+      TBD.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archive have been reduced as part of mission data
+      analysis activities of the NEAR Radio Science Team.  Data of
+      questionable validity have been omitted from the solutions.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the NEAR Radio Science
+      Team prior to submission to the Planetary Data System (PDS).
+      It was one of several data sets included in a comprehensive
+      review by the PDS Small Bodies Node in August 2001, prior to
+      PDS acceptance and ingestion.
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels and example data files.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The data included in this archive were collected during the
+      NEAR orbital phase from 2000-02-14 to 2001-02-12.
+      See &apos;DESCRIPTION&apos; in the label file for JGE15A01.SHA for more
+      information about the data included in this gravity solution.
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>1996-008A-5</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

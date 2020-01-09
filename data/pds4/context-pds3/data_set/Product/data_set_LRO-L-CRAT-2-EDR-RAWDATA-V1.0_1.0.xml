@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-crat-2-edr-rawdata-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO MOON CRATER EDR RAWDATA VERSION 1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:crat.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-crat-2-edr-rawdata-v1.0__browserp_lro-l-crat-2-edr-rawdata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Spence, H.E., A.W. Case, M.J. Golightly, T. Heine, B.A. Larsen, J.B. Blake, P.
+                   Caranza, W.R. Crain, J. George, M. Lalic, A. Lin, M.D. Looper, J.E. Mazur, D.
+                   Salvaggio, J.C. Kasper, T.J. Stubbs, M. Doucette, P.Ford, R. Foster, R. Goeke,
+                   D. Gordon, B. Klatt, J. O&apos;Conner, M. Smith, T. Onsager, C. Zeitlin, L.W.
+                   Townsend, Y. Charara (2010), CRaTER: The Cosmic Ray Telescope for the Effects
+                   of Radiation Experiment on the Lunar Reconnaissance Orbiter Mission, Space Sci.
+                   Rev., 150, 243-284, DOI: 10.1007/s11214-009-9584-8.
+            </reference_text>
+            <description>reference.SPENCEETAL2010</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-CRAT-2-EDR-RAWDATA-V1.0</data_set_id>
+        <data_set_name>LRO MOON CRATER EDR RAWDATA VERSION 1.0</data_set_name>
+        <data_set_release_date>2010-03-15</data_set_release_date>
+        <start_time>2009-06-29T00:00:00.000Z</start_time>
+        <stop_time>2009-12-31T23:59:59.000Z</stop_time>
+        <producer_full_name>PROF. HARLAN SPENCE</producer_full_name>
+        <citation_text>
+            Spence, H.E., LRO MOON CRATER EDR RAWDATA VER- SION 1.0,
+            LRO-L-CRAT-2-EDR-RAWDATA-V1.0, NASA PLANETARY DATA SYSTEM, 2010
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains raw data from the LRO LRO CRaTER Instrument
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set comprises the raw binary data from from the LRO
+            Cosmic Ray Telescope for the Effects of Radiation (CRaTER)
+            instrument. The data consists of the unconverted primary science,
+            secondary science, and housekeeping CCSDS- formatted data packets
+            and data headers.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+ 
+    The Cosmic Ray Telescope for the Effects of Radiation (CRaTER) is a
+    stacked detector-absorber cosmic-ray telescope designed to answer key
+    questions to enable future human exploration of the Solar System.
+    CRaTER&apos;s primary measurement goal is to measure directly the average
+    lineal energy transfer (LET or &apos;y&apos;) spectra caused by space radiation
+    penetrating and interacting with shielding material.  Such measured LET
+    spectra are frequently unavailable.  In the absence of measurements,
+    numerical models are used to provide estimates of LET; the reliability of
+    the models require experimental measurements to provide a ground truth.
+ 
+    The CRaTER Level 0 dataset consists of files containing the raw primary
+    science, secondary science, and housekeeping telemetry packets and packet
+    headers created by the instrument.  The Level 0 data are meant to be used
+    only for archival purposes in order to reconstruct the other CRaTER data
+    products in the future, should that become necessary.  The Level 0 data
+    are not intended to be used directly in data analyses or scientific
+    investigations--the data are stored in binary data structures and have
+    not been converted to appropriate engineering or science values.  Users
+    seeking CRaTER data are strongly encouraged to use the Level 1 or Level 2
+    datasets.
+ 
+    See the MISSION.CAT file for more information on the LRO mission.
+    See the CRAT_INST.CAT file for more information on the CRaTER instrument.
+    See SPENCEETAL2010 for detailed description of LRO flight version of the
+    instrument, its operations, and data processing.
+ 
+    Science Objectives and Observation Strategy
+    -------------------------------------------
+    CRaTER is designed to achieve characterization of the global lunar
+    radiation environment and its biological impacts and potential mitigation
+    as well as investigation of shielding capabilities and validation of
+    other deep space radiation mitigation strategies involving materials.
+    CRaTER will fill knowledge gaps regarding radiation effects, provide
+    fundamental progress in knowledge of the Moon&apos;s radiation environment,
+    and provide specific path-finding benefits for future planned human
+    exploration.
+ 
+    Parameters
+    ----------
+    LRO CRaTER flight instrument identification:
+    --instrument model = Flight Model 1 (FM1);
+    --instrument serial number (S/N) = 02;
+    --FPGA revision code = 3.
+ 
+    Data
+    ----
+    CRaTER&apos;s principal measurement is the energy deposited in the 3-pairs of
+    silicon detectors by charged particles and photons passing through the in-
+    strument&apos;s &apos;telescope&apos; unit.  Whenever the coulombic charge signal re-
+    sulting from the energy deposited in a detector exceeds a predefined and
+    fixed threshold, the instrument&apos;s electronics performs a detailed measure-
+    ment of the signals from all of the detectors.  The resulting detector
+    signal amplitudes are compared to the values of the &apos;lower level discrim-
+    inators&apos; (LLDs).  LLDs establish minimum amplitudes for signals to qualify
+    as valid charged-particle or photon interactions.  The LLD values are
+    generally set to insure that the desired charged-particle or photon mea-
+    surements are not contaminated by system electronic noise.  Seperate LLD
+    settings are required for the thick and thin detectors due to the dif-
+    ference in their sensitivities; the thin and thick detector LLD values are
+    reported in the &apos;DiscThin&apos; and &apos;DiscThick&apos; parameters as part of the
+    secondary science packet.
+ 
+    In addition to the LLD settings, measurement filtering is achieved through
+    detector coincidence requirements--the combination of detectors register-
+    ing valid signals to qualify as a charged-particle or photon measurement
+    &apos;event&apos;.  To measure all charged particles arriving from the instrument&apos;s
+    zenith or nadir directions, for example, the coincidence requirements
+    would be valid signals in at least detectors 1, or 2, or 5, or 6.  Con-
+    versely, a coincidence consisting of valid signals in all six detectors
+    would ensure only zenith- or nadir-arriving charged particles with high
+    energies are reported.  For CRaTER&apos;s six axially-coaligned detectors there
+    are 64 possible coincidence combinations.  The desired set of coincidence
+    combinations are stored as a coincidence mask parameter in the instru-
+    ment&apos;s memory; the coincidence mask setting is reported in the &apos;Mask&apos;
+    parameter as part of the secondary science packet.
+ 
+    To qualify as an &apos;event&apos;, therefore a charged particle or photon passing
+    through CRaTER&apos;s telescope must interact and deposit sufficient energy to
+    generate signals with amplitudes in excess of the specified LLDs in a
+    specified combination of detectors; only data for valid &apos;events&apos; are re-
+    ported in the instrument&apos;s telemetry.
+ 
+    The measured interaction event data is written as a series of primary
+    science packets to the instrument&apos;s output telemetry buffer for the space-
+    craft to read. At ~1 second intervals CRaTER receives a timing pulse from
+    the spacecraft, at which time it flushes the primary science data from the
+    output buffer and writes a secondary science packet for the spacecraft to
+    read.  Every 16 seconds a housekeeping packet is also created and written
+    to the output buffer.
+ 
+    This Level 0 dataset is composed of the three types of time-sequential,
+    raw CRaTER data records: (1) primary science, (2) secondary science, and
+    (3) housekeeping.
+ 
+    The primary science raw data consists of the signal pulse heights from
+    each of the six detectors produced during an &apos;event&apos;.  The raw event data
+    in the primary science packets are the scalar channel numbers output by
+    the detector-amplifier strings&apos; analog-to-digital converters (ADCs) fol-
+    lowing signal pulse height analysis.
+ 
+    The secondary science raw data contain the majority of instrument config-
+    uration settings, status flags, and event counters.  Reported configura-
+    tion settings include the last command sent to CRaTER, detector LLD set-
+    tings, and coincidence mask values.  Status flags available in the secon-
+    dary science raw data include detector bias status, selected pulse am-
+    plitude range and rate for the internal calibration pulser, and detector
+    processing status.  Counters report the number of &apos;singles&apos; for each de-
+    tector as well as the number of &apos;good&apos;, &apos;rejected&apos;, and total events re-
+    corded by CRaTER during the monitoring period.
+ 
+    The housekeeping raw data contains the output of internal monitors used to
+    assess the operating health of the instrument, such as power supply
+    voltage monitors, detector bias voltages and bias currents, pulse ampli-
+    tudes from the internal calibration pulser, and temperatures at five loca-
+    tions inside of the instrument&apos;s housing.  The analog output from radia-
+    tion monitor is also included in the housekeeping data packets.
+ 
+    The primary science, secondary science, and housekeeping packets are
+    written to seperate files in binary format.  Each file begins with a
+    64-byte header and continues with one or more CCSDS packets. Each packet
+    begins with a 6-byte CCSDS header that defines the type (ApID 120,
+    121, or 122) and length of the packet, followed by a 6-byte secondary
+    header containing a time tag and instrument-specific flags.  Each of the
+    files contains all of the data from a single UTC day.  The files&apos; binary
+    structures are documented in CRaTER SPDR and Archive Volume Software
+    Interface Specification (Document 32-01211), sections 5.2.6 and
+    Appendix C.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    -------------------------
+    No confidence level information is provided for the Level 0 data since it
+    consists of only the raw instrument binary data and is not intended for
+    direct use in data analyses.
+ 
+    Confidence level information is provided with the Level 1 and Level 2
+    sets.
+ 
+    Review
+    ------
+    A minimal set of automated quality control steps are used by the data
+    processing system to verify the integrity of the data.  During the
+    creation of the Level 0 data files from the downlinked instrument data
+    files, each data packet&apos;s CCSDS header is checked for format and content.
+    Packets are discarded if their headers are corrupted, incorrectly
+    formatted, or containing invalid values.  All packets are sorted into
+    time order and checked for temporal gaps.  Duplicate packets are also
+    discarded.  Metrics plus any detected anomalies are written to process
+    log files for review by scientists and engineers from the instrument
+    team.  Anomalies noted during the processing are investigated.  Anomalies
+    due to missing input files (e.g., instrument science and housekeeping
+    data files, spacecraft housekeeping data files, spacecraft ephemeris
+    kernels, and ancillary files such as leap second and spacecraft clock
+    kernels) are corrected by locating the missing input and reprocessing the
+    data.
+ 
+    Data Coverage and Quality
+    -------------------------
+    Start date for the initial version of the LRO-L-CRAT-2-EDR-RAWDATA-V2.0
+    archival volume is 2009-06-29T00:00:00.000.  This date/time is the begin-
+    ning of the first full UTC day following completion of LRO lunar orbit
+    insertion (LOI) maneuvers and transition to the nominal nadir-pointing
+    observation attitude.  It is also the first day for which complete re-
+    constructed ephemeris (&apos;SPK&apos;) data was available from the LRO Mission
+    Operations Center.  There is only limited re-constructed ephemeris data
+    currently available for the period between initial instrument power-up
+    (2009-06-20) and LOI completion/transition to the nominal observing
+    attitude.  CRaTER data obtained during Cruise Phase (instrument power-up
+    - 2009-06-23), Lunar Orbit Acquisition (2009-06-23), and the initial
+    Commissioning Period (2009-06-23 - 2009-06-28) will be included when more
+    complete ephemeris data becomes available.
+ 
+    Data gaps are identified during initial data processing. Each gap&apos;s
+    beginning and end times are recorded in gap files stored in the DOCUMENT
+    directory--there are seperate gap files for primary science, secondary
+    science, and house-keeping data.  Each gap file contains a cumulative
+    listing of the missing data up to and including the time span covered for
+    the data current volume.  The minimum duration between successive data
+    packets to qualify as a data gap is specified during data processing.
+ 
+    The default gap duration specifications are:
+    --primary science = 2 seconds;
+    --secondary science = 2 seconds;
+    --and housekeeping =20 seconds.
+ 
+    These default gap duration values may be over ridden at the time of data
+    processing.  The gap duration specifications used while processing a
+    specific day&apos;s data are recorded in the corresponding process log files
+    and stored in the DATA subdirectoy directory containing the data products.
+ 
+    Limitations
+    -----------
+    The LRO-L-CRAT-2-EDR-RAWDATA-V1.0 data set includes all data obtained
+    by the CRaTER instrument, including data from periods when the instrument
+    was placed into special configurations.  Special configurations include
+    the instrument start-up tests that occur whenever the instrument is power
+    cycled to (e.g., initial instrument start-up, recovery following space-
+    craft transition to sun-safe mode) as well routine calibrations (90-degree
+    off-nadir GCR background measuerments, internal pulser sweeps, LLD zero
+    crossing measurements, and LLD sweeps).
+ 
+    As specified in CRaTER Standard Product Data Record and Archive Volume
+    Software Interface Specification, Document 32-01211, the Level 0 house-
+    keeping data files contain the voltage (V28BUS) and current draw (I28bus)
+    measured at the instrument side of the instrument-spacecraft 28 VDC bus
+    interface.  For the LRO CRaTER instrument, the voltage (V28BUS) and cur-
+    rent (I28BUS) values are UNDEFINED.  Immediately prior to instrument
+    delivery, the signal leads from these two monitors were removed to reduce
+    excessive EMI emmission; however, the instrument software still processes
+    the signals from these open leads and includes them in the housekeeping
+    packets stored in the instrument housekeeping files.  Although no longer
+    defined, these values have been retained in the Level 0 housekeeping files
+    in order to preserve the structure defined for the instrument&apos;s house-
+    keeping packets (LRO telemetry ApID = 122).  Although values can be
+    retrieved for the voltage (V28BUS) and current (I28BUS) parameters from
+    the Level 0 housekeeping data files, they are UNDEFINED and should be
+    discarded from any analyses.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

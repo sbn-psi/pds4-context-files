@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS MARS SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-spice-6-v1.0__browserp_mgs-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-spice-6-v1.0__browser_mgs-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-spice-6-v1.0__browser_wgc_mgs-m-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-SPICE-6-V1.0</data_set_id>
+        <data_set_name>MGS MARS SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2002-11-01</data_set_release_date>
+        <start_time>1996-11-06T08:00:00Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., L.S. Elson, and C.H. Acton, MARS GLOBAL SURVEYOR
+            SPICE KERNELS V1.0, MGS-M-SPICE-6-V1.0, NASA Planetary Data
+            System, 1998.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the Mars Global Surveyor.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Mars Global Surveyor
+            SPICE data files (``kernel files&apos;&apos;), which can be
+            accessed using SPICE software. The SPICE data contains geometric
+            and other ancillary information needed to recover the full value
+            of science instrument data. In particular SPICE kernels provide
+            spacecraft and planetary ephemerides, instrument mounting
+            alignments, spacecraft orientation, spacecraft sequences of
+            events, and data needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of Mars Global Surveyor
+      SPICE data files (``kernel files&apos;&apos;), which can be accessed using
+      SPICE software. The SPICE data contains geometric and other
+      ancillary information needed to recover the full value of science
+      instrument data. In particular SPICE kernels provide spacecraft
+      and planetary ephemerides, instrument mounting alignments,
+      spacecraft orientation, spacecraft sequences of events, and data
+      needed for relevant time conversions.
+ 
+      This data set is contained on a single virtual volume, MGSP_1000,
+      including data from all mission phases and covering from
+      launch, 1996-11-06T08:00:00, through the end time of the latest
+      spacecraft trajectory file supplied in the data set. Until the
+      end of the spacecraft lifespan this data set is accumulating with
+      new data added approximately every three to six months.
+ 
+      Initially this data set was released on multiple volumes,
+      each containing the complete set of SPICE kernels for two
+      or more mission phases, a single mission phase or a portion
+      of a mission phase.  During the transition to the PDS on-line
+      distribution system at the end of 2002 the data from all volumes
+      were segregated on a single volume, MGSP_1000. The coverages
+      of the original volumes are summarized in the table:
+ 
+ 
+              VOLUME ID      START TIME           STOP TIME
+              ---------  -------------------  -------------------
+              MGSP_0001  1996-11-06T08:00:00  1998-05-28T00:00:00
+              MGSP_0002  1998-05-28T00:00:00  1999-03-09T00:00:00
+              MGSP_0003  1999-03-09T01:00:00  1999-06-02T00:00:00
+              MGSP_0004  1999-06-02T00:00:00  1999-08-25T00:00:00
+              MGSP_0005  1999-08-25T00:00:00  1999-11-17T00:00:00
+              MGSP_0006  1999-11-17T00:00:00  2000-02-09T00:00:00
+              MGSP_0007  2000-02-09T00:00:00  2000-05-03T00:00:00
+              MGSP_0008  2000-05-03T00:00:00  2000-07-26T00:00:00
+              MGSP_0009  2000-07-26T00:00:00  2000-10-18T00:00:00
+              MGSP_0010  2000-10-18T00:00:00  2001-02-01T00:00:00
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or
+      fixed spacecraft and instrument structures. They provide
+      position and velocity, given in a Cartesian reference frame.
+      SPK files are located under the ``data/spk&apos;&apos; directory of this
+      data set.
+ 
+      PCK kernels contain certain physical, dynamical and
+      cartographic constants for target bodies, such as size and shape
+      specifications, and orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos;&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos;&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos;&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the ``data/ek&apos;&apos; directory of this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos;&apos; directory of this data set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock
+      calibration data required to perform a mapping between Ephemeris
+      time (ET) and spacecraft on-board time (SCLK.) SCLK files are
+      located under the ``data/sclk&apos;&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under
+      the ``data/fk&apos;&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of MGS kernels included
+      in this data set is provided in the CONFIDENCE_LEVEL_NOTE section
+      of this file while details specific to individual files are found
+      in the ``*info.txt&apos;&apos; files in the corresponding data directory.
+      The most detailed description of the data in each file is
+      provided in metadata included inside the file -- in the
+      description area of text kernels or in the comment area of binary
+      kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read
+      SPICE kernel files. SPICELIB software is highly documented
+      via internal headers. Additional documentation is available
+      in separate ASCII text files called Required Reading files.
+      For example, the S- and P- Kernel (SPK) Required Reading File,
+      named SPK.REQ, describes use of the SPK kernel file readers
+      and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos;&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos;&apos; directory. For more
+      information about the MGS meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This data set contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here, but
+      the prospective user is also referred to extensive descriptions
+      about each file that are stored inside each kernel file. These
+      metadata provide detailed information regarding the information
+      source from which the data were derived, the type of processing
+      applied to the source data, applicability of the data, etc.
+      Metadata are located in the ``comment area&apos;&apos; for binary kernel
+      types (SPK, CK, ESQ), accessible using either the COMMNT or
+      SPACIT utility program found in the NAIF Toolkit. Metadata are
+      located after ``\begintext&apos;&apos; markers within the text kernel types
+      (PCK, IK, FK, LSK, SCLK, MK), accessible by using any available
+      text file display tool such as a word processor, text editor, or
+      the unix ``more&apos;&apos; or ``cat&apos;&apos; commands.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;&apos;
+      not addressed herein the reader is invited to contact the NAIF
+      node of the Planetary Data System for possible further
+      information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      Three kinds of SPK files are provided in this archive: SPK files
+      for the spacecraft orbit (reconstructed and nominal post-mission
+      trajectory), SPK files for Phobos, Deimos, Mars, Earth and Sun,
+      and SPK files for the solar array and high gain antenna
+      structures and the locations of the MAG/ER instrument components
+      on the solar arrays. Each of these kinds is briefly described
+      below; more information is available in the file
+      ``data/spk/spkinfo.txt&apos;&apos;.
+ 
+      Spacecraft Orbit SPK Files
+      --------------------------
+ 
+      Most of the included SPK files provide the orbit of the MGS
+      spacecraft. Most missions had a single source for this kind of
+      data, but for MGS there were three sources: the Mars Surveyor
+      Operations Project (MSOP) Navigation Team (NAV), the Mars Orbiter
+      Laser Altimeter (MOLA) Team based at the Goddard Space Flight
+      Center (GSFC), and the Inner Planet Navigation and Gravity Group
+      (IPNG) based at JPL. The MOLA and IPNG groups produced multiple
+      solutions for some of the mission phases, presumably yielding
+      ever more accurate results as the gravity model used and other
+      data handling improvements come into play. It is possible that
+      any or all of these three groups will produce yet more--and
+      presumably further improved--solutions in the future; these
+      should eventually be available from NAIF.
+ 
+      For all three solution sets, each archival SPK file covering
+      a particular mission phase was made by merging together numerous
+      shorter duration individual files. The component files used
+      to make a merged product can be discerned by reading the
+      descriptive information (metadata) found in the comment area
+      of each file.
+ 
+      The subset of SPKs to be used in a particular application should
+      be picked from the archived set considering these factors:
+ 
+         1) Completeness of coverage:  are there gaps in the orbit
+            data, or missing mission phases?
+ 
+         2) Discontinuities:  are position and velocity data continuous
+            across individual orbit data fits comprising the merged
+            product? More particularly, how large are these
+            discontinuities?
+ 
+         3) What kinds of data were used in producing the orbit
+            solutions?  (In all cases, doppler and range data were
+            used. For the MOLA/GSFC solutions, laser range points were
+            also used.)
+ 
+         4) What models were used (particularly what Mars gravity
+            model) and how might this affect the orbit solution?
+ 
+      Based on these factors NAIF recommends that, unless there are
+      special circumstances, the MGS NAV SPKs providing the most
+      complete coverage and the latest SPKs produced by IPNG (version
+      MGS95J) providing the most accurate solution are used together.
+      The two sets of files should be loaded in such way that the IPNG
+      MGS95J SPKs have higher priority (loaded last) and provide data
+      for all interval that they cover while the MGS NAV SPKs have
+      lower priority (loaded first) and provide coverage during the
+      gaps in the IPNG MGS95J set.
+ 
+      This data set also includes the orbit number files generated
+      during the mission using the NAIF&apos;s ORBNUM utility program for
+      each of the NAV spacecraft trajectory SPK files for the orbital
+      phases of the mission. These files are not SPICE kernels; for
+      this reason they are provided in the ``extras/orbnum&apos;&apos; directory.
+      For more information about the MGS orbit number files, see the
+      file ``extras/orbnum/orbinfo.txt&apos;&apos;.
+ 
+      Post-mission Nominal Spacecraft Orbit SPK
+      -----------------------------------------
+ 
+      This data set also includes the post-mission nominal trajectory
+      SPK file provided by the MGS NAV team and covering 50 years into
+      the future starting at the end of the mission. Since this file
+      provides an extremely long term prediction it should only be used
+      to get a rough idea where the MGS orbit plane might be years
+      after the end of the mission.
+ 
+      Solar System Body SPK Files
+      ---------------------------
+ 
+      The MAR033 Martian satellite ephemeris SPK files provided in this
+      data set were used by the project up to the fall of 2006. They
+      contain ephemeris data for Phobos, Deimos, Earth and the sun.
+      Formal one-sigma accuracy information for Phobos and Deimos are
+      reported as follows:
+ 
+         Body         Downtrack      Crosstrack      Radial
+                     Uncertainty     Uncertainty   Uncertainty
+         ------      -----------     -----------   -----------
+         Phobos         15 km           7 km          3 km
+         Deimos         30 km          16 km          3 km
+ 
+      The MAR063 Martian satellite ephemeris SPK file provided in this
+      data set superseded the MAR033 files and was used by the project
+      starting in the fall of 2006. As the MAR033 files the MAR063 SPK
+      contain ephemeris data for Phobos, Deimos, Earth and the sun.
+      Formal one-sigma accuracy information for Phobos and Deimos are
+      reported as follows:
+ 
+         Body         Downtrack      Crosstrack      Radial
+                     Uncertainty     Uncertainty   Uncertainty
+         ------      -----------     -----------   -----------
+         Phobos          5 km           2 km          2 km
+         Deimos         10 km           3 km          3 km
+ 
+      Accuracies for Mars-Sun and Mars-Earth directions (positions
+      obtained from SPK files) are at the level of 0.001 arc-sec (1
+      sigma).
+ 
+      Spacecraft Solar Array, High Gain Antenna and MAG/ER SPK Files
+      --------------------------------------------------------------
+ 
+      Included in the SPK archive are two files containing location
+      information (fixed offsets) for spacecraft structures--the
+      high gain antenna and the Magnetometer instrument components
+      mounted on solar arrays. See the metadata for each of these
+      files--found in the comment area--for detailed descriptions
+      of how the files were produced.
+ 
+ 
+      CK Files
+      ========
+ 
+      Three kinds of C-kernel files are provided in this archive: the
+      spacecraft bus orientation CKs (reconstructed and nominal
+      orientation for ROTO observations), the solar arrays orientation
+      CKs (reconstructed only) and the high gain antenna orientation CKs
+      (reconstructed only). Each of these kinds is briefly described
+      below; more information is available in the file
+      ``data/ck/ckinfo.txt&apos;&apos;.
+ 
+      All three kinds of reconstructed CK files are produced from
+      engineering telemetry downlinked from the spacecraft while the
+      ROTO CK file was produced from the commanded attitude for each of
+      the ROTO observations. As is often the case with spacecraft
+      engineering telemetry-based measurements, considerable
+      uncertainty exists as to the accuracy of such measurements, and,
+      data quality (accuracy and completeness) can vary significantly.
+ 
+      Spacecraft Bus CK Files
+      -----------------------
+ 
+      CK files providing the orientation of the spacecraft bus (``the
+      spacecraft&apos;&apos;) can be used to support interpretation of data
+      obtained by all science experiments. The stated requirement on
+      spacecraft orientation knowledge is better than three mrad per
+      axis, 3-sigma. It has been informally reported that the achieved
+      orientation knowledge is significantly better than this, but at
+      the time of this archive production there are no known reports
+      substantiating this or providing further details.
+ 
+      Processing of the Mars Orbiter Laser Altimeter (MOLA) data by the
+      MOLA Team at GSFC led to a determination that the spacecraft
+      clock time tags assigned to the downlinked spacecraft orientation
+      quaternions that comprise these CK files had a time bias. This
+      assessment was verified by the Lockheed Martin Astronautics (LMA)
+      spacecraft control team, although firm determination of the
+      magnitude has been illusive. The situation was further
+      complicated by knowledge that on-board AACS software filter
+      settings that resulted in this timing bias varied during the
+      mission. The magnitude of this bias has been estimated in the
+      range of 1 to nearly 2.5 seconds.
+ 
+      Based on this analysis a constant timing correction was applied
+      to the time tags of the attitude data points stored in
+      the CK files. The correction value used in creating the
+      spacecraft bus CK files was set to -1.15 seconds for the data before
+      1999-02-26T11:45, switched between -1.15 and -2.3 seconds for the
+      data between 1999-02-26 and 1999-03-31, and was set to -2.3
+      seconds for the data after 1999-03-31. The internal comments in
+      each of the CK files specifically state which value(s) was(were)
+      used for the data in the file.
+ 
+      Unfortunately the MOLA team later concluded that applying the
+      larger offset (-2.3 seconds) to the Mapping, Extended and
+      Extended-Extended mission attitude time tags might have been a
+      mistake and that the smaller value (-1.15 seconds) should have
+      been used instead. They suggested that to compensate for the
+      ``over-corrected&apos;&apos; timing of the CK data a half of the -2.3
+      second offset should be ``taken back&apos;&apos; during reading of the CK
+      files by subtracting -1.15 seconds from the CK pointing request
+      time. This small diagram illustrates how the MOLA team
+      compensated this in their instrument processing software:
+ 
+          CK request time at          ``true&apos;&apos;
+           which correct s/c         observation
+         orientation is stored         time
+               |                         |
+               | &lt;...................... |
+               |    1.15 seconds must    |
+               |   be subtracted to get  |
+               |    correct orientation  |
+               |                         |
+               |                         V
+               V   ............................................
+                 .        2.3 seconds were subtracted           .
+                .       by the ground s/w making CK files        .
+               V                                                  .
+               @                         @ ......................&gt; @
+               ^                         ^    1.15 seconds were    ^
+               |                         |   added by AACS filter  |
+               |                         |                         |
+               |                         |                         |
+            time tag            ``true&apos;&apos; time for              time tag
+           in CK file           which s/c orientation         in s/c TLM
+                                 was determined
+ 
+      Other than computing the spacecraft attitude at the observation
+      time minus 1.15 seconds as the diagram suggests, the offset can
+      be also ``taken out&apos;&apos; by processing each of the Mapping, Extended
+      and Extended-Extended mission spacecraft CK files through the
+      CKSMRG program with the ``-C&apos;&apos; argument set to +1.15 seconds.
+ 
+      Nominal ROTO Orientation Spacecraft Bus CK Files
+      ------------------------------------------------
+ 
+      This data set also includes CK files providing predict
+      orientation for the spacecraft bus for ``ROTO&apos;&apos; observations
+      during Extended and Extended-Extended phases of the mission.
+      These files should be used only for the times when reconstructed
+      orientation is not available.
+ 
+      Solar Array CK Files
+      --------------------
+ 
+      CK files providing orientation of the solar arrays relative
+      to the spacecraft bus are included to support interpretation
+      of data collected by the MAG/ER instruments mounted on these
+      arrays. The situation is complicated somewhat due to the
+      non-complete deployment of one of the two arrays. There is no
+      currently known mechanism for estimating the accuracy of the
+      solar array CK files; however it is assumed that they nevertheless
+      satisfy the requirements of the MAG/ER experiment.
+ 
+      The first version of the solar array CKs for Cruise, Aerobraking
+      1, Science Phasing 1, and Science Phasing 2 mission phases,
+      released in 1998, contained incorrect angular rate data resulted
+      from the bug in the process that generated daily solar array CKs
+      during operations. This was discovered in 2005 and version 2 of
+      these files with corrected angular rate data was added to the
+      data set. Pointing data was correct and is the same in both
+      versions.
+ 
+      High Gain Antenna CK Files
+      --------------------------
+ 
+      CK files providing orientation of the high gain antenna (HGA)
+      relative to the spacecraft bus are included to support the
+      Radio Science experiment. They may also be used to help with
+      calibration or data processing for the MAG/ER experiment.
+      There is no currently known mechanism for estimating the
+      accuracy of the HGA CK files. (It may be possible that the
+      Radio Science experiment will later yield some assessment of
+      this accuracy.)
+ 
+      Caution on Using CK Files
+      -------------------------
+ 
+      While not a data accuracy issue, the CK user is nevertheless
+      cautioned to understand and properly use the data found and
+      tolerance arguments that are inputs to the CK reader provided
+      in the SPICE Toolkit. Descriptions about how to read CK files
+      are found in the CK reader routine headers (top of the source
+      code files) and in the ``CK Required Reading&apos;&apos; document; these
+      are contained in each SPICE Toolkit package.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;&apos;
+      bodies such as Mars, Phobos and Deimos. A description of these
+      data items and reference to their source is provided inside
+      the PCK file, which is a simple text file that can be viewed
+      using any word processor, text editor or text display utility.
+ 
+      Of the two PCK files provided in this data set, one is based
+      on the official IAU/IAG/COSPAR values accepted in 1994. This
+      file has been distributed and used during pre-mapping and
+      mapping phases of the mission. The data in the file is generally
+      rather old and in any case certainly does not reflect any new
+      parameter determinations achieved as a result of science
+      instrument data processing for an active mission.
+ 
+      The second PCK file is based on the IAU/IAG/COSPAR values
+      accepted in 2000. Many of these values have been updated as
+      the result of the MGS science data processing.
+ 
+      More information about the PCK files included in this data set is
+      available in the file ``data/pck/pckinfo.txt&apos;&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      Frames kernel files provide specifications for how one reference
+      frame is defined relative to another frame. In one case--that
+      of fixed offset frames such as used for defining the mounting
+      alignment of each antenna relative to the spacecraft--the FK
+      file contains the actual parameter values. Metadata describing
+      these mounting alignment estimates are provided in the one FK
+      file included in this archive. There are no (known) accuracy
+      estimates for these data at the time of this archive preparation.
+ 
+      Historically the frame definitions for MGS were not provided in a
+      single FK file as they were for many other missions. Instead some
+      of the frames were defined in the SCLK files, others -- in the IK
+      files, and yet more frames were defined in the HGA FK file. At
+      the end of of the mission all of the frame definitions were
+      collected in a single FK file included in this data set along
+      with the older HGA FK file. More information about the MGS FK
+      files is available in the file ``data/fk/fkinfo.txt&apos;&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      Instrument kernel files provide specifications for the mounting
+      alignment and--where applicable--field-of-view size, shape
+      and orientation for the named instrument. Metadata describing
+      these estimates are provided in each IK file included in this
+      archive. Parameter values were determined from pre-launch
+      measurements or from manufacturing blueprints. (An update for
+      the MOLA alignment using in-flight measurements is expected
+      later in the mission.) There are no (known) accuracy estimates
+      for these data at the time of this archive preparation.
+ 
+      Although this data set includes an IK file(s) for each of the MGS
+      instruments -- MAG/ER, MHSA, MOC, MOLA, and TES, -- not all of
+      them are equally well developed. On one side of the ``spectrum&apos;&apos;
+      are the latest MOC and MOLA IK files containing the most up to
+      date geometric calibration data, FOV definitions, etc. while on
+      the other side is the TES IK still providing bare minimum of
+      information based on the pre-launch measurements (a better TES IK
+      may be added to the data set at a later date.) Because of that
+      users are encouraged to carefully examine the IKs before using
+      them. More information about MGS FK files is available in the
+      file ``data/ik/ikinfo.txt&apos;&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data
+      needed for converting time measurements between ephemeris time
+      (ET) and spacecraft clock time (SCLK). A SPICE SCLK file is
+      made from a similar file--SCLK/SCET file, or SCLKvSCET
+      file--produced by another mission entity. Each newly made SCLK
+      file fully replaces the previous SCLK file.
+ 
+      For MGS the time correlation accuracy provided in SCLK/SCET
+      files is informally reported by the Lockheed Martin spacecraft
+      team to be better than 100 milliseconds during cruise and
+      better than 10 milliseconds during orbital phases. (NAIF has
+      not attempted to obtain or produce an independent corroboration
+      of these LMA estimates.) The SPICE SCLK file has essentially
+      the same accuracy as the SCLK/SCET file.
+ 
+      SPICE software does not prohibit an SCLK file from being used
+      for time conversions occurring for ``future times&apos;&apos; (or more
+      accurately, for epochs that occur later than the epoch of the
+      last telemetry data used in producing the last correlation
+      coefficients found in the SCLK file). Such ``predict&apos;&apos; time
+      conversions are likely to be inaccurate (changed somewhat)
+      once the epoch of interest has been passed.
+ 
+      More information about the MGS SCLK files is available in the file
+      ``data/sclk/sclkinfo.txt&apos;&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;&apos;
+      and some other terms used in converting time measurements
+      between ephemeris time (ET) and Universal Time (UTC). ``Spacecraft
+      Event Time&apos;&apos; (SCET) is the commonly used name for UTC events
+      measured at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed
+      is contained inside the LSK text file. The time conversion
+      provided by SPICE LSK files is accurate to approximately
+      0.000030 seconds.
+ 
+      More information about the LSK files is available in the file
+      ``data/lsk/lskinfo.txt&apos;&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      Two kinds of Events kernel (EK) files are included in this
+      archive: Experimenter&apos;s Notebook EKs and Sequence EKs.  Each of
+      these kinds is briefly described below; more information is
+      available in the file ``data/ek/ekinfo.txt&apos;&apos;.
+ 
+      Experimenter&apos;s Notebook EKs kernels are a digital analog to
+      the traditional paper laboratory notebook. Hence Experimenter&apos;s
+      Notebook entries represent truth only as seen by the author
+      of the notes--there is no attempt made to independently validate
+      any aspect of Experimenter&apos;s Notebook information.
+ 
+      Sequence EKs comprise a summary of all commands sent to the
+      spacecraft as well as some ground system events and instrument
+      state (status) summaries. All Sequence EK entries are time
+      tagged. In this archive includes Sequence EKs created the
+      automated process for providing ``as run&apos;&apos; inputs reflecting
+      what was actually sent to the spacecraft, and what execution
+      times were used, was not yet implemented for the in-orbit
+      mission phases. The cruise ESQ was produced from a cruise
+      phase Predicted Events File (PEF) that was hand edited to
+      reflect ``as run&apos;&apos; status. Consequently the validity of this
+      ESQ is uncertain, but there is some reason to imagine that
+      the handwork was well done.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>PSCM-00030</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ros-e-m-a-c-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ros-e-m-a-c-spice-6-v1.0__browserp_ros-e-m-a-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ros-e-m-a-c-spice-6-v1.0__browser_psa_ros-e-m-a-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ros-e-m-a-c-spice-6-v1.0__browser_ros-e-m-a-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ROS-E/M/A/C-SPICE-6-V1.0</data_set_id>
+        <data_set_name>ROSETTA SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2006-12-22</data_set_release_date>
+        <start_time>2004-03-02T09:26:21.583Z</start_time>
+        <stop_time>2010-10-03T12:01:06.183Z</stop_time>
+        <producer_full_name>JOSE LUIS VAZQUEZ-GARCIA</producer_full_name>
+        <citation_text>
+            Vazquez-Garcia, J.L., Zender, J., and B. Semenov, ROSETTA SPICE
+            KERNELS V1.0, ROS-E/M/A/C-SPICE-6-V1.0, European Space Agency,
+            2007.
+        </citation_text>
+        <data_set_terse_desc>
+            This dataset contains SPICE data for the Rosetta mission
+        </data_set_terse_desc>
+        <abstract_desc>
+            SPICE deals with ancillary data needed to support the planning
+            for, and analysis of, science instrument data. As well as
+            software (the SPICE toolkit) and documentation, SPICE provides
+            data files, called kernels, that contain ancillary information
+            which has been created in such a way as to allow easy access and
+            correct usage by the space science and engineering communities.
+        </abstract_desc>
+        <data_set_desc>
+ 
+1. SPICE System Overview
+   =====================
+ 
+   SPICE data contain geometric and other ancillary information
+   needed to recover the full value of science instrument data. In
+   particular, SPICE kernels provide spacecraft and planetary
+   ephemerides, instrument mounting alignments and spacecraft
+   orientation. Data needed for relevant time conversions is also
+   included.
+ 
+   SPICE was designed by the Navigation and Ancillary Information
+   Facility (NAIF) to aid scientists and engineers with ancillary
+   and engineering data. This data comes from a wide range of
+   sources such as the spacecraft, the mission control center and
+   the designers of the spacecraft and its instruments.
+ 
+   The ancillary data comprises information on data acquisition;
+   position and orientation of the spacecraft at the time of
+   acquisition; information on the target, such as location, shape
+   and orientation; reference frame specifications and time
+   conversion data.
+ 
+   The primary SPICE data sets are often called &apos;kernels&apos; or &apos;kernel
+   files&apos;.  These kernels are composed of ancillary information,
+   which has been created in such a way as to allow easy access and
+   correct usage by the space science and engineering communities.
+ 
+   In addition to the kernels, there is software provided, known as
+   the SPICE toolkit, along with standards, documentation and
+   software support. The SPICE toolkit and documentation can be
+   found on:
+ 
+      http://naif.jpl.nasa.gov/naif/
+ 
+   The SPICE toolkit was freely offered to the worldwide space
+   science and space mission engineering communities at the time
+   this data set was released. The few rules governing its use are
+   posted on the &apos;Rules&apos; page of the NAIF website:
+ 
+      http://naif.jpl.nasa.gov/naif/rules.html
+ 
+   SPICE is used on a number of space missions, such as ESA&apos;s Mars
+   Express, SMART-1, Venus Express and Rosetta missions; NASA&apos;s Mars
+   Global Surveyor, Stardust, Cassini, Mars Exploration Rovers, Mars
+   Reconnaissance Orbiter and Deep Impact. The SPICE system has been
+   produced and is maintained by Caltech&apos;s Jet Propulsion Laboratory
+   under contract to the U.S. National Aeronautics and Space
+   Administration.
+ 
+   For an additional explanation of the SPICE system, please consult
+   SPICE_INST.CAT
+ 
+ 
+2. Data Producers and Other Key Personnel
+   ======================================
+ 
+   The Rosetta SPICE data set has been produced by
+      Acton, C.        (NAIF/JPL)
+      Bachman, N.      (NAIF/JPL)
+      Semenov, B.      (NAIF/JPL)
+      Vazquez, J.L.    (RSSD/ESA)
+      Zender, J.       (RSSD/ESA)
+ 
+   and archived by
+ 
+      Vazquez, J.L.    (RSSD/ESA)
+ 
+ 
+3. The Rosetta SPICE dataset
+   =========================
+ 
+   The Rosetta SPICE dataset consists of several SPICE kernels,
+   organised as follows:
+ 
+   *  CK kernels. This kernels contain information about
+      orientation of the space vehicle or any articulating
+      structure on it. More information on the CK kernels in this
+      dataset is provided in CKINFO.TXT.
+ 
+   *  FK kernels. Reference frame specifications. Definitions of,
+      and specifications of, relationships between reference frames
+      (coordinate systems). Among the frames kernels included,
+      there are kernels that specify reference frames related to
+      the earth and the spacecraft. More information on the FK
+      kernels in this dataset is provided in FKINFO.TXT.
+ 
+   *  IK kernels. Kernels that hold intrument information, such as
+      field of view or internal timing. There is a IK kernel for
+      every instrument, except for RSI. More information on the IK
+      kernels in this dataset is provided in IKINFO.TXT.
+ 
+   *  LSK kernel. This kernels hold a table with the leapseconds
+      used to convert between ET and UTC. If there are multiple
+      LSK kernels in this dataset, the latest kernel supersedes the
+      previous ones. More information on the LSK kernel(s) in this
+      dataset is provided in LSKINFO.TXT.
+ 
+   *  PCK kernels. These kernels provide information about Solar
+      System bodies orientation and shape, and possibly parameters
+      for gravitational, atmospheric or rings models. The dataset
+      contains PCK kernels for the planets, their satellites, and
+      the asteroids Lutetia and Steins. More information on the PCK
+      kernels in this dataset is provided in PCKINFO.TXT.
+ 
+   *  SCLK kernel. This kernel (spacecraft clock coefficients)
+      allows for conversion between ET and spacecraft clock. If
+      there are multiple LSK kernels in this dataset, the latest
+      kernel supersedes the previous ones. More information on the
+      SCLK kernel(s) in this dataset is provided in SCLKINFO.TXT.
+ 
+   *  SPK kernels. Kernels with information about ephemeris
+      (position and velocity) of the spacecraft and solar
+      system bodies. The dataset provides such information for
+      the planets, the Sun, the Moon, the comet
+      (CHURYUMOV-GERASIMENKO), the two fly-by asteroids
+      (Lutetia and Steins), the fly-by comet (Tempel 1), the New
+      Norcia tracking Station, and the spacecraft. More information
+      on the SPK kernels in this dataset is provided in SPKINFO.TXT.
+ 
+   3.1 - Origin of the kernels.
+ 
+      a) Generic kernels provided by NAIF.
+         PCK, LSK and some of the SPK (those which don&apos;t hold
+         information about the spacecraft) kernels are provided
+         by NAIF.
+ 
+      b) Other kernels provided by NAIF.
+         The instrument kernels (IK) have been developed by Boris
+         Semenov (NAIF), in collaboration with the intrument teams
+         and RSSD/ESA.
+ 
+      c) Kernels generated with ESOC Ancillary Data.
+         ESOC ancillary data are the main source of information
+         required to create SPICE kernels for attitude (CK), orbit
+         (SPK) and time (SCLK) information, as well as orientation
+         for the High Gain Antenna and the Solar Panels. See next
+         chapter (3.2) for a more detailed explanation on how these
+         kernels are generated. Some PCK kernels for asteroids and
+         comets have also been created using ESOC data.
+ 
+   3.2 - Creation of SPK, CK and SCLK kernels from ESOC Ancillary
+         Data.
+ 
+      Orbit Data.
+      ----------
+ 
+         Eight different types of data products are provided by
+         ESOC: ORHR, ORHO, ORHS, ORER, ORMR, ORFR, ORGR and ORWR.
+         SPICE kernels corresponding to ORHR, ORWR, ORHS, ORHW
+         and ORHO will be provided in this data set.
+ 
+         The ORHR SPK file covers the cruise phase from launch to
+         the rendezvous with the comet and provides the orbit data
+         as heliocentric states. There will be several versions of
+         the ORHR product; the user shall use the file with the
+         higher version number, since it will be the most up to date
+         one.
+ 
+         The ORHW SPK file provides orbit data, centered in the
+         Sun, for the comet Churyumov-Gerasimenko.
+ 
+         The ORHS SPK file provides orbit data, centered on the
+         Sun, for the asteroid 21 Lutetia.
+ 
+         The ORHO SPK file provides orbit data, centered on the Sun,
+         for the asteroid 2867 Steins.
+ 
+         During near comet operations, one spacecraft orbit file
+         (ORHR) will be provided, containing comet-centric states
+         with respect to the Earth mean equator of J2000. The file
+         will cover the spacecraft orbit from comet rendezvous up
+         to the end of the current planning period.
+ 
+         For each release of the dataset, only the relevant kernels
+         are delivered. For example, for the first release, ORHO and
+         ORHS files will not be delivered, since that release covers
+         a time period previous to the two asteroid flybys.
+ 
+      Attitude Data.
+      -------------
+ 
+         Attitude data are provided for all mission phases except
+         for safe modes, for the past and the near future. The
+         attitude is provided in several records, called segments,
+         each covering a specific time span. These segments have
+         no overlap, but there may be gaps between the segments,
+         and even gaps in the segments.
+ 
+      Time Correlation Data.
+      ---------------------
+ 
+         Time Correlation is one of the most critical pieces of
+         information needed for the use of the SPICE system within
+         the Rosetta mission. This information allows the conversion
+         between the Rosetta S/C Clock time and UTC time.
+ 
+      ESOC always provide predicted and reconstituted orbit data,
+      but only predicted attitude data. These products are the
+      source of the CK and SPK kernels.
+ 
+      ESOC delivers time correlation data which are the source for
+      the SCLK kernel.
+ 
+      An automated system, called ADCS (Automatic Data Conversion
+      System) is responsible for the generation of CK, SPK and SCLK
+      kernels from the ESOC flight dynamics data. ADCS detects when
+      a new product was generated or a new time correlation packet
+      was available, and run a series of processes in order to
+      create the proper kernels.
+ 
+      ADCS uses the SPICE toolkit in order to fulfill its task. It
+      runs in a server physically located at ESTEC until December
+      2007; after that date, the server is located at ESAC.
+ 
+   3.3 - Using the SPICE kernels.
+ 
+      At least a basic knowledge of the SPICE system is needed in
+      order to use this kernels. The SPICE toolkit provides versions
+      in Fortran (SPICELIB), C (CSPICE), Matlab (Mice) and IDL (icy),
+      and the user can choose any one that suits him/her.
+ 
+      The SPICELIB routine FURNSH, CSPICE function furnsh_c, and icy
+      routine cspice_furnsh load a kernel file into the kernel pool
+      as shown below.
+ 
+      CALL FURNSH ( &apos;kernel_name&apos; )
+      furnsh_c    ( &apos;kernel_name&apos; );
+      cspice_furnsh, &apos;kernel_name&apos;
+ 
+      In the case when two or more files contain data overlapping in
+      time for a given object, for binary kernels, the file loaded
+      last takes precedence.
+ 
+      If two (or more) text kernels assign value(s) using the &apos;=&apos;
+      operator to identical keywords, the data value(s) associated
+      with the last loaded occurrence of the keyword are used -all
+      earlier values have been replaced with the last loaded
+      value(s).
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The following list of kernels in SPICE meta-kernel format can
+      be used with a SPICE-based application running on a UNIX
+      workstation to load Rosetta SPICE data provided in this data
+      set together (note that the logical path provided in the
+      PATH_VALUES keyword and pointing to the volume root directory
+      should be changed to the actual path of the volume root
+      directory on the system where the volume is mounted):
+ 
+      When there are two or more kernels that cover the same time
+      interval (as is the case here for the .BSP and .BC kernels)
+      the last kernel loaded is the one used by the SPICE software
+      for computations in the interval or overlap.
+        </data_set_desc>
+        <confidence_level_note>
+       The SPICE kernels in this dataset are either
+       provided by NAIF (for instance, kernels containing
+       parameters describing the planets, or the LSK kernel
+       containing information about leapseconds) or calculated
+       from the orbit and attitude data information generated
+       by ESOC. In both cases the archive team are confident that
+       the SPICE data is correct and accurate within the precision
+       provided by the software and the instruments at the time
+       the data was archived
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

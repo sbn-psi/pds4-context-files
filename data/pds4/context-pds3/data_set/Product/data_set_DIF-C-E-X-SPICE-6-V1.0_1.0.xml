@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dif-c-e-x-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>EPOXI SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.epoxi::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dif::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.dif::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.103p-hartley_2_1986_e2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.gj_436::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.hat-p-4::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.hat-p-7::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.tres-2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.tres-3::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.wasp-3::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.xo-2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.xo-3::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dif-c-e-x-spice-6-v1.0__browserp_dif-c-e-x-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dif-c-e-x-spice-6-v1.0__browser_dif-c-e-x-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dif-c-e-x-spice-6-v1.0__browser_wgc_dif-c-e-x-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DIF-C/E/X-SPICE-6-V1.0</data_set_id>
+        <data_set_name>EPOXI SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2009-03-01</data_set_release_date>
+        <start_time>2005-08-23T17:19:48Z</start_time>
+        <stop_time>2011-03-01T00:59:44Z</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., and C.H. Acton, EPOXI SPICE KERNELS V1.0,
+            DIF-C/E/X-SPICE-6-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the EPOXI mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of EPOXI SPICE data files
+            (``kernel files&apos;&apos;), which can be accessed using SPICE
+            software. The SPICE data contains geometric and other ancillary
+            information needed to recover the full value of the science
+            instrument data. In particular SPICE kernels provide spacecraft
+            and planetary ephemerides, instrument mounting alignments,
+            spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of EPOXI SPICE data files
+      (``kernel files&apos;&apos;), which can be accessed using SPICE software.
+      The SPICE data contains geometric and other ancillary information
+      needed to recover the full value of the science instrument data.
+      In particular SPICE kernels provide spacecraft and planetary
+      ephemerides, instrument mounting alignments, spacecraft
+      orientation, spacecraft sequences of events, and data needed for
+      relevant time conversions.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or fixed
+      spacecraft and instrument structures. They provide position and
+      velocity, given in a Cartesian reference frame. SPK files are
+      located under the ``data/spk&apos;&apos; directory of this data set.
+ 
+      PCK kernels contain certain physical, dynamical and
+      cartographic constants for target bodies, such as size and shape
+      specifications, and the orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos;&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos;&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos;&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the ``data/ek&apos;&apos; directory of this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos;&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock calibration
+      data required to perform a mapping between Ephemeris time (ET)
+      and spacecraft on-board time (SCLK.) SCLK files are located under
+      the ``data/sclk&apos;&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under
+      the ``data/fk&apos;&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of EPOXI kernels included
+      in this data set is provided in the CONFIDENCE_LEVEL_NOTE section
+      of this file while details specific to individual files are found
+      in the ``*info.txt&apos;&apos; files in the corresponding data directory.
+      The most detailed description of the data in each file is
+      provided in metadata included inside the file -- in the
+      description area of text kernels or in the comment area of binary
+      kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read
+      SPICE kernel files. SPICELIB software is highly documented
+      via internal headers. Additional documentation is available
+      in separate ASCII text files called Required Reading files.
+      For example, the S- and P- Kernel (SPK) Required Reading File,
+      named SPK.REQ, describes use of the SPK kernel file readers
+      and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos;&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos;&apos; directory. For more
+      information about the EPOXI meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This data set contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here,
+      but the prospective user is also referred to extensive
+      descriptions about each file that are stored inside each kernel
+      file. These metadata provide detailed information regarding
+      the information source from which the data were derived, the
+      type of processing applied to the source data, applicability
+      of the data, etc. Metadata are located in the ``comment area&apos;&apos;
+      for binary kernel types (SPK, CK, ESQ), accessible using either
+      the COMMNT or SPACIT utility program found in the NAIF Toolkit.
+      Metadata are located after ``\begintext&apos;&apos; markers within the
+      text kernel types (PCK, IK, FK, LSK, SCLK), accessible by
+      using any available text file display tool such as a word
+      processor, text editor, or the UNIX ``more&apos;&apos; or ``cat&apos;&apos;
+      commands.
+ 
+      In some cases data accuracy information does not exist because
+      it could not be estimated even after mission completion.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;&apos;
+      not addressed herein the reader is invited to examine subsequent
+      SPICE archive releases associated with this data set (if such
+      exist), or to contact the NAIF node of the Planetary Data System
+      for possible further information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      The SP-Kernel files included in this data set provide reconstructed
+      trajectory of the Deep Impact Flyby (DIF) spacecraft and ephemeris
+      data for the mission target comet Hartley 2, Solar System planets,
+      and the Sun.
+ 
+      Additional information about SPK files provided in this data set
+      is available in the file ``data/spk/spkinfo.txt&apos;&apos;.
+ 
+ 
+      CK Files
+      ========
+ 
+      C-kernel files included in this data set provide the orientation
+      of the DIF spacecraft bus and the DIF high gain antenna (HGA).
+      Some of these CK files were produced from engineering telemetry
+      downlinked from the spacecraft; others, containing predicted
+      data, were produced by attitude simulation tools based on the
+      planned attitude profiles. As is often the case with spacecraft
+      engineering telemetry-based measurements, considerable
+      uncertainty exists as to the accuracy of such measurements, and,
+      data quality (accuracy and completeness) can vary significantly.
+ 
+      DIF Spacecraft Bus CK files
+      ---------------------------
+ 
+      Three kinds of the DIF spacecraft bus orientation CK files are
+      included in this data set.
+ 
+      The first kind are reconstructed attitude kernels based on the
+      low rate telemetry (1/8 Hz). The coverage provided by these files
+      is full of gaps, which due to the attitude data downlink strategy
+      frequently happen at the times of transitions between different
+      attitude modes, making interpolation over these gaps produce
+      grossly incorrect attitude. For this reason the interpolation
+      intervals in these reconstructed files should not be altered
+      using CKSPANIT or a similar tool.
+ 
+      The second kind is the reconstructed attitude kernel based on the
+      high rate telemetry (up to 5 Hz) providing coverage only for
+      about 8 hour period around closest approach to Hartley 2. The
+      version 1 of this CK had internal time tags truncated by up to 2
+      milliseconds, introducing attitude errors of almost 30
+      microradians during the fastest spacecraft turn rates in the
+      ~200 second interval around the closest approach to Hartley 2
+      (at other times attitude errors due to this truncation were
+      negligible). This problem was fixed in the version 2 of this CK.
+ 
+      The accuracy of the DIF spacecraft bus orientation determined
+      on-board and stored in the low- and high- CK files varied
+      significantly, from 50 micro-radians (~5 MRI pixels) at the times
+      when the attitude was determined based on the star tracker
+      measurements to a few hundreds of micro-radians (tens of MRI
+      pixels) for the periods when the attitude was determined by
+      propagating ACS gyro data without any star tracker updates for
+      extended periods of time.
+ 
+      The third kind are predicted kernels providing nominal attitude
+      for the whole or a part of the mission or just for the periods of
+      target star observations during the EPOCh part of the mission.
+      The predicted files were generated using prediCkt tool and are
+      included in the data set with the sole purpose of providing some
+      attitude for the periods when the reconstructed files have gaps.
+ 
+      Although a comparison of reconstructed and predicted CK files for
+      the periods when both provided coverage showed that in many cases
+      the predicted CK data matched the actual attitude to a fraction
+      of degree, the accuracy of the predicted CK files in general is
+      suspect because of the idealistic attitude modeling rules,
+      incorrect timing of attitude mode transitions, and lack of
+      modeling of some spacecraft activities altogether. Any users of
+      the predicted CKs are encouraged to compare them against the
+      reconstructed CKs during the period(s) of interest using the
+      FRMDIFF tool provided in the SPICE toolkit to assess the
+      differences.
+ 
+      All three types of files need to be loaded at the same time to
+      provide the most complete coverage with the predicted CKs loaded
+      first so that data from them is accessed last (lowest priority),
+      the low rate CKs with corrected times tags (v2) loaded second
+      (medium priority), and the high rate CK for the encounter loaded
+      last (highest priority).
+ 
+      DIF HGA CK Files
+      ----------------
+ 
+      Two kinds of the DIF HGA orientation CK files are included in
+      this data set. The first kind is based on the measured HGA gimbal
+      angles provided in telemetry (``V-channels&apos;&apos;) while the second
+      kind is based on the commanded HGA gimbal angles provided in
+      telemetry (``B-channels&apos;&apos;). These files should be loaded together
+      to provide the most complete coverage with the file based on
+      measured angles loaded last (to be accessed first.) Even when
+      loaded together, the combined coverage provided by the files is
+      full of gaps, which can be alleviated by modifying the
+      interpolation interval information by using the CKSPANIT program.
+ 
+      Additional information about CK files provided in this data set
+      is available in the file ``data/ck/ckinfo.txt&apos;&apos;.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;&apos;
+      bodies such as planets, satellites, comets and asteroids. A
+      description of these data items and reference to their source is
+      provided inside the PCK file, which is a simple text file that
+      can be viewed using any word processor, text editor or text
+      display utility.
+ 
+      This data set contains generic PCK file based on the official
+      IAU/IAG/COSPAR values accepted in 2000 and PCK file for EPOXI
+      mission target -- Hartley 2 -- providing constants determined
+      after the encounter. The PCK file for Hartley 2 contains both
+      rotation and shape/size data derived by the EPOXI science team
+      during post encounter data analysis.
+ 
+      Additional information about PCK files provided in this data set
+      is available in the file ``data/pck/pckinfo.txt&apos;&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      Frames kernel files provide specifications for how one reference
+      frame is defined relative to another frame. The DI FK provided in
+      this data set contains a complete set of frame definitions for
+      the both spacecraft, their structures such as antennas, and all
+      of their science instruments. Comments in the FK file provide
+      the frame definitions, a description of the frame relationships,
+      the source of and accuracy of the mounting alignment information,
+      etc. The instrument frame definitions provided in the file
+      incorporate the latest mounting alignment data available at the
+      end of the mission.
+ 
+      Additional information about FK files provided in this data set
+      is available in the file ``data/fk/fkinfo.txt&apos;&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      Instrument kernel files provide specifications for the optical
+      and physical instrument parameters and -- where applicable --
+      field-of-view size, shape and orientation for the named
+      instrument. Metadata describing these estimates are provided in
+      each IK file included in this archive. While a majority of the of
+      parameters included in the IK files archived in this data set
+      are based on the nominal instrument data, the files incorporate
+      the latest version of optical distortion model derived by the DI
+      optical navigation team.
+ 
+      Additional information about IK files provided in this data set
+      is available in the file ``data/ik/ikinfo.txt&apos;&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data needed
+      to convert time measurements between ephemeris time (ET) and
+      spacecraft clock time (SCLK). A SPICE SCLK file is made from a
+      similar file -- SCLK/SCET or SCLKvSCET file -- produced by
+      another mission entity. Each newly made SCLK file fully replaces
+      the previous SCLK file.
+ 
+      This data set includes SCLK kernels providing the correlations
+      for the DIF spacecraft primary (SCU-A) and secondary (SCU-B)
+      on-board clocks. Two SCLK kernels -- the ``official&apos;&apos; version and
+      ``science&apos;&apos; version -- are available for the DIF primary clock
+      while only one SCLK kernel -- ``official&apos;&apos; version -- is
+      available for the DIF secondary clock.
+ 
+      The main difference between the ``official&apos;&apos; version of the
+      primary clock SCLK kernel and the ``science&apos;&apos; version is that the
+      ``official&apos;&apos; version is based on the latest time correlation that
+      were used by the project during mission operations while the
+      ``science&apos;&apos; version contain updated correlation that were used to
+      process science data for archiving in PDS.
+ 
+      The correlation update for the DIF primary clock SCLK kernel
+      was done to eliminate ``artificial&apos;&apos; data points introduced by
+      the tool-set that created source SCLKvSCET file and to adjust
+      clock rates in order to connect actual data points in a
+      continuous fashion. Such ``artificial&apos;&apos; data points were
+      eliminated only during two periods -- 2009-01-06 to 2010-10-27
+      and 2010-11-17 to 2011-03-01 -- because the ``official&apos;&apos;
+      correlation prior to 2009-01-06 and around Hartley 2 encounter
+      did not need such adjustments.
+ 
+      Unfortunately, the absolute accuracy of both ``official&apos;&apos; and
+      ``science&apos;&apos; correlations for all periods EXCEPT for the period
+      around Hartley 2 encounter (2010-10-27 to 2010-11-17) is no
+      better than 0.5 seconds due to poor quality of the source clock
+      correlations data. For the encounter period the correlation has
+      much better accuracy, down to .01 seconds for evaluating SCLK -&gt;
+      UTC around closest approach, thanks to efforts by Steve Wissler
+      and Amy Walsh of EPOXI Spacecraft Team in correcting and
+      re-fitting the source correlation data
+ 
+      Note that the clock format defined by both ``official&apos;&apos; and
+      ``science&apos;&apos; SCLK kernels (seconds with fractional seconds given
+      as a count of 1/256 second ticks) does not match the format of
+      on-board time tags in mission telemetry (seconds with fractional
+      seconds given as top 8 or 16 or full 20 bits of a count of
+      micro-seconds). For details on this discrepancy and the algorithm
+      to fix it see ``sclk140.txt&apos;&apos; provided in Deep Impact and EPOXI
+      documentation set (DI-C-HRII/HRIV/MRI/ITS-6-DOC-SET-V3.0).
+ 
+      While all science images sent to the ground contained SCLK time
+      in the headers (spacecraft primary, SCU-A, SCLK for DIF),
+      optical- and auto-navigation image headers contain a different
+      time. This time was a so called on-board Ephemeris Time (ET) that
+      optical/auto navigation on-board software used internally to
+      perform autonomous trajectory and attitude solutions. This
+      on-board ET was computed from on-board clock by adding a constant
+      delta to it to make it synchronous with the actual ET to the
+      extent possible. Since the on-board clock was drifting throughout
+      the mission, the delta had to be changed many times. The table
+      below shows the delta, in seconds, that must be subtracted from
+      the on-board ET to get corresponding SCLK (spacecraft primary,
+      SCU-A, SCLK for DIF) and the time when a particular delta had
+      been uplinked and took effect in the on-board software (shown as
+      UTC):
+ 
+        Applicability Start UTC     Delta
+        -----------------------    --------
+        2007-351T17:35:02.1287      512.325
+        2007-363T17:25:04.4477      525.293
+        2008-078T16:12:19.5120      665.717
+        2008-105T23:24:20.9104      732.653
+        2008-137T03:57:41.1835      821.037
+        2008-142T10:13:15.6053      857.544
+        2008-151T19:54:10.8499      875.314
+        2008-165T17:57:03.9399      897.396
+        2008-184T11:28:57.2223      806.231
+        2008-212T17:28:54.5972      839.715
+        2008-240T04:28:57.5992      864.011
+        2008-268T02:58:58.9329      890.432
+        2008-319T23:59:00.3904      943.327
+        2008-349T23:59:08.6112      969.590
+        2009-005T21:59:15.8754      989.965
+        2009-046T00:14:05.8648     1056.877
+        2009-074T00:14:07.1411     1095.119
+        2009-083T22:13:28.6435     1121.229
+        2009-105T00:13:59.7459     1146.244
+        2009-135T00:13:59.6404     1187.763
+        2009-147T08:03:22.1973     1213.564
+        2009-153T06:34:59.1203     1223.314
+        2009-166T00:13:58.7132     1230.997
+        2009-182T11:59:00.0174     1252.004
+        2009-196T00:13:59.7825     1270.692
+        2009-227T00:14:00.0946     1311.956
+        2009-258T00:14:00.1187     1354.722
+        2009-268T15:30:09.3380     1371.659
+        2009-275T18:51:55.1384     1382.729
+        2009-288T00:14:01.1509     1396.132
+        2009-316T17:19:33.1640     1449.351
+        2009-319T00:14:05.5821     1435.769
+        2009-337T11:32:02.5265     1471.203
+        2009-344T19:02:28.8364     1481.542
+        2009-349T00:14:02.2259     1483.738
+        2009-351T15:28:11.1679     1490.387
+        2009-358T21:14:01.2625     1499.945
+        2010-001T02:14:01.7135     1510.532
+        2010-015T00:14:02.6994     1530.969
+        2010-046T00:13:58.9541     1581.193
+        2010-071T17:35:08.3947     1623.057
+        2010-074T00:13:58.9368     1622.033
+        2010-105T00:13:58.3922     1666.541
+        2010-135T00:13:59.2603     1708.935
+        2010-166T00:13:59.4915     1750.700
+        2010-183T20:58:59.3697     1775.852
+        2010-190T20:39:27.8465     1789.371
+        2010-196T00:13:59.4687     1792.938
+        2010-227T00:14:02.0552     1835.460
+        2010-246T18:50:23.1339     1866.382
+        2010-258T00:13:53.1890     1878.792
+        2010-272T20:47:43.1103     1906.565
+        2010-288T10:54:55.5247     1927.342
+        2010-289T08:49:17.9432     1924.467
+        2010-300T19:05:35.6008     1939.803
+        2010-307T19:16:24.8070     1949.819
+        2010-319T00:13:56.3420     1973.249
+        2010-349T00:14:00.1550     1999.840
+        2011-015T00:13:52.2455     2037.864
+        2011-046T00:13:44.2797     2076.248
+        2011-074T00:13:54.5237     2087.404
+        2011-105T00:14:01.1949     2105.201
+        2011-135T00:14:10.3797     2127.709
+        2011-166T00:13:42.7977     2176.681
+ 
+      Additional information about SCLK files provided in this data set
+      is available in the file ``data/sclk/sclkinfo.txt&apos;&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;&apos;
+      and some other terms used in converting time measurements between
+      ephemeris time (ET) and Universal Time (UTC). ``Spacecraft Event
+      Time&apos;&apos; (SCET) is the commonly used name for UTC events measured
+      at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed is
+      contained inside the LSK text file. The time conversion provided
+      by SPICE LSK files is accurate to approximately 0.000030 seconds.
+ 
+      Additional information about LSK files provided in this data set
+      is available in the file ``data/lsk/lskinfo.txt&apos;&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      No Events kernel (EK) files are included in this archive.
+ 
+ 
+      Kernel Files Not Included In This Data Set
+      ===========================================
+ 
+      A number of kernel files used to process image data archived in
+      PDS and mentioned in the image labels were not included in this
+      data set because they either were superseded by the files
+      provided in this archive, or were known to contain incorrect or
+      out-of-date information, or could be easily re-created from the
+      data provided in this archive using utility program(s) available
+      from NAIF. Among such files are:
+ 
+        - regular OPS SPK files:
+ 
+            spk_od218_full.bsp
+            spk_od219_full.bsp
+            spk_od221_full.bsp
+            spk_od222_full.bsp
+            spk_mars_drm232.bsp
+ 
+          were superseded by the SPK files ``dif_epoch_nav_v1.bsp&apos;&apos; and
+          ``dif_dixi_nav_v1.bsp&apos;&apos; included in this data set.
+ 
+        - Jovian system SPK file
+ 
+            jup164_20year.bsp
+ 
+          is not included because no observations of Jupiter or its
+          satellites were made during the mission.
+ 
+        - SPK file containing an earlier version of Hartley 2 ephemeris
+ 
+            hartley_2_2005_2020.bsp
+ 
+          was superseded by the SPK file ``dif_dixi_nav_v1.bsp&apos;&apos;
+          included in this data set.
+ 
+        - predicted CK files:
+ 
+            dif_epoxi_predict_v20081206.bc
+            dif_pred_earthobs4_1.bc
+ 
+          were superseded by the predicted CK files
+          ``dif_sc_071103_090127_p.bc&apos;&apos; and
+          ``dif_sc_071103_090127_p_to.bc&apos;&apos; included in this data set.
+ 
+        - star position SPK and PCK files:
+ 
+            starnames_2008253_074135.tpc
+            starnames_2009338_165219.tpc
+            stars_2008253_074135.bsp
+            stars_2010078_071625.bsp
+ 
+          were used in the Science Data Center image processing
+          pipeline to provide access via SPICE interfaces to positions
+          of the mission target stars. While these kernels successfully
+          served their purpose, they were not fully compliant with
+          official NAIF practices. For this reason they were not included
+          into this data set. On the other hand, recognizing the
+          importance of this data, it was decided to include the star
+          positions stored in these files and the NAIF names and ID codes
+          assigned to these stars into this data set&apos;s documentation
+          for the reference. The table below provides these positions.
+          Each line contains J2000 RA (hours, minutes, seconds), J2000
+          DEC (degrees, arcminutes, arcseconds) and name.
+ 
+            10,24,23.71,-74,1,53.8,PRETEND I CAR HD 90589
+            0,25,45.07,-77,15,15.3,BET HYI HD 2151
+            10,2,42,-60,7,0,NGC3114
+            6,23,57.11,-52,41,44.4,CANOPUS HD 45348
+            1,37,42.85,-57,14,12.3,ACHERNAR HD 10144
+            21,7,6,42,14,0,NGC7027
+            19,41,48.95,50,31,30.2,16 CYG A HD 186408
+            7,33,27.32,-50,35,3.3,HD 60753
+            18,36,56.34,38,47,1.3,VEGA HD 172167
+            0,24,5.22,-72,4,57.9,47 TUC NGC104
+            6,45,08.92,-16,42,58.0,SIRIUS HD 48915
+            9,11,16.72,-62,19,1.1,I CAR HD 79447
+            11,5,33,-58,43,48,NGC3532
+            18,51,6,-6,16,0,M11
+            10,36,16.079,-58,16,38.20,HD 92044
+            8,40,36,-53,2,0,OMI VEL CLUSTER IC2391
+            11,42,11.5968,26,42,16.812,GJ436
+            22,57,46.8,38,40,27.84,HAT-P-1
+            16,20,36,41,2,52.8,HAT-P-2
+            13,44,22.56,48,1,44.4,HAT-P-3
+            15,19,57.92712,36,13,46.7904,HAT-P-4
+            19,4,9.84,36,37,58.8,TRES-1
+            19,7,14.0304,49,18,59.2992,TRES-2
+            17,52,7.032,37,32,46.1004,TRES-3
+            17,53,12.96,37,12,43.2,TRES-4
+            0,20,40.08,31,59,24,WASP-1
+            20,30,54.24,6,25,48,WASP-2
+            16,2,11.76,28,10,12,XO-1
+            7,48,6.4704,50,13,32.988,XO-2
+            4,21,53.5104,57,49,0.5988,XO-3
+            9,22,39.7267,50,36,13.927,HD 80607
+            21,50,54.7530,25,19,07.495,TYC 2206-1748-1
+            18,34,31.6249,35,39,41.546,WASP-3
+            19,28,59.3616,47,58,10.264,HAT-P-7
+            17,48,1.95,-35,00,19.48,MOA-2009-BLG-266
+ 
+          The following NAIF name/ID mappings were assigned to these
+          stars:
+ 
+            NAIF_BODY_NAME += ( &apos;PRETEND I CAR HD 90589&apos; )
+            NAIF_BODY_CODE += ( 9999000 )
+ 
+            NAIF_BODY_NAME += ( &apos;BET HYI HD 2151&apos; )
+            NAIF_BODY_CODE += ( 9999001 )
+ 
+            NAIF_BODY_NAME += ( &apos;NGC3114&apos; )
+            NAIF_BODY_CODE += ( 9999002 )
+ 
+            NAIF_BODY_NAME += ( &apos;CANOPUS HD 45348&apos; )
+            NAIF_BODY_CODE += ( 9999003 )
+ 
+            NAIF_BODY_NAME += ( &apos;ACHERNAR HD 10144&apos; )
+            NAIF_BODY_CODE += ( 9999004 )
+ 
+            NAIF_BODY_NAME += ( &apos;NGC7027&apos; )
+            NAIF_BODY_CODE += ( 9999005 )
+ 
+            NAIF_BODY_NAME += ( &apos;16 CYG A HD 186408&apos; )
+            NAIF_BODY_CODE += ( 9999006 )
+ 
+            NAIF_BODY_NAME += ( &apos;HD 60753&apos; )
+            NAIF_BODY_CODE += ( 9999007 )
+ 
+            NAIF_BODY_NAME += ( &apos;VEGA HD 172167&apos; )
+            NAIF_BODY_CODE += ( 9999008 )
+ 
+            NAIF_BODY_NAME += ( &apos;47 TUC NGC104&apos; )
+            NAIF_BODY_CODE += ( 9999009 )
+ 
+            NAIF_BODY_NAME += ( &apos;SIRIUS HD 48915&apos; )
+            NAIF_BODY_CODE += ( 9999010 )
+ 
+            NAIF_BODY_NAME += ( &apos;I CAR HD 79447&apos; )
+            NAIF_BODY_CODE += ( 9999011 )
+ 
+            NAIF_BODY_NAME += ( &apos;NGC3532&apos; )
+            NAIF_BODY_CODE += ( 9999012 )
+ 
+            NAIF_BODY_NAME += ( &apos;M11&apos; )
+            NAIF_BODY_CODE += ( 9999013 )
+ 
+            NAIF_BODY_NAME += ( &apos;HD 92044&apos; )
+            NAIF_BODY_CODE += ( 9999014 )
+ 
+            NAIF_BODY_NAME += ( &apos;OMI VEL CLUSTER IC2391&apos; )
+            NAIF_BODY_CODE += ( 9999015 )
+ 
+            NAIF_BODY_NAME += ( &apos;GJ436&apos; )
+            NAIF_BODY_CODE += ( 9999016 )
+ 
+            NAIF_BODY_NAME += ( &apos;HAT-P-1&apos; )
+            NAIF_BODY_CODE += ( 9999017 )
+ 
+            NAIF_BODY_NAME += ( &apos;HAT-P-2&apos; )
+            NAIF_BODY_CODE += ( 9999018 )
+ 
+            NAIF_BODY_NAME += ( &apos;HAT-P-3&apos; )
+            NAIF_BODY_CODE += ( 9999019 )
+ 
+            NAIF_BODY_NAME += ( &apos;HAT-P-4&apos; )
+            NAIF_BODY_CODE += ( 9999020 )
+ 
+            NAIF_BODY_NAME += ( &apos;TRES-1&apos; )
+            NAIF_BODY_CODE += ( 9999021 )
+ 
+            NAIF_BODY_NAME += ( &apos;TRES-2&apos; )
+            NAIF_BODY_CODE += ( 9999022 )
+ 
+            NAIF_BODY_NAME += ( &apos;TRES-3&apos; )
+            NAIF_BODY_CODE += ( 9999023 )
+ 
+            NAIF_BODY_NAME += ( &apos;TRES-4&apos; )
+            NAIF_BODY_CODE += ( 9999024 )
+ 
+            NAIF_BODY_NAME += ( &apos;WASP-1&apos; )
+            NAIF_BODY_CODE += ( 9999025 )
+ 
+            NAIF_BODY_NAME += ( &apos;WASP-2&apos; )
+            NAIF_BODY_CODE += ( 9999026 )
+ 
+            NAIF_BODY_NAME += ( &apos;XO-1&apos; )
+            NAIF_BODY_CODE += ( 9999027 )
+ 
+            NAIF_BODY_NAME += ( &apos;XO-2&apos; )
+            NAIF_BODY_CODE += ( 9999028 )
+ 
+            NAIF_BODY_NAME += ( &apos;XO-3&apos; )
+            NAIF_BODY_CODE += ( 9999029 )
+ 
+            NAIF_BODY_NAME += ( &apos;HD 80607&apos; )
+            NAIF_BODY_CODE += ( 9999030 )
+ 
+            NAIF_BODY_NAME += ( &apos;TYC 2206-1748-1&apos; )
+            NAIF_BODY_CODE += ( 9999031 )
+ 
+            NAIF_BODY_NAME += ( &apos;WASP-3&apos; )
+            NAIF_BODY_CODE += ( 9999032 )
+ 
+            NAIF_BODY_NAME += ( &apos;HAT-P-7&apos; )
+            NAIF_BODY_CODE += ( 9999033 )
+ 
+            NAIF_BODY_NAME += ( &apos;MOA-2009-BLG-266&apos; )
+            NAIF_BODY_CODE += ( 9999034 )
+ 
+        - text kernel providing times of encounter for the SDC pipeline
+ 
+            impacttoi_0007h2.tpc
+ 
+          This text kernel had the following contents:
+ 
+            Deep Impact/EPOXI at Hartley 2
+ 
+            Local times of DI TCA Hartley 2 as a leapsecond-corrected UTC
+ 
+            EOB_TOI:  local time that photons from Hartley 2 reach the
+                      Earth
+ 
+            DIF_TOI:  local time that photons from Hartley 2 reach the
+                      Deep Impact Flyby S/C
+ 
+            DII_TOI:  local time that the Deep Impact Impactor S/C hits
+                      Tempel 1
+ 
+            \begindata
+ 
+            EOB_TOI = ( &apos;2010-308T14:01:05.242&apos; )
+            DIF_TOI = ( &apos;2010-308T13:59:47.310&apos; )
+            DII_TOI = ( &apos;2005-185T05:44:34.200&apos; )
+ 
+            \begintext
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

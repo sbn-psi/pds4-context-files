@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-n-mag-4-summ-nlscoords-12sec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VG2 NEP MAG RESAMPLED SUMMARY NLS COORDINATES 12SEC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.neptune::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-n-mag-4-summ-nlscoords-12sec-v1.0__browserp_vg2-n-mag-4-summ-nlscoords-12sec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Connerney, J.E.P., M.H. Acuna, and N.F. Ness, The Magnetic
+                   Field at Neptune, J. Geophys, Res., 96 (supplement),
+                   pp. 19023-19042, 1991.
+            </reference_text>
+            <description>reference.CONNERNEYETAL1991</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Ness, N.F., M.H. Acuna, L.F. Burlaga, J.E.P. Connerney,
+                   R.P. Lepping, and F.M. Neubauer, Magnetic Fields at
+                   Neptune, Science, 246, 1473-1478, 1989.
+            </reference_text>
+            <description>reference.NESSETAL1989</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-N-MAG-4-SUMM-NLSCOORDS-12SEC-V1.0</data_set_id>
+        <data_set_name>VG2 NEP MAG RESAMPLED SUMMARY NLS COORDINATES 12SEC V1.0</data_set_name>
+        <data_set_release_date>1989-03-07</data_set_release_date>
+        <start_time>1989-08-24T18:00:00.557Z</start_time>
+        <stop_time>1989-08-26T08:19:48.379Z</stop_time>
+        <producer_full_name>DR. NORMAN F. NESS</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VG2 NEP MAG RESAMPLED SUMMARY NLS COORDINATES 12SEC V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            INTRODUCTION:
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      INTRODUCTION:
+ 
+      The Voyager magnetometer investigation (P.I.- Norman F.  Ness)
+      makes available archival data through the National Space
+      Science Data Center (NSSDC) located at NASA/GSFC as well as
+      through the Planetary Data System (PDS) and other channels.
+      The primary archive format, referred to as a &apos;summary tape&apos; or
+      &apos;conjoint summary tape&apos; has been used consistently since the
+      beginning of the Voyager mission to the outer planets (1977).
+      This format makes available magnetometer observations,
+      supplementary engineering and ephemeris data in one data file,
+      and it is one product of Voyager magnetometer routine data
+      processing.  Users are referred to the summary format data for
+      all data requirements with one exception: Neptune encounter
+      high field observations.  Neptune close approach observations
+      are archived separately and in a different format from that
+      with which many are familiar.  This high-field archive is
+      described here.
+ 
+      The special demands of the Neptune encounter flyby exceeded
+      (finally) the capabilities of the routine data processing
+      system conceived and implemented in the mid 1970&apos;s.  As a
+      result, it was necessary to implement an additional data
+      processing system with which the near-encounter, high field
+      magnetometer observations were processed.  The data products
+      available with this new data processing system are not
+      available in the same format as the standard Voyager
+      magnetometer observations; thus the need for a separate archive
+      and a new format description.  We appreciate the desirability
+      of a consistent archive format, but find no reasonable
+      alternative to the present solution.  We expect, however, that
+      users interested in near encounter observations will find this
+      new format both useful and easy to assimilate.
+ 
+      The magnetic fields investigation on Voyager carries a total of
+      four tri-axial ring core fluxgate magnetometers: two identical
+      high field magnetometers mounted on the spacecraft body (HFM&apos;s)
+      and two identical low field magnetometers (LFM&apos;s) arranged on a
+      13 m boom (Behannon et al., 1977).  The two LFM&apos;s automatically
+      step through a total of eight dynamic ranges (ranges 0 through
+      7) in response to changes in the measured field, starting with
+      a nominal dynamic range of 8 nT, and increasing to a nominal
+      dynamic range of 50,000 nT.  The two HFM&apos;s each operate in two
+      dynamic ranges (ranges 0 and 1) with nominal values of 50,000
+      nT and 200,000 nT.  In the Neptune encounter mode, each
+      magnetometer was sampled periodically with a temporal
+      resolution of between 0.600 s and 0.060 s, and
+      analog-to-digital converted with 12 bit resolution for
+      subsequent telemetry.  The magnitude of the maximum observed
+      field at Neptune (approximately 10,000 nT) was sufficiently
+      large that data from all four of the magnetometers proved
+      useful.
+ 
+      1) MAGNETOMETER DATA PRODUCT
+ 
+      ctime - Decimal seconds past 1966-01-02T00:00:00.000 (an
+      internal time format)
+      SCET - Spacecraft event time PDS/ISO standard time format.
+      B_R - Magnetic field vector radial component in units of
+      nanotesla; planetocentric right-handed spherical
+      coordinate system.
+      B_THETA - Magnetic field vector theta component, units
+      nanotesla.
+      B_PHI - Magnetic field vector phi component, units
+      nanotesla.
+ 
+      The vector magnetic field is rendered in a right handed
+      spherical coordinate system in which the angles THETA and PHI
+      are the usual polar angles, with THETA (colatitude) measured
+      from the axis of rotation and PHI increasing in the direction
+      of rotation.  The orientation of Neptune&apos;s pole is specified by
+      a right ascension of 298.90 and declination of 42.84 at the
+      time of the encounter, as given in the Jet Propulsion
+      Laboratory&apos;s distribution of physical constants dated 11/06/89.
+      Planetary longitudes are based on a 16.11 hour rotation period
+      (Warwick et al., 1989) adopted by the Voyager Project shortly
+      after the encounter.  The zero longitude is defined by the
+      requirement that the West Longitude of the spacecraft at 0356
+      SCET day 237 (near closest approach) be 167.7 NLS; West
+      Longitudes of the Neptune Longitude System (NLS) are simply
+      related to the angle PHI:
+ 
+      WLONG = 360. - PHI   (degrees)
+ 
+      This definition of the zero longitude was adopted by the
+      Voyager Project Steering Group in order to minimize differences
+      in longitudes resulting from changes in the assumed rotation
+      period.
+ 
+      The field values are instantaneous, not averaged, samples of
+      &apos;full word&apos; magnetic field observations.  These &apos;full word&apos;
+      observations are obtained from each of the Voyager low-field
+      (inboard and outboard) magnetometers and high-field (inboard
+      and outboard) magnetometers every 0.6 seconds.  (Note that
+      &apos;delta&apos; word samples are available at much higher sample rates
+      of 16.666 samples/second).  These &apos;full word&apos; samples are
+      resampled at a time resolution of 12 seconds for present
+      purposes (in the high-field region of the magnetosphere, these
+      data are highly redundant at 0.6 seconds resolution).  All four
+      triaxial fluxgate magnetometers operated throughout the
+      encounter.  The comprehensive data set is constructed of
+      inboard low-field magnetometer samples and outboard high-field
+      magnetometer samples as follows:
+ 
+         SCET 89 236 18 0 0 557
+           to 89 237 3 44 0 512: inboard low-field magnetometer
+         SCET 89 237 3 44 12 512
+           to 89 237 4 2 24 511: outboard high-field
+                                 magnetometer
+         SCET 89 237 4 2 36 511
+           to 89 238 8 19 48 379: inboard low-field magnetometer
+ 
+      This procedure was adopted as a result of an increased level of
+      spacecraft interference and telemetry anomalies experienced
+      during the Neptune encounter by MAG.  The composite set of
+      observations has good time continuity.  Spacecraft zeros are
+      assumed constant throughout the interval represented by this
+      data set, and for that reason users of low-field data are
+      referred to the summary tape format (standard archive format)
+      in which greater care is exercised with the estimation of
+      time-variable spacecraft zeros (differences of 0.05 nT or
+      less).  This data set extends from inbound MP to outbound MP
+      for the convenience of users who do not require better
+      weak-field accuracy than that quoted above.
+ 
+      2.) INTERNAL - A BINARY file of observations and supplementary
+      ephemeris data organized specifically for analyses of the
+      planetary magnetic field (Connerney, Acuna, and Ness, Journal
+      of Geophysical Research, 1991).  These data are resampled &apos;full
+      word&apos; observations of inboard low-field magnetometer and
+      outboard high-field magnetometer observations according to the
+      schedule given above.  These data are a subset of the Voyager 2
+      vector magnetic field observations obtained within 12 Rn radial
+      distance of Neptune (SCET day 236 hr 2340 to SCET day 237
+      0811).  During this time the field magnitude ranged from
+      approximately 10 nT to nearly 10,000 nT.  These data were
+      resampled (decimated in time without averaging) to produce
+      samples every 48, 24, and 12 seconds, with the highest temporal
+      resolution reserved for the closest approach interval (where
+      Voyager 2&apos;s motion relative to the planet was greatest).  Note
+      that the format of this ASCII file is different from that
+      described above; a segment of the file is reproduced here,
+      again beneath column headings inserted here only:
+ 
+      RADIUS     THETA      PHI    B_COMPONENT   SIGMA   TYPE
+      --------------------------------------------------------
+      1.349     0.685     4.614    6902.570     3.500     0
+      1.349     0.685     4.614    3598.230     3.500     1
+      1.349     0.685     4.614   -2457.560     3.500     2
+      1.339     0.669     4.602    7153.850     3.500     0
+      1.339     0.669     4.602    3555.870     3.500     1
+      1.339     0.669     4.602   -2591.020     3.500     2
+      1.334     0.661     4.595    7275.760     26.00     0
+      1.334     0.661     4.595    3540.800     26.00     1
+      1.334     0.661     4.595   -2623.690     26.00     2
+      1.328     0.652     4.589    7401.400     26.00     0
+      1.328     0.652     4.589    3506.690     26.00     1
+      1.328     0.652     4.589   -2720.230     26.00     2
+ 
+          RADIUS - Spacecraft radial distance in units of Rn
+                   (1 Rn = 24,765 km)
+           THETA - Theta coordinate of spacecraft in units of
+                   radians
+             PHI - Phi coordinate of spacecraft in units of
+                   radians
+     B_COMPONENT - Magnetic vector field component in units of
+                   nanotesla
+                   according to the value of identifier TYPE
+            TYPE - Magnetic field value designation
+                     TYPE = 0: Radial component
+                     TYPE = 1: Theta component
+                     TYPE = 2: Phi component
+                     TYPE = 3: Magnitude of magnetic field
+           SIGMA - Estimated standard deviation of the
+                   observation in units of nanotesla.
+ 
+ 
+      Each vector observation was weighted with the expected standard
+      deviation of the observation in the analysis of the internal
+      field.  This practice insures that each residual (the
+      difference between an observation and a model field) is
+      compared with its expected error.  For the standard deviation
+      of each measurement, we adopted 1 nT or the nominal
+      quantization stepsize of the measurement, whichever was
+      greater.  The former value approximates the variable
+      magnetospheric magnetic field &apos;noise&apos;, the unmodelled temporal
+      and spatial variations in the ambient field.  The latter
+      approximates the estimated measurement error ( 0.05 nT + 0.1%
+      of full scale).  The quantization step size of the measurement
+      is a function of the ambient field strength (or time), since
+      the Voyager magnetometers automatically change range in
+      response to changes in the ambient field.  In ranges 0 through
+      5, the quantization stepsize of the lfm measurement increased
+      from a nominal value of 0.005 nT to 1.1 nT.  In ranges 6 and 7
+      (the highest two ranges) each lfm was sampled with a
+      quantization stepsize of approximately 3.5 and 26 nT,
+      respectively.  Each hfm, operating in range 0 throughout the
+      encounter, was sampled with a quantization of approximately 26
+      nT.  Therefore, weights of 1 nT were used for observations
+      obtained in the lower instrument ranges, from SCET day 236/2340
+      to day 237/0330 and from day 237/0431 to 237/0811.  Weights of
+      3.5 nT were used for observations obtained in lfm range 6, from
+      SCET day 237/0330 to 237/0344 and from day 237/0402 to
+      237/0431.  Weights of 26 nT were used for the hfm observations,
+      from SCET day 237/0344 to 237/0402.  The segment of data
+      illustrated above includes the transition to hfm observations
+      with an associated estimated standard deviation of 26
+      nanoteslas.  The sampling interval was also adjusted according
+      to instrument range, with a 48 second sampling interval for lfm
+      range 5 observations, a 24 second sampling interval for lfm
+      range 6 observations, and a 12 second sampling interval for hfm
+      observations.
+ 
+      3.) INTERNAL FIELD MODEL COEFFICIENTS - electronic form A
+      Neptune spherical harmonic magnetic field model (Connerney et
+      al., 1991) is listed here in electronic format for use in
+      magnetic field calculations.  The model is based upon a partial
+      solution (44ev) to an 8th order expansion of the internal
+      field, as is necessary to adequately represent the field
+      measured by Voyager close to the surface of Neptune.  However,
+      few of the model coefficients are resolved, or uniquely
+      determined; these few are marked with an asterisk (*).  Some
+      additional coefficients are marginally resolved; these are
+      marked with a # sign.  The remaining coefficients are not
+      resolved, which means that they are not constrained by the
+      data, and may assume practically any value.  They are, however,
+      necessary to represent the field along the Voyager trajectory
+      close to the planet.  USERS ARE ENCOURAGED TO READ CAREFULLY
+      THE DISCUSSION IN THE NEPTUNE SPECIAL ISSUE OF JGR REGARDING
+      MODEL PARAMETER RESOLUTION AND USE OF THE MODEL COEFFICIENTS.
+ 
+      Beyond about 2.5 or 3 Rn, where higher order terms are
+      sufficiently attenuated, the quadrupole approximation is a good
+      approximation to the field globally.  These terms are (more or
+      less) uniquely determined.  At close-in radial distances, our
+      description of the field is necessarily incomplete.  The entire
+      expansion to eighth degree and order provided will well
+      describe the field in the vicinity of the Voyager trajectory.
+      Those parts of the field that the data are insensitive to are
+      effectively zero along the Voyager trajectory.  As one strays
+      further from the Voyager trajectory in close to the planet, the
+      real field may be expected to (increasingly) deviate from that
+      calculated with the entire expansion.  Given Voyager&apos;s close
+      approach (1.18 Rn) to the planet, any low-order approximation
+      to the field is expected to be inaccurate, even on the
+      spacecraft trajectory (Figure 9 in the paper by Connerney et
+      al.  illustrates this problem).  For use in modeling the field
+      near the planet, (at radial distances of less than
+      approximately 2 or 3 Rn), an octupole approximation to the
+      field is required to even grossly approximate the field.
+      Unfortunately, many of these coefficients are not well
+      resolved.
+ 
+      For global field modeling near the planet, we advocate use of a
+      model field consisting of orders 1, 2 and 3 (dipole,
+      quadrupole, and octupole) from Table 1.  This model, a subset
+      of the coefficients listed below, is referred to as the &apos;O8&apos;
+      model (the octupole (O) part of an eighth degree and order
+      spherical harmonic expansion).  This decision reflects a
+      compromise between the limited model parameter resolution
+      afforded by the Voyager trajectory and the anticipated demands
+      on the model.  However, some of the quadrupole and octupole
+      parameters are not well resolved and we expect these to be
+      inaccurate.  This is an inescapable consequence of the limited
+      information content of the observations.
+ 
+ 
+      ====================== TABLE 1 ======================
+ 
+ 
+      Neptune I8E1 44ev Magnetic Field Model
+      Schmidt-Normalized Spherical Harmonic Coefficients
+      Neptune Radius = 24,765 km
+ 
+      n         m        g(n,m)        h(n,m)
+      ___       ___     ________      ________
+      1         0       0.09732 *
+      1         1       0.03220 *    -0.09889 *
+      2         0       0.07448 #
+      2         1       0.00664 #     0.11230 *
+      2         2       0.04499 *    -0.00070 *
+      3         0      -0.06592 *
+      3         1       0.04098      -0.03669 #
+      3         2      -0.03581       0.01791 #
+      3         3       0.00484 #    -0.00770 #
+      4         0       0.02243
+      4         1       0.00557      -0.01889 #
+      4         2       0.03099       0.02607
+      4         3      -0.01287       0.01204
+      4         4      -0.05073      -0.00456
+      5         0      -0.00202
+      5         1      -0.00229      -0.00739
+      5         2       0.00526      -0.01134
+      5         3      -0.02846       0.01067
+      5         4      -0.01425      -0.01551
+      5         5      -0.02835      -0.01090
+      6         0      -0.02175
+      6         1      -0.00466       0.04432
+      6         2      -0.01269      -0.01598
+      6         3      -0.02233       0.01721
+      6         4      -0.00887       0.00370
+      6         5      -0.00496      -0.01932
+      6         6       0.00755       0.01439
+      7         0       0.01671
+      7         1       0.01678      -0.03159
+      7         2       0.01625       0.01862
+      7         3       0.02157      -0.01120
+      7         4      -0.00483       0.00515
+      7         5       0.01873       0.01923
+      7         6       0.00584      -0.02749
+      7         7       0.00664       0.03344
+      8         0      -0.00689
+      8         1       0.00238       0.01446
+      8         2      -0.00090      -0.00079
+      8         3      -0.01304       0.01043
+      8         4       0.00311      -0.00022
+      8         5      -0.00367      -0.00465
+      8         6      -0.00249       0.01043
+      8         7       0.01333      -0.02138
+      8         8      -0.01239       0.02519
+ 
+ 
+      * = Coefficient WELL RESOLVED (Rxx &gt; 0.95)
+      # = Coefficient MARGINALLY RESOLVED (0.75 &lt; Rxx &lt; 0.95)
+      ALL OTHER COEFFICIENTS are POORLY RESOLVED or UNRESOLVED
+      Refer to text of Connerney et al., 1991, for explanation.
+ 
+      REFERENCES:
+ 
+      Behannon, K.  W., M. H.  Acuna, L. F.  Burlaga, R. P.  Lepping,
+      N. F.  Ness, and F. M.  Neubauer, &apos;Magnetic field experiment
+      for Voyagers 1 and 2&apos;, Space Sci.  Rev., 21, 235-257, 1977.
+ 
+      Connerney, J. E.  P., M. H.  Acuna, and N. F.  Ness, &apos;The
+      magnetic field of Neptune&apos;, J. Geophys.  Res., vol.  96,
+      Supplement, 19023-19042, 1991.
+ 
+      Ness, N.  F., M. H.  Acuna, L. F.  Burlaga, J. E. P.
+      Connerney, R. P.  Lepping, and F. M.  Neubauer, &apos;Magnetic
+      fields at Neptune&apos;, Science, 246, 1473-1478, 1989.
+ 
+      Warwick, J. W.  et al., &apos;Voyager planetary radio astronomy at
+      Neptune&apos;, Science, 246, 1498-1501, 1989.
+ 
+ 
+      Processing Level Id            : 4
+      Software Flag                  : Y
+      Processing Start Time          : UNK
+      Processing Stop Time           : UNK
+ 
+ 
+    Parameters
+    ==========
+ 
+      Data Set Parameter &apos;MAGNETIC FIELD VECTOR&apos;
+      ------------------------------------------
+        A derived parameter which combines the 3 orthogonal magnetic
+        field component measurements.
+ 
+        Sampling Parameter Name        : TIME
+        Data Set Parameter Name        : MAGNETIC FIELD VECTOR
+        Sampling Parameter Resolution  : 12.000000
+        Minimum Sampling Parameter     : 19770820120000.000000
+        Maximum Sampling Parameter     : UNK
+        Sampling Parameter Interval    : 12.000000
+        Minimum Available Sampling Int : 0.060000
+        Data Set Parameter Unit        : NANOTESLA
+        Noise Level                    : 0.006000
+        Sampling Parameter Unit        : SECOND
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : MAGNETIC FIELD VECTOR
+      Instrument Parameter Name       : MAGNETIC FIELD COMPONENT
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : MAGNETIC FIELD VECTOR
+      Instrument Parameter Name       : WAVE MAGNETIC FIELD INTENSITY
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID    : N/A
+        Software              : UNK
+        Product Data Set ID   : VG2-N-MAG-4-SUMM-NLSCOORDS-12SEC-V1.0
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      The data provider (Dr. J.E.P.  Connerney) has removed data from
+      this dataset which was of questionable quality.  All data in
+      this dataset can be used with the highest level of confidence.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XM-11A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

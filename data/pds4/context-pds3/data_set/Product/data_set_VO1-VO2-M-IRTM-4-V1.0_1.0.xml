@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vo1-vo2-m-irtm-4-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VO1/VO2 MARS INFRARED THERMAL MAPPER RESAMPLED DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.viking::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:irtm.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:irtm.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.deimos::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.phobos::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-irtm-4-v1.0__browserp_geo_vo1_vo2-m-irtm-4-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-irtm-4-v1.0__dvo_geo_offline::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-irtm-4-v1.0__dvo_geo_vo1_vo2-m-irtm-4-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Chase, S.C., H.W. Eyerly, J.L. Engel, H.H. Kieffer,
+                   F.D. Palluconi, and D. Schofield,  Viking Infrared
+                   Thermal Mapper, Applied Optics, Vol. 17, No. 8,
+                   15 April 1978.
+            </reference_text>
+            <description>reference.CHASE_ETAL_1978</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kieffer, H.H., B.M. Jakosky, T.Z. Martin, E.D. Miner,
+                   F.D. Palluconi, and A.R. Peterfreund, Thermal and Albedo
+                   Mapping of Mars during the Viking Primary Mission,
+                   Journal of Geophysical Research, Vol. 82, No. 28, 1977.
+            </reference_text>
+            <description>reference.KIEFFER_ETAL_1977</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VO1/VO2-M-IRTM-4-V1.0</data_set_id>
+        <data_set_name>VO1/VO2 MARS INFRARED THERMAL MAPPER RESAMPLED DATA V1.0</data_set_name>
+        <data_set_release_date>1989-11-01</data_set_release_date>
+        <start_time>1976-06-22T09:20:33Z</start_time>
+        <stop_time>1980-07-30T22:13:21.000Z</stop_time>
+        <producer_full_name>HUGH H. KIEFFER</producer_full_name>
+        <citation_text>
+            Kieffer, H. H., VO1/VO2 MARS INFRARED THERMAL MAPPER RESAMPLED
+            DATA V1.0, VO1/VO2-M-IRTM-4-V1.0, NASA Planetary Data System, 1989
+        </citation_text>
+        <data_set_terse_desc>
+            This archive contains results from the Viking Orbiter Infrared
+            Thermal Mapper (IRTM) investigation.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the Infrared Thermal Mapping (IRTM) data
+            of Mars acquired by the Viking orbiters. The database contains
+            the time, geometry, and radiative parameters obtained by the IRTM
+            instrument. Included in the database for each measurement are
+            model temperatures of Mars represent the average Martian response
+            to the temporal variation of insolation. The reference
+            &apos;Thermal and Albedo Mapping of Mars during the Viking
+            Primary Mission&apos;, Journal of Geophysical Research, Vol. 82,
+            No. 28, 1977, describes how the thermal emission and reflected
+            energy measured by the various channels on the Infrared Thermal
+            Mapper are used to reveal wide variations in the Martian surface
+            properties. There is a description of how the surface thermal
+            inertias are mapped and correlated with the surficial geologic
+            units. The derivation of model and surface temperatures are
+            described. The data set includes latitude and longitude for each
+            measured point, as well as emission angle, solar incidence angle,
+            the position of the sun, and other parameters that help to locate
+            the position of the spacecraft relative to Mars. (For further
+            information see the Confidence_Level_Note).
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set contains the Infrared Thermal Mapping (IRTM) data
+      of Mars acquired by the Viking orbiters.  The database contains
+      the time, geometry, and radiative parameters obtained by the
+      IRTM instrument.  Included in the database for each measurement
+      are model temperatures of Mars; this model attempts to
+      represent the average Martian response to the temporal
+      variation of insolation.  The reference &apos;Thermal and Albedo
+      Mapping of Mars during the Viking Primary Mission&apos;, Journal of
+      Geophysical Research, Vol.  82, No.  28, 1977, describes how
+      the thermal emission and reflected energy measured by the
+      various channels on the Infrared Thermal Mapper are used to
+      reveal wide variations in the Martian surface properties.
+      There is a description of how the surface thermal inertias are
+      mapped and correlated with the surficial geologic units.  The
+      derivation of model and surface temperatures are described.
+      The data set includes latitude and longitude for each measured
+      point, as well as emission angle, solar incidence angle, the
+      position of the sun, and other parameters that help to locate
+      the position of the spacecraft relative to Mars.  (For further
+      information see the Confidence_Level_Note).
+ 
+      Processing Level Id              : 4
+      Software Flag                    : Y
+      Processing Start Time            : 1976
+      Processing Stop Time             : 1980
+      Native Start Time                : 415147712 FDSC
+      Native Stop Time                 : 964559552 FDSC
+ 
+ 
+    Parameters
+    ==========
+ 
+      Data Set Parameter &apos;BRIGHTNESS TEMPERATURE&apos;
+      -------------------------------------------
+        The kinetic temperature of an ideal blackbody which, if
+        observed with the spectral response of the instrument
+        spectral channel in question would yield the observed
+        radiance.
+ 
+        Data Set Parameter Name        : BRIGHTNESS TEMPERATURE
+        Data Set Parameter Unit        : KELVIN
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 1.12
+        Sampling Parameter Interval    : 1.12
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;DERIVATIVE OF MODEL WITH ALBEDO&apos;
+      ----------------------------------------------------
+        The differential dependence of model temperature upon the
+        assumed surface bolometric bond albedo, at the nominal value
+        of model thermal inertia.
+ 
+        Data Set Parameter Name        : DERIVATIVE OF MODEL WITH
+                                         ALBEDO
+        Data Set Parameter Unit        : DEGREES
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : N/A
+        Sampling Parameter Interval    : N/A
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;DERIVATIVE OF MODEL WITH INERTIA&apos;
+      -----------------------------------------------------
+        The differential dependence of model temperature upon the
+        assumed surface thermal inertia, at the nominal value of
+        model bolometric bond albedo.
+ 
+        Data Set Parameter Name        : DERIVATIVE OF MODEL WITH
+                                         INERTIA
+        Data Set Parameter Unit        :
+               KELVIN / (10**(-3)*CAL*CM**(-2)*S**(-1/2)*K**(-1))
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : N/A
+        Sampling Parameter Interval    : N/A
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;LAMBERT ALBEDO&apos;
+      -----------------------------------
+        The reflectance of a grey Lambert (ideal diffuse) smooth
+        surface parallel to the target body geoid which would yield
+        the observed reflected radiation in the absence of any
+        atmosphere.
+ 
+        Data Set Parameter Name        : LAMBERT ALBEDO
+        Data Set Parameter Unit        : N/A
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 1.12
+        Sampling Parameter Interval    : 1.12
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;MINNAERT ALBEDO&apos;
+      ------------------------------------
+        Albedo computed presuming a Minnaert behavior, with the
+        Minnaert exponent k equal to 0.95.  A_m = Visual_Brightness *
+        cos(incidence angle)**-k * cos(emission angle)**(1.-k).
+ 
+        Data Set Parameter Name        : MINNAERT ALBEDO
+        Data Set Parameter Unit        : N/A
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 1.12
+        Sampling Parameter Interval    : 1.12
+        Minimum Available Sampling Int : 1.12
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;MODEL TEMPERATURE&apos;
+      --------------------------------------
+        The surface kinetic temperature calculated using a nominal
+        set of parametric values for a smooth planet of uniform
+        physical properties and for the latitude, time of day, and
+        season of the observation.  The model used for the Viking
+        IRTM is described in the appendix of [KIEFFER_ETAL_1977].
+ 
+        Data Set Parameter Name        : MODEL TEMPERATURE
+        Data Set Parameter Unit        : KELVIN
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : N/A
+        Sampling Parameter Interval    : N/A
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;PHASE CORRECTED ALBEDO&apos;
+      -------------------------------------------
+        Albedo computed using a phase dependence derived from IRTM
+        observations (See [KIEFFER_ETAL_1977]).  A_g = A_l *
+        (1.+0.000146*exp(0.075*phase_angle&lt;degrees&gt;) where A_l =
+        Visual_brightness / cos(incidence angle)
+ 
+        Data Set Parameter Name        : PHASE CORRECTED ALBEDO
+        Data Set Parameter Unit        : N/A
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 1.12
+        Sampling Parameter Interval    : 1.12
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;SINGLE POINT THERMAL INERTIA&apos;
+      -------------------------------------------------
+        The thermal inertia which would yield the observed brightness
+        temperature, based on the observed Lambert albedo, the model
+        temperature and partial derivatives of model temperature with
+        albedo and inertia, and an approximation of the non-linear
+        dependence of model temperatures with respect to thermal
+        inertia.  If the observation was at night, so that no measure
+        of albedo was made, the albedo is assumed to be the same as
+        in the nominal thermal model.
+ 
+        Data Set Parameter Name        : SINGLE POINT THERMAL
+                                         INERTIA
+        Data Set Parameter Unit        :
+                             10**(-3)*CAL*CM**(-2)*S**(-1/2)*K**(-1)
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : N/A
+        Sampling Parameter Interval    : N/A
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : N/A
+ 
+ 
+      Data Set Parameter &apos;VISUAL BRIGHTNESS&apos;
+      --------------------------------------
+        The radiant energy measured in the IRTM solar band (0.3-3.0
+        microns), normalized to that expected for an ideal Lambert
+        reflector observed under normal incidence at the current
+        heliocentric range of the target body.
+ 
+        Data Set Parameter Name        : VISUAL BRIGHTNESS
+        Data Set Parameter Unit        : WATT/(METER*METER)/STERADIAN
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 1.12
+        Sampling Parameter Interval    : 1.12
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : N/A
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : MODEL TEMPERATURE
+      Instrument Parameter Name       : N/A
+      Important Instrument Parameters : 0
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : MODEL TEMPERATURE
+      Instrument Parameter Name       : N/A
+      Important Instrument Parameters : 0
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : DERIVATIVE OF MODEL WITH
+                                        ALBEDO
+      Instrument Parameter Name       : N/A
+      Important Instrument Parameters : 0
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : DERIVATIVE OF MODEL WITH
+                                        ALBEDO
+      Instrument Parameter Name       : N/A
+      Important Instrument Parameters : 0
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : DERIVATIVE OF MODEL WITH
+                                        INERTIA
+      Instrument Parameter Name       : N/A
+      Important Instrument Parameters : 0
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : DERIVATIVE OF MODEL WITH
+                                        INERTIA
+      Instrument Parameter Name       : N/A
+      Important Instrument Parameters : 0
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : LAMBERT ALBEDO
+      Instrument Parameter Name       : RADIANCE D
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : LAMBERT ALBEDO
+      Instrument Parameter Name       : RADIANCE D
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : MINNAERT ALBEDO
+      Instrument Parameter Name       : RADIANCE D
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : MINNAERT ALBEDO
+      Instrument Parameter Name       : RADIANCE D
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : VISUAL BRIGHTNESS
+      Instrument Parameter Name       : RADIANCE D
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : VISUAL BRIGHTNESS
+      Instrument Parameter Name       : RADIANCE D
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE A
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE A
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE B
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE B
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : PHASE CORRECTED ALBEDO
+      Instrument Parameter Name       : RADIANCE D
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : PHASE CORRECTED ALBEDO
+      Instrument Parameter Name       : RADIANCE D
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE C1
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE C1
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE C2
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE C2
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE C3
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : BRIGHTNESS TEMPERATURE
+      Instrument Parameter Name       : RADIANCE C3
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : SINGLE POINT THERMAL
+      INERTIA
+      Instrument Parameter Name       : RADIANCE A
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : SINGLE POINT THERMAL
+                                        INERTIA
+      Instrument Parameter Name       : RADIANCE A
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID          : TSDR
+        Software                    : XG SYSTEM
+        Product Data Set ID         : VO1/VO2-M-IRTM-4-V1.0
+ 
+ 
+      Software &apos;XG SYSTEM&apos;
+      --------------------
+        Retrieves and analyzes data from the Viking 1 and 2 Infrared
+        Thermal Mapper Data (IRTM) and Mars Atmospheric Water
+        Detector (MAWD) databases.  Data variables may be printed,
+        plotted, or mapped while applying constraints to time,
+        geometry or the variables themselves.
+ 
+        Software Name               : XG SYSTEM
+        Software Type               : N/A
+        Software Release Date       : 1989-02-28
+        Node ID                     : RADIOMETRY
+        Cognizant Engineer          : DEBBIE A. COOK
+        Software Access Description : NOT ACCESSIBLE THROUGH PDS
+                                      CATALOG - CONTACT NODE.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      Initially in the mission, orbit updates were done daily; later,
+      they were done only once a week.  Therefore at some times, the
+      precise position of the spacecraft was not known accurately
+      enough to calculate the position of the spacecraft around Mars.
+      These timing offsets in the position of the spacecraft in turn
+      introduced errors in latitude and longitude of the thermal
+      observations.  The user should be aware of these discrepancies
+      in latitude and longitude, which affect primarily
+      near-periapsis data late in the mission.  The following is a
+      description of event and error flags that are captured in the
+      quality word definition for each 1.12 second interval (the time
+      between successive measurements known as ICK).
+ 
+      QUALITY WORD DEFINITION
+ 
+      Bit flags pertaining to the data at the corresponding time
+      (ICK).  Bits are numbered from least significant to most
+      significant, 0 to 15.  Bits 0 through 9 represent conditions at
+      the time of observation, and do not necessarily imply poor
+      quality.  Bits 11-14 form a sequence of data quality
+      indicators, from good (all 4 bits off) to terrible (bit 14 on).
+      Thus the word itself may be used in an algebraic quality test.
+      (QUAL &lt; 2048 = 2**11 if data must be of best quality)
+ 
+       VAL BIT
+ 
+         1 0   DC restore has just occurred in the IRTM instrument
+         2 1   Scan platform is in motion
+         4 2   Telemetry was used for pitch, roll and yaw
+               computations
+         8 3   Telemetry was used for cone and clock computations
+        16 4   Image motion compensation geometry correction
+               required
+        32 5   Geometry corrected unless bit 14 is on
+        64 6   Cone slew rate less than or = 1/8 deg/ICK
+               (.1 deg / sec)
+       128 7   Clock slew rate GE 1/8 deg/ICK (.1 deg/sec)
+       256 8   Cone slew direction negative
+       512 9   Clock slew direction negative
+      1024 10  VO-2 anomaly correction applied (orbits 55-84)
+               (bit 13 also set) or quadratic fit used for space
+               values (VO-2 orbits greater than 84)
+      2048 11  Some channel(s) despiked
+      4096 12  Uncertainty &lt; 8 DN for some channel(s) but missing
+               space value or high drift rate
+      8192 13  VO-2 encoder dc restore on reference plate (visual
+               band data probably OK)
+      16384 14 Uncertainty 7 DN or greater for some channel(s)
+               due to missing space value or high drift rate or
+               imaging sequence with only 1 space look
+      32768 15 Totally bad data at this ICK - do not use
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>75-075A-02C</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>75-083A-02C</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dawn-x-grand-2-edr-cruise-counts-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DAWN GRAND RAW (EDR) CRUISE CHECKOUT/BACKGROUND COUNTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.dawn_mission_to_vesta_and_ceres::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:grand.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dawn-x-grand-2-edr-cruise-counts-v1.0__browserp_dawn-x-grand-2-edr-cruise-counts-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Prettyman, T.H., W.C. Feldman, F.P. Ameduri, B.L. Barraclough, E.W. Cascio,
+                   K.R. Fuller, H.O. Funsten, D.J. Lawrence, G.W. McKinney, C.T. Russell, S.A.
+                   Soldner, S.A. Storms, C. Szeles, and R.L. Tokar, Gamma-ray and neutron
+                   spectrometer for the Dawn mission to 1 Ceres and 4 Vesta, IEEE Trans. Nucl.
+                   Sci., Volume 50, Issue 4, pp. 1190-1197, August 2003,
+                   doi:10.1109/TNS.2003.815156
+            </reference_text>
+            <description>reference.PRETTYMANETAL2003B</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DAWN-X-GRAND-2-EDR-CRUISE-COUNTS-V1.0</data_set_id>
+        <data_set_name>DAWN GRAND RAW (EDR) CRUISE CHECKOUT/BACKGROUND COUNTS V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2007-10-16T17:36:42Z</start_time>
+        <stop_time>2010-07-25T21:06:51Z</stop_time>
+        <producer_full_name>THOMAS H. PRETTYMAN</producer_full_name>
+        <citation_text>
+            Prettyman, T.H., DAWN GRAND RAW (EDR) CRUISE CHECKOUT/BACKGROUND
+            COUNTS V1.0. DAWN-X-GRAND-2-EDR-CRUISE-COUNTS-V1.0. NASA
+            Planetary Data System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            The GRaND Experimental Data Records (EDR) are a complete,
+            time-ordered collection of state-of-health, gamma ray and neutron
+            counting data, determined by reversible operations on the raw
+            telemetry data.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The GRaND EDR are a time-ordered collection of gamma ray and
+            neutron counting data and histograms acquired by GRaND during all
+            phases of the Dawn mission. The dataset includes state-of-health
+            data, such as temperature and voltage readings, needed for the
+            analysis of the counting data. The EDR is an intermediate data
+            product derived from the raw data records using reversible
+            operations. All higher order data products are derived from the
+            EDR. An automated pipeline is used to process the EDR from the
+            raw data records.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Overview
+  ========
+ 
+The Dawn Mission&apos;s Gamma Ray and Neutron Detector (GRaND) is a nuclear
+spectrometer that will collect data needed to map the elemental composition
+of the surfaces of 4-Vesta and 1-Ceres [PRETTYMANETAL2003B].  GRaND measures
+the spectrum of planetary gamma rays and neutrons, which originate from
+cosmic ray interactions and radioactive decay within the surface, while the
+spacecraft (S/C) is in orbit around each body. The instrument, which is
+mounted on the +Z deck of the S/C, consists of 21 sensors designed to
+separately measure radiation originating from the surface of each asteroid
+and background sources, including the space energetic particle environment
+and cosmic ray interactions with the spacecraft.  The nuclear spectroscopy
+data provided by GRaND will be analyzed to determine the abundance of major
+rock forming elements, such as O, Fe, Ti, Si, Al, Mg, Ca, Cl and radioactive
+elements, including K and Th, as well as light-elements such as H, C, and
+N, which are constituents of ices and the products of aqueous alteration
+of silicate minerals and ices.
+ 
+The GRaND Experimental Data Records (EDR) are a time-ordered collection of
+gamma ray and neutron counting data and histograms acquired by GRaND during
+different phases of the Dawn Mission, including assembly-test-and-launch-
+operations (ATLO), cruise, Mars Gravity Assist (MGA), and science mapping
+at 4-Vesta and 1-Ceres.  The dataset also includes state-of-health data
+(instrument settings, temperature and voltage readings) needed for
+scientific analysis of the neutron and gamma ray data. The EDR is an
+intermediate data product (Level 1A) that is derived from Raw Data Records
+(Level 0) using reversible operations.  The Level 1A are the lowest level
+of GRaND data archived in the PDS, from which all higher order data sets are
+derived.  To support timely delivery of higher order products, the Level 1A
+data are processed using an automated pipleline, which operates on Level 0
+data when it is queried by the DSC.
+ 
+The data set consists primarily of ASCII tables, divided into three
+functional categories: auxilliary information (AUX); gamma ray spectra and
+event data (GAMMA); and neutron spectra and event data (NEUTRON).  Gamma ray
+and neutron event data are recorded in binary files.  Some of the data in the
+ASCII files, which are human-readable, are repeated in the binary files to
+aid in the verification of user-written routines.
+ 
+The telemetry for GRaND consists of science and state-of-health data,
+accumulated over time intervals, which are commandable. Each science data
+record includes scalers, histograms, and event data accumulated over an
+interval specified by the commandable parameter TELREADOUT (s).  The state of
+health data include average temperatures, voltages, and instrument state data
+acquired during time intervals specified by the commandable parameter
+TELSOH (s).  Both intervals are adjustable, depending on the measurement
+conditions and objectives for each mission phase.  During mapping, TELREADOUT
+will be set to sub-sample spatial pixels defined on the surface of Vesta or
+Ceres.  During cruise, TELREADOUT was generally set to large values (e.g.,
+210s) to minimize data volume.  TELSOH is generally set to subsample the
+science accumulation interval, providing information needed to determine
+whether and how many times the science scalers have rolled over and
+information needed to precisely determine the start time of the science
+acquisition interval.
+ 
+The data are downloaded regularly from the spacecraft by the Ground Data
+System.  The UCLA Dawn Science Center (DSC) captures all of the payload
+instrument telemetry frames as binary files after the data have been cleaned
+up in post-pass processing to produce reconstructed Level-0 data.  The files
+are inventoried within the Dawn Science Database (DSDb) and are retrieved by
+the GRaND team, which unscrambles, decompresses, decodes, and formats the raw
+telemetry data into scientifically useful data files.  The decompressed and
+decoded data, along with their required PDS documentation, form the Level-1A
+EDR data sets.  The Level-1a EDR data are determined by performing reversible
+operations on the Level-1a data set, to produce counting data and spectral
+products useful for mapping.
+ 
+  Parameters
+  ==========
+ 
+The EDR data are derived from Level 0 raw data queried by the DSC over
+irregular time periods, generally determined by the pattern of downlinks
+from the spacecraft.  The DSC divides the Level 0 data into separate files
+containing state of health and science data packets.  The Level 1a
+pipeline operates on these files to produce the Level 1a archive.  The
+directory structure for the Level 1a data is given by
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC    (top level directory)
+        LEVEL1A_AUX             (directory containing auxiliary data)
+        LEVEL1A_GAMMA           (directory containing gamma ray counting data)
+        LEVEL1A_NEUTRON         (directory containing neutron counting data)
+ 
+The top level directory name contains the SCET UTC dates for the first and
+last science data records (Y1M1D1 and Y2M2D2, respectively), and the creation
+date (YCMCDC) for the archive.  For example, for
+GRD-L1A-090217-090218_090517, the first science data record was acquired
+on 17-Feb-2009.  The last science data record was acquired on 18-Feb-2009.
+The archive was created by the pipeline on 17-May-2009.
+ 
+The LEVEL1A_AUX directory contains the following files derived from the
+Level 0 state-of-health and science data:
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-STA.TAB - Instrument state file.
+     The instrument state file contains the instrument settings, including
+     the mode, power supply states, high voltage settings, the data
+     accumulation interval, and coincidence windows.  The first record of the
+     state-of-health file is recorded in the state file, stamped with SCET
+     UTC.  Thereafter, rows are added only when the instrument settings
+     change.
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-RDG.TAB - Instrument readings file.
+     This file contains a time-ordered list of temperature and voltage
+     readings averaged over each state-of-health accumulation interval
+     (TELSOH), converted to physical units.
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-SOH-SCL.TAB - State of health scaler data.
+     This file contains a time-ordered list of the scaler data recorded in
+     the state-of-health telemetry.  The accumulation time for the scaler
+     data is TELSOH.  Note that the scalers are reset at the end of each
+     science accumulation interval (TELREADOUT).  If the state-of-health
+     accumulation interval is selected to subsample the science interval,
+     then the state-of-health scalers can be used to detect and correct for
+     rollover of the science scalers, such as the dead time counter.
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-SCI-SCL.TAB - Science scaler data.
+     This file contains a time-ordered list of the scaler data recorded in
+     the science telemetry.  The accumulation interval for the scalers is
+     TELREADOUT.
+ 
+     For each science and state of health record, values for 23 scalers are
+     recorded in the -SCI-SCL.TAB and -SOH-SCL.TAB files, respectively.
+ 
+     The scalers provide the following information:
+ 
+     Index         Description
+     ------------  -----------
+     0             Dead time counts
+     1             BGO overload events
+     2             CZT overload events
+     3             +Z phoswich overload events
+     4             -Y BLP overload events
+     5             +Y BLP overload events
+     6             -Z phoswich overload events
+     7             +Z phoswich CAT4 events
+     8             -Y BLP CAT4 events
+     9             +Y BLP CAT4 events
+     10            -Z phoswich CAT4 events
+     11            Early second interaction events
+     12            Multiple-crystal CZT events
+     13            Valid CZT events (CAT10)
+     14            Coincidence BGO and CZT events (CAT7)
+     15            Coincidence of three or more sensor elements
+     16            Total events processed by GRaND
+     17            Number of single CZT events (CAT10) in the
+                   gamma ray event buffer
+     18            Number of BGO-CZT coincidence events (CAT7) in the
+                   gamma ray event buffer
+     19            Number of events (CAT4) in the neutron event
+                   buffer
+     20            Total number of events allowed in the gamma
+                   ray event buffer
+     21            Number of single CZT events (CAT10) allowed in
+                   the gamma ray event buffer
+     22            Number of events allowed in the neutron event
+                   buffer
+ 
+     Note that indices 0 through 19 are for 16-bit counters, which are reset
+     at the end of every science accumulation interval specified by
+     TELREADOUT. If the state-of-health accumulation interval is adjusted
+     to subsample the science accumulation interval (for example,
+     TELREADOUT = n * TELSOH, where n is a whole number), then the scalers
+     will monotonically increase during each acquisition interval, unless
+     overflow occurs.  A rollover counter is not provided; however, for
+     situations in which the counting rate is high or the accumulation
+     intervals are large, the number of rollovers for individual scalers
+     can be determined from the SOH scaler data if TELSOH is set to
+     subsample the science accumulation interval.  In situations where the
+     counting rate is changing, abrupt changes in the scaler varues can
+     also indicate that rollover has occurred.  Rollover is treated in
+     production of the Level1b RDR data.
+ 
+     Indices 20 through 21 are maximum values for the number of events that
+     can be recorded in the event buffers.  The number of gamma ray and
+     neutron events is commandable and can be adjusted.  The total number of
+     gamma ray and neutron events must be less than 6677.
+ 
+The LEVEL1A_GAMMA directory contains the following science data files:
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BGO.TAB
+     This file contains a time-ordered list of pulse height spectra (1024
+     channels with units of uncorrected counts/channel) acquired by the BGO
+     sensor.
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-EMG.DAT
+     This file contains gamma ray event data as a binary time series.
+ 
+The LEVEL1A_NEUTRON directory contains the following science data files:
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-PHOS_MZ.TAB
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-PHOS_PZ.TAB
+     These files contain time ordered lists of the 256-channel CAT1 pulse
+     height spectra for the +Z and -Z phoswiches.  Note that the naming
+     convention for the top, bottom, and side scintillators is determined by
+     the instrument coordinate system.
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BGO2_MZ.TAB
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BGO2_PZ.TAB
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BGO2_MY.TAB
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BGO2_PY.TAB
+     These files contain time ordered lists of the 64-channel CAT2 BGO pulse
+     height spectra for coincidences with the BGO and the four BLP sensors.
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BLP2_MZ.TAB
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BLP2_PZ.TAB
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BLP2_MY.TAB
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-BKP2_PY.TAB
+     These files contain time ordered lists of the 64-channel CAT2 BLP pulse
+     height spectra for coincidences with the BGO and the four BLP sensors.
+ 
+     GRD-L1A-Y1M1D1-Y2M2D2_YCMCDC-EMN.DAT
+     This file contains the neutron event data as a binary time series.
+ 
+  Processing
+  ==========
+ 
+The Level 1A data are automatically processed using a pipeline, which
+operates on files queried by the DSC over selected time intervals.  Each DSC
+query separates the GRaND data into files containing state-of-health and
+science data records, in the order in which they were received on the ground
+and with corrupted packets removed.  The state-of-health data are further
+divided into real time telemetry data and playback data.  The science data
+are stored in a single raw data file.
+ 
+The pipeline merges the state-of-health data from the playback and realtime
+files to produce a time-ordered-list of records.  Selected data are extracted
+to produce the Level 1A AUX files.  Internal temperature readings are
+converted from data numbers (DN) to engineering units using a linear function
+determined during ground calibration: T (degrees C) = 0.4354 DN - 0.4354.
+The high voltage readings for the high voltage power supplies are reported
+in engineering units using the conversion V (Volts) = 1500 DN/255.  The
+CZT differential bias voltage is converted using V (Volts) = 0.405 DN.
+ 
+The science data are decompressed, decoded, separated by functionality
+and written as time-ordered ASCII tables and binary time series.  The
+raw histograms (CAT1, CAT2, and CAT9) are represented as 8 bit numbers which
+are decompressed and reported as 16 bit, unsigned integers.
+ 
+The gamma ray event buffer can store up to 3876 events for each science
+accumulation interval.  Each event is packed into 3 bytes, which
+contain the ID of the CZT sensor, the CZT pulse amplitude, and the BGO pulse
+amplitude.  The vales for each event are extracted and stored as a binary
+time series.  When the gamma ray event buffer is not full, null events are
+reported as zeros, such that each row of the Level 1A time series contains
+3876 events.
+ 
+The neutron event buffer can store up to 2800 events for each science data
+accumulation interval.  Each event is packed into 3 bytes, which are
+contain the BLP sensor ID and pulse amplitude for the first
+interaction, the BLP sensor ID and pulse amplitude for the second
+interaction, and the time between pulses.  The time between pulses has
+units of 100 nanoseconds/DN.  The vales for each event are extracted and
+stored as a binary time series.  The pulse amplitudes are uncalibrated
+for Level 1A. When the gamma ray event buffer is not full, null events
+are reported as zeros, such that each row of the Level 1A time series
+contains 2800 events.
+ 
+  Ancillary Data
+  ==============
+ 
+The Level 1A data include ancilliary data in the form of SCET UTC strings
+reported in each row of the Level 1A data tables and time series.  The UTC
+strings are determined from the spacecraft clock ticks recorded in each
+state-of-health packet and for the first packet in each science data record
+using NAIF SPICE (leap seconds kernel).  This information is used in Level 1B
+processing to accurately determine the mid-point of each science accumulation
+interval, which is needed for mapping.
+ 
+  Coordinate System
+  =================
+ 
+The instrument coordinate system (Fig. 1) determines the naming convention of
+the sensors and orientation of the instrument relative to the spacecraft.
+The use of MZ indicates a sensor on the -Z (zenith-facing during mapping)
+side of GRaND;  PZ indicates the sensor is on the +Z (spacecraft) side; MY
+indicates the sensor is on the -Y side (inboard) side of the instrument; and
+PY indicates the sensor is on the +Y side (outboard, towards the +Y solar
+panel) side of the instrument.  The phototube assembly, marked &apos;P&apos; on the
+diagram in Fig. 1 points along the +X axis (towards the high gain antenna).
+ 
+   .................
+   . ooooooooooooo .
+   . o           o .
+   . o           o .
+   . o    +Z     o .
+   . o   (PZ)    o .
+   . o           o .---&gt; +Y (PY)
+   . ooo       ooo .
+   .   P       P   .
+   .   P       P   .
+   .   PPPPPPPPP   .
+   .               .
+   .................
+           |
+           v
+        +X (PX)
+ 
+Figure 1. The coordinate system for GRaND is the same as that of the S/C.
+For the diagram above, the observer is looking in the -Z (MZ) direction and
+can see the outline of the phoswich assembly (o) on the +Z side of GRaND.
+The phototubes are on the +X side and the scintillators are on the -X side.
+During mapping at Vesta and Ceres, the planetary surface is in the +Z
+direction.
+ 
+  Software
+  ========
+ 
+Proprietary software is not needed in order to use the EDR data; however, an
+Interactive Data Language (IDL) functions (GRD_READ_L1A_SOH.PRO and
+GRD_READ_L1A_SCIENCE.PRO) are provided to read selected EDR data into a
+structure for analysis and visualization.  The IDL functions are compatible
+with IDL Version 7.0, distributed by ITT Visual Information Solutions,
+Boulder, CO (2008).  The documentation is included at the beginning of the
+functions.
+ 
+  Media/Format
+  ============
+ 
+The EDR label and data files are delivered by electronic transmission to the
+PDS.  The neutron and gamma ray binary event data were written in big endian
+IEEE binary format (MSB order).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+ 
+The EDR will be reviewed internally by the Dawn Science Team prior to
+submission to the PDS.  The PDS will also conduct an external peer review
+of the EDR prior to releasing the data to the general public.
+ 
+  Data Coverage/Quality
+  =====================
+ 
+With the exception of corrupted packets, the Level 1A EDR includes all of the
+available data acquired during flight.  The archive contains gaps in time
+when the instrument is off during cruise or in STANDBY or ANNEAL mode for
+which science data are not acquired.
+ 
+During ATLO, ICO, and EMC, state-of-health data were decimated by a factor of
+3 for storage in the virtual recorder on board the spacecraft.  Consequently,
+playback data contained every third state-of-health packet.  Full sampling of
+GRaND housekeeping data was available infrequently during the acquisition of
+real-time telemetry.  The spacecraft flight software was modified to
+remove the decimation prior to GRaND power on for Mars Gravity Assist (TBD),
+and, thereafter, housekeeping data volume was controlled by the selection of
+TELSOH.  Consequently, fully-sampled housekeeping data are available in the
+EDR following TBD.
+ 
+  Limitations
+  ===========
+ 
+The EDR is a low-level data product, which requires significant processing
+prior to use in scientific analysis.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

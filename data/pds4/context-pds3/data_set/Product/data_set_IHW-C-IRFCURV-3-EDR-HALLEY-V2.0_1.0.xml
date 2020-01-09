@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ihw-c-irfcurv-3-edr-halley-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IHW COMET HALLEY INFRARED FILTER MEASUREMENTS, V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_halley_watch::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.irsn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:irfcurv.irsn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ihw-c-irfcurv-3-edr-halley-v2.0__browserp_ihw-c-irfcurv-3-edr-halley-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zdenek (ed.), &apos;The Comet Halley Archive Summary Volume&apos;, Jet
+                   Propulsion Laboratory, California Institute of Technology, Pasadena,
+                   California, JPL D-400-450, August 1991.
+            </reference_text>
+            <description>reference.JPL_D-400-450</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>IHW-C-IRFCURV-3-EDR-HALLEY-V2.0</data_set_id>
+        <data_set_name>IHW COMET HALLEY INFRARED FILTER MEASUREMENTS, V2.0</data_set_name>
+        <data_set_release_date>1992-09-30</data_set_release_date>
+        <start_time>1985-03-11T12:00:00Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>GRAYZECK, E.J., KLINGLESMITH, D.A., III, NIEDNER, M.B., JR</producer_full_name>
+        <citation_text>
+            Knacke, R. and Encrenaz, T., IHW COMET HALLEY INFRARED FILTER
+            MEASUREMENTS, V2.0, IHW-C-IRFCURV-3-EDR-HALLEY-V2.0, NASA
+            Planetary Data System, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Filter curves for all filters used in the data submitted to the
+            International Halley Watch Infrared Studies Network.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains filter curves for all IR filters
+            referenced in any of the data sets archived by the International
+            Halley Watch (IHW) Infrared Studies Network (IRSN).
+        </abstract_desc>
+        <data_set_desc>
+      Data Set Overview
+      =================
+      This data set contains filter curves for all IR filters referenced
+      in any of the data sets archived by the International Halley Watch
+      (IHW) Infrared Studies Network (IRSN).
+ 
+      Filter curves and parameters were specifically requested for all
+      filters used by IRSN observers.  This information is reference in
+      the other IHW IRSN data sets by filter name in either the labels
+      and FITS headers, or in the individual data records themselves.
+ 
+      A second data set, IHW-C-IRFTAB-3-RDR-HALLEY-V2.0, contains the
+      collected filter set information for the various observatories
+      involved.
+ 
+      Modification History
+      ====================
+      As part of the IHW restoration project, the filter curve tables
+      underwent major reformatting, but no data were changed.
+      Format changes include:
+ 
+        o  FITS ASCII tables were converted to flat ASCII tables with
+           PDS labels.  All information from the FITS header, including
+           COMMENT and HISTORY records, were incorporated into the
+           tables.  The FITS headers were dropped
+ 
+        o  A table mapping file name, which is basically a serial number,
+           to filter name and location was created and added to the data
+           directory.
+ 
+      08 May 2006, A.C.Raugh
+        </data_set_desc>
+        <confidence_level_note>
+      Confidence Level Overview
+      =========================
+      No specific information was available.  See &apos;The Comet Halley
+      Archive Summary Volume&apos; (JPL D-400-450) for a discussion of the
+      issues related to IR filters used in the IHW.
+        </confidence_level_note>
+        <archive_status>IN_LIEN_RESOLUTION</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

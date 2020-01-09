@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-u-pls-5-summ-elebr-48sec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VG2 URA PLS DERIVED SUMM ELECTRON BROWSE 48SEC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pls.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.uranus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-u-pls-5-summ-elebr-48sec-v1.0__browserp_vg2-u-pls-5-summ-elebr-48sec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sittler, E.C., Jr., K.W. Ogilvie and R.S. Selesnick,
+                   Survey of Electrons in the Uranian magnetosphere: Voyager 2
+                   Observations, J. Geophys. Res., 92, 15263-15281, 1987.
+            </reference_text>
+            <description>reference.SITTLERETAL1987</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-U-PLS-5-SUMM-ELEBR-48SEC-V1.0</data_set_id>
+        <data_set_name>VG2 URA PLS DERIVED SUMM ELECTRON BROWSE 48SEC V1.0</data_set_name>
+        <data_set_release_date>1993-02-01</data_set_release_date>
+        <start_time>1986-01-24T07:06:31.204Z</start_time>
+        <stop_time>1986-01-24T23:59:19.137Z</stop_time>
+        <producer_full_name>JOHN D. RICHARDSON</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VG2 URA PLS DERIVED SUMM ELECTRON BROWSE 48SEC V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the thermal electron density and
+            temperature in the PLS energy range (10-5950 eV) from Voyager 2
+            at Uranus derived by fitting the low energy electron component
+            with a Maxwellian distribution, and the moment density and
+            temperature of the hot electrons calculated after the signal from
+            the thermal component is subtracted from the electron spectra.
+            The moment density and temperature obtained by integrating over
+            the entire measured distribution function are also given. This is
+            a subset of the data set VG2-U-PLS-5-RDR-ELEFIT-48SEC which
+            should be obtained before this data is used, since it contains
+            information on the type of fit performed and LECP contamination
+            of the data. Spacecraft charging may result in underestimation of
+            thermal electron density in some regions. The first six columns
+            are the time tag (year, day, hour, min, sec, msec), columns 7 and
+            8 are the total moment density and temperature, columns 9 and 10
+            are the fit density and temperature of the thermal electron
+            component, and 11 and 12 are the moment density and temperature
+            of the suprathermal electrons. Each row has the format
+            (6I4,6E12.4). Values of 1.E32 indicate that the parameter could
+            not be obtained from the data using the standard analysis
+            technique. Additional information about this dataset and the
+            instrument which produced it can be found elsewhere in this
+            catalog. An overview of the data in this data set can be found in
+            Sittler et al. (1987) and a complete instrument description can
+            be found in bridge (1977).
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set contains the thermal electron density and
+      temperature in the PLS energy range (10-5950 eV) from Voyager 2
+      at Uranus derived by fitting the low energy electron component
+      with a Maxwellian distribution, and the moment density and
+      temperature of the hot electrons calculated after the signal
+      from the thermal component is subtracted from the electron
+      spectra.  The moment density and temperature obtained by
+      integrating over the entire measured distribution function are
+      also given.  This is a subset of the data set
+      VG2-U-PLS-5-RDR-ELEFIT-48SEC which should be obtained before
+      this data is used, since it contains information on the type of
+      fit performed and LECP contamination of the data.  Spacecraft
+      charging may result in underestimation of thermal electron
+      density in some regions.  The first six columns are the time
+      tag (year, day, hour, min, sec, msec), columns 7 and 8 are the
+      total moment density and temperature, columns 9 and 10 are the
+      fit density and temperature of the thermal electron component,
+      and 11 and 12 are the moment density and temperature of the
+      suprathermal electrons.  Each row has the format (6I4,6E12.4).
+      Values of 1.E32 indicate that the parameter could not be
+      obtained from the data using the standard analysis technique.
+      Additional information about this dataset and the instrument
+      which produced it can be found elsewhere in this catalog.  An
+      overview of the data in this data set can be found in Sittler
+      et al.  (1987) and a complete instrument description can be
+      found in bridge (1977).
+ 
+ 
+      Processing Level Id            : 5
+      Software Flag                  : Y
+      Processing Start Time          : UNK
+      Processing Stop Time           : UNK
+ 
+ 
+    Parameters
+    ==========
+ 
+      Data Set Parameter &apos;ELECTRON DENSITY&apos;
+      -------------------------------------
+        A derived parameter equaling the number of electrons per unit
+        volume over a specified range of electron energy.  Different
+        forms of electron density are derived distinguished by method
+        of derivation (Maxwellian fit, method of moments) or by the
+        some selection criteria (ie., hot electron and cold electron
+        density).  In general, if more than one electron component is
+        analyzed, either by moment or fit, a total density will be
+        provided which is the sum of the electron densities.  If the
+        electron do not have a Maxwellian distribution the actual
+        distribution can be represented as the sum of several
+        Maxwellians, in which case the density of each Maxwellian is
+        given.
+ 
+        Sampling Parameter Name        : TIME
+        Data Set Parameter Name        : ELECTRON DENSITY
+        Sampling Parameter Resolution  : 48.000000
+        Sampling Parameter Interval    : 48.000000
+        Minimum Available Sampling Int : 48.000000
+        Data Set Parameter Unit        : CM-3
+        Sampling Parameter Unit        : SECOND
+ 
+ 
+      Data Set Parameter &apos;ELECTRON TEMPERATURE&apos;
+      -----------------------------------------
+        A derived parameter giving an indication of the mean
+        energy/electron, assuming the shape of the electron energy
+        spectrum to be Maxwellian (i.e.highest entropy shape).  Given
+        that the electron energy spectrum is not exactly Maxwellian,
+        the electron temperature can be defined integrally (whereby
+        the mean energy obtained by integrating under the actual
+        electron energy spectrum is set equal to the integral under a
+        Maxwellian, where the temperature is a free parameter for
+        which to solve), or differentially (whereby the slopes of the
+        actually electron energy spectrum at various energies are
+        matched to the slopes of a corresponding Maxwellian).  The
+        temperature parameter is often qualified with a range of
+        applicable energies.  temperatures can be angularly
+        anisotropic.  If the electrons do not have a Maxwellian
+        distribution the actual distribution can be represented as
+        the sum of several Maxwellians, each with a separate
+        temperature.
+ 
+        Sampling Parameter Name        : TIME
+        Data Set Parameter Name        : ELECTRON TEMPERATURE
+        Sampling Parameter Resolution  : 48.000000
+        Sampling Parameter Interval    : 48.000000
+        Minimum Available Sampling Int : 48.000000
+        Data Set Parameter Unit        : CM-3
+        Sampling Parameter Unit        : SECOND
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ELECTRON DENSITY
+      Instrument Parameter Name       : ELECTRON RATE
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ELECTRON DENSITY
+      Instrument Parameter Name       : ELECTRON CURRENT
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ELECTRON TEMPERATURE
+      Instrument Parameter Name       : ELECTRON RATE
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : ELECTRON TEMPERATURE
+      Instrument Parameter Name       : ELECTRON CURRENT
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID       : N/A
+        Software                 : UNK
+        Product Data Set ID      : VG2-U-PLS-5-SUMM-ELEBR-48SEC-V1.0
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      This data set provides an estimate of the electron parameters
+      in the PLS energy range (10-5950 eV).  The thermal electron
+      parameters may be underestimated in some regions due to
+      negative spacecraft charging which is not corrected for.
+      Electron parameters may also be unreliable between 1736 and
+      1854 scet on Jan 24 where electron temperatures are below the
+      instrument energy threshold.  Between 1920 and 2150 scet on Jan
+      24 the spacecraft had a large (several hundred volt) negative
+      potential, so electron parameters in this region should also be
+      treated with caution.  The instrument threshold for detecting
+      electrons is a density of about 0.001 cm-3.  At times when the
+      density is near this value all derived parameters are suspect.
+      From 1621 to 1649 on Jan.  24 sunlight created an artificial
+      signal so this data should be discarded.  The LECP stepper
+      motor is also creates a spurious signal in the PLS detector.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XM-11A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

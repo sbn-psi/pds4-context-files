@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ody-m-mar-3-rdr-calibrated-data-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ODYSSEY MARS MARIE CALIBRATED DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.2001_mars_odyssey::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ody::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mar.ody::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ody-m-mar-3-rdr-calibrated-data-v1.0__browserp_ody-m-mar-3-rdr-calibrated-data-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.CUCINOTTA2002</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Zeitlin, C., F. Riman, S. Joy and M. Sharlow, MARIE Standard Products
+                   Archive Volume Software Interface Specification (MARIE Archive Volume
+                   SIS), Version 1.03 (draft document), Planetary Data System, September 11,
+                   2002.
+            </reference_text>
+            <description>reference.ZEITLINETAL2002</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ODY-M-MAR-3-RDR-CALIBRATED-DATA-V1.0</data_set_id>
+        <data_set_name>ODYSSEY MARS MARIE CALIBRATED DATA V1.0</data_set_name>
+        <data_set_release_date>2002-07-18</data_set_release_date>
+        <start_time>2001-04-23</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>DR. CARY ZEITLIN</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Data set contains calibrated data from the MARIE instrument
+            onboard the Mars Odyssey spacecraft. All data (cruise, prime
+            mission, etc.) are contained in this data set. Data have been
+            calibrated and processed into physical units.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The MARIE (Martian Radiation Environment Experiment), aboard the
+            2001 Mars Odyssey spacecraft, was launched on April 7, 2001, and
+            arrived at Mars on October 24, 2001. Data were collected
+            intermittently during the cruise phase, starting in late April
+            and ending in late July. A problem with MARIE&apos;s onboard
+            computer occurred in early August, and the instrument was turned
+            off until early March, 2002, after Odyssey&apos;s mapping orbit
+            had been established. Data have been collected from that time to
+            the present without major interruption. Routine minor
+            interruptions of up to 36 hours have occurred during the orbital
+            phase the instrument&apos;s data is erased from local storage
+            (after having been downloaded). MARIE is oriented to point in the
+            direction opposite Odyssey&apos;s velocity vector. Space
+            radiation is for the most part isotropic, so the orientation of
+            Odyssey is usually not critical and references to external
+            coordinate systems are not a part of the data returned by MARIE.
+            There is one exception to the statement that space radiation is
+            isotropic: During the early stages of solar particle events,
+            there can be directionality in the particle flux.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The MARIE (Martian Radiation Environment Experiment), aboard the
+    2001 Mars Odyssey spacecraft, was launched on April 7, 2001, and
+    arrived at Mars on October 24, 2001. Data were collected
+    intermittently during the cruise phase, starting in late April and
+    ending in late July. A problem with MARIE&apos;s onboard computer
+    occurred in early August, and the instrument was turned off until
+    early March, 2002, after Odyssey&apos;s mapping orbit had been
+    established. Data have been collected from that time to the present
+    without major interruption. Routine minor interruptions of up to 36
+    hours have occurred during the orbital phase; the outages occur when
+    the instrument&apos;s data is erased from local storage (after having
+    been downloaded). MARIE is oriented to point in the direction
+    opposite Odyssey&apos;s velocity vector. Space radiation is for the most
+    part isotropic, so the orientation of Odyssey is usually not
+    critical and references to external coordinate systems are not a
+    part of the data returned by MARIE. There is one exception to the
+    statement that space radiation is isotropic: During the early stages
+    of solar particle events, there can be directionality in the
+    particle flux.
+ 
+    A manuscript containing a detailed description of MARIE is in
+    preparation at the time of this writing (September 2002).
+ 
+ 
+  Parameters
+  ==========
+    The MARIE consists primarily of silicon detectors, of three
+    different types: the A detectors, which are square in cross-section
+    (25.4 mm on a side) and 1 mm in depth; the B detectors, circular,
+    63.5 mm diameter and 5 mm thick; and the PSDs, or
+    position-sensitive detectors. The PSDs are square double-sided
+    strip detectors with 24 1-mm strips on each side (the strips on one
+    side are orthogonal to those on the other side), and have a
+    thickness of 0.3 mm. There are two A detectors, A1 and A2;
+    sandwiched in between them are PSD1 and PSD2; behind A2, there are
+    the B detectors, B1 through B4. Downstream of B4 is a circular
+    piece of quartz, 10 mm thick, that radiates photons (Cerenkov
+    radiation) generated by the passage of high-velocity particles
+    through it. The Cerenkov photons are reflected by a 45-degree
+    mirror into a photomultiplier tube that sits out of the path of
+    particles that hit the detectors.
+ 
+    The MARIE is triggered by a coincidence of hits in detectors A1 and
+    A2. Once triggered, the data acquisition system records 12-bit
+    digitized outputs that are proportional to the energies deposited
+    in the A and B detectors. A two-byte data word is stored for each
+    of these channels. The pulse height from the Cerenkov phototube is
+    similarly digitized in 12 bits and stored.
+ 
+    Readout of the PSDs is more complex. Each PSD has two orthogonal
+    sides, referred to as columns and rows. The following description
+    applies to each side of each detector. Onboard hardware analyzes
+    the signals from each of the 24 strips and finds the two largest
+    pulse heights. For each, the pulse height is digitized in 8 bits
+    (256 channels) and stored, along with the strip number. The largest
+    pulse height and position are referred to as &apos;event1&apos;, the
+    second-largest as &apos;event2.&apos; The event2 data are often detector
+    noise not resulting from the passage of a charged particle. Four
+    quantities are stored for each side of each detector, so that a
+    total of sixteen words (thirty-two bytes) of PSD data are stored on
+    each event. The eight-bit digitized pulse heights are referred to
+    as &apos;magnitudes&apos; (abbreviated to &apos;_Mag&apos; in the list below). The
+    positions (listed as &apos;_Pos&apos; below) are valid only when in the range
+    1 to 24.
+ 
+    The full 72-byte data structure for each event is listed below.
+    Please note well that this structure is not directly reflected in
+    the RDR data files, which are obtained by processing of the REDR
+    files that do have a structure like the one described here:
+ 
+    The first nine bytes are instrument and record identifiers,
+    checksums, etc. Bytes 10-15 are the timestamp. Detector data begin
+    at byte 16 and consist of 23 2-byte words. Bytes 62-72 are flags,
+    the first seven of which are unused; the last four are the PSD
+    status registers (one for each side of each PSD).
+ 
+       TypeId  : Byte;        { identifies what kind of record this is }
+       InstID  : Byte;        { identifies which instrument this is }
+       RunId   : Byte;        { identifies the current run }
+       RecordId: Byte;        { running count of records }
+       len     : Word;        { 2 bytes - size of actual record on
+                                flash }
+       CheckSum: word;        { 2 bytes }
+       NumberEvents: byte;    { 1 byte total of events per 100 ms. FF
+                                max }
+       Time    : real;        { 6 bytes }
+       Event   : EventsArray; { 46 bytes of digitized detector pulse
+                                heights }
+       Flags   : FlagsArray;  { 11 bytes }
+ 
+    The following bytes are always the same in every valid record:
+    TypeId (value = 3B hexadecimal), InstID (value = 1), and len (48
+    hexadecimal, 72 decimal). The first nine bytes are considered
+    housekeeping data and are not kept in the RDR data files.
+ 
+    The 46 bytes of detector data are 23 2-byte words, ordered as
+    follows:
+ 
+           A1, A2, B1, B2, B3, B4, C1; { for all, valid data in the
+                                         lowest 12 bits }
+           PSD1_Row_Event1_Mag;   { valid data in the lowest 8 bits }
+           PSD1_Row_Event1_Pos;   { valid data in the range 1 to 24 }
+           PSD1_Row_Event2_Mag;   { valid data in the lowest 8 bits }
+           PSD1_Row_Event2_Pos;   { valid data in the range 1 to 24 }
+           PSD1_Col_Event1_Mag;   { valid data in the lowest 8 bits }
+           PSD1_Col_Event1_Pos;   { valid data in the range 1 to 24 }
+           PSD1_Col_Event2_Mag;   { valid data in the lowest 8 bits }
+           PSD1_Col_Event2_Pos;   { valid data in the range 1 to 24 }
+           PSD2_Row_Event1_Mag;   { valid data in the lowest 8 bits }
+           PSD2_Row_Event1_Pos;   { valid data in the range 1 to 24 }
+           PSD2_Row_Event2_Mag;   { valid data in the lowest 8 bits }
+           PSD2_Row_Event2_Pos;   { valid data in the range 1 to 24 }
+           PSD2_Col_Event1_Mag;   { valid data in the lowest 8 bits }
+           PSD2_Col_Event1_Pos;   { valid data in the range 1 to 24 }
+           PSD2_Col_Event2_Mag;   { valid data in the lowest 8 bits }
+           PSD2_Col_Event2_Pos;   { valid data in the range 1 to 24 }
+ 
+    The 11 bytes of the flag array are, in order:
+ 
+           FlagA1,   FlagA2,   FlagA3,
+           FlagB1,   FlagB2,   FlagB3,   FlagC1,
+           FlagPSD1_Row, FlagPSD2_Row, FlagPSD1_Col, FlagPSD2_Col
+ 
+    Only the last four contain valid data.
+ 
+    The RDR data files do not directly reflect the above described
+    record structure, but they are obtained from processing of raw
+    data files which do have this structure.
+ 
+ 
+  Processing
+  ==========
+    These data have been calibrated for the A and B detectors, and
+    converted into physical units rather than digitizer output. In the
+    calibration procedure, cruise data was used to select a sample of
+    events triggered by noise (i.e., with no real particle in the
+    detectors). From these data, the digitizer offsets, also known as
+    &apos;pedestals,&apos; were determined. A second sample containing high-
+    energy protons was also culled from the cruise data. Because the
+    energy deposited by a proton in a given depth of silicon is easily
+    calculated, one can obtain the scaling factor needed for each
+    detector channel to convert (after subtracting the pedestal for
+    that channel) digitizer values into deposited energies. The
+    processing involves extraction and calculation of the data values
+    found in the processed data files, including the calculation of the
+    particle incident angles based on the PSD hits.  In addition,
+    records or values judged to contain errors are removed or flagged.
+ 
+ 
+  Data
+  ====
+    These data consist of tabular files (extension .TAB) in ASCII
+    format. Each record consists of 20 fields and is terminated by a
+    carriage return/ line feed (ASCII 13/ASCII 10) line ending.  The
+    first two fields of each record comprise a two-part time tag for
+    the record. The total length of each record, including line
+    terminator, is 149 bytes.
+ 
+    The column structure of each record is summarized below.
+ 
+      Column   Data       Description
+               Type
+      ------   ----       ------------------------------
+        1      Character  Time (2 fields, year and decimal day,
+                          with beginning of Jan. 1 = 1.0)
+        2      Real       Event number (with events numbered
+                          sequentially)
+        3      Real       Energy deposited in A1
+        4      Real       Energy deposited in A2
+        5      Real       Energy deposited in B1
+        6      Real       Energy deposited in B2
+        7      Real       Energy deposited in B3
+        8      Real       Energy deposited in B4
+        9      Real       Cerenkov detector pulse height (uncalibrated)
+       10      Real       Row magnitude from PSD1
+       11      Real       Row position from PSD1
+       12      Real       Column magnitude from PSD1
+       13      Real       Column position from PSD1
+       14      Real       Row magnitude from PSD2
+       15      Real       Row position from PSD2
+       16      Real       Column magnitude from PSD2
+       17      Real       Column position from PSD2
+       18      Real       Sum of energies deposited in A1, A2, and
+                          B1-B4
+       19      Real       Incident angle of particle (calculated)
+ 
+    Deposited energy values in the A and B detectors are given in
+    units of MeV (millions of electron volts).  The scale factors and
+    offsets needed to convert digitizer outputs to physically
+    meaningful deposited energy values were determined by the
+    calibration procedure outlined above.  Saturation of the A detector
+    electronics is observed to occur at about 70 MeV, and at about 350
+    MeV for the B detectors, in both cases corresponding to about
+    charge 11 for highly relativistic heavy ions.  In principle similar
+    calibration constants could be applied to the PSD magnitudes, but
+    this has not been implemented owing to the generally poor
+    resolution of those data. The signal from the Cerenkov detector is
+    uncalibrated and reported only in units of digitizer channels (0 to
+    4095 valid).
+ 
+    The PSD positions and magnitudes are derived from the full set of
+    reported hits in the raw data, referred to as &apos;event1&apos; (which is
+    determined by the strip number that reports the largest-magnitude
+    hit) and &apos;event2&apos; (corresponding to the second-largest hit
+    magnitude). Each detector plane (row or column) reports event1 and
+    event2. In the majority of cases, &apos;event2&apos; position and magnitude
+    are both reported as 0, which is reasonable because on most
+    triggers only one particle passes through the MARIE detectors.  In
+    some cases, event1 may be reported with an unphysical value (0 or &gt;
+    24), while event2 reports a physically-reasonable value.  When this
+    occurs, the processing software outputs the position and magnitude
+    of event2 as the values for that detector plane.
+ 
+    The PSD hits are used to calculate the incident angle of the
+    particle. When one or more PSD planes report a value of 0, or
+    greater than 24, the angle cannot be calculated and the output
+    value is set to -5 in order to flag the problem. Valid angles are
+    calculable on a minority of events. When a valid calculation is
+    possible, the formula given below is used, and the value is
+    converted to degrees in the output. Due to the constraints imposed
+    by the A1 * A2 coincidence requirement, only angles less than about
+    34 degrees are possible.
+ 
+    On every trigger, the MARIE clock is polled and the time is stored
+    in a 6-byte data word in the event record. The time is measured in
+    minutes on the Julian calendar, which takes as its starting time 12
+    hours Universal Time (Greenwich mean noon) on noon of November 24,
+    -4713. In processing, the 6-byte data words are converted to a year
+    and day of year, which includes a fractional day. The day of year
+    is stored, in the processing software, as a 4-byte real number,
+    hence some precision is lost. In the .TAB files, the time is
+    represented by the year, in column 1, along with a real number in
+    column 2 that corresponds to the day of year. The day of year
+    contains 8 digits to the right of the decimal place; the least
+    significant digit equals (approximately) 1 millisecond. Due to
+    rounding errors, and MARIE&apos;s ability to acquire data at a fairly
+    high rate, it is possible for consecutive events to appear to occur
+    at the same time, to the precision given here.
+ 
+    Invalid values of the year and position columns have been flagged
+    with the value &apos;-1.&apos;.
+ 
+ 
+  Ancillary Data
+  ==============
+    The ancillary data provided with this dataset include files of the
+    following four kinds.  These ancillary files are classified as part
+    of the raw reformatted (REDR) dataset.
+ 
+    (1)  Detector files (file type DET):  These are ASCII table files
+    which describe the temperatures of the detectors in the instrument.
+    At the beginning of each file is a table header which names the
+    columns.
+ 
+    (2)  High Voltage files (file type EXT):  These are ASCII table
+    files which describe the maximum voltages in the electronic boards
+    in the instrument.  At the beginning of each file is a table header
+    which names the columns.
+ 
+    (3)  Board files (file type BRD):  These are ASCII table files
+    which describe the temperatures of the electronic boards in the
+    instrument.  At the beginning of each file is a table header which
+    names the columns.  (The BRD files differ from the DET files
+    because each board is only part of a detector and has its own
+    thermistor for temperature monitoring, distinct from the thermistor
+    for the board.)
+ 
+    (4)  Power files (file type PWR):  These are ASCII table files
+    which describe the power consumption of the detectors.  At the
+    beginning of each file is a table header which names the columns.
+ 
+ 
+  Coordinate System
+  =================
+    MARIE&apos;s internal coordinate system is defined by the geometry of
+    the detector. The PSDs have their own coordinate system in the sense
+    that each strip (corresponding to a row or a column) is assigned a
+    sequential number from 1 to 24. These values are not referenced to
+    any other coordinate system, as the primary purpose of the PSDs is
+    to calculate the angle at which incident particles traverse the
+    silicon detectors. With valid hits in all rows and columns, the
+    angle THETA with respect to the vertical (normal incidence) can be
+    calculated as follows. We define
+ 
+ 
+    DELTAr = PSD1_Row_Pos - PSD2_Row_Pos,
+    DELTAc = PSD1_Col_Pos - PSD2_Col_Pos, and
+    d = the distance between PSD1 and PSD2. Then
+ 
+           tan(THETA) = [ (DELTAr**2 + DELTAc**2) / d**2 ]**1/2
+ 
+    where ** indicates exponentiation.
+ 
+ 
+  Software
+  ========
+    A version of the software used for production of calibrated
+    data from raw data files is included in the EXTRAS directory
+    on the archive volume.
+ 
+ 
+  Media/Format
+  ============
+    Data are archived on recordable DVD (DVD-R) in UDF/ISO 9660 Bridge
+    format with ISO 9660 level 2 compliance in the ISO partition. The
+    data are provided as ASCII tables of time tagged data (see file
+    description above).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    Review
+    ------
+      The raw (REDR) data on which these data are based have been
+      reviewed by the instrument team and are of the highest quality
+      that can be generated at this time. The process for production of
+      RDR data has been evaluated by the instrument team and by the PDS.
+      These data will be reviewed collaboratively by the team and by the
+      PDS, and will undergo PDS peer review.
+ 
+ 
+    Data Coverage/Quality
+    ---------------------
+      MARIE was on for parts of the 2001 Mars Odyssey cruise phase,
+      starting in late April 2001 and ending in late July 2001. A
+      problem with the onboard computer occurred in early August, and
+      the instrument was turned off until mid-March, 2002, after
+      Odyssey&apos;s mapping orbit had been established. Data have been
+      collected from that time to the present without major
+      interruption. Routine minor interruptions of up to 48 hours have
+      been encountered during the orbital phase; the outages occur when
+      the instrument&apos;s data is erased (after having been downloaded).
+      Additional shorter outages of approximately 2 hours duration occur
+      on a daily basis while data are downloaded.
+ 
+      A small fraction (typically &lt; 1% of events in a given file) of the
+      time tags in the processed data are out of chronological order.
+      This occurs in the raw (REDR) data and is propagated to the
+      processed data set; it reflects a problem with the MARIE clock
+      that is not understood at this time.  As there is no obvious way
+      to correct these errors, they have not been removed or adjusted in
+      the processed data set.  In addition, some time tags are corrupted
+      and contained an invalid year.  In the processed data, these
+      records have been flagged with a &apos;-1.&apos; in the year field.
+ 
+ 
+  Limitations
+  ===========
+ 
+    Geometric Acceptance
+    --------------------
+      MARIE&apos;s geometry is optimized for detecting particles coming into
+      the detector (hitting A1 first) in a forward cone of half-angle
+      approximately 30 degrees. The angle is defined with respect to the
+      centerline of the silicon detectors. Particles incident at larger
+      angles may hit one or more detectors, but will not satisfy the
+      requirement of coincident hits in A1 and A2. Forward-going
+      particles encounter minimal (but finite) mass before entering
+      MARIE, and must have residual range sufficient to penetrate as far
+      as A2. As of this writing (May 2002), best estimates of the
+      material in front of MARIE lead to the prediction that the minimum
+      free-space (i.e., before encountering any material) kinetic energy
+      required for a proton to reach A2 is about 30 MeV. For helium-4
+      ions, the minimum kinetic energy is 30 MeV/nucleon, and for
+      heavier ions, the energy per nucleon increases as a function of
+      the ion&apos;s charge and mass. MARIE can also be triggered by
+      particles entering from the rear, provided they are sufficiently
+      energetic to hit both A2 and A1. For a proton, this corresponds to
+      a minimum energy of 72 MeV incident on B4. However, any such
+      particle must pass through a considerable (currently unknown) mass
+      in order to reach B4. (The mass in question is primarily due to
+      Odyssey&apos;s oxidizer tank.)  Backward-going particles must therefore
+      be far more energetic than their forward-going counterparts in
+      order to trigger MARIE&apos;s readout.
+ 
+      In the data, backward-going particles can, in some cases, be
+      distinguished by the patterns of energy deposition they leave in
+      the silicon detectors; for particular particle/energy
+      combinations, these patterns may be quite distinct from those of
+      forward-going particles of the same type and energy. In addition,
+      the Cerenkov detector is directional, and no Cerenkov photons will
+      be recorded for backwards-going particles.
+ 
+ 
+    Saturation of Electronics
+    -------------------------
+      As of May 2002, all MARIE data have been taken with all silicon
+      detectors operating at full depletion. The gains of the
+      electronics combined with the limitations on input voltage into
+      the analog-to-digital converters (ADCs) - are such that the A
+      channels saturate at approximately 70 MeV energy deposited, while
+      the B channels saturate at about 350 MeV energy deposited. Because
+      deposited energy is a function of the charge (Z) squared of an
+      incident heavy ion, this limits the detectable range of particle
+      charges. In the present configuration, the largest usable signal
+      corresponds to highly-energetic ions of charge 11. For more
+      highly-charged particles, the signals are so large that the
+      digitizer outputs go to full scale, and all resolution is lost.
+      The Galactic Cosmic Radiation contains all elements up to uranium,
+      though ions heavier than iron (charge 26) are rare. At present,
+      and for the foreseeable future, ions with charge 12 and greater
+      are detected by MARIE, but with no resolution.
+ 
+ 
+    PSD Performance
+    ---------------
+      The PSD performance for sparsely-ionizing particles such as
+      protons is known to be marginal. The detectors are thin
+      (300 microm), so that signals are small and noise (which falls
+      with increasing detector depth) is relatively large. The onboard
+      algorithm for finding hits returns many 0 values (no hit found),
+      many more values of 1 than is physically reasonable, and in the
+      case of PSD1 columns, many more values of 24 than is physically
+      reasonable. It is likely the case that the edge channels of the
+      PSDs are nosier than those in the middle, and hence are often
+      mistakenly identified by the onboard processing algorithm as
+      having been hit. If the detectors were working optimally, all
+      histograms of row and column positions would show broad
+      distributions peaked in the middle. Only the distribution of hits
+      in the PSD1 rows approximates the expected shape. One possible
+      improvement would be to raise the software thresholds the
+      hit-finding algorithm in the onboard firmware uses.  This would
+      result in more &apos;0&apos; values (no hit found) but would reduce or
+      eliminate erroneous positions from noise hits. At the time of this
+      writing (Septmber 2002), the instrument team is also investigating
+      the possibility that some non-physical readings are caused by bit
+      flips in the processing firmware. Some of these may be correctable
+      in future processing.
+ 
+ 
+    Cerenkov Detector Performance
+    -----------------------------
+      The Cerenkov detector performance is currently marginal. Signals
+      are far smaller than expected, which suggests that the voltage on
+      the photomultiplier tube is too low or possibly that the alignment
+      of the 45 degree mirror is bad. Attemps to raise the phototube
+      voltage failed due to a bug in the onboard control software. This
+      may be corrected in the future when new control software is
+      uploaded.
+ 
+ 
+    Clock Issues and Time Tag Significance
+    --------------------------------------
+      Occasionally, MARIE&apos;s clock appears to jump backward by a fairly
+      large interval (often on the order of minutes) from one event to
+      the next. The source of this error is unknown. Usually, within the
+      next few events, the clock jumps ahead to where one would expect
+      it to be. Such jumps have been noted to occur up to 25 times in a
+      file of 50,000 event records. As of this writing (September 2002),
+      the instrument team is unable to diagnose or cure the problem. As
+      few events are affected, and most users will likely be binning
+      data in time bins on the order of many minutes or even hours,
+      these do not present a serious problem.
+ 
+      A second category of clock problems occurs when MARIE data is
+      being downloaded to the spacecraft&apos;s data buffer at midnight.
+      When this happens, the MARIE clock does not increment the day
+      counter, and when data acquisition resumes, the clock is one day
+      behind.  It remains in this state until the next data erase
+      sequence (which typically occurs about once every 7 to 10 days,
+      depending on solar activity), at which time MARIE&apos;s clock is
+      synchronized to the Odyssey master clock and the problem is fixed
+      (until the next time it occurs). For this reason, deliberate
+      efforts have been made to avoid downloading MARIE data over
+      midnight boundaries. While the problem has not been entirely
+      eliminated, the frequency with which it occurs has decreased.
+ 
+ 
+    Calibration Issues
+    ------------------
+      There are considerable uncertainties in the calibration constants
+      that are used to convert raw pulse height readings to deposited
+      energies. For the A1 and A2 detectors, we estimate the
+      uncertainties to be +- 20%. For the B detectors, we estimate the
+      uncertainties to be +- 15%. These are uncertainties in the
+      absolute scale of deposited energy; they are not expected to vary
+      significantly within a particular data set, but they may show
+      long-term variations. As of this writing (Dec. 2002), further
+      work to determine these constants with greater precision is in
+      progress, using stopping protons from Solar Particle Events.
+      Periodic monitoring of the constants will be needed to look for,
+      and correct, any drifts in amplifier gains.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.mro__activity_id</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>mro:activity_id</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>mro:activity_id</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>mro:activity_id</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+This keyword describes the type of measurement contained in a CRISM EDR
+or other data product, and provides indication of how the observation
+is commanded. The format of the value is AC### where AC is a 2-letter
+designation of the type of measurement made, and ### is a 3-numeral
+designation of the instrument command macro that was executed to acquire
+the data. Macro numbers are in the range 0-255.
+ 
+For EDRs, BI is measurement of detector bias, DF is a measurement of
+background including dark current and thermal background, LP is
+measurement of a focal plane lamp, SP is measurement of the internal
+integrating sphere, and SC is measurement of an external scene. TP
+indicates that the EDR contains any test pattern produced by instrument
+electronics. T1 through T7 specify the test pattern, test pattern 1
+through test pattern 7. UN indicates that the EDR contains data in
+which housekeeping does not match the commanded instrument
+configuration.
+ 
+For an RDR, RA indicates that the file contains values in units of
+radiance (W m^-2 nm^-1 sr^-1). IF indicates that the file contains
+values in units of I/F, or radiance divided by solar flux scaled for
+heliocentric distance.  AL indicates that the file contains values as
+estimated Labert albedo, which is I/F corrected for cosine of incidence
+angle and for atmospheric and thermal effects.  SU indicates that the
+files contains summary parameters, unitless values derived from Lambert
+albedo.
+ 
+For an RDR or a DDR, DE indicates that the files contains derived values
+related to observation geometry or independently characterized
+properties of the scene.
+        </definition>
+        <comment>mro:89</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>mro:activity_id</name>
+            <definition>
+This keyword describes the type of measurement contained in a CRISM EDR
+or other data product, and provides indication of how the observation
+is commanded. The format of the value is AC### where AC is a 2-letter
+designation of the type of measurement made, and ### is a 3-numeral
+designation of the instrument command macro that was executed to acquire
+the data. Macro numbers are in the range 0-255.
+ 
+For EDRs, BI is measurement of detector bias, DF is a measurement of
+background including dark current and thermal background, LP is
+measurement of a focal plane lamp, SP is measurement of the internal
+integrating sphere, and SC is measurement of an external scene. TP
+indicates that the EDR contains any test pattern produced by instrument
+electronics. T1 through T7 specify the test pattern, test pattern 1
+through test pattern 7. UN indicates that the EDR contains data in
+which housekeeping does not match the commanded instrument
+configuration.
+ 
+For an RDR, RA indicates that the file contains values in units of
+radiance (W m^-2 nm^-1 sr^-1). IF indicates that the file contains
+values in units of I/F, or radiance divided by solar flux scaled for
+heliocentric distance.  AL indicates that the file contains values as
+estimated Labert albedo, which is I/F corrected for cosine of incidence
+angle and for atmospheric and thermal effects.  SU indicates that the
+files contains summary parameters, unitless values derived from Lambert
+albedo.
+ 
+For an RDR or a DDR, DE indicates that the files contains derived values
+related to observation geometry or independently characterized
+properties of the scene.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>
+N/A
+</formation_rule>
+            <minimum_characters>5</minimum_characters>
+            <maximum_characters>5</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>Unknown</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

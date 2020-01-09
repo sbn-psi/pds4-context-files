@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.clem1-l-u-5-dim-basemap-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CLEMENTINE BASEMAP MOSAIC</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.deep_space_program_science_experiment::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:uvvis.clem1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-u-5-dim-basemap-v1.0__browserc_clem1-l-u-5-dim-basemap-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-u-5-dim-basemap-v1.0__browserp_clem1-l-u-5-dim-basemap-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.clem1-l-u-5-dim-basemap-v1.0__dvo_imaging_clem1-l-u-5-dim-basemap-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Planetary Data System Standards Reference, Jet Propulsion Laboratory Document
+                   D-7669, Part 2, 20 November 1992
+            </reference_text>
+            <description>reference.PDSSR1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CLEM1-L-U-5-DIM-BASEMAP-V1.0</data_set_id>
+        <data_set_name>CLEMENTINE BASEMAP MOSAIC</data_set_name>
+        <data_set_release_date>1996-03-01</data_set_release_date>
+        <start_time>1994-01-25</start_time>
+        <stop_time>1994-05-07</stop_time>
+        <producer_full_name>DR. ALFRED S MCEWEN</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Clementine Lunar Basemap Mosaic
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Clementine Basemap Mosaic is a full-resolution (100 meters
+            per pixel) global mosaic produced by the U.S. Geological Survey
+            from Clementine EDR Data. The 750 nanometer filter imaging data
+            acquired by the Ultraviolet/Visible Camera were used to create
+            the single-band basemap mosaic.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Clementine Basemap Mosaic is a full-resolution (100 meters
+      per pixel) global mosaic produced by the U.S. Geological Survey
+      from Clementine EDR Data. The 750 nanometer filter imaging
+      data acquired by the Ultraviolet/Visible Camera were used to
+      create the single-band basemap mosaic.
+ 
+      The Clementine Basemap Mosaic is partitioned on the CD
+      collection in the Sinusoidal Equal-Area Projection as 12
+      &apos;zones&apos;, each 30 degrees wide in longitude and ranging from 70
+      degrees south latitude to 70 degrees north latitude. All tiles
+      in a zone have the same center longitude of projection. Both
+      polar regions between 70 degrees to 90 degrees latitude exist
+      both as  Sinusoidal and polar stereographic projections. Each
+      zone and each polar region exist on one CD-ROM volume. This
+      results in a 14-volume archive set containing the full
+      resolution (0.1 km/pixel) mosaic. A fifteenth volume,
+      containing reduced-resolution planetwide coverage at .5, 2.5,
+      and 12.5 km/pixel and other ancillary data, complete the
+      archive collection.  For each full- and reduced- resolution
+      image product, a sub-sampled &apos;browse&apos; image is provided in
+      Joint Photographic Experts Group (JPEG) format.
+ 
+      Each 30 degree zone is further divided into smaller tiles. The
+      tiling scheme, basic to digital cartography design, is similar
+      to previous planetary global mosaics, and maintains reasonably
+      sized image products. In general, this design consists of
+      rectangular tiles that are  roughly 2100 pixels on a side. The
+      actual tile size varies with latitude. Near the equator, each
+      tile covers 7 degrees of latitude and 6 degrees of longitude. A
+      typical full-resolution tile required ~9 megabytes of digital
+      storage and may  contain approximately 35 raw Clementine
+      images.
+ 
+ 
+    Parameters
+    ==========
+      N/A
+ 
+ 
+    Processing
+    ==========
+      The Integrated Software for Imaging Spectrometers (ISIS)
+      processing system, developed by the U.S. Geological Survey
+      was used to generate the basemap mosaic.  Processing within
+      ISIS includes radiometric and geometric correction, spectral
+      registration, photometric normalization, and image mosaicking.
+      Radiometric correction applies &apos;flat fielding&apos;, dark current
+      subtraction, non-linearity correction, and conversion to
+      radiometric units. Geometric transformations tie each raw image
+      with a ground control network and convert from raw image
+      coordinates to the Sinusoidal Equal-Area projection.
+      Photometric normalization is applied to balance brightness
+      variations due to illumination differences among the images
+      in a mosaic. Images are then mosaicked together to form a
+      global map of continuous image coverage for the entire planet.
+ 
+ 
+    Media/Format
+    ============
+      The Clementine basemap is delivered to the Planetary Data
+      System using CD media.  Formats are based on standards for
+      such products established by the Planetary Data System (PDS)
+      [PDSSR1992].
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+      Overview
+      ========
+      The Clementine Basemap Mosaic is the result of an
+      exhaustive Lunar cartography project based on data from
+      the Clementine EDR image collection. Systematic calibration
+      and processing enable global, full-resolution scientific
+      analysis of the Clementine Datasets. A first major step
+      in the systematic processing of the imaging data is the
+      production of an accurate basemap to which all products
+      are geometrically registered. Previous maps and ground
+      control points of he Moon is not sufficiently accurate
+      The previous RAND control network is accurate to 500
+      meters in the area covered by the Apollo mapping frames
+      (15% of the Moon&apos;s surface), and is accurate to about
+      1-2 kilometers for regions covered by telescopic,
+      Galileo, and Mariner 10 observations. However, most
+      of the far side is not included in the network, and the
+      only other positional dataset for these regions contains
+      errors as large as tens of kilometers. Based on best
+      effort measurements of the spacecraft orbit and pointing,
+      UVVIS geometric distortions, and time tags for each
+      observation, the SPICE data alone provides positional
+      accuracies better than 1 kilometer over most of the
+      Moon. With residuals primarily small random pointing
+      errors, then accuracies approaching the UVVIS scale
+      becomes achievable.
+ 
+      The goal of the basemap is for 99% of the Moon
+      (excluding the oblique observation gap fills) to
+      be better than 0.5 km/pixel absolute positional accuracy
+      and to adjust the camera angles so that all frames
+      match neighboring frames to within an accuracy of 2 pixels.
+      To achieve these goals we required camera alignment and
+      pointing data accurate to a few hundredths of a degree.
+      We determined the absolute alignment of the UVVIS
+      with respect to spacecraft-fixed axes (A and B Star
+      Tracker Camera quaternions) by analyzing a major subset
+      of the over 17,000 images of Vega, over 6,000 images of
+      the Southern Cross and a few hundred images of the
+      Pleiades, taken during the approach to the Moon and
+      throughout the lunar mapping mission phase. Multiple
+      star images within a single picture were used to determine
+      the UVVIS focal length and optical distortion parameter
+      values.
+ 
+ 
+      Approximately 265,000 match points were collected at the
+      USGS from ~43,000 UVVIS images providing global coverage.
+      About 80% of these points were collected via autonomous
+      procedures, whereas the 20% required the more time consuming
+      but highly accurate pattern-recognition capability of the
+      human eye-brain. We also developed streamlined procedures
+      for the supervised collection of match points. The new
+      procedures saved several person-years of effort and represents
+      new capabilities useful with other planetary datasets. The
+      automated success rate exceeded 90% along each spacecraft
+      orbit track, where the overlap regions of successive
+      images are highly correlated, but failed when the overlap
+      regions is narrow and/or nearly featureless. (&apos;Failure&apos; is
+      defined as less than 3 points per image with correlation
+      coefficients grater than 0.85; thus, many good match points
+      were rejected because we could not be certain that the
+      matches were valid without verification.) Across-track
+      matching was more difficult due to changes in scale and
+      illumination angle, but a fair success rate (~60%) was
+      nevertheless achieved via the use of &apos;window-shaping&apos;
+      (local geometric reprojections). The oblique gap-fill images
+      were the most difficult to match, and required substantial
+      human intervention. Matching the polar regions was
+      time-consuming because each frame overlaps many other frames.
+      most match points were found to a precision of 0.2 pixels.
+ 
+      The USGS match points were sent to RAND corporation for
+      analytical triangulations. Using these match points,
+      control points from the Apollo region, and the latest
+      NAIF/SPICE information, RAND determined improved
+      camera orientation angles for the global set of UVVIS
+      images. A constant lunar radius of 1737.4 kilometers
+      was assumed, a significant source of error near the
+      oblique gap fills. The analytical triangulation is a
+      least-squares formulation designed to adjust the latitude
+      and longitude of the control points and the camera
+      orientation angles to best fit the match points. The
+      triangulation was first computed on &apos;packets&apos; of match
+      points (each covering ~1/8-th of the Moon), then checked
+      and rechecked at the USGS via plots and test mosaics to
+      fix and add match points as needed. The final (global)
+      analytical triangulation required solving ~660,000 normal
+      equations. The mean error is less than 1 pixel. This is
+      by far the largest analytical triangulation ever applied
+      to a planetary body other than Earth. The results fully
+      define the planimetric geometry of the basemap, to which
+      future systematic products will be tied.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>94-004A-01A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

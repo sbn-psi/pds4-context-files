@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gio-c-pia-3-rdr-halley-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GIOTTO PARTICLE IMPACT ANALYZER DUST MASS SPECTRA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.giotto::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pia.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.halley::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gio-c-pia-3-rdr-halley-v1.0__browserp_gio-c-pia-3-rdr-halley-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   The Giotto Mission, R. Reinhard and B. Battrick, ESA SP-1077, ESA Pub Div,
+                   Noordwijk, Netherlands, 1986.
+            </reference_text>
+            <description>reference.ESA-SP1077</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   &apos;Encounters with Comet Halley, The first results&apos;, Nature, Volume 321, No.
+                   6067, 15 May 1986.
+            </reference_text>
+            <description>reference.NATURE321</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GIO-C-PIA-3-RDR-HALLEY-V1.0</data_set_id>
+        <data_set_name>GIOTTO PARTICLE IMPACT ANALYZER DUST MASS SPECTRA V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1986-03-13T19:15:48.710Z</start_time>
+        <stop_time>1986-03-14T03:41:00.000Z</stop_time>
+        <producer_full_name>INTERNATIONAL HALLEY WATCH</producer_full_name>
+        <citation_text>
+            Kissel, J., and A.C. Raugh, GIOTTO PARTICLE IMPACT ANALYZER DUST
+            MASS SPECTRA V1.0, GIO-C-PIA-3-RDR-HALLEY-V1.0, NASA Planetary
+            Data System, 1990.
+        </citation_text>
+        <data_set_terse_desc>
+            GIOTTO Particle Impact Analyzer (PIA) dust mass spectra of
+            1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            The PIA data was acquired in four modes of data compression,
+            termed mode 0 (the least compressed), and modes 1, 2, and 3, each
+            with increasing degrees of compression. With each spectrum are a
+            PIA assigned sequence number and event numbers, a unique
+            ID-number, instrument settings, and the relative approach time.
+            The PIA time is a 16-bit counter that starts with zero after
+            switch-on. As the Spacecraft Time Signal (STS) is used to reset
+            the internal PIA time counter, the TIM highest possible value is
+            48960 counts. STS-pulses are given after the transimssion of 256
+            formats. This results for format F1/F2 and high bitrate (46080
+            bps) in 5802.67 s. (= 256 formats * 64 frames * 2040 bytes * 8
+            bit/byte/46080 bps) The time resolution is DTIM = 1/ (138240 HZ
+            /2**14 ) = 0.1185 s. Each STS defines the time for an event with
+            TIM = 0. Therefore, SCET = GRT(STS) + (TIM * DTIM) - propogation
+            delay (8:00.1 sec). where SCET = Spacecraft Event Time, GRT =
+            Ground Reception Time.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+Data Set Overview
+=================
+ 
+    The PIA data was acquired in four modes of data
+    compression, termed mode 0 (the least compressed),
+    and modes 1, 2, and 3, each with increasing degrees
+    of compression.  With each spectrum are a PIA
+    assigned sequence number and event numbers, a unique
+    ID-number, instrument settings, and the relative
+    approach time.  The PIA time is a 16-bit counter that
+    starts with zero after switch-on.  As the Spacecraft
+    Time Signal (STS) is used to reset the internal PIA
+    time counter, the TIM highest possible value is 48960
+    counts.  STS-pulses are given after the transimssion
+    of 256 formats.  This results for format F1/F2 and
+    high bitrate (46080 bps) in 5802.67 s.  (= 256
+    formats * 64 frames * 2040 bytes * 8 bit/byte/46080
+    bps) The time resolution is DTIM = 1/ (138240 HZ
+    /2**14 ) = 0.1185 s.  Each STS defines the time for
+    an event with TIM = 0.  Therefore, SCET = GRT(STS) +
+    (TIM * DTIM) - propogation delay (8:00.1 sec).  where
+    SCET = Spacecraft Event Time, GRT = Ground Reception
+    Time.  The table below lists important GRT for the
+    Encounter (Mar 13-14).
+ 
+       GRT        TIM               Remarks
+ 
+  19:23:46.81              switch-on
+  19:23:47.97    00000     calculated GRT for TIM=0 (reset for TIM)
+  19:23:49.15    34797     start of transmission (events 1-11 are old)
+  19:23:49.75    00015     first event after switch-on
+                 12039     last event before STS
+  19:47:34.81              STS
+                 00006     first event after STS
+                 48959     last event before next STS
+  21:24:17.51              STS
+                 00021     first event after STS
+                 48960     last event before next STS
+  23:01:00.20              STS
+                 00005     first event after STS
+                 35388     event before TIM-reset
+                 00000     add 35388 to TIM
+                 00007     event before TIM-reset
+                 00000     add 35396 to TIM
+                 00004     event before TIM-reset
+  00:11:01                 closest approach
+                 00035     add 35566 to TIM
+                 13394     last event before next STS
+  00:37:42.90              STS
+                 00004     first event after STS
+                 48956     last event before next STS
+  02:14:25.81              STS
+                 00000     first event after STS
+                 48144     last event before switch-off
+  03:49:42                 PIA OFF
+ 
+ 
+ 
+     The data for these files were received as a series
+    of FITS files, each of which consisted of spectra of
+    a single mode.  Amplitude-triggered samples in the
+    spectra were indicated by an &apos;X&apos; following the
+    sample.  The files have been regrouped according to
+    Mode and presented as a binary array with a separate
+    ASCII index table.
+ 
+ 
+    Reformatting at SBN
+ 
+     The following changes were made to the data:
+ 
+    o Flagged amplitudes, followed by an &apos;X&apos; in the text
+    file, were indicated in the binary file as a
+    additional byte set equal to 1 for flagged
+    amplitudes, 0 otherwise.  This is the same system
+    used for the IKI VEGA submissions.
+ 
+ 
+    Known Anomalies/Problems:
+ 
+ 
+     o In the received FITS file numbered 40, the final
+    spectrum in the file (sequence number 2991, event
+    number 46698, time 48110) was truncated.  It is not
+    clear if only this last spectrum was lost or if other
+    spectra might have followed since the NAXIS1 and
+    NAXIS2 values from the header indicate more data.
+     The incomplete spectrum was omitted entirely from
+    the binary table.
+ 
+     o Two mode 1 spectra were found which contained an
+    odd number of bytes in the spectrum.  In mode 1 the
+    number of bytes should be even, as each sample in the
+    spectrum consists of a time sample byte and an
+    amplitude sample byte.  In these cases the single
+    byte was assumed to be a time value and a null
+    amplitude byte was appended to the spectrum.
+ 
+ 
+     o In working with these files it was noted that many
+    spectra exhibited strange features, including:
+ 
+    - parameter values but no spectrum bytes (i.e.,
+    zero-length spectra)
+ 
+    - repeating time values of 255 (the maximum possible
+    time)
+ 
+    - repeating amplitude values of 127 (the maximum
+    possible)
+ 
+    - repeating values of 32 (ASCII code for blank)
+ 
+    o There was a failure in the instrument during the
+    fly-by.  The following is taken directly from the
+    FITS file header which was attached to the text
+    files:
+ 
+    During the actual flyby two out of six
+    multiplier-amplifiers failed, yielding incorrect
+    amplitude information in the mass spectra channel; to
+    obtain partial correction for amplitude, use F(a),
+    where
+ 
+    F(0)       = 0           F(20)       = 49
+    F(1...4)   = a*2 + 21    F(21)       = 52
+    F(5...8)   = a + 25      F(22)       = 57
+    F(9...14)  = a + 26      F(23...25)  = 3*(a-23) + 62
+    F(15,16)   = a + 27      F(26...83)  = a + 4a
+    F(17...19) = a + 2b      F(84...127) = 128
+ 
+NOTE: Despite this correction the amplitude ranges 1...22 and
+      around 51...65 are incomplete.
+ 
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+Confidence Level Overview
+=========================
+ 
+        N/A
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

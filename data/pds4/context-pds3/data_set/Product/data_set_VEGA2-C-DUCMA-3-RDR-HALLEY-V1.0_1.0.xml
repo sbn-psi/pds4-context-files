@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vega2-c-ducma-3-rdr-halley-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VEGA2 DUST PARTICLE COUNTER MASS ANALYSER DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.vega_2::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vega2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ducma.vega2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.halley::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vega2-c-ducma-3-rdr-halley-v1.0__browserp_vega2-c-ducma-3-rdr-halley-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Reinhard, R and B. Battrick (eds), &apos;Space Missions to Halley&apos;s Comet&apos;, European
+                   Space Agency ESA SP-1066, ESA Pub Div, Moordwijk, Netherlands, 1986.
+            </reference_text>
+            <description>reference.ESA-SP1066</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VEGA2-C-DUCMA-3-RDR-HALLEY-V1.0</data_set_id>
+        <data_set_name>VEGA2 DUST PARTICLE COUNTER MASS ANALYSER DATA V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1986-02-28T05:11:08.000Z</start_time>
+        <stop_time>1986-03-09T08:40:08.000Z</stop_time>
+        <producer_full_name>INTERNATIONAL HALLEY WATCH</producer_full_name>
+        <citation_text>
+            Simpson, J.A., Tuzzolino, A.J., Ksanwomaliti . L. V., and A. V.
+            Dyachkov, VEGA2 DUST PARTICLE COUNTER MASS ANALYSER DATA V1.0,
+            VEGA2-C-DUCMA-3-RDR-HALLEY-V1.0, NASA Planetary Data System, 1997
+        </citation_text>
+        <data_set_terse_desc>
+            VEGA 2 satellite DUCMA instrument dust particle counter and mass
+            analyzer observations of 1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            Encounter data for Vega-2 consisted of two files: DSFAST27 and
+            Dvg2CLN1. The data were submitted by the Univ of Chicago group
+            along with hard copy versions of the operating manual and a
+            preprint of the results.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+    Encounter data for Vega-2 consisted of two files:
+    DSFAST27 and Dvg2CLN1.  The data were submitted by
+    the Univ of Chicago group along with hard copy
+    versions of the operating manual and a preprint of
+    the results.
+ 
+     The dsfast27 file includes all the fast telemetry
+    data (data obtained every second).  The fast
+    telemetry data covers the entire Halley&apos;s comet
+    encounter, lasting approximately four hours.  The
+    telemetry noise events have not been removed from the
+    data.  Each readout includes; 1)the time at which
+    data was obtained in seconds (given in time since the
+    Vega launch date),and the Blissi clock described in
+    the technical manual, 2) Two eight integer status
+    commands also described in the Ducma Technical
+    Manual, 3) two temperatures,the detector temperature
+    and the electronic temperature explained in the
+    technical manual, 4) the dust events given as ten
+    integers which represent counts in each of four
+    different thresholds,M4-M1,as well as the
+    anticoincident counts,M4NV-M1NV, and the two V
+    detector counts, VL and VH, which register noise
+    events.  More detailed explanations may be found in
+    the Ducma technical manual which is available through
+    PDS-SBN.  The masses corresponding to thresholds M1
+    through M4 are given below:
+ 
+        M1: 1.5x10**-13 g
+    	M2: 5.6x10**-11 g
+    	M3: 1.6x10**-9 g
+        M4: 4.0x10
+ 
+ 
+    Dvg2CLN1 file includes the encounter data without any
+    information about status commands and temperature
+    variations.  The noise spikes and accidental
+    calibration events have been removed.  This file is
+    designed for easy data analysis and lists simply the
+    time of an event in seconds and the total counts in
+    each threshold, M4-M1, the anticoincident events,
+    M4NV-M1NV, and the noise events,VL and VH, all
+    obtained during that time interval.
+ 
+     Below are charts to help in the conversion of BLISSI
+    clock times for Vega2 to DUCMA clock times and
+    &apos;calendar time&apos;.
+ 
+    DUCMA times are given in seconds after launch
+    BLISSI times are given in seconds
+ 
+ 
+ 
+Vega2
+DUCMA start time: Dec. 21 1984 10:29:46
+from file dsfast27.tab
+------------+-----------+--------------------------+--------------------+
+ DUCMA time |BLISSI time|    DUCMA Time to CA 	   |      Real time	|
+  (seconds) | (seconds)	| (seconds) |(DD hh:mm:ss) | (YY-MM-DDThh:mm:ss)|
+------------+-----------+-----------+--------------+--------------------+
+  37478720  |   49156   |   785332  | 09 02:08:52  |  86-02-28T05:11:08	|
+@ 37483380  |   53818 	|   780672  | 09 00:51:12  |  86-02-28T06:28:48	|
+@ 37483380  |   37435 	|   780672  | 09 00:51:12  |  86-02-28T06:28:48	|
+  37483384  |   37436   |   780668  | 09 00:51:08  |  86-02-28T06:28:52	|
+  37486588  |   38595	|   777464  | 08 23:57:44  |  86-02-28T07:22:16	|
+  38079280  |       1	|   184772  | 02 03:19:32  |  86-03-07T04:00:28	|
+  38086472  |    7191	|   177580  | 02 01:19:40  |  86-03-07T06:00:20	|
+  38173960  |       5	|    90092  | 01 01:01:32  |  86-03-08T06:18:28	|
+  38181148  |    7194	|    82904  | 00 23:01:44  |  86-03-08T08:18:16	|
+  38252812  |       1	|    11240  | 00 03:07:20  |  86-03-09T04:12:40	|
+* 38264052  |   11242   |        0  | 00 00:00:00  |  86-03-09T07:20:00 |
+  38268860  |   16049	|     4808  | 00 01:20:08  |  86-03-09T08:40:08	|
+------------+-----------+-----------+--------------+--------------------+
+ 
+*-times of Closest Approach (CA)
+ 
+@-BLISSI clock apparently reset from 53818 to 37435 during 4 second
+	DUCMA time period beginning at 37483380 seconds, resulting
+	in two very different BLISSI clock values &apos;mapping&apos; to the
+        same DUCMA time and Real time.
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      N/A
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

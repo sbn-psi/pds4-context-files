@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-c-compil-5-comet-nuc-properties-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PROPERTIES OF COMET NUCLEI</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.publit::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:compil.publit::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.comet::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-c-compil-5-comet-nuc-properties-v1.0__browserp_ear-c-compil-5-comet-nuc-properties-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Lamy, P.L., I. Toth, Y.R. Fernandez, and H.A. Weaver, The Sizes, Shapes,
+                   Albedos, and Colors of Cometary Nuclei, in &apos;Comets II&apos;, edited by M.C. Festou
+                   et al., pp. 223-264, University of Arizona Press, Tucson, in collaboration with
+                   the Lunar and Planetary Institute, Houston, 2004.
+            </reference_text>
+            <description>reference.LAMYETAL2004</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-C-COMPIL-5-COMET-NUC-PROPERTIES-V1.0</data_set_id>
+        <data_set_name>PROPERTIES OF COMET NUCLEI</data_set_name>
+        <data_set_release_date>2005-11-17</data_set_release_date>
+        <start_time nilReason="unknown" xsi:nil="true"></start_time>
+        <stop_time>2010-08-01</stop_time>
+        <producer_full_name>ANNE RAUGH</producer_full_name>
+        <citation_text>
+            Lamy, P.L., I. Toth, Y.R. Fernandez and H.A. Weaver, PROPERTIES
+            OF COMET NUCLEI, EAR-C-COMPIL-5-COMET-NUC-PROPERTIES-V1.0, NASA
+            Planetary Data System, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            Sizes, shapes, colors and albedos of comet nuclei culled from the
+            literature as presented in Lamy et al. (2004).
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set presents tables 1, 2, 3, 4, 5 and 7 of &apos;Sizes,
+            Shapes, Albedos, and Colors of Cometary Nuclei&apos; (Lamy et
+            al., 2004), and includes references for the sources cited. The
+            authors culled this data from published or well-known unpublished
+            sources, and have indicated what they judge to be the most
+            reliable value available.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+    This data set reproduces the major data tables of &apos;The Sizes, Shapes,
+    Albedos, and Colors of Cometary Nuclei&apos; (Lamy et al., 2004 in &apos;Comets
+    II&apos;).  In this article the authors present a survey of the available
+    literature and present what they found to be the most reliable results
+    for the various parameters reported.
+ 
+ 
+    Parameters
+    ==========
+    Measurements of effective radius, axial ratio and period are presented
+    for 153 comets and 34 asteroidal objects suspected of being dormant or
+    extinct comet nuclei.  Additional tables present colors, albedos, and
+    dimensions of nuclei.
+ 
+ 
+    Processing
+    ==========
+    These data have been keyed in to flat ASCII tables from the published
+    paper.  The format has been modified slightly to accommodate PDS
+    standards, usual SBN practices, and the preferences of users as
+    expressed by the external reviewers.
+ 
+    At the peer review for these data, the reviewers recommended removing
+    the rotation periods originally included in the main data table (the
+    &apos;comet.tab&apos; file).  The rotation period information was apparently
+    included as a convenience in the published table, and the data were
+    not of the same quality as the rest of the columns.  The column was
+    removed before final archiving.  (A separate rotation period dataset
+    was recommended for archiving.)
+ 
+    Media/Format
+    ============
+    These data are available online for immediate downloading.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+    Lamy et al. (2004) contains extensive remarks regarding the various
+    observations and measurements included in these tables.  While the
+    tables present an excellent summary of the state of knowledge, the
+    user is strongly encouraged to consult the published paper for the
+    various caveats and notations included in the remarks.
+ 
+ 
+    Review
+    ======
+    This data set underwent peer review on 12 December 2005.  The data
+    were accepted pending some minor corrections, which have been made,
+    and the relatively major change noted in the data set description.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

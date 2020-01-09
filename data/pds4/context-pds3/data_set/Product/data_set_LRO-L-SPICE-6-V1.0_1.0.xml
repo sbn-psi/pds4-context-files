@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO LUNAR SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-spice-6-v1.0__browserp_lro-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-spice-6-v1.0__browser_lro-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-spice-6-v1.0__browser_wgc_lro-l-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-SPICE-6-V1.0</data_set_id>
+        <data_set_name>LRO LUNAR SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2015-09-15</data_set_release_date>
+        <start_time>2009-06-18T21:32:00Z</start_time>
+        <stop_time>2015-06-15T00:00:00Z</stop_time>
+        <producer_full_name>NAYI CASTRO</producer_full_name>
+        <citation_text>
+            Calk, W.H., Casasanta, R.T., and Saylor, R.S., LUNAR
+            RECONNAISSANCE ORBITER SPICE KERNELS V1.0, LRO-L-SPICE-6-V1.0,
+            NASA Planetary Data System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the Lunar Reconnaissance Orbiter.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Lunar Reconnaissance
+            Orbiter SPICE data files (``kernel files&apos;), which can be
+            accessed using SPICE software. The SPICE data contains geometric
+            and other ancillary information needed to recover the full value
+            of science instrument data. In particular SPICE kernels provide
+            spacecraft and planetary ephemerides, instrument mounting
+            alignments, spacecraft orientation, and data needed for relevant
+            time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of Lunar Reconnaissance
+      Orbiter SPICE data files (``kernel files&apos;), which can be
+      accessed using SPICE software. The SPICE data contains geometric
+      and other ancillary information needed to recover the full value
+      of science instrument data. In particular SPICE kernels provide
+      spacecraft and planetary ephemerides, instrument mounting
+      alignments, spacecraft orientation, and data needed for relevant
+      time conversions.
+ 
+      This data set is contained on a single virtual volume,
+      LROSP_1000, including data from all mission phases and covering
+      from launch, 2009-06-18, through the end time of the latest
+      spacecraft trajectory file supplied in the data set. Until the
+      end of the spacecraft lifespan this data set is accumulating with
+      new data added approximately every three to six months.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or fixed
+      spacecraft and instrument structures. They provide position and
+      velocity, given in a Cartesian reference frame. SPK files are
+      located under the ``data/spk&apos; directory of this data set.
+ 
+      PCK kernels contain certain physical, dynamical and cartographic
+      constants for target bodies, such as size and shape
+      specifications, and orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the ``data/ek&apos; directory of this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock
+      calibration data required to perform a mapping between Ephemeris
+      time (ET) and spacecraft on-board time (SCLK). SCLK files are
+      located under the ``data/sclk&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under the
+      ``data/fk&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of LRO kernels included
+      in this data set is provided in the CONFIDENCE_LEVEL_NOTE section
+      of this file while details specific to individual files are found
+      in the ``*info.txt&apos; files in the corresponding data directory.
+      The most detailed description of the data in each file is
+      provided in metadata included inside the file -- in the
+      description area of text kernels or in the comment area of binary
+      kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read SPICE
+      kernel files. SPICE software is highly documented via internal
+      headers. Additional documentation is available in separate ASCII
+      text files called Required Reading files. For example, the S- and
+      P- Kernel (SPK) Required Reading File, named SPK.REQ, describes
+      use of the SPK kernel file readers and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This data set contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here, but
+      the prospective user is also referred to extensive descriptions
+      about each file that are stored inside each kernel file. These
+      metadata provide detailed information regarding the information
+      source from which the data were derived, the type of processing
+      applied to the source data, applicability of the data, etc.
+      Metadata are located in the ``comment area&apos; for binary kernel
+      types (SPK, CK, ESQ), accessible using either the COMMNT or
+      SPACIT utility program found in the NAIF Toolkit. Metadata are
+      located after ``\begintext&apos; markers within the text kernel types
+      (PCK, IK, FK, LSK, SCLK, MK), accessible by using any available
+      text file display tool such as a word processor, text editor, or
+      the unix ``more&apos; or ``cat&apos; commands.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;
+      not addressed herein the reader is invited to contact the NAIF
+      node of the Planetary Data System for possible further
+      information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      Three kinds of SP-kernel (SPK) files are provided in this
+      archive: merged reconstructed spacecraft ephemeris SPK files,
+      merged reconstructed reprocessed spacecraft ephemeris SPK files,
+      and planetary ephemeris SPK files.
+ 
+      The merged reconstructed spacecraft ephemeris SPK files were
+      created at the time of archive preparation by merging together
+      ``as is&apos; large sets daily LRO definitive spacecraft ephemeris
+      SPK files (fdf29_???????_???????_???.bsp) to reduce the number of
+      kernels provided in the archive. The daily LRO definitive
+      spacecraft ephemeris files provided the definitive LRO spacecraft
+      position and velocity relative to the Moon based only on S-Band
+      tracking data. The spacecraft position and velocity vectors in
+      these Type 13/degree 11 SPKs had sampling frequency of 1 minute.
+      These SPKs were created by GSFC FDF on a daily basis and covered
+      24 hours of a single day with coverage endpoints matching exactly
+      those of the SPKs for the previous and next days. The accuracy of
+      the position in these daily SPKs was better than 500 meters.
+ 
+      The merged reconstructed reprocessed spacecraft ephemeris SPK
+      files were created at the time of archive preparation by merging
+      together ``as is&apos; sets LRO reprocessed spacecraft ephemeris SPK
+      files (fdf36_???????_???????_???.bsp) to reduce the number of
+      kernels provided in the archive. The LRO reprocessed spacecraft
+      ephemeris files provided the definitive LRO spacecraft position
+      and velocity relative to the Moon based on LRO Orbit
+      Determination (OD) reprocessing results which included both laser
+      tracking measurements and LOLA OD and Improved gravity model
+      products. The spacecraft position and velocity vectors in these
+      Type 13/degree 11 SPKs had sampling frequency of 1 minute. These
+      SPKs were created by GSFC FDF on an irregular basis and covered
+      varying intervals of time with coverage endpoints of given SPK
+      matching exactly the coverage endpoints of the previous and next
+      reprocessed SPKs. The accuracy of the position in these SPKs was
+      better than 500 meters.
+ 
+      The DE421 planetary ephemeris SPK file included in this data set
+      contains ephemeris data for the Solar System planet barycenters,
+      Sun, Mercury, Venus, Earth, Moon, and Lunar. This version of
+      ephemerides was officially used by the project during mission
+      operations. The internal comments included this SPK file provide
+      detailed accuracy information.
+ 
+      More information about LRO SPK files (include file naming
+      conventions)is available in the file ``data/spk/spkinfo.txt&apos;.
+ 
+ 
+      CK Files
+      ========
+ 
+      Four kinds of C-kernel (CK) files are provided in this archive:
+      merged reconstructed spacecraft orientation CK files, merged
+      reconstructed High Gain Antenna (HGA) orientation CK files,
+      merged reconstructed Solar Array (SA) orientation CK files, and
+      merged reconstructed DLRE orientation CK files.
+ 
+      The merged reconstructed spacecraft orientation CK files were
+      created at the time of archive preparation by merging together
+      ``as is&apos; sets of 9 to 11 daily LRO definitive spacecraft CK
+      files (moc42_???????_???????_v??.bc) to reduce the number of
+      kernels provided in the archive. The daily LRO definitive
+      spacecraft CK files provided orientation of the LRO spacecraft
+      bus relative to the inertial frame J2000. These daily CKs were
+      created by LRO MOC by storing spacecraft attitude quaternions
+      determined on-board at sampling frequencies up to 5 Hz. These
+      daily CKs usually covered 24 hours of a single day with a few
+      minute overlap with the next day. The accuracy of the attitude in
+      these daily CKs was [TBD] radians.
+ 
+      The merged reconstructed HGA orientation CK files were created at
+      the time of archive preparation by merging together ``as is&apos;
+      sets of 9 to 11 daily LRO definitive HGA CK files
+      (moc43_???????_???????_v??.bc) to reduce the number of kernels
+      provided in the archive. The daily LRO definitive HGA CK files
+      provided orientation of the LRO HGA relative to the LRO
+      spacecraft bus. These CKs were created by LRO MOC by storing
+      quaternions computed using the HGA articulation angles downlinked
+      from the spacecraft at sampling frequencies up to 5 Hz. These
+      daily CKs usually covered 24 hours of a single day with a few
+      minute overlap with the next day. The accuracy of the HGA
+      articulation angles used to produce these daily CKs was 10^-7
+      radians.
+ 
+      The merged reconstructed SA orientation CK files were created at
+      the time of archive preparation by merging together ``as is&apos;
+      sets of 9 to 11 daily LRO definitive SA CK files
+      (moc44_???????_???????_v??.bc) to reduce the number of kernels
+      provided in the archive. The daily LRO definitive SA CK files
+      provided orientation of the LRO SA relative to the LRO spacecraft
+      bus. These CKs were created by LRO MOC by storing quaternions
+      computed using the SA articulation angles downlinked from the
+      spacecraft at sampling frequencies up to 5 Hz. These daily CKs
+      usually covered 24 hours of a single day with a few minute overlap
+      with the next day. The accuracy of the SA articulation angles
+      used to produce these daily CKs was 10^-7 radians.
+ 
+      The merged reconstructed DLRE orientation CK files were created
+      at the time of archive preparation by merging together ``as is&apos;
+      sets hourly reconstructed DLRE CK files (lro_div_????-??-??_??.bc)
+      into monthly files to reduce the number of kernels provided in
+      the archive. The hourly reconstructed DLRE CK files provided
+      orientation of the DLRE gimbal frames relative to the
+      corresponding gimbal reference position frames, allowing in
+      combination with the other DLRE frames computation of the orientation
+      of the instrument detectors relative to the spacecraft bus. These
+      hourly CKs were created by the DLRE team using the DLRE gimbal
+      angles downlinked in the instrument housekeeping telemetry. Each
+      of these hourly CKs usually covered one hour with a few second
+      overlap with the next hour. The accuracy of the DLRE gimbal
+      angles used to produce these daily CKs was [TBD] radians.
+ 
+      More information about LRO CK files (include file naming
+      conventions)is available in the file ``data/ck/ckinfo.txt&apos;.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;
+      bodies such as the Moon. A description of these data items and
+      reference to their source is provided inside the PCK file, which
+      is a simple text file that can be viewed using any word
+      processor, text editor or text display utility.
+ 
+      The DE-421 based kernel file provide orientation of Lunar
+      Principal Axis (PA) reference frame. More information about the
+      PCK files included in this data set is available in the file
+      ``data/pck/pckinfo.txt&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      Four kinds of Frame Kernel (FK) files are provided in this
+      archive: LRO mission FK file, LRO instrument FK files, Lunar
+      Reference Frames FK file, and Lunar Reference Frame Associations
+      FK files.
+ 
+      The LRO Mission FK file contains the complete set of frame
+      definitions for the spacecraft, the solar array, and high gain
+      antenna. Included are reference mounting angles and reference
+      matrices for various spacecraft hardware and actuators, as well
+      as the science instrument mounting alignments. Meta information
+      provided in the comments included in this file consists of the
+      frame definitions, description of the frame relationships, source
+      of and accuracy of the mounting alignment information, etc.
+      Multiple LRO groups provided inputs to create this file; those
+      inputs were in the form of various project derived documentation.
+ 
+      The LRO instrument FK files contain definitions of additional
+      frames needed to compute observation geometry for a particular
+      instrument.
+ 
+      The Lunar Reference Frames FK file specifies lunar body-fixed
+      reference frames associated with high-accuracy lunar orientation
+      data provided by the JPL Solar System Dynamics Group&apos;s planetary
+      ephemerides DE421. These reference frames realize the Lunar
+      Principal Axis (PA) and Mean Earth/Polar Axis (ME) reference
+      systems.
+ 
+      The Lunar Reference Frame Associations FK files are used to
+      associate a particular body-fixed frame with the Moon. Only one
+      of these kernels (the one for the frame on interest) needs to be
+      loaded at a time in order for some older SPICE APIs to perform
+      computations in that frame. These kernels are not needed for the
+      latest SPICE APIs.
+ 
+      More information about the LRO FK files is available in the file
+      ``data/fk/fkinfo.txt&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      Instrument kernel files provide specifications for geometric
+      parameters and--where applicable--field-of-view size, shape and
+      orientation for the named instruments. LRO did not levy any
+      requirements on the individuals SOCs or instrument teams to
+      create a corresponding Instrument kernel, which would provide
+      the instrument field-of-view(s) size, shape and orientation.
+      However, if the instrument teams or science centers created these
+      files and forwarded them to the LRO MOC, the LRO MOC included
+      them as part of the LRO SPICE archive.
+ 
+      More information about LRO IK files is available in the file
+      ``data/ik/ikinfo.txt&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data needed
+      for converting time measurements between ephemeris time (ET) and
+      spacecraft clock time (SCLK). The SCLK kernel is a cumulative
+      file for the entire mission.
+ 
+      The LRO spacecraft maintained time in a combination of both
+      hardware and software. The LRO clock is formatted as a 32 bit
+      seconds and 16 bit subseconds count. The C&amp;DH flight software used
+      the hardware counters, the MET, and the Spacecraft Time Correction
+      Factor (STCF)(which included leap seconds) to represent one single
+      value, the SC UT. The SC UT drifts because the clock oscillator
+      frequency is not stable due to changing temperature and aging of
+      the oscillator. Using an ultra-stable oscillator (USO) minimizes
+      these effects. LRO has an Ultra Stable Oscillator (USO) 9500 and
+      a USO 9600.  The USO 9500 is a Double Oven Controlled Crystal
+      Oscillator (DOCXO) while the USO 9600 is an Oven Controlled Crystal
+      Oscillator (OCXO). The ovens keep each oscillator at a near
+      constant temperature.  The USO 9500 is the more accurate of the
+      two clocks and therefore is the primary one used for operations.
+      The USO 9600 is kept powered OFF unless needed due to a failure
+      or anomaly with the USO 9500.
+ 
+      Once LRO had launched it was determined that the spacecraft clock
+      was drifting at approximately 6.7 milliseconds per day. The Project
+      requirement is to keep the difference between the spacecraft clock
+      and UTC on the ground to less than 100 milliseconds. Initially, LRO
+      operations had decided to adjust the clock, should the difference
+      reach 80 milliseconds. The drift rate experienced subsequent to
+      launch required an adjustment approximately every 12 days. To reduce
+      confusion and to standardize delivery of the SCLK files, constraints
+      permitting, LRO operations decided to perform a routine clock adjust
+      every Monday. However, instrument constrains may have delayed the
+      actual execution of the adjustment.
+ 
+      More information about the LRO SCLK files is available in the
+      file ``data/sclk/sclkinfo.txt&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;
+      and some other terms used in converting time measurements between
+      ephemeris time (ET) and Universal Time (UTC). ``Spacecraft Event
+      Time&apos; (SCET) is the commonly used name for UTC events measured
+      at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed is
+      contained inside the LSK text file. The time conversion provided
+      by SPICE LSK files is accurate to approximately 0.000030 seconds.
+ 
+      More information about the LSK files is available in the file
+      ``data/lsk/lskinfo.txt&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      The Events (E)-kernel store different kinds of the spacecraft
+      and science instrument events related information such as
+      spacecraft and instrument commands, status parameters, records
+      of spacecraft activities, ground events, and so on, and to
+      systematize and provide access to this data in relational
+      database-like fashion.
+ 
+      The means of an access to the EK data are provided via SPICE
+      Toolkit APIs, calls to which can be integrated into user application
+      programs. The information regarding how to obtain the SPICE system
+      toolkit for a number of languages and computer platforms is located
+      in the ``/software&apos; subdirectory of the main directory of this data
+      set.
+ 
+      To use E-kernels with INSPEKT program, a Leapseconds (LSK) is
+      required.
+ 
+      Refer to the ``ek.req&apos; and ``inspekt.ug&apos; documents provided with
+      the toolkit to get more information on how to access E-kernel data.
+ 
+      The Events Kernel is consists of the complete set of event sequences
+      (in sequential time-order) when any instrument is not collecting
+      science data, such as during spacecraft station keeping maneuvers.
+ 
+      The LRO Event kernel is a Binary-formatted file that intended to
+      provide current and future users of LRO science data information on
+      events and activities that affected science data collection and that
+      can assist in extracting the full value of the science data returned
+      from the LRO mission. The events documented by the event kernel can
+      be planned or unplanned. Some examples of planned events are:
+ 
+        - halting data collection for slews or calibrations;
+        - delta-v maneuvers;
+        - loading a FSW patch;
+        - recovery from non-nominal modes such as safe mode.
+ 
+      Some examples of unplanned events might be:
+        - an anomaly resulting in the orbiter transitioning to safe mode
+          or powering down instruments;
+        - instrument anomaly.
+ 
+      The information for the event kernel came primarily from a single
+      source:
+        - The LRO telemetry and command (T&amp;C) system event message log;
+        - The spacecraft playback logs.
+ 
+      The event kernel was generated by an automated process within the LRO
+      Mission Operations Center (MOC). The LRO Event Kernel Utility ran
+      once per week at 0000Z on Monday. The Utility scanned the T&amp;C and
+      spacecraft playback logs for appropriate information to be included
+      in the event kernel. The LRO GS&amp;O system engineering and mission
+      operations team had the responsibility for determining which
+      information is appropriate and configuring the LRO Event Kernel
+      Utility accordingly.
+ 
+      More information about LRO EK files is available in the file
+      ``data/ek/ekinfo.txt&apos;.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

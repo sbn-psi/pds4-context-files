@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.hp-ssa-acp-3-descent-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>HUYGENS ACP CALIBRATED ENGINEERING &amp; SCIENCE DATA</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.hp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:acp.hp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:gcms.hp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.titan::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hp-ssa-acp-3-descent-v1.0__browserp_atmos_hp-ssa-acp-3-descent-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hp-ssa-acp-3-descent-v1.0__dvo_hp-ssa-acp-3-descent-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>HP-SSA-ACP-3-DESCENT-V1.0</data_set_id>
+        <data_set_name>HUYGENS ACP CALIBRATED ENGINEERING &amp; SCIENCE DATA</data_set_name>
+        <data_set_release_date>2006-07-15</data_set_release_date>
+        <start_time>2005-01-14T09:11:01.675Z</start_time>
+        <stop_time>2005-01-14T11:00:05.425Z</stop_time>
+        <producer_full_name>JOHN HABERMAN BRUN</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            This data set is composed of data produced during the descent to
+            Titan on January 14 2005 from the ACP instrument (Engineering
+            data) and also from the GCMS instrument (Science data) which
+            analyses the gaseous products from ACP.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set is composed of data produced during the descent to
+            Titan on January 14 2005 from the ACP instrument (Engineering
+            data) and also from the GCMS instrument (Science data) which
+            analyses the gaseous products from ACP.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+ 
+This data set is composed of data produced during the descent to Titan on
+January 14 2005 from the ACP instrument (Engineering data) and also from
+the GCMS instrument (Science data) which analyses the gaseous products from
+ACP.
+ 
+Only the channel B data is archived (no data has been recovered by Cassini
+on channel A).
+ 
+The raw data in binary format is not archived in this data set. It has been
+processed to calibrated (engineering) data by means of the transfer
+functions described in the ACP Software User Manual. This calibrated data
+is presented hereafter.
+ 
+The ACP engineering data:
+ 
+It includes all the temperatures, pressure, references voltages, DC/DC
+converter voltages, mechanisms position sensors, and  is sorted in the four
+following data files :
+ 
+1)ACP_OVEN_V1_0.LBL/ACP_OVEN_V1_0.TAB:
+ 
+Oven group parameters which monitor the heating and transfer phase
+performance including (columns title): UTC time, ACP internal sampling
+time, oven temperature, oven wall temperature,oven pressure, and
+electrovalves V1, V2, VT status.
+ 
+2)ACP_PUMP_V1_0.LBL/ACP_PUMP_V1_0.TAB:
+ 
+Pump group parameters which monitor the pump performance including (columns
+title): UTC time, ACP internal sampling time, pump temperature, pump
+current, pump speed.
+ 
+3)ACP_TEMP_V1_0.LBL/ACP_TEMP_V1_0.TAB:
+ 
+Temperatures group parameters including (columns title): UTC time,  ACP
+internal sampling time, temperatures; electronics, base plate, cold
+junction, electrovalves VT &amp; V2.
+ 
+4)ACP_VOLT_V1_0.LBL/ACP_VOLT_V1_0.TAB:
+ 
+Voltages group parameters including (columns title): UTC time, ACP internal
+sampling time, DC/DC converter voltages (+ 5V , +15V , -15V), calibration &amp;
+reference voltages (Rcal, RO, TCgnd, Vref1/2/3).
+ 
+ 
+The documentation includes the ACP EAICD, The GCMS EAICD, the ACP on board
+software user manual, the ACP &amp; GCMS ESA SP-1177 publications, and  the ACP
+&amp; GCMS Nature publications.
+ 
+ 
+The ACP science data :
+ 
+The GCMS analyses samples from the ACP.  The Data Products that are
+referencing the ACP are provided to the ACP Science team, and are analyzed
+by them.
+ 
+The ACP products are sampled at determined times during the descent
+directly by the GCMS Ion source 2  dedicated to ACP  (IS 2), and by the
+combination of the GC &amp; ion sources 3/4/5 (GC-IS 3/4/5).
+ 
+This dataset  contains the calibrated data of the ACP data products
+analysed by the GCMS. The same dataset is archived by the GCMS team.
+ 
+For more information refer to the GCMS DATASET\DATASET.CAT.
+ 
+The GCMS Stage 2 ACP data is converted from raw counts per integration
+period to counts per second and corrected for the counter overflow
+condition where this can be determined to have happened.  Stage 3
+processing corrects this data for pulse pile-up, counter dead-time and
+other known counting system (error) conditions. These errors can become
+significant where the count value is large.
+ 
+The files are all of the valid data from MS Ion Source #2 (the ACP data)
+plus the Ion Sources #3 &amp; 4 data for Sample #3, the ACP injection to the GC
+Columns attached to Ion Sources #3 &amp; 4.  As the Ion Source #5 did not work
+during the descent, the IS5 data files are not included.
+ 
+These files are in column aligned comma delimited ASCII TEXT format as
+required by the PSA/PDS for archiving.
+ 
+The overall structure of this dataset is:
+ 
+It contains the data Table files, the Label files associated with the Table
+files plus the Format files referred to in the Label files.
+The LBL file gives information on the file.
+The FMT file gives information on the columns.
+ 
+ 
+The ACP data consists of one GC data product, 6 stage 1 mass scan products,
+and 6 stage 2 and 6 stage 3 mass scan products.
+ 
+Stage 1 Processed Data: Scripts that call programs convert *.archive to
+ *.dat files; sort data into smaller files
+Stage 2 Processed Data: Break into smaller files, convert units, add
+ headers and comments
+Stage 3 Processed Data: Lengthy processing, plotting, comparing to
+ calibration (pre &amp; post encounter)
+ 
+ 
+IS2_Smpl1_Stg2: Ion source 2 (MS) data at 75 eV ionization energy and unit
+mass resolution for ACP sample #1 in counts per second.
+IS2_Smpl2_Stg2: Ion source 2 (MS) data at 75 eV ionization energy and unit
+mass resolution for ACP sample #2 in counts per second.
+Note - Programmed low IE data is present in this block of data and not
+marked between times 10:18:49 - 10:19:01.
+IS2_Smpl5_Stg2: Ion source 2 (MS) data at 75 eV ionization energy and unit
+mass resolution for ACP sample #5 in counts per second.
+Note - Programmed low IE data is present in this block of data and not
+marked between times 10:52:48 - 10:52:55.
+ 
+IS2_Stg1:                  Ion source 2 (ACP) full scans
+(mass range: 2 - 141) at unit resolution and 25 eV ionization energy.
+IS2_Stg2:                  Ion source 2 (ACP) full scans
+(mass range: 2 - 141) at unit resolution and 25 eV ionization energy.
+ 
+IS2_Smpl1_Stg2: Ion source 2 (MS) data at 25 eV ionization energy and unit
+mass resolution for ACP sample #1 in counts per second.
+IS2_Smpl2_Stg2: Ion source 2 (MS) data at 25 eV ionization energy and unit
+mass resolution for ACP sample #2 in counts per second.
+IS2_Smpl3_Stg2: Ion source 2 (MS) data at 75 eV ionization energy and unit
+mass resolution for ACP sample #3 in counts per second.
+IS2_Smpl4_Stg2: Ion source 2 (MS) data at 75 eV ionization energy and unit
+mass resolution for ACP sample #4 in counts per second.
+IS2_Smpl5_Stg2: Ion source 2 (MS) data at 25 eV ionization energy and unit
+mass resolution for ACP sample #5 in counts per second.
+IS2_Smpl6_Stg2: Ion source 2 (MS) data at 75 eV ionization energy and unit
+mass resolution for ACP sample #6 in counts per second.
+ 
+IS3_GC1_Smpl3_Stg2: Ion Source 3 (Column 1) data at 75 eV ionization energy
+ and unit mass resolution for ACP Sample #3 as counts per second.  Time
+ relative to the injection has been determined and added to the file.
+IS4_GC2_Smpl3_Stg2: Ion Source 4 (Column 2) data at 75 eV ionization energy
+ and unit mass resolution for ACP Sample #3 as counts per second.  Time
+ relative to the injection has been determined and added to the file.
+ 
+IS3_Smpl3_Stg2: IS3 (GC Column 1) sample 3 mass scans at unit resolution
+and 75 eV ionization energy.
+IS4_Smpl3_Stg2: IS4 (GC Column 2) sample 3 mass scans at unit resolution
+and 75 eV ionization energy.
+ 
+ 
+The first results from the ACP data have been published in NATURE2005.
+ 
+There is no specialized software required to view the ACP data products,
+and no software is provided or archived to do so.
+ 
+Review
+======
+ 
+      The Huygens data sets were reviewed in two steps:
+      (1) a review of the Experimenter-to-archive-ICD, in 2004.
+      (2) a review of the data sets, in 2006.
+      Procedures and details of this process can be obtained from
+      the ESA archive team:
+ 
+      Olivier Witasse or Joe Zender
+      ESA ESTEC
+      Keplerlaan 1
+      2200 AG Noordwijk
+      The Netherlands
+      Olivier.Witasse@esa.int or Joe.Zender@esa.int
+ 
+     This data set was reviewed by Nathalie Boudin and Heidi L.K. Manning.
+        </data_set_desc>
+        <confidence_level_note>
+N/A
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

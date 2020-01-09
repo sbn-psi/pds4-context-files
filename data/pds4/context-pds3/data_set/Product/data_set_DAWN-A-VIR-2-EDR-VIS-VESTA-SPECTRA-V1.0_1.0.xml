@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dawn-a-vir-2-edr-vis-vesta-spectra-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DAWN VIR RAW (EDR) VESTA VISIBLE SPECTRA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.dawn_mission_to_vesta_and_ceres::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:vir.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.4_vesta::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dawn-a-vir-2-edr-vis-vesta-spectra-v1.0__browserp_dawn-a-vir-2-edr-vis-vesta-spectra-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bini, A., I. Ficai-Veltroni, S. Pieraccini, G. Cherubini, M. Benetello, and M.
+                   Giustini, Instrument system description, VID-GAF-RP-002, 2005.
+            </reference_text>
+            <description>reference.BINIETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DAWN-A-VIR-2-EDR-VIS-VESTA-SPECTRA-V1.0</data_set_id>
+        <data_set_name>DAWN VIR RAW (EDR) VESTA VISIBLE SPECTRA V1.0</data_set_name>
+        <data_set_release_date>2013-09-04</data_set_release_date>
+        <start_time>2011-05-03T00:00:00Z</start_time>
+        <stop_time>2012-08-26T14:29:16Z</stop_time>
+        <producer_full_name>MARIA CRISTINA DE SANCTIS</producer_full_name>
+        <citation_text>
+            De Sanctis, M.C., M.T. Capria, F. Carraro, R. Noschese, S. Fonte,
+            A. Coradini, DAWN VIR RAW (EDR) VESTA VISIBLE SPECTRA V1.0,
+            DAWN-A-VIR-2-EDR-VIS-VESTA-SPECTRA-V1.0, NASA Planetary Data
+            System, 2011.
+        </citation_text>
+        <data_set_terse_desc>
+            Contains raw instrument data from the DAWN spacecraft VIR
+            instrument during the Vesta Encounter mission phases.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This volume contains the digital numbers (DN) contained in the
+            telemetry (TM) packages of the VIR instrument on board of the
+            spacecraft DAWN. The data are from the Vesta Encounter phase,
+            which occurred 2011-05-03 to 2012-07-18.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Required Reading
+  ================
+    The format of all VIR data are described in detail by the SIS document
+    located in the /DOCUMENT directory. VIR team strongly recommends
+    reading this documentation before using the data.
+ 
+ 
+  Data Set Overview
+  =================
+    This data set contains raw VIS data acquired by the DAWN mission VIR
+    spectrometer during the Vesta Encounter phases of the DAWN mission,
+    which covered May 3, 2011 to July 18, 2012.
+ 
+ 
+  VIR Vesta Observations
+  ======================
+    The following table contains a listing of VIR observations at Vesta.
+ 
+    ------------------------------------------------------------------------
+    Dawn Science Observations
+    ------------------------------------------------------------------------
+    Start    Mission Activity     Activity
+    Date     Phase   Name         Description
+    ========================================================================
+    11-05-03 VSA    APPROACH     Vesta Science Approach Phase
+    ------------------------------------------------------------------------
+    11-05-10 VSA    OPNAV_002    Ride-along cubes to FC OpNav images
+    11-06-08 VSA    OPNAV_006    Ride-along cubes to FC OpNav images
+    11-06-14 VSA    OPNAV_007    Ride-along cubes to FC OpNav images
+    11-06-30 VSA    RC1          Ride-along cubes to FC rotational
+                                 characterization movie #1
+    11-07-23 VSA    OPNAV_019    Ride-along cubes to FC OpNav images
+    11-08-06 VSA    C0Mosaic     Ride-along cubes to FC mosaics images
+                                 (equatorial and south)
+ 
+    ------------------------------------------------------------------------
+    11-08-11 VSS    SURVEY       Vesta Science Survey Phase (range ~3000 km)
+    ------------------------------------------------------------------------
+    11-08-11 VSS    CYCLE1       Survey Cycle (orbit) 1
+    11-08-12 VSS    CYCLE1       C1 Pushbroom observation
+    11-08-14 VSS    CYCLE2       Survey Cycle (orbit) 2
+    11-08-14 VSS    CYCLE2       C2 24 VIR VIS+IR cubes at 12 stations
+                                 (North)
+    11-08-15 VSS    CYCLE2       C2 24 VIR VIS+IR cubes at 12 stations
+                                 (South)
+    11-08-17 VSS    CYCLE3       Survey Cycle (orbit) 3
+    11-08-17 VSS    CYCLE3       C3 Pushbroom observation
+    11-08-20 VSS    CYCLE4       Survey Cycle (orbit) 4
+    11-08-20 VSS    CYCLE4       C4 20 VIR VIS+IR cubes at 10 stations
+                                 (North)
+    11-08-21 VSS    CYCLE4       C4 20 VIR VIS+IR cubes at 10 stations
+                                 (South)
+    11-08-23 VSS    CYCLE5       Survey Cycle (orbit) 5
+    11-08-23 VSS    CYCLE5       C5 24 VIR VIS+IR cubes at 12 stations
+                                 (North)
+    11-08-24 VSS    CYCLE5       C5 24 VIR VIS+IR cubes at 12 stations
+                                 (South)
+    11-08-24 VSS    CYCLE6       Survey Cycle (orbit) 6
+    11-08-25 VSS    CYCLE6       C6 24 VIR VIS+IR cubes at 12 stations
+                                 (Equator)
+    11-08-25 VSS    CYCLE6       C6 24 VIR VIS+IR cubes at 12 stations
+                                 (South)
+    11-08-28 VSS    CYCLE7       Survey Cycle (orbit) 7
+    11-08-29 VSS    CYCLE7       C7 16 VIR VIS+IR cubes at 8 stations
+                                 (North)
+    11-08-29 VSS    CYCLE7       C7 Pushbroom observation
+ 
+    ------------------------------------------------------------------------
+    11-09-03 VTH    TRANSFER_    Vesta Transfer to HAMO Phase
+                    TO_HAMO
+    ------------------------------------------------------------------------
+    11-09-17 VTH    OPNAV_003    Ride-along cubes to FC OpNav images
+    11-09-20 VTH    BOUNUS_SCIENCE Bonus Science cubes
+    11-09-25 VTH    FC1_CHECKOUT Ride-along cubes to FC1 checkout images
+ 
+    ------------------------------------------------------------------------
+    11-09-29 VSH    HAMO         Vesta Science HAMO Phase (avg rng ~950 km)
+    ------------------------------------------------------------------------
+    11-09-29 VSH    CYCLE1       10 orbits of ride-along pushbroom to FC
+                                 nadir imaging
+    11-10-06 VSH    CYCLE2       9 orbits of ride-along pushbroom to FC
+                                 off-nadir imaging
+    11-10-11 VSH    CYCLE3       10 orbits of ride-along cubes and pushbroom
+                                 to FC off-nadir imaging
+    11-10-16 VSH    CYCLE4       10 orbits of ride-along cubes and pushbroom
+                                 to FC off-nadir imaging
+    11-10-21 VSH    CYCLE5       10 orbits of ride-along cubes and pushbroom
+                                 to FC off-nadir imaging
+    11-10-26 VSH    CYCLE6       10 orbits of ride-along pushbroom to FC
+                                 nadir imaging
+ 
+    ------------------------------------------------------------------------
+    11-11-02 VTL    TRANSFER_    Vesta Transfer to LAMO Phase
+                    TO_LAMO
+    ------------------------------------------------------------------------
+    No VIR observations
+ 
+    ------------------------------------------------------------------------
+    11-12-12 VSL    LAMO         Vesta Science LAMO Phase (avg rng ~465 km)
+    ------------------------------------------------------------------------
+    11-12-13 VSL    CYCLE1       VIR powered off
+    11-12-17 VSL    CYCLE2       VIR powered off
+    11-12-24 VSL    CYCLE3       VIR powered off
+    11-12-31 VSL    CYCLE4       VIR powered off
+    12-01-07 VSL    CYCLE5       7 orbits (2 VIS+IR 5 VIS-only) VIR
+                                 full-slit pushbroom cubes
+    12-01-14 VSL    CYCLE6       S/C safing - no FC or VIR data acquired
+    12-01-21 VSL    CYCLE7       7 orbits (2 VIS+IR 5 VIS-only) VIR
+                                 full-slit pushbroom cubes
+    12-01-28 VSL    CYCLE8       7 orbits (2 VIS+IR 5 VIS-only) VIR
+                                 full-slit pushbroom cubes
+    12-02-04 VSL    CYCLE9       4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-02-11 VSL    CYCLE10      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-02-18 VSL    CYCLE11      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-02-25 VSL    CYCLE12      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-03-03 VSL    CYCLE13      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-03-10 VSL    CYCLE14      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-03-17 VSL    CYCLE15      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-03-24 VSL    CYCLE16      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-03-31 VSL    CYCLE17      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-04-07 VSL    CYCLE18      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-04-14 VSL    CYCLE19      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-04-21 VSL    CYCLE20      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+    12-04-28 VSL    CYCLE21      4 orbits (2 full slit 2 quarter slit) VIR
+                                 VIS-IR pushbroom cubes
+ 
+    ------------------------------------------------------------------------
+    12-05-01 VT2    TRANSFER_    Vesta Transfer to HAMO-2 Phase
+                    TO_HAMO_2
+    ------------------------------------------------------------------------
+    No VIR observations
+ 
+    ------------------------------------------------------------------------
+    12-06-15 VH2    HAMO_2       Vesta Science HAMO Phase (avg rng ~950 km)
+    ------------------------------------------------------------------------
+    12-06-15 VH2    C0_OFFNADIR1 C0 10 orbits of VIR VIS+IR pushbroom cubes
+                                 in the northern hemisphere and the south
+                                 pole
+    12-06-20 VH2    C0_OFFNADIR2 C0 7 orbits of VIR VIS+IR pushbroom cubes
+                                 in the northern hemisphere
+    12-06-24 VH2    CYCLE1       10 orbits of VIR VIS+IR pushbroom cubes
+                                 in the southern hemisphere
+    12-06-29 VH2    CYCLE2       10 orbits of VIR VIS+IR pushbroom cubes
+                                 in the southern hemisphere
+    12-07-04 VH2    CYCLE3       10 orbits of VIR VIS+IR pushbroom cubes
+                                 in the equatorial region
+    12-07-09 VH2    CYCLE4       10 orbits of VIR VIS+IR pushbroom and
+                                 scan-mirrorcubes in the northern hemisphere
+    12-07-14 VH2    CYCLE5       10 orbits of VIR VIS+IR pushbroom cubes
+                                 in the equatorial region
+    12-07-20 VH2    CYCLE6       10 orbits of VIR VIS+IR pushbroom cubes
+                                 in the northern hemisphere
+ 
+    ------------------------------------------------------------------------
+    12-07-25 VTC    TRANSFER_    Vesta Transfer to Ceres Phase
+                    TO_CERES
+    ------------------------------------------------------------------------
+    12-08-25 VTC    RC4          Ride-along cubes to FC rotational
+                                 characterization movie #4
+ 
+  Processing
+  ==========
+    The data in this data set are raw, CODMAC Level 2 data. As such, no
+    processes have been applied to the data.
+ 
+ 
+  Data
+  ====
+    The data are in PDS format. A detailed description of the data format
+    is given in the VIR SIS document located in the DOCUMENT directory of
+    this data set.
+ 
+ 
+  Ancillary Data
+  ==============
+    No ancillary data included in this data set.
+ 
+ 
+  Coordinate System
+  =================
+      The geometry items SC_SUN_POSITION_VECTOR,
+      SC_TARGET_POSITION_VECTOR and SC_TARGET_VELOCITY_VECTOR
+      provided in the label of the data product are relative to the
+      Earth Mean Equator frame of J2000.
+ 
+      SUB_SPACECRAFT_LATITUDE, SUB_SPACECRAFT_LONGITUDE are
+      given in the PLANETOCENTRIC coordinate system. These parameters
+      are corrected by planetary and stellar aberrations.
+      Distances are given in km, angles in degrees.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    Data confidence is nominal, meaning that all data have been
+    validated by the VIR team and found as expected. Any exceptions
+    are noted by the DATA_QUALITY field in the label files.
+ 
+ 
+  Review
+  ======
+    These are the same data files that were utilized by the Dawn Science
+    Team. Any errors or deficiencies reported by the Science Team were
+    corrected by the VIR team. Note, however, that the geometry information
+    provided in the PDS labels was updated to reflect the IAU (Claudia Double
+    Prime) coordinate system and peer review issues have been resolved.
+    A full PDS peer review was conducted of all products in this data set.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data quality is good unless otherwise noted by the DATA_QUALITY
+    keyword.
+ 
+ 
+  Limitations
+  ===========
+    No limitations on these data
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

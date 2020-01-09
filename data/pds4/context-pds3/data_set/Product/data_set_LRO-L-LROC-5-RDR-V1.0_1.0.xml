@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lroc-5-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO MOON LROC 5 RDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lroc.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lroc-5-rdr-v1.0__dvo_lro-l-lroc-5-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Robinson, M.S., S.M. Brylow, M. Tschimmel, D. Humm, S.J. Lawrence, P.C. Thomas,
+                   B.W. Denevi, E. Bowman-Cisneros, J. Zerr, M.A. Ravine, M.A. Caplinger, F.T.
+                   Ghaemi, J.A. Schaffner, M.C. Malin, P. Mahanti, A. Bartels, J. Anderson, T.N.
+                   Tran, E.M. Eliason, A.S. McEwen, E. Turtle, B.L. Jolliff, and H. Hiesinger,
+                   Lunar Reconnaissance Orbiter Camera (LROC) Instrument Overview, Space Science
+                   Reviews, 150, 1-4, doi:10.1007/s11214-010-9634-2, 2010.
+            </reference_text>
+            <description>reference.ROBINSONETAL2010</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-LROC-5-RDR-V1.0</data_set_id>
+        <data_set_name>LRO MOON LROC 5 RDR V1.0</data_set_name>
+        <data_set_release_date>2011-03-15</data_set_release_date>
+        <start_time>2009-06-30T00:00:00.000Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>MARK ROBINSON, PH.D</producer_full_name>
+        <citation_text>
+            Robinson, M., LRO MOON LROC 5 RDR V1.0, LRO-L-LROC-5-RDR-V1.0,
+            NASA Planetary Data System (PDS), 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Reduced data from Lunar Reconnaissance Orbiter Camera (LROC).
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set comprises calibrated data from the LROC NAC and WAC
+            cameras. The science data is comprised of calibrated raw images,
+            along with pointing data and housekeeping information.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+  The LROC consists of two Narrow Angle Cameras (NACs) that provide 0.5
+  meter-scale panchromatic images over a 5 km swath, a Wide Angle Camera
+  (WAC) to provide images at a scale of 100 meters/pixel in seven color bands
+  over a 60 km swath, (during the nominal 50 km primary mission phase) and a
+  Sequence and Compressor System (SCS) supporting data acquisition for both
+  cameras. LROC is a modified version of the Mars Reconnaissance Orbiters
+  ConTeXt Camera (CTX) and MARs Color Imager (MARCI) provided by Malin Space
+  Science Systems (MSSS) in San Diego, CA.
+ 
+  The two NAC, WAC and SCS are located on the LRO Instrument bench, with
+  their respective boresights aligned with the nadir (+Z) axis of the
+  spacecraft. The SCS communicates with the LRO spacecraft over a high-speed
+  SpaceWire interface, which provide both command and data communication
+  pathways. LROC observations are stored on a solid state recorder (SSR)
+  partition. Observations are downlinked to the ground using a Ka-band
+  receiver, located at White Sands New Mexico, and processed by the MOC
+  before being sent to the LROC Science Operations Center for processing
+  into PDS EDR and CDR products.
+ 
+  The calibration of a NAC EDR observation is expressed using the following
+  equation [ROBINSONETAL2010]:
+ 
+                   [Iraw(x,t,T) - m(t,T)] - [D(x,t,T) - m(t,T)] - S(x) - L(x)
+  Ical(x,t,T) =    ----------------------------------------------------------
+                                          F(x) * t * r
+ 
+  Ical(x,t,T) is the calibrated signal value of pixel (x) in radiance units
+  of microwatt/(cm^2*sr*nm),
+  Iraw(x,t,T) is the pixel&apos;s raw signal in DN,
+  t the exposure time,
+  T is the temperature,
+  m is the mean DN value of the masked pixels,
+  D(x,t,T) is the library dark image correction array,
+  S(x) is the non-linearity offset array,
+  L(x) is the logistic function value for low-signal non-linearty correction
+  (only if Iraw(x,t) &lt; 400 Dn),
+  F(x) is the sensitivity non-uniformity array (flat-field), and
+  r is the spectral responsivity for conversion of DN into radiance units.
+ 
+  NAC CDR generation is performed using the Intergrated Software for Imagers
+  and Spectrometers (ISIS), developed by the US Geological Survey. Once
+  calibration is completed, a PDS compliant CDR file is generated for
+  archival purposes.
+ 
+  The calibration of a WAC EDR observation is expressed using the following
+  equation [ROBINSONETAL2010]:
+ 
+                     Iraw(x,y,f,t,T) - D(x,y,f,t,T) + N(x,y,f)
+  Ical(x,y,f,t,T) =  -----------------------------------------
+                                 F(x,y,f) * t * r
+ 
+  where Ical(x,y,f,t,T) is the calibrated signal of the pixel at position
+  (x,y) in radiance units of microwatt/(cm^2*sr*nm),
+  Iraw(x,y,f,t,T) is the pixel&apos;s raw signal in DN,
+  f is the filter,
+  t is the exposure time,
+  T is the temperature,
+  D(x,y,f,t,T) is the dark image,
+  N(x,y,f) is non-linearity correction,
+  F(x,y,f) is the sensitivity non-uniformity correction matrix (flat-field),
+  and r is a filter responsivity coefficient to convert DN to radiance.
+ 
+  WAC CDR generation is performed using the Integrated Software for Imagers
+  and Spectrometers (ISIS), developed by the US Geological Survey.
+ 
+  This data release contains portions of the LROC Calibrated Data Record
+  (CDR) Archive, a collection of image data taken with the LROC instrument
+  suite. A data release will contain both NAC and WAC EDR files from
+  multiple days and multiple orbits.
+ 
+  This data release also contains ancillary data files: browse and thumbnail
+  version of each observation; an index file (&apos;index.tab&apos;) that tabulates the
+  contents of this data release; a cumulative index file (&apos;cumindex.tab&apos;)
+  that tabulates the entire contents of the data set; and documentation files
+  describing the data products, archive volume and calibration.
+ 
+  Processing
+  ==========
+  The LRO Mission Operations Center (MOC) pushes LROC science files (NAC and
+  WAC observations), definitive SPICE kernels, LRO spacecraft and LROC
+  instrument housekeeping and other ancillary files to the LROC SOC during
+  the mission, on a daily basis. To process the NAC and WAC observations into
+  PDS EDR products, the LROC SOC must ingest and process SPICE kernels and
+  the housekeeping data to extract meta-data about each observation,
+  including instrument temperatures and observation geometry on the lunar
+  surface. Once the meta-data has been extracted and written into our
+  database, the individual science files can then be processed into the
+  respective EDR product.
+ 
+  The generated LRO NAC or WAC EDR product is then ingested into ISIS using
+  the lronac2isis or lrowac2isis command. Each newly ingested NAC or WAC
+  image file can then be run through their respective calibration
+  applications, lronaccal and lrowaccal, to generate calibrated observations
+  and eventually compliant PDS CDR products.
+ 
+  LRO NAC observations have special considerations when processing summed or
+  native resolution observations during ISIS processing.
+ 
+  LRO WAC multi-spectral and monochrome observations have special
+  considerations that are addressed during ISIS processing. When WAC
+  observations are ingested into ISIS, the frames are separated into ODD and
+  EVEN files, based on their ordinal sequence within the original EDR file.
+  This allows ISIS to unambigiously map from detector space into map space
+  for a given observation. If the observation contains both VIS and UV bands,
+  a separate file is created for VIS and UV, resulting in a total of four
+  files for a given WAC observation: a VIS-Even file, a VIS-Odd file, a UV-
+  Even file and a UV-Odd file. If only VIS or UV bands are present in the EDR
+  file, only a pair of Odd/Even files is created.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Geometric Accuracy
+  ==================
+  Latitude and longitude coordinates calculated for the images given in the
+  index.tab file were computed using the best available spacecraft position
+  and orientation information at the time of processing, provide by the LRO
+  Project in the form of SPK and CK kernel files. While these kernels should
+  be equivalent to those retreivable from the NAIF web site
+  (http://naif.jpl.nasa.gov), there may be small descrepencies and the NAIF
+  versions of the kernels are preferred for all further processing.
+ 
+  Please refer to the white paper &apos;A Standardized Lunar Coordinate System for
+  LRO&apos; for details on LRO project adopted lunar coordinate system, which were
+  used during the calculation of latitude and longitude coordinates.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

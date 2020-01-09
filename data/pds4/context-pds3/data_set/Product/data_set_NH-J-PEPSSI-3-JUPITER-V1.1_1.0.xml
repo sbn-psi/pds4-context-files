@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.nh-j-pepssi-3-jupiter-v1.1</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEW HORIZONS PEPSSI JUPITER ENCOUNTER V1.1</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.new_horizons::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.nh::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pepssi.nh::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:plasma_stream.solar_wind::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.nh-j-pepssi-3-jupiter-v1.1__browserp_nh-j-pepssi-3-jupiter-v1.1::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NH-J-PEPSSI-3-JUPITER-V1.1</data_set_id>
+        <data_set_name>NEW HORIZONS PEPSSI JUPITER ENCOUNTER V1.1</data_set_name>
+        <data_set_release_date>2009-03-04</data_set_release_date>
+        <start_time>2007-01-01T00:00:00Z</start_time>
+        <stop_time>2007-06-27T00:00:00Z</stop_time>
+        <producer_full_name>JOSEPH PETERSON</producer_full_name>
+        <citation_text>
+            McNutt, R. Jr., NEW HORIZONS PEPSSI JUPITER ENCOUNTER V1.1,
+            NH-J-PEPSSI-3-JUPITER-V1.1, NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated data taken by New Horizons Pluto Energetic Particle
+            Spectrometer Science Investigation instrument during the JUPITER
+            mission phase.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains Calibrated data taken by the New Horizons
+            Pluto Energetic Particle Spectrometer Science Investigation
+            instrument during the Jupiter encounter mission phase.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+ 
+      This data set contains Calibrated data taken by New Horizons
+        Pluto Energetic Particle Spectrometer Science Investigation
+      instrument during the JUPITER mission phase.
+ 
+      There are PEPSSI data in the Jupiter phase from day 6 to day 178
+      of 2007.  This period can be separated into three sub-intervals:
+      upstream from day 6 to 50; encounter from day 50 to 68; tail
+      from day 68, to ~178.  The divisions are arbitrary, but provide
+      a coarse characterization of the data taken during this phase.
+      Flux measurements clearly indicate the approach and recession of
+      NH from Jupiter, and PEPSSI&apos;s compositional measurements show,
+      H, He, O, and S, sulfur being a clear signature of Io&apos;s volcanic
+      activity.  When the sun passed through the PEPSSI FOV, the
+      instrument was safed by ramping down the bias voltage and high
+      voltage.  This period does include some tests designed to
+      investigate the instrument&apos;s performance under high-rate
+      conditions, but is dominated by data intended for scientific
+      study of Juptier&apos;s magnetosphere, deep magnetotail, and upstream
+      regions.
+ 
+      Every observation provided in this data set was taken as a part of a
+      particular sequence.  A list of these sequences follows:
+ 
+      Sequence IDs &amp; start times (end times are the start times
+      of the following Sequence IDs) for the PEPSSI instrument
+      during the JUPITER phase of the New Horizons Mission
+      =========================================================
+ 
+      Sequence ID:  JEPE_UPSTREAM
+      Start UTC:    2007-01-01T00:00:00
+      Start SCLK:   1/0029915517:30912
+      Description:  JUPITER; Pre-encounter
+ 
+      Sequence ID:  JEPE_ENCOUNTER
+      Start UTC:    2007-02-19T00:00:00
+      Start SCLK:   1/0034149117:30659
+      Description:  JUPITER; encounter
+ 
+      Sequence ID:  JEPE_TAIL
+      Start UTC:    2007-03-09T00:00:00
+      Start SCLK:   1/0035704317:30480
+      Description:  JUPITER; Post-encounter
+ 
+      For the list of observations and their parameters, refer to
+      the data set index table (typically INDEX.TAB &amp; CUMINDEX.TAB,
+      initially in the /INDEX/ area of the data set).
+ 
+ 
+    Time
+    ====
+ 
+      There are several time systems, or units, in use in this dataset:
+      New Horizons spacecraft MET (Mission Event Time or Mission Elapsed
+      Time), UTC (Coordinated Universal Time), and TDB Barycentric
+      Dynamical Time.
+ 
+      This section will give a summary description of the relationship
+      between these time systems.  For a complete explanation of these
+      time systems the reader is referred to the documentation
+      distributed with the NAIF/SPICE toolkit from the NAIF PDS node.
+ 
+      The most common time unit associated with the data is is the
+      spacecraft MET.  MET is a 32-bit counter on the New Horizons
+      spacecraft that runs at a rate of about one increment per second
+      starting from a value of zero at
+ 
+        19.January, 2006 18:08:02 UTC
+ 
+      or
+ 
+        JD2453755.256337 TDB.
+ 
+      The leapsecond adjustment (DELTA_ET = ET - UTC) over this dataset
+      is 65.184s.
+ 
+      The data labels for any given product in this dataset usually
+      contain at least one pair of common UTC and MET representations
+      of the time at the middle of the observation.  Other portions
+      of the products, for example tables of data taken over periods
+      of up to a day or more, will only have the MET time associated
+      with a given row of the table.
+ 
+      For the data user&apos;s use in interpreting these times, a reasonable
+      approximation (+/- 1s) of the conversion between Julian Day (TDB)
+      and MET is as follows:
+ 
+        JD TDB = 2453755.256337 + ( MET / 86399.9998693 )
+ 
+      For more accurate calculations the reader is referred to the
+      NAIF/SPICE documentation as mentioned above.
+ 
+ 
+ 
+    Processing
+    ==========
+ 
+      The data in this data set were created by a software data
+      processing pipeline on the Science Operation Center (SOC) at
+      the Southwest Research Institute (SWRI), Department of Space Studies.
+      This SOC pipeline assembled data as FITS files from raw telemetry
+      packets sent down by the spacecraft and populated the data labels
+      with housekeeping and engineering values, and computed geometry
+      parameters using SPICE kernels. The pipeline did not resample
+      the data.
+ 
+ 
+    Data
+    ====
+ 
+      The observations in this data set are stored in data files using
+      standard Flexible Image Transport Sytem (FITS) format.  Each FITS
+      file has a corresponding detached PDS label file, named according
+      to a common convention.  The FITS files have image and/or table
+      extensions; see the PDS label plus the DOCUMENT files for a
+      description of these extensions and their contents.
+ 
+ 
+      This Data section comprises the following sub-topics:
+ 
+      - Filename/Product IDs
+      - Other sources of information useful in interpreting these Data
+      - CODMAC Level 3 PEPSSI data details
+      - Instrument description
+      - Visit Description, Visit Number, and Target in the Data Labels
+      - Unresolved Liens on the Data
+ 
+ 
+      Filename/Product IDs
+      --------------------
+ 
+        The filenames and product IDs of observations adhere to a
+        common convention e.g.
+ 
+         ALI_0123456789_0X0AB_ENG_1.FIT
+         ^^^ ^^^^^^^^^^ ^^^^^ ^^^ ^\__/
+         |        |       |    |  | ^^
+         |        |       |    |  |  |
+         |        |       |    |  |  +--File type (includes dot)
+         |        |       |    |  |     - .FIT for FITS file
+         |        |       |    |  |     - .LBL for PDS label
+         |        |       |    |  |     - not part of product ID
+         |        |       |    |  |
+         |        |       |    |  +-- Version number from the SOC
+         |        |       |    |      (Science Operations Center)
+         |        |       |    |
+         |        |       |    +--ENG for CODMAC Level 2 data *
+         |        |       |       SCI for CODMAC Level 3 data *
+         |        |       |
+         |        |       +--Application ID (ApID) of the telemetry data
+         |        |          packet from which the data come
+         |        |
+         |        +--MET (Mission Event Time) i.e. Spacecraft Clock
+         |
+         +--Instrument designator
+ 
+          * For those datasets where the NH project is delivering
+            CODMAC Level 1 &amp; 2 data (REX &amp; PEPSSI), ENG and SCI apply
+            to CODMAC Level 1 &amp; 2 data, respectively.
+ 
+ 
+        Instrument   Instrument designators              ApIDs
+        ===========  ==================================  =============
+         PEPSSI       PEP                                0X691 - 0X696 *
+ 
+         * Not all values in this range are used
+ 
+         There are other ApIDs that contain housekeeping values and
+         other values.  See the documentation for more details.
+ 
+ 
+        Here is a summary of the types of files generated by each ApID
+        along with the instrument designator that go with each ApID:
+ 
+ 
+      ApIDs   Data product description/Prefix(es)
+      =====   ===================================
+      0x691 - PEPSSI High Priority Science/PEP
+      0x692 - PEPSSI Medium Priority Science/PEP
+      0x693 - PEPSSI Low Priority Science (Up to 500 PHA events)/PEP
+      0x694 - PEPSSI Low Priority Science (Up to add&apos;l 500 PHA events)/PEP
+      0x695 - PEPSSI High Priority Science/PEP
+      0x696 - PEPSSI Medium Priority Science/PEP
+      0x697 - PEPSSI Low Priority Science (Up to 500 PHA events)/PEP
+      0x698 - PEPSSI Low Priority Science (Up to add&apos;l 500 PHA events)/PEP
+ 
+ 
+      Other sources of information useful in interpreting these Data
+      --------------------------------------------------------------
+ 
+        Refer to the following files for more information about these data
+ 
+          NH Trajectory table:
+ 
+            /DOCUMENT/NH_TRAJECTORY.*
+ 
+          PEPSSI Field Of View definitions:
+ 
+             /DOCUMENT/NH_FOV.*
+             /DOCUMENT/NH_PEPSSI_V###_TI.TXT
+ 
+ 
+ 
+ 
+      Instrument description
+      ----------------------
+ 
+        Refer to the following files for a description of this instrument.
+ 
+        CATALOG
+ 
+          PEPSSI.CAT
+ 
+        DOCUMENTS
+ 
+          PEPSSI_SSR.*
+          NH_PEPSSI_V###_TI.TXT  (### is a version number)
+          SOC_INST_ICD.*
+ 
+ 
+      Visit Description, Visit Number, and Target in the Data Labels
+      ---------------------------------------------------------------
+ 
+        The observation sequences were defined in Science Activity
+        Planning (SAP) documents, and grouped by Visit Description and
+        Visit Number.  The SAPs are spreadsheets with one Visit Description
+        &amp; Number per row.  A nominal target is also included on each row
+        and included in the data labels, but does not always match with the
+        TARGET_NAME field&apos;s value in the data labels.  In some cases, the
+        target was designated as RA,DEC pointing values in the form
+        ``RADEC=123.45,-12.34&apos;&apos; indicating Right Ascension and Declination,
+        in degrees, of the target from the spacecraft in the Earth
+        Equatorial J2000 inertial reference frame.  This indicates either
+        that the target was either a star, or that the target&apos;s ephemeris
+        was not loaded into the spacecraft&apos;s attitude and control system
+        which in turn meant the spacecraft could not be pointed at the
+        target by a body identifier and an inertial pointing value had to
+        be specified as Right Ascension and Declination values.  The PDS
+        standards do not allow putting a value like RADEC=... in the PDS
+        TARGET_NAME keyword&apos;s value; in those cases the PDS TARGET_NAME
+        value is set to CALIBRATION.
+ 
+ 
+      Unresolved Liens on the Data
+      ----------------------------
+ 
+        None exist at the present time.
+ 
+ 
+    Ancillary Data
+    ==============
+ 
+      The geometry items included in the data labels were computed
+      using the SPICE kernels archived in the New Horizons SPICE
+      data set, NH-X-SPICE-6-JUPITER-V1.0.
+ 
+ 
+    Reference Frame
+    ===============
+ 
+ 
+      Geometric Parameter Reference Frame
+      -----------------------------------
+        Earth Mean Equator and Vernal Equinox of J2000 (EMEJ2000) is the
+        inertial reference frame used to specify observational geometry
+        items provided in the data labels.  Geometric parameters are based
+        on best available SPICE data at time of data creation.
+ 
+ 
+      Epoch of Geometric Parameters
+      -----------------------------
+        All geometric parameters provided in the data labels were
+        computed at the epoch midway between the START_TIME and
+        STOP_TIME label fields.
+ 
+ 
+ 
+    Software
+    ========
+ 
+      The observations in this data set are in standard FITS format
+      with PDS labels, and can be viewed by a number of PDS-provided
+      and commercial programs. For this reason no special software is
+      provided with this data set.
+ 
+ 
+    Contact Information
+    ===================
+ 
+      For any questions regarding the data format of the archive,
+      contact the person whose PDS_USER_ID is RMCNUTT
+      as described in PERSONNEL.CAT.
+        </data_set_desc>
+        <confidence_level_note>
+    Confidence Level Overview
+    =========================
+      During the processing of the data in preparation for
+      delivery with this volume, the packet data associated with each
+      observation were used only if they passed a rigorous verification
+      process including standard checksums.
+ 
+      In addition, raw (Level 2) observation data for which adequate
+      contemporary housekeeping and other ancillary data are not available
+      are not reduced to calibrated (Level 3) data.  This issue is raised
+      here to explain why some data products in the raw data set,
+ 
+        NH-J-PEPSSI-2-JUPITER-V1.1,
+ 
+      do not have corresponding data products in the calibrated data set,
+ 
+        NH-J-PEPSSI-3-JUPITER-V1.1.
+ 
+ 
+    Review
+    ======
+      The data have been reviewed and validated by the instrument team
+      members, as well as by SOC personnel.
+ 
+ 
+ 
+     PEPSSI updates for Data Sets V1.1
+     =================================
+ 
+ 
+       Improvements to geometry &amp; timing in data header sections
+       ---------------------------------------------------------
+ 
+         The data pipeline re-ran the data with updated SPICE files; SPICE
+         files contain information relating to geometry and timing of
+         observations.  This may have changed values in the data PDS
+         labels and the data files&apos; FITS header section (referred to as
+         OBJECT *_HEADER in the PDS labels), but not the data in those files.
+ 
+ 
+       Improvements to ancillary files
+       -------------------------------
+ 
+         Some of the supporting files, mainly in the /DOCUMENT/
+         subdirectory hierarchy, have been updated for content
+         and for readability.  The primary file for which this
+         was done was the SOC Instrument Interface Control
+         Document (often referred to as the SOC Instrument ICD).
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

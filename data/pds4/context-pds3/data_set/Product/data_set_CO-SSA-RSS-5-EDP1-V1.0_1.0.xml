@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-ssa-rss-5-edp1-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CASSINI RSS: IONOSPHERIC ELECTRON DENSITY PROFILES EDP1 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.titan::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-ssa-rss-5-edp1-v1.0__browserp_co-ssa-rss-5-edp1-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kliore, A.J., J.D. Anderson, J.W. Armstrong, S.W. Asmar, C.L. Hamilton, N.J.
+                   Rappaport, H.D. Wahlquist, R. Ambrosini, B. Bertotti, F.M. Flasar, R.G. French,
+                   L. Iess, E.A. Marouf, and A.F. Nagy, Cassini Radio Science, Space Sciences
+                   Reviews, in press, 2000.
+            </reference_text>
+            <description>reference.KLIOREETAL2000</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-SSA-RSS-5-EDP1-V1.0</data_set_id>
+        <data_set_name>CASSINI RSS: IONOSPHERIC ELECTRON DENSITY PROFILES EDP1 V1.0</data_set_name>
+        <data_set_release_date>2010-12-01</data_set_release_date>
+        <start_time>2006-03-19</start_time>
+        <stop_time>2007-05-28</stop_time>
+        <producer_full_name>ELIAS BARBINIS</producer_full_name>
+        <citation_text>
+            Kliore, A.J., Cassini Radio Occultation Profiles of the Titan
+            Ionosphere from Publications up to September 2008,
+            CO-SSA-RSS-5-EDP1-V1.0, NASA Planetary Data System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Cassini RSS radio ionospheric electron density profiles - EDP1.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the complete collection of the published
+            Cassini radio occultation electron density profiles of the Titan
+            ionosphere as of September 2008.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set contains the complete collection of the published
+      Cassini radio occultation electron density profiles (EDP) of the
+      Titan ionosphere as of September 2008. EDP files are stored as
+      ASCII tables.
+ 
+      The design of the Cassini spacecraft&apos;s tour of the Saturnian system
+      permitted multiple radio occultations of Titan&apos;s ionosphere to be
+      carried out. Of these, a group of four occultations was incorporated
+      into the primary  Cassini mission and the resulting EDP files
+      are included in this archive. These occultations occured on
+      Titan flybys T12(19 March 2006), T14(20 May 2006), T27(26 March 2007),
+      and T31(28 May 2007). Of these, the first two probed middle latitudes
+      in the Southern Hemisphere (14.3 degrees South and 36.3 degrees South
+      for T12 and 19.7 degrees South and 21.3 degrees South for T14). The
+      other two occultations made observations in polar and near-polar
+      locations (74.6 degrees South and 60.6 degrees North for T27 and
+      75.4 degrees North and 74.0 degrees South for T31). All observations
+      occurred near the terminator, with the entry measurements occurring
+      on the dark side (solar zenith angle(SZA) 92.2 degrees to 95.8
+      degrees), and the exits on the sunlit side (SZA 85.7 degrees to 90
+      degrees). The exit measurements at midlatitudes were also near the
+      dusk terminator. The following table provides a summary of the data:
+ 
+    Obs  Date        File Name                       Ram (deg) SEP (deg)
+    ---- ----------- ------------------------------- --------- ---------
+    T12N 19 Mar 2006 S19TIIOC2006_078_0000_X_001.EDP   73.7     131.5
+    T12X 19 Mar 2006 S19TIIOC2006_078_0000_X_001.EDP   87.5     131.5
+    T14N 20 May 2006 S20TIIOC2006_140_1203_N_001.EDP  100.1      72.6
+    T14X 20 May 2006 S20TIIOC2006_140_1203_X_001.EDP   66.4      72.6
+    T27N 26 Mar 2007 S28TIIOC2007_085_0000_N_001.EDP   93.9     138.2
+    T27X 26 Mar 2007 S28TIIOC2007_085_0000_X_001.EDP   60.7     138.2
+    T31N 28 May 2007 S30TIIOC2007_148_1737_N_001.EDP   98.1      76.8
+    T31X 28 May 2007 S30TIIOC2007_148_1737_X_001.EDP   78.4      76.8
+ 
+      For more details see A.J. Kliore et al. (J. Geophys. Res., 113,
+      A09317,doi:10.1029/2007JA012965, 2008).
+ 
+ 
+    Parameters
+    ==========
+      Each EDP file contains a table  of electron number density versus
+      altitude, where the altitude is determined by height of the closest
+      approach point of the radio line-of-sight relative to the surface
+      of Titan. The tables also include the planetocentric north latitude,
+      solar zenith angle, solar time, and standard deviation of the
+      measurements.
+ 
+ 
+    Processing
+    ==========
+      During the occultation period, Cassini transmits three sinusoidal
+      radio signals of 0.94, 3.6 and 13 cm wavelength (Ka-, X-, and S-band
+      respectively). They are coherently generated on board Cassini from
+      a common ultrastable crystal oscillator (USO).
+ 
+      Digital samples of the in-phase and quadrature signal components
+      were recorded at multiple sampling rates and bandwidths using
+      the open-loop Radio Science Receivers (RSR) of the DSN. The data
+      in these archive are based on processing signals recorded at 1 kHz
+      bandwidth. The RSR as well as all subsystems of the DSN are driven
+      by a highly stable frequency and timing system based on a hydrogen
+      maser. Accurate antenna pointing is required especially at higher
+      frequencies (e.g., Ka-band).
+ 
+      The RSR data are processed by first detecting the signal carrier
+      via software. A phase-locked loop or a series of Fast Fourier
+      Transforms are typical detection methods depending on factors such
+      as the signal-to-noise ratio as well as frequency and amplitude
+      dynamics. Once detected, the signal is upconverted to &apos;sky frequency&apos;
+      and then frequency residuals are produced by removing a model of
+      the apparent relative motion between the spacecraft and ground
+      station. These residulas contain the science information on the
+      atmosphere/ionosphere of the planet and form the basic data from
+      which the atmospheric and ionospheric properties are extracted.
+ 
+      The procedures for the analysis and inversion of these data are
+      described in detail in A.J. Kliore et al. (Space Sci. Rev. 115, 1-70,
+      doi:10.1007/s11214-004-1436-y, 2004). The residuals are detrended
+      by fitting a least squares straight line to the baseline data and
+      subtracting it from the raw residuals. The residuals are then used
+      to compute the refractive bending angle at each data time point.
+      This requires a precise ephemeris of Cassini relative to Titan,
+      iterative light propagation time solutions linking the spacecraft,
+      Titan, and the DSN station. The gravitational field of Titan was
+      assumed to be spherical. Once the refractive bending angle and its
+      corresponding ray asymptote distance with respect to the center of
+      refraction are computed for each data point, the Abel integral
+      transform, assuming spherical symmetry, is used to invert these
+      data and to produce a vertical profile of refractivity.
+ 
+      Since the radio refractivity is proportional to the electron density
+      times the inverse square of the frequency, the electron density can
+      be determined, as the frequencies are known very precisely. The
+      altitude is determined by height of the closest approach point of
+      the radio line-of-sight relative to the surface of Titan.
+ 
+ 
+    Data
+    ====
+      The EDP directory contains all the data files (i.e., the electron
+      density profiles), which are accompanied by detached PDS labels
+      describing their contents. The naming convention of these data
+      files is:
+ 
+           sssttIOCyyyy_ddd_hhmm_[NX]_vvv.EDP
+ 
+      where:
+ 
+        sss - Cassini Sequence, during which the data were collected
+              (for this data set, sss = S19, S20, S28 and S30)
+ 
+        tt - target ID (for this data set, tt = TI, for Titan)
+ 
+        IOC - Ionospheric Occultation
+ 
+        yyyy_ddd_hhmm - year, day of year, hour, min, in Spacecraft Event Time
+                       (SCET), for the start of the observation, during which
+                       these data were collected.
+ 
+        [NX] - N denotes entry occultation; X denotes exit occultation
+ 
+        vvv - version number
+ 
+ 
+    Software
+    ========
+     None.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set is written on DVD-R media. The DVD-R volumes
+      conform to the &apos;UDF_ISO-9660_BRIDGE&apos; structure as required by PDS.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      In general, this is a good data set.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the Cassini Radio Science
+      Team prior to submission to the Planetary Data System (PDS).
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The data are contained in one volumes (DVD), CORS_1001,
+      and they cover the complete collection of the published Cassini
+      radio occultation electron density profiles of the Titan ionosphere
+      as of September 2008. The table, which was included in the section
+      &apos;Data Set Overview&apos; of this document, provides a summary of the data.
+ 
+      There are no known problems with this data set.
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

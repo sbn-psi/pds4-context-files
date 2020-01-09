@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer2-m-hazcam-4-linearized-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 2 MARS HAZARD AVOID CAMERA LINEARIZED RDR OPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hazcam.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-hazcam-4-linearized-ops-v1.0__browserp_mer2-m-hazcam-4-linearized-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-hazcam-4-linearized-ops-v1.0__browser_geo_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-hazcam-4-linearized-ops-v1.0__dvo_imaging_mer2-m-hazcam-4-linearized-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Maki, J.N., et al., Mars Exploration Rover Engineering Cameras, J. Geophys.
+                   Res., 108(E12), 8071, doi:10.1029/2003JE002077, 2003.
+            </reference_text>
+            <description>reference.MAKIETAL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER2-M-HAZCAM-4-LINEARIZED-OPS-V1.0</data_set_id>
+        <data_set_name>MER 2 MARS HAZARD AVOID CAMERA LINEARIZED RDR OPS V1.0</data_set_name>
+        <data_set_release_date>2004-08-03</data_set_release_date>
+        <start_time>2004-01-04T05:58:39.228Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JUSTIN MAKI</producer_full_name>
+        <citation_text>
+            Maki, Justin, MER 2 Mars Hazcam Linearized Ops RDR V1.0, NASA
+            Planetary Data System, MER2-M-HAZCAM-4-LINEARIZED-OPS-V1.0, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 2 Hazard Avoidance Camera Linearized
+            Operations Reduced Data Record, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    EDRs and single-frame RDRs are described by a camera model. This
+    model, represented by a set of vectors and numbers, permit a point
+    in space to be traced into the image plane, and vice-versa.
+ 
+    EDR camera models are derived by acquiring images of a calibration
+    target with known geometry at a fixed azimuth/elevation. The vectors
+    representing the model are derived from analysis of this imagery.
+    These vectors are then translated and rotated based on the actual
+    pointing of the camera to represent the conditions of each specific
+    image. The results are the camera model for the EDR.
+ 
+    The Navcam and Pancam use a CAHVOR model, while the Hazcams use a
+    more general CAHVORE model. Neither are linear and involve some
+    complex calculations to transform line/sample points in the image
+    plane to XYZ positions in the scene. To simplify this, the images
+    are warped, or reprojected, such that they can be described by a
+    linear CAHV model. This linearization process has several benefits:
+ 
+    1) It removes geometric distortions inherent in the camera
+       instruments, with the result that straight lines in the scene are
+       straight in the image.
+ 
+    2) It aligns the images for stereo viewing. Matching points are on
+       the same image line in both left and right images, and both left
+       and right models point in the same direction.
+ 
+    3) It facilitates correlation, allowing the use of 1-D correlators.
+ 
+    4) It simplifies the math involved in using the camera model.
+ 
+    However, it also introduces some artifacts in terms of scale change
+    and/or omitted data (see the references). The linearized CAHV camera
+    model is derived from the EDR camera model by considering both the
+    left and right eye models and constructing a pair of matched linear
+    CAHV models that conform to the above criteria.
+ 
+    The image is then projected, or warped, from the CAHVOR/CAHVORE
+    model to the CAHV model. This involves projecting each pixel through
+    the EDR camera model into space, intersecting it with a surface
+    (which matters only for Hazcams and is a sphere centered on the
+    camera), and projecting the pixel back through the CAHV model into
+    the output image.
+ 
+    C - The 3D position of the entrance pupil
+ 
+    A - A unit vector normal to the image plane pointing outward
+       (towards C)
+ 
+    H - A vector pointing roughly rightward in the image; it is a
+        composite of the orientation of the CCD rows, the horizontal
+        scale, the horizontal center
+ 
+    V - A vector pointing roughtly downward in the image; it is a
+        composite of the orientation of the CCD columns, the vertical
+        scale, the vertical center, and A.
+ 
+    If P is a point in the scene then the corresponding image locations
+    x and y can be computed from:
+ 
+    x = (P-C)H
+        ------
+        (P-C)A
+ 
+ 
+    y = (P-C)V
+        ------
+        (P-C)A
+ 
+ 
+  Processing
+  ==========
+    This Operations RDR is produced by OPGS/MIPL using the Mars Suite of
+    VICAR image processing software.
+ 
+    Single-frame RDRs are described by a camera model. This model,
+    represented by a set of vectors and numbers, permit a point in space
+    to be traced into the image plane, and vice-versa.
+ 
+ 
+  Data
+  ====
+    1 band, 16-bit signed integer, dual PDS/VICAR (OPGS) binary file.
+ 
+    The RDR data product is comprised of radiometrically decalibrated
+    and/or camera model corrected and/or geometrically altered versions
+    of the raw camera data, in both single and multi-frame (mosaic)
+    form. Most RDR data products will have PDS labels, or if generated
+    by MIPL (OPGS), dual PDS/VICAR labels. Non-labeled RDRs include the
+    Terrain products (Mesh and Wedge).
+ 
+    The following is a list of the types of Linearized files along with
+    the Product Type Identifier, which is an element in the formal RDR
+    file name:
+ 
+    Data Product       Linearized
+    ------------       ----------
+    Full frame EDR        FFL
+    Sub-frame EDR         SFL
+    Downsampled EDR       DNL
+    Thumbnail EDR         THN
+ 
+ 
+  Software
+  ========
+    The MIPL Mars Program Suite was used to generate these RDRs.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online.  Upon
+    Mission completion, the Hazcam Operations RDRs will be delivered
+    to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

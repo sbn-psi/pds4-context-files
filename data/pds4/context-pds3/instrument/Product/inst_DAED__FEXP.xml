@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:daed.fexp</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DAEDALUS SPECTROMETER for FEXP</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.fexp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Daedalus Enterprises, Inc., AA440 Spectrafax User&apos;s Guide,
+                   P.O. Box 1869, Ann Arbor, Michigan 48106.
+            </reference_text>
+            <description>reference.DAEDALUS1988</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>DAEDALUS SPECTROMETER</instrument_name>
+        <instrument_desc>
+ 
+ 
+    INSTRUMENT: DAEDALUS SPECTROMETER
+          HOST: FIELD EXPERIMENT
+ 
+ 
+    Instrument Information
+    ======================
+      Instrument Id                  : DAED
+      Instrument Host Id             : FEXP
+      Instrument Name                : DAEDALUS SPECTROMETER
+      Instrument Type                : SPECTROMETER
+      Instrument Manufacturer Name   : DAEDALUS ENTERPRISES, INC.
+ 
+ 
+    Instrument Description
+    ======================
+      The Daedalus AA440 Spectrafax instrument is a hand-held
+      portable field spectrometer.  The Daedalus measures radiance
+      between the wavelengths of 0.45 and 2.4 micrometers in 288
+      channels.  Wavelength resolution varies from 0.01 micrometers
+      in the visible to 0.04 micrometers in the infrared.  The
+      angular field of view is 1.5 degrees, which means the field of
+      view is about 2.5 cm when the instrument height is about 1
+      meter.  Detectors are a silicon detector for wavelengths
+      between 0.4 and 1.1 micrometers and a lead sulfide detector for
+      wavelengths between 1.1 and 2.4 micrometers.
+ 
+      The instrument has a circular filter wheel with 360 optical
+      interference filters in three overlapping wavelength segments.
+      Overlapping segments must be edited to properly display a
+      Daedalus spectrum.  Measured radiance values are digitized to
+      values in the range of 0 to 1023 (10 bits).  The instrument has
+      a variable gain setting to adjust the dynamic range.  The gain
+      scale is logarithmic in which one step represents about a 16
+      percent change in gain.  A change in gain of 4 units is
+      approximately a factor of 2 change in the digitized output
+      signal.
+ 
+      Reflectance values are derived by ratioing the signal of a
+      sample to that of a pressed and bonded halon standard viewed at
+      the same lighting angle.  Note that a difference in gain
+      setting for the standard and the target must be accounted for
+      when computing reflectance.  The derived reflectance values are
+      radiance coefficients.
+ 
+ 
+    Science Objectives
+    ==================
+      Make spectral reflectance measurements of field and laboratory
+      samples.
+ 
+ 
+    Operational Considerations
+    ==========================
+      If the Daedalus instrument is hand-held with the instrument
+      height only approximately fixed, there can be a small
+      difference in the height used to measure the calibration
+      standard and a given sample.  Such a height difference will
+      produce a systematic error in the absolute reflectance value.
+      Each centimeter difference in height will produce about a 2%
+      change in reflectance.
+ 
+ 
+    Calibration Description
+    =======================
+      Calibration is done by measuring a pressed and bonded halon
+      standard with the same lighting and viewing geometry as the
+      surface sample.
+ 
+ 
+    Section &apos;DAED&apos;
+    ==============
+      Total Fovs                     : 1
+      Sample Bits                    : 10
+ 
+ 
+      &apos;DAED&apos; Section Parameter &apos;RADIANCE&apos;
+      -----------------------------------
+        Radiance is the amount of energy per time per projected area
+        per steradian.
+ 
+        Instrument Parameter Name      : RADIANCE
+        Sampling Parameter Name        : WAVELENGTH
+        Minimum Sampling Parameter     : 450.000000
+        Maximum Sampling Parameter     : 2400.000000
+        Sampling Parameter Unit        : NANOMETER
+ 
+ 
+      Description
+      -----------
+        Not Applicable
+ 
+ 
+      Sensitivity
+      -----------
+        Not Applicable
+ 
+
+        </instrument_desc>
+        <instrument_id>DAED</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Spectrometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

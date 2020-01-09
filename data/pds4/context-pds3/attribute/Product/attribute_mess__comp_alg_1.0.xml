@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.mess__comp_alg</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>mess:comp_alg</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>mess:comp_alg</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>mess:comp_alg</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+12 to 8 bit compression algorithm (0-7) used to compress images from
+12 to 8 bits. Whether this option is enabled is indicated by MESS:COMP12_8.
+The compression is implemented using one of eight lookup tables, which are
+optimized to the lower WAC CCD read noise and higher NAC read noise, light
+levels, and bias level (nominal or after inflight drift):
+ 
+0 = Lo-noise hi-bias SNR proportional.  Case: Either NAC or WAC, for
+nominal bias (all DNs greater than 12-bit 230).  Formulation: Maps
+12-bit DNs between bias and saturation into 8 bits, proportional to SNR.
+Information loss is spread evenly over dynamic range.  Usage: Typical
+imaging with varied brightness.
+ 
+1 = Lo-noise hi-bias DN-weighted SNR proportional. Case: Low-noise (WAC)
+CCD, bias nominal (all DNs greater than 12-bit 230). Formulation: Maps 12
+bits between bias and saturation into 8 bits proportional to sliding scale.
+Information is preferentially retained at the low DN end. Usage: Faint
+objects. Saturates at a DN of 3000.
+ 
+2 = Hi-noise hi-bias DN-weighted SNR proportional. Case: High-noise (NAC)
+CCD, bias nominal (all DNs greater than 12-bit 230). Formulation: Maps 12
+bits between bias and saturation into 8 bits proportional to sliding
+scale.  Information is preferentially retained at the low DN end.
+Usage: B/W, mostly low brightness.
+ 
+3 = Lo-noise med-bias SNR proportional. Case: Either CCD, assuming bias
+has dropped tens DN (all DNs greater than 12-bit 180).  Formulation:
+Maps 12-bit DNs between bias and saturation into 8 bits, proportional to
+SNR. Information loss is spread over dynamic range. Usage:
+Typical imaging, varied brightness.
+ 
+4 = Lo-noise med-bias DN-weighted SNR proportional. Case: Lo-noise (WAC)
+CCD, assuming bias has dropped tens DN (all DNs greater than 12-bit 180).
+Formulation: Maps 12 bits between bias and saturation into 8 bits
+proportional to sliding scale. Information retained at low DN end.
+Usage: Faint objects.  Saturates at a DN of 3000.
+ 
+5 = Hi-noise med-bias DN-weighted SNR proportional. Case: High-noise (NAC)
+CCD, assuming bias has dropped tens DN (all DNs greater than 12-bit 180).
+Formulation: Maps 12 bits between bias and saturation into 8 bits
+proportional to sliding scale. Information is retained preferentially at
+the low end of the DN range. Usage: B/W, mostly low brightness.
+ 
+6 = Zero-bias SNR proportional. Case: Contingency; assuming bias
+decreased to near 0 from the nominal 230 12-bit DNs.
+Formulation: Maps 12-bit DNs between bias and saturation into 8 bits,
+proportional to SNR. Information loss is spread over the dynamic range.
+Usage: Typical imaging, varied brightness.
+ 
+7 = Linear. Case: either CCD, bias or read noise. Formulation: Maps 12-bit
+DNs between the bias level and saturation linearly into 8-bit space.
+Usage: High brightness mapping; information loss greatest at low DNs,
+preserves information at high DNs.
+        </definition>
+        <comment>mess_compalg</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>mess:comp_alg</name>
+            <definition>
+12 to 8 bit compression algorithm (0-7) used to compress images from
+12 to 8 bits. Whether this option is enabled is indicated by MESS:COMP12_8.
+The compression is implemented using one of eight lookup tables, which are
+optimized to the lower WAC CCD read noise and higher NAC read noise, light
+levels, and bias level (nominal or after inflight drift):
+ 
+0 = Lo-noise hi-bias SNR proportional.  Case: Either NAC or WAC, for
+nominal bias (all DNs greater than 12-bit 230).  Formulation: Maps
+12-bit DNs between bias and saturation into 8 bits, proportional to SNR.
+Information loss is spread evenly over dynamic range.  Usage: Typical
+imaging with varied brightness.
+ 
+1 = Lo-noise hi-bias DN-weighted SNR proportional. Case: Low-noise (WAC)
+CCD, bias nominal (all DNs greater than 12-bit 230). Formulation: Maps 12
+bits between bias and saturation into 8 bits proportional to sliding scale.
+Information is preferentially retained at the low DN end. Usage: Faint
+objects. Saturates at a DN of 3000.
+ 
+2 = Hi-noise hi-bias DN-weighted SNR proportional. Case: High-noise (NAC)
+CCD, bias nominal (all DNs greater than 12-bit 230). Formulation: Maps 12
+bits between bias and saturation into 8 bits proportional to sliding
+scale.  Information is preferentially retained at the low DN end.
+Usage: B/W, mostly low brightness.
+ 
+3 = Lo-noise med-bias SNR proportional. Case: Either CCD, assuming bias
+has dropped tens DN (all DNs greater than 12-bit 180).  Formulation:
+Maps 12-bit DNs between bias and saturation into 8 bits, proportional to
+SNR. Information loss is spread over dynamic range. Usage:
+Typical imaging, varied brightness.
+ 
+4 = Lo-noise med-bias DN-weighted SNR proportional. Case: Lo-noise (WAC)
+CCD, assuming bias has dropped tens DN (all DNs greater than 12-bit 180).
+Formulation: Maps 12 bits between bias and saturation into 8 bits
+proportional to sliding scale. Information retained at low DN end.
+Usage: Faint objects.  Saturates at a DN of 3000.
+ 
+5 = Hi-noise med-bias DN-weighted SNR proportional. Case: High-noise (NAC)
+CCD, assuming bias has dropped tens DN (all DNs greater than 12-bit 180).
+Formulation: Maps 12 bits between bias and saturation into 8 bits
+proportional to sliding scale. Information is retained preferentially at
+the low end of the DN range. Usage: B/W, mostly low brightness.
+ 
+6 = Zero-bias SNR proportional. Case: Contingency; assuming bias
+decreased to near 0 from the nominal 230 12-bit DNs.
+Formulation: Maps 12-bit DNs between bias and saturation into 8 bits,
+proportional to SNR. Information loss is spread over the dynamic range.
+Usage: Typical imaging, varied brightness.
+ 
+7 = Linear. Case: either CCD, bias or read noise. Formulation: Maps 12-bit
+DNs between the bias level and saturation linearly into 8-bit space.
+Usage: High brightness mapping; information loss greatest at low DNs,
+preserves information at high DNs.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Integer</value_data_type>
+            <formation_rule>
+N/A
+</formation_rule>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>1</maximum_characters>
+            <minimum_value>0.0</minimum_value>
+            <maximum_value>7.0</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>Unknown</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

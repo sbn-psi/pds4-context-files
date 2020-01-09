@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-u-pos-5-summ-u1coords-48sec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VG2 URA TRAJECTORY DERIVED SUMM U1 COORDS 48SEC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pos.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.uranus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-u-pos-5-summ-u1coords-48sec-v1.0__browserp_vg2-u-pos-5-summ-u1coords-48sec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Connerney, J.E.P., M.H. Acuna, and N.F. Ness, The
+                   Magnetic Field of Uranus, J. Geophys. Res., 92, 336,
+                   1986.
+            </reference_text>
+            <description>reference.CONNERNEYETAL1986</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-U-POS-5-SUMM-U1COORDS-48SEC-V1.0</data_set_id>
+        <data_set_name>VG2 URA TRAJECTORY DERIVED SUMM U1 COORDS 48SEC V1.0</data_set_name>
+        <data_set_release_date>1993-02-01</data_set_release_date>
+        <start_time>1986-01-24T06:59:12.005Z</start_time>
+        <stop_time>1986-01-25T04:00:47.921Z</stop_time>
+        <producer_full_name>DR. RONALD J. LEPPING</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VG2 URA TRAJECTORY DERIVED SUMM U1 COORDS 48SEC V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains Voyager 2 spacecraft position vectors
+            relative to Uranus in minus U1 coordinates. The U1 or Uranus West
+            Longitude System coordinate system is a planetocentric system
+            fixed to Uranus which is rotating with a 17.24 hour period.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This dataset contains Voyager 2 spacecraft position vectors
+      relative to Uranus in minus U1 coordinates.  The U1 or Uranus
+      West Longitude System coordinate system is a planetocentric
+      system fixed to Uranus which is rotating with a 17.24 hour
+      period.
+ 
+      The prime meridian of the this system is defined such that at
+      1986-01-24T18:00:00.000 the Voyager 2 spacecraft was at 302
+      degrees west longitude (58 degrees east longitude).
+ 
+      For the PDS archive dataset, the original data archive has been
+      converted to an east longitude (righthanded) coordinate system
+      minus U1 (-U1).  This is achieved by subtracting the U1
+      longitude from 360.0 degrees.  The data are provided in units
+      of Uranian radii which was taken to be 25,600km by the Voyager
+      project.  Angles are given in degrees.  Both cartesian and
+      spherical coordinates are provided.
+ 
+      The Cartesian coordinate system is defined as follows: - X lies
+      in the equatorial plane of Uranus, positive away from the
+      planet, and through the prime meridian at the reference epoch.
+      - Z is parallel to the Uranus spin axis, positive in the
+      southern hemisphere in ecliptic (orbital) coordinates, and, - Y
+      is Z x X (righthanded)
+ 
+      The Cartesian coordinate system does not rotate with the
+      planet.
+ 
+ 
+      Processing Level Id            : 4
+      Software Flag                  : Y
+      Processing Start Time          : UNK
+      Processing Stop Time           : UNK
+ 
+ 
+    Parameters
+    ==========
+      Sampling Parameter Name        : TIME
+      Data Set Parameter Name        : POSITION VECTOR
+      Sampling Parameter Resolution  : 96.000000
+      Sampling Parameter Interval    : 48.000000
+      Minimum Available Sampling Int : 48.000000
+      Data Set Parameter Unit        :
+ 
+                          URANUS RADII (25,600KM) OR DEGREES
+      Sampling Parameter Unit        : SECONDS
+ 
+ 
+      Description
+      -----------
+        A position vector is a triad which describes the location of
+        a point in 3-space relative to some origin.
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      N/A
+ 
+ 
+    Measurement Information
+    =======================
+      N/A
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID    : N/A
+        Software              : UNK
+        Product Data Set ID   : VG2-U-POS-5-SUMM-U1COORDS-48SEC-V1.0
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      There is no dataset confidence information archived with this
+      dataset.  The data provider has included a flag value which is
+      included in the mag dataset which may reduce confidence in
+      individual vectors due to telemetry or software errors.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XM-11A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

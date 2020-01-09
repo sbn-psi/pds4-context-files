@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vega2-c-tvs-2-rdr-halley-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VEGA2 TV SYSTEM IMAGES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.vega_2::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vega2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:tvs.vega2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.halley::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vega2-c-tvs-2-rdr-halley-v1.0__browserp_vega2-c-tvs-2-rdr-halley-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Reinhard, R and B. Battrick (eds), &apos;Space Missions to Halley&apos;s Comet&apos;, European
+                   Space Agency ESA SP-1066, ESA Pub Div, Moordwijk, Netherlands, 1986.
+            </reference_text>
+            <description>reference.ESA-SP1066</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   &apos;Encounters with Comet Halley, The first results&apos;, Nature, Volume 321, No.
+                   6067, 15 May 1986.
+            </reference_text>
+            <description>reference.NATURE321</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VEGA2-C-TVS-2-RDR-HALLEY-V1.0</data_set_id>
+        <data_set_name>VEGA2 TV SYSTEM IMAGES V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1986-03-09T05:45:24.768Z</start_time>
+        <stop_time>1986-03-09T08:10:59.808Z</stop_time>
+        <producer_full_name>INTERNATIONAL HALLEY WATCH</producer_full_name>
+        <citation_text>
+            Abergel J., Bertaux G., Avanessov G.A., Tarnopolsky V.I., Zhulov
+            B.S., Kondor A., Merenyi E., Foldy C., Szego K., Toth I., and A.
+            V. Dyachkov, VEGA2 TV SYSTEM IMAGES V1.0,
+            VEGA2-C-TVS-2-RDR-HALLEY-V1.0, NASA Planetary Data System, 1997
+        </citation_text>
+        <data_set_terse_desc>
+            VEGA 2 satellite raw TV system images of 1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            For the TV SYSTEM, 39 images were sent as a 7-d FITS file with
+            little information in the FITS headers. In addition, to the size
+            of the image (NAXIS1 and NAXIS2), the values for NAXIS3 and
+            NAXIS4 were labeled &apos;TIME&apos; time in seconds. The
+            following procedure was used to convert NAXIS3 information:
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+Data Set Overview
+=================
+ 
+    For the TV SYSTEM, 39 images were sent as a 7-d FITS
+    file with little information in the FITS headers.  In
+    addition, to the size of the image (NAXIS1 and
+    NAXIS2), the values for NAXIS3 and NAXIS4 were
+    labeled &apos;TIME&apos;; the first was interpreted as exposure
+    time in seconds.  The following procedure was used to
+    convert NAXIS3 information:
+ 
+    - The IKI datasets header have a field called CRVAL3
+    which appears to contain a count of seconds since
+    midnight.
+ 
+     - We converted the CRVAL3 value to a day fraction
+    and matched patterns of exposure times between this
+    dataset and similar TVS data from KFKI.
+ 
+     - the IKI time is greater than the KFKI time for the
+    corresponding dataset by about 0.00574 days
+    (approximately 8.3 minutes).  (We interpret the
+    latter as the light correction time but choose not to
+    make the correction but leave the IKI data as
+    submitted.
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    ========================
+    N/A
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:parb.fexp</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PARABOLA for FEXP</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.fexp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Deering, D.W., and P. Leone, A sphere-scanning radiometer
+                   for rapid directional measurements of sky and ground
+                   radiance, Remote Sensing of the Environment, 19, 1-24,
+                   1986.
+            </reference_text>
+            <description>reference.DEERING-LEONE1986</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>PARABOLA</instrument_name>
+        <instrument_desc>
+ 
+ 
+    INSTRUMENT: PARABOLA
+          HOST: FIELD EXPERIMENT
+ 
+ 
+    Instrument Information
+    ======================
+      Instrument Id                  : PARB
+      Instrument Host Id             : FEXP
+      Pi Pds User Id                 : DDEERING
+      Instrument Name                : PARABOLA
+      Instrument Type                : SPECTROMETER
+ 
+ 
+    Instrument Description
+    ======================
+      The Portable Apparatus for Rapid Acquisition of Bidirectional
+      Observations of the Land and Atmosphere, or PARABOLA instrument
+      was designed to overcome important limitations of previously
+      existing field instruments for obtaining the adequate sampling
+      needed to analyze the bidirectional reflectance angular
+      distributions of earth surface targets and the sky.
+ 
+      PARABOLA is a battery-powered, two-axis scanning head
+      three-channel (visible, near infrared, and mid-infrared;
+      0.650-0.670, 0.810-0.840, and 1.620-1.690 micrometers,
+      respectively), motor-driven radiometer that enables the
+      acquisition of radiance data for almost the complete (4 pi)
+      sky- and ground-looking hemispheres in 15 degree instantaneous
+      field-of-view sectors in only 11 s.  The detectors, two silicon
+      and one germanium, are temperature regulated (by cooling or
+      heating) through thermoelectric proportional control circuits.
+      Due to the tremendous range in target brightness that can be
+      expected in scanning a 4 pi sr field of view, an auto-ranging
+      amplifier is used to switch the gain levels back-and-forth by
+      factors of 1, 10 and 100 to maintain maximum radiometric
+      sensitivity.
+ 
+      The direct solar beam saturates PARABOLA detectors for the
+      pixel at that view angle, and therefore a separate measurement
+      of the sun is required for computations of direct and total
+      irradiant flux.  Neutral density filters have been designed for
+      mounting over the detector cones of PARABOLA for this purpose
+      to obtain periodic measurements when the instrument is placed
+      in its manual (or calibration, as opposed to scanning) mode.
+      The radiometer is then pointed directly at the solar disk to
+      acquire the measurement.  PARABOLA data system was originally
+      designed to transform the analog data and record the records
+      onto digital cassette tapes, providing a rugged recording
+      medium with unlimited data storage capability.  The data were
+      then transferred to computer diskettes via a microcomputer and
+      serially linked tape reader.
+ 
+      The original data system has been upgraded to enable direct
+      transmittal of the data onto computer disks via a field-hardy
+      portable computer.  The original cassette recording system is
+      maintained as a redundant backup.  Specially developed software
+      programs are then used to apply geometric computations and
+      system calibration coefficients to the data to generate an
+      output file that can be handled by a variety of commercial
+      software packages, as well as those designed in-house.
+ 
+      The primary mounting device is a lightweight, collapsible boom
+      apparatus, called the Transportable Pickup Mount System or
+      TPMS, whose primary unit consists of an aluminum triangular
+      truss that decouples as four 2-m long sections.  At the top end
+      resides a detachable, two-axis motorized PARABOLA radiometer
+      head mounting and leveling head with a camera mounting
+      attachment.  All operations of the PARABOLA/TPMS, except for
+      raising and lowering the boom, are controlled from the PARABOLA
+      data system control panel.  For the GRSFE study the complete
+      PARABOLA/TPMS system was mounted on a large tripod.
+ 
+      The PARABOLA design provides multidirectional viewing, but the
+      geometry of the systems does not allow the same spot on the
+      ground to be measured at each view direction.  Thus,
+      considerable care must be taken in locating the instrument at a
+      field site to ensure that the data acquired will actually
+      represent the kind of surface that is desired; and some
+      assumptions about the homogeneity of the area must be made.
+      One approach to increasing the sampling density, which has been
+      found to particularly effective, was employed at the GRSFE
+      site.  This involves the rotation of the radiometer boom by +
+      and -7.5 degrees from the solar principal plane axis and
+      acquiring two additional complete scans.
+ 
+      The three scans are combined in a special program that has been
+      written to analyze the bidirectional reflectance distribution
+      characteristics of a site.  This procedure also enables more
+      accurate sampling of the hot spot effects and the aureole
+      surrounding the solar disk.  In more spatially heterogeneous
+      sites three or more (n) complete PARABOLA replicate scans are
+      occasionally acquired by moving the instrument within the site.
+      The replicates are then averaged for each viewing angle
+      position to minimize the within-field inhomogeneity effects.
+      Directional reflectances are normally computed as
+      hemispherical-directional reflectance factors using the
+      PARABOLA directional radiance measurements from the
+      ground-looking hemisphere divided by the PARABOLA-derived
+      incident irradiance as computed from the PARABOLA sky
+      irradiance data or from a calibrated painted BaSO4 reference
+      standard panel.
+ 
+      A pair of Eppley Pyranometers was used to obtain broad-band
+      (visible, reflected IR) sky irradiance and the irradiance
+      reflected from the ground.  The instrument was deployed at
+      PARABOLA height.
+ 
+ 
+    Science Objectives
+    ==================
+      Measure the bi-directional reflectance function for field
+      targets.
+ 
+ 
+    Operational Considerations
+    ==========================
+      N/A
+ 
+ 
+    Calibration Description
+    =======================
+      Radiometric laboratory calibration of PARABOLA is performed at
+      GSFC on a 1.8 m spherical integrator employing 12 200-W quartz
+      halogen lamps (2950K at 6.5A).  The number of lamps is varied
+      to produce 12 radiance levels for calibration.  Three separate
+      calibration runs are made to fully calibrate PARABOLA at the
+      three gain levels of the instrument.  Neutral density filters
+      (0.1 and 0.01 density levels; precisely calibrated) are used
+      for the two lowest gain settings.  The voltage response to the
+      radiance level is linear in all three spectral channels for
+      each gain setting with linear correlation coefficients of
+      0.999, and has been found to be very stable from year to year.
+      Calibrations are typically performed at the beginning and at
+      the end of each seasonal field campaign.
+ 
+ 
+    Section &apos;PARB&apos;
+    ==============
+ 
+      &apos;PARB&apos; Section Parameter &apos;RADIANCE&apos;
+      -----------------------------------
+        Radiance is the amount of energy per time per projected area
+        per steradian.
+ 
+        Instrument Parameter Name      : RADIANCE
+        Sampling Parameter Name        : WAVELENGTH
+        Minimum Sampling Parameter     : 0.650000
+        Maximum Sampling Parameter     : 1.690000
+        Sampling Parameter Unit        : MICROMETER
+ 
+ 
+      Description
+      -----------
+        N/A
+ 
+ 
+      Sensitivity
+      -----------
+        N/A
+ 
+
+        </instrument_desc>
+        <instrument_id>PARB</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Spectrometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

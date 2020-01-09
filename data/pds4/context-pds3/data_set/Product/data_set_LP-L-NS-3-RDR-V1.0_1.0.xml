@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-ns-3-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LP MOON NEUTRON SPECTROMETER 3 RDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_prospector::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ns.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-ns-3-rdr-v1.0__browserc_lp-l-ns-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-ns-3-rdr-v1.0__browserp_geo_lp-l-ns-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-ns-3-rdr-v1.0__dvo_geo_lp-l-ns-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Maurice, S., D.J. Lawrence, W.C. Feldman, R.C. Elphic, and O. Gasnault,
+                   Reduction of neutron data from Lunar Prospector, J. Geophys. Res., Vol. 109,
+                   E07S04, doi:10.1029/2003JE002208, 2004.
+            </reference_text>
+            <description>reference.MAURICEETAL2004</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LP-L-NS-3-RDR-V1.0</data_set_id>
+        <data_set_name>LP MOON NEUTRON SPECTROMETER 3 RDR V1.0</data_set_name>
+        <data_set_release_date>2005-05-19</data_set_release_date>
+        <start_time>1998-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>DAVID J. LAWRENCE</producer_full_name>
+        <citation_text>
+            LAWRENCE, D.J., Lunar Prospector Corrected Neutron Spectra, NASA
+            Planetary Data System, LP-L-NS-3-RDR-V1.0, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            Lunar Prospector Corrected Neutron Spectra
+        </data_set_terse_desc>
+        <abstract_desc>
+            Neutron Spectrometer data acquired by Lunar Prospector have been
+            reduced to four maps, which can be interpreted in terms of
+            elemental composition of the lunar regolith: thermal neutrons,
+            epithermal neutrons, moderated neutrons, and fast neutrons. The
+            maps are presented as 720x360 arrays equally-spaced in latitude
+            and longitude.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    From January 1998 to July 1999, Lunar Prospector continuously measured
+    the leakage flux of neutrons from the Moon in four distinct energy
+    ranges from 0 eV to 8 MeV, using two 3He tubes within the Neutron
+    Spectrometer (NS) and the anti-coincidence shield of the Gamma-Ray
+    Spectrometer (GRS). The neutron data have been reduced to four maps,
+    which can be interpreted in terms of elemental composition of the
+    lunar regolith. The main characteristics of each map are, for thermal
+    neutrons: energy range 0 - 0.3 eV, dynamic range 95%, precision 2.7%,
+    resolution 46 km, in units of counts/8-sec; for epithermal neutrons:
+    energy range &gt;0.3 eV, dynamic range 15%, precision 1%, resolution 43
+    km, in units of counts/8-sec; for moderated neutrons: energy range 0 -
+    0.8 MeV, dynamic range 15%, precision 1.8%, resolution &lt; 90 km, in
+    units of counts/32-sec; for fast neutrons:  energy range 0.8 - 8 MeV,
+    dynamic range 30%, precision 1.6%, resolution 46 km, in units of
+    counts/32-sec. All maps are normalized to 30 km altitude, to the
+    equator; and to the flux of comic rays in January 1998. They are
+    presented as 720x360 arrays equally-spaced in latitude and longitude.
+    Results are reproducible from raw data that are available at the
+    Planetary Data System (PDS), together with guidance and numerical
+    values in the paper Reduction of Neutron Data from Lunar Prospector,
+    Maurice et al., J. Geophys. Res. 109, E07S04, doi:10.1029/2003JE002208,
+    2004 [MAURICEETAL2004].  The reader is referred to this publication
+    for complete details of the processing applied to this data set.
+        </data_set_desc>
+        <confidence_level_note>
+N/A
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

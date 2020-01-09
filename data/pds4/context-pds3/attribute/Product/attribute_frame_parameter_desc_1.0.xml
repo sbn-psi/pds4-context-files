@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.frame_parameter_desc</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>frame_parameter_desc</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>frame_parameter_desc</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>frame_parameter_desc</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The FRAME_PARAMETER_DESC element describes the individual frame parameters
+listed in the element FRAME_PARAMETER.  The frame parameter element defines
+the individual frame parameters of an instrument that transfers single
+frames to the mass memory of the spacecraft or the instrument.  The single
+frame transferred to the mass memory is actually a digital summation of
+various elementary exposures performed by the instrument CPU. Individual
+exposure duration and number of frames must both be known in order to
+compute the signal-to-noise ratio of the data. A typical usage is (use
+quotes instead of apostrophes in the example below):
+ 
+FRAME_PARAMETER = (1.2 &lt;MSEC&gt;, 677 &lt;MSEC&gt;)
+FRAME_PARAMETER_DESC
+  = (&apos;INTERNAL REPETITION TIME&apos;, &apos;EXTERNAL REPETITION TIME&apos;)
+        </definition>
+        <comment>frameprmdesc</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>frame_parameter_desc</name>
+            <definition>
+The FRAME_PARAMETER_DESC element describes the individual frame parameters
+listed in the element FRAME_PARAMETER.  The frame parameter element defines
+the individual frame parameters of an instrument that transfers single
+frames to the mass memory of the spacecraft or the instrument.  The single
+frame transferred to the mass memory is actually a digital summation of
+various elementary exposures performed by the instrument CPU. Individual
+exposure duration and number of frames must both be known in order to
+compute the signal-to-noise ratio of the data. A typical usage is (use
+quotes instead of apostrophes in the example below):
+ 
+FRAME_PARAMETER = (1.2 &lt;MSEC&gt;, 677 &lt;MSEC&gt;)
+FRAME_PARAMETER_DESC
+  = (&apos;INTERNAL REPETITION TIME&apos;, &apos;EXTERNAL REPETITION TIME&apos;)
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>true</enumeration_flag>
+            <value_data_type>ASCII_VID</value_data_type>
+            <formation_rule>
+N/A
+</formation_rule>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>60</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>ms</specified_unit_id>
+            <DD_Permissible_Value_Full>
+                <value>DARK_ACQUISITION_RATE</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>EXPOSURE_DURATION</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>EXPOSURE_TIME</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>EXTERNAL_REPETITION_TIME</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>FRAME_ACQUISITION_RATE</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>FRAME_SUMMING</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>INTERNAL_REPETITION_TIME</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

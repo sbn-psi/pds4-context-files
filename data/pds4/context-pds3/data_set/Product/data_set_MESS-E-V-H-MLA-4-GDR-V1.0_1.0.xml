@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-mla-4-gdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER E/V/H MLA 4 GDR DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mla.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mla-4-gdr-v1.0__browserp_mess-e-v-h-mla-4-gdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mla-4-gdr-v1.0__browser_mess-e-v-h-mla-4-gdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mla-4-gdr-v1.0__dvo_geo_mess-e-v-h-mla-4-gdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Solomon, S.C., R.L. McNutt, Jr., R.E. Gold, and D.L. Domingue, MESSENGER
+                   mission overview, Space Science Reviews, 131, 3-39, 2007.
+            </reference_text>
+            <description>reference.SOLOMONETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H-MLA-4-GDR-V1.0</data_set_id>
+        <data_set_name>MESSENGER E/V/H MLA 4 GDR DATA V1.0</data_set_name>
+        <data_set_release_date>2016-05-06</data_set_release_date>
+        <start_time>2008-01-14</start_time>
+        <stop_time>2015-04-30</stop_time>
+        <producer_full_name>GREGORY A. NEUMANN</producer_full_name>
+        <citation_text>
+            G. A. Neumann (GSFC), MESSENGER E/V/H MLA 4 GDR DATA V1.0, NASA
+            Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            Resampled (binned), interpolated altimetry data products from the
+            MESSENGER mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains gridded data products from the MESSENGER
+            mission [SOLOMONETAL2007].
+        </abstract_desc>
+        <data_set_desc>
+ 
+   Data Set Overview
+   =================
+     The data set consists of gridded, resampled shape maps known as GDRs.
+     The data product is an image object contained in a data file,
+     and a detached PDS label file with a pointer to the data file
+     as well as meta-data information.
+ 
+     The values are planetary radius relative to a sphere with a defined
+     offset, and counts giving the number of observations in each individual
+     pixel, or zero where values are interpolated.
+ 
+     The label file that accompanies each GDR defines the time span
+     of the observations and product creation time.
+ 
+     The shape models will be provided in PDS compliant IMG format
+     at resolutions of 2^n pixels per degree in cylindrical equidistant
+     projection, and in north polar stereographic projection at resolutions
+     of integral numbers of meters, typically 250-1000, and a map at 64
+     pixels per degree at the north pole, or 665.24 m. Pixels represent
+     finite areas rather than discrete points, as scan-line raster images.
+     The center of the upper left pixel is defined as line 1 and sample 1.
+     Simple cylindrical images may extend from -180 to 180 degrees longitude
+     or from 0 to 360 degrees longitude, positive East. A polar model is a
+     square raster image whose four central pixels surround the north pole.
+     The [LINE,SAMPLE]_PROJECTION_OFFSET elements are the pixel offset from
+     line and sample (1.0, 1.0) to the map projection origin defined by the
+     CENTER_LATITUDE and CENTER_LONGITUDE elements.
+ 
+     The design of the MESSENGER mission [SOLOMONETAL2007] and the ranging
+     distance of the MLA allow for data collection primarily in the northern
+     hemisphere, while sparse data were collected from the equator to 18 S.
+ 
+     Dataset projections are given in DSMAP.CAT and DSMAP_POLAR.CAT.
+ 
+     A geospatially labeled, JPEG2000 format product is additionally produced
+     with accompanying XML and LBL files as an alternate format to the PDS
+     IMG format. Pixel level information can be read from these files using
+     an appropriate reader. The data providers do not provide support for
+     commercially available data analysis products. Additionally, internally
+     produced software for the visualization or interpretation of data
+     products is not provided. Attention must be paid to the 0.5 scale factor
+     that must be applied to digital numbers to obtain meters.
+ 
+     The density of observations accumulates over time, and warrants gridding
+     at increasing resolution as coverage improves. As of the end of the
+     nominal mapping mission, more than 50% of pixels at 1 x 1 degree
+     resolution in the northern hemisphere had one or more data values.
+     Orbital phases where ranging could reach below the equator provided
+     some measurements to as far as 16.7 degrees south, and offnadir
+     slews reached as far north as 89.98 degrees north. The density of
+     observations is given in the accompanying altimetry counts images,
+     where values greater than 0 indicate the number of successful ranges.
+ 
+     The vertical resolution of the laser is approximately 30 cm. Horizontal
+     resolution varies due to factors such as surface slope and roughness,
+     the distance between the spacecraft and the surface, and the pointing
+     angle of the altimeter.
+ 
+     The lowest point observed is 2433.598 km, or -5.802 km relative to a
+     2439.4 km datum at 28.104N, 56.349E in Rachmaninoff crater. The polar
+     crater inside Prokofiev at 85.5N, 63.87E is nearly as deep (-5.64 km)
+     although at a higher equipotential level.
+ 
+     The highest area is 4.743 km, at 116.84 to 116.89 E, 30.31 to 30.34 N,
+     on the rim crest surrounding Raditladi Crater.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+     Data Confidence Note
+     ====================
+ 
+     As GDR products are constructed using RDR and CDR data records, the
+     Data Confidence Notes in CDR_RDR_DS.CAT should be consulted.
+ 
+     GDR topographic products have a data span from -18 to 89.98 degrees N
+     latitude. This data release (entire mission through 04/30/2015)
+     incorporates  27 million high-quality observations from 3279 orbital
+     profiles for which values for topography range from -5.8 km to 4.75 km
+     relative to a sphere of radius 2439.4 km.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

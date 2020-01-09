@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-4-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO DLRE 4 CALIBRATED RADIANCE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:dlre.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-4-rdr-v1.0__browserp_lro-l-dlre-4-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-4-rdr-v1.0__dvo_geo_lro-l-dlre-4-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-4-rdr-v1.0__pds.geo.lro.orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Paige, D.A., et al., The Lunar Reconnaissance Orbiter Diviner Lunar Radiometer
+                   Experiment, Space Sci. Rev., doi: 10.1007/s11214-009-9529-2, 2009.
+            </reference_text>
+            <description>reference.PAIGEETAL2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-DLRE-4-RDR-V1.0</data_set_id>
+        <data_set_name>LRO DLRE 4 CALIBRATED RADIANCE V1.0</data_set_name>
+        <data_set_release_date>2016-06-15</data_set_release_date>
+        <start_time>2009-07-05T16:50:26.195Z</start_time>
+        <stop_time>2016-03-15T23:59:59.897Z</stop_time>
+        <producer_full_name>DAVID PAIGE</producer_full_name>
+        <citation_text>
+            Paige et al., LRO DLRE LEVEL 4 RDR V1.0, NASA Planetary Data
+            System, LRO-L-DLRE-4-RDR-V1.0, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            LRO DLRE RDR, calibrated with pointing location geometry
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set consists of the Diviner Lunar Radiometer Experiment
+            Reduced Data Records also known as RDRs. The DLRE is a surface
+            pushbroom mapper that measures emitted thermal radiation and
+            reflected solar radiation from the surface of the moon. Two
+            Diviner solar channels measure 0.3-3 micrometers reflected solar
+            radiation. Three Diviner channels near 8 micrometers classify
+            regolith mineralogy by mapping the location of the Christiansen
+            feature. The remaining four Diviner channels measure surface
+            temperature in four spectral bands ranging from 12.5 micrometers
+            to beyond 200 micrometers.
+        </abstract_desc>
+        <data_set_desc>
+ 
+-------------------------------------------------------------------------+
+ 
+Data Product Overview
+=====================
+ 
+Every 2.048 seconds Diviner collects a data &apos;frame&apos; containing
+the following:
+ 
+* 16 sets of science data, with each set containing 189 sixteen-bit
+  science measurements from the focal plane interface electronics
+  obtained over integration periods of 0.128 seconds
+* A single set of instrument engineering and housekeeping
+  measurements (or &apos;engineering data&apos;)
+ 
+The data are downlinked to the LRO Ground Data System (GDS) and are
+pushed to the Diviner SOC at the end of each downlink pass. Diviner
+software assembles the telemetry files into EDR data tables, each
+covering a one-hour time period.  The RDR data tables are produced
+directly from the EDR data tables using Diviner software, geometry,
+and ephemeris data provided by the LRO project.
+Each Diviner RDR data product will consist of two files.  The first
+file is an ASCII formatted detached PDS label.  The second file is
+the ASCII data table file.  Unlike the EDR data tables, which contain
+values for each of the 189 detectors in a single record
+(every 0.128 seconds), the RDR data tables have one record per detector.
+Therefore, for every EDR record there will be 189 detector-specific
+RDR records, each with the same &apos;date&apos; and &apos;utc&apos; time as the original
+EDR record.
+ 
+Due to the size of the RDR dataset, each RDR data table will cover
+ten minutes of time, one-sixth of the EDR data tables.   In order to
+save space on disk and to facilitate faster downloading, the RDR
+data tables will be compressed using Info-ZIP (freely available utility).
+ 
+The RDR data product is considered to be foremost of scientific interest,
+and thus contains a minimal representation of engineering and
+housekeeping data needed to verify instrument status and data quality.
+ 
+ 
+ 
+Data Processing Level
+=====================
+ 
+The Diviner RDR data products are derived directly from the
+Diviner EDR data products and are considered &apos;Diviner Level 1&apos;.
+It is similar to CODMAC Level 3 (NASA Level 1A) in that the data
+are reversibly calibrated and located in space, yet the content
+resembles more traditional CODMAC Level 4 (NASA Level 1B) data.
+ 
+ 
+Data Product Generation
+=======================
+ 
+The Diviner RDR data products and labels will be generated by the
+Diviner Instrument Team at JPL. The RDR data products will be derived
+from the EDR data products, merged with geometry and ephemeris data
+provided by the LRO Project, and formatted according to the RDR SIS.
+ 
+ 
+Data Flow
+=========
+ 
+After an initial data validation period, the Diviner team at JPL will
+transfer the data tables and labels to the UCLA SOC, which will assemble
+the archive volumes and transfer them to the PDS Geosciences Node.
+ 
+The Diviner RDR archive will be made available via data releases
+scheduled at three month intervals as specified in the Lunar
+Reconnaissance Orbiter Project Data Management and Archive Plan.
+ 
+For more information please see the document DP_SIS.HTM
+(HTML format) or DP_SIS.PDF (Adobe Acrobat format) located
+in the DOCUMENT directory of this archive.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Individual columns in the data records will contain the
+UNKNOWN_CONSTANT (-9999) where data is missing or unknown.
+ 
+ 
+Review
+======
+ 
+This archival data set was examined by a peer review panel prior to
+its acceptance by the Planetary Data System (PDS). The peer review
+was conducted in accordance with PDS procedures.
+ 
+Prior to creation of the final version of the archival data set,
+key elements of the archive were distributed for preliminary
+review.  These included electronic versions of example PDS labels,
+CATALOG files, and Software Interface Specifications (SISs).
+These materials were distributed to PDS personnel, the experiment
+investigator, and others, as appropriate.
+ 
+ 
+Data Coverage and Quality
+=========================
+ 
+The Diviner instrument has a 98% data return rate of expected data.
+Data loss is typically seen during data transmission or spacecraft and
+instrument anomalies.  Diviner performed a Warm Reset after failing to
+see a valid equator crossing from LRO on August 22, 2009.  The Warm
+Reset was needed to clear the bad equator crossing value.  Diviner
+lost a few soundings.  The LRO spacecraft triggered a sun-safed event
+that powered off all instruments on October 10, 2009. Approximately
+eight hours of Diviner data was lost due to the anomaly.  Two more
+sun-safed events occurred on both January 12, 2010 and February 9, 2010.
+The Diviner instrument was powered off for both events.  On July 23, 2010
+Diviner was powered off for almost five hours during a spacecraft maneuver
+during which Diviner data were not collected.  On December 23, 2010
+Diviner was powered off for about 12 hours during an eclipse.
+On February 23, 2011 Diviner was powered off for about 46 hours due
+to a spacecraft safing event.  On April 03, 2011 Diviner was powered off
+for about 23 hours due to a spacecraft safing event.  On June 06, 2011
+Diviner lost about 14 hours of data due to a Ka-comm problem.
+On March 22, 2012 Diviner was powered off for about 40 hours due to a
+spacecraft safing event.  On September 04, 2012 Diviner was powered off
+for about 17 hours due to a spacecraft safing event.  One September 08,
+2012 Diviner was powered off for about 13 hours due to a spacecraft safing
+event.
+ 
+The following hours were affected by the anomalies and have either partial
+data tables or are completely missing:
+ 
+2009082202** - partial - missing data between times
+   02:03:55.171 - 02:04:06.422 - Due to invalid equator crossing from LRO.
+ 
+2009101016** - partial - missing data after 16:14:38.980
+2009101017** through 2009101023** ---------&gt; 7 hours missing
+2009101100** - partial - missing data before 00:41:15.607
+ 
+2010011210** - partial - missing data after 10:00:00:468
+2010011211** through 2010011220** ---------&gt; 10 hours missing
+2010011221** - partial - missing data before 21:18:56:194
+ 
+2010020914** - partial - missing data after 14:59:48:182
+2010020915** through 2010021520** --------&gt; 150 hours missing
+2010021521** - partial - missing data before 21:54:34:397
+ 
+2010072414** - partial - missing data after 14:34:04:253
+2010072415** through 2010072418** --------&gt; 4 hours missing
+2010072419** - partial - missing data before 19:24:37:058
+ 
+2010122105** - partial - missing data after 05:08:03:297
+2010122106** through 2010122116** --------&gt; 11 hours missing
+2010122117** - partial - missing data before 17:08:15:134
+ 
+2011022314** - partial - missing data after 14:24:57:290
+2011022315** through 2011022512** --------&gt; 46 hours missing
+2011022513** - partial - missing data before 13:07:28:380
+ 
+2011040317** - partial - missing data after 17:29:04:698
+2011040318** through 2011040413** --------&gt; 20 files missing
+2011040414** - partial - missing data before 14:44:47:900
+ 
+2011061409** - partial - missing data after 09:37:20:572
+2011061410** through 2011061423** --------&gt; 14 files missing
+2011061500** - partial - missing data before 00:07:20:869
+ 
+2012032202** - partial - missing data after 02:30:26:215
+2012032203** through 2012032317** --------&gt; 39 files missing
+2012032318** - partial - missing data before 18:15:47570
+ 
+2012090405** - partial - missing data after 05:15:27:414
+2012090406** through 2012090420** --------&gt; 15 files missing
+2012090421** - partial - missing data before 21:01:36:575
+ 
+2012090801** - partial - missing data after 01:15:04:908
+2012090802** through 2012090812** --------&gt; 11 files missing
+2012090813** - partial - missing data before 13:51:51:681
+ 
+2013112704** - partial - missing data after 04:09:51:689
+2013112705** through 2013112919** --------&gt; 63 files missing
+2013112920** - partial - missing data before 20:51:58:203
+ 
+2014022611** - partial - missing data after 11:20:42:962
+2014022612** through 2014022620** --------&gt; 9 files missing
+2014022621** - partial - missing data before 21:29:57:716
+ 
+2014041504** - partial - missing data after 04:25:43:225
+2014041505** through 2014041516** --------&gt; 12 files missing
+2014041517** - partial - missing data before 17:31:47:179
+ 
+ 
+Limitations
+===========
+ 
+Data seen immediately after the instrument is powered on or after
+a restart is suspect for a few seconds to a few minutes.  The pointing
+information is typically incorrect or missing.
+ 
+Known Issues
+============
+ 
+1. Noise Events
+ 
+A quality flag (qmi, bit 5) has been implemented to mark data
+collected during noise periods.  Episodic noise events of unknown
+origin are observed to affect a small fraction of Diviner&apos;s
+housekeeping and radiometric data.  The noise signature in the
+radiometric data consists of simultaneous correlated signal spikes
+or offsets in all 189 Diviner detectors. Potential noise events are
+cataloged by reviewing one-hour plots of Diviner housekeeping data
+and flagging those periods in which noise is suspected.
+ 
+Noise events have been flagged from 2009-07-05 to 2010-12-15
+Noise events for the period 2010-12-15 to 2012-03-15 will be
+applied in a later PDS data release.
+ 
+2. Geometric Errors
+ 
+None.
+ 
+3. Radiometric Linearity
+ 
+In the course of the analysis of the Diviner laboratory calibration
+data, concerns have developed regarding the linearity of the
+radiometric response of the instrument in the longer wavelength
+channels at temperatures higher than 300K. The current calibration
+algorithm assumes linear response at all signal levels.
+Brightness temperatures will be recalculated based on updated
+linearity parameters based on reanalysis of laboratory and in-flight
+data in updated versions of the dataset.
+ 
+4. Short Wavelength Spectral Leaks
+ 
+We have evidence that the measured radiances in Channels 8 and 9
+are affected by the intensity of reflected solar radiation. Only
+daytime data are affected and no evidence for similar spectral
+leaks has been identified in any other channels. Since the intensity
+of reflected solar radiation from the moon is correlated with
+temperature, the effects of the spectral leaks in these channels tend
+to be greatest at higher temperatures. The most pronounced effects are
+most evident at temperatures greater than 300K. However, pending
+further investigation, the radiometric accuracy of daytime data in
+Channels 8 and 9 should be considered suspect.
+ 
+5. Eclipse Events
+ 
+A quality flag (qmi, bit 1) has been implemented to mark data
+collected during eclipse periods.  The eclipse period begins at entering
+penumbra and ends two hours after the exit from penumbra.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.hay-a-lidar-3-haylidar-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>HAYABUSA LIDAR V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.hayabusa::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.hay::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lidar.hay::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.25143_itokawa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.hay-a-lidar-3-haylidar-v2.0__browserp_hay-a-lidar-3-haylidar-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Barnouin-Jha, O., A. Cheng, T. Mukai, S. Abe, H. Naru, R. Nakamura, R.W.
+                   Gaskell, J. Saito, and B.E. Clark, Small-scale topography of 25143 Itokawa from
+                   the Hayabusa laser altimeter, Icarus 198, 108-124, 2008.
+            </reference_text>
+            <description>reference.BARNOUIN-JHAETAL2008</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cheng, A.F., O. Barnouin-Jha, L. Prockter, M. T. Zuber, G. Neumann, D. E.
+                   Smith, J. Garvin, M. Robinson, J. Veverka, and P. Thomas, Small-scale
+                   topography of 433 Eros from laser altimetry and imaging. Icarus 155, 51-74,
+                   2002.
+            </reference_text>
+            <description>reference.CHENGETAL2002</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gaskell, R., J. Saito, M. Ishiguro, T. Kubota, T. Hashimoto, N. Hirata, S. Abe,
+                   O. Barnouin-Jha, and D. Scheeres, Gaskell Itokawa Shape Model V1.0.
+                   HAY-A-AMICA-5-ITOKAWASHAPE-V1.0. NASA Planetary Data System, 2008.
+            </reference_text>
+            <description>reference.GASKELLETAL2008B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mukai, T., H. Araki, T. Mizuno, N. Hatanaka, A.M. Nakamura, A. Kamei, H.
+                   Nakayama and A. Cheng, Detection of mass, shape and surface roughness of target
+                   asteroid of MUSES-C by LIDAR, Adv. Space Res., 29, 1231-1235, 2002.
+            </reference_text>
+            <description>reference.MUKAIETAL2002</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>HAY-A-LIDAR-3-HAYLIDAR-V2.0</data_set_id>
+        <data_set_name>HAYABUSA LIDAR V2.0</data_set_name>
+        <data_set_release_date>2012-01-23</data_set_release_date>
+        <start_time>2005-09-11T04:56:26.198Z</start_time>
+        <stop_time>2005-11-25T22:04:00.844Z</stop_time>
+        <producer_full_name>CAROL NEESE</producer_full_name>
+        <citation_text>
+            Mukai, T., Abe, S., Barnouin, O., Cheng, A., and Kahn, E.,
+            Hayabusa LIDAR V2.0. HAY-A-LIDAR-3-HAYLIDAR-V2.0. NASA Planetary
+            Data System, 2012.
+        </citation_text>
+        <data_set_terse_desc>
+            Hayabusa LIDAR raw and calibrated data for all mission phases.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The HAYABUSA spacecraft included a LIght Detection and Ranging
+            (LIDAR) altimeter. The primary objective of LIDAR was to
+            establish the range between the HAYABUSA spacecraft and the
+            asteroid Itokawa for navigation purposes during the surveying and
+            collection phases of the mission. It provided excellent estimates
+            of the location of the spacecraft relative to the asteroid. The
+            Experiment Data Record (EDR) and Calibrated Data Record (CDR)
+            from the Hayabusa LIDAR experiment are included in this data set.
+            This updated version of the HAYABUSA LIDAR data includes a new
+            CDR where the offsets between a high resolution shape model and
+            the LIDAR data were minimized by optmizing the spacecraft
+            trajectory.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+ 
+    The HAYABUSA spacecraft included a LIght Detection and Ranging (LIDAR)
+  altimeter.The primary objective of LIDAR was to establish the range between
+  the HAYABUSA spacecraft and the asteroid Itokawa for navigation purposes
+  during the surveying and collection phases of the mission. It provided
+  excellent estimates of the location of the spacecraft relative to the
+  asteroid.
+ 
+    The secondary scientific objective of the LIDAR included determining the
+  mass of the asteroid, and measuring its global surface elevation and
+  roughness.
+ 
+    The Calibrated Data Record (CDR) contains LIDAR science and telemetry data
+  that have been converted to engineering and physical units. The Experiment
+  Data Record (EDR) is the source for the science data, while the House
+  Keeping Experiment Data Record (HKEDR) and telemetry provide the data needed
+  to determine the position of the HAYABUSA spacecraft relative to the
+  asteroid. Resulting orbit, geometric, and calibration data have been
+  incorporated, to determine the location of the LIDAR boresight on the
+  surface of the asteroid provided in the CDR. With an appropriate shape model
+  and density estimates for Itokawa, these can be used to obtain topographic
+  profiles of the surface, e.g. [CHENGETAL2002] of Itokawa.
+ 
+    The confirmed time resolution of the HAYABUSA lidar equals aproximately
+  1.67ns which is equivalent to 0.5m in range. This values was derived from
+  the data obtained over the very flat and smooth Muses-C Regio.  See
+  [BARNOUIN-JHAETAL2008]. For further information about the Hayabusa LIDAR and
+  its data set may be found in [MUKAIETAL2006] and [BARNOUIN-JHAETAL2008].
+ 
+ 
+      Data
+      ====
+ 
+    All the HAYABUSA LIDAR data records are ascii tables. Each EDR contains
+  three columns of data. The first column is the the Mission Elapsed Time in
+  units of spacecraft ticks when the LIDAR range was measured. One spacecraft
+  tick equals 1/32 of a second. The second column is equal to this same time
+  but translated into units of Universal Coordinated Time UTC. The third
+  column equals the range measured by the LIDAR at the time indicated. The
+  LIDAR collected data at 1 Hz (1 return per second) for the entire duration
+  of the encounter with Itokawa (~3 months).
+ 
+    The EDR is composed of three files: EDR20050911_20050929.TAB which
+  corresponds to data acquired during the GATE Position Phase when the
+  HAYABUSA spacecraft was at ~20km distance from the surface of the asteroid;
+  EDR20050930_20051028.TAB which corresponds to data acquired during the HOME
+  Position Phase when the HAYABUSA spacecraft was at 3-7km distance from the
+  surface of the asteroid; EDR20051029_20051125.TAB which corresponds to the
+  TOUCH DOWN phase when the HAYABUSA spacecraft attempted to sample the
+  surface of Itokawa.
+ 
+    The housekeeping (HKEDR) file has not been included in the archive because
+  the mission has not yet given permission for it to be archived in PDS.  When
+  permission is given to archive it, it will be added.  The first three
+  columns of this HKEDR are identical to those in the EDR file. The next two
+  columns provide the illuminated centroid of Itokawa within the reference
+  frame of the wide angle camera, ONC-W1. This camera is part of the AMICA
+  instrument package and more information is given in the description for that
+  instrument. In brief, it is a 512 by 512 pixel imager with a field of view
+  of 60 degrees.
+ 
+    The software aboard the HAYABUSA spacecraft imager found the centroid of
+  the largest illuminated object in the field of view of this ONC-W1, with DN
+  values greater than a threshold of 5DN. This happened at 2 min intervals,
+  and was accompanied by a LIDAR range and time listed in the first three
+  columns of the HKEDR file already discussed. The first of the two pixel
+  values gives the x or sample location of the centroid. The second one gives
+  the y or line location of the centroid. The one HKEDR file includes data for
+  the entire mission.  A pixel value for x and y of zero implies the asteroid
+  filled the entire field of view of the ONC-W1.
+ 
+ 
+    The CDR data files are of three kinds. The first is an unfiltered (UF)
+  version of the data after the processing described in the next section was
+  undertaken. The second is composed of the same set but was filtered (F) to
+  remove any estimated surface point which was located more that 10m from the
+  predicted intersection of the vector defining the pointing of the LIDAR
+  boresight and the shape model of the asteroid. The third is an optimized
+  (OPT) version that is built on the filtered data. The filenames include F,
+  UF and OPT respectively.  The CDR files include information on both the
+  HAYABUSA LIDAR and the boresight of the Near Infra-Red Spectrometer aboard
+  HAYABUSA. The NIRS data is provided as a courtesy to others HAYABUSA related
+  efforts because it is exactly aligned with the LIDAR.
+ 
+    All three filtered, unfiltered and optimized CDR files list the following
+  data in their column order:
+      1. The spacecraft mission elapsed time (MET)
+      2. The equivalent spacecraft time in UTC
+      3. The X,Y and Z estimate of the spacecraft location derived during the
+  LIDAR data processing (see processing section below)
+      4. The estimated X,Y,Z position of the LIDAR and Near Infra-Red
+  Spectrometer (NIRS; Co-aligned with the LIDAR) footprint using the LIDAR
+  processed spacecraft position, the LIDAR boresight vector, and the measured
+  range.
+      5. The predicted X,Y,Z position of the LIDAR footprint at the
+  intersection of the LIDAR boresight vector with the a high resolution
+  asteroid shape model [GASKELLETAL2008B] using the LIDAR processed spacecraft
+  position.
+      6. Incidence, emission and phase angle of the center of the LIDAR/NIRS
+  field of view (FOV) using the interection of the LIDAR boresight vector with
+  a high resolution asteroid shape model [GASKELLETAL2008B], using the LIDAR
+  processed spacecraft position.
+      7. Size in m of the LIDAR and NIRS FOV obtained from the LIDAR FOV and
+  measured LIDAR range to surface of the asteroid.
+      8. Longitude and latitude of the center of the LIDAR/NIRS (FOV) using
+  the measured LIDAR range, and the spacecraft positions given by the LIDAR
+  processing.
+      9. Predicted longitude and latitude of the LIDAR/NIRS (FOV) at the
+  intersection of the LIDAR boresight vector with the asteroid shape model
+  [GASKELLETAL2008B], using the spacecraft positions given by the LIDAR
+  processing.
+     10. Mean incidence, emission and phase angle from nine locations across
+  the FOV of NIRS that were derived from nine vectors across the NIRS FOV
+  (split into a 3x3 grid) whose intersection with the shape model
+  [GASKELLETAL2008B] were determined using the spacecraft positions given by
+  the LIDAR processing.
+     11. Mean longitude and latitude of the NIRS FOV for the up to nine
+  vectors within the NIRS FOV that intersect the asteroid shape model using
+  the spacecraft positions given by the LIDAR processing.
+     12. Predicted minimum and maximum longitude and latitude of the up to
+  nine vectors within the NIRS FOV that intersect the asteroid shape model
+  using the spacecraft positions given by the LIDAR processing.
+     13. Number of vectors within the NIRS FOV (split into a 3x3 grid) that
+  intersects the asteroid shape model using the spacecraft positions given by
+  the LIDAR processing. This number of vectors was used in the calculation to
+  estimate the previous mean incidence, emission and phase of NIRS, and the
+  mean, minimum and maximum longitude and latitude values of NIRS.
+ 
+      Processing
+      ==========
+ 
+    The CDR incorporates the best orbital solutions and LIDAR boresight
+  locations derived by the HAYABUSA LIDAR team. As a first step, a new
+  algorithm was developed to better locate the Hayabusa spacecraft relative to
+  the asteroid. The most important data initially used was the housekeeping
+  (HKEDR) data of the x-y pixel of the illuminated centroid obtained by the
+  ONC-W1 (WAC) camera of AMICA. Additional data included the project supplied
+  information on the pointing of the WAC (SPICE C-kernels), as well as a good
+  shape model of Itokawa (generated by R. Gaskell and part of the HAYABUSA PDS
+  delivery [GASKELLETAL2008B]).  Our algorithm assumes that the spacecraft
+  attitude (i.e., its pointing) provided by the SPICE C-kernels as determined
+  by the on board star cameras remained correct throughout the mission.
+ 
+    The algorithm consists of first using a preliminary spacecraft location,
+  the spacecraft attitude data and the shape model to create simulated images
+  of Itokawa as seen by the WAC at the time the actual HKEDR was acquired. A
+  predicted x-y pixel location for the illuminated centroid was computed from
+  these simulated images simultaneously with a predicted range to where the
+  LIDAR was pointing at the surface of the Itokawa. These predicted HK-data
+  were then compared to the actual HKEDR in order to correct the spacecraft
+  position. This comparison was repeated iteratively until the predicted and
+  actual x-y pixel locations were within 0.1 pixel, and the predicted and
+  measured ranges were within 0.5 to 3 m of each other, depending on the range
+  of the spacecraft relative to the surface of the asteroid.
+ 
+ 
+    The algorithm used to reproduce the HK data provides at 2 min intervals
+  excellent estimates of the spacecraft position relative to Itokawa for most
+  of the time that Hayabusa observed Itokawa. The data acquired by the LIDAR,
+  however, was taken at 1 s intervals. Therefore, good estimates of the
+  spacecraft position were still required for those periods between when HK
+  data was acquired. After some trial and error, good estimates were obtained
+  by initially using linear interpolation to first guess the locations of the
+  spacecraft between those estimates provided by the HK data. We then fit all
+  the positions using least squares to a second order polynomial or parabolic
+  function between spacecraft maneuvers. Such a function should have a form
+  that compares favorably with solutions to the semi-orbital equation of
+  motion for the Hayabusa spacecraft that include the solar pressure acting on
+  the spacecraft, because major maneuvers occurred fairly frequently (between
+  a few hour to a few day intervals). Analysis of the resulting data indicate
+  significant improvements on how well the new trajectory estimate for
+  Hayabusa relative to what was initially provided by the project in the form
+  of SPICE SP-Kernels.
+ 
+    Further processing was then performed, where the following algorithm was
+  used to improve the unfiltered lidar data. First, the lidar points were
+  divided into subsets of no more than 1000 points each. The actual number or
+  points per set was chosen so that the size of a bounding box containing the
+  points did not completely wrap around the asteroid. Then for each lidar
+  point in the set, a point on the asteroid near it was computed by
+  intersecting with the asteroid (using the highest resolution shape model of
+  Itokawa produced by Bob Gaskell) a ray originating from the spacecraft
+  position in the direction of the lidar point. These intersection points were
+  grouped together to form a second set of points in addition to the original
+  (uncorrected) lidar points. A point matching scheme was then employed to
+  find the optimal translation of the first set of points so that the distance
+  between the lidar footprints and shapemodel were minimized. This optimal
+  translation was then applied to the original lidar points and spacecraft
+  positions to produce the improved data. This procedure was repeated for each
+  subset of the lidar data.
+ 
+    In this delivery, we provide three CDR files for each time range. The
+  first includes boresight locations that have not been further filtered after
+  the first set of above processing prior to optimization was undertaken. The
+  second set filters the unfiltered version of the data to remove bad data in
+  the filtered set: any estimated surface point which was located more that
+  10m from the predicted intersection of the vector defining the pointing of
+  the LIDAR boresight and the shape model of the asteroid were removed. This
+  difference of 10m was chosen because most small scale variations in surface
+  topography on Itokawa are less than this amount. This second set results in
+  ~65% of the  LIDAR points being useful. This is equal to ~1.0 million LIDAR
+  shots. The third optimized data set was able to use most of the unfiltered
+  data to further increases the number of usable LIDAR points to ~1.3 million
+  LIDAR shots. The EDR contains a total ~1.6 million LIDAR data originally
+  collected by Hayabusa. The optimized data also provided some of the best
+  estimates of the location of the Hayabusa spacecraft relative to the
+  asteroid.
+ 
+ 
+      Ancillary Data
+      ==============
+ 
+    As part of analysis, we found that the AMICA SPICE image kernel  needed
+  further modification. A new version (amica_v202.ti) was prepared by Olivier
+  Barnouin-Jha. In order to generate the CDR dataset, we used several project
+  provided SPICE kernels including the planetary ephemeris kernel
+  pck00008.tpc, the Itokawa Ephmeris and rotation kernel sb_25143_140.bsp and
+  the HAYABUSA clock kernel hayabusa.tsc (the version of 2005-09-06).  These
+  and the other SPICE kernels used to prepare the data files have been
+  archived in the PDS SPICE archives.
+ 
+ 
+      Coordinate System
+      =================
+ 
+    A planetocentric coordinate system is employed, which is body-centered,
+  using the center-of-figure as the origin. The actual vector from the center
+  of Itokawa to the surface should be primarily employed for scientific
+  purposes because of the important curvature of Itokawa where some locations
+  can possess more than one latitude and longitude. However, latitude and
+  longitude data are also provided, but should be used with caution. The
+  latitude is defined by the angle between the equatorial plane and a vector
+  extending from the origin of the coordinate system to the relevant point on
+  the surface.  Latitude is measured from -90 degrees at the south pole to +90
+  degrees at the north pole.  Longitude extends from 0 to 360 degrees, with
+  values increasing eastward (i.e., it is a right-handed coordinate system)
+  from the prime meridian. This coordinate system is preferred for use in
+  navigation and geophysical studies in which, for example, estimates of
+  elevation or gravitational potential are generated mathematically.
+ 
+      Modification History
+      ====================
+ 
+    The Hayabusa LIDAR CDR files were changed slightly in going from version 1
+  to version 2 of the Hayabusa LIDAR data. The dates in the unfiltered and
+  filtered data filename&apos;s were changed to match the dates used in the EDR
+  filenames, with the exception of the data collected during the last TOUCH
+  DOWN phase. The LIDAR data collected after November 18, 2005 could not be
+  corrected. Furthermore, some duplicate data were present in the original
+  version 1 of the LIDAR data, and these have been removed. Finally, the new
+  optimized version of the CDR were generated in going from version 1 to
+  version 2 of the LIDAR CDR. There were also some typos in the version 1
+  &apos;dataset.cat&apos; document that have now been remedied.
+ 
+ 
+     References
+     ==========
+ 
+      Mukai, T., Araki, H., Mizuno, T., Hatanaka, N., Nakamura, A.M., Kamei,
+  A., Nakayama, H., Cheng, A., 2002. Detection of mass, shape and surface
+  roughness of target asteroid of MUSES-C by LIDAR. Adv. Space Res. 29,
+  1231-1235.
+ 
+      Barnouin-Jha, O., A. Cheng, T. Mukai, S. Abe, H. Naru, R. Nakamura, R.W.
+  Gaskell, J. Saito, and B.E. Clark 2008.  Small-scale topography of 25143
+  Itokawa from the Hayabusa laser altimeter.  Icarus 198, 108-124.
+ 
+      Cheng, A.F., O. Barnouin-Jha, L. Prockter, M. T. Zuber, G. Neumann, D.
+  E. Smith, J. Garvin, M. Robinson, J. Veverka, and P. Thomas, Small-scale
+  topography of 433 Eros from laser altimetry and imaging. Icarus 155, 51-74
+  2002.
+ 
+       Gaskell, R., Saito, J., Ishiguro, M., Kubota, T., Hashimoto, T.,
+  Hirata, N., Abe, S., Barnouin-Jha, O., and Scheeres, D., Gaskell Itokawa
+  Shape Model V1.0. HAY-A-AMICA-5-ITOKAWASHAPE-V1.0. NASA Planetary Data
+  System, 2008.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+ 
+    The resolution of the data is about 50 cm vertically. Along track spacing
+  is variable. Small errors in the HAYABUSA emphemeris solutions and pointing
+  knowledge yield uncertainties in absolute ground spot location to within 10
+  m, but is often better in the case of the filtered and unfiltered data. The
+  optimized (OPT) CDR data set has errors relative to the Itokawa shape model
+  that are on the order of 3.5 m.
+ 
+ 
+   Timing Uncertainty
+   ==================
+ 
+    The clock aboard Hayabusa possesses an estimated uncertainty of +/- 12
+  seconds due to a periodicity in the control and operation of the analog
+  signal processing unit.  This effect was somewhat remedied by the analysis
+  used by the LIDAR science team. The relative pointing between the ONC-W2
+  camera and AMICA were statically adjusted so that a simulated image using
+  the Hayabusa shape model would match the location of Itokawa observed by
+  AMICA. Both data sets suffer from the same timing problem and our approach
+  would thus have minimized their effect over the lifetime of the mission.
+  Additional errors due to this timing uncertainty are captured by the 10m
+  uncertainty clearly established to be the accuracy of the LIDAR CDR filtered
+  data.  Examples of the excellent match between the topography observed, the
+  estimated location of the boresight using the LIDAR CDR dataset and
+  observations of where this boresight should be in AMICA all indicate that
+  this problem has a minor impact on the quality of the Hayabusa LIDAR data
+  set (see Barnouin-Jha et al. [2008] for additional details.)
+ 
+   Data Coverage/Quality
+   =====================
+ 
+    After processing using the optimal approach, 82% of the mission&apos;s data was
+  found useful.
+ 
+    Limitations
+    ===========
+ 
+    The HAYABUSA LIDAR data has met many of its design expectations. It has
+  demonstrated a measurement precision of ~50 centimeters over flat terrain.
+  After processing, more than 82 % of the data was found useful for
+  topographic analyses, with average errors of 3.5 m or less.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

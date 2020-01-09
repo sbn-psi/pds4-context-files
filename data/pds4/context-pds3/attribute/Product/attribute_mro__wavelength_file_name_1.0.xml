@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.mro__wavelength_file_name</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>mro:wavelength_file_name</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>mro:wavelength_file_name</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>mro:wavelength_file_name</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The MRO:WAVELENGTH_FILE_NAME element identifies the name of the file
+that describes wavelength sampling in a CRISM EDR, RDR, or CDR. There
+are two aspects to the wavelength sampling. One is the wavelength of
+light falling on each element of the 480-row detector. The second is
+the selection of which rows are included in downlink. For each
+detector there is a menu of four options; which option is selected is
+given in MRO:WAVELENGTH_FILTER, which has a value of 0, 1, 2, or 3.
+For an EDR, the wavelength file is a 5-column, 480-row text file. The
+five elements in each row are the row number and a 0 or 1 for
+MRO:WAVELENGTH_FILTER 0, 1, 2 and 3, indicating if the row is included
+in the EDR when that option is selected in MRO:WAVELENGTH_FILTER. For
+an RDR or CDR, the wavelength file is an image whose value at the
+location of a detector element is the center wavelength of that
+element, in nanometers.
+        </definition>
+        <comment>mro:103</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>mro:wavelength_file_name</name>
+            <definition>
+The MRO:WAVELENGTH_FILE_NAME element identifies the name of the file
+that describes wavelength sampling in a CRISM EDR, RDR, or CDR. There
+are two aspects to the wavelength sampling. One is the wavelength of
+light falling on each element of the 480-row detector. The second is
+the selection of which rows are included in downlink. For each
+detector there is a menu of four options; which option is selected is
+given in MRO:WAVELENGTH_FILTER, which has a value of 0, 1, 2, or 3.
+For an EDR, the wavelength file is a 5-column, 480-row text file. The
+five elements in each row are the row number and a 0 or 1 for
+MRO:WAVELENGTH_FILTER 0, 1, 2 and 3, indicating if the row is included
+in the EDR when that option is selected in MRO:WAVELENGTH_FILTER. For
+an RDR or CDR, the wavelength file is an image whose value at the
+location of a detector element is the center wavelength of that
+element, in nanometers.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>
+N/A
+</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>Unknown</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Target_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:target:satellite.titan</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>TITAN</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Target_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Target_PDS3>
+        <target_name>TITAN</target_name>
+        <orbit_direction>PROGRADE</orbit_direction>
+        <primary_body_name>SATURN</primary_body_name>
+        <rotation_direction>Unknown</rotation_direction>
+        <target_desc>
+ 
+  TARGET PARAMETERS
+  =================
+ 
+    A_AXIS_RADIUS                   : 2575.
+    TARGET_PARAMETER_UNCERTAINTY    : 2.
+    DATA_SOURCE_ID                  : IAU-1994
+ 
+    B_AXIS_RADIUS                   : 2575.
+    TARGET_PARAMETER_UNCERTAINTY    : 2.
+    DATA_SOURCE_ID                  : IAU-1994
+ 
+    BOND_ALBEDO                     : UNK
+ 
+    C_AXIS_RADIUS                   : 2575.
+    TARGET_PARAMETER_UNCERTAINTY    : 2.
+    DATA_SOURCE_ID                  : IAU-1994
+ 
+    FLATTENING                      : 0.
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    DATA_SOURCE_ID                  : IAU-1994
+ 
+    MAGNETIC_MOMENT                 : UNK
+ 
+    MASS                            : 135000000000000000000000.
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    DATA_SOURCE_ID                  : CUNNINGHAM-1997
+ 
+    MASS_DENSITY                    : 1.881
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    DATA_SOURCE_ID                  : CUNNINGHAM-1997
+ 
+    MINIMUM_SURFACE_TEMPERATURE     : UNK
+    MAXIMUM_SURFACE_TEMPERATURE     : UNK
+    MEAN_SURFACE_TEMPERATURE        : UNK
+ 
+    EQUATORIAL_RADIUS               : 2575.
+    TARGET_PARAMETER_UNCERTAINTY    : 2.
+    DATA_SOURCE_ID                  : IAU-1994
+ 
+    MEAN_RADIUS                     : 2575.
+    TARGET_PARAMETER_UNCERTAINTY    : 2.
+    DATA_SOURCE_ID                  : IAU-1994
+ 
+    SURFACE_GRAVITY                 : 1.35
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    DATA_SOURCE_ID                  : CUNNINGHAM-1997
+ 
+    SYNODIC_ROTATION_PERIOD         : 15.95
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    DATA_SOURCE_ID                  : CUNNINGHAM-1997
+ 
+ 
+    POLE_RIGHT_ASCENSION            : 36.41
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    TARGET_PARAMETER_EPOCH          : 2000
+    DATA_SOURCE_ID                  : NAIF-1997
+ 
+    POLE_DECLINATION                : 83.94
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    TARGET_PARAMETER_EPOCH          : 2000
+    DATA_SOURCE_ID                  : NAIF-1997
+ 
+    SIDEREAL_ROTATION_PERIOD        : UNK
+    MEAN_SOLAR_DAY                  : UNK
+    OBLIQUITY                       : UNK
+ 
+    ORBITAL_ECCENTRICITY            : 0.029
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    TARGET_PARAMETER_EPOCH          : UNK
+    DATA_SOURCE_ID                  : BURATTI-1997
+ 
+    ORBITAL_INCLINATION             : 0.3
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    TARGET_PARAMETER_EPOCH          : UNK
+    DATA_SOURCE_ID                  : BURATTI-1997
+ 
+    ORBITAL_SEMIMAJOR_AXIS          : 1220000.
+    TARGET_PARAMETER_UNCERTAINTY    : UNK
+    TARGET_PARAMETER_EPOCH          : UNK
+    DATA_SOURCE_ID                  : BURATTI-1997
+ 
+    ASCENDING_NODE_LONGITUDE        : UNK
+    PERIAPSIS_ARGUMENT_ANGLE        : UNK
+ 
+ 
+  DATA SOURCE DESCRIPTIONS
+  ========================
+ 
+    BURATTI-1997
+    ------------
+      Taken from ENCYCLOPEDIA OF PLANETARY SCIENCES entry entitled
+      SATELLITE, NATURAL [BURATTI1997].
+ 
+ 
+    CUNNINGHAM-1997
+    ---------------
+      Taken from ENCYCLOPEDIA OF PLANETARY SCIENCES entry entitled
+      TITAN [CUNNINGHAM1997].
+ 
+ 
+    IAU-1994
+    --------
+      Taken or derived from REPORT OF THE IAU/IAG/COSPAR WORKING
+      GROUP ON CARTOGRAPHIC COORDINATES AND ROTATIONAL ELEMENTS
+      OF THE PLANETS AND SATELLITES: 1994 [DAVIESETAL1996A].
+      Given mean radius (MR), equatorial radius (ER), and polar
+      radius (PR), then:
+ 
+           MR                 = ER = PR
+           A_AXIS_RADIUS      = ER
+           B_AXIS_RADIUS      = ER
+           C_AXIS_RADIUS      = ER
+           FLATTENING         = (ER - PR)/ER
+ 
+    NAIF-1997
+    ---------
+      Taken from the NAIF 1997 Planetary Constants Kernel
+      PCK00006.TPC, itself based on IAU-1994 (see above). In
+      the NAIF file, three-element vectors [constant term, linear
+      coefficient for Julian centuries since the standard
+      epoch (J2000), and a third term which NAIF sets to 0]
+      give the pole right ascension and declination.  Only the
+      constant term is retained here.
+        </target_desc>
+        <target_type>Satellite</target_type>
+    </Target_PDS3>
+</Product_Target_PDS3>

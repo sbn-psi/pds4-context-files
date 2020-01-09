@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-crat-3-cdr-calibrated-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO MOON CRATER 3 CALIBRATED ENERGY DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:crat.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-crat-3-cdr-calibrated-v1.0__browserp_lro-l-crat-3-cdr-calibrated-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Spence, H.E., A.W. Case, M.J. Golightly, T. Heine, B.A. Larsen, J.B. Blake, P.
+                   Caranza, W.R. Crain, J. George, M. Lalic, A. Lin, M.D. Looper, J.E. Mazur, D.
+                   Salvaggio, J.C. Kasper, T.J. Stubbs, M. Doucette, P.Ford, R. Foster, R. Goeke,
+                   D. Gordon, B. Klatt, J. O&apos;Conner, M. Smith, T. Onsager, C. Zeitlin, L.W.
+                   Townsend, Y. Charara (2010), CRaTER: The Cosmic Ray Telescope for the Effects
+                   of Radiation Experiment on the Lunar Reconnaissance Orbiter Mission, Space Sci.
+                   Rev., 150, 243-284, DOI: 10.1007/s11214-009-9584-8.
+            </reference_text>
+            <description>reference.SPENCEETAL2010</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-CRAT-3-CDR-CALIBRATED-V1.0</data_set_id>
+        <data_set_name>LRO MOON CRATER 3 CALIBRATED ENERGY DATA V1.0</data_set_name>
+        <data_set_release_date>2010-03-15</data_set_release_date>
+        <start_time>2009-06-29T00:00:00.000Z</start_time>
+        <stop_time>2009-12-31T23:59:59.000Z</stop_time>
+        <producer_full_name>PROF. HARLAN SPENCE</producer_full_name>
+        <citation_text>
+            Spence, H.E., LRO MOON CRATER 3 CALIBRATED ENERGY DATA V1.0,
+            LRO-L-CRAT-3-CDR-CALIBRATED- V1.0, NASA PLANETARY DATA SYSTEM,
+            2010
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains calibrated science and engineering data
+            from the LRO CRaTER Instrument
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains calibrated data records (CDR)of science
+            measurements and supporting configuration and engineering data
+            from the LRO Cosmic Ray Telescope for the Effects of Radia- tion
+            (CRaTER) instrument. The data consists of primary science
+            (charged-particle event energy depositions), secondary science
+            (detector singles count rates, event counters, detector event
+            thresholds, pulser configuration), and housekeeping (voltages,
+            currents, temperatures, accumulated radiation dosage, etc.)
+            parameters.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+ 
+    The Cosmic Ray Telescope for the Effects of Radiation (CRaTER) is a
+    stacked detector-absorber cosmic-ray telescope designed to answer key
+    questions to enable future human exploration of the Solar System.
+    CRaTER&apos;s primary measurement goal is to measure directly the average
+    lineal energy transfer (LET or &apos;y&apos;) spectra caused by space radiation
+    penetrating and interacting with shielding material.  Such measured LET
+    spectra are frequently unavailable.  In the absence of measurements,
+    numerical models are used to provide estimates of LET; the reliability of
+    the models require experimental measurements to provide a ground truth.
+ 
+    The Level 1 dataset consists of files containing data processed from the
+    Level 0 primary science, secondary science, and housekeeping raw data re-
+    cords.  During processing, the raw data are converted with instrument-
+    specific calibration and conversion factors to calibrated data records
+    (CDR) containing science and engineering measurements and instrument oper-
+    ating parameters.  The CDR are written to files in plain text, fixed re-
+    cord format; each file contains CDR for a single UTC day. All times values
+    in Level 1 data products are in spacecraft clock units.
+ 
+    The Level 1 data are an intermediate data product meant to be used for
+    data processing diagnostics and troubleshooting.  Although the Level 1
+    dataset can be used for some data analyses, it is not intended as the
+    primary source for further data analyses or scientific research.  In the
+    Level 1 dataset all times are expressed in spacecraft clock units; space-
+    craft location and instrument pointing data are not included.  Users
+    seeking CRaTER data are instead encouraged to use the Level 2 derived data
+    record (DDR) dataset.  The Level 2 data contain all Level 1 data supple-
+    mented time values converted to UTC and computed spacecraft location and
+    instrument pointing information.
+ 
+    See the MISSION.CAT file for more information on the LRO mission.
+    See the CRAT_INST.CAT file for more information on the CRaTER instrument.
+    See SPENCEETAL2010 for detailed description of LRO flight version of the
+    instrument, its operations, and data processing.
+ 
+    Science Objectives and Observation Strategy
+    -------------------------------------------
+    CRaTER is designed to achieve characterization of the global lunar
+    radiation environment and its biological impacts and potential mitigation
+    as well as investigation of shielding capabilities and validation of
+    other deep space radiation mitigation strategies involving materials.
+    CRaTER will fill knowledge gaps regarding radiation effects, provide
+    fundamental progress in knowledge of the Moon&apos;s radiation environment,
+    and provide specific path-finding benefits for future planned human
+    exploration.
+ 
+    Parameters
+    ----------
+    LRO CRaTER flight instrument identification:
+    --instrument model = Flight Model 1 (FM1);
+    --instrument serial number (S/N) = 02;
+    --FPGA revision code = 3.
+ 
+    Data
+    ----
+    CRaTER&apos;s principal measurement is the energy deposited in the 3-pairs of
+    silicon detectors by charged particles and photons passing through the in-
+    strument&apos;s &apos;telescope&apos; unit.  Whenever the coulombic charge signal re-
+    sulting from the energy deposited in a detector exceeds a predefined and
+    fixed threshold, the instrument&apos;s electronics performs a detailed measure-
+    ment of the signals from all of the detectors.  The resulting detector
+    signal amplitudes are compared to the values of the &apos;lower level discrim-
+    inators&apos; (LLDs).  LLDs establish minimum amplitudes for signals to qualify
+    as valid charged-particle or photon interactions.  The LLD values are
+    generally set to insure that the desired charged-particle or photon mea-
+    surements are not contaminated by system electronic noise.  Seperate LLD
+    settings are required for the thick and thin detectors due to the dif-
+    ference in their sensitivities; the thin and thick detector LLD values are
+    reported in the &apos;DiscThin&apos; and &apos;DiscThick&apos; parameters as part of the
+    secondary science packet.
+ 
+    In addition to the LLD settings, measurement filtering is achieved through
+    detector coincidence requirements--the combination of detectors register-
+    ing valid signals to qualify as a charged-particle or photon measurement
+    &apos;event&apos;.  To measure all charged particles arriving from the instrument&apos;s
+    zenith or nadir directions, for example, the coincidence requirements
+    would be valid signals in at least detectors 1, or 2, or 5, or 6.  Con-
+    versely, a coincidence consisting of valid signals in all six detectors
+    would ensure only zenith- or nadir-arriving charged particles with high
+    energies are reported.  For CRaTER&apos;s six axially-coaligned detectors there
+    are 64 possible coincidence combinations.  The desired set of coincidence
+    combinations are stored as a coincidence mask parameter in the instru-
+    ment&apos;s memory; the coincidence mask setting is reported in the &apos;Mask&apos;
+    parameter as part of the secondary science packet.
+ 
+    To qualify as an &apos;event&apos;, therefore, a charged particle or photon passing
+    through CRaTER&apos;s telescope must interact and deposit sufficient energy to
+    generate signals with amplitudes in excess of the specified LLDs in a
+    specified combination of detectors; only data for valid &apos;events&apos; are re-
+    ported in the instrument&apos;s telemetry.
+ 
+    The measured interaction event data is written as a series of primary
+    science packets to the instrument&apos;s output telemetry buffer for the space-
+    craft to read. At ~1 second intervals CRaTER receives a timing pulse from
+    the spacecraft, at which time it flushes the primary science data from the
+    output buffer and writes a secondary science packet for the spacecraft to
+    read.  Every 16 seconds a housekeeping packet is also created and written
+    to the output buffer.
+ 
+    The Level 1 data are created from the corresponding Level 0 data by con-
+    verting the instrument binary output with conversion and calibration fac-
+    tors to science and engineering data.
+ 
+    The Level 1 dataset is composed of the three types of time-sequential
+    calibrated data records (CDR): (1) primary science, (2) secondary
+    science, and 3) housekeeping.  The three types of CDR are written to
+    seperate data files in plain text, fixed record format.  Each file con-
+    tains CDR for a single UTC day.
+ 
+    The Level 1 primary science data consists of a sequence of interaction
+    event CDR--one CDR for each measured event.  Each CDR consists of the
+    energy deposited in each of the six detectors and the spacecraft time at
+    the end of the measurement interval (receipt of spacecraft timing pulse).
+    CDR for events recorded in the same measurement interval have the same
+    time tags--the &apos;SECONDS&apos; and &apos;FRACT&apos; field values.  Although numerous
+    events may have the same time value, the events are recorded in the order
+    in which they occurred; this relative order is captured in the CDR &apos;INDEX&apos;
+    field.
+ 
+    The Level 1 secondary science CDR contain the majority of instrument con-
+    figuration settings, status flags, and event counters.  Reported con-
+    figuration settings include the last command sent to CRaTER, detector
+    LLD settings,  and coincidence mask values.  Status flags available in the
+    secondary science CDR include detector bias status, selected pulse am-
+    plitude range and rate for the internal calibration pulser, and detector
+    processing status.  Counters report the number of &apos;singles&apos; for each
+    detector as well as the number of &apos;good&apos;, &apos;rejected&apos;, and total events re-
+    corded by CRaTER during the monitoring period.
+ 
+    The Level 1 housekeeping CDR contain measured instrument operating and
+    environmental parameters used to assess the health and performance of the
+    instrument, such as power supply output voltages, detector bias voltages
+    and currents, pulse amplitudes from the internal calibration pulser, and
+    temperatures at five locations inside of the instrument&apos;s housing.  The
+    analog output signal (voltage) from radiation monitor is also included
+    the housekeeping CDR.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    -------------------------
+    An assessment of the accuracy and precision of data in the
+    LRO-L-CRAT-3-CDR-CALIBRATED-V1.0 dataset is limited to the measured de-
+    posited energy in each detector.  General instrument housekeeping param-
+    eters (e.g., temperatures, voltages, currents, LLD voltages, pulser
+    signal amplitudes, spacecraft clock value) are provided with no statement
+    of uncertainty--the accuracy of these parameters is assumed to be suf-
+    ficient for general correlation and trending analysis.  The accuracy of
+    the housekeeping temperature parameters has an impact on the accuracy and
+    precision of the conversion from detector PHA channel numbers to de-
+    posited energy values; this impact, however, is very small in comparison
+    to other sources of systematic and stochastic error.
+ 
+    Potential sources of instrument systematic error include signal pulse
+    shaping output linearity, analog-to-digital conversion (ADC) linearity,
+    electronic calibration source stability and linearity, and the accuracy of
+    the gain and offset values determined for each detector-amplifier-ADC
+    string.
+ 
+    The linearity of the amplifier-ADC strings (i.e., pulse height
+    analyzer or PHA) was established with a precision external pulser.  For a
+    given pulser output setting, the variability in output pulse amplitude is
+    determined to be 0.01%.  Over the pulser&apos;s full range of output pulse
+    amplitude settings, the measured pulse amplitudes were found to be very
+    linear, with an RMS fit residual upper limit of 0.1%.
+ 
+    The external pulser was used to establish the linearity of the six CRaTER
+    PHA circuits.  The precision external pulser served as a calibrated input
+    charge source by coupling it (via a precision capacitor) to the base of
+    each PHA circuit&apos;s preamplifier.  Each PHA circuit&apos;s response was found to
+    be very linear, with RMS fit residuals significantly less than 0.1%.
+ 
+    Temporal stability of the PHA circuits was established through repeated
+    testing with the external pulser over an 15-month period.  Between Sep
+    2007 and Jan 2009, each PHA circuit was tested five times at a fixed
+    pulser output setting.  The output of each PHA circuit was determined to
+    be very stable, with ~0.06% variability in the value of the center of the
+    PHA peak.
+ 
+    Temperature dependence of the gain of each PHA circuit was measured over
+    the expected range of operating temperatures during the LRO mission.  The
+    output of each PHA circuit to fixed amplitude pulses from the precision
+    external pulser was measured with the CRaTER instrument operating at -30
+    degrees C, -10 degrees C, +10 degrees C, and +35 degrees C (temperature
+    measured inside the instrument&apos;s case close to the analog and digital
+    circuit boards).  The PHA circuit gains were found to be fairly stable
+    over this temperature range, with only a weak non-linear temperature de-
+    pendence.  Detectors 2, 4, and 6 PHA circuits exhibited gain variations of
+    ~ +/- 0.1% over the temperature range; detectors 1, 3, and 5 PHA circuits
+    gains varied by ~ +/- 0.5%.
+ 
+    Potential sources of stochastic error include electronic noise, uncer-
+    tainty in the PHA-channel-to-deposited-energy conversion factors (i.e.,
+    &apos;calibration values&apos;), and uncertainty in actual deposited energy values
+    due to digitization.
+ 
+    From the standard deviations of the pulse amplitudes measured over the
+    full dynamic range of each amplifier-A-to-D-converter strings, the upper
+    limit on system electronic noise is approximately 0.15% of pulse amplitude
+    or 0.02% of each string&apos;s maximum output value. [The system electronic
+    noise measured with CRaTER operating at 10 degrees C.]
+ 
+    PHA channel number is converted to deposited energy by
+ 
+      Ei [keV] = GiCi + Oi, where
+ 
+      Ei [keV] =              deposited energy measured by detector/
+                              PHA chain i,
+      Ci [ADU or channel #] = output from detector/PHA chain i,
+      Gi [keV/ADU] =          gain of detector/PHA chain i, and
+      Oi [keV] =              offset of detector/PHA chain i.
+ 
+    The calibration values Gi and Ci used to convert PHA output to deposited
+    energy were determined through a combination of alpha particle exposure
+    measurements and modeling of the instrument&apos;s response to moderate energy
+    protons.  A more extensive description of the calibration process is
+    found in SPENCEETAL2010.
+ 
+    The LRO CRaTER instrument V1.0 calibration values are listed in
+    SPENCEETAL2010, table 6, and reproduced here.
+ 
+    Parameter      Units      D1     D2     D3     D4     D5     D6
+    -----------------------------------------------------------------
+    Gain, Gi       keV/ADU   76.3   21.8   78.6   21.6   76.3   21.9
+    Offset, Oi     keV       105.1  50.0   152.8  74.7   119.1  46.6
+ 
+    The uncertainty in the Gi and Ci values awaits further analysis.  A re-
+    vision to this catalog file will be provided when the values become avail-
+    able.
+ 
+    The process of converting the detector signals into digital values re-
+    quires discretizing the amplifier analog output signals into one of a pos-
+    sible 4096 linearly-spaced values.  These 4096 &apos;channel&apos; or &apos;ADU&apos; values
+    correspond to ranges of ~0-300 MeV and ~0-90 MeV for the thin and thick
+    detector PHA circuits, respectively.  Each PHA channel corresponds to a
+    small but finite range of energies described by a probability distribution
+    rather than a discrete energy value.  The calibration process establishes
+    an effective energy and energy width for each channel.  Assuming the
+    actual deposited energy probability distribution for a given PHA channel
+    is approximately flat, the average energy and uncertainty corresponding to
+    the channel are the effective energy and energy width established through
+    calibrations.  While the absolute magnitude of the uncertainty resulting
+    from discretization is a constant value (one-half the gain), the relative
+    uncertainty is a function of the energy corresponding to the particular
+    PHA channel--the lower the channel&apos;s corresponding energy, the higher the
+    realtive uncertainty.  The discretization uncertainty extremes are sum-
+    marized in the following table.
+ 
+    Detector/         Energy (keV)              Energy (keV)
+    PHA Chain          PHA = 0 ADU               PHA = 4095
+    ----------------------------------------------------------
+    D1           105.1 +/- 38.2 (36.3%)    312554 +/- 38.2 (0.012%)
+    D2           50.0  +/- 10.9 (21.8%)    89321  +/- 10.9 (0.012%)
+    D3           152.8 +/- 39.3 (25.7%)    322020 +/- 39.3 (0.012%)
+    D4           74.7  +/- 10.8 (14.5%)    88527  +/- 10.8 (0.012%)
+    D5           119.1 +/- 38.2 (32.0%)    312568 +/- 38.2 (0.012%)
+    D6           46.6  +/- 11.0 (23.5%)    89727  +/- 11.0 (0.012%)
+ 
+    For PHA values &gt; 48 ADU, the relative uncertainty in the deposited energy
+    due to discretization is &lt; 1% a for all detector/PHA chains.
+ 
+    This overview has identified, described, and where possible enumerated the
+    various error/uncertainty components.  The confidence levels for the total
+    cumulative uncertainty in the measured deposited energies values awaits
+    further analysis.  When the values become available a revision will be
+    provided to this catalog file.
+ 
+    Review
+    ------
+    A minimal set of automated quality control steps are used by the data
+    processing system to verify the integrity of the data during the initial
+    creation of the L0 data files.  Each raw data packet&apos;s CCSDS header is
+    checked for format and content. Packets are discarded if their headers are
+    corrupted, incorrectly formatted, or containing invalid values.  All
+    packets are sorted into time order and checked for temporal gaps.  Dupli-
+    cate packets are also discarded.  Metrics plus any detected anomalies are
+    written to process log files for review by scientists and engineers from
+    the instrument team.  Anomalies noted during the processing are investi-
+    gated.  Anomalies due to missing input files (e.g., instrument science and
+    housekeeping data files, spacecraft housekeeping data files, spacecraft
+    ephemeris kernels, and ancillary files such as leap second and spacecraft
+    clock kernels) are corrected by locating the missing input and reprocess-
+    ing the data.
+ 
+    All data is periodically analyzed using graphical and statistical methods
+    to check for out-of-range values as well as anomalous trends that may
+    indicate detector and/or amplifier-ADC string degradation.
+ 
+    Data Coverage and Quality
+    -------------------------
+    The start date for the initial version of the LRO-L-CRAT-3-CDR-CALIBRATED-
+    V1.0 archival volume is 2009-06-29T00:00:00.000.  This date/time is the
+    beginning of the first full day following completion of LRO lunar orbit
+    insertion (LOI) and transition to the nominal nadir-pointing observation
+    attitude.  It is also the first day for which complete re-constructed
+    ephemeris (&apos;SPK&apos;) data was provided by the LRO Mission Operations Center.
+    There is only limited re-constructed ephemeris data currently available
+    for the period between initial instrument power-up (2009-06-20) and LOI
+    completion and transition to the nominal observing attitude.  CRaTER data
+    obtained during Cruise Phase (instrument power-up - 2009-06-23), Lunar
+    Orbit Acquisition (2009-06-23), and initial Commissioning Period
+    (2009-06-23 - 2009-06-28) will be included when more complete ephemeris
+    data from this early part of the mission becomes available.
+ 
+    Data gaps are identified during initial data processing. The gap start and
+    stop times are recorded in gap files stored in the DOCUMENT directory--
+    there are seperate gap files for the primary science, secondary science,
+    and house-keeping data sets.  Each gap file contains a cumulative listing
+    of the missing data up to and including the days for the data current vol-
+    ume.  Description of overall data coverage and quality. This section
+    should include information about gaps in the data (both for times or re-
+    gions) and details regarding how missing or poor data are flagged or
+    filled, if applicable.  The minimum duration between successive data
+    packets to qualify as a data gap is specified during data processing.  The
+    default durations are 2 seconds for both primary and secondary science
+    data packets, and 20 seconds for housekeeping data packets.  These values
+    may be over ridden at the time of data processing, however.  The actual
+    durations used while processing a specific set of data are recorded in the
+    corresponding process log file; the log files are found in the DATA direc-
+    tory with their corresponding data products.
+ 
+    Aperiodic episodes of sporadic, significant elevation in the thick detec-
+    tor (D2, D4, and D6) singles rates have been observed during all phases of
+    mission phases. The elevated singles rates most commonly occur in detector
+    D2, but have also been observed in detector D6; a detector&apos;s singles rate
+    may increase by a factor of 20 or more.  During these periods increases
+    may occur in both the &apos;reject&apos; and &apos;good&apos; event rates.  Episodes tend to
+    last for three to five weeks, followed by extended periods with nominal
+    singles rates.  During an episode singles rates vary sporadically between
+    nominal and extremely elevated levels, although there seems to be a gen-
+    eral gradual build-up and decline in the peak magnitude of the singles
+    rates over the course of an episode.  Despite intensive analysis, the
+    cause for the periods of elevated singles rates has not yet been deter-
+    mined.  No correlation has been found with spacecraft location, local
+    space and spacecraft environment conditions, instrument boresite direc-
+    tion, or spacecraft and instrument operations.  Users are urged to first
+    plot the detector singles rates and &apos;good&apos; and &apos;reject&apos; event rates as a
+    function of time to identify periods with elevated singles rates which may
+    impact their particular use of the data.
+ 
+    Limitations
+    -----------
+    The LRO-L-CRAT-3-CDR-CALIBRATED-V1.0 data set includes all data obtained
+    by the CRaTER instrument, including data from periods when the instrument
+    was placed into special configurations.  Special configurations include
+    the instrument start-up tests that occur whenever the instrument is power
+    cycled to (e.g., initial instrument start-up, recovery following space-
+    craft transition to sun-safe mode) as well routine calibrations (90-degree
+    off-nadir GCR background measuerments, internal pulser sweeps, LLD zero
+    crossing measurements, and LLD sweeps).  These periods can be detected by
+    monitoring the &apos;CalLow&apos; and &apos;CalHigh&apos; flags and &apos;DiscThin&apos; and &apos;DiscThick&apos;
+    LLD values in the secondary science CDR.
+ 
+    Timing resolution for the set of events recorded between two successive
+    timing pulses (buffer readouts) is limited to the corresponding spacecraft
+    times.  If, for example, 560 particle &apos;events&apos; are measured between two
+    successive timing pulses, the exact time of each event&apos;s occurrence is
+    unknown--all that is known is that event was measured between the times of
+    the two timing pulses.  The sequence in which the events were measured,
+    however, is preserved--for a given time interval, the first reported event
+    was measured before the second reported event, etc.
+ 
+    The maximum rate at which detector measurements can be reported in the
+    primary science data is ~1200 events per second; the true number of events
+    in each time interval is reported in the secondary science CDR.
+ 
+    Users should be aware of the impact of the LLD settings on the primary and
+    secondary science data.  The LLD settings establish the minimum amplitudes
+    of the amplifier output pulse heights (i.e., minimum deposited energies)
+    to qualify as a valid signal and trigger the ADC process.  In addition to
+    determining the lower limit of the PHA and LET spectra, the choice of LLD
+    values directly affects the number of &apos;good&apos; and &apos;reject&apos; events reported
+    in the secondary science data CDR.  For a given set of incident charged-
+    particle energy spectra, as the LLD values increase, the &apos;good&apos; and
+    &apos;reject&apos; event rates will decrease.  Users analyzing the temporal varia-
+    bility of &apos;good&apos; and &apos;reject&apos; event rates should ensure the LLD settings
+    do not change over the analysis period.  The nominal instrument operating
+    mode maintains constant LDD settings.  Modes using varying LLD settings,
+    however, occur during instrument power-up tests and routine calibration
+    procedures.  In addition, as the mission progresses changes in noise
+    levels due to instrument component aging may require adjustments to the
+    baseline LLD settings.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

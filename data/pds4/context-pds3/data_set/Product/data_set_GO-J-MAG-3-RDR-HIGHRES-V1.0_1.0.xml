@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-j-mag-3-rdr-highres-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO ORBITER AT JUPITER CALIBRATED MAG HIGH RES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:plasma_cloud.io_plasma_torus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.amalthea::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.callisto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.europa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.ganymede::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-mag-3-rdr-highres-v1.0__browserp_go-j-mag-3-rdr-highres-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   DESSLER, A.J. ED., PHYSICS OF JOVIAN MAGNETOSPHERE, CAMBRIDGE UNIVERSITY PRESS,
+                   LONDON, APPENDIX B - COORDINATE SYSTEMS, DESSLER, A.J., 1983.
+            </reference_text>
+            <description>reference.DESSLER1983</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson, M.G., K.K. Khurana, J.D. Means, C.T. Russell, and R.C. Snare, The
+                   Galileo Magnetic Field Investigation, Space Science Reviews, 60, 1-4, 357, 1992.
+            </reference_text>
+            <description>reference.KIVELSONETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson M.G., K.K. Khurana, R.J. Walker, C.T. Russell, J.A. Linker, D.J.
+                   Southwood, and C. Polanskey, A Magnetic Signature at Io: Initial Report from
+                   the Galileo Magnetometer, Science, 273, P. 337, 1996.
+            </reference_text>
+            <description>reference.KIVELSONETAL1996A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson M.G., K.K. Khurana, R.J. Walker, J. Warnecke, C.T. Russell, J.A.
+                   Linker, D.J. Southwood, and C. Polanskey, Io&apos;s interaction with the Plasma
+                   Torus, Science, 274, P. 396, 1996.
+            </reference_text>
+            <description>reference.KIVELSONETAL1996B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson, M.G., K.K. Khurana, F.V. Coroniti, S. Joy, C.T. Russell, R.J. Walker,
+                   J. Warnecke, L. Bennett, and C. Polanskey, The magnetic field and magnetosphere
+                   of Ganymede., Geophys. Res. Lett., 24, P.2155, 1997
+            </reference_text>
+            <description>reference.KIVELSONETAL1997D</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson M.G., J. Warnecke, L. Bennett, S. Joy, K.K. Khurana, J.A. Linker, C.T.
+                   Russell, R.J. Walker, and C. Polanskey, Ganymede&apos;s Magnetosphere: Magnetometer
+                   Overview, J. Geophys Res, 103, P. 19963, 1998.
+            </reference_text>
+            <description>reference.KIVELSONETAL1998A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson, M.G., K.K. Khurana, and M. Volwerk, The permanent and inductive
+                   magnetic moments of Ganymede, ICARUS 157(2), 507 (IGPP Publication No. 5562),
+                   2002.
+            </reference_text>
+            <description>reference.KIVELSONETAL2002A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson, M.G., G. Schubert, K.K. Khurana, and M. Volwerk, Magnetic evidence
+                   for the internal structure and thermal evolution of Ganymede, submitted to
+                   Science, 2001.
+            </reference_text>
+            <description>reference.KIVELSONETAL2002C</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Volwerk, M., M.G. Kivelson, K.K. Khurana, and R.L. McPherron, Probing
+                   Ganymede&apos;s magnetosphere with field line resonances, J. Geophys. Res.,
+                   104(A7),14,729, 1999
+            </reference_text>
+            <description>reference.VOLWERKETAL1999</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-J-MAG-3-RDR-HIGHRES-V1.0</data_set_id>
+        <data_set_name>GALILEO ORBITER AT JUPITER CALIBRATED MAG HIGH RES V1.0</data_set_name>
+        <data_set_release_date>1997-07-01</data_set_release_date>
+        <start_time>1995-12-07T15:30Z</start_time>
+        <stop_time>2002-11-06T06:35Z</stop_time>
+        <producer_full_name>DR. MARGARET G. KIVELSON</producer_full_name>
+        <citation_text>
+            Kivelson, M.G., Khurana, K.K., Russell, C.T., Walker, R.J., Joy,
+            S.P., Mafi, J.N., GALILEO ORBITER AT JUPITER CALIBRATED MAG HIGH
+            RES V1.0, GO-J-MAG-3-RDR-HIGHRES-V1.0, NASA Planetary Data
+            System, 1997
+        </citation_text>
+        <data_set_terse_desc>
+            High resolution (1/3 sec) Galileo Magnetometer data and browse
+            plots from the Jovian satellite flybys (Io, Europa, Ganymede,
+            Callisto, and Amalthea) and other points of interest in the
+            magnetosphere.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains high time resolution magnetic field
+            vectors acquired by the Galileo magnetometer (MAG). It includes
+            both satellite flyby and non-flyby data. These data were acquired
+            in order to characterize various portions of the Jovian
+            magnetosphere at high time resolution. The Galileo Magnetospheres
+            Working Group (MWG) collectively acquired high time resolution
+            data for short intervals in order to try and regain some of the
+            magnetospheric science lost due to the low data rates of the
+            phase 2 mission (no high gain antenna) mission. These
+            observations are scattered in Jovian distance, local time, System
+            III longitude, etc. in order to provide some insight into
+            processes that may be active in different regions of the
+            magnetosphere.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set contains high time resolution magnetic field vectors
+    acquired by the Galileo magnetometer (MAG). It includes both
+    satellite flyby and non-flyby data. These data were acquired in
+    order to characterize various portions of the Jovian magnetosphere
+    at high time resolution. The Galileo Magnetospheres Working Group
+    (MWG) collectively acquired high time resolution data for short
+    intervals in order to try and regain some of the magnetospheric
+    science lost due to the low data rates of the phase 2 mission (no
+    high gain antenna) mission. These observations are scattered in
+    Jovian distance, local time, System III longitude, etc. in order
+    to provide some insight into processes that may be active in
+    different regions of the magnetosphere.
+ 
+    There were a few orbits in which MAG obtained high-resolution
+    coverage in conjunction with remote sensing (typically NIMS)
+    observations. Regular MWG high-resolution observations were
+    recorded to tape using the 7.68 bits/second Low-Rate Science and
+    Plasma Wave (LPW) tape mode. Observations using higher tape speed
+    modes included recorded LPW rate data as well. In cases where the
+    coverage provided was adequate, and when there was sufficient
+    bits-to-ground (BTG) allocation to return them, these &apos;ridealong&apos;
+    observations provided coverage in addition to the regular MWG
+    observations. A list of ridealong recordings is provided in the
+    &apos;Data Coverage and Quality&apos; section of this document.
+ 
+    Satellite Flybys: One of the primary objectives of the Galileo
+    mission was to characterize the magnetic signatures of Jupiter&apos;s
+    Galilean satellites, determine their sources, and study their
+    interactions with the Jovian system. In particular, confirming
+    the presence of a sub-surface ocean on Europa became a major
+    focus of the Europa Mission (GEM). The Millennium Mission (GMM)
+    also included a flyby of Amalthea.
+ 
+    Inner Magnetosphere: Characterizing the Io torus was a high
+    priority goal of the MWG throughout the mission. In order to
+    protect the spacecraft and instrument from the high radiation
+    of the inner magnetosphere, most of the inner magnetosphere
+    observations were deferred until late in GEM and GMM.
+ 
+    Middle Magnetosphere: In the middle magnetosphere, a variety of
+    observations were made in order to characterize the distribution
+    of plasma in the plasma sheet and to examine the regions where
+    field lines likely map to the auroral oval.
+ 
+    Magnetotail: Another of the MWG high priority science objectives
+    was to study the structure of the Jovian magnetotail. Orbit C09
+    was specifically designed to meet this objective. Apojove was
+    near 150 Rj at local midnight. High time resolution data was
+    acquired for five intervals at various distances and local times.
+ 
+    Table 1. gives information on the coverage provided by the various
+    MAG high time resolution observations. In addition to start time
+    and duration, the table describes the minimum and maximum distance
+    from the spacecraft to Jupiter, and the local hour and Sys. 3 west
+    longitude (WLON) of the spacecraft at the beginning and end of the
+    recorded interval. Local hour is given in terms of decimal hours
+    (0.0-23.9). WLON is in units of degrees (0-359).
+ 
+      ------------------------------------------------------------------
+      Table 1. MAG High-Resolution Observation Coverage
+      ------------------------------------------------------------------
+ 
+      Io Flybys:
+      ------------------------------------------------------------------
+                               Dur.  Jup Range  Local Time  S3 WLON
+      Obs. ID* Start Time     (min)    (Rj)      (hours)    (deg).  Note
+      ------------------------------------------------------------------
+      I00-IO   95-12-07 15:21  184    5.4- 7.7  10.6-12.3   204-290
+      I24-IO   99-10-11 03:42   66    5.7- 6.0  10.1-10.9    59- 87  3
+      I25-IO   N/A                                                   1
+      I27-IO   00-02-22 13:04   81    5.9- 6.0   8.4- 9.4    64- 97  3
+      I31-IO   01-08-06 04:25   63      5.9      3.9- 4.7   145-171
+      I32-IO   01-10-16 01:06   73    5.9- 6.1   4.8- 5.7   253-283
+      I33-IO   N/A                                                   1
+ 
+      Europa Flybys:
+      ------------------------------------------------------------------
+                               Dur.  Jup Range  Local Time  S3 WLON
+      Obs. ID* Start Time     (min)    (Rj)      (hours)    (deg).  Note
+      ------------------------------------------------------------------
+      E04-EUR  96-12-19 06:33   51    9.4- 9.5  16.6-16.9   147-173
+      E06-EUR  97-02-20 16:37  312    9.5- 9.1  12.8-14.8   326-125  2
+      E11-EUR  97-11-06 20:09  162    9.0- 9.4  10.8-11.9   211-294
+      E12-EUR  97-12-16 11:42   46    9.4- 9.6  14.5-14.8   107-131  7
+      E14-EUR  98-03-29 13:05   55    9.4- 9.6  14.3-14.7   176-204
+      E15-EUR  98-05-31 20:42   61    9.4- 9.6   9.9-10.3   277-308
+      E16-EUR  N/A                                                   1
+      E17-EUR  98-09-26 03:54  N/A      9.4        9.9        140    6
+      E18-EUR  N/A                                                   1
+      E19-EUR  99-02-01 01:49   50    9.2- 9.4   9.7-10.0   245-270
+      I25-EUR  99-11-25 16:29  N/A      9.5        3.2        196    6
+      E26-EUR  00-01-03 17:29   61    9.2- 9.7   2.8- 3.1   346- 18
+ 
+      Ganymede Flybys:
+      ------------------------------------------------------------------
+                               Dur.  Jup Range  Local Time  S3 WLON
+      Obs. ID* Start Time     (min)    (Rj)      (hours)    (deg).  Note
+      ------------------------------------------------------------------
+      G01-GAN  96-06-27 06:07   45   14.9-15.1  11.2-11.3   163-188
+      G02-GAN  96-09-06 18:32   56   14.8-15.2  10.7-10.9   143-174
+      G07-GAN  97-04-05 06:44   56   14.8-15.2  19.7-19.8     5- 37
+      G08-GAN  97-05-07 15:36   46   14.8-15.1   8.1- 8.2   276-302
+      C09-GAN  97-06-26 17:20  N/A     15.2        8.0        301    6
+      E12-GAN  97-12-15 09:58  N/A     15.0        6.7         10    6
+      G28-GAN  00-05-20 09:40   61   14.7-15.3   0.7- 0.8   334-  9
+      G29-GAN  00-12-28 07:54   61   14.7-15.3  23.9-24.0   203-238
+ 
+      Callisto Flybys:
+      ------------------------------------------------------------------
+                               Dur.  Jup Range  Local Time  S3 WLON
+      Obs. ID* Start Time     (min)    (Rj)      (hours)    (deg).  Note
+      ------------------------------------------------------------------
+      C03-CALL 96-11-04 13:15   45   26.1-26.4     7.8      231-258
+      C09-CALL 97-06-25 13:25   46   26.1-26.4     5.5       47- 74
+      C10-CALL 97-09-16 23:49   60   26.0-26.4   5.0- 5.1   318-354
+      C20-CALL 99-05-05 13:56  N/A     26.2       17.8         53    6,9
+      C21-CALL 99-06-30 07:47  N/A     26.2        1.8        316    6
+      C22-CALL 99-08-14 08:31  N/A     26.3       18.1         27    6
+      C23-CALL 99-09-16 17:27  N/A     26.2       17.9        279    6
+      C30-CALL 01-05-25 11:09   35   26.2-26.5  13.1-13.2    68- 89
+ 
+      Amalthea Flyby:
+      ------------------------------------------------------------------
+                               Dur.  Jup Range  Local Time  S3 WLON
+      Obs. ID* Start Time     (min)    (Rj)      (hours)    (deg).  Note
+      ------------------------------------------------------------------
+      A34-AMA  02-11-05 05:45   50    2.3- 3.1  20.8-22.7   147-148  8
+ 
+      Inner Magnetosphere:
+      ------------------------------------------------------------------
+                               Dur.  Jup Range  Local Time  S3 WLON
+      Obs. ID* Start Time     (min)    (Rj)      (hours)    (deg).  Note
+      ------------------------------------------------------------------
+      J00-PJOV 95-12-07 23:22  124    4.0- 5.2  18.4-20.5    18- 62
+      I24-TOR  N/A                                                   1
+      I32-TOR  01-10-15 22:55   33    5.8- 5.9   3.0- 3.4   198-211
+      I27-TOR  00-02-22 10:22  113    5.9- 6.1   6.3- 7.7   357- 44
+      I25-TOR  99-11-25 21:07  174    5.9- 7.0   5.1- 7.0   336- 53  3
+      A34-PSX7 02-11-05 01:05  280    3.1- 7.7  17.7-20.8    24-147
+      C23-PJOV 99-09-14 14:36  412    6.5- 7.7   6.1-10.3    52-239
+      C21-PJOV 99-07-01 23:53  113    7.6- 8.2   7.4- 8.3   247-301
+      C22-PJOV 99-08-12 08:18  288    7.3- 7.6   8.4-11.0   225-  0
+      E11-EQX  (see E11 EUR)                                         4
+      I32-RAMP 01-10-15 15:31  115    7.8-8.9   22.9-23.7   354- 52
+      C10-EQX  97-09-18 22:34   46      9.2     12.5-12.8   102-125
+      C20-PJOV 99-05-03 15:59  122      9.4     10.0-10.8    45-106
+      A34-PSX6 02-11-04 21:48   45     10.3     17.0-17.1   285-300
+ 
+      Middle Magnetosphere:
+      -----------------------------------------------------------------
+                               Dur.  Jup Range  Local Time  S3 WLON
+      Obs. ID* Start Time     (min)    (Rj)      (hours)    (deg).  Note
+      -----------------------------------------------------------------
+      C09-TAR  97-06-28 13:50   61   18.1-18.5  18.1-18.2   324-359
+      C03-TAR  96-11-05 07:04   40   19.3-19.0   8.9- 9.0   140-163  5
+      G08-QRS  97-05-06 13:00  129   25.0-25.8   5.9- 6.0    63-140
+      G01-PSX  96-06-30 02:00   46   27.2-27.5    22.8      292-319
+      A34-PSX2 02-11-03 15:28   45   29.4-29.0    15.6      276-303
+      A34-PSX1 02-11-03 10:38   45   31.8-31.4    15.5      102-132
+      G02-PSX  96-09-11 02:38   40   39.2-39.4  23.8-23.9   121-145
+      G07-PSX  97-03-30 18:49   46   46.2-46.4     4.8      125-152
+ 
+      Magnetotail:
+      -----------------------------------------------------------------
+                               Dur.  Jup Range  Local Time  S3 WLON
+      Obs. ID* Start Time     (min)    (Rj)      (hours)    (deg).  Note
+      -----------------------------------------------------------------
+      C09-DSK1 97-07-04 14:09  118   64.3-64.8    22.1       99-170
+      C09-DSK2 97-07-14 10:03   45      107       23.2      357- 25
+      E18-DSK  98-12-10 19:36  288      109       22.5      285- 98
+      C09-DSK3 97-07-23 13:11   46      129       23.7       18- 45
+      C09-DAWN 97-08-23 14:07  122      130      0.9- 1.0    17- 90
+      C09-APJ  97-08-07 11:06  101      143        0.3       30- 91
+ 
+      * The ID element is derived from the SEF identifier for the
+        recorded observation. The recording identifiers translate to:
+            IO, GAN, EUR, CALL, AMA - satellites
+            PSX  - plasma sheet crossing
+            TAR  - trans-auroral region
+            QRS  - quarter rotation survey
+            DSK  - dusk side of orbit (see local time)
+            DAWN - dawn side of orbit (see local time)
+            APJ  - apojove
+            TOR  - Io plasma torus
+            EQX  - magnetic equator crossing
+            PJOV - perijove
+            RAMP - outer Io plasma torus (ramp region)
+        These designations were defined by the sequence team.
+ 
+      Notes:
+        1 = Recording lost due to spacecraft safing/anomaly
+        2 = Recording lost due to instrument anomaly
+        3 = Stats given for primary observation interval only, data file
+            includes additional intervals of &apos;ridealong&apos; data
+        4 = E11-EUR and EQU are continuous and listed as a single
+            observation
+        5 = Due to bit-to-ground limitations the C03 TAR observation was
+            not returned in order to provide continuous low rate (RTS)
+            MAG coverage
+        6 = No high-resolution data coverage for this flyby - RTS rate
+            coverage only (time and position information are for closest
+            approach)
+        7 = E12-EUR data were corrupted due to instrument saturation
+            have been &apos;recovered&apos; (see &apos;Limitations&apos; for information on
+            the recovery process)
+        8 = A34-AMA data corrupted due to instrument saturation; release
+            of data delayed pending development of new saturation
+            recovery software and techniques
+        9 = Flyby occurs in gap in coverage
+ 
+    Table 2 provides a listing of the various satellite closest
+    approach times and the location of the spacecraft, relative to
+    the satellite at these times.
+ 
+      ------------------------------------------------------------
+      Table 2. Satellite Flyby Characteristics
+      ------------------------------------------------------------
+                                   Satellite Planetocentric Coords
+      Orb  Moon  C/A Time          Range(Rm*)  Lat(deg)  Lon(deg)
+      ------------------------------------------------------------
+       0   IO    95-12-07 17:45:58    1.50       -9.6      258.9
+      24   IO    99-10-11 04:33:03    1.34        4.5      135.9
+      27   IO    00-02-22 13:46:41    1.11       18.5      157.4
+      31   IO    01-08-06 04:59:20    1.11       77.5      187.7
+      32   IO    01-10-16 01:23:21    1.10      -78.6      135.2
+      33   IO    02-01-17 14:08:28    1.06      -43.5       41.8
+ 
+       4   EUR   96-12-19 06:52:58    1.45       -1.7      322.4
+       6   EUR   97-02-20 17:06:10    1.38      -17.0       34.7
+      11   EUR   97-11-06 20:31:44    2.31       25.7      218.7
+      12   EUR   97-12-16 12:03:20    1.13       -8.7      134.4
+      14   EUR   98-03-29 13:21:05    2.06       12.2      131.2
+      15   EUR   98-05-31 21:12:57    2.62       15.0      225.4
+      17   EUR   98-09-26 03:54:20    3.30      -42.4      220.2
+      19   EUR   99-02-01 02:19:50    1.93       30.5       28.1
+      25   EUR   99-11-25 16:29:05    6.54       62.3      266.0
+      26   EUR   00-01-03 17:59:43    1.22      -47.1       83.4
+ 
+       1   GAN   96-06-27 06:29:07    1.32       30.4      246.7
+       2   GAN   96-09-06 18:59:34    1.10       79.3      236.4
+       7   GAN   97-04-05 07:09:58    2.18       55.8      270.4
+       8   GAN   97-05-07 15:56:10    1.61       28.3       84.8
+       9   GAN   97-06-26 17:19:35   31.27        0.0      261.2
+      12   GAN   97-12-15 09:58:09    6.47       -5.8      266.1
+      28   GAN   00-05-20 10:10:10    1.31      -19.0       92.4
+      29   GAN   00-12-28 08:25:27    1.89       62.2      269.0
+ 
+       3   CALL  96-11-04 13:34:28    1.47       13.2      282.3
+       9   CALL  97-06-25 13:47:50    1.17        2.0      101.0
+      20   CALL  99-05-05 13:56:18    1.55        2.8      258.3
+      21   CALL  99-06-30 07:46:50    1.43       -0.7      268.0
+      22   CALL  99-08-14 08:30:52    1.95       -2.3      252.5
+      23   CALL  99-09-16 17:27:02    1.43        0.1      249.7
+      10   CALL  97-09-17 00:18:55    1.22        4.6      281.3
+      30   CALL  01-05-25 11:23:58    1.06       13.6      254.6
+ 
+      34   AMA   02-11-05 06:18:43    2.56      -45.4       68.3
+ 
+ 
+        *  Rm = Moon radii, please refer to Table 4 for a listing of
+           the radii of Jupiter&apos;s moons
+ 
+ 
+  Processing
+  ==========
+    The processing of MAG data is performed as a series of operations
+    on the data.
+      1) Extract raw MAG and Attitude and Articulation and Control
+         System (AACS) data from the packetized telemetry files. Set
+         sample time tags, sort data on time, and remove duplicate
+         samples.
+      2) Remove the calibration estimate applied by the instrument.
+         This involves multiplying the data by the inverse of the
+         onboard geometry matrix, dividing by gain factors, and
+         adding offsets to the data. This returns the data to
+         sensor coordinates.
+      3) Apply post orbit inflight calibration (scale to nT,
+         subtract offsets, multiply by coupling matrix). This properly
+         orients the data in the spinning spacecraft reference frame.
+      4) Merge in the AACS data, interpolate to MAG sample times,
+         correct the phase angle for phase delays in the instrument
+         and despin the data into IRC coordinates.
+      5) Transform data into geophysical coordinates using SPICE
+         based software and SPICE kernels.
+ 
+ 
+  Parameters
+  ==========
+ 
+    Data Sampling
+    -------------
+      The magnetometer samples the field thirty times per second. These
+      data are recursively filtered and decimated down to a sample rate
+      of two vectors per minor frame (mf = 2/3 second) before being
+      recorded to tape in LPW format. For all orbits except G01 and G02,
+      the MAG data are evenly sampled in time, 3 samples per second. Due
+      to an instrument programming error that occurred during the
+      instrument reprogramming for phase 2 operations, the G01 and G02
+      LPW data are unevenly sampled in time within the minor frames.
+      Each minor frame consists of 10 real-time interrupts (RTI). In the
+      G01 and G02 data, the mid minor frame sample occurs half an RTI
+      later than it should. This problem was corrected before the C03
+      orbit.
+ 
+      All data are time stamped with universal time (UT) at the
+      spacecraft when the instrument sampled data within the
+      recursive filter.
+ 
+      MAG uses fixed gains to acquire data [KIVELSONETAL1992]. Gain
+      states must be manually changed by sending a gain change
+      command to the instrument. There are 3 ranges of field strengths
+      that the instrument can measure:
+ 
+      ----------------------------------------------------------------
+      Table 3. Magnetometer Ranges
+      ----------------------------------------------------------------
+      Field Range (nT)     Magnetometer, field range
+        min      max
+      ----------------------------------------------------------------
+        1/64  -    32      Outboard low field
+         1/4  -   512      Outboard high field, Inboard low field
+           8  - 16384      Inboard high field
+ 
+      Recursive filtering of LPW data makes the apparent digitization
+      step size much smaller than it appears in Table 3. Variation in
+      the vector field components attributable to the spacecraft spin
+      reduces the effective digitization levels in the filtered data to
+      about one quarter of the A/D step size.
+ 
+      The outboard magnetometer, low field mode was used to acquire
+      data beyond 60 Rj and the inboard magnetometer, high field
+      mode was used to acquire data inside of 9 Rj. During the prime
+      mission, the both the inboard low field and the outboard high
+      field modes were used to acquire data between 9-60 Rj. As the
+      outboard magnetometer is further out from the main body of the
+      spacecraft on the boom than the inboard magnetometer it is impacted
+      less by spacecraft fields. For this reason it was initially
+      preferred over the inboard magnetometer. However, the outboard
+      magnetometer began to experience abrupt changes in the sensor zero
+      levels towards the end of the prime mission. As a result, the
+      inboard magnetometer, low field mode was used to acquire data
+      between 9-60 Rj throughout the remainder of the mission.
+ 
+ 
+  Data
+  ====
+    The data are provided in four (4) coordinate systems (IRC, System
+    III, satellite centered &apos;planetographic&apos;, and Phi-Omega). For moon
+    flybys, data are provided all four of these coordinate systems.
+    For non-flyby observations only IRC and System III coordinates are
+    provided. Data from each coordinate system are stored in separate
+    files with simple ASCII table formats. The structure and contents
+    of the data files are described below. The coordinate systems are
+    described later in this document in the section entitled
+    &apos;Coordinate Systems.&apos;
+ 
+    Data file structures
+    --------------------
+ 
+      ------------------------------------------------------------------
+      IRC Coordinates (despun spacecraft coordinates)
+      ------------------------------------------------------------------
+      Column  Type     Description &lt;units&gt;
+      ------------------------------------------------------------------
+      time     char     Spacecraft event time, PDS time format
+      sclk     char     Spacecraft clock (rim:mf:mod10:mod8)
+      Bx_sc    float    X field component in IRC coordinates &lt;nT&gt;
+      By_sc    float    Y field component in IRC coordinates &lt;nT&gt;
+      Bz_sc    float    Z field component in IRC coordinates &lt;nT&gt;
+      |B|      float    Field magnitude &lt;nT&gt;
+      rotattr  float    Rotor right ascension (EME-50) &lt;degrees&gt;
+      rotattd  float    Rotor declination (EME-50) &lt;degrees&gt;
+      rotattt  float    Rotor spin phase angle (EME-50) &lt;degrees&gt;
+      spinangl float    Rotor spin phase angle (ECL-50) &lt;degrees&gt;
+ 
+      ------------------------------------------------------------------
+      System III [1965] Coordinates
+      ------------------------------------------------------------------
+      Column  Type     Description &lt;units&gt;
+      ------------------------------------------------------------------
+      time     char     Spacecraft event time, PDS time format
+      Br       float    Radial field component &lt;nT&gt;
+      Btheta   float    Southward field component &lt;nT&gt;
+      Bphi     float    Eastward field component &lt;nT&gt;
+      |B|      float    Field magnitude &lt;nT&gt;
+      Range    float    Range from Jupiter to Galileo &lt;Rj=71492 km&gt;
+      LAT      float    Planetocentric latitude of spacecraft &lt;degrees&gt;
+      ELON     float    Jovian east longitude of spacecraft &lt;degrees&gt;
+      WLON     float    Jovian west longitude of spacecraft &lt;degrees&gt;
+ 
+      ------------------------------------------------------------------
+      Satellite Centered &apos;Planetocentric&apos; Coordinates (SPRH)
+      ------------------------------------------------------------------
+      Column  Type     Description &lt;units&gt;
+      ------------------------------------------------------------------
+      time     char     Spacecraft event time, PDS time format
+      Br       float    Radial field component &lt;nT&gt;
+      Btheta   float    Polar field component, positive northward &lt;nT&gt;
+      Bphi     float    Azimuthal field component &lt;nT&gt;
+      |B|      float    Field magnitude &lt;nT&gt;
+      Range    float    S/C distance from satellite  &lt;Rmoon&gt;
+      LAT      float    S/C &apos;planetocentric&apos; latitude &lt;degrees&gt;
+      LON      float    S/C &apos;planetocentric&apos; longitude &lt;degrees&gt;
+ 
+      ------------------------------------------------------------------
+      Satellite centered Phi-Omega Coordinates (PhiO)
+      ------------------------------------------------------------------
+      Column  Type     Description &lt;units&gt;
+      ------------------------------------------------------------------
+      time     char     Spacecraft event time, PDS time format
+      Bx       float    Corrotational B-field component &lt;nT&gt;
+      By       float    Jupiterward B-field component &lt;nT&gt;
+      Bz       float    Northward B-field component &lt;nT&gt;
+      |B|      float    Field magnitude &lt;nT&gt;
+      X        float    corrotational component of S/C position wrt
+                        satellite &lt;Rmoon&gt;
+      Y        float    Jupiterward component of S/C position &lt;Rmoon&gt;
+      Z        float    Northward component of S/C position &lt;Rmoon&gt;
+ 
+      These data were processed using SPICE kernels produced by the
+      Galileo NAV team during the mission. All of the SPICE kernels used
+      to produce this data set are contained on the MWG archive volume
+      DVD in the EXTRAS/SPICE/KERNELS directory.
+ 
+      The kernels (PDS PRODUCT_ID) used to create this were:
+        S980326B.TSP  - Prime Mission Reconstruction (JA - E12)
+        S000131A.TSP  - GEM reconstruction (E12-E26)
+        S030129A.TSP  - GMM (I27-A34) reconstruction, J35 predict
+        PCK00007.TPC  - Planetary constants kernel (2000-04-24)
+        MK00062B.TSC  - Galileo spacecraft clock kernel
+ 
+ 
+  Ancillary Data
+  ==============
+    There are several files that are provided in addition to the data
+    files themselves that may be of value to the user. These include
+    a table of important spacecraft and instrument events including
+    onboard calibration parameters, an instrument calibration table,
+    a description of instrument anomalies and resolutions, and a set
+    of quick-look or &apos;browse&apos; plots of the data.
+ 
+    Due to bit rate limitations some of the targetted satellite flybys
+    had no high-resolution recordings associated with them. For these
+    and a few distant flybys data are provided in satellite-centered
+    coordinates at the RTS data rate. Included are Europa flybys in
+    E19 and I25, Ganymede flybys in C9 and E12, and Callisto flybys
+    in C21, C22, and C23. The C20 Callisto flyby was lost due to a
+    telemetry outage. While these data are part of Survey Data Set,
+    they are ancillary to this data set.
+ 
+ 
+  Coordinate Systems
+  ==================
+    The data are provided in four coordinate systems. Data are
+    provided in the spacecraft coordinate system in order to aid in
+    the interpretation of particle instrument data. The other three
+    coordinate systems provided for use in Jovian magnetospheric
+    studies.
+ 
+    Inertial Rotor Coordinates (IRC)
+    --------------------------------
+      The IRC coordinate system takes the basic rotor coordinate system
+      (Y along the boom, Z opposite the high gain antenna) which is
+      spinning, and despins it using the rotor spin angle. For this
+      reason IRC coordinates are sometimes referred to as &apos;despun
+      spacecraft coordinates.&apos; In this system, Z still points along the
+      spin axis opposite the HGA (or roughly anti-Earthward), X is
+      approximately parallel to the downward ecliptic normal, and Y
+      completes the right-handed set (pointing roughly towards dawn).
+ 
+    System III [1965] Coordinates (SYS3)
+    ------------------------------------
+      System III [1965] (SYS3) magnetic field vector components form
+      the standard right-handed spherical triad (R, Theta, Phi) for a
+      Jupiter centered system. Namely, R is radial (along the line from
+      the center of Jupiter to the center of the spacecraft), and
+      positive away from Jupiter. Phi, the azimuthal component, is
+      parallel to the Jovigraphic equator (Omega x R) and positive in
+      the direction of corotation. Theta, the &apos;southward&apos; component,
+      completes the right-handed set.
+ 
+      For SYS3 trajectory both east and west longitudes are provided.
+      West longitudes are related to east longitudes by to the
+      algorithm:
+ 
+        west longitude = 360. - east longitude &lt;degrees&gt;
+ 
+      West longitude is defined such that it appears to increase with
+      time for a stationary observer [DESSLER1983]. Note, however, that
+      R, latitude, and west longitude constitute a left handed set. The
+      SYS3 1965 prime meridian is the sub-Earth longitude of
+      1965-01-01 00:00 UT. The spin rate (which was determined from the
+      rotation rate of the magnetic field) is 9 hrs 55 min 29.719 sec.
+      (See [DESSLER1983] for a discussion on Jovian longitude). R is the
+      radial (Jupiter&apos;s center to spacecraft center) distance. Latitude
+      is planetocentric.
+ 
+    Satellite-Centered Planetographic (Right Handed) Coordinates (SPRH)
+    -------------------------------------------------------------------
+      SPRH is a spherical &apos;planetocentric&apos; coordinate system, centered
+      at the satellite. The magnetic field components are the standard
+      right-handed spherical triad: R, Theta, and Phi. R is radial
+      (along the line from the center of the satellite to the center of
+      the spacecraft), and positive away from the satellite. Phi, the
+      azimuthal component, is parallel to the satellite&apos;s
+      planetographic equator (Omega x R) and positive in a right-handed
+      sense. Theta, the &apos;southward&apos; component, completes the
+      right-handed set. Trajectory components are also right-handed.
+      Since all of the satellites studied are nearly phase locked to
+      Jupiter, the SPRH prime meridian is effectively the sub-Jupiter
+      meridian. More precise definitions are provided by the IAU [1994]
+      (see Table 4). Longitude is measured from the prime meridian and
+      is positive in a right-handed sense (see figure below). R is the
+      radial distance (satellite&apos;s center to spacecraft center).
+      Latitude is planetocentric.
+ 
+      ---------------------------------------------------------------
+      Table 4. IAU 1994 Satellite Information (all angles in degrees)
+      ---------------------------------------------------------------
+                Pole Orientation    Prime      Rotation Rt.   Radius
+      Moon      r.a.      dec.     Meridian   (deg/24 hrs)     (km)
+      ---------------------------------------------------------------
+      Amalthea  268.05   +64.49   231.67     +722.6314560       86.2
+      Io        268.05   +64.50   200.39     +203.4889538     1818
+      Europa    268.08   +64.51    35.67     +101.3747235     1560
+      Ganymede  268.20   +64.57    44.04      +50.3176081     2634
+      Callisto  268.72   +64.83   259.67      +21.5710715     2409
+ 
+      SPRH longitudes:            90
+                                   |
+ 
+                           180 -- Sat -- 0           --&gt; to Jupiter
+ 
+                                   |
+                                  270
+ 
+    Satellite Phi-Omega Coordinates (PHIO)
+    --------------------------------------
+      The PhiO (Satellite Phi=X, Omega=Z) fixed coordinate system is
+      defined by using the two vectors Phi, the corotation velocity
+      vector at the satellite, and Omega, the Jovian spin axis. Phi is
+      positive in the direction of corotation and Omega is positive
+      northward. Y completes the right-handed set (pointing towards
+      Jupiter). The basis vectors of the coordinate system are fixed at
+      the epoch time (satellite closest approach, see Table 2). The
+      spacecraft trajectory information takes the instantaneous range
+      vector (R) from the satellite center to the spacecraft and
+      resolves it into XYZ components. Ranges are given in units of
+      satellite radii (see Table 4).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+    These data have been reviewed by the instrument team and are of
+    the highest quality that can be generated at this time. Science
+    results based on some of these data have been published in several
+    journals (Science, JGR, etc.). After submission to PDS, these data
+    successfully completed the peer review process.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    This data set contains the high time resolution magnetometer data.
+    The data are highly discontinuous due to bit rate limitations of
+    the spacecraft. High time resolution data could only be acquired
+    over brief intervals in each orbit and never for more than a few
+    hours at a time. Individual recorded intervals are provided in
+    separate files. While every attempt has been made to insure that
+    the data within each observation are complete and as gap-free as
+    possible, some gaps still do exist. The most common causes for
+    these are communication outages between the spacecraft and the
+    Galileo ground system, and data corruption due to spikes or MAG
+    calibration exercises. A listing of the larger gaps and their
+    causes (if known) is provided in the MAG gap listing file that
+    is associated with this data set. More data coverage information
+    (including information for scheduled observations for which there
+    was no MAG coverage) is provided in Table 1 above.
+ 
+    The data quality is variable. This data set spans the entire
+    mission and contains data segments recorded in many different
+    instrument modes. Both calibration and digitization step size vary
+    from mode to mode and observation to observation. Information
+    regarding instrument mode and calibration used for particular
+    observations is provided in the MAG high-resolution data calibration
+    file.
+ 
+    As mentioned above, there were a few orbits in which MAG was able
+    extend it&apos;s coverage with ridealong recordings. A list of these
+    ridealong recordings is given in Table 5 below.
+ 
+    ---------------------------------------------------------------
+    Table 5. MAG Ridealong Observations
+    ---------------------------------------------------------------
+    Obs. ID  Start Time           Stop Time            Prim. Inst.
+    ---------------------------------------------------------------
+    I24-IO   1999-10-11 04:51:11  1999-10-11 06:41:51  NIMS
+    I25-TOR  1999-11-26 04:42:42  1999-11-26 05:54:37  NIMS
+    I27-IO   2000-02-22 14:16:55  2000-02-22 14:25:41  NIMS
+    I32-IO   2001-10-16 01:56:12  2001-10-16 02:21:47  NIMS
+ 
+ 
+  Product Versions
+  ================
+    The following table describes the various versions of the data
+    files.
+ 
+    --------------------------------------------------------------------
+    Product
+    Version
+    ID       Description
+    --------------------------------------------------------------------
+     1       original release
+     2       SYS3 coordinate file was modified to include both east and
+             west longitude columns; a variety of changes were made to
+             record formats
+ 
+ 
+  Limitations
+  ===========
+    Signals at the spin period (~19 seconds) or its higher order
+    harmonics are most likely instrumental.
+ 
+    The primary source of field uncertainty is in the sensor offsets
+    (zero levels plus s/c field). Incorrect zero levels appear as a DC
+    shift in the spin aligned sensor, and first harmonic of the spin
+    period in the spin plane sensors. Incorrect removal of the
+    spacecraft field appears as first harmonic in the spin aligned
+    sensor, and higher order harmonics in the spin plane sensors.
+ 
+    Spin plane field components are reliable to better than 1/4 of the
+    digitization step size of each mode. The uncertainty in the spin
+    axis component is probably between 1/3 and 1/2 the digitization
+    step size. While the resulting uncertainty is &gt;.1 nT for most
+    modes, the large digitization step size of the inboard high field
+    modes can result in spin tones of above 1 nT.
+ 
+    In addition to the more general limitations, the following apply
+    to individual orbits or observations.
+ 
+      Obs. ID   Limitation
+      --------  --------------------------------------------------------
+      G01-GAN/  Data are unevenly sampled in time. Caution must be used
+      G01-PSX/  when analyzing the spectra.
+      G02-GAN/
+      G02-PSX
+ 
+      C03-CALL  The data for this observation are NOT well calibrated.
+                The magnetometer sensors appear to have failed to lock
+                into place correctly. As a result the calibration
+                appears to be changing. This anomaly reduces the
+                confidence in the sensor geometry on the order of a
+                degree or two. There are of course still the common
+                errors associated sensor zero levels and quantization.
+                In order to minimize the effects of these uncertainties,
+                the data have been averaged to two seconds using a
+                centered 20 second averaging window. The net error in
+                the average is on the order of a few tenths of a
+                nanoTesla per component. As a side effect of the
+                averaging all of the higher frequency signals have been
+                eliminated.
+ 
+      E12-EUR   Due to unexpectedly large magnetic field strength, some
+                of the magnetometer data was corrupted due to instrument
+                saturation. The problem occurs 1997-Dec-16 11:53:00 -
+                12:05:20. The corrupted data have been recovered by
+                identifying the bad data in the spinning reference
+                frame, then simultaneously fitting a sine and cosine to
+                the remaining data to reproduce the spinning signature.
+                Note that this technique only recovers oscillations with
+                frequencies lower than the spin frequency. For more
+                information on the recovery process refer to the file
+                /CALIB/MAG/MAG_SATURATION.TXT.
+ 
+      C21-PJOV/ The AACS data for these recordings were seriously
+      C22-PJOV/ corrupted and required special processing to correct.
+      C23-PJOV  The rotor twist, and spin angles were corrected by
+                discarding the LPW rate data, and interpolating the RTS
+                rate data. Rotor right ascension (RA) and declination
+                (DEC) have been handled differently in each case. For
+                C21-PJOV RA and DEC have been set to a fixed value. For
+                C22-PJOV RA and DEC have been restricted to a limited
+                set of the most common values. For C23-PJOV the LPW rate
+                values have been discarded and the RTS rate data has
+                been interpolated. While the corrections to the AACS
+                appear to have improved the quality of the MAG data,
+                some uncertainty still exists. In particular a few clear
+                problems are still evident in the spin plane components
+                of the magnetic field (the x and y components in despun
+                spacecraft coordinates) of C21-PJOV. Special care should
+                be taken in the use of all of these data. Please note,
+                however, that as the field magnitude may be treated with
+                much less suspicion than the field components, as the
+                magnitude is unaffected by changes in the spacecraft
+                attitude.
+ 
+      A34-PSX7/ The AACS data for this recording was seriously corrupted
+      A34-AMA   and required special processing to correct. The rotor
+                twist and spin angles were corrected by first correcting
+                the &apos;rotor spin delta&apos; which was downlinked from the
+                spacecraft. The spin delta was corrected by setting
+                bad values to within 0.0002 radians (1 DN) of the
+                average. This new spin delta was then used to regenerate
+                the rotor twist and spin angles. The RA and DEC were
+                corrected by removing spikes and interpolating the
+                between the remaining good points. As with other data
+                with corrected AACS, the corrections appear to have
+                improved the quality of the MAG data, but some
+                uncertainty still exists. Special care should be taken
+                in the use of these data. The field magnitude may be
+                treated with much less suspicion than the field
+                components, as the magnitude is unaffected by changes in
+                the spacecraft attitude.
+ 
+      A34-AMA   As anticipated the MAG instrument saturated during the
+                A34-AMA recording period. A special matrix (without
+                crossterms) was used to prevent cross-contamination of
+                one sensor due to saturation in another sensor. However,
+                due to the rapidly increasing field strength through
+                this observation the saturation recovery method used at
+                E12-EUR was inadequate. To obtain these data please
+                contact the instrument team.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

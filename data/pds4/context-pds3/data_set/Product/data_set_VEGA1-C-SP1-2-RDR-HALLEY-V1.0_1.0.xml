@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vega1-c-sp1-2-rdr-halley-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VEGA1 DUST PARTICLE IMPACT PLASMA DETECTOR DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.vega_1::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vega1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:sp1.vega1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.halley::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vega1-c-sp1-2-rdr-halley-v1.0__browserp_vega1-c-sp1-2-rdr-halley-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Reinhard, R and B. Battrick (eds), &apos;Space Missions to Halley&apos;s Comet&apos;, European
+                   Space Agency ESA SP-1066, ESA Pub Div, Moordwijk, Netherlands, 1986.
+            </reference_text>
+            <description>reference.ESA-SP1066</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   &apos;Encounters with Comet Halley, The first results&apos;, Nature, Volume 321, No.
+                   6067, 15 May 1986.
+            </reference_text>
+            <description>reference.NATURE321</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VEGA1-C-SP1-2-RDR-HALLEY-V1.0</data_set_id>
+        <data_set_name>VEGA1 DUST PARTICLE IMPACT PLASMA DETECTOR DATA V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1986-03-06T06:29:20.000Z</start_time>
+        <stop_time>1986-03-06T07:16:18.000Z</stop_time>
+        <producer_full_name>INTERNATIONAL HALLEY WATCH</producer_full_name>
+        <citation_text>
+            Balebanov V.M., Skuridin G.A., Vorontsova E.V., Bassolo V.S. and
+            A. V. Dyachkov, VEGA1 DUST PARTICLE IMPACT PLASMA DETECTOR DATA
+            V1.0, VEGA1-C-SP1-2-RDR-HALLEY-V1.0, NASA Planetary Data System,
+            1997
+        </citation_text>
+        <data_set_terse_desc>
+            VEGA 1 satellite SP1 instrument dust particle impact plasma
+            detector observations of 1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            The SP-1 experiment on Vega spacecraft was intended for studying
+            the spatial and mass distributions of dust particles in the
+            cometary coma over the mass range 1.e-16 to 1.e-6 g. Covering
+            such a broad mass range was made possible by using sensors of two
+            types, namely, impact plasma and acoustic.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+ Data Set Description
+ ====================
+ 
+    A number of datasets from the VEGA missions were
+    submitted by Dyachkov at IKI as FITS files (binary
+    data) using the GROUPS form or multidimensioned
+    arrays.  In addition, little information was provided
+    except for the date, spacecraft, and experiment.
+     Sometimes in the GROUPS parameters (Pvalues), there
+    were experiment parameters such as &apos;time&apos; indicated
+    and by inference this could be determined to be
+    exposure time versus a clock time.  Since there was
+    at least one extensive set of observations (TVS
+    images), that were provided by IKI in this manner and
+    a separate facility (KFKI) with the proper IHW
+    keywords, it was possible to make estimates as to the
+    meaning of &apos;time&apos; with proper units (seconds).
+ 
+     The flyby trajectories of the Vega spacecraft in the
+    cometocentric frame can be specified by the
+    coordinates of the closest approach to the nucleus
+    R0(R0x,R0y,R0z) and the components of the relative
+    velocity V(Vx,Vy,Vz).  The corresponding values for
+    Vega1 were as follows:
+ 
+Vega 1:   R
+  0x = 7830 km;      R0y = 2480 km;      R0z = 3400 km;
+  Vx = 28.64 km/s;    Vy = -72.73 km/s;   Vz =-12.95km/s;
+ 
+ If the results of the dust flux measurements are referred to the
+ time reckoned from the instant of closest approach, the
+ corresponding distances to the cometary nucleus can be found as
+ R=R0*sqrt(1 + (t/t0)**2), where the parameter t0 = R0/V.
+ 
+ The SP-1 data for Vega1 spacecraft are formatted into table containing
+ 1399 records. Each record consists of a time of measurement column
+ (referred to closest approach, where 0 sec is 4:12:38 UT), and 2 columns
+ of impact plasma sensor data (channels 2 and 4+6 combined). The table
+ below shows the channels for given mass ranges.
+ 
+  +-----------------+----------------------+----------------------+
+  | Channel number  |  Charge pulse amp, C |     Mass Range, g    |
+  +-----------------+----------------------+----------------------+
+  |       1         |  10**-7 - 10**-8     |  10**-10 - 10**-11   |
+  |       2         |  10**-8 - 10**-9     |  10**-11 - 10**-12   |
+  |       3         |  10**-9 - 10**-10    |  10**-12 - 10**-13   |
+  |       4         | 10**-10 - 10**-11    |  10**-13 - 10**-14   |
+  |       5         | 10**-11 - 10**-12    |  10**-14 - 10**-15   |
+  |       6         | 10**-12 - 10**-13    |  10**-15 - 10**-16   |
+  |       7         | 10**-13 - 3x10**-14  |  10**-16 - 3x10**-17 |
+  +-----------------+----------------------+----------------------+
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+Confidence Level Overview
+=========================
+ 
+N/A
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

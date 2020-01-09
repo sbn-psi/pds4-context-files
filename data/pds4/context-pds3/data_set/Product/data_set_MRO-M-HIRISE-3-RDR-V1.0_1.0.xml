@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-hirise-3-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO MARS HIGH RESOLUTION IMAGE SCIENCE EXPERIMENT RDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hirise.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-3-rdr-v1.0__browserp_mro-m-hirise-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-3-rdr-v1.0__browser_geo_mars_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-3-rdr-v1.0__dvo_imaging_mro-m-hirise-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Eliason, E., Software Interface Specification for HiRISE Reduced Data Record
+                   Products, Mars Reconnaissance Orbiter, JPL Document Number D-32006,
+                   MRO-M-HIRISE-3-RDR-V1.0, NASA Planetary Data System, 2006.
+            </reference_text>
+            <description>reference.ELIASON2006A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Eliason, E., HiRISE EDR &amp; RDR Archive Volumes Software Interface Specification,
+                   JPL Document Number D-32005, NASA Planetary Data System, 2006.
+            </reference_text>
+            <description>reference.ELIASON2006B</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-HIRISE-3-RDR-V1.0</data_set_id>
+        <data_set_name>MRO MARS HIGH RESOLUTION IMAGE SCIENCE EXPERIMENT RDR V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2006-09-29T15:16:33.333Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>ALFRED MCEWEN</producer_full_name>
+        <citation_text>
+            McEwen, A., Mars Reconnaissance Orbiter High Resolution Imaging
+            Science Experiment, Reduced Data Record, MRO-M-HIRISE-3-RDR-V1.0,
+            NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Radiometically-corrected, geometrically-mapped images for HiRISE
+            (High Resolution Imaging Science Experiment).
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset includes reduced data records from the HiRISE
+            instrument on MRO.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    The High Resolution Imaging Science Experiment (HiRISE) is one of
+    the remote sensing instruments on the Mars Reconnaissance Orbiter
+    (MRO) spacecraft that acquires orbital observations of the Martian
+    surface during a two earth-year primary mapping phase.  MRO,
+    successfully launched in August 2005, arrived at Mars in March
+    2006.  Following orbit insertion the spacecraft went into an
+    aerobraking period to achieve a 250 x 315 kilometer near-polar
+    orbit suitable for the Primary Science Phase (PSP) mapping that
+    started in November 2006. Since the start of PSP HiRISE has been
+    continuously operating acquiring 10-20 observations per day.
+ 
+    The HiRISE team is responsible for maintaining an updated dataset
+    of     the best version of its science data until meaningful
+    changes in data calibration no longer occur and to release data in
+    an appropriate manner for public access including their final
+    deposition to NASA&apos;s Planetary Data System (PDS). In carrying out
+    these responsibilities, the HiRISE team creates two types of
+    standard data products:  1) Experiment Data Record (EDR) products
+    and 2) Reduced Data Record (RDR) Products. This document describes
+    the RDR standard products.
+ 
+    These Reduced Data Record (RDR) products are radiometrically-
+    corrected     images resampled to a standard map projection. They
+    are formatted and organized according to the standards of the PDS.
+    The RDR image is stored in the JPEG2000 format recently accepted
+    by the PDS.  The JPEG2000 images are accompanied by a PDS detached
+    label providing supporting information about the observation.
+ 
+    The HiRISE RDR products comply with the PDS standards for file
+    formats     and labels, specifically using the PDS image object
+    definition. The RDR image files, formatted according to the
+    JPEG2000 standard, use &apos;JP2&apos; as their filename extension. They are
+    accompanied by PDS labels; files that have the same name as the
+    image data file but use &apos;LBL&apos; for their filename extension. The
+    label file provides image data characterization and science
+    metadata information about the observation. Additionally, the
+    ancillary data files that accompany the RDR products and the
+    archive volume structure are in conformance with PDS standards.
+ 
+    RDR image data are stored in the JPEG2000 ISO/IEC Part 1 standard
+    format (http://www.jpeg.org/jpeg2000/), which was accepted by the
+    PDS standard in October 2005. The JPEG2000 standard offers
+    benefits distinctly advantageous for storage and access to very
+    large images. With HiRISE RDR products reaching sizes exceeding
+    30,000 x 70,000 pixels the use of JPEG2000 was recognized as a
+    suitable solution for the storage and distribution of these data
+    products. Advantages include excellent compression performance,
+    multiple resolution levels from a single image data set,
+    progressive decompression quality layers, lossless and lossy
+    compression (HiRISE RDR products use lossless compression per the
+    PDS Standard), pixel datum precision up to 38 bits, multiple image
+    components (or bands), and selective image area access. These
+    features are achieved by the use of a sophisticated image coding
+    system based on discrete wavelet transforms (DWT) combined with
+    other coding techniques to generate a JPEG2000 codestream that can
+    be rendered to image pixel rasters using
+    inverse transform algorithms.
+ 
+ 
+  Processing
+  ==========
+    Science data from the MRO payload experiments are packetized on
+    the spacecraft, transmitted to Earth through the Deep Space
+    Network, and sent to the Jet Propulsion Laboratory (JPL) through
+    ground communications.  The JPL Multi-Mission Operations Facility
+    converts the packetized data back to the original science data
+    format as produced by the instruments. For HiRISE observations, a
+    raw science product is created for each CCD/Channel involved in
+    the observation. The data are stored at JPL&apos;s Raw Science Data
+    Server (RSDS) for access by the science teams.
+ 
+    At the HiRISE Operations center (HiROC) we have developed a ground
+    data system that provides automated methods for retrieving and
+    processing our images. Science data are automatically retrieved
+    from the RSDS and passed to a series of pipeline procedures
+    managed under the Conductor environment
+    (http://pirl.lpl.arizona.edu/software/Conductor.shtml). The
+    pipelines generate intermediate products used for image evaluation
+    and standard data products for science analysis. Additionally, the
+    pipelines populate HiRISE-catalog EDR and RDR product tables and
+    observation geometry tables with relevant metadata.  The product
+    and geometry tables are used to generate index tables provided as
+    part of the product distribution to the PDS. The HiRISE team verifies
+    observations were properly acquired and science objectives
+    achieved. Missed targets or observations with poor viewing
+    conditions are flagged for reacquisition at a later time. HiROC
+    uses the Integrated Software for Imagers and Spectrometers (ISIS)
+    system in the pipeline processing.  ISIS contains a wide range of
+    tools including radiometric calibration and cartographic
+    processing procedures. The ISIS components applicable to HiRISE
+    include radiometric calibration, map projection transformation,
+    image mosaicking, camera pointing correction, and general image
+    enhancement, display, and analysis tools. For more information on
+    this freely available image analysis package, see the ISIS web
+    site (http:// isis.astrogeology.usgs.gov/).
+ 
+    HiROC&apos;s pipeline processing starts when the FEI_WatchDog procedure,
+    responsible for periodically monitoring the RSDS, determines a raw
+    science data file is ready to be downloaded from the RSDS and
+    passes the name of the product to the HiDog pipeline (Downlink
+    Organizer). The HiDog pipeline retrieves the data product then
+    submits the file name to the EDRgen pipeline (EDR generator) for
+    creating the EDR product and populating the EDR product table with
+    metadata about the product. The HiRISE Observation software used to
+    produce the EDR
+products is described in detail at
+    http://pirlwww.lpl.arizona.edu/software/HiRISE/
+    and can be obtained on request. The EDR_Stats pipeline creates an
+    ISIS file and generates image statistics that are placed in the EDR
+    products table. The HiCal pipeline performs the radiometric
+    correction (see Section 4.1.1), and generates a browse and
+    thumbnail image of the EDR product to be used by the HiRISE and
+    PDS Imaging Node data-distribution web services. When the HiCal
+    pipeline determines two channel files of a CCD have been
+    calibrated the file names are passed on to the HiStitch pipeline
+    for creating an intermediate CCD image file. HiStitch additionally
+    adjusts the channels to radiometrically match at the seam where
+    the two channels come together. When the HiStitch pipeline
+    determines all of the observation?s CCDs have been stitched
+    together for a filter set then the HiccdStitch pipeline is invoked
+    to create an intermediate product with the CCDs stitched together
+    to form a single image for the color filter. HiccdStitch
+    additionally adjusts the CCD images to radiometrically match the
+    overlapping areas of adjacent CCDs. Finally HiccdStitch creates an
+    intermediate JPEG image for evaluation by the HiRISE team.
+ 
+    At this point in the processing the EDR-validation step occurs. To
+    continue the pipeline processing the reconstructed SPK and CK
+    SPICE kernels, providing information about the observing viewing
+    geometry and spacecraft ephemerides, need to be retrieved from the
+    NAIF Node though HiROC?s HiSPICE subsystem. Reconstructed SPICE
+    kernels are generally provided to the MRO science teams one to two
+    weeks after the observation was acquired. The HiGeomInit pipeline
+    extracts the spacecraft ephemeris kernel (SPK) and C-matrix
+    pointing kernel (CK) data from the SPICE files and transfers the
+    data to the CCD image files for geometry processing by the
+    pipelines that follow. Additionally HiGeomInit populates the
+    observation geometry table with viewing geometry and coordinate
+    metadata. The RedGeom and ColorGeom pipelines perform geometric
+    processing on individual CCD images. The RedMosaic and ColorMosaic
+    pipelines mosaic the projected CCD images to form an observational
+    image. Additionally these pipelines create RDR-product browse and
+    thumbnail jpeg images for HiRISE and PDS Imaging Node web-based
+    distribution services.  The last pipeline step, RDRgen, creates
+    the JPEG2000 formatted JP2 image file accompanied by a PDS detached
+    label file and populates the RDR product table with information about
+    the product. The software for converting a raw PDS file with an
+    attached label to PDS label and JP2 files is available on request.
+    Following a final validation step the EDR and RDR
+    products are releasable to the PDS and science community.
+ 
+    Radiometric Calibration Processing
+    ----------------------------------
+    The radiometric calibration-correction procedure is described here
+    at a high level. A detailed description will be provided in a
+    future HiRISE calibration paper. The radiometric calibration
+    correction is performed on each individual HiRISE channel file
+    (EDR) correcting for instrument offset, dark current, gain, then
+    converting to I/F reflectance. The first step in the calibration,
+    carried out by the ISIS hiclean program, corrects for instrument
+    dark current and offset.  The hiclean program uses the ancillary
+    calibration data (dark and mask pixels that accompany the science
+    data to compute corrections in both the column (sample) and row
+    (line) directions. The mask pixels, positioned at the start of the
+    instrument output, provide dark current information for each
+    column.  The dark pixels, positioned at the end of each image row,
+    capture the time dependent dark current and offset instrument
+    drift.
+ 
+    The ISIS hical program then applies an intra-channel B0 (additive
+    dark current matrix) and A0 (multiplicative gain matrix)
+    correction for each column in the image array. The hical then
+    converts the pixel values to I/F (intensity/flux, I/F = 1 for a
+    100% ideal lambertian reflector viewed normal to the surface) as
+    described below:
+ 
+  For:
+ 
+  H  = dark current and offset corrected image, output of hiclean
+  B0 = intra-channel dark current correction (TDI &amp; BIN dependent)
+  A0 = intra-channel gain correction (TDI and BIN dependent)
+  G  = global gain correction, normalizes CCD/channels
+  L  = observation line time
+  I  = I/F conversion factor at Sun-Target distance of 1.5 AU
+  AU = Mars-to-Sun distance (AU) at time of observation
+  Z  = radiometrically corrected image in I/F units
+ 
+  The correction is:
+ 
+  Z = ([H-(B0?L)]/L)?A0?G*I*(1.5/AU)2
+ 
+  Instrument instabilities result in radiometric mismatches requiring
+  additional corrections for the varying column-to-column, channel-to-
+  channel, and CCD-to-CCD sensitivities. Residual column-to-column
+  variations are corrected by first computing the mean value for each
+  column in an image array. The mean-value one-dimensional array is then
+  high-pass filtered to eliminate low-frequency information due to scene
+  content.  The result of the high pass filter is then subtracted from
+  the image array. CCD channels are adjusted to radiometrically match at
+  the seam where the two channels come together (performed by the
+  HiStitch pipeline). The CCDs are then radiometrically matched one to
+  the other by matching the overlapping areas of adjacent CCDs (
+  performed in the HiccdStitch pipeline).
+ 
+  Geometry Processing
+  -------------------
+ 
+  There will typically be two RDR standard products per observation: a
+  single-color RDR product built from the operating red-filter CCDs, and
+  0a three-color RDR product if the blue-green and near-infrared CCDs
+  were additionally operating. In rare cases a two-color RDR product
+  will be created if only two color filters were commanded.
+  The geometric processing corrects for the optical distortion and
+  projects the observation from spacecraft viewing orientation to a map
+  coordinate system. For RDR products the Equirectangular or Polar
+  Stereographic projections are used. The geometry processing, carried
+  out by ISIS program cam2map, uses cubic convolution resampling.
+  Geometry processing employs the NAIF toolkit
+  (http://naif.jpl.nasa.gov) and uses reconstructed SPICE kernels
+  generated by the MRO project. The geometry processing uses the MOLA
+  Digital Terrain Model to improve the camera pointing intercept
+  position on the Martian surface.
+ 
+  In the geometric processing, individual channel images are stitched
+  together to form CCD images using the ISIS program histitch. The
+  spiceinit program searches through the available NAIF kernel set and
+  applies planet and spacecraft ephemeris data to establish geometric
+  properties of each CCD image CCD images are then individually map
+  projected with camp2map and mosaicked together using himos forming an
+  image of the entire observation. Resulting image maps vary in size
+  depending on the number of CCDs commanded, number of lines acquired
+  and the binning mode of the images. RDR products can be very large, at
+  times exceeding 30,000 x 70,000 pixels.  Observations with mixed
+  binning modes are resampled to the same pixel scale depending on the
+  minimum binning used in the observation. For the Transition Orbit
+  Phase (TRA) and Primary Science Phase (PSP), observations with
+  unbinned imaging are uniformly mapped to a constant 0.25 m/pixel
+  resolution (0.50 m/pixel for minimum binning 2 and 1.0 for binning 4).
+  The Aerobraking phase images (AEB) are mapped to a pixel scale
+  depending on the spacecraft altitude and the minimum binning.
+ 
+  For three-color imaging additional processing steps are required to
+  create the three-color RDR products. Spacecraft jitter exists at a
+  higher frequency than can be captured by the reconstructed pointing
+  kernels.  The color CCDs see a point on the planet surface separated
+  by ~120 milliseconds resulting in jitter-induced pointing
+  misalignments not captured by the reconstructed pointing matrix. To
+  minimize color misregistration the blue-green and near-infrared
+  filters are spatially matched through a two-step empirical approach.
+  In the first step the blue-green and near-infrared filter CCD images
+  (usually acquired at a higher binning level than the red-filter CCDs)
+  are scaled to match the binning of the red-filter CCD imaging. Next,
+  an ISIS program, hijitreg, applies an image coregistration process
+  constructing a control network that spatially maps the blue-green and
+  near-infrared filter imaging to the red filter imaging. The control
+  network is provided to the second step responsible for resampling the
+  blue-green and near-infrared filter images to the red. The program,
+  slither, performs a one-dimensional cubic-spline transformation
+  performing translational shifts on otherwise undistorted individual
+  lines. Once the blue-green and near-infrared images are spatially
+  registered to match the red imaging, the images go through the same
+  geometric processing to create a map-projected image as described
+  above.  The BANDWIDTH keyword in the PDS labels identifies the color
+  filters used in the image product. The CENTER_FILTER_WAVELENGTH and
+  BANDWIDTH keywords provide information about the spectral range of
+  each filter The storage order for the the three-color products is
+  Near Infrared (band 1), Red (band 2), and blue-gree (band 3).
+ 
+  Data
+  ====
+  The HiRISE EDR products act as the input source to the RDR
+  processing.
+ 
+  Ancillary Data
+  ==============
+  Generation of the RDR products relies on the MRO-project deliveries
+  for the Spacecraft Ephemeris (SPK kernels) and MRO spacecraft pointing
+  files (CK kernels)
+ 
+  Coordinate System &amp; Cartographic Standards
+  ==========================================
+  The HiRISE RDR products are compatible with the cartographic standards
+  and mapping conventions used by the MRO CRISM map products. When
+  spatially registering map products produced by the two instrument
+  teams only a translation and scale change are required.  The
+  coordinate system used is planetocentric latitude and east positive
+  longitude direction. The planetocentric latitude is the angle from the
+  equator to a point on the surface of an oblate planet. The longitude
+  increases from west to east (left to right).
+  The planetary constants used in the camera model to produce the HiRISE
+  RDR products are obtained from the NAIF SPICE planetary constants
+  kernel pck0008.tpc.  The Mars constants of particular importance are
+  the right ascension and declination of the pole, the prime meridian,
+  rotation rate, and radii.  The constants used are:
+  BODY499_POLE_RA          = (  317.68143   -0.1061      0.  )
+  BODY499_POLE_DEC         = (   52.88650   -0.0609      0.  )
+  BODY499_PM               = (  176.630    350.89198226  0.  )
+  BODY499_RADII            = ( 3396.19    3396.19     3376.20 )
+ 
+  Additionally, the SPICE kernel de405.bsp was used for the ephemeris
+  data for Mars.
+ 
+  Two map projections are used in the HiRISE RDR products:
+  Equirectangular and Polar Stereographic.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+  Known problems are TBD.
+ 
+ 
+  Review
+  =====
+  This archival data set has been examined by a peer review panel
+  prior to its acceptance by the Planetary Data System (PDS).  The
+  peer review has been carried out in accordance with PDS
+  procedures.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+  RDR products are the permanent record of the HiRISE observations
+  that are radiometrically corrected an map projected. The
+  observational coverage on the Martian surface is dependent on the
+  instrument operating modes of the observation. The largest
+  coverage at 300 kilometer spacecraft altitude is about 6 km
+  crosstrack and 37 kilometers downtrack.
+ 
+  During the Primary Science Phase of MRO operations, HiRISE is
+  expected to image about 1% of the surface of Mars. Observations
+  are carefully selected to optimize science return.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

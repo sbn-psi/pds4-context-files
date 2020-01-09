@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-sw-mag-2-edr-rawdata-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MAG UNCALIBRATED (EDR) DATA E/V/H/SW V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-sw-mag-2-edr-rawdata-v1.0__browserp_mess-e-v-h-sw-mag-2-edr-rawdata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Anderson, B.J., M.H. Acuna, D.A. Lohr, J. Scheifele, A. Raval, H. Korth, and
+                   J.A. Slavin, The Magnetometer instrument on MESSENGER, Space Science Reviews,
+                   131, 417-450, 2007.
+            </reference_text>
+            <description>reference.ANDERSONETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H/SW-MAG-2-EDR-RAWDATA-V1.0</data_set_id>
+        <data_set_name>MAG UNCALIBRATED (EDR) DATA E/V/H/SW V1.0</data_set_name>
+        <data_set_release_date>2016-05-06</data_set_release_date>
+        <start_time>2004-225T17:44:02Z</start_time>
+        <stop_time>2015-120T15:08:14Z</stop_time>
+        <producer_full_name>HAJE KORTH</producer_full_name>
+        <citation_text>
+            B. J. Anderson and H. Korth (APL), MAG UNCALIBRATED (EDR) DATA
+            E/V/H/SW V1.0, NASA Planetary Data System, 2008
+        </citation_text>
+        <data_set_terse_desc>
+            The MESSENGER MAG uncalibrated observations consist of magnetic
+            field samples and instrument data collected by the MAG instrument
+            during fly-by and orbital operations of Mercury.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== This data set consists of the MESSENGER MAG
+            uncalibrated observations, also known as EDRs. The MAG experiment
+            is a miniature three-axis ring-core fluxgate magnetometer with
+            low-noise electronics. There are eight MAG EDR data products,
+            including standard data, burst-mode data, and status and
+            housekeeping data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+   Data Set Overview
+   =================
+     The data set consists of uncalibrated observations, also known as
+     EDRs.
+ 
+     The MAG measures the vector magnetic field.  There are eight EDR
+     products that will be created for the MAG instrument.  They are the
+     Status, Science, Science Header, AC, Low-Rate Housekeeping (LRHK),
+     LRHK Header, Burst, and Burst Log EDRs. Each MAG EDR data product
+     consists of two files.  One file contains the data itself and is
+     arranged in ASCII table fixed format with string fields enclosed in
+     double quotes.  The other file is a detached PDS label file that
+     describes the contents of the ASCII table file.  The label file
+     defines the start and end time of the observation, product creation
+     time, the structure of the ASCII table, and each of the different
+     fields within the table.
+ 
+     All EDR data products, with the exception of Burst and Burst Log,
+     contain the observations collected on a given UTC day.  Each Burst
+     EDR contains the data from one burst observation.  The Burst Log
+     EDR contains the statistical information for every burst observed
+     during the entire mission.
+ 
+   Instrument Overview
+   ===================
+     The MAG instrument is a miniature three-axis ring-core fluxgate
+     magnetometer with low-noise electronics.  It is mounted on a 3.6 m
+     boom in the anti-sunward direction.  The MAG has +/- 1530 and +/-
+     51300 nT ranges with 20-bit internal resolution and 17-bit output
+     resolution. The MAG probe samples magnetic field values along the
+     X, Y, and Z axes at a rate of up to 20 samples/second.
+ 
+     See the MAGINST.CAT file for more information and
+     [ANDERSONETAL2007] for full details.
+ 
+   Calibration Overview
+   ====================
+     This data set is NOT calibrated; it only provides the uncalibrated
+     sensor measurements.
+ 
+   Parameters
+   ==========
+     The principal parameters when observing with the MAG are as
+     follows:
+ 
+ 
+     * Range Mode: This parameter controls whether the range is manually
+     or automatically controlled.
+ 
+     * Manual Range: If the range is manually selected, this parameter
+     commands whether the range is +/- 1530 nT or +/- 51300 nT.
+ 
+     * Sample Rate: This parameter selects whether data is sampled at
+     0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, or 20 Hz.
+ 
+     * AC Axis: This parameter selects the axis for which the log AC
+     value is monitored.
+ 
+     * Burst Threshold: If the log AC value exceeds this threshold,
+     burst mode is enabled.
+ 
+     * Burst Start: Start of the time window for possible burst
+     sampling.
+ 
+     * Burst Stop: End of the time window for possible burst sampling.
+ 
+     * Burst Number: Number of bursts allowed within the time window.
+ 
+     * Analog Calibration: This parameter selects whether the internal
+     analog calibration is on or off.
+ 
+     * A/D Calibration: This parameter selects whether the internal A/D
+     calibration is on or off.
+ 
+     * Filters: This parameter selects whether the filters are on or
+     off.
+ 
+     * Compression: This parameter selects whether the science packet is
+     compressed or uncompressed.
+ 
+   Data
+   ====
+     All EDR data products, with the exception of Burst and Burst Log,
+     contain the observations collected on a given UTC day.  Each Burst
+     EDR contains the data from one burst observation.  The Burst Log
+     EDR contains the statistical information for every burst observed
+     during the entire mission.  There are eight MAG EDR data products:
+ 
+     The Status EDR contains MAG instrument status information,
+     temperatures, voltage, command status counts as well as
+     low-resolution (14-bit) 3-axis magnetic field samples as recorded
+     by A/D converters integral to the Low Voltage Power Supply (LVPS).
+ 
+     The Science EDR provides the primary science MAG data and consists
+     of 3-axis field samples from the magnetometer at the commanded
+     sample rate.
+ 
+     The Science Header EDR captures the instrument state (health and
+     mode) as reported by the science packet.  This information only
+     changes on packet boundaries so it is kept in a separate EDR,
+     minimizing repetition of information.  Each row in the Science
+     Header EDR corresponds to the information extracted from one
+     science packet.
+ 
+     The AC EDR product contains alternating current (AC) level values
+     at the commanded sample rate.  To conserve telemetry the vector
+     sampling will usually be less than the maximum rate, 20 sample/s.
+     To provide a record of the amplitude of fluctuations for
+     frequencies higher than 1 Hz, an AC amplitude is calculated from
+     the internally sampled 20/s data for the sensor axis commanded as
+     the AC_AXIS.  Thus, in addition to the vector samples data, a 1 Hz
+     to 10 Hz bandpass average amplitude is evaluated for the commanded
+     sensor axis, selected by command, and recorded as a log AC value
+     with a 4-bit mantissa of the four most significant non-zero bits
+     and a 4-bit power of two exponent of the 4th (least significant)
+     bit of the mantissa.  This is called the logAC value.  It is
+     created once per second and saved for telemetry at that rate or at
+     the commanded science rate, whichever is less frequent.
+ 
+     The LRHK EDR product contains magnetometer low-rate housekeeping
+     data at the commanded sample rate of 50, 500 or 2000 seconds.  This
+     includes the 3-axis field values (received from the filter and
+     subsampling logic) and the corresponding AC values.
+ 
+     The LHRK Header EDR contains the instrument state (health and mode)
+     as reported by the LRHK packet.  This changes only on packet
+     boundaries so it is kept in a separate EDR, minimizing repetition
+     of information.  Each row in the LHRK Header EDR corresponds to
+     information extracted from one LHRK packet.
+ 
+     The Burst EDR product contains snapshots of vector samples, or
+     burst sampling, over a time span of 8 minutes, at a rate of 20
+     samples per second for a total of 9600 vector samples.  The burst
+     data give information about waves and turbulent phenomena expected
+     to occur at the magnetospheric boundaries and elsewhere in
+     association with pickup processes of volatile species as they are
+     photo-ionized.  Typically one burst period will be recorded every
+     day of orbit operations.
+ 
+     The Burst Log EDR is a cumulative file for the entire mission.  The
+     purpose of the file is to keep a time log of bursts recorded by the
+     instrument, as well as the number of burst packets recorded for
+     each Burst EDR.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+   Confidence Level Overview
+   =========================
+     The MAG EDR data are the least processed data set released for the
+     MAG consisting only of raw data converted from spacecraft telemetry
+     files. Data presented here accurately reflect the MAG data as
+     received from the spacecraft. Time tagging has been applied only to
+     assign each data item to a unique MET corresponding to MAG EPU data
+     handling. No corrections for timing latencies in the instrument
+     have been applied so that the MET do not necessarily indicate the
+     physical time corresponding to a given data item. These latencies
+     are described in the MAG calibration report and are applied in
+     the MET to UTC conversions in higher level data products.
+ 
+ 
+   Review
+   ======
+     The MAG EDR was reviewed internally by the MAG team prior to
+     release to the PDS. PDS also performed an external review of the
+     MAG EDR.
+ 
+ 
+   Data Coverage and Quality
+   =========================
+     Data reported are the minimally processed data obtained during
+     the following mission phases: Launch, Earth Cruise, Earth Flyby,
+     Venus 1 Cruise, Venus 1 Flyby, Venus 2 Cruise, Venus 2 Flyby,
+     Mercury 1 Cruise, Mercury 1 Flyby, Mercury 2 Cruise, Mercury 2
+     Flyby, Mercury 3 Cruise, Mercury 3 Flyby, Mercury 4 Cruise,
+     Mercury Orbit, Mercury Orbit Year 2, Mercury Orbit Year 3,
+     Mercury Orbit Year 4, and Mercury Orbit Year 5. These mission
+     phases and mnemonics are defined as:
+ 
+                                Start time         End time
+      Phase Name                Date (DOY)         Date (DOY)
+      -----------------------   ----------------   ----------------
+      L  : Launch               03 Aug 2004 (216)  12 Sep 2004 (256)
+      EC : Earth Cruise         13 Sep 2004 (257)  18 Jul 2005 (199)
+      EF : Earth Flyby          19 Jul 2005 (200)  16 Aug 2005 (228)
+      V1C: Venus 1 Cruise       17 Aug 2005 (229)  09 Oct 2006 (282)
+      V1F: Venus 1 Flyby        10 Oct 2006 (283)  07 Nov 2006 (311)
+      V2C: Venus 2 Cruise       08 Nov 2006 (312)  22 May 2007 (142)
+      V2F: Venus 2 Flyby        23 May 2007 (143)  20 Jun 2007 (171)
+      M1C: Mercury 1 Cruise     21 Jun 2007 (172)  30 Dec 2007 (364)
+      M1F: Mercury 1 Flyby      31 Dec 2007 (365)  28 Jan 2008 (028)
+      M2C: Mercury 2 Cruise     29 Jan 2008 (029)  21 Sep 2008 (265)
+      M2F: Mercury 1 Flyby      22 Sep 2008 (266)  20 Oct 2008 (294)
+      M3C: Mercury 3 Cruise     21 Oct 2008 (295)  15 Sep 2009 (258)
+      M3F: Mercury 3 Flyby      16 Sep 2009 (259)  14 Oct 2009 (287)
+      M4C: Mercury 4 Cruise     15 Oct 2009 (288)  03 Mar 2011 (062)
+      ORB: Mercury Orbit        04 Mar 2011 (063)  17 Mar 2012 (077)
+      OB2: Mercury Orbit Year 2 18 Mar 2012 (078)  17 Mar 2013 (076)
+      OB3: Mercury Orbit Year 3 18 Mar 2013 (077)  17 Mar 2014 (076)
+      OB4: Mercury Orbit Year 4 18 Mar 2014 (077)  17 Mar 2015 (076)
+      OB5: Mercury Orbit Year 5 18 Mar 2015 (077)  30 Apr 2015 (120)
+ 
+     No MAG data were collected during the Venus 1 Flyby phase. MAG was
+     on for extended periods during the other mission phases. Data
+     returned by MAG varied significantly in the degree of contamination
+     signals present in the data. Periods exhibiting specific types of
+     contamination are noted below by mission phase along with a flag
+     corresponding to data quality. In addition, a comment is given
+     indicating whether the data are correctable or not.
+ 
+     The MAG data quality flag is a three digit code denoted as SHC. S,
+     the first digit, indicates the configuration of the sensor. H, the
+     second digit,indicates the sensor survival heater control mode
+     being used. C, the thier digit, indicates the presence of
+     contamination in the data and whether contamination, if present, is
+     judged to be correctable to meet or exceed the science requirement
+     of 1 nT. At the time of this delivery, the contamination correction
+     algorithms are not yet completed. They will be described in the
+     calibrated data record delivery. Dates when calibration events,
+     changes in instrument state, or changes in the heater control mode
+     were made are noted in the comment field with an * in the
+     corresponding data quality flag for that date indicating that the
+     flag transitioned on that date. The data quality flag definitions
+     are below. For example, a data quality flag of &apos;100&apos; indicates:
+     that the boom was deployed with the sensor facing the sun, that the
+     heater operated in hardware regulation, and that no contamination
+     signals are known to be present.
+ 
+     MAG Data Qualify Flag Definitions. Three digit quality flag = SHC.
+ 
+      S: Sensor Config.   Definition
+      -----------------   ---------------------------------------------
+              0           Sensor stowed - prior to boom deployment
+              1           Boom deployed - SC +Y axis to Sun - sensor
+                          in sunlight
+              2           Boom deployed - SC -Y axis to Sun - sensor
+                          in shadow
+      ------------------  ---------------------------------------------
+ 
+      H: Heater Mode      Definition
+      -----------------   ---------------------------------------------
+              0           Hardware regulation (MAG FSW V8)
+              1           Software regulation version 1 (MAG FSW V9)
+              2           Software regulation version 2 (MAG FSW V10)
+      ------------------  ---------------------------------------------
+ 
+      C: Contamination    Definition
+      -----------------   ---------------------------------------------
+              0           No contamination signals known to be present
+              1           Uncorrectable contamination signals present
+              2           Contamination signals present but correctable
+              3           Contamination signals corrected in CDRs
+      ------------------  ---------------------------------------------
+ 
+     MAG data converted to EDRs is derived from four distinct data paths
+     from the instrument. Their definitions are given below. During
+     cruise, BST data are acquired only during the instrument checkout
+     activity that tests the digital filtering. In addition, during
+     spacecraft commissioning the spacecraft storage system was updated
+     to correct telemetry and storage anomalies. In the course of these
+     activities, one or more of the other MAG data streams was not acquired.
+ 
+     MAG data type definitions:
+ 
+     Mnemonic Definition
+     --------  -------------------------------------
+       HSK     High priority instrument housekeeping
+       SCI     Standard science data
+       STA     Instrument status data
+       BST     Burst science data
+     --------  --------------------------------------
+ 
+     The following listing of MAG data acquisition intervals indicates
+     the dates of data acquisition, the MAG data quality flag, the MAG
+     data types returned and a comment if appropriate indicating a
+     calibration or other MAG specific event.
+ 
+     For Sensor Configuration 2, sensor temperature departures from nominal
+     occur when other spacecraft activities place the sensor in sunlight
+     which is allowed within spacecraft pointing constraints. The MAG sensor
+     is protected by a dedicated sun-shade mounted on the magnetometer boom
+     near the sensor. Nonetheless, since the dominant thermal load on the
+     sensor is radiative emission from the MAG sensor sun-shade, illumination
+     of this sun-shade changes the thermal loading and hence changes the MAG
+     sensor temperature. Because departures from nominal temperature, -50 C,
+     and correspondingly in the sensor heater duty cycle, change the sensor
+     offset and time variation, the thermal baseline induced offset and time
+     variability of the MAG data will be different from the calibrated
+     offsets. These events are noted in the comment field to point out the
+     heater corrections and the offsets are not fully calibrated under
+     these conditions.
+ 
+     MAG data acquisition intervals (partial days not distinguished):
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+L     12 Aug 2004 (225) 13 Aug 2004 (226)  001  HSK,STA,SCI
+      14 Aug 2004 (227) 15 Aug 2004 (228)  001  HSK,STA
+      16 Aug 2004 (229) 16 Aug 2004 (229)  001  HSK,STA,SCI
+      17 Aug 2004 (230) 17 Aug 2004 (230)  001  HSK,STA
+      18 Aug 2004 (231) 23 Aug 2004 (236)  001  HSK,STA,SCI
+      24 Aug 2004 (237) 26 Aug 2004 (239)  XXX                  MAG off
+      27 Aug 2004 (240) 12 Sep 2004 (257)  001  HSK,STA,SCI     MAG on
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+EC    13 Sep 2004 (257) 13 Sep 2004 (257)  001  HSK,STA,SCI
+      14 Sep 2004 (258) 14 Sep 2004 (258)  XXX                  MAG off
+      15 Sep 2004 (259) 19 Sep 2004 (263)  001  HSK,STA         MAG on
+      20 Sep 2004 (264) 22 Sep 2004 (266)  001  HSK,STA,SCI
+      27 Sep 2004 (271) 29 Nov 2004 (334)  001  HSK,STA,SCI
+      30 Nov 2004 (335) 14 Dec 2004 (349)  001  HSK,   ,SCI
+      15 Dec 2004 (350) 10 Jan 2005 (010)  001  HSK,STA,SCI
+      11 Jan 2005 (011) 25 Jan 2005 (025)  001  HSK,   ,SCI
+      26 Jan 2005 (026)  7 Mar 2005 (066)  001  HSK,STA,SCI
+       8 Mar 2005 (067)  8 Mar 2005 (067)  *01  HSK,STA,SCI     Boom deployed
+       9 Mar 2005 (068) 31 Mar 2005 (090)  201  HSK,STA,SCI
+       1 Apr 2005 (091)  1 Apr 2005 (091)  *01  HSK,STA,SCI     Rolls,
+checkout
+       2 Apr 2005 (092) 23 May 2005 (143)  201  HSK,STA,SCI
+      24 May 2005 (144) 26 Jun 2005 (177)  XXX                  MAG off
+      14 Jun 2005 (165) 14 Jun 2005 (165)  XXX                  MAG on,
+                                                               Flip +Y to Sun
+      27 Jun 2005 (178) 27 Jun 2005 (178)  100  HSK,STA,SCI,BST Checkout
+      28 Jun 2005 (179) 28 Jun 2005 (179)  100  HSK,STA,SCI
+      29 Jun 2005 (180) 29 Jun 2005 (180)  100  HSK,STA,SCI,BST
+      30 Jun 2005 (179) 18 Jul 2005 (199)  100  HSK,STA,SCI
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+EF    19 Jul 2005 (200) 20 Jul 2005 (201)  100  HSK,STA,SCI
+      21 Jul 2005 (202) 21 Jul 2005 (202)  *0*  HSK,STA,SCI     SC -/+Y to
+Sun
+      22 Jul 2005 (203) 23 Jul 2005 (204)  100  HSK,STA,SCI
+      24 Jul 2005 (205) 24 Jul 2005 (205)  *0*  HSK,STA,SCI     SC -/+Y to
+Sun
+      25 Jul 2005 (206) 26 Jul 2005 (207)  100  HSK,STA,SCI
+      27 Jul 2005 (208) 27 Jul 2005 (208)  *0*  HSK,STA,SCI     SC -/+Y to
+Sun
+      28 Jul 2005 (209) 30 Jul 2005 (211)  100  HSK,STA,SCI
+      31 Jul 2005 (212) 31 Jul 2005 (212)  *0*  HSK,STA,SCI,BST SC -/+Y to
+Sun
+       1 Aug 2005 (213)  1 Aug 2005 (213)  100  HSK,STA,SCI
+       2 Aug 2005 (214)  2 Aug 2005 (214)  *0*  HSK,STA,SCI,BST SC -/+Y to
+Sun
+       3 Aug 2005 (215)  3 Aug 2005 (215)  100  HSK,STA,SCI,BST
+       4 Aug 2005 (216)  7 Aug 2005 (219)  100  HSK,STA,SCI
+       8 Aug 2005 (220)  8 Aug 2005 (220)  100  HSK,STA,SCI     Rolls
+       9 Aug 2005 (221)  9 Aug 2005 (221)  100  HSK,STA,SCI     Long checkout
+      10 Aug 2005 (222) 14 Aug 2005 (226)  100  HSK,STA,SCI
+      15 Aug 2005 (227) 16 Aug 2005 (228)  XXX                  MAG off
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+V1C   17 Aug 2005 (229)  8 Sep 2005 (251)  XXX                  MAG off
+       9 Sep 2005 (252)  9 Sep 2005 (252)  XXX                  SC -Y to Sun
+      10 Sep 2005 (253) 23 Feb 2006 (054)  XXX                  MAG off
+      24 Feb 2006 (055)  7 Mar 2006 (066)  200  HSK,STA,SCI     MAG on
+       8 Mar 2006 (067)  8 Mar 2006 (067)  *0*  HSK,STA,SCI     SC +Y to Sun
+       9 Mar 2006 (068) 26 Mar 2006 (085)  100  HSK,STA,SCI
+      27 Mar 2006 (086) 27 Mar 2006 (086)  1*0  HSK,STA,SCI     MAG FSW v9
+load
+      28 Mar 2006 (087) 18 Apr 2006 (108)  110  HSK,STA,SCI
+      19 Apr 2006 (109) 19 Apr 2006 (109)  110  HSK,STA,SCI,BST Checkout
+      20 Apr 2006 (110) 13 May 2006 (133)  11*  HSK,STA,SCI
+      14 May 2006 (134) 21 May 2006 (141)  111  HSK,STA,SCI     SEU in
+filters
+      22 May 2006 (142) 22 May 2006 (142)  11*  HSK,STA,SCI     Filters off
+      23 May 2006 (143) 24 May 2006 (144)  110  HSK,STA,SCI
+      25 May 2006 (145) 25 May 2006 (145)  110  HSK,STA,SCI     Rolls
+      26 May 2006 (146) 30 May 2006 (150)  110  HSK,STA,SCI
+      31 May 2006 (151) 12 Jun 2006 (163)  XXX                  MAG off
+      13 Jun 2006 (164) 20 Jun 2006 (171)  110  HSK,STA,SCI     MAG on
+      21 Jun 2006 (172) 21 Jun 2006 (172)  *1*  HSK,STA,SCI     SC -Y to Sun
+      22 Jun 2006 (173) 12 Jul 2006 (193)  211  HSK,STA,SCI
+      13 Jul 2006 (194) 13 Jul 2006 (194)  2*1  HSK,STA,SCI     Disabled v1
+htr
+      14 Jul 2006 (195) 26 Jul 2006 (207)  201  HSK,STA,SCI
+      27 Jul 2006 (208)  9 Oct 2006 (282)  XXX                  MAG off
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+V1F   10 Oct 2006 (283)  7 Nov 2006 (311)  XXX                  MAG off
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+V2C    8 Nov 2006 (312) 17 Dec 2006 (351)  XXX                  MAG off
+      18 Dec 2006 (352) 18 Dec 2006 (352)  2*1  HSK,STA,SCI     MAG on, Htr
+control test
+      19 Dec 2006 (353)  7 Mar 2007 (066)  XXX                  MAG off
+       8 Mar 2007 (067)  8 Mar 2007 (067)  211  HSK,STA,SCI
+       9 Mar 2007 (068)  9 Mar 2007 (068)  2**  HSK,STA,SCI     MAG FSW v10
+load
+      10 Mar 2007 (069) 10 Mar 2007 (069)  223  HSK,STA,SCI
+      11 Mar 2007 (070) 11 Mar 2007 (070)  223  HSK,STA,SCI,BST Checkout
+      12 Mar 2007 (071) 22 May 2007 (142)  223  HSK,STA,SCI
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+V2F   23 May 2007 (143)  1 Jun 2007 (152)  223  HSK,STA,SCI
+       2 Jun 2007 (153)  2 Jun 2007 (153)  223  HSK,STA,SCI     Rolls
+       3 Jun 2007 (154)  4 Jun 2007 (155)  223  HSK,STA,SCI
+       5 Jun 2007 (156)  6 Jun 2007 (157)  223  HSK,STA,SCI     Venus 2 Flyby
+       7 Jun 2007 (158) 20 Jun 2007 (171)  223  HSK,STA,SCI
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+M1C   21 Jun 2007 (172) 30 Jun 2007 (181)  223  HSK,STA,SCI
+       1 Jul 2007 (182) 11 Jul 2007 (192)  223  HSK,STA,SCI     A/D SEU
+(Y-axis)
+      12 Jul 2007 (193) 20 Jul 2007 (201)  223  HSK,STA,SCI     A/D SEU
+(X&amp;Y-axis)
+      21 Jul 2007 (202) 14 Aug 2007 (226)  223  HSK,STA,SCI
+      15 Aug 2007 (227) 15 Aug 2007 (227)  223  HSK,STA,SCI     Checkout
+      16 Aug 2007 (228) 25 Aug 2007 (237)  223  HSK,STA,SCI
+      26 Aug 2007 (238) 19 Dec 2007 (353)  XXX                  MAG off
+      20 Dec 2007 (354) 30 Dec 2007 (364)  223  HSK,STA,SCI     MAG on
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+M1F   31 Dec 2007 (365) 11 Jan 2008 (011)  223  HSK,STA,SCI
+      12 Jan 2008 (012) 12 Jan 2008 (012)  222  HSK,STA,SCI     Reset,rolls,
+heater control loop oscillations
+      13 Jan 2008 (013) 13 Jan 2008 (013)  223  HSK,STA,SCI     Checkout
+      14 Jan 2008 (014) 15 Jan 2008 (015)  223  HSK,STA,SCI,BST Mercury 1
+flyby
+      16 Jan 2008 (016) 18 Jan 2008 (018)  223  HSK,STA,SCI
+      19 Jan 2008 (019) 19 Jan 2008 (019)  223  HSK,STA,SCI     Rolls
+      20 Jan 2008 (020) 28 Jan 2008 (028)  223  HSK,STA,SCI
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+M2C   29 Jan 2008 (029) 22 Feb 2008 (053)  223  HSK,STA,SCI
+      23 Feb 2008 (054) 23 Feb 2008 (054)  223  HSK,STA,SCI     Checkout
+      24 Feb 2008 (055) 24 Feb 2008 (055)  223  HSK,STA,SCI
+      25 Feb 2008 (056) 27 Mar 2008 (087)  XXX                  MAG off
+      28 Mar 2008 (088) 19 Apr 2008 (110)  223  HSK,STA,SCI     MAG on
+      20 Apr 2008 (111) 22 Apr 2008 (113)  223  HSK,STA,SCI     Thermal test
+      23 Apr 2008 (114) 05 May 2008 (126)  223  HSK,STA,SCI
+      06 May 2008 (127) 06 May 2008 (127)  XXX                  MAG off
+      07 May 2008 (128) 24 May 2008 (145)  223  HSK,STA,SCI     MAG on
+      25 May 2008 (146) 27 May 2008 (148)  223  HSK,STA,SCI     A/D SEU
+(Y-axis)
+      28 May 2008 (149) 20 Aug 2008 (233)  223  HSK,STA,SCI
+      21 Aug 2008 (234) 21 Aug 2008 (234)  223  HSK,STA,SCI     Checkout
+      22 Aug 2008 (235) 26 Aug 2008 (239)  223  HSK,STA,SCI
+      27 Aug 2008 (240) 27 Aug 2008 (240)  223  HSK,STA,SCI     Reset
+      28 Aug 2008 (241) 28 Aug 2008 (241)  223  HSK,STA,SCI     MAG off
+(3 hours)
+      29 Aug 2008 (242) 21 Sep 2008 (265)  223  HSK,STA,SCI
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+M2F   22 Sep 2008 (266) 01 Oct 2008 (275)  223  HSK,STA,SCI
+      02 Oct 2008 (276) 02 Oct 2008 (276)  223  HSK,STA,SCI     Reset,
+checkout
+      03 Oct 2008 (277) 03 Oct 2008 (277)  223  HSK,STA,SCI     Rolls
+      04 Oct 2008 (278) 05 Oct 2008 (279)  223  HSK,STA,SCI
+      06 Oct 2008 (280) 06 Oct 2008 (280)  223  HSK,STA,SCI     Mercury 2
+flyby, invalid data (MET): 131,772,500-131,800,000
+      07 Oct 2008 (281) 08 Oct 2008 (282)  223  HSK,STA,SCI
+      09 Oct 2008 (283) 09 Oct 2008 (283)  223  HSK,STA,SCI     Rolls
+      10 Oct 2008 (284) 14 Oct 2008 (288)  223  HSK,STA,SCI
+      15 Oct 2008 (289) 16 Oct 2008 (290)  223  HSK,STA,SCI     12-hour, 40
+degC thermal variation
+      17 Oct 2008 (291) 20 Oct 2008 (294)  223  HSK,STA,SCI
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+M3C   21 Oct 2008 (295) 28 Oct 2008 (302)  223  HSK,STA,SCI
+      29 Oct 2008 (303) 01 Nov 2008 (306)  223  HSK,STA,SCI     Thermal
+baseline testing
+      02 Nov 2008 (307) 19 Nov 2008 (324)  223  HSK,STA,SCI
+      20 Nov 2008 (325) 11 Jan 2009 (011)  XXX                  MAG off
+      12 Jan 2009 (012) 12 Jan 2009 (012)  223  HSK,STA,SCI     MAG on
+      13 Jan 2009 (012) 19 Jan 2009 (019)  223  HSK,STA,SCI,BST
+      20 Jan 2009 (020) 21 Jan 2009 (021)  223  HSK,STA,SCI     30-hour, 40
+degC thermal variation
+      22 Jan 2009 (022) 31 Jan 2009 (031)  223  HSK,STA,SCI,BST
+      01 Feb 2009 (032) 01 Feb 2009 (032)  223  HSK,STA,SCI     3-hour,
+15 degC thermal variation
+      02 Feb 2009 (033) 24 Feb 2009 (055)  223  HSK,STA,SCI,BST
+      25 Feb 2009 (056) 25 Feb 2009 (056)  223  HSK,STA,SCI     Checkout
+      26 Feb 2009 (057) 10 Mar 2009 (069)  223  HSK,STA,SCI,BST
+      11 Mar 2009 (070) 20 Mar 2009 (079)  223  HSK,STA,SCI,BST 9-day, 15
+degC thermal variation
+      21 Mar 2009 (080) 05 May 2009 (125)  223  HSK,STA,SCI,BST
+      06 May 2009 (126) 07 May 2009 (127)  XXX                  MAG off
+      08 May 2009 (128) 08 May 2009 (128)  223  HSK,STA,SCI     MAG on
+      09 May 2009 (129) 25 Jun 2009 (176)  223  HSK,STA,SCI,BST
+      26 Jun 2009 (177) 26 Jun 2009 (177)  223  HSK,STA,SCI,BST Spike of
+unknown origin in X-axis of SCI data at MET 154,497,208.25.
+      27 Jun 2009 (178) 08 Jul 2009 (189)  223  HSK,STA,SCI,BST
+      09 Jul 2009 (190) 20 Jul 2009 (201)  XXX                  MAG off
+      21 Jul 2009 (202) 21 Jul 2009 (202)  223  HSK,STA,SCI     MAG on
+      22 Jul 2009 (203) 18 Aug 2009 (230)  223  HSK,STA,SCI,BST
+      19 Aug 2009 (231) 23 Aug 2009 (235)  XXX                  MAG off
+      24 Aug 2009 (236) 24 Aug 2009 (236)  223  HSK,STA,SCI     MAG on,
+checkout
+      25 Aug 2009 (237) 01 Sep 2009 (244)  223  HSK,STA,SCI,BST
+      02 Sep 2009 (245) 03 Sep 2009 (246)  XXX                  MAG off
+      04 Sep 2009 (247) 04 Sep 2009 (247)  223  HSK,STA,SCI     MAG on,
+checkout
+      05 Sep 2009 (248) 15 Sep 2009 (258)  223  HSK,STA,SCI,BST
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+M3F   16 Sep 2009 (259) 24 Sep 2009 (267)  223  HSK,STA,SCI,BST
+      25 Sep 2009 (268) 25 Sep 2009 (268)  223  HSK,STA,SCI     Reset,
+checkout
+      26 Sep 2009 (269) 26 Sep 2009 (269)  223  HSK,STA,SCI     S/C Y-axis
+rolls
+      27 Sep 2009 (270) 28 Sep 2009 (271)  223  HSK,STA,SCI
+      29 Sep 2009 (272) 29 Sep 2009 (272)  223  HSK,STA,SCI     Mercury 3
+flyby
+      30 Sep 2009 (273) 30 Sep 2009 (273)  XXX                  MAG off
+      01 Oct 2009 (274) 01 Oct 2009 (274)  223  HSK,STA,SCI     MAG on,
+checkout
+      02 Oct 2009 (275) 02 Oct 2009 (275)  223  HSK,STA,SCI
+      03 Oct 2009 (276) 03 Oct 2009 (276)  223  HSK,STA,SCI     S/C Y-axis
+rolls
+      04 Oct 2009 (277) 06 Oct 2009 (279)  223  HSK,STA,SCI
+      07 Oct 2009 (280) 08 Oct 2009 (281)  223  HSK,STA,SCI     15-hour, 50
+degC thermal variation
+      09 Oct 2009 (282) 12 Oct 2009 (285)  223  HSK,STA,SCI
+      13 Oct 2009 (286) 14 Oct 2009 (287)  XXX                  MAG off
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+M4C   15 Oct 2009 (288) 09 Dec 2009 (343)  XXX                  MAG off
+      10 Dec 2009 (344) 10 Dec 2009 (344)  223  HSK,STA,SCI     MAG on
+      11 Dec 2009 (345) 15 Feb 2010 (046)  223  HSK,STA,SCI,BST
+      16 Feb 2010 (047) 16 Feb 2010 (047)  223  HSK,STA,SCI,BST Checkout
+      17 Feb 2010 (048) 01 Mar 2010 (060)  223  HSK,STA,SCI,BST
+      02 Mar 2010 (061) 05 Mar 2010 (064)  223  HSK,STA,SCI,BST Thermal
+variations
+      06 Mar 2010 (065) 06 Mar 2010 (065)  223  HSK,STA,SCI
+      07 Mar 2010 (066) 08 Mar 2010 (067)  223  HSK,STA,SCI     Thermal
+variations
+      09 Mar 2010 (068) 09 Mar 2010 (068)  223  HSK,STA,SCI,BST
+      10 Mar 2010 (069) 12 Mar 2010 (071)  223  HSK,STA,SCI,BST Thermal
+variations
+      13 Mar 2010 (072) 13 Mar 2010 (072)  223  HSK,STA,SCI
+      14 Mar 2010 (073) 15 Mar 2010 (074)  223  HSK,STA,SCI     Thermal
+variations
+      16 Mar 2010 (075) 18 Mar 2010 (077)  223  HSK,STA,SCI,BST
+      19 Mar 2010 (078) 19 Mar 2010 (078)  223  HSK,STA,SCI     Thermal
+variations
+      20 Mar 2010 (079) 01 Aug 2010 (213)  223  HSK,STA,SCI,BST
+      02 Aug 2010 (214) 02 Aug 2010 (214)  223  HSK,STA,SCI     Thermal
+variations
+      03 Aug 2010 (215) 13 Aug 2010 (225)  223  HSK,STA,SCI,BST
+      14 Aug 2010 (226) 14 Aug 2010 (226)  223  HSK,STA,SCI     Thermal
+variations
+      15 Aug 2010 (227) 19 Aug 2010 (231)  223  HSK,STA,SCI
+      20 Aug 2010 (232) 22 Aug 2010 (234)  223  HSK,STA,SCI     A/D SEU
+(Z-axis)
+      23 Aug 2010 (235) 23 Aug 2010 (235)  223  HSK,STA,SCI     A/D SEU
+(Z-axis), thermal variations
+      24 Aug 2010 (236) 29 Aug 2010 (241)  223  HSK,STA,SCI,BST Thermal
+variations
+      30 Aug 2010 (242) 06 Sep 2010 (249)  223  HSK,STA,SCI,BST
+      07 Sep 2010 (250) 07 Sep 2010 (250)  223  HSK,STA,SCI,BST Checkout
+      08 Sep 2010 (251) 18 Sep 2010 (261)  223  HSK,STA,SCI,BST
+      19 Sep 2010 (262) 19 Sep 2010 (262)  223  HSK,STA,SCI     Thermal
+variations
+      20 Sep 2010 (263) 19 Oct 2010 (292)  223  HSK,STA,SCI,BST
+      20 Oct 2010 (293) 22 Oct 2010 (295)  223  HSK,STA,SCI,BST Thermal
+variations
+      23 Oct 2010 (296) 02 Nov 2010 (306)  223  HSK,STA,SCI,BST
+      03 Nov 2010 (307) 03 Nov 2010 (307)  223  HSK,STA,SCI     Thermal
+variations
+      04 Nov 2010 (308) 07 Nov 2010 (311)  223  HSK,STA,SCI,BST
+      08 Nov 2010 (312) 08 Nov 2010 (312)  223  HSK,STA,SCI     Thermal
+variations
+      09 Nov 2010 (313) 15 Nov 2010 (319)  223  HSK,STA,SCI,BST
+      16 Nov 2010 (320) 16 Nov 2010 (320)  223  HSK,STA,SCI,BST Thermal
+variations
+      17 Nov 2010 (321) 17 Nov 2010 (321)  223  HSK,STA,SCI
+      18 Nov 2010 (322) 19 Nov 2010 (323)  223  HSK,STA,SCI     Thermal
+variations
+      20 Nov 2010 (324) 20 Nov 2010 (324)  223  HSK,STA,SCI
+      21 Nov 2010 (325) 21 Nov 2010 (325)  223  HSK,STA,SCI     Thermal
+variations
+      22 Nov 2010 (326) 30 Nov 2010 (334)  223  HSK,STA,SCI,BST
+      01 Dec 2010 (335) 03 Dec 2010 (337)  223  HSK,STA,SCI     Thermal
+variations
+      04 Dec 2010 (338) 05 Dec 2010 (339)  223  HSK,STA,SCI
+      06 Dec 2010 (340) 06 Dec 2010 (340)  223  HSK,STA,SCI     Thermal
+variations
+      07 Dec 2010 (341) 17 Dec 2010 (351)  223  HSK,STA,SCI,BST
+      18 Dec 2010 (352) 18 Dec 2010 (352)  223  HSK,STA,SCI     Thermal
+variations
+      19 Dec 2010 (353) 29 Dec 2010 (363)  223  HSK,STA,SCI,BST
+      30 Dec 2010 (364) 31 Dec 2010 (365)  223  HSK,STA,SCI,BST Thermal
+variations
+      01 Jan 2011 (001) 03 Jan 2011 (003)  223  HSK,STA,SCI
+      04 Jan 2011 (004) 04 Jan 2011 (004)  223  HSK,STA,SCI     Checkout
+      05 Jan 2011 (005) 09 Mar 2011 (068)  223  HSK,STA,SCI,BST
+      10 Mar 2011 (069) 16 Mar 2011 (075)  223  HSK,STA,SCI     SEU, LogAC
+channel pegged at 255, SCI data apparently not affected
+      17 Mar 2011 (076) 22 Mar 2011 (081)  XXX                  MAG off
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+MOI   23 Mar 2011 (082) 28 Mar 2011 (087)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      29 Mar 2011 (088) 29 Mar 2011 (088)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      30 Mar 2011 (089) 04 Apr 2011 (094)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      05 Apr 2011 (095) 05 Apr 2011 (095)  223  HSK,STA,SCI     MAG partially
+off, Full-orbit high-rate data, thermal variations
+      06 Apr 2011 (096) 09 Apr 2011 (099)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      10 Apr 2011 (100) 10 Apr 2011 (100)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      11 Apr 2011 (101) 16 Apr 2011 (106)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      17 Apr 2011 (107) 17 Apr 2011 (107)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      18 Apr 2011 (108) 23 Apr 2011 (113)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      24 Apr 2011 (114) 24 Apr 2011 (114)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      25 Apr 2011 (115) 30 Apr 2011 (120)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      01 May 2011 (121) 01 May 2011 (121)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      02 May 2011 (122) 07 May 2011 (127)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      08 May 2011 (128) 08 May 2011 (128)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      09 May 2011 (129) 14 May 2011 (134)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      15 May 2011 (135) 15 May 2011 (135)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      16 May 2011 (136) 18 May 2011 (138)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      19 May 2011 (139) 21 May 2011 (141)  223  HSK,STA,SCI,BST Thermal
+variations
+      22 May 2011 (142) 22 May 2011 (142)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      23 May 2011 (143) 23 May 2011 (143)  223  HSK,STA,SCI,BST Thermal
+variations
+      24 May 2011 (144) 28 May 2011 (148)  223  HSK,STA,SCI,BST MAG off
+during long eclipse, thermal variations
+      29 May 2011 (149) 29 May 2011 (149)  223  HSK,STA,SCI,BST Checkout,
+MAG off during long eclipse, Thermal variations
+      30 May 2011 (150) 02 Jun 2011 (153)  223  HSK,STA,SCI,BST MAG off
+during long eclipse, thermal variations
+      03 Jun 2011 (154) 04 Jun 2011 (155)  223  HSK,STA,SCI,BST Thermal
+variations
+      05 Jun 2011 (156) 05 Jun 2011 (156)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      06 Jun 2011 (157) 11 Jun 2011 (162)  223  HSK,STA,SCI,BST Thermal
+variations
+      12 Jun 2011 (163) 12 Jun 2011 (163)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      13 Jun 2011 (164) 18 Jun 2011 (169)  223  HSK,STA,SCI,BST Thermal
+variations
+      19 Jun 2011 (170) 19 Jun 2011 (170)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      20 Jun 2011 (171) 25 Jun 2011 (176)  223  HSK,STA,SCI,BST Thermal
+variations
+      26 Jun 2011 (177) 26 Jun 2011 (177)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      27 Jun 2011 (178) 02 Jul 2011 (183)  223  HSK,STA,SCI,BST Thermal
+variations
+      03 Jul 2011 (184) 03 Jul 2011 (184)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      04 Jul 2011 (185) 09 Jul 2011 (190)  223  HSK,STA,SCI,BST Thermal
+variations
+      10 Jul 2011 (191) 10 Jul 2011 (191)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      11 Jul 2011 (192) 16 Jul 2011 (197)  223  HSK,STA,SCI,BST Thermal
+variations
+      17 Jul 2011 (198) 17 Jul 2011 (198)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      18 Jul 2011 (199) 23 Jul 2011 (204)  223  HSK,STA,SCI,BST Thermal
+variations
+      24 Jul 2011 (205) 24 Jul 2011 (205)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      25 Jul 2011 (206) 25 Jul 2011 (206)  223  HSK,STA,SCI,BST Thermal
+variations
+      26 Jul 2011 (207) 30 Jul 2011 (211)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      31 Jul 2011 (212) 31 Jul 2011 (212)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      01 Aug 2011 (213) 06 Aug 2011 (218)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      07 Aug 2011 (219) 07 Aug 2011 (219)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      08 Aug 2011 (220) 13 Aug 2011 (225)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      14 Aug 2011 (226) 14 Aug 2011 (226)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      15 Aug 2011 (227) 20 Aug 2011 (232)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      21 Aug 2011 (233) 21 Aug 2011 (233)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      22 Aug 2011 (234) 27 Aug 2011 (239)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      28 Aug 2011 (240) 28 Aug 2011 (240)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      29 Aug 2011 (241) 03 Sep 2011 (246)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      04 Sep 2011 (247) 04 Sep 2011 (247)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      05 Sep 2011 (248) 10 Sep 2011 (253)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      11 Sep 2011 (254) 11 Sep 2011 (254)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      12 Sep 2011 (255) 16 Sep 2011 (259)  223  HSK,STA,SCI,BST Thermal
+variations
+      17 Sep 2011 (260) 17 Sep 2011 (260)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      18 Sep 2011 (261) 19 Sep 2011 (262)  223  HSK,STA,SCI,BST Thermal
+variations
+      20 Sep 2011 (263) 20 Sep 2011 (263)  223  HSK,STA,SCI,BST Power cycle
+(clear bit errors, data unaffected), thermal variations
+      21 Sep 2011 (264) 23 Sep 2011 (266)  223  HSK,STA,SCI,BST Thermal
+variations
+      24 Sep 2011 (267) 24 Sep 2011 (267)  223  HSK,STA,SCI     Checkout,
+thermal variations
+      25 Sep 2011 (268) 30 Sep 2011 (273)  223  HSK,STA,SCI,BST Thermal
+variations
+      01 Oct 2011 (274) 01 Oct 2011 (274)  223  HSK,STA,SCI,BST Thermal
+variations
+      02 Oct 2011 (275) 07 Oct 2011 (280)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      08 Oct 2011 (281) 08 Oct 2011 (281)  223  HSK,STA,SCI     Checkout,
+thermal variations
+      09 Oct 2011 (282) 14 Oct 2011 (287)  223  HSK,STA,SCI,BST Thermal
+variations
+      15 Oct 2011 (288) 15 Oct 2011 (288)  223  HSK,STA,SCI     Checkout,
+thermal variations
+      16 Oct 2011 (289) 21 Oct 2011 (294)  223  HSK,STA,SCI,BST Thermal
+variations
+      22 Oct 2011 (295) 22 Oct 2011 (295)  223  HSK,STA,SCI     Checkout,
+thermal variations
+      23 Oct 2011 (296) 28 Oct 2011 (301)  223  HSK,STA,SCI,BST Thermal
+variations
+      29 Oct 2011 (302) 29 Oct 2011 (302)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      30 Oct 2011 (303) 31 Oct 2011 (304)  223  HSK,STA,SCI,BST Thermal
+variations
+      01 Nov 2011 (305) 04 Nov 2011 (308)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      05 Nov 2011 (309) 05 Nov 2011 (309)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      06 Nov 2011 (310) 11 Nov 2011 (315)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      12 Nov 2011 (316) 12 Nov 2011 (316)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      13 Nov 2011 (317) 18 Nov 2011 (322)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      19 Nov 2011 (323) 19 Nov 2011 (323)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      20 Nov 2011 (324) 25 Nov 2011 (329)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      26 Nov 2011 (330) 26 Nov 2011 (330)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      27 Nov 2011 (331) 02 Dec 2011 (336)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      03 Dec 2011 (337) 03 Dec 2011 (337)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      04 Dec 2011 (338) 09 Dec 2011 (343)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      10 Dec 2011 (344) 10 Dec 2011 (344)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      11 Dec 2011 (345) 15 Dec 2011 (349)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 Dec 2011 (350) 16 Dec 2011 (350)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      17 Dec 2011 (351) 23 Dec 2011 (357)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      24 Dec 2011 (358) 24 Dec 2011 (358)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      25 Dec 2011 (359) 29 Dec 2011 (363)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      30 Dec 2011 (364) 30 Dec 2011 (364)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      31 Dec 2011 (365) 31 Dec 2011 (365)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      01 Jan 2012 (001) 05 Jan 2012 (005)  223  HSK,STA,SCI,BST Thermal
+variations
+      06 Jan 2012 (006) 06 Jan 2012 (006)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      07 Jan 2012 (007) 12 Jan 2012 (012)  223  HSK,STA,SCI,BST Thermal
+variations
+      13 Jan 2012 (013) 13 Jan 2012 (013)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      14 Jan 2012 (014) 19 Jan 2012 (019)  223  HSK,STA,SCI,BST Thermal
+variations
+      20 Jan 2012 (020) 20 Jan 2012 (020)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      21 Jan 2012 (021) 26 Jan 2012 (026)  223  HSK,STA,SCI,BST Thermal
+variations
+      27 Jan 2012 (027) 27 Jan 2012 (027)  223  HSK,STA,SCI,BST Checkout,
+unexpected auto-range triggered by SEU in data bits, thermal variations
+      28 Jan 2012 (028) 02 Feb 2012 (033)  223  HSK,STA,SCI,BST Thermal
+variations
+      03 Feb 2012 (034) 03 Feb 2012 (034)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      04 Feb 2012 (035) 08 Feb 2012 (039)  223  HSK,STA,SCI,BST Thermal
+variations
+      09 Feb 2012 (040) 09 Feb 2012 (040)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      10 Feb 2012 (041) 15 Feb 2012 (046)  223  HSK,STA,SCI,BST Thermal
+variations
+      16 Feb 2012 (047) 16 Feb 2012 (047)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      17 Feb 2012 (048) 22 Feb 2012 (053)  223  HSK,STA,SCI,BST Thermal
+variations
+      23 Feb 2012 (054) 23 Feb 2012 (054)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      24 Feb 2012 (055) 29 Feb 2012 (060)  223  HSK,STA,SCI,BST Thermal
+variations
+      01 Mar 2012 (061) 01 Mar 2012 (061)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      02 Mar 2012 (062) 07 Mar 2012 (067)  223  HSK,STA,SCI,BST Thermal
+variations
+      08 Mar 2012 (068) 08 Mar 2012 (068)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      09 Mar 2012 (069) 14 Mar 2012 (074)  223  HSK,STA,SCI,BST Thermal
+variations
+      15 Mar 2012 (075) 15 Mar 2012 (075)  223  HSK,STA,SCI,BST Checkout,
+thermal variations
+      16 Mar 2012 (076) 17 Mar 2012 (077)  223  HSK,STA,SCI,BST Thermal
+variations
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+OB2   18 Mar 2012 (078) 19 Mar 2012 (079)  223  HSK,STA,SCI,BST Thermal
+variations
+      20 Mar 2012 (080) 20 Mar 2012 (080)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      21 Mar 2012 (081) 21 Mar 2012 (081)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      22 Mar 2012 (082) 27 Mar 2012 (087)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      28 Mar 2012 (088) 28 Mar 2012 (088)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variation
+      29 Mar 2012 (089) 03 Apr 2012 (094)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      04 Apr 2012 (095) 04 Apr 2012 (095)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      05 Apr 2012 (096) 10 Apr 2012 (101)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      11 Apr 2012 (102) 11 Apr 2012 (102)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      12 Apr 2012 (103) 15 Apr 2012 (106)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 Apr 2012 (107) 16 Apr 2012 (107)  223  HSK,STA,SCI     MAG off for
+OCM into 8-h orbit, Full-orbit high-rate data, thermal variations
+      17 Apr 2012 (108) 26 Apr 2012 (117)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      27 Apr 2012 (118) 27 Apr 2012 (118)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      28 Apr 2012 (119) 01 May 2012 (122)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      02 May 2012 (123) 02 May 2012 (123)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      03 May 2012 (124) 05 May 2012 (126)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      06 May 2012 (127) 06 May 2012 (127)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      07 May 2012 (128) 10 May 2012 (131)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      11 May 2012 (132) 11 May 2012 (132)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      12 May 2012 (133) 15 May 2012 (136)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 May 2012 (137) 16 May 2012 (137)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      17 May 2012 (138) 19 May 2012 (140)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      20 May 2012 (141) 20 May 2012 (141)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      21 May 2012 (142) 24 May 2012 (145)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      25 May 2012 (146) 25 May 2012 (146)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      26 May 2012 (147) 29 May 2012 (150)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      30 May 2012 (151) 30 May 2012 (151)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      31 May 2012 (152) 02 Jun 2012 (154)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      03 Jun 2012 (155) 03 Jun 2012 (155)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      04 Jun 2012 (156) 08 Jun 2012 (160)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      09 Jun 2012 (161) 12 Jun 2012 (164)  223  HSK,STA,SCI     MAG off due
+to boom exceeding temperature limit (FPP230), Full-orbit high-rate data,
+thermal variations
+      13 Jun 2012 (165) 13 Jun 2012 (165)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      14 Jun 2012 (166) 21 Jun 2012 (173)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      22 Jun 2012 (174) 22 Jun 2012 (174)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      23 Jun 2012 (175) 26 Jun 2012 (178)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      27 Jun 2012 (179) 27 Jun 2012 (179)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      28 Jun 2012 (180) 03 Jul 2012 (185)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      04 Jul 2012 (186) 04 Jul 2012 (186)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      05 Jul 2012 (187) 06 Jul 2012 (188)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      07 Jul 2012 (189) 07 Jul 2012 (189)  223  HSK,STA,SCI     MAG off due
+to DPU SEU, Full-orbit high-rate data, thermal variations
+      08 Jul 2012 (190) 10 Jul 2012 (192)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      11 Jul 2012 (193) 11 Jul 2012 (193)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      12 Jul 2012 (194) 17 Jul 2012 (199)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      18 Jul 2012 (200) 18 Jul 2012 (200)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      19 Jul 2012 (201) 24 Jul 2012 (206)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      25 Jul 2012 (207) 25 Jul 2012 (207)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      26 Jul 2012 (208) 31 Jul 2012 (213)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      01 Aug 2012 (214) 01 Aug 2012 (214)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      02 Aug 2012 (215) 07 Aug 2012 (220)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      08 Aug 2012 (221) 08 Aug 2012 (221)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      09 Aug 2012 (222) 14 Aug 2012 (227)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      15 Aug 2012 (228) 15 Aug 2012 (228)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      16 Aug 2012 (229) 21 Aug 2012 (234)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      22 Aug 2012 (235) 22 Aug 2012 (235)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      23 Aug 2012 (236) 28 Aug 2012 (241)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      29 Aug 2012 (242) 29 Aug 2012 (242)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      30 Aug 2012 (243) 04 Sep 2012 (248)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      05 Sep 2012 (249) 05 Sep 2012 (249)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      06 Sep 2012 (250) 11 Sep 2012 (255)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      12 Sep 2012 (256) 12 Sep 2012 (256)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      13 Sep 2012 (257) 18 Sep 2012 (262)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      19 Sep 2012 (263) 19 Sep 2012 (263)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      20 Sep 2012 (264) 25 Sep 2012 (269)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      26 Sep 2012 (270) 26 Sep 2012 (270)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      27 Sep 2012 (271) 02 Oct 2012 (276)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      03 Oct 2012 (277) 03 Oct 2012 (277)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      04 Oct 2012 (278) 09 Oct 2012 (283)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      10 Oct 2012 (284) 10 Oct 2012 (284)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      11 Oct 2012 (285) 16 Oct 2012 (290)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      17 Oct 2012 (291) 17 Oct 2012 (291)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      18 Oct 2012 (292) 23 Oct 2012 (297)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      24 Oct 2012 (298) 24 Oct 2012 (298)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      25 Oct 2012 (299) 28 Oct 2012 (302)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      29 Oct 2012 (303) 29 Oct 2012 (303)  223  HSK,STA,SCI     Unexpected
+auto-range triggered by SEU in data bits, Full-orbit high-rate data, thermal
+variations
+      30 Oct 2012 (304) 30 Oct 2012 (304)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      31 Oct 2012 (305) 31 Oct 2012 (305)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      01 Nov 2012 (306) 06 Nov 2012 (311)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      07 Nov 2012 (312) 07 Nov 2012 (312)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      08 Nov 2012 (313) 13 Nov 2012 (318)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      14 Nov 2012 (319) 14 Nov 2012 (319)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      15 Nov 2012 (320) 20 Nov 2012 (325)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      21 Nov 2012 (326) 21 Nov 2012 (326)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      22 Nov 2012 (327) 27 Nov 2012 (332)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      28 Nov 2012 (333) 28 Nov 2012 (333)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      29 Nov 2012 (334) 04 Dec 2012 (339)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      05 Dec 2012 (340) 05 Dec 2012 (340)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      06 Dec 2012 (341) 11 Dec 2012 (346)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      12 Dec 2012 (347) 12 Dec 2012 (347)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      13 Dec 2012 (348) 18 Dec 2012 (353)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      19 Dec 2012 (354) 19 Dec 2012 (354)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      20 Dec 2012 (355) 25 Dec 2012 (360)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      26 Dec 2012 (361) 26 Dec 2012 (361)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      27 Dec 2012 (362) 01 Jan 2013 (001)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      02 Jan 2013 (002) 02 Jan 2013 (002)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      03 Jan 2013 (003) 15 Jan 2013 (015)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 Jan 2013 (016) 16 Jan 2013 (016)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      17 Jan 2013 (017) 17 Jan 2013 (017)  223  HSK,STA,SCI     Unexpected
+auto-range triggered by SEU in data bits, Full-orbit high-rate data, thermal
+variations
+      18 Jan 2013 (018) 22 Jan 2013 (022)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      23 Jan 2013 (023) 23 Jan 2013 (023)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      24 Jan 2013 (024) 24 Jan 2013 (029)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      30 Jan 2013 (030) 30 Jan 2013 (030)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      31 Jan 2013 (031) 03 Feb 2013 (034)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      04 Feb 2013 (035) 04 Feb 2013 (035)  223  HSK,STA,SCI     Unexpected
+auto-range triggered by SEU in data bits, Full-orbit high-rate data, thermal
+variations
+      05 Feb 2013 (036) 05 Feb 2013 (036)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      06 Feb 2013 (037) 06 Feb 2013 (037)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      07 Feb 2013 (038) 12 Feb 2013 (043)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      13 Feb 2013 (044) 13 Feb 2013 (044)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      14 Feb 2013 (045) 19 Feb 2013 (050)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      20 Feb 2013 (051) 20 Feb 2013 (051)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      21 Feb 2013 (052) 24 Feb 2013 (055)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      25 Feb 2013 (056) 25 Feb 2013 (056)  223  HSK,STA,SCI     Unexpected
+auto-range triggered by SEU in data bits, Full-orbit high-rate data, thermal
+variations
+      26 Feb 2013 (057) 26 Feb 2013 (057)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      27 Feb 2013 (058) 27 Feb 2013 (058)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      28 Feb 2013 (059) 28 Feb 2013 (059)  223  HSK,STA,SCI     MAG partially
+off due to fault-protection processor reset, Full-orbit high-rate data,
+thermal variations
+      29 Feb 2013 (060) 05 Mar 2013 (064)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      06 Mar 2013 (065) 06 Mar 2013 (065)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      07 Mar 2013 (066) 12 Mar 2013 (071)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      13 Mar 2013 (072) 13 Mar 2013 (072)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      14 Mar 2013 (073) 17 Mar 2013 (076)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+OB3   18 Mar 2013 (077) 19 Mar 2013 (078)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      20 Mar 2013 (079) 20 Mar 2013 (079)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      21 Mar 2013 (080) 26 Mar 2013 (085)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      27 Mar 2013 (086) 27 Mar 2013 (086)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      28 Mar 2013 (087) 02 Apr 2013 (092)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      03 Apr 2013 (093) 03 Apr 2013 (093)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      04 Apr 2013 (094) 09 Apr 2013 (099)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      10 Apr 2013 (100) 10 Apr 2013 (100)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      11 Apr 2013 (101) 16 Apr 2013 (106)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      17 Apr 2013 (107) 17 Apr 2013 (107)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      18 Apr 2013 (108) 21 Apr 2013 (111)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      22 Apr 2013 (112) 22 Apr 2013 (112)  223  HSK,STA,SCI     Unexpected
+auto-range triggered by SEU in data bits, Full-orbit high-rate data, thermal
+variations
+      23 Apr 2013 (113) 23 Apr 2013 (113)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      24 Apr 2013 (114) 24 Apr 2013 (114)  223  HSK,STA,SCI     Checkout,
+Full-orbit
+high-rate data, thermal variations
+      25 Apr 2013 (115) 30 Apr 2013 (120)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      01 May 2013 (121) 01 May 2013 (121)  223  HSK,STA,SCI     Checkout,
+Full-orbit
+high-rate data, thermal variations
+      02 May 2013 (122) 06 May 2013 (126)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      07 May 2013 (127) 07 May 2013 (127)  223  HSK,STA,SCI     A/D SEU
+(Y-Axis), Full-orbit high-rate data, thermal variations
+      08 May 2013 (128) 08 May 2013 (128)  223  HSK,STA,SCI     A/D SEU
+(Y-Axis), Checkout, Full-orbit high-rate data, thermal variations
+      09 May 2013 (129) 14 May 2013 (134)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      15 May 2013 (135) 15 May 2013 (135)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      16 May 2013 (136) 21 May 2013 (141)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      22 May 2013 (142) 22 May 2013 (142)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      23 May 2013 (143) 26 May 2013 (146)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      27 May 2013 (147) 27 May 2013 (147)  223  HSK,STA,SCI     Unexpected
+auto-range triggered by SEU in data bits, Full-orbit high-rate data, thermal
+variations
+      28 May 2013 (148) 28 May 2013 (148)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      29 May 2013 (149) 29 May 2013 (149)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      30 May 2013 (150) 04 Jun 2013 (155)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      05 Jun 2013 (156) 05 Jun 2013 (156)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      06 Jun 2013 (157) 11 Jun 2013 (162)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      12 Jun 2013 (163) 12 Jun 2013 (163)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      13 Jun 2013 (164) 18 Jun 2013 (169)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      19 Jun 2013 (170) 19 Jun 2013 (170)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      20 Jun 2013 (171) 25 Jun 2013 (176)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      26 Jun 2013 (177) 26 Jun 2013 (177)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      27 Jun 2013 (178) 02 Jul 2013 (183)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      03 Jul 2013 (184) 03 Jul 2013 (184)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      04 Jul 2013 (185) 09 Jul 2013 (190)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      10 Jul 2013 (191) 10 Jul 2013 (191)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      11 Jul 2013 (192) 23 Jul 2013 (204)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      24 Jul 2013 (205) 24 Jul 2013 (205)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      25 Jul 2013 (206) 30 Jul 2013 (211)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      31 Jul 2013 (212) 31 Jul 2013 (212)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      01 Aug 2013 (213) 06 Aug 2013 (218)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      07 Aug 2013 (219) 07 Aug 2013 (219)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      08 Aug 2013 (220) 13 Aug 2013 (225)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      14 Aug 2013 (226) 14 Aug 2013 (226)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      15 Aug 2013 (227) 20 Aug 2013 (232)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      21 Aug 2013 (233) 21 Aug 2013 (233)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      22 Aug 2013 (234) 27 Aug 2013 (239)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      28 Aug 2013 (240) 28 Aug 2013 (240)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      29 Aug 2013 (241) 03 Sep 2013 (246)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      04 Sep 2013 (247) 04 Sep 2013 (247)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      05 Sep 2013 (248) 10 Sep 2013 (253)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      11 Sep 2013 (254) 11 Sep 2013 (254)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      12 Sep 2013 (255) 17 Sep 2013 (260)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      18 Sep 2013 (261) 18 Sep 2013 (261)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      19 Sep 2013 (262) 24 Sep 2013 (267)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      25 Sep 2013 (268) 25 Sep 2013 (268)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      26 Sep 2013 (269) 01 Oct 2013 (274)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      02 Oct 2013 (275) 02 Oct 2013 (275)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      03 Oct 2013 (276) 08 Oct 2013 (281)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      09 Oct 2013 (282) 09 Oct 2013 (282)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      10 Oct 2013 (283) 15 Oct 2013 (288)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 Oct 2013 (289) 16 Oct 2013 (289)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      17 Oct 2013 (290) 22 Oct 2013 (295)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      23 Oct 2013 (296) 23 Oct 2013 (296)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      24 Oct 2013 (297) 29 Oct 2013 (302)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      30 Oct 2013 (303) 30 Oct 2013 (303)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      31 Oct 2013 (304) 05 Nov 2013 (309)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      06 Nov 2013 (310) 06 Nov 2013 (310)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      07 Nov 2013 (311) 12 Nov 2013 (316)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      13 Nov 2013 (317) 13 Nov 2013 (317)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      14 Nov 2013 (318) 19 Nov 2013 (323)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      20 Nov 2013 (324) 20 Nov 2013 (324)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      21 Nov 2013 (325) 26 Nov 2013 (330)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      27 Nov 2013 (331) 27 Nov 2013 (331)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      28 Nov 2013 (332) 03 Dec 2013 (337)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      04 Dec 2013 (338) 04 Dec 2013 (338)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      05 Dec 2013 (339) 10 Dec 2013 (344)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      11 Dec 2013 (345) 11 Dec 2013 (345)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      12 Dec 2013 (346) 17 Dec 2013 (351)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      18 Dec 2013 (352) 18 Dec 2013 (352)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      19 Dec 2013 (353) 22 Dec 2013 (356)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      23 Dec 2013 (357) 24 Dec 2013 (358)  223  HSK,STA,SCI     Full-orbit
+2/s data, thermal variations
+      25 Dec 2013 (359) 25 Dec 2013 (359)  223  HSK,STA,SCI     Checkout,
+full-orbit 2/s data, Thermal variations
+      23 Dec 2013 (360) 31 Dec 2013 (365)  223  HSK,STA,SCI     Full-orbit
+2/s data, thermal variations
+      01 Jan 2014 (001) 01 Jan 2014 (001)  223  HSK,STA,SCI     Checkout,
+full-orbit 2/s data, Thermal variations
+      02 Jan 2014 (002) 07 Jan 2014 (007)  223  HSK,STA,SCI     Full-orbit
+2/s data, thermal variations
+      08 Jan 2014 (008) 08 Jan 2014 (008)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      09 Jan 2014 (009) 14 Jan 2014 (014)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      15 Jan 2014 (015) 15 Jan 2014 (015)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      16 Jan 2014 (016) 21 Jan 2014 (021)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      22 Jan 2014 (022) 22 Jan 2014 (022)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      23 Jan 2014 (023) 28 Jan 2014 (028)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      29 Jan 2014 (029) 29 Jan 2014 (029)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      30 Jan 2014 (030) 04 Feb 2014 (035)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      05 Feb 2014 (036) 05 Feb 2014 (036)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      06 Feb 2014 (037) 11 Feb 2014 (042)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      12 Feb 2014 (043) 12 Feb 2014 (043)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      13 Feb 2014 (044) 18 Feb 2014 (049)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      19 Feb 2014 (050) 19 Feb 2014 (050)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      20 Feb 2014 (051) 25 Feb 2014 (056)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      26 Feb 2014 (057) 26 Feb 2014 (057)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      27 Feb 2014 (058) 04 Mar 2014 (063)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      05 Mar 2014 (064) 05 Mar 2014 (064)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      06 Mar 2014 (065) 11 Mar 2014 (070)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      12 Mar 2014 (071) 12 Mar 2014 (071)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      13 Mar 2014 (072) 17 Mar 2014 (076)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+ 
+        Start Day         End Day         Qlty  Data types/comment
+Phase    Date     (DOY)    Date     (DOY)  SHC
+----- ----------------- ----------------- ----- -----------------------------
+OB4   18 Mar 2014 (077) 18 Mar 2014 (077)  223  HSK,STA,SCI     Thermal
+variations
+      19 Mar 2014 (078) 19 Mar 2014 (078)  223  HSK,STA,SCI     Checkout,
+thermal variations
+      20 Mar 2014 (079) 25 Mar 2014 (084)  223  HSK,STA,SCI     Thermal
+variations
+      26 Mar 2014 (085) 26 Mar 2014 (085)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      27 Mar 2014 (086) 01 Apr 2014 (091)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      02 Apr 2014 (092) 02 Apr 2014 (092)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      03 Apr 2014 (093) 08 Apr 2014 (098)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      09 Apr 2014 (099) 09 Apr 2014 (099)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      10 Apr 2014 (100) 15 Apr 2014 (105)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 Apr 2014 (106) 16 Apr 2014 (106)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      17 Apr 2014 (107) 22 Apr 2014 (112)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      23 Apr 2014 (113) 23 Apr 2014 (113)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      24 Apr 2014 (114) 29 Apr 2014 (119)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      30 Apr 2014 (120) 30 Apr 2014 (120)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      01 May 2014 (121) 06 May 2014 (126)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      07 May 2014 (127) 07 May 2014 (127)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      08 May 2014 (128) 13 May 2014 (133)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      14 May 2014 (134) 14 May 2014 (134)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      15 May 2014 (135) 20 May 2014 (140)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      21 May 2014 (141) 21 May 2014 (141)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      22 May 2014 (142) 27 May 2014 (147)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      28 May 2014 (148) 28 May 2014 (148)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      29 May 2014 (149) 03 Jun 2014 (154)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      04 Jun 2014 (155) 04 Jun 2014 (155)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      05 Jun 2014 (156) 10 Jun 2014 (161)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      11 Jun 2014 (162) 11 Jun 2014 (162)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      12 Jun 2014 (163) 17 Jun 2014 (168)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      18 Jun 2014 (169) 18 Jun 2014 (169)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      19 Jun 2014 (170) 24 Jun 2014 (175)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      25 Jun 2014 (176) 25 Jun 2014 (176)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      26 Jun 2014 (177) 01 Jul 2014 (182)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      02 Jul 2014 (183) 02 Jul 2014 (183)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      03 Jul 2014 (184) 08 Jul 2014 (189)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      09 Jul 2014 (190) 09 Jul 2014 (190)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      10 Jul 2014 (191) 15 Jul 2014 (196)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 Jul 2014 (197) 16 Jul 2014 (197)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      17 Jul 2014 (198) 22 Jul 2014 (203)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      23 Jul 2014 (204) 23 Jul 2014 (204)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      24 Jul 2014 (205) 29 Jul 2014 (210)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      30 Jul 2014 (211) 30 Jul 2014 (211)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      31 Jul 2014 (212) 05 Aug 2014 (217)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      06 Aug 2014 (218) 06 Aug 2014 (218)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      07 Aug 2014 (219) 07 Aug 2014 (219)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      08 Aug 2014 (220) 08 Aug 2014 (220)  223  HSK,STA,SCI     A/D SEU
+(X-Axis),Full-orbit high-rate data, thermal variations
+      09 Aug 2014 (221) 12 Aug 2014 (224)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      13 Aug 2014 (225) 13 Aug 2014 (225)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      14 Aug 2014 (226) 19 Aug 2014 (231)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      20 Aug 2014 (232) 20 Aug 2014 (232)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      21 Aug 2014 (233) 26 Aug 2014 (238)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      27 Aug 2014 (239) 27 Aug 2014 (239)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      28 Aug 2014 (240) 02 Sep 2014 (245)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      03 Sep 2014 (246) 03 Sep 2014 (246)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      04 Sep 2014 (247) 09 Sep 2014 (252)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      10 Sep 2014 (253) 10 Sep 2014 (253)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      11 Sep 2014 (254) 16 Sep 2014 (259)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      17 Sep 2014 (260) 17 Sep 2014 (260)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      18 Sep 2014 (261) 23 Sep 2014 (266)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      24 Sep 2014 (267) 24 Sep 2014 (267)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      25 Sep 2014 (268) 30 Sep 2014 (273)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      01 Oct 2014 (274) 01 Oct 2014 (274)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      02 Oct 2014 (275) 07 Oct 2014 (280)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      08 Oct 2014 (281) 08 Oct 2014 (281)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      09 Oct 2014 (282) 15 Oct 2014 (288)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 Oct 2014 (289) 16 Oct 2014 (289)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      17 Oct 2014 (290) 22 Oct 2014 (295)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      23 Oct 2014 (296) 23 Oct 2014 (296)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      24 Oct 2014 (297) 29 Oct 2014 (302)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      30 Oct 2014 (303) 30 Oct 2014 (303)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      31 Oct 2014 (304) 05 Nov 2014 (309)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      06 Nov 2014 (310) 06 Nov 2014 (310)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      07 Nov 2014 (311) 12 Nov 2014 (316)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      13 Nov 2014 (317) 13 Nov 2014 (317)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      14 Nov 2014 (318) 19 Nov 2014 (323)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      20 Nov 2014 (324) 20 Nov 2014 (324)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      21 Nov 2014 (325) 27 Nov 2014 (331)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      28 Nov 2014 (332) 28 Nov 2014 (332)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      29 Nov 2014 (333) 29 Nov 2014 (333)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      30 Nov 2014 (334) 04 Dec 2014 (338)  223  HSK,STA,SCI     Thermal
+variations
+      05 Dec 2014 (339) 05 Dec 2014 (339)  223  HSK,STA,SCI     Checkout,
+thermal variations
+      06 Dec 2014 (340) 11 Dec 2014 (345)  223  HSK,STA,SCI     Thermal
+variations
+      12 Dec 2014 (346) 12 Dec 2014 (346)  223  HSK,STA,SCI     Checkout,
+thermal variations
+      13 Dec 2014 (347) 17 Dec 2014 (351)  223  HSK,STA,SCI     Thermal
+variations
+      18 Dec 2014 (352) 18 Dec 2014 (352)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      19 Dec 2014 (353) 19 Dec 2014 (353)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      20 Dec 2014 (354) 21 Dec 2014 (355)  223  HSK,STA,SCI     Unexpected
+auto-range triggered by SEU in data bits, Full-orbit high-rate data, thermal
+variations
+      22 Dec 2014 (356) 25 Dec 2014 (359)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      26 Dec 2014 (360) 26 Dec 2014 (360)  223  HSK,STA,SCI     Data gap due
+to overrun of solid state recorder, Full-orbit high-rate data, thermal
+variations
+      27 Dec 2014 (361) 01 Jan 2015 (001)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      02 Jan 2015 (002) 02 Jan 2015 (002)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      03 Jan 2015 (003) 09 Jan 2015 (009)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      10 Jan 2015 (010) 10 Jan 2015 (010)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      11 Jan 2015 (011) 16 Jan 2015 (016)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      17 Jan 2015 (017) 17 Jan 2015 (017)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      18 Jan 2015 (018) 23 Jan 2015 (023)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      24 Jan 2015 (024) 24 Jan 2015 (024)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      25 Jan 2015 (025) 30 Jan 2015 (030)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      31 Jan 2015 (031) 31 Jan 2015 (031)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      01 Feb 2015 (032) 07 Feb 2015 (038)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      08 Feb 2015 (039) 08 Feb 2015 (039)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      09 Feb 2015 (040) 14 Feb 2015 (045)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      15 Feb 2015 (046) 15 Feb 2015 (046)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      16 Feb 2015 (047) 21 Feb 2015 (052)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      22 Feb 2015 (053) 22 Feb 2015 (053)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      23 Feb 2015 (054) 28 Feb 2015 (059)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      01 Mar 2015 (060) 01 Mar 2015 (060)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      02 Mar 2015 (061) 07 Mar 2015 (066)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      08 Mar 2015 (067) 08 Mar 2015 (067)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      09 Mar 2015 (068) 15 Mar 2015 (074)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      16 Mar 2015 (075) 16 Mar 2015 (075)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      17 Mar 2015 (076) 17 Mar 2015 (076)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      18 Mar 2015 (077) 22 Mar 2015 (081)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      23 Mar 2015 (082) 23 Mar 2015 (082)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      24 Mar 2015 (083) 30 Mar 2015 (089)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      31 Mar 2015 (090) 31 Mar 2015 (090)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      01 Apr 2015 (091) 05 Apr 2015 (095)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      06 Apr 2015 (096) 06 Apr 2015 (096)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      07 Apr 2015 (097) 13 Apr 2015 (103)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      14 Apr 2015 (104) 14 Apr 2015 (104)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      15 Apr 2015 (105) 19 Apr 2015 (109)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      20 Apr 2015 (110) 20 Apr 2015 (110)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      21 Apr 2015 (111) 25 Apr 2015 (115)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+      26 Apr 2015 (116) 26 Apr 2015 (116)  223  HSK,STA,SCI     Checkout,
+Full-orbit high-rate data, thermal variations
+      27 Apr 2015 (117) 30 Apr 2015 (120)  223  HSK,STA,SCI     Full-orbit
+high-rate data, thermal variations
+----- ----------------- ----------------- ----- -----------------------------
+ 
+   Limitations
+   ===========
+     This data set is minimally processed data. The data are received from
+     the spacecraft telemetry and ingested into the MESSENGER Science
+     Operations Center(SOC).
+ 
+     The Science Header Data (SHD) EDRs are subject to occasionally dropped
+     packets resulting from MET-based de-duplication of ambiguous enumeration
+     of packets during ground processing. The problem arises when a science
+     data packet is terminated early and a second such packet is created
+     within the same integer MET. Early packet termination is forced
+     intentionally during the short checkout procedure executed weekly during
+     the orbit phase. For about 10% of the days on which such checkout
+     occurs, the SHD EDR are missing a single data record because time
+     keeping in these is limited to integer MET. The telemetry packet
+     numbering is unambiguous and the issue will be resolved in a future data
+     release by using time stamps with sub-second time resolution. The
+     Science Data (SCI) EDRs are not affected by this problem because time
+     stamps already have sub-second time resolution. Since the SHD EDRs are
+     not used in the creation of higher-level data products, the data bug has
+     no impact on scientific data analysis.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

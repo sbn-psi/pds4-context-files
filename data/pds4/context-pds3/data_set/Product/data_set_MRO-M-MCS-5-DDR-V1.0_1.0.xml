@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-mcs-5-ddr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO MARS CLIMATE SOUNDER LEVEL 5 DDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mcs.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-mcs-5-ddr-v1.0__browserp_mro-m-mcs-5-ddr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   D. McCleese, J. Schofield, F. Taylor, S. Calcutt, M. Foote, D. Kass, C. Leovy,
+                   D. Paige, P. Read, and R. Zurek, &apos;Mars Climate Sounder: An Investigation of
+                   Thermal and Water Vapor Structure, Dust and Condensate Distribution in the
+                   Atmosphere, and Energy Balance of the Polar Regions&apos;, Journal of Geophysical
+                   Research, TBD
+            </reference_text>
+            <description>reference.MCCLEESEETAL2006</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-MCS-5-DDR-V1.0</data_set_id>
+        <data_set_name>MRO MARS CLIMATE SOUNDER LEVEL 5 DDR V1.0</data_set_name>
+        <data_set_release_date>2008-05-22</data_set_release_date>
+        <start_time>2006-09-24T16:00:00.000Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>DANIEL J. MCCLEESE</producer_full_name>
+        <citation_text>
+            McCleese and Schofield, MRO MARS CLIMATE SOUNDER LEVEL 4 RDR
+            V1.0, NASA Planetary Data System, MRO-M-MCS-4-RDR-V1.0, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            The MCS atmospheric profiler detects vertical variations of
+            temperature, dust, and water vapor concentrations in the Martian
+            atmosphere. DDRs in the form of Level 2 data products (retrieved
+            geophysical profiles) are generated from the RDRs
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      This document describes how the MRO Mars Climate Sounder (MCS)
+      Derived Data Record (DDR) was generated, including data sources
+      and destinations. The document is intended to provide sufficient
+      information to enable users to understand the MCS DDR data product.
+      The users for whom this document is intended are scientists who
+      will analyze the data, including those associated with the Mars
+      Reconnaissance Orbiter (MRO) Project and those in the general
+      planetary science community.
+ 
+      This document addresses the Mars Reconnaissance Orbiter Derived
+      Data Record (DDR) data, and how the data are processed, formatted,
+      labeled, and uniquely identified. This document discusses standards
+      used in generating the product and software that may be used to
+      access the product. The data product structure and organization is
+      described in sufficient detail to enable a user to fully utilize
+      the DDR data product.
+ 
+      This data set consists of tables and supporting documentation from
+      the final analysis of the Derived Data Record (DDR) and details how
+      the DDR data set was derived from the Mars Reconnaissance Orbiter
+      (MRO) Mars Climate Sounder (MCS) Reduced Data Records (RDR).
+ 
+      The scientific goals, measurement objectives, and observational
+      strategies for the DDR dataset are discussed in MCCLEESE ET Al 2006
+      and the INSTRUMENT.CAT file accompanying this data set. Detailed
+      information addressing processing of the DDR data set can be found
+      in KLEINBOEHL 2008.
+ 
+      MCS is an atmospheric sounder that makes one measurement every
+      2.048 seconds, containing science, engineering and housekeeping
+      data, whenever the instrument is powered on. The instrument
+      operates in a single data-taking mode and observational
+      flexibility is provided by actuators that allow telescope
+      boresights to be directed over a range of 270 degrees in azimuth
+      and elevation.
+ 
+      Each instrument packet contains one measurement. The MCS DDR
+      contains time-ordered, calibrated data for the entire MCS
+      mission, starting with the initial instrument power-on in the MRO
+      mapping orbit at 16:00 UT on 24th September 2006. The data are
+      organized by UTC in monthly archive volumes, with 6 four-hour ASCII
+      tables per day accompanied by detached headers. Each table row
+      contains one measurement, and each column contains one calibrated
+      science, engineering or housekeeping parameter.
+ 
+      The MCS DDR contains all the profiles processed by the MCS science
+      team. Gaps in the data set are only evident from discontinuities in
+      the timing of table rows (see Data Coverage and Quality section).
+      For convenience these are presented in the same table format with
+      -9999 indicating time slots where data are not taken.  Geometry
+      information is not provided for soundings when the instrument is
+      slewing and a value of -9999 is used in all geometry fields.
+ 
+ 
+      Data Product Acquisition
+      ------------------------
+        The MCS software collects 192 sixteen-bit science measurements
+        from the focal plane interface electronics every 2.048 seconds,
+        along with associated instrument engineering and housekeeping
+        measurements. The science and housekeeping data are organized
+        into data packets that are transmitted to the spacecraft at the
+        same 2.048-second spacing. The data packets are downlinked to the
+        MRO Ground Data System (GDS) and placed into the Raw Science Data
+        Server (RSDS). MCS software queries the data from the RSDS and
+        assembles them into EDR data tables, each covering a 4 hour time
+        period.  The data in the EDR tables are then calibrated to
+        produce the RDR tables.
+ 
+        TBD
+ 
+        Each MCS DDR data table will be variable in size; typically
+        5-6 MB for each 4 hour time period; the volume of the DDR data
+        product will be approximately 36 MB per day; 1 GB per month.
+ 
+ 
+      Data Product Generation and Flow
+      --------------------------------
+        The MCS DDR data products, generated by the MCS Instrument Team
+        at JPL, are constructed from the MRO/MCS RDR data and formatted
+        according to the MRO/MCS DDR SIS. Meta-data derived from fields
+        in the DDR, will be used to populate the PDS label.
+ 
+        MCS science and engineering telemetry are transferred to the MRO
+        Project RSDS. Once transferred, the MCS software automatically
+        processes the telemetry into Level 0 EDR data products. The MCS
+        EDR data products are re-processed into RDR data products.  The
+        DDR data products are generated from the RDR data products and
+        then archived locally at the MCS operation center. After an
+        initial 6 month data validation period, the MCS team assembles
+        the DDR data products and ancillary files into archive volumes
+        and transfers the assembled volumes to the PDS Atmospheres Node.
+        An archive volume consists of one month of data.  Volumes are
+        delivered approximately every 3 months.
+ 
+        The MCS DDR archive will be made available via data releases
+        scheduled at three month intervals as specified in the Mars
+        Reconnaissance Orbiter Project Data Archive Generation,
+        Validation and Transfer Plan
+ 
+ 
+      Data Processing Level
+      ---------------------
+        This document uses the Committee on Data Management and
+        Computation (CODMAC) data level numbering system to describe the
+        processing level of the DDR data product. MCS DDR data products
+        are considered CODMAC Level 5, equivalent to NASA level 2. The
+        DDR data files are generated from CODMAC Level 4 or Resampled
+        Data, which are the time-ordered instrument science data.
+ 
+ 
+      Changes from Previous Versions
+      ------------------------------
+        The following section describes the changes between the various
+        versions of the archived volumes. This archive, regardless of
+        version number, contains the changes listed below:
+ 
+        Version 2:
+        1. Modified measurement selection and fixed minor bugs.
+ 
+        Version 3:
+        1. Improved topography calculation to get a better estimate of the
+           Mars horizon during small rolls (up to 9 deg limb angle).
+        2. Optimized detector selection for temperature retrieval to achieve
+           improved altitude resolution.
+        3. Modified detector selection for temperature, dust, and water ice
+           retrieval to better accommodate calibration uncertainties
+           (particularly in low radiances) that occur during limb-staring
+           (when the instrument is pointed at the limb with a fixed
+           elevation angle for an extended period of time).
+ 
+        Version 4:
+        1. MCS Frames kernels changed to modify a fixed instrument tilt
+           identified in off-track limb observations. The tilt of 0.431
+           degrees was applied about an axis in the S/C XY plance inclined
+           at 25.8 degrees to the S/C X-Axis. The elevation rotation in the
+           Frames kernel was changed from -0.203 degrees to -0.030 degrees
+           to compensate for the effect of the tilt change. The overall
+           effect of these changes is to improve limb pointing in the
+           vertical to better than 0.02 degrees in both in and off-track
+           observations.
+ 
+ 
+    Processing - Level 1 to Level 2
+    ===============================
+      Level 1 to 2 data processing can be divided into three phases.
+ 
+      1.  Pre-processing.
+      2.  Atmospheric profile retrieval.
+      3.  Post-processing.
+ 
+ 
+      Pre-Processing
+      --------------
+        Pre processing takes the MCS level 1 data (calibrated radiances and
+        geometry) as its input and performs the following functions.
+ 
+        1.  Selects groups of 5 contiguous limb-viewing measurements.
+        2.  Uses radiance, roll, freeze and geometry tests to reject problem
+            data.
+        3.  Uses MOLA altimetry maps to assign surface altitude to
+            measurements.
+        4.  Outputs a data file with input needed by the profile retrieval
+            software.
+ 
+ 
+      Atmopheric Profile Retrieval
+      ----------------------------
+        Atmopheric profile retrieval is the most complex element of the
+        MCS level 1 to level 2 processing suite. Its primary functions
+        are to:
+ 
+        1.  Read and average groups of 5-limb measurements with geometry.
+        2.  Select average radiance measurements used for profile retrievals.
+        3.  Retrieve profiles of temperature, dust and water ice as a
+            function of pressure from radiances using a modified Chahine
+            method.
+        4.  Output results of profile retrieval in a form suitable for the
+            post-processing software.
+ 
+ 
+      Post-Processing
+      ---------------
+        Post-processing applies quality control to the retrieved profiles and
+        outputs level 2 products suitable for input to the PDS. Its chief
+        functions are to:
+ 
+        1.  Read relevant data output by the Profile Retrieval software.
+        2.  Select good profile retrievals based on radiance residual
+            criteria for the pressure, temperature, dust, and water ice
+            retrievals considered seperately.
+        3.  Calculate parameters needed for Level 2 data set.
+        4.  Output formatted level 2 data for each good profile set.
+ 
+ 
+      All three phases of level 1 to level 2 data processing are described in
+      more detail below (see [KLEINBOEHL 2008]).
+ 
+ 
+    Data
+    ====
+      The MCS DDR is represented by a single PDS labeled table.  Each
+      table is accompanied by a full PDS detached label with the same
+      name except for suffix *.LBL. The PDS label completely describes
+      the format and contents of the table.
+ 
+      The naming convention for the tables and detached headers follow
+      the time-organization of the data itself and use the following
+      naming convention:
+ 
+         yyyymmddhh_DDR.TAB; where:
+ 
+              yyyy = year in which the data was acquired
+                mm = month of the year in which the data was acquired
+                dd = day of the month in which the data was acquired
+                hh = hour of the day in which the data was acquired
+ 
+      Note that the hour is UT (to within the nearest second) at the start
+      of the coverage of the data contained in the file.  There are six
+      possible values for hour.
+ 
+      The first data after powering on in September 2006 are:
+ 
+       - 2006092416_DDR.LBL:   The PDS label that describes the DDR data
+       - 2006092416_DDR.TAB:   The actual DDR data formatted into a PDS
+                                 TABLE object
+ 
+ 
+    Ancillary Data
+    ==============
+      Ancillary data is used to generate the geometry fields in the MCR
+      DDR product. This data comes from the navigation team and is
+      assumed to be the best available. The following SPICE NAIF Kernels
+      are used:
+ 
+        1. Sclk to Scet kernel (sclk)
+        2. Leap Seconds kernel (lsk)
+        3. Frame reference kernel (fk)
+        4. Planetary constants kernel (pck)
+        5. Spacecraft ephemeris kernel (spk)
+        6. Pointing kernel (ck)
+ 
+ 
+    Coordinate System
+    =================
+      All positions and vectors in the MCS DDR product files are
+      specified in Areocentric spherical coordinates.
+ 
+ 
+    Software
+    ========
+      The MCS DDR products are formatted as columnar ASCII data; and as
+      such, they can be read and manipulated by standard, public-domain
+      software. For this reason, no special utilities are provided.
+ 
+      The MCS DDR products are standard PDS-labeled tables that can be
+      viewed with NASAView, an application developed by the PDS and
+      available for a variety of computer platforms from the PDS web
+      site.
+ 
+ 
+    Archive Format
+    ==============
+      The individual archives were delivered to the PDS Atmospheres
+      node as gzipped tar files via ftp.  Once validated they are
+      available online with the archive volume structure.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Since MCS is a limb sounding instrument, the location of the
+      measurements is slightly complex geometrically.  For any given
+      detector, the vertical resolution is defined by the appropriate
+      weighting function (see Kleinboeul et al) and is approximately 5
+      km. The horizontal weighting function is controlled by the
+      spherical atmosphere and is approxmately xxx km along the look
+      direction (full-width half-max), centered at the tangent point.  In
+      moderately opaque (either due to aerosols or the temperature
+      structure), this may be biased closer to the instrument than the
+      tangent point, but since excessive opacity prevents the measurement
+      from being used, this is a small effect.  The width perpendicular
+      to the look direction is controlled by the horizontal fields of
+      view and is approximately 8 km [TBV].
+ 
+ 
+      Quality Flags
+      -------------
+        The tangent point for each detector (or layer) is closer to the
+        instrument than the one below it.  This results in a shift of xxx
+        km between the surface and a view at 80 km altitude along the
+        line of sight.  To help with this issue (and indicate the look
+        direction) the altitude latitude and longitude are given for each
+        pressure surface of the retrieval(columns 13, 14, and 15 in DDR
+        part 2).  While the views of the two MCS telescopes overlap,
+        those of the individual arrays do not.  This results in an
+        effective observation region of ~100 km wide perpendicular to the
+        line of sight.
+ 
+        We have also included a simple location for the profile
+        (Profile_lat and Profile_lon, columns 13 and 14 in DDR 1) for
+        applications where the exact viewing geometry and profile shape
+        are not relevant.  These are also useful for searching for
+        profiles in specific profiles.
+ 
+        The timestamp on each profile (columns 2, 3, and 4 of the DDR 1
+        record) is the mean of the time of the limb soudnings (from the
+        RDR dataset) used for the retrieval.  The limb soundings used are
+        always consecutive (thus at 2 second intervals), but the number
+        may vary from 4 to 6 (the current version always uses 5
+        soundings).  This time is used to determine the L_s and orbit
+        number of the profile.
+ 
+        Likewise, the Solar_lat, Solar_lon, Solar_zen, Profile_lat,
+        Profile_lon, Profile_rad, Profile_alt and Limb_ang (columns 9,
+        10, 11, 13, 14, 15, 16, and 17) are the mean of the relevant RDR
+        field for the limb soundings used in the retrieval. The latter 5
+        are thus the geometry for the instrument boresight tangent point
+        (see the RDR for further description).  The LTST (column 12) is
+        derived from the averaged fields for convenience.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      TBD
+ 
+ 
+    Limitations
+    ===========
+      TBD
+ 
+ 
+    Review
+    ======
+      This archival data set was examined by a peer review panel prior to
+      its acceptance by the Planetary Data System (PDS). The peer review
+      was conducted in accordance with PDS procedures.
+ 
+      Prior to creation of the final version of the archival data set,
+      key elements of the archive were distributed for preliminary
+      review.  These included electronic versions of example PDS labels,
+      CATALOG files, and Software Interface Specifications (SISs).
+      These materials were distributed to PDS personnel, the experiment
+      investigator, and others, as appropriate.
+        </confidence_level_note>
+        <archive_status>IN_QUEUE</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

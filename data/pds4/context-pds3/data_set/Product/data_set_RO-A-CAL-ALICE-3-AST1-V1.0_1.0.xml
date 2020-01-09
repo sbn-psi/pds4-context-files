@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-a-cal-alice-3-ast1-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER STEINS/CAL ALICE 3 AST1 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:alice.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.2867_steins::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-a-cal-alice-3-ast1-v1.0__browserp_ro-a-cal-alice-3-ast1-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Stern, S.A., D.C. Slater, J. Scherrer, J. Stone, M. Versteeg, M.F. A&apos;Hearn,
+                   J.L. Bertaux, P.D. Feldman, M.C. Festou, J.W. Parker, and O.H.W. Siegmund,
+                   Alice: The Rosetta Ultraviolet Imaging Spectrograph, Space Sci. Rev., 128(1-4),
+                   507-527, Feb 2007.
+            </reference_text>
+            <description>reference.STERNETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-A/CAL-ALICE-3-AST1-V1.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER STEINS/CAL ALICE 3 AST1 V1.0</data_set_name>
+        <data_set_release_date>2009-08-26</data_set_release_date>
+        <start_time>2008-09-02T11:00:01.954Z</start_time>
+        <stop_time>2008-09-07T06:41:44.693Z</stop_time>
+        <producer_full_name>ANDREW J. STEFFL</producer_full_name>
+        <citation_text>
+            Parker, J.Wm., et al., ROSETTA-ORBITER STEINS/CAL ALICE 3 AST1
+            V1.0 RO-A/CAL-ALICE-3-AST1-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated instrument data from the Rosetta Orbiter ALICE
+            instrument during the fly-by of the asteroid (2867) Steins.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains CODMAC level 3 data acquired by the
+            Rosetta Orbiter ALICE UV Spectrometer during the fly-by of the
+            asteroid (2867) Steins, which occurred on 2008-09-05.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Required Reading
+  ================
+ 
+    The format of all Alice data are described in detail by the EAICD
+    document located in the /DOCUMENT directory. In addition, the
+    Rosetta Alice logbook file, RA_LOGBOOK_NNN.ASC, also located in
+    the DOCUMENT directory provides observational details such as
+    observation target, commanded exposure time, etc., for all Alice
+    data. The Alice team strongly recommends reading this
+    documentation before using the data.
+ 
+ 
+  Data Set Overview
+  =================
+ 
+    This data set contains calibrated data acquired by the Rosetta
+    Orbiter ALICE UV Spectrometer during the fly-by of the asteroid
+    (2867) Steins, which occurred 2008-08-04 to
+    2008-10-05. Observations of Steins and calibration targets were
+    made during this mission phase. A detailed listing of all Alice
+    observations is given in the observation log file located in the
+    DOCUMENT directory.
+ 
+    The following Alice observations were made during the period
+    covered by this data set:
+ 
+# Flyby of asteroid 2867 Steins
+# 2008 September 1-8
+# Alice activity overview:
+# * 2008 Sep 01 09:00 - AL02 (decontamination; 25 hr, 22 hr heater +
+ 3 hr cooldown)
+# * 2008 Sep 02 11:00 - AL07 (dark calibration; 3 hr)
+# * 2008 Sep 02 20:00 - AL13B, AL03B, AL06B (gam Gru cal; 4 hr)
+# * 2008 Sep 03 16:15 - AL13A, AL03A, AL06A (Vega cal; 4 hr)
+# * 2008 Sep 04 09:45 - AL08A (exosphere search; 19 hr)
+# * 2008 Sep 05 08:45 - AL08B (exosphere search; 4 hr)
+# * 2008 Sep 05 18:48 - AL09 (closest approach obs; 5 hr)
+# * 2008 Sep 06 16:45 - AL10 (closest approach bkg; 6 hr)
+# * 2008 Sep 07 00:45 - AL11 (exosphere bkg; 8 hr)
+# * 2008 Sep 07 06:45 - AL02 (decontamination; 25 hr, 22 hr heater +
+ 3 hr cooldown)
+  Processing
+  ==========
+ 
+    The data in this data set are calibrated, CODMAC Level 3 data. As
+    such, corrections for detector dead time, dark counts, flatfield,
+    and effective area have generally been applied. The primary FITS
+    header contains a list of which corrections have been applied to
+    that file.
+ 
+  Data
+  ====
+ 
+    The data are in FITS format and text format. Each FITS file has a
+    detached PDS label so that they can be read either by FITS or PDS
+    tools. A detailed description of the data format is given in the
+    ALICE EAICD document located in the DOCUMENT directory of this
+    data set.
+ 
+ 
+  Ancillary Data
+  ==============
+    No ancillary data included in this data set.
+ 
+ 
+  Coordinate System
+  =================
+ 
+   The geometry items SC_SUN_POSITION_VECTOR,
+   SC_TARGET_POSITION_VECTOR and SC_TARGET_VELOCITY_VECTOR provided in
+   the label of the data product are relative to the Earth Mean
+   Equator frame of J2000.
+ 
+   SUB_SPACECRAFT_LATITUDE, SUB_SPACECRAFT_LONGITUDE are given in the
+   PLANETOGRAPHIC coordinate system. These parameters are computed at
+   time t=START_TIME. Distances are given in km, angles in degrees.
+ 
+ 
+  Software
+  ========
+    All FITS readers should be able to successfully read the data.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    Data confidence is nominal, meaning that all data have been
+    validated by the Alice team and found as expected. Any exceptions
+    are noted by the DATA_QUALITY field in the label files.
+ 
+ 
+  Review
+  =====
+ 
+ 
+ 
+  Data Coverage and Quality
+  =========================
+ 
+    Data quality is good unless otherwise noted by the DATA_QUALITY
+    keyword.
+ 
+ 
+  Limitations
+  ===========
+    These data have been calibrated and are in physical units
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

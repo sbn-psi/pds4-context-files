@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.sdu-c-navcam-3-rdr-wild2-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>STARDUST NAVCAM CALIBRATED IMAGES OF 81P/WILD 2</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.stardust::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:navcam.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.81p-wild_2_1978_a2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.sdu-c-navcam-3-rdr-wild2-v1.0__browserp_sdu-c-navcam-3-rdr-wild2-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>SDU-C-NAVCAM-3-RDR-WILD2-V1.0</data_set_id>
+        <data_set_name>STARDUST NAVCAM CALIBRATED IMAGES OF 81P/WILD 2</data_set_name>
+        <data_set_release_date>2006-01-11</data_set_release_date>
+        <start_time>2003-12-29T04:59:59.797Z</start_time>
+        <stop_time>2004-01-13T02:30:47.500Z</stop_time>
+        <producer_full_name>Ray Newburn</producer_full_name>
+        <citation_text>
+            R.L. NEWBURN, T.L. FARNHAM, STARDUST NAVCAM CALIBRATED IMAGES OF
+            81P/WILD 2, SDU-C-NAVCAM-3-RDR-WILD2-V1.0, NASA Planetary Data
+            System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated images of comet 81P/Wild 2 from the Stardust NAVCAM
+            instrument
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains calibrated images and calibration data
+            from the Stardust Navigation Camera (NAVCAM) observations of
+            comet 81P/Wild 2. 206 calibrated images were obtained over the
+            5-day period 2003-12-29 to 2004-01-02.
+        </abstract_desc>
+        <data_set_desc>
+ 
+       Data Set Overview
+       =================
+ 
+       This data set contains the calibrated images of comet 81P/Wild 2
+       taken by the Navigation Camera (NAVCAM) during the Stardust
+       spacecraft&apos;s approach to and encounter with the comet, and the
+       post encounter observations that were used to aid in the
+       calibration process.  The raw data versions of these (and
+       other) images are included in the NAVCAM raw data archive
+       (SDU-C-NAVCAM-2-EDR-WILD2-V1.0).
+ 
+       These images have been divided into two groups.  The &apos;NAVIGATION&apos;
+       directory contains the images of the comet obtained as part of
+       navigation sequences.  These are not full-frame images, but
+       contain sub-frame windows of the navigation stars and the comet.
+       The &apos;ENCOUNTER&apos; directory contains the images obtained during the
+       encounter with the comet and are full-frame views.
+ 
+       This version contains an error in the exposure times of some of
+       the images (see &apos;Exposure Duration&apos; comments below).  This error
+       has been corrected in Version 2.0 of the dataset.  The
+       calibrations have also been corrected, to account for the actual
+       exposure time.
+ 
+       Every image provided in this data set was taken as a part of a
+       particular imaging sequence, each of which is described in this
+       section by the NAVCAM Science Lead, Dr. Raymond L. Newburn, Jr.
+       For the complete list of images and their parameters, refer to
+       the data set&apos;s index table, INDEX/INDEX.TAB. For additional
+       notes on individual images also consult with the document ``Log
+       of Stardust NAVCAM Flight Images&apos;&apos;, DOCUMENT/PIIMGLOG.PDF,
+       provided with this data set.
+ 
+       Image Sequence Information
+       ---------------------------
+       Each sequence is listed here, with information about any
+       problems that were encountered during the exposure, readout or
+       downlinking of the data.  Additional information about other
+       sequences is available in the catalog files for the raw NAVCAM
+       data set (SDU-C-NAVCAM-2-EDR-WILD2-V1.0).
+ 
+       2003 DEC 29 05:00:00 -- Images 979-996
+       --------------------------------------
+         In the series of images 979 through 996, only 983 and 984 are
+         missing packets. All images were acquired at a scan mirror
+         angle of 21.87 degrees. Images 979 through 982 and 985 through
+         987 were given 20 second exposures, while 988 through 996
+         received 10 second exposures. All complete images had three 301
+         x 301 pixel windows.
+ 
+       2003 DEC 30 05:27:15 -- Images 997-1014
+       ---------------------------------------
+         Images 997 through 999 were missing the first packet, thereby
+         ruining each entire image. In this hectic period, no attempt
+         was made to reconstruct them. Image 1000 consisted of one
+         normal 301 x 301 pixel window and two 1 x 1 pixel windows. The
+         image of Wild2 was in one of the latter. Images 1001 through
+         1014 were normal, each having three 301 x 301 windows. The
+         first five good frames received 20 second exposures, and the
+         last nine were all 10 second exposures. These, of course, were
+         again taken for optical navigation purposes.
+ 
+       2003 DEC 30 22:35:15 -- Images 1015-1032
+       ----------------------------------------
+         The second set of December 30 images probably included 1015
+         through 1021, which are missing. I say this because there are
+         only two images with 20 second exposures instead of the usual
+         nine. The two 20 second images are 1022 and 1023. These are
+         followed by 1024 through 1032, which are 10 second exposures.
+         All were taken at a scan mirror angle of 21.00 degrees and with
+         three 301 x 301 pixel windows.
+ 
+       2003 DEC 31 07:00:00 -- Images 1033-1050
+       ----------------------------------------
+         Images 1033 through 1050 constituted the first set of December
+         31 exposures. All were taken at a scan mirror angle of 20.77
+         degrees and with three 301 x 301 pixel windows. The first nine
+         were 20 second exposures and the second nine were 10 second
+         exposures.
+ 
+       2003 DEC 31 20:18:00 -- Images 1051-1058
+       ----------------------------------------
+         The second set of December 31 images consisted of eight images
+         numbered 1051 through 1058. The first four were 15 second
+         exposures, the second four 10 seconds. All utilized a scan
+         mirror of 24.49 degrees. Each consisted of three windows of 291
+         x 291 pixels.
+ 
+       2004 JAN 01 00:18:00 -- Images 1059-1066
+       ----------------------------------------
+         The first set of January 1 images, 1059 through 1066, were
+         taken at a scan mirror angle of 24.49 degrees. All were
+         windowed images using three 291 x 291 pixels with a scan mirror
+         angle of 24.49 degrees. The first four were 15 second
+         exposures, the second four, 10 second exposures.
+ 
+       2004 JAN 01 05:18:00 -- Images 1067-1074
+       ----------------------------------------
+         The second set of January 1 images, 1067 through 1074, were
+         also taken at a scan mirror angle of 24.49 degrees. All were
+         windowed images using three 291 x 291 pixels with a scan mirror
+         angle of 24.49 degrees. The first four were 15 second
+         exposures, the second four, 10 second exposures.
+ 
+       2004 JAN 01 08:18:00 -- Images 1075-1082
+       ----------------------------------------
+         The third set of January 1 images, 1075 through 1082, once
+         again were taken at a scan mirror angle of 24.49 degrees. All
+         were windowed images using three 291 x 291 pixels with a scan
+         mirror angle of 24.49 degrees. The first four were 15 second
+         exposures, the second four, 10 second exposures.
+ 
+       2004 JAN 01 12:18:00 -- Images 1083-1090
+       ----------------------------------------
+         The fourth set of January 1 images, 1083 through 1090, once
+         again were taken at a scan mirror angle of 24.49 degrees. All
+         were windowed images using three 291 x 291 pixels with a scan
+         mirror angle of 24.49 degrees. The first four were 15 second
+         exposures, the second four, 10 second exposures.
+ 
+       2004 JAN 01 16:18:00 -- Images 1091-1098
+       ----------------------------------------
+         The fifth set of January 1 images, 1091 through 1098, once
+         again were taken at a scan mirror angle of 24.49 degrees. All
+         were windowed images using three 291 x 291 pixels with a scan
+         mirror angle of 24.49 degrees. The first four were 15 second
+         exposures, the second four, 10 second exposures.
+ 
+       2004 JAN 01 21:18:44 -- Images 1099-1106
+       ----------------------------------------
+         The sixth set of January 1 images, 1099 through 1106, were
+         taken at a scan mirror angle of 24.49 degrees. All were
+         windowed images using three 291 x 291 pixel windows. Image 1099
+         was missing. Image 1100 had two windows, but only the image
+         containing the comet was complete. Images through 1102 were 15
+         second exposures, the last four were 10 second exposures.
+ 
+       2004 JAN 02 05:18:44 -- Images 1107-1122
+       ----------------------------------------
+         Images 1107 through 1115, one complete set, are missing. The
+         final set of optical navigation images, numbered 1116 through
+         1122, were acquired using three 291 x 291 pixel windows and a
+         scan mirror angle of 24.49 degrees. The first three utilized 15
+         second exposures and the final four 10 second exposures.
+ 
+       2004 JAN 02 18:54:28 -- Images 2000-2115 -- Wild 2 Encounter Set
+       ----------------------------------------------------------------
+         Images 2005 through 2115 are the 81P/Wild 2 encounter set.
+         There are 72 complete images in this set, the missing numbers
+         having been used only to establish the auto-tracking on the
+         nucleus. There was sufficient memory only for the 72 images. It
+         is the nature of the shutter that alternate exposures are 1.65
+         milliseconds shorter than the set exposure time. The even
+         numbered images are the shorter ones taken during the
+         encounter. We were quite limited in the number of changes that
+         could be made in the exposure time, so most were taken at
+         settings of either 100 milliseconds (actually 98.35
+         milliseconds) or 10 milliseconds. Many of the longer exposures
+         were saturated, but these serve very well to bring out the many
+         jets of gas and dust ejected by the comet. Scan mirror angles
+         ranged from 1.37 degrees for image 2005 through 176.05 degrees
+         for image 2115. The images with the mirror at more than 170
+         degrees all exhibit a great deal of scattered light, probably
+         from the sample return capsule. There are lesser amounts of
+         scattered light on images back to about 160 degrees. There is a
+         problem with images taken near 0 degrees as well, from light
+         scattered from the launch vehicle adapter ring which actually
+         occludes a bit of the periscope.
+ 
+       2004 JAN 13 02:24:28 -- Images 2116-2130
+       ----------------------------------------
+         Images 2116 through 2130 were taken to attempt to calibrate all
+         of the images, to check the post-encounter state of the
+         periscope, and to check the calibration lamp, which appeared to
+         have failed pre-encounter. Images 2116 and 2129 were bias
+         frames. Images 2117 through 2125 constituted the very limited
+         calibration set. Images 2126 through 2128 were for the
+         periscope check, and 2130 was the calibration lamp check. The
+         calibration images all were taken at scan mirror angles near 24
+         degrees, four with 1 second exposures, four with 5 second
+         exposures and one with a 15 second exposure. All were
+         uncompressed full frame images. The periscope checks were done
+         at an angle of -0.10 degrees and were full of scattered light.
+         This was expected to some extent, but the very mottled
+         appearance of the images indicated that one or both mirrors of
+         the periscope were thoroughly sandblasted by the passage
+         through the Wild 2 coma. The check of the calibration lamp
+         unfortunately was done with a 1 second exposure rather than 20
+         milliseconds. It was obviously working just fine, since every
+         pixel in the frame was saturated.
+ 
+ 
+     Processing and Calibration
+     ===========================
+ 
+       The images in this data set were created by the DMAPKTDECOM
+       program developed by Applied Coherent Technology Corp, Herndon,
+       Virginia and operated by the Stardust Data Management and Archive
+       Team at JPL, Pasadena, California. This program assembled images
+       from raw telemetry packets sent down by the spacecraft and
+       populated the images labels with housekeeping values, decommutated
+       the binary image headers, and computed geometry parameters using
+       SPICE kernels. This program did not apply correction of any kind
+       to the image data.
+ 
+       In the cases when only certain sections of the detector were
+       downlinked, the program filled the pixels in the image
+       corresponding to the areas for which data had not been downlinked
+       with hex null values (i.e., zeroes). In such images window
+       objects define the areas containing non-null data.
+ 
+ 
+       Radiometric Calibration
+       -----------------------
+       The images have been radiometrically calibrated to give
+       radiance in units of W m**-2 sR**-1.  Processing can be
+       summarized as consisting of six steps:
+         1) Undo square-root compression of raw data numbers.
+         2) Subtract offset estimated from averaging baseline.
+            stabilization pixel values in prefix/suffix of the Image lines
+            from all pixels in the image.
+         3) Divide by estimate of relative sensitivity of each pixel
+            compared to image center pixels.
+         4) Scale from data number to radiance based on exposure
+            time, distance from  Sun, and absolute calibration
+            coefficient derived from analysis of post-encounter star
+            images. The conversion coefficient used to convert to
+            radiance is 1.525 x 10^{-6} W/m^2/sr/(DN/s).
+         5) Geometrically transpose image data (not including line prefix
+            and suffix regions), resulting in a right-reading
+            (unmirrored) view of the sky from the spacecraft such as
+            would have been obtained by a conventional camera without
+            periscope.
+         6) Update values of geometric parameters to correspond to
+            the transposed image geometry.
+ 
+       An extensive discussion about the calibration procedures can
+       be found in the NAVCAM_CALIBRATION.PDF and the
+       SBN_CALIBRATION_COMMENTS.TXT documents in the DOCUMENT
+       directory.
+ 
+ 
+     Data
+     ====
+ 
+       The images in this data set have been converted by the SBN from
+       the standard PDS format to FITS format with detached PDS labels.
+       Relevant information in the PDS label has been placed into the
+       FITS header, though due to differing conventions, the keywords
+       may have changed.  The description field in the FITS header
+       should make it clear what the keyword represents.
+ 
+       Camera Description
+       ------------------
+ 
+       The STARDUST camera has an angular resolution of
+       59 microrad/pixel (12 arcsec/pixel) and a focal length of 202 mm
+       at an f-ratio of about f/3.5.  Early in the flight the filter
+       wheel failed, possibly due to a failed power supply. Fortunately
+       it failed on the filter with the largest throughput, but the
+       broad bandpass of that filter caused images taken through it to
+       have significant chromatic aberration, which resulted in an
+       image resolution of about 2.5 pixels at FWHM (full width at half
+       maximum) when observing a point source such as a star. (The high
+       resolution filter, intended to be used for near encounter
+       imaging, would have resulted in resolution exceeding a half
+       pixel.) Without any image processing, the 2.5 pixel resolution
+       resulted in a best linear resolution at closest approach of
+       about 20 m/pixel.
+ 
+       After launch, it was discovered that the camera optics had been
+       contaminated by an unknown substance that significantly reduced
+       the quality of the images, and affected the photometric
+       properties of the image.  Tests showed that heating the camera
+       before critical observations reduced this contamination and
+       improved the quality of the images, though some effects still
+       remained.  Because the contamination varies with time, a plan
+       was developed to obtain calibration images immediately before
+       and after the encounter with comet Wild 2, to improve the
+       possibility of being able to calibrate the images
+       photometrically.  Unfortunately, problems with the camera and
+       calibration lamp meant that the only useful calibration
+       sequences were obtained 11 days after the encounter.  Further
+       details regarding the calibrations are discussed in the
+       NAVCAM_CALIBRATION document in the DOCUMENT directory.
+ 
+       The camera has a 1024x1024 array as the active portion of the
+       CCD, though the first and last columns are uncalibratable, and
+       thus were removed during processing.  The resulting images have
+       been trimmed to an array size of 1022x1024.
+ 
+ 
+       Windowed Images
+       ---------------
+       The IMAGE size parameter in the image label reflects the size
+       of the detector, however in the navigation images, data from
+       only certain sections of the detector were downlinked. In
+       these cases the pixels in the image corresponding to the areas
+       for which data had not been downlinked are filled with hex
+       null values (i.e., zeroes). WINDOW objects define the areas
+       containing non-null data.
+ 
+       Compression Modes
+       -----------------
+       The NAVCAM images can be either 8-bit or 12-bit data. The 12-bit
+       data is commonly referred to as &apos;uncompressed data&apos;, while the
+       8-bit is referred to as &apos;compressed data&apos;. This compression is
+       accomplished by a 12-bit to 8-bit square-root look-up-table
+       compression method, which is implemented in the hardware of the
+       camera electronics. This compression is lossy and the estimate of
+       the 12-bit image can be recovered using the look-up table
+       mentioned in Appendix 3 of the Calibration Document.
+ 
+       In uncompressed mode with 12-bit data, the pixels are expressed
+       in two bytes, as 16 bits per pixel. The upper nibble of the most
+       significant byte is always zero for these images. In compressed
+       mode with 8-bit data, the pixels are expressed in a single byte.
+ 
+       Exposure Durations
+       ------------------
+       NOTE: Below it states that the exposure times have been adjusted
+       so that the correct times are given in the labels.  This is
+       incorrect.  The labels in this version of the data still contain
+       the downlinked times.  The exposure times and calibrations have
+       been corrected in Version 2.0 of this dataset
+       (SDU-C-NAVCAM-3-RDR-WILD2-V2.0).
+ 
+       The double-bladed shutter utilized by the camera has the property
+       that in one direction the exposures are 1.65 ms shorter than in
+       the other. Therefore a setting of 5 ms, which is the shortest
+       possible, results in alternate 5 and 3.35 ms exposures, those at
+       25 ms, alternate 25 and 23.35 ms exposures, and so on.
+       Occasionally bias frames, which do not require shutter action,
+       are transmitted to Earth. This changes the ``parity.&apos;&apos;
+ 
+       While not always the case, for Wild 2 image sequences the even
+       numbered images have the shorter exposures. The downlinked
+       exposures for these images have been adjusted and the correct
+       exposure duration values are provided in the labels.
+ 
+       Target Name in the Image Labels
+       -------------------------------
+       The target name in the image labels was set only for the images
+       where the target is either seen in the image or computed to be
+       with the camera field of view. For all other images the target
+       name was set to ``N/A&apos;&apos;.
+ 
+       Consequently the label geometry items pertaining to the target
+       -- spacecraft-target position, velocity and distance, pixel
+       scales, and phase angle -- are only supplied for the images where
+       target name is not ``N/A&apos;&apos; and were computed for that specified
+       target.
+ 
+ 
+       Noise in the Images
+       -------------------
+ 
+       If the images are stretched to the limit, regular wide
+       horizontal stripes appear in every image (orignally at the
+       level of 1 to 2 dn above background). These appear to be the
+       product of coherent noise somewhere in the data stream or from
+       a power supply.  Their source is unknown.
+ 
+ 
+ 
+     Ancillary Data
+     ==============
+ 
+       The geometry items included in the image labels were computed
+       using the following SPICE kernels archived in the Stardust SPICE
+       data set, SDU-C-SPICE-6-V1.0:
+ 
+         Kernel Type   File Name
+         ------------  ---------------------
+         LSK           naif0007.tls
+         PCK           pck00007.tpc
+         SCLK          sdu_sclkscet_00105.tsc
+         FK            sdu_v17.tf
+         IK            sdu_navcam_v21.ti
+         SPK           sdu_l_2003_w2.bsp
+         SPK           sdu_w2_opnav.bsp
+         CK (s/c)      sdu_sc_rec_2003_w2_v2.bc
+         CK (s/c)      sdu_sc_rec_w2_opnav.bc
+         CK (camera)   sdu_nc_rec_v2.bc
+ 
+ 
+     Coordinate System
+     =================
+ 
+       Geometric Parameter Reference Frame
+       -----------------------------------
+       Earth Mean Equator and Vernal Equinox of J2000 is the inertial
+       reference system used to specify observational geometry items
+       provided in the image labels. Geometric parameters are based on
+       best available SPICE data at time of image creation.
+ 
+       Epoch of Geometric Parameters
+       -----------------------------
+       All geometric parameters provided in the image labels were
+       computed at the epoch specified in the START_TIME label field.
+ 
+       Image Orientation
+       ------------------
+       In the archive of raw NAVCAM data, there is a discussion of
+       the ambiguities and inconsistencies in the image orientation
+       and the definition of the TWIST_ANGLE.  In this version of the
+       images, the orientation has been corrected so that, when
+       displayed in the manner defined by the LINE_DISPLAY_DIRECTION
+       and the SAMPLE_DISPLAY_DIRECTION, the images will have the
+       correct orientation as seen on the sky.  Similarly, the
+       TWIST_ANGLE (and corresponding NORTH_CELESTIAL_CLOCK_ANGLE)
+       have been corrected so that they follow the PDS definition.
+       The values in the keywords RETICLE_POINT_RA and
+       RETICLE_POINT_DECLINATION have also been adjusted to reflect
+       the updated orientation of the images.
+ 
+     Contact Information
+     ===================
+ 
+       For any questions regarding the data in this archive,
+       contact the SBN:
+ 
+         Tony L. Farnham
+         Phone: +1 (301)  405-3856
+         Electronic mail address: farnham@astro.umd.edu
+ 
+         Department of Astronomy
+         University of Maryland
+         College Park, MD 20742
+         USA
+ 
+       or Stardust Data Management and Archive Team (SDMA):
+ 
+         Charles H. Acton, Jr.
+         Phone: +1 (818) 354-3869
+         Electronic mail address: Charles.Acton@jpl.nasa.gov
+ 
+         Boris V. Semenov
+         Phone: +1 (818) 354-8136
+         Electronic mail address: Boris.Semenov@jpl.nasa.gov
+ 
+         MAIL STOP 301-125L
+         Jet Propulsion Laboratory
+         California Institute of Technology
+         4800 Oak Grove Drive
+         Pasadena, CA, 91109-8099
+         USA
+ 
+ 
+       Author
+       ------
+       The descriptions in this file were written by Tony Farnham, and
+       includes relevant information that was originally archived with
+       the PDS archive of NAVCAM raw images.
+        </data_set_desc>
+        <confidence_level_note>
+       Calibration Quality
+       ===================
+ 
+       The absolute calibration of the Wild 2 images is relatively crude
+       due to the problems associated with the contaminated optics in the
+       navigation camera.  The data presented here represent the best
+       attempt at producing an absolute calibration, using the standard
+       star measurements obtained eleven days after the comet encounter.
+       Further details regarding the calibration can be found in the
+       calibration discussions in the DOCUMENTS directory.
+ 
+       Data Coverage
+       =============
+ 
+       The images contained in this archive comprise all of the Stardust
+       images of comet Wild 2 (including the navigation frames and
+       encounter data) as well as the calibration images that were
+       obtained after the encounter.  Some of the images in the
+       navigation sequences did not contain the comet and these images
+       have not been included in this dataset.
+ 
+       Review
+       ======
+ 
+       The data were peer reviewed on 30 April 2007.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

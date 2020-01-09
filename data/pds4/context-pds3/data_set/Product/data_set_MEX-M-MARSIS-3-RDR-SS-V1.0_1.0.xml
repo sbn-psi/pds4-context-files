@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mex-m-marsis-3-rdr-ss-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS EXPRESS MARS MARSIS REDUCED DATA RECORD SUBSURFACE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_express::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:marsis.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.phobos::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mex-m-marsis-3-rdr-ss-v1.0__browserp_geo_mex-m-marsis-3-rdr-ss-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mex-m-marsis-3-rdr-ss-v1.0__dvo_geo_mex-m-marsis-3-rdr-ss-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.psa::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Picardi, G. et. al., MARSIS: Mars Advanced Radar for Subsurface and Ionosphere
+                   Sounding, ESA-SP-1240, September 2004
+            </reference_text>
+            <description>reference.PICARDIETAL2004</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MEX-M-MARSIS-3-RDR-SS-V1.0</data_set_id>
+        <data_set_name>MARS EXPRESS MARS MARSIS REDUCED DATA RECORD SUBSURFACE V1.0</data_set_name>
+        <data_set_release_date>2007-11-30</data_set_release_date>
+        <start_time>2005-06-01T00:00:00Z</start_time>
+        <stop_time>2005-12-31T00:00:00Z</stop_time>
+        <producer_full_name>GIOVANNI PICARDI</producer_full_name>
+        <citation_text>
+            Picardi, G. et al. MARS EXPRESS MARS MARSIS REDUCED DATA RECORD
+            SUBSURFACE V1.0 MEX-M-MARSIS-3-RDR-SS-V1.0, Dipartimento INFOCOM,
+            2005.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains the CODMAC Level 3 MARSIS data for the
+            Mars Express mission
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains the Level 1b data that have been processed
+            to produce calibrated echoes of subsurface reflections: thus,
+            they are the data set of choice for geological analysis of the
+            structure and layering of the Martian subsurface.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    Level 1b data are further processed to produce Level 2 data,
+    i.e. data which have been calibrated, range-compressed and corrected
+    for ionosphere distortion. Auxiliary information for Level 2 data
+    is not modified, and thus the volume of auxiliary data accompanying
+    Level 2 data is the same as for Level 1b data. Scientific data,
+    however, are converted from 1-byte integer counts
+    from the analogue-to-digital converter of the instrument
+    to 4-byte real voltages, producing an increase of science data
+    volume by a factor of four.
+ 
+ 
+  Parameters
+  ==========
+    MARSIS data are organized into groups of echoes called frames. A frame
+    contains one or more echoes, with or without on-board processing. Each
+    echo, depending on the kind of processing it underwent, is recorded either
+    as a time series of signal samples, or as the complex spectrum of the
+    signal itself produced by means of a FFT. Scientific data in a frame are
+    complemented by a set of ancillary data, produced by the instrument and
+    recording parameter values used in pulse transmission,
+    echo reception and on-board processing.
+ 
+ 
+  Processing
+  ==========
+    The primary task of Level 2 data processor  is the
+    Range Compression of the Marsis collected echoes during
+    the subsurface modes (except for the SS2 Mode) and transmitted
+    to the ground. These data are only compressed in azimuth on board
+    (Doppler Filters output).
+    Since these data have been distorted by the Ionosphere,
+    we cannot use an ideal reference function (the ideal chirp)
+    for range compression.
+    Therefore we shall use the Contrast Method and/or
+    the Front Surface Reflection (FSR) Method to estimate
+    the Ionospheric distortion and to calculate a complex
+    correction to modify the Ideal Reference Function in order
+    to optimize the compressed signal.
+    Note that the data related to the SS2 Mode will not be processed
+    by the Level 2 processor, because they will be transmitted
+    to the ground already compressed in time and also after
+    a multi looking procedure.
+ 
+    The Level 2 processor could elaborate the same data more times,
+    using the information elaborated during
+    the mission on the ionosphere and the instrument.
+    This will signify a progressive improvement
+    of the Level 2 data product.
+    The Level 2 processing can be resumed in these steps :
+ 
+     -| Data Decompression
+     -| Ionospheric Dispersion Correction
+         (Contrast Method and/or FSR Method)
+     -| Range Compression
+ 
+ 
+    Level 2 data distribution to the Co-Is and to the Mars Express
+    mission archive is performed by ASDC. It is required by ESA that data
+    products are delivered in batches of six-months worth
+    of data within six months from the last data take
+    (i.e. one year after the beginning of that particular data collection
+    period), but it is necessary that level 1b processing be completed
+    in a much shorter period, to allow enough time for level 2 data
+    processing and data analysis within the MARSIS team before
+    the expiration of the data proprietary period (which is the same
+    six-month time span).
+ 
+ 
+  Data
+  ====
+    The MARS EXPRESS MARS MARSIS REDUCED DATA RECORD SUBSURFACE V1.0
+    Data Set contains subsurface-sounding data from the MARS EXPRESS MARS
+    MARSIS EXPERIMENT DATA RECORD V1.0 Data Set that have been
+    uncompressed, calibrated and, except for data acquired using
+    the SS2 mode, range-processed after correcting for the distortion
+    of the transmitted signal caused by the ionosphere.
+    Geometric information needed to locate observations in space and
+    time is also provided in the Data Set.
+ 
+    The list of RDR data Products is :
+ 
+    SSx_TRK_CMP_RDR : On-board processed Subsurface Sounding data
+ 
+    Where   x   stands for a number between 1 and 5
+ 
+    RDR Data Products are made by two files, each of which contains a PDS
+    binary TABLE object preceded by a PDS attached label describing its
+    structure. The first file, called Frame file (FRM) contains
+    the instrument data proper, organised into individual frames.
+    Each frame corresponds to a record in the file, which is also
+    a row in the PDS binary TABLE object into which frames are organised.
+    A Data Product contains all frames acquired using the same instrument
+    mode in tracking (TRK) state during a single orbit.
+    .
+    The second file constituting an RDR Data Product is called a Geometry
+    file (GEO), and contains one record, corresponding to one line
+    of the PDS binary TABLE object into which data are organised,
+    for every frame in the corresponding FRM file. Columns of the table
+    contain the values of parameters describing the geometry
+    of observation for the corresponding frame.
+ 
+ 
+ 
+  Ancillary Data
+  ==============
+    Each frame of MARSIS data (with the exception of frames
+    stored in flash memory) carries a 228 byte header of ancillary data,
+    containing necessary information for subsequent analysis
+    of the data and further processing.
+    The exact content of the ancillary data depends on instrument mode.
+ 
+ 
+ 
+  Coordinate System
+  =================
+    Locations on the surface of Mars are expressed in planetocentric
+    coordinates. Longitude is comprised in the range 0 - 360 degrees.
+ 
+ 
+  Software
+  ========
+    Marsis data products can be read by the PDS software NASAView, which
+    reads a PDS label and displays the associated image or table.
+    NASAView has been tested on both EDR and RDR data products.
+ 
+ 
+  Media/Format
+  ============
+    The standard distribution format for the data is transfer through
+    Internet from the Planetary Science Archive of ESA, which can be
+    accessed at the following URL:
+ 
+    http://www.rssd.esa.int/psa
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+    These data have been reviewed by the instrument team and are of the
+    highest quality that can be generated at this time. Science results
+    based on these data have been published in journals. The dataset is
+    currently being reviewed by the Plannetary Science Archive of ESA.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data in this dataset have been acquired only in the last six months of
+    the nominal mission, because of the delay in the deployment of the
+    MARSIS antenna. Because of this, coverage is limited mainly to
+    southern latitudes.
+ 
+    Data quality in a data product label is indicated through the
+    DATA_QUALITY_ID element, and measures the integrity of the telemetry
+    stream from the instrument. The permitted values of DATA_QUALITY_ID
+    are the following:
+ 
+    -1: percentage of corrupted data not available
+     0: no corrupted data
+     1: less than 2% corrupted data
+     2: less than 5% corrupted data
+     3: less than 10% corrupted data
+     4: more than 10% corrupted data
+ 
+ 
+  Limitations
+  ===========
+    There are no known limitations at this time.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

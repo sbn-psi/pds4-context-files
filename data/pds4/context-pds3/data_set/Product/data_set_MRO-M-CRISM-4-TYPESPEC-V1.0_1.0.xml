@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-crism-4-typespec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO MARS CRISM 4 TYPE SPECTRA LIBRARY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:crism.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-crism-4-typespec-v1.0__browserp_mro-m-crism-4-typespec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Viviano-Beck, C.E., F.P. Seelos, S.L. Murchie, E.G. Kahn, K.D. Seelos, H.W.
+                   Taylor, K. Taylor, B.L. Ehlmann, S.M. Wiseman, J.F. Mustard, and M.F. Morgan,
+                   Revised CRISM Spectral Parameters and Summary Products Based on the Currently
+                   Detected Mineral Diversity on Mars, J. Geophys. Res., Vol. 119, pp. 1403-1431,
+                   doi:10.1002/2014JE004627, 2014.
+            </reference_text>
+            <description>reference.VIVIANO-BECKETAL2014</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-CRISM-4-TYPESPEC-V1.0</data_set_id>
+        <data_set_name>MRO MARS CRISM 4 TYPE SPECTRA LIBRARY V1.0</data_set_name>
+        <data_set_release_date>2014-05-01</data_set_release_date>
+        <start_time>2015-12-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>CHRISTINA E. VIVIANO-BECK</producer_full_name>
+        <citation_text>
+            Viviano-Beck, C., Mars Reconnaissance Orbiter Compact
+            Reconnaissance Imaging Spectrometer for Mars Type Spectra
+            Library, MRO-M-CRISM-4-TYPESPEC-V1.0, NASA Planetary Data System,
+            2015.
+        </citation_text>
+        <data_set_terse_desc>
+            Minerals Identified through CRISM Analysis (MICA) Library.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset includes spectral data from type spectra of phases
+            identified using the CRISM (Compact Reconnaissance Imaging
+            Spectrometer for Mars) instrument on MRO. Type locations for the
+            diversity of currently identified mineral spectral signatures
+            have been compiled into this library of spectra. The type spectra
+            assembled into the MICA library represent the results of over
+            seven years of measurements from CRISM of the surface of Mars and
+            represent the compilation of many researchers&apos; efforts.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      This volume contains the Minerals Identified through CRISM
+      Analysis (MICA) Library Archive, a collection of CRISM type
+      spectra of the currently identified diversity of phases on
+      the surface of Mars. A &apos;type spectrum&apos; is representative of a
+      spectral signature of a particular phase previously identified
+      on Mars as seen by the CRISM instrument. Data consist of
+      atmospherically and photometrically corrected CRISM TER3
+      (non-map-projected) non-ratioed I/F spectra of type locations
+      for each library member. The data also include I/F spectra for
+      spectrally bland units within the same detector column of the
+      same CRISM observation, which are used as the denominators for
+      the CRISM ratioed I/F spectra (also provided in the dataset).
+ 
+      File labels provide citation information for the original
+      observation of the type location and identification of the
+      mineral/ice phase.  Also provided is the center location
+      (column, row) used to extract the type spectrum and spectrally
+      bland denominator spectrum in non-map-projected space. The label
+      also includes information on the number of pixels averaged
+      together in the region of interest (ROI).  All ROIs are a
+      continuous set of pixels in a square surrounding the defined
+      (column, row) center pixel location.
+ 
+    Processing
+    ==========
+      CRISM radiance data has been processed to atmospherically-
+      corrected I/F and has undergone other calibrations outlined in
+      the MTRDR dataset catalog file
+      (DATA_SET_ID = MRO-M-CRISM-5-RDR-MPTARGETED-V1.0).
+ 
+      The original hyperspectral (545 total) channels have been
+      downsized to a conservative subset of (480 total) channels that
+      exhibit no known calibration or filter/detector boundary
+      artifacts, such that the MICA library contains only the best
+      representation of spectral characteristics of phases present on
+      Mars. The MTRDR dataset catalog file summarizes the specific VNIR
+      and IR &apos;bad channels&apos; that have been filtered from the MICA
+      dataset.
+ 
+    Data
+    ====
+      There is only one data type associated with this volume, the
+      MICA library or CRISM type spectra.  These data consist of
+      separate comma-delimited &apos;.tab&apos; files that include 7 columns
+      including: 1) the wavelength array, 2) the CRISM ratioed I/F
+      corrected type spectra data, 3) the CRISM ratioed I/F type
+      spectra data, 4) the CRISM I/F corrected type spectra data
+      (numerator), 5) the CRISM I/F type spectra data (numerator),
+      6) the CRISM I/F corrected data of spectrally-bland material
+      (denominator), and 7) the CRISM I/F data of spectrally-bland
+      material (denominator).
+ 
+      &apos;Corrected spectra&apos; have been adjusted to mitigate a small
+      variable offset that remains near 1 micron at the join between
+      the VNIR and IR detectors due to a nonlinear decrease in the
+      spectral response approaching the longest wavelengths of the
+      VNIR detector. The offset was quantitatively determined for
+      extracted spectra between overlapping wavelengths in the VNIR
+      and IR detectors and used a fourth-order polynomial with an
+      onset at ~720 nm to multiplicatively adjust the VNIR reflectance
+      until it matched the IR via nonlinear least squares fitting.
+      A residual small offset may still remain at the detector join
+      after correction.
+ 
+      I/F spectra are ratioed to spectrally unremarkable material that
+      falls within the same detector column to mitigate effects of
+      residual atmospheric and instrumental artifacts in the spectra.
+ 
+    Coordinate System
+    =================
+      The coordinate system of this dataset is consistent with that
+      defined for the CRISM MTRDR data products
+      (DATA_SET_ID = MRO-M-CRISM-5-RDR-MPTARGETED-V1.0). The
+      cartographic coordinate system used for the CRISM data products
+      conforms to the IAU planetocentric system with East longitudes
+      being positive. The IAU2000 reference system for Mars
+      cartographic coordinates and rotational elements was used for
+      computing latitude and longitude coordinates.
+ 
+    Media/Format
+    ============
+      The CRISM archive is available online via Web and FTP servers.
+      This is the primary means of distribution. As new phases are
+      discovered on Mars, products will be added to the volume data
+      directory, and the volume&apos;s index table will be updated
+      accordingly.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      There are a number of sources of uncertainty in the
+      interpretation of CRISM spectra pertaining to noise, optical
+      distortions, spectral resolution, calibration artifacts, and
+      optical effects.  Please refer to the CRISM MTRDR dataset catalog
+      file for a summary of known issues.
+ 
+    Review
+    ======
+      This data set was examined by a peer review panel prior to its
+      acceptance by the Planetary Data System (PDS).  The peer review
+      was conducted in accordance with PDS procedures.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.ppi__time_format</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ppi:time_format</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>ppi:time_format</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>ppi:time_format</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+ 
+     The keyword PPI:TIME_FORMAT is used to modify the meaning of the
+     keyword-value pair DATA_TYPE = TIME within a data element (COLUMN
+     or FIELD). This keyword can only be used in data elements where
+     the DATA_TYPE is set to TIME. If the PPI:TIME_FORMAT keyword does
+     not appear in the data element object, then DATA_TYPE=TIME will
+     have the default interpretation of time in PDS standard time
+     format. This keyword may only be used to define alternative time
+     formats used in data files. Time values provided in labels and
+     catalog files must be in PDS format.
+ 
+     The value assigned to the PPI:TIME_FORMAT keyword is a format
+     specification. This specification defines the interpretation of
+     every character (alpha, numeric, and non alpha-numeric) included
+     in a date/time string. Some characters are interpreted as
+     components of the date/time while others are delimiters. Any
+     character or group of characters that are interpreted are
+     described using a date/time element &apos;token&apos;. The set of valid
+     tokens forms a standard value set, described below. The format
+     specification describes the parsing algorithm for the date/time
+     string of the length BYTES (not including any quotes) from left
+     to right.
+ 
+     PPI:TIME_FORMAT may not be used to describe times which are
+     defined relative to some reference time or epoch (e.g. Julian
+     Date). As a result, times defined relative to some epoch must
+     be declared as having some DATA_TYPE other than &apos;TIME&apos;.
+ 
+     Each of the tokens are described as follows:
+ 
+        %YEAR% is the four-digit integer year token (length = 4).
+ 
+        %YR% is the two-digit integer year token. Values greater then
+        50 are referenced to 1900 and values less or equal to 50 are
+        referenced to 2000 (length = 2).
+ 
+        %YEARBC% is the four-digit integer year BC token (length = 2).
+ 
+        %FYEAR% is the generic fractional year token. There can be any
+        number of digits before the decimal point, however, four should
+        be sufficient for most data sets. If less than 4 digits precede
+        the decimal point, leading zeros are implied. FYEAR is
+        referenced to 0001 AD for positive values and negative values
+        indicate years BC.
+ 
+        %MM% is the two-digit integer month token. Valid range is 1-12
+        (length = 2).
+ 
+        %MON% is the three character month abbreviation token from the
+        set {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV,
+        DEC}. The set is not case sensitive so that Jan = jan = JAN
+        (length=3).
+ 
+        %MONTH% is the full month name (English) token where month is
+        from the set {January, February, March, April, May, June, July,
+        August, September, October, November, December}. The month
+        value is not case sensitive so that May = may = MAY (length =
+        3-8).
+ 
+        %DD% is the two-digit integer day of month token. Valid range
+        is 1-31 (length = 2).
+ 
+        %DOY% is a three-digit integer day of year token where Jan 1 =
+        001. Valid range is 1-366 (length=3)
+ 
+        %DOY0% is a three-digit integer day of year token where Jan 1 =
+        000. If less than three digits are found then leading zero&apos;s
+        are implied. Valid range is 0-365 (length = 3).
+ 
+        %FDAY% is the generic fractional day token. The field is
+        terminated by a non-numeric character when the column BYTES is
+        reached. FDAY can be either floating point or integer and can
+        be either positive or negative. The start (FDAY=0.0) date/time
+        for the generic FDAY counter is specified by a year elsewhere
+        in the TIME_FORMAT string.
+ 
+        %HR% is the two digit integer hour of day token. If only one
+        digit is found, then a leading zero is implied. Valid range is
+        0-23 (length = 2).
+ 
+        %FHR% is the generic fractional hour token. The field is
+        terminated by a non-numeric character or when the column BYTES
+        is reached. FHR can be either floating point or integer and can
+        be either positive or negative. The start date/time for the
+        generic FHR is set elsewhere in the TIME_FORMAT string by the
+        next largest time element token.
+ 
+        %MIN% is the two-digit integer minute of hour token. If only
+        one digit is found, then a leading zero is implied. Valid range
+        is 0-59 (length = 2).
+ 
+        %FMIN% is the generic fractional minute token. The field is
+        terminated by a non-numeric character or when the column BYTES
+        is reached. FMIN can be either floating point or integer and can
+        be either positive or negative. The start date/time for the
+        generic FMIN is set elsewhere in the TIME_FORMAT string by the
+        next largest time element token.
+ 
+        %SEC% is the two-digit second of minute token. If only one digit
+        is found, then a leading zero is implied. The valid range is 0-
+        60 (length = 2).
+ 
+        %FSEC% is the generic fractional second token. The field is
+        terminated by a non-numeric character or when the column BYTES
+        is reached. FSEC can be either floating point or integer and can
+        be either positive or negative. The start date/time for the
+        generic FSEC is set by the next largest time element token in
+        the TIME_FORMAT string.
+ 
+        %MSEC% is the three-digit integer millisecond of second token.
+        If less than 3 digits are found, the leading zeros are implied.
+        The valid range is 0-999 (length = 3).
+ 
+        %FMSEC% is the generic fractional millisecond token. The field
+        is terminated by a non-numeric character or when the column
+        BYTES is reached. FMSEC can be either floating point or integer
+        and can be either positive or negative. The start date/time for
+        the generic FMSEC is set by the next largest time element token
+        in the TIME_FORMAT string.
+        </definition>
+        <comment>ppi:tmformat</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>ppi:time_format</name>
+            <definition>
+ 
+     The keyword PPI:TIME_FORMAT is used to modify the meaning of the
+     keyword-value pair DATA_TYPE = TIME within a data element (COLUMN
+     or FIELD). This keyword can only be used in data elements where
+     the DATA_TYPE is set to TIME. If the PPI:TIME_FORMAT keyword does
+     not appear in the data element object, then DATA_TYPE=TIME will
+     have the default interpretation of time in PDS standard time
+     format. This keyword may only be used to define alternative time
+     formats used in data files. Time values provided in labels and
+     catalog files must be in PDS format.
+ 
+     The value assigned to the PPI:TIME_FORMAT keyword is a format
+     specification. This specification defines the interpretation of
+     every character (alpha, numeric, and non alpha-numeric) included
+     in a date/time string. Some characters are interpreted as
+     components of the date/time while others are delimiters. Any
+     character or group of characters that are interpreted are
+     described using a date/time element &apos;token&apos;. The set of valid
+     tokens forms a standard value set, described below. The format
+     specification describes the parsing algorithm for the date/time
+     string of the length BYTES (not including any quotes) from left
+     to right.
+ 
+     PPI:TIME_FORMAT may not be used to describe times which are
+     defined relative to some reference time or epoch (e.g. Julian
+     Date). As a result, times defined relative to some epoch must
+     be declared as having some DATA_TYPE other than &apos;TIME&apos;.
+ 
+     Each of the tokens are described as follows:
+ 
+        %YEAR% is the four-digit integer year token (length = 4).
+ 
+        %YR% is the two-digit integer year token. Values greater then
+        50 are referenced to 1900 and values less or equal to 50 are
+        referenced to 2000 (length = 2).
+ 
+        %YEARBC% is the four-digit integer year BC token (length = 2).
+ 
+        %FYEAR% is the generic fractional year token. There can be any
+        number of digits before the decimal point, however, four should
+        be sufficient for most data sets. If less than 4 digits precede
+        the decimal point, leading zeros are implied. FYEAR is
+        referenced to 0001 AD for positive values and negative values
+        indicate years BC.
+ 
+        %MM% is the two-digit integer month token. Valid range is 1-12
+        (length = 2).
+ 
+        %MON% is the three character month abbreviation token from the
+        set {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV,
+        DEC}. The set is not case sensitive so that Jan = jan = JAN
+        (length=3).
+ 
+        %MONTH% is the full month name (English) token where month is
+        from the set {January, February, March, April, May, June, July,
+        August, September, October, November, December}. The month
+        value is not case sensitive so that May = may = MAY (length =
+        3-8).
+ 
+        %DD% is the two-digit integer day of month token. Valid range
+        is 1-31 (length = 2).
+ 
+        %DOY% is a three-digit integer day of year token where Jan 1 =
+        001. Valid range is 1-366 (length=3)
+ 
+        %DOY0% is a three-digit integer day of year token where Jan 1 =
+        000. If less than three digits are found then leading zero&apos;s
+        are implied. Valid range is 0-365 (length = 3).
+ 
+        %FDAY% is the generic fractional day token. The field is
+        terminated by a non-numeric character when the column BYTES is
+        reached. FDAY can be either floating point or integer and can
+        be either positive or negative. The start (FDAY=0.0) date/time
+        for the generic FDAY counter is specified by a year elsewhere
+        in the TIME_FORMAT string.
+ 
+        %HR% is the two digit integer hour of day token. If only one
+        digit is found, then a leading zero is implied. Valid range is
+        0-23 (length = 2).
+ 
+        %FHR% is the generic fractional hour token. The field is
+        terminated by a non-numeric character or when the column BYTES
+        is reached. FHR can be either floating point or integer and can
+        be either positive or negative. The start date/time for the
+        generic FHR is set elsewhere in the TIME_FORMAT string by the
+        next largest time element token.
+ 
+        %MIN% is the two-digit integer minute of hour token. If only
+        one digit is found, then a leading zero is implied. Valid range
+        is 0-59 (length = 2).
+ 
+        %FMIN% is the generic fractional minute token. The field is
+        terminated by a non-numeric character or when the column BYTES
+        is reached. FMIN can be either floating point or integer and can
+        be either positive or negative. The start date/time for the
+        generic FMIN is set elsewhere in the TIME_FORMAT string by the
+        next largest time element token.
+ 
+        %SEC% is the two-digit second of minute token. If only one digit
+        is found, then a leading zero is implied. The valid range is 0-
+        60 (length = 2).
+ 
+        %FSEC% is the generic fractional second token. The field is
+        terminated by a non-numeric character or when the column BYTES
+        is reached. FSEC can be either floating point or integer and can
+        be either positive or negative. The start date/time for the
+        generic FSEC is set by the next largest time element token in
+        the TIME_FORMAT string.
+ 
+        %MSEC% is the three-digit integer millisecond of second token.
+        If less than 3 digits are found, the leading zeros are implied.
+        The valid range is 0-999 (length = 3).
+ 
+        %FMSEC% is the generic fractional millisecond token. The field
+        is terminated by a non-numeric character or when the column
+        BYTES is reached. FMSEC can be either floating point or integer
+        and can be either positive or negative. The start date/time for
+        the generic FMSEC is set by the next largest time element token
+        in the TIME_FORMAT string.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>
+N/A
+</formation_rule>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>60</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

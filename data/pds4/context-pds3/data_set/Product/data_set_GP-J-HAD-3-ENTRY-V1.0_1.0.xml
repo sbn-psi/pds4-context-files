@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gp-j-had-3-entry-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO PROBE HELIUM ABUNDANCE DETECTOR DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:had.gp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gp-j-had-3-entry-v1.0__browserp_gp-j-had-3-entry-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Von Zahn, U. and D.M. Hunten, The Jupiter Helium Interferometer Experiment on
+                   the Galileo Entry Probe, Space Sci. Rev. 60, pp. 263-281, 1992.
+            </reference_text>
+            <description>reference.VONZAHN-HUNTEN1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Von Zahn, U. and D.M. Hunten, The Helium Mass Fraction in Jupiter&apos;s Atmosphere,
+                   Science 272, pp. 849-851, 1996.
+            </reference_text>
+            <description>reference.VONZAHN-HUNTEN1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GP-J-HAD-3-ENTRY-V1.0</data_set_id>
+        <data_set_name>GALILEO PROBE HELIUM ABUNDANCE DETECTOR DATA V1.0</data_set_name>
+        <data_set_release_date>1996-12-08</data_set_release_date>
+        <start_time>1995-12-07T21:05:44Z</start_time>
+        <stop_time>1995-12-07T23:35:44Z</stop_time>
+        <producer_full_name>ULF VON ZAHN</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            GALILEO PROBE HELIUM ABUNDANCE DETECTOR DATA V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set is most accurately described in
+            [VONZAHN&amp;HUNTEN1996]:
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    From [VONZAHN&amp;HUNTEN1996]:
+ 
+    More than 99.5 mole percent of the jovian atmosphere consists of
+    H2 and He.  Hence, to a first approximation, this atmosphere can
+    be considered to be a binary gas mixture, for which the mole
+    fraction q(He) can be derived from the ratio of refractive
+    indices q(He) = (n(H2) - n(s)) / (n(H2) - n(He)) where n(He) is
+    the refractive index of He, n(H2) is the refractive index of H,
+    and n(s) is the refractive index of the sample gas (jovian gas).
+    The word &apos;sample&apos; is used because the refractive index of this
+    jovian gas is measured inside the HAD instrument and at sample
+    gas pressures and temperatures that differ from conditions in the
+    ambient jovian atmosphere.
+ 
+ 
+  Parameters
+  ==========
+    From [VONZAHN&amp;HUNTEN1992]:
+ 
+                        Definitions for abundance measures
+----------------------------------------------------------------------
+ 
+&apos;Mass fraction&apos;                                  N_Hm_H + 2N_H2m_H
+Hydrogen mass fraction  X is equivalent to ---------------------------
+                                           SUM of (N_jm_j) for all j&apos;s
+ 
+                                                     N_Hem_He
+Helium mass fraction    Y is equivalent to ---------------------------
+                                           SUM of (N_jm_j) for all j&apos;s
+ 
+Mass fraction of all other elements   Z is equivalent to 1 - X - Y
+ 
+with N_i the number density of particles of type i;
+m_i mass of a particle of type i
+ 
+&apos;Mole fraction&apos;                                          N_i
+(mixing ratio)          q_i is equivalent to  ------------------------
+                                              SUM of (N_j) for all j&apos;s
+ 
+with    SUM of (q_j) for all j&apos;s = 1
+ 
+                                                            N_He
+In particular at Jupiter  q_He is approximately   --------------------
+                                                        N_H2 + N_He
+ 
+&apos;Abundance ratio&apos; of                                        N_He
+ helium/hydrogen          R_He is equivalent to   --------------------
+                                                            N_H2
+ 
+----------------------------------------------------------------------
+ 
+ 
+  Processing
+  ==========
+    Details can be found in [VONZAHN&amp;HUNTEN1996].
+ 
+ 
+  Data
+  ====
+    The data included here were provided to the PDS by Ulf Von Zahn
+    as a one page FAX.  No attempt was made by the instrument team to
+    provide any other data or information such as the interference
+    fringe count.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    The error bars are included as reported to the PDS by Von Zahn.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

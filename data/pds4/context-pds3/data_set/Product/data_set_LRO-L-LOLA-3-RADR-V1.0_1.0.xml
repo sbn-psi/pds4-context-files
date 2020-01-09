@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lola-3-radr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO MOON LASER ALTIMETER 3 RADR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lola.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lola-3-radr-v1.0__browserp_lro-l-lola-3-radr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Lemelin, M., P.G. Lucey, G.A. Neumann, E.M. Mazarico, A. Kakazu, D. Trang, D.E.
+                   Smith, and M.T. Zuber, Improved calibration of reflectance data from Lunar
+                   Reconnaissance Orbiter Lunar Orbiter Laser Altimeter (LOLA) and implications
+                   for space weathering, Icarus, submitted.
+            </reference_text>
+            <description>reference.LEMELINETAL2016</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-LOLA-3-RADR-V1.0</data_set_id>
+        <data_set_name>LRO MOON LASER ALTIMETER 3 RADR V1.0</data_set_name>
+        <data_set_release_date>2015-12-15</data_set_release_date>
+        <start_time>2009-09-15T21:52:46Z</start_time>
+        <stop_time>2010-09-16T19:15:57Z</stop_time>
+        <producer_full_name>DAVID E. SMITH</producer_full_name>
+        <citation_text>
+            Smith, D.E., 2009 Lunar Orbiter Laser Altimeter Radiometry Data
+            Set, LRO-L-LOLA-3-RADR-V1.0, NASA Planetary Data System, 2015.
+        </citation_text>
+        <data_set_terse_desc>
+            Radiometry (albedo) science data from the nominal mission phases
+            of the 2009 Lunar Reconnaissance Orbiter mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival radiometric data derived from
+            reduced altimetry measured by the Lunar Orbiter Laser Altimeter
+            instrument during LRO&apos;s Nominal Mission. LOLA is a pulse
+            detection, time-of-flight laser altimeter that measures the
+            distance between the LRO spacecraft and the surface of the Moon.
+            LOLA transmits a 5-spot pattern, thus providing 5 simultaneous
+            profiles across the lunar surface whose separation depends on
+            spacecraft altitude. LOLA also measures the energy of the return
+            pulses, which enables the calculation of the surface albedo after
+            calibration.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+  This data product is presented as along-track profiles that contain normal
+  albedo, the radiance of the Moon at zero phase angle relative to a Lambert
+  surface illuminated normally.  Calculations are done as described in
+  LEMELINETAL2016 using laser data collected during the thirteen Nominal
+  Mission phases.
+ 
+  Normal albedo has been corrected for the sensitivity drift of the laser
+  with time, and for the loss of signal from temperature-dependent loss of
+  alignment of the laser transmitter in the polar regions.
+ 
+  Each TAB file contains data for a given LRO orbit, where each line
+  corresponds to a laser return. The data is stored in 13 columns: latitude
+  (degrees), longitude (degrees), normal albedo, Terrestrial Dynamic Time,
+  laser used, detector used, reflectance (fraction), received energy (zJ),
+  transmit energy (mJ), range (km), solar incidence angle (degrees), Off
+  nadir angle (degrees), dropoff fit (fraction).  These values, as well as
+  their locations with each data file, are described in the accompanying
+  LOLARADR.FMT file.
+ 
+  Not every return with valid altimetry has a corresponding albedo value, as
+  the energy measurement quality also depends on the solar incidence angle.
+  The following conditions were applied to qualify pulses for inclusion in a
+  data file: solar incidence angle lower than 90 degrees (daytime data),
+  received energy greater than 0.14 zJ, a spacecraft off-nadir angle
+  between 0.2 and 0.4 degrees, and an overall range lower than 70 km from
+  the surface.
+ 
+  The data acquired using Laser 1 and Laser 2 are archived in separate
+  directories.  Instabilities in passive Q-switched lasers cause strong
+  variations in the transmitted energy. When normal albedo is calculated
+  using data acquired by Laser 1, these anomalies are removed and yield
+  proper normalization of the data for the transmitted energy variation.
+  However, in the case of Laser 2 data, normalization leaves a residue
+  of several percent positive anomalies near the boundaries of change in
+  out-going laser pulse energy. The transmitted energy collected by LOLA
+  when using Laser 2 may not be a full characterization of the out-going
+  laser pulse energy. The normal albedo calculated using data from Laser 2
+  has substantially higher uncertainty than that using Laser 1.
+ 
+  Data in the PolarPatch_NP and PolarPatch_SP folders contain normal albedo
+  data acquired by Laser 1 at solar incidence angles greater than 90
+  degrees (nighttime data), which have been used to fill the gaps in
+  coverage near the poles that occur when using day time data only. For the
+  south polar region, nighttime data from orbits 4014-4264
+  (used in ZUBERETAL2012) were included between 85-90 degrees South.
+  For the north polar region, nighttime data from orbits 4850-4971 and
+  orbits 5318-5360 were included, between 87-90 degrees North. The nighttime
+  normal albedo data have been scaled to the day time normal albedo from
+  Laser 1 in overlapping regions.
+ 
+  The data are stored in the following directory structure:
+ 
+  DATA
+    |--LOLA_RADR
+         |
+         |--LASER1
+         |     |
+         |     |--LRO_[mission phase]_[orbital cycle]
+         |     |     |
+         |     |     |--LOLARADR_yydddhhmm.TAB
+         |     |
+         |     |--POLARPATCH_[NP or SP]
+         |           |
+         |           |--LRO_[mission_phase]_[orbital cycle]
+         |                 |
+         |                 |----LOLARADR_yydddhhmm_[NP or SP].TAB
+         |
+         |--LASER2
+               |
+               |--LRO_[mission phase]_[orbital cycle]
+                     |
+                     |--LOLARADR_yydddhhmm.TAB
+ 
+  Each data file is accompanied by a PDS label file with the same name,
+  extension &apos;.LBL&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+  Confidence Level Overview
+  =========================
+  The active measurement of reflectance meets the requirements of the LRO
+  mission to locate potential lunar resources and map them at ~25-400m scales
+  in shadows where exposures of ice-regolith mixtures may be detected. The
+  LOLA instrument implemented this measurement with an electronic energy
+  measurement function that integrates and samples the peak of the amplified
+  detector hybrid output with a track-and-hold function, followed by an 8-bit
+  digitizer. The output of the digitizer is proportional to the energy for a
+  given amplifier gain. Throughout the bulk of the mission the gain has been
+  fixed at its maximum. The baseline of the digitized signal and constant of
+  proportionality for each of the five receiver-detector-electronic systems
+  were calibrated on the ground. The calibration parameters did not match the
+  results obtained in flight, and an independent estimate of the baseline
+  was derived by fitting the response as a function of range distance. A
+  further estimate of the proportionality was derived from comparisons with
+  imaging systems on other missions whose radiometric calibration was more
+  precise than can be obtained with a pulsed system. The resulting energy
+  measurement is limited to a range of 0.1 - 3 fJ at the detector. Its
+  precision above 0.2 fJ is 12% until it reaches saturation, which occurs
+  only rarely in flight. Likewise the transmitted energy was calibrated
+  on the ground and its precision is nominally 2% when corrected
+  for temperature response of the monitor. The accuracy of the transmit
+  energy is affected by the proportion of the laser beam sampled which will
+  inevitably change in flight as the beam shape changes with age. The scale
+  factor of the measurement is affected by the optical system used to sample
+  the beam by means of partial transmission and has increased with age.
+  Thus the reflectance measurement in flight is limited in range and must be
+  calibrated with empirical adjustments.
+ 
+  Calibration Observations
+  ========================
+  Observations of the LOLA laser and detector through the Earth&apos;s atmosphere
+  have been performed in 2009 and 2014. Owing to the slews necessary to put
+  the five laser spots within the field of view of the ground system and the
+  operational difficulties of pointing the instrument deck away from the Moon
+  it has only been possible to characterize the laser beam qualitatively and
+  observe changes in its pattern that corroborate the reduction in output
+  of each of the two lasers during limited time intervals. The atmosphere
+  attenuates the energy as well in an unpredictable fashion. Thus the nominal
+  instrument response is adjusted empirically. Lastly, the Earth observations
+  have confirmed a misalignment of the laser beams with the detectors that is
+  induced by thermal contraction when facing the cold night surface of the
+  Moon or deep space. The transition from dayside to night changes the
+  alignment and the portion of energy reaching the detector over the course
+  of a few minutes on each orbit, and varies with the angle of the orbital
+  plane with respect to the sun (beta angle). During the highest beta angle
+  season that occurs semiannually the misalignment over the terminator is
+  most severe and precludes measurements.
+ 
+  Mission Phases and Intervals
+  =========================
+  Observations are interrupted by monthly orbit trim maneuvers and data are
+  broken into approximately monthly Phases during the LRO Nominal Mission.
+  The energy measurements have a more limited range of availability than the
+  altimetry and therefore depend strongly on altitude and laser output.
+ 
+  Data Coverage and Quality
+  =========================
+  The highest quality observations were obtained during the LOLA Nominal
+  Mission Phases 01-13.
+ 
+  Mission Phase  Start Time (DOY)  End Time (DOY)
+  -------------  ----------------  --------------
+  LRO_NO_01      2009-258T21:00    2009-296T17:22
+  LRO_NO_02      2009-296T17:22    2009-324T16:00
+  LRO_NO_03      2009-324T16:00    2009-351T21:00
+  LRO_NO_04      2009-351T21:00    2010-013T19:00
+  LRO_NO_05      2010-013T19:00    2010-040T18:18
+  LRO_NO_06      2010-040T18:18    2010-068T17:24
+  LRO_NO_07      2010-068T17:24    2010-095T16:54
+  LRO_NO_08      2010-095T16:54    2010-123T15:59
+  LRO_NO_09      2010-123T15:59    2010-150T16:25
+  LRO_NO_10      2010-150T16:25    2010-178T17:15
+  LRO_NO_11      2010-178T17:15    2010-205T15:41
+  LRO_NO_12      2010-205T15:41    2010-232T12:18
+  LRO_NO_13      2010-232T12:18    2010-259T18:15
+ 
+  Some Science Mission and Extended Mission Phases have permitted more
+  limited measurement of reflectance.  Those data are not currently part of
+  this dataset.
+ 
+  Limitations
+  ===========
+  The precision of individual spot measurements is limited and averaging
+  of data along track with exclusion of weaker or inconsistent measurements
+  is required to map the observations to the lunar terrain.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

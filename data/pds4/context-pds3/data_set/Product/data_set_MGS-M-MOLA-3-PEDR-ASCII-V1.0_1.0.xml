@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-mola-3-pedr-ascii-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MOLA PRECISION EXPERIMENT DATA RECORD ASCII TABLES</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mola.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-mola-3-pedr-ascii-v1.0__browserp_mgs-m-mola-3-pedr-ascii-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-mola-3-pedr-ascii-v1.0__dvo_geo_offline::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Orbiter Laser Altimeter Precision Experiment Data Record Software
+                   Interface Specification, Version 2.6, NASA/Goddard Space Flight Center,
+                   October 1, 1998.
+            </reference_text>
+            <description>reference.MOLAPEDRSIS1998</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-MOLA-3-PEDR-ASCII-V1.0</data_set_id>
+        <data_set_name>MOLA PRECISION EXPERIMENT DATA RECORD ASCII TABLES</data_set_name>
+        <data_set_release_date>1999-02-24</data_set_release_date>
+        <start_time>1997-07-31T19:10Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>ROGER J. PHILLIPS</producer_full_name>
+        <citation_text>
+            Phillips, R. J., MOLA PRECISION EXPERIMENT DATA RECORD ASCII
+            TABLES, MGS-M-MOLA-3-PEDR-ASCII-V1.0, NASA Planetary Data System,
+            1999
+        </citation_text>
+        <data_set_terse_desc>
+            The Precision Experiment Data Record (PEDR) ASCII archive
+            contains derived altimetry profile data acquired by MOLA during
+            the Mars Global Surveyor (MGS) mission stored as ASCII tables
+            (superseded by MGS-M-MOLA-3-PEDR-L1A-V1.0).
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Mars Global Surveyor spacecraft included a laser altimeter
+            instrument. The primary objective of the Mars Orbiter Laser
+            Altimeter (MOLA) is to determine globally the topography of Mars
+            at a level suitable for addressing problems in geology and
+            geophysics.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+ 
+  The Mars Global Surveyor spacecraft included a laser altimeter
+  instrument. The primary objective of the Mars Orbiter Laser
+  Altimeter (MOLA) is to determine globally the topography of Mars at
+  a level suitable for addressing problems in geology and geophysics.
+ 
+  The primary MOLA standard data product is the Precision Experiment
+  Data Record (PEDR). (See the description for the PEDR data set, data
+  set ID MGS-M-MOLA-3-PEDR-L1A-V1.0.) PEDRs are stored in binary files
+  that may be accessed only by using customized software. This PEDR
+  ASCII table data set was created to provide access to the PEDR data
+  without the need for special software.
+ 
+  Data
+  ====
+ 
+  One PEDR ASCII (i.e. plain text) table exists for each PEDR product.
+  The ASCII table has the same name as the PEDR from which it was
+  derived, with the extension &apos;TAB&apos;. Each ASCII table is described
+  by a detached PDS label.
+ 
+  The ASCII tables contain those data fields from the PEDRs that are
+  most likely to be of interest; some of the engineering data fields
+  have been omitted from the ASCII tables.
+ 
+  Processing
+  ==========
+ 
+  The PEDR ASCII tables were generated using the Fortran program
+  PEDR2TAB developed by MOLA Science Team member Gregory Neumann.
+  This software is distributed on the MOLA PEDR archive volumes
+  and is available from the PDS Geosciences Node web site
+  (http://wwwpds.wustl.edu) and the MOLA Team web site
+  (http://ltpwww.gsfc.nasa.gov/tharsis/mola.html).
+ 
+  The ASCII tables were generated at the Geophysics Subnode of the
+  PDS Geosciences Node, Washington University, St. Louis, Missouri,
+  by Jim Alexopoulos under the direction of Roger Phillips, MOLA
+  Science Team member.
+ 
+  Coordinate System
+  =================
+ 
+  See the coordinate system discussion in the description of the PEDR
+  data set.
+ 
+  Software
+  =======
+ 
+  See the Processing section above.
+ 
+  Media/Format
+  ============
+ 
+  The PEDR ASCII tables are distributed on the CD-ROM archive volume
+  with the standard product PEDRs from which they are derived. They
+  may also be available electronically via the PDS Geosciences Node
+  web site at http://wwwpds.wustl.edu and the MOLA Science Team web
+  site at http://ltpwww.gsfc.nasa.gov/tharsis/mola.html. The format of
+  the ASCII tables is compatible with PDS standards for tabular data.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  See the confidence level note in the description of the PEDR
+  data set.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

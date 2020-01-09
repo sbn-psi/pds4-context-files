@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:api.wht</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>AUXILIARY PORT IMAGER for WHT</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.wht::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>AUXILIARY PORT IMAGER</instrument_name>
+        <instrument_desc>
+ 
+  Instrument Overview
+  ===================
+    The information in this document was taken from the website
+    www.ing.iac.es/ on June 19, 2001.
+ 
+    The Auxiliary focus is a facility provided in the Cassegrain
+    Acquisition and Guider unit (A&amp;G box) to allow a direct image
+    to be taken on-axis at the Cassegrain focus, at the expense of
+    an extra (45 degree) reflection.
+ 
+ 
+  Scientific Objectives
+  =====================
+    The original idea of the system was that it could
+    be used for short direct images of objects which were part of
+    a mainly spectroscopic program, but it has emerged as the major
+    instrument for a number of projects for which the high
+    throughput in the ultraviolet provided by an all-reflecting
+    optical system, or the 0.1 arcsec pixel size, are a particular
+    advantage.
+ 
+ 
+  Operational Considerations
+  ==========================
+    Local seeing can be degraded by the presence in the atmosphere of
+    dust from Sahara dust storms, and by the presence of moisture or
+    clouds.
+ 
+ 
+  Detector
+  ========
+ 
+    Note: Additional information is available in
+          DOCUMENT/U_MAN.PDF
+ 
+    Device Identification
+    ---------------------
+      Chip name                             EEV3
+      Year of manufacture                   Unknown
+      Serial number                         Unknown
+      Technology                            Unknown
+      Anti reflection coating               Metachrome
+      First light on La Palma               April 1991
+ 
+ 
+    Operational Characteristics
+    ---------------------------
+      Measurements made on ISIS red 3/4/95
+ 
+      Speed           Slow    Standard   Quick    Turbo     Nonastro
+ 
+      Bias(ADU)       3160     5007       4234     3234       3567
+      Gain(e/ADU)     0.71     0.79       1.10     1.66       3.27
+      Noise(e)        3.73     3.47       6.00     9.82       20.5
+      Linear to(ADU)  60k       60k        60k      40k        25k
+      Readout time(s) 193       132         77       63         47
+ 
+      Vertical CTE              0.99999
+      Horizontal CTE            0.99999
+ 
+ 
+    Physical Characteristics
+    ------------------------
+      X Pixel size                          22.5 microns
+      Y Pixel size                          22.5 microns
+      X size in pixels of digitized area    1280
+      Y size in pixels of digitized area    1180
+      X size of useful imaging area         1242
+      Y size of useful imaging area         1152
+      X start of useful imaging area        17
+      Ystart of useful imaging area         0
+      LN2 capacity of cryostat              1.5 liters
+      Cryostat window thickness             4 mm
+      Distance from window to CCD           ? mm
+ 
+ 
+    Operational Parameters
+    ----------------------
+      Flooding type                         none
+      Operating temperature                 147K
+      Anti-blooming available               no
+ 
+ 
+    Measured characteristics
+    ------------------------
+      Quantum Efficiency                     @400nm 19%
+                                             @530nm 38%
+                                             @650nm 55%
+      Peak non-uniformity in QE across chip  Unknown
+      Dark current                           8 e/hour
+      Point spread function                  Unknown
+      Full well bloom limit                  Unknown
+      Chip flatness                          Unknown
+      Cosmetics                              Unknown
+ 
+ 
+  Filters
+  =======
+ 
+      Note: Additional information is available in
+          DOCUMENT/U_MAN.PDF
+ 
+    The Auxiliary focus filter unit is a box mounted at the
+    Auxiliary port, which contains a 6 position filter. The
+    maximum size of the filters to fit in this wheel is 51mm
+    square or 55mm diameter. The filter unit also contains a CCD
+    shutter 25mm in diameter, which is operated as normal by the
+    CCD controllers. The filter wheel is controlled by the
+    Cassegrain A&amp;G box.
+ 
+    The standard methane filter was replaced with a filter provided
+    by the Instituto de Astrofisica de Andalucia. It was a narrow
+    band methane filter centered at 8920 Angstroms with Full Width
+    at Half Maximum of 50 Angstroms. This filter was used for all
+    of the API images of the inner Saturnian system.
+ 
+    The remaining positions in the filter wheel were occupied
+    by standard WHT filters which were used to make backup spectral
+    observations of the E-ring as insurance in case the seeing did
+    not prove good enough to use ISIS. The set included a copper
+    sulfide filter (U), three Harris filters (B,V,R) and an I filter
+    which was incorrectly identified as a Harris filter in the
+    observing log, but was most likely the I filter from the RGO
+    filter set.
+ 
+    The Harris set of BVR are sandwiches of Schott glass selected
+    to provide CCD analogs of the old Johnson photometric sequence.
+    Until the Schott BG39 was developed, interference filters were
+    required to cut red-leaks that CCDs were sensitive to. But
+    interference filters deteriorate with time, so Harris at USNO
+    found these combinations of very stable glasses that does the job
+    quite well.
+ 
+    Name        central wavelength      FWHM
+    CH4                8920           8895- 8945
+    B_Harris           4390           3774- 4852
+    V_Harris           5256           4952- 5944
+    R_Harris           5920*          5656- 7144
+    I_RGO              8400**         7500-10500
+    *  - very asymmetric
+    ** - broad, double peak
+ 
+    The U_CUSO4 is a copper sulfide filter that has good red blocking.
+ 
+ 
+  Location
+  ========
+    Coordinates of WHT, from ING Observers&apos; Guide section 1.2
+    Latitude:             28 45 38.3 N (+28.761 deg)
+    Longitude:            17 52 53.9 W (-17.882 deg)
+    Ground floor height:  2332 m
+
+        </instrument_desc>
+        <instrument_id>API</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Camera</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

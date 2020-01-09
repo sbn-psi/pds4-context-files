@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-e-sw-j-s-mag-4-summ-1secavg-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CASSINI ORBITER MAG CALIBRATED SUMMARY 1 SEC AVERAGES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:plasma_stream.solar_wind::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-e-sw-j-s-mag-4-summ-1secavg-v1.0__browserp_co-e-sw-j-s-mag-4-summ-1secavg-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-E/SW/J/S-MAG-4-SUMM-1SECAVG-V1.0</data_set_id>
+        <data_set_name>CASSINI ORBITER MAG CALIBRATED SUMMARY 1 SEC AVERAGES V1.0</data_set_name>
+        <data_set_release_date>2016-01-25</data_set_release_date>
+        <start_time>2000-01-20T02:28:30Z</start_time>
+        <stop_time>2015-03-31T23:59:58.5Z</stop_time>
+        <producer_full_name>JOSEPH N. MAFI</producer_full_name>
+        <citation_text>
+            Dougherty, M.K., S. Kellock, A.P. Slootweg, N. Achilleos, S.P.
+            Joy, and J.N. Mafi, CASSINI ORBITER MAG CALIBRATED SUMMARY 1 SEC
+            AVERAGES V1.0, CO-E/SW/J/S-MAG-4-SUMM-1SECAVG-V1.0, NASA
+            Planetary Data System, 2013
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains calibrated 1 second averaged Cassini
+            magnetometer data, for the entire Cassini mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains calibrated 1 second averaged Cassini
+            magnetometer data, for the entire Cassini mission. These data are
+            provided in Kronographic (KRTP, KSO, KSM) coordinates at Saturn,
+            Geographic coordinates (GSE, GSM) for the Earth flyby,
+            Jovigraphic coordinates for the Jupiter flyby, and RTN
+            coordinates for the entire mission. These data were calibrated
+            and converted to physical coordinates from the Cassini MAG Raw
+            Data Set (CO-E/SW/J/S-MAG-2-REDR-RAW-DATA-V1.0), by the Cassini
+            MAG team at Imperial College. The data averaged to 1 second at
+            the PDS-PPI node at UCLA.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+      This data set contains magnetic-field data acquired during the
+      cruise and tour phases of the Cassini mission to Saturn.
+      On 16 August, 1999 two days before the spacecraft commenced Earth
+      swingby, the magnetometer boom was unfurled into its extended
+      position; a  configuration it maintained for the remainder of the
+      mission.  Magnetic-field data acquired prior to boom deployment are
+      limited and are significantly affected by spacecraft noise. These
+      data are of no scientific value and, consequently, do not form part
+      of this data set.
+ 
+      Cassini carried two magnetometers: a fluxgate magnetometer (FGM)
+      and a vector-helium magnetometer capable of operating in both
+      vector and scalar mode (V/SHM). This data set contains calibrated,
+      and averaged magnetic-field data recorded by the FGM instrument.
+      The data are provided in both 1 second. The 1 second averaged data
+      files span 1 quarter of year prior to arrival at Saturn, and 1 Saturn
+      orbit following arrival at Saturn. The data are provided in RTN
+      coordinates throughout the mission. After arrival at Saturn, the
+      Saturn-centered KRTP, KSO, and KSM coordinates are also provided.
+      Earth-centered, and Jupiter-centered coordinates are provided for
+      the flybys of those two planets. All data files are ASCII.
+ 
+      These data were calibrated, and rotated into geophysical coordinates
+      by the Cassini MAG team at Imperial College (IC), and provided to
+      the PDS/PPI node via the Cassini MAG team Co-I at UCLA. In other
+      words these data use the same calibration as the data routinely
+      delivered to the Cassini MAG team. Averaging for the 1 second data
+      was performed at the PDS-PPI Node.
+ 
+ 
+      Processing
+      ==========
+ 
+ 
+      Coordinate Systems
+      ==================
+      The coordinate systems in which the data are provided in vary by
+      mission phase, and are designed to support both solar wind and
+      planetary magnetospheric studies.
+ 
+ 
+      Solar Wind Coordinates
+      ----------------------
+ 
+         Radial-Tangential-Normal Coordinates (RTN)
+         ------------------------------------------
+         RTN coordinates consist of R (radial component, Sun to the
+         spacecraft), T (tangential component, parallel to the Solar
+         Equatorial plane and perpendicular to R), and N (normal component,
+         completes right handed set).
+ 
+      Saturn-Centered Coordinates
+      ---------------------------
+ 
+         Kronocentric body-fixed, J2000 spherical Coordinates (KRTP)
+         -----------------------------------------------------------
+         KRTP magnetic field vector components form the standard right-handed
+         spherical triad (R, Theta, Phi) for a planet-centered system.
+         Namely, R is radial (along the line from the center of Saturn to the
+         center of the spacecraft), and positive away from Saturn. Phi, the
+         azimuthal component, is parallel to the Kronographic equator (Omega
+         x R) and positive in the direction of corotation. Theta, the
+         &apos;southward&apos; component, completes the right-handed set.
+ 
+         Kronocentric Solar Magnetospheric Coordinates (KSM)
+         ---------------------------------------------------
+         KSM is a cartesian Saturn-center coordinate system where X points
+         from Saturn to the Sun, the X-Z plane contains Saturn&apos;s centered
+         magnetic dipole axis, M, and Y completes right handed set.
+ 
+         Kronocentric Solar Orbital Coordinates (KSO)
+         --------------------------------------------
+         KSO is a cartesian Saturn-centered coordinate system where X points
+         from Saturn to the Sun, Z is parallel to Saturn&apos;s orbital plane
+         upward normal, and Y completes the right handed set.
+ 
+      Earth-Centered Coordinates
+      --------------------------
+ 
+      Jupiter-Centered Coordinates
+      ----------------------------
+ 
+         Jovicentric Body-Fixed (IAU_JUPITER) Coordinates (J3)
+         -----------------------------------------------------
+         J3 is a body-fixed Jovicentric cartesian coordinate system
+         consistent with the IAU 1997 definition of the System 3 prime
+         meridian where X is in the Jovian equatorial plane, along S3
+         1997 Prime Meridian, Z is parallel to the Jovian spin axis,
+         and Y completes right-handed set.
+ 
+         Jovicentric Body-Fixed Magnetospheric Coordinates (JMXYZ)
+         ---------------------------------------------------------
+         JMAG XYZ is a body-fixed Jovicentric cartesian coordinate system
+         where X is in the plane containing Z and the S3 1997 Prime Meridian,
+         Z is the Jupiter magnetic dipole, and Y completes right handed set.
+ 
+ 
+      SPICE
+      =====
+      The data product labels associated with the data set include a list of
+      the SPICE kernels that were used in calibrating the associated data,
+      and coverting them to physical coordinates. While the SPICE kernels
+      used are not part of this data set, these kernels are archived at the
+      PDS-NAIF node on the volume cosp_1000. Note that the SPICE kernels
+      listed in each of the product labels may be uniquely identified by
+      their file name.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      Product Versions
+      ================
+      PRODUCT_VERSION_ID 1 data were calibrated at the PDS/PPI node at
+      UCLA using software (CAL02), and calibration data provided by the
+      Cassini MAG team. The process used the same calibration data that
+      was provided with the Raw Magnetometer data archive (Data Set ID:
+      CO-E/SW/J/S-MAG-2-REDR-RAW-DATA-V1.0). The data were then rotated
+      into geophysical coordinates using MAG team additonal MAG team
+      provided code (TRANSCAL) and spice kernels obtained from NAIF.
+      The data were then averaged, and reformatted to ASCII using code
+      developed at PDS/PPI.
+ 
+      PRODUCT_VERSION_ID 2 data were calibrated, and rotated into
+      geophysical coordinates by the Cassini MAG team at Imperial
+      College, and provided to the PDS/PPI node via the MAG team Co-I at
+      UCLA. Averaging to 1 second was performed at PDS/PPI (UCLA). The
+      data were then reformatted at PDS/PPI to match the format used for
+      the version 1 data.
+ 
+      PRODUCT_VERSION_ID 3 have followed the same path as the version 2
+      data, however, the data have been recalibrated.
+ 
+      PRODUCT_VERSION_ID 4 data were processed following the same
+      procedure that was followed for the version 2 data. However,
+      previously undetected mis-time tagged data which were present in
+      the full-resolution data were removed prior to averaging the data
+      to 1 second. More details on the timing errors are provided in the
+      confidence level note (below).
+ 
+      PRODUCT_VERSION_ID 5 data were processed following the same
+      procedure that was followed for the version 4 data, including the
+      removal of mis-timed data before averaging. In addition, version 5
+      products have been modified to satisfy liens set in the PDS peer
+      review. Including a change in record formatting, and changes to
+      the PDS labels.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

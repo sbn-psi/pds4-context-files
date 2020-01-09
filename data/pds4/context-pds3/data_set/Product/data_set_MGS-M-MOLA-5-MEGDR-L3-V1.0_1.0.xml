@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-mola-5-megdr-l3-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MOLA MISSION EXPERIMENT GRIDDED DATA RECORD</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mola.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-mola-5-megdr-l3-v1.0__browserp_mgs-m-mola-5-megdr-l3-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-mola-5-megdr-l3-v1.0__dvo_geo_mgs-m-mola-5-megdr-l3-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Abshire, J. B., X. Sun, and R. S. Afzal, Mars Orbiter Laser Altimeter:
+                   Receiver Model and Performance Analysis, Applied Optics-LP, 39, 2449, 2000.
+            </reference_text>
+            <description>reference.ABSHIREETAL2000</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Afzal, R.S., A.W. Yu, J.J. Zayhowski, and T.Y. Fan, Single-mode
+                   high-peak-power passively Q-switched diode pumped ND:YAG laser, Optics
+                   letters, 22, 1314, 1997.
+            </reference_text>
+            <description>reference.AFZALETAL1997</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Davies, M.E., V.K. Abalakin, M. Bursa, J.H. Lieske, B. Morando, D. Morrison,
+                   P.K. Seidelman, A.T. Sinclair, B. Yallop, and Y.S. Tjuflin, Report of the
+                   IAU/IAG/COSPAR Working Group on Cartographic Coordinates and Rotational
+                   Elements of the Planets and Satellites, Celestial Mechanics and Dynamical
+                   Astronomy, Vol. 63, pp. 127-148, 1994.
+            </reference_text>
+            <description>reference.DAVIESETAL1994B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Orbiter Laser Altimeter Experiment Gridded Data Record Software
+                   Interface Specification, version 2.0, NASA/Goddard Space Flight Center,
+                   November 23, 1999.
+            </reference_text>
+            <description>reference.MOLAEGDRSIS1999</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Orbiter Laser Altimeter Precision Experiment Data Record Software
+                   Interface Specification, Version 2.6, NASA/Goddard Space Flight Center,
+                   October 1, 1998.
+            </reference_text>
+            <description>reference.MOLAPEDRSIS1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Smith, D.E., M.T. Zuber, H.V. Frey, J.B. Garvin, J.W. Head, D.O. Muhleman,
+                   G.H. Pettengill, R.J. Phillips, S.C. Solomon, H.J. Zwalley, W.B. Banerdt,
+                   and T.C. Duxbury, Topography of the northern hemisphere of Mars from the
+                   Mars Orbiter Laser Altimeter, Science, 279, 1686-1692, 1998.
+            </reference_text>
+            <description>reference.SMITHETAL1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Zuber, M.T., D.E. Smith, S.C. Solomon, D.O. Muhleman, J.W. Head, J.B. Garvin,
+                   J.B. Abshire, and J.L. Bufton, The Mars Observer Laser Altimeter Investigation,
+                   J. Geophys. Res., 97, 7781-7797, 1992.
+            </reference_text>
+            <description>reference.ZUBERETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-MOLA-5-MEGDR-L3-V1.0</data_set_id>
+        <data_set_name>MOLA MISSION EXPERIMENT GRIDDED DATA RECORD</data_set_name>
+        <data_set_release_date>2003-04-19</data_set_release_date>
+        <start_time>1997-09-15T19:10:00.000Z</start_time>
+        <stop_time>2001-06-30T11:10:40.000Z</stop_time>
+        <producer_full_name>DAVID E. SMITH</producer_full_name>
+        <citation_text>
+            Smith, D.E., M.T. Zuber, G.A. Neumann, E.A. Guinness, and S.
+            Slavney, Mars Global Surveyor Laser Altimeter Mission Experiment
+            Gridded Data Record, MGS-M-MOLA-5-MEGDR-L3-V1.0, NASA Planetary
+            Data System, 2003.
+        </citation_text>
+        <data_set_terse_desc>
+            The Mission Experiment Gridded Data Record (MEGDR) archive
+            contains topographic maps of Mars generated using altimetry data
+            acquired by MOLA and accumulated over the whole primary Mars
+            Global Surveyor (MGS) mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Mars Global Surveyor spacecraft includes a laser altimeter
+            instrument. The primary objective of the Mars Orbiter Laser
+            Altimeter (MOLA) is to determine globally the topography of Mars
+            at a level suitable for addressing problems in geology and
+            geophysics. The MOLA Experiment Gridded Data Record (EGDR) is a
+            topographic map of Mars based on altimetry data acquired by the
+            MOLA instrument and accumulated over the course of the mission.
+            The Mission Experiment Gridded Data Record (MEGDR), consists of
+            data accumulated over the whole primary mission.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The Mars Global Surveyor spacecraft includes a laser altimeter
+    instrument. The primary objective of the Mars Orbiter Laser
+    Altimeter (MOLA) is to determine globally the topography of Mars at
+    a level suitable for addressing problems in geology and geophysics.
+ 
+    The MOLA Experiment Gridded Data Record (EGDR) is a topographic map
+    of Mars based on altimetry data acquired by the MOLA instrument and
+    accumulated over the course of the mission. Two types of EGDR
+    products are produced: the Initial Experiment Gridded Data Record
+    (IEGDR), consisting of data accumulated through at least the first
+    30 days of the mapping mission, and the Mission Experiment Gridded
+    Data Record (MEGDR), consisting of data accumulated over the whole
+    primary mission. Different resolutions of the IEGDR and MEGDR may
+    be released, and multiple versions of each product may be released.
+    See the MOLA EGDR Software Interface Specification [MOLAEGDRSIS1999]
+    for details.
+ 
+    The MOLA Precision Experiment Data Records (PEDRs) are the source
+    for the EGDRs. See the MOLA PEDR Software Interface Specification
+    [MOLAPEDRSIS1998] and the PDS Catalog entry for the PEDR data set
+    (MGS-M-MOLA-3-PEDR-L1A-V1.0) for a description of the PEDRs.
+ 
+ 
+  Data
+  ====
+    The MEGDR product is a global map of planetary radius, areoid,
+    topography, and number of observations, derived from MOLA PEDR
+    products and aggregated into latitude-longitude bins. The binned
+    data include all MOLA nadir observations from the Mapping Phase
+    through the Primary and Extended missions, from the end of
+    aerobraking in February 1999 through June 2001. Additionally,
+    off-nadir observations of the north pole are included from 87 N
+    latitude and northward, taken during the spring of 1998, and of
+    both poles taken during Mapping from 87 N and S to the poles.
+    Data are adjusted using a first-order crossover solution for
+    radial, along-track, and across-track position. Parts of orbits
+    are excluded where solutions for these orbits are deemed to be
+    poor. Also excluded are shots more than 1.2 degree off-nadir
+    (except as noted above), channel 4 returns, and any returns not
+    classified as ground returns, e.g. clouds or noise, according to
+    the SHOT_CLASSIFICATION_CODE. A total of nearly 600,000,000
+    observations are represented.
+ 
+    Each image is a binary array of 8- or 16-bit integers in
+    most-significant-byte-first storage order. The image file name is
+    in the form MEGkxxdyyyrv.IMG, where
+ 
+      k   = A for areoid, C for counts, R for radius, T for topography
+      xx  = latitude of pixel in upper left corner of the image
+      d   = N for north latitude, S for south
+      yyy = longitude of the pixel in the upper left corner of the image
+      r   = map resolution in pixels per degree, e.g.
+                 C =   4 pix/deg
+                 E =  16 pix/deg
+                 F =  32 pix/deg
+                 G =  64 pix/deg
+                 H = 128 pix/deg
+      v    = version letter.
+ 
+ 
+  Parameters
+  ==========
+    N/A
+ 
+ 
+  Processing
+  ==========
+    The PEDRs incorporate the best multi-arc orbital solutions derived
+    from the Goddard Mars potential model GMM1.6, and the available
+    tracking. The latest spacecraft SCLK timing corrections have been
+    applied.  The ranges account for instrument delays and the leading
+    edge timing biases, estimated by the receiver model of
+    [ABSHIREETAL2000]. This model assumes a Gaussian shape for the
+    transmitted and surface-scattered pulse waveforms, using the
+    detector threshold settings and the observed pulse width and energy
+    measurements between the threshold crossings to infer the true pulse
+    centroid, width, and amplitude.  The eccentric orbit brought MOLA
+    much closer to the surface of Mars than the design called for, thus
+    the pulse width and energy measurements were saturated for much of
+    each pass.  Caution must be exercised when interpreting these
+    measurements.  Laser energies are calculated according to the
+    transmitter model of [AFZALETAL1997].  A post-launch calibration to
+    the MOLA oscillator frequency has been applied, based on the
+    difference between the spacecraft high-resolution timer and the MOLA
+    clock, resulting in an estimated frequency of f=99,996,232 +/- 5 Hz.
+    This frequency is given in the PEDR and may change due to clock
+    drift.  The interval between shots, as well as the shot
+    time-of-flight, is controlled by this frequency. The shot interval
+    in seconds, delta_t = 10,000,000 / f.
+ 
+    Time tags are given in ET seconds of MOLA fire time.  Timing of the
+    shots is interpolated to ~100 microseconds. This step is essential
+    in the highly elliptical orbit insertion geometry because the
+    spacecraft may change its radial distance by as much as 1600 meters
+    per second.
+ 
+    The spacecraft time, from which the shot time is derived, is subject
+    to further timing corrections. The range observations have been
+    registered with orbital position by assuming that the actual time of
+    observation is 117 milliseconds later than the time tag of the MOLA
+    range as derived from the spacecraft clock.
+ 
+    The ground location and planetary radius is calculated in inertial
+    (J2000) coordinates as the difference between the spacecraft
+    position vector and the MOLA one-way range vector. The direction of
+    the MOLA vector is obtained from project-supplied spacecraft
+    attitude kernels and the boresight calibration of the instrument
+    with respect to the spacecraft. The one-way range of the laser shot
+    to the planet is obtained from the two-way range by correcting for
+    the change in spacecraft position during laser shot
+    time-of-flight.
+ 
+    Due to the inverse-square-law energy return in the link equation
+    [ZUBERETAL1992], the instrument detector was saturated during a part
+    of the periapsis approach.  Received pulse energy and pulse width
+    are resolved during the portion of the pass when the detector is not
+    saturated.  The absolute accuracy of these quantities is about 5%.
+ 
+    There is a table entry for each non-zero shot range detection for
+    all in-range packets in the data stream.  Occasional corrupted range
+    values occur due to transmission errors, and some packets are lost
+    entirely. A packet sequence number is generated by MOLA. The
+    sequence number was initialized to 0 just before the planet came
+    within range during the SPO-1 and 2 data passes via a restart
+    command, while during the Hiatus subphase the restart occurred
+    earlier.
+ 
+    Some MOLA ranges are either clouds or false detections due to the
+    intrinsic noise characteristics of the receiver. The MOLA ranges
+    that are true ground hits are flagged with a positive number in the
+    tables.
+ 
+ 
+  Ancillary Data
+  ==============
+    N/A
+ 
+ 
+  Coordinate System
+  =================
+    The MEGDR products use the areocentric coordinate system
+    [DAVIESETAL1994B], more generally described as planetocentric. The
+    areocentric system is body-centered, using the center-of-mass as
+    the origin.  Areocentric latitude is defined by the angle between
+    the equatorial plane and a vector extending from the origin of the
+    coordinate system to the relevant point on the surface.  Latitude
+    is measured from -90 degrees at the south pole to +90 degrees at
+    the north pole.  Longitude extends from 0 to 360 degrees, with
+    values increasing eastward (i.e., it is a right-handed coordinate
+    system) from the prime meridian [DAVIESETAL1994B].  This
+    coordinate system is preferred for use in geophysical studies in
+    which, for example, estimates of elevation or gravitational
+    potential are generated mathematically.
+ 
+    The MEGDR coordinate system is based on the IAU2000 cartographic
+    standard, which differs from the IAU1991 standard used for previous
+    MOLA products [SEIDELMANNETAL2002, DUXBURYETAL2001].
+ 
+ 
+  Software
+  =======
+    N/A
+ 
+ 
+  Media/Format
+  ============
+    The MGS MOLA MEGDR dataset is available electronically
+    via the PDS Geosciences Node web site at
+    http://wwwpds.wustl.edu and the MOLA Science Team web site at
+    http://ltpwww.gsfc.nasa.gov/tharsis/mola.html.  Formats are
+    based on standards established by the Planetary Data System (PDS).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    The resolution of the altimetry data is about 40 cm vertically,
+    and about 300 m along-track, limited by the 10 Hz firing rate
+    of the laser.  The absolute, long-wavelength radial orbit error
+    is estimated to be about 30 m. The uncertainty in absolute ground
+    spot location is limited by the attitude knowledge of the
+    spacecraft, and is estimated to be about 400 m at a nominal
+    range of 400 km.
+ 
+ 
+  Data Coverage/Quality
+  =====================
+    The MEGDR product is based on altimetry measurements acquired by
+    the MOLA instrument from Mars orbit insertion on September 15,
+    1997, through the aerobraking phase, two sets of Science Phasing
+    Orbits, the regular Mapping Mission, and the Extended Mission, up
+    to June 30, 2001 when the MOLA laser stopped operating.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.bit_mask</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>bit_mask</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>bit_mask</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>bit_mask</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The bit_mask element is a series of binary digits identifying
+the active bits in a value.  This is determined by
+applying a bitwise AND (&amp;) operation between the value and
+the bit_mask.
+For example, specifiying a BIT_MASK = 2#11110000# within a 1
+byte unsigned integer COLUMN or ELEMENT object would identif
+only the high-order 4 bits to be used for the value of the
+object.  If other data elements are included in the object
+description that may be dependent on a bit_mask operation
+(e.g. DERIVED_MINIMUM, DERIVED_MAXIMUM, INVALID), the rule
+is to apply the bit_mask first, and then apply or interpret
+the data with the other values.  Byte swapping, if required,
+should be performed prior to applying the bit_mask.
+        </definition>
+        <comment>bitmask</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>bit_mask</name>
+            <definition>
+The bit_mask element is a series of binary digits identifying
+the active bits in a value.  This is determined by
+applying a bitwise AND (&amp;) operation between the value and
+the bit_mask.
+For example, specifiying a BIT_MASK = 2#11110000# within a 1
+byte unsigned integer COLUMN or ELEMENT object would identif
+only the high-order 4 bits to be used for the value of the
+object.  If other data elements are included in the object
+description that may be dependent on a bit_mask operation
+(e.g. DERIVED_MINIMUM, DERIVED_MAXIMUM, INVALID), the rule
+is to apply the bit_mask first, and then apply or interpret
+the data with the other values.  Byte swapping, if required,
+should be performed prior to applying the bit_mask.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

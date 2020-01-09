@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-sharad-5-radargram-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO MARS SHARAD 5 RADARGRAM V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:sharad.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-sharad-5-radargram-v1.0__browserp_mro-m-sharad-5-radargram-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-sharad-5-radargram-v1.0__browser_geo_mars_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-sharad-5-radargram-v1.0__dvo_geo_mro-m-sharad-3-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.TBD</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-SHARAD-5-RADARGRAM-V1.0</data_set_id>
+        <data_set_name>MRO MARS SHARAD 5 RADARGRAM V1.0</data_set_name>
+        <data_set_release_date>2014-03-16</data_set_release_date>
+        <start_time>2006-09-30T02:51:22Z</start_time>
+        <stop_time>2006-11-28T23:00:06Z</stop_time>
+        <producer_full_name>BRUCE A. CAMPBELL</producer_full_name>
+        <citation_text>
+            Campbell, B. and R. Phillips., Mars Reconnaissance Orbiter
+            Shallow Radar Radargram Data, MRO-M-SHARAD-5-RADARGRAM-V1.0, NASA
+            Planetary Data System, 2014.
+        </citation_text>
+        <data_set_terse_desc>
+            Radargram data from the Shallow Radar (SHARAD) instrument on the
+            Mars Reconnaissance Orbiter.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains radar sounding information for Mars
+            collected by the SHARAD instrument on the Mars Reconnaissance
+            Orbiter. For each section of an orbital ground track during which
+            the instrument operated, there is a two-dimensional radargram
+            image that presents backscattered power with round-trip time
+            delay along the vertical axis and along-track distance on the
+            horizontal axis. An associated table file contains positional
+            information for each image column.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+ 
+    This archive contains radargram image data acquired by the Mars
+    Reconnaissance Orbiter (MRO) Shallow Radar (SHARAD) instrument,
+    which uses a 15-25 MHz radio signal to probe up to several
+    kilometers through low-loss materials like the polar layered
+    deposits, and up to a few hundred meters in typical geologic
+    materials. Reflections occur where there are significant changes
+    in the dielectric permittivity among layered deposits, occurring
+    over lateral scales of at least a few kilometers. Radargrams are
+    produced using a consistent set of synthetic aperture radar
+    processing parameters described in the accompanying User&apos;s Guide.
+    For each SHARAD track, the *RGRAM.IMG file is a real-valued image
+    of the radar backscatter power, arranged with time delay on the
+    vertical axis and along-track samples on the horizontal axis.
+    These values are in arbitrary units of power. The along-track
+    samples of each radargram are associated with latitude, longitude
+    pairs in the ancillary *GEOM.TAB file, which also provides
+    information on spacecraft position and planetary radius for use in
+    changing the reference spheroid surface. Along-track spacing of
+    the radargram samples is 128 pixels per degree, or about 460 m.
+    The round-trip delay samples are a uniform 0.0375 microseconds.
+    Browse products are presented in a logarithmic (decibel) format
+    with a greyscale range corresponding to 35 dB.
+ 
+    This archive includes data processed by the U.S. SHARAD team.
+    Differences in the processing methods and resulting radargrams
+    from the PDS archive products delivered by the SHARAD Italian
+    science team are noted in the accompanying User&apos;s Guide (DOCUMENT
+    directory). The Italian products are available as a separate PDS
+    archive: http://pds-geosciences.wustl.edu/missions/mro/sharad.htm.
+ 
+ 
+    Processing
+    ==========
+ 
+    SHARAD transmits a linear frequency-modulated chirp signal with a
+    bandwidth of 10 MHz (15-25 MHz frequency). Data processing is
+    described in detail in the accompanying User&apos;s Guide (see the
+    DOCUMENT directory). In brief, the received signals are
+    range-compressed by convolution with a model for the transmitted
+    waveform, then processed using synthetic aperture radar techniques
+    to improve the signal-to-noise performance and narrow the
+    along-track resolution to a few hundred meters. Cross-track
+    resolution is limited only by the delay window and the roughness
+    of the surface, so significant &apos;clutter&apos; can appear within the
+    radargram from surface features some distance to either side of
+    the nadir track. An empirical model for ionospheric delay effects
+    is applied to bring the vertical registration among crossing
+    tracks into better agreement.
+ 
+    Data
+    ====
+ 
+    The 32-bit values in the *RGRAM.IMG files correspond to arbitrary
+    units of received signal power. Since the instrument is relatively
+    stable over time, and all synthetic aperture processing parameters
+    are held constant across the archive, it is possible to compare
+    these power values along and among SHARAD tracks. It must be
+    noted, however, that significant variations in the signal level
+    are associated with the roll angle of the spacecraft, and minor
+    variations occur due to the positions of the spacecraft high-gain
+    antenna and solar panels. Ionospheric attenuation also occurs
+    during daytime SHARAD observations; while this has been
+    characterized, no correction is applied to the archive products.
+    The vertical delay resolution is presented at a spacing of 0.0375
+    microseconds, which is approximately a factor of two oversampled
+    with respect to the resolution dictated by the 10-MHz bandwidth of
+    the transmitted chirp signal.
+ 
+ 
+    Coordinate System
+    =================
+ 
+    The coordinate system is planetocentric, with longitude positive
+    toward the east. The SHARAD radargrams are presented in a two
+    dimensional format, with round-trip time delay along the vertical
+    axis and along-track distance on the horizontal axis. The vertical
+    scale is a uniform 0.0375 microseconds in round-trip delay. The
+    center range cell of each image column is adjusted to match the
+    round-trip time delay to the location of the MOLA areoid, and the
+    GEOM.TAB file for each image contains the required information to
+    shift to a different reference planetary shape. The horizontal
+    samples are posted at 128 pixels per degree, corresponding to
+    approximately 460 m horizontal distance along the ground track.
+    The *GEOM.TAB file also contains a latitude and longitude location
+    for each radargram column.
+ 
+    Please see RGRAM_PROCESSING.PDF in the DOCUMENT directory for more
+    information.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      TBD
+ 
+ 
+    Review
+    ======
+      This data set was examined by a peer review panel in accordance
+      with PDS procedures.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      See RGRAM_PROCESSING.PDF in the DOCUMENT directory.
+ 
+    Limitations
+    ===========
+      See RGRAM_PROCESSING.PDF in the DOCUMENT directory.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

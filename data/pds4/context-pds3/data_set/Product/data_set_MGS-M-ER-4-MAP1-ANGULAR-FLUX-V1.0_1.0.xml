@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-er-4-map1-angular-flux-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS MARS/MOONS MAG/ER MAPPING ER ANGULAR FLUX V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:er.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-er-4-map1-angular-flux-v1.0__browserp_mgs-m-er-4-map1-angular-flux-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-ER-4-MAP1/ANGULAR-FLUX-V1.0</data_set_id>
+        <data_set_name>MGS MARS/MOONS MAG/ER MAPPING ER ANGULAR FLUX V1.0</data_set_name>
+        <data_set_release_date>2006-11-14</data_set_release_date>
+        <start_time>1999-04-02</start_time>
+        <stop_time>2006-07-18</stop_time>
+        <producer_full_name>DAVID L. MITCHELL</producer_full_name>
+        <citation_text>
+            Mitchell, D.L., R.P. Lin, M.H. Acuna, Mars Global Surveyor
+            Electron Reflectometer Angular Flux Data, NASA Planetary Data
+            System, MGS-M-ER-4-MAP1/ANGULAR-FLUX-V1.0, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated time-ordered angle- resolved flux data tables from the
+            Electron Reflectometer instrument on the Mars Global Surveyor
+            spacecraft, collected during the Mapping phase of the mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set consists of calibrated, time-ordered,
+            angle-resolved electron flux data from the Electron Reflectometer
+            (ER) instrument on the Mars Global Surveyor (MGS) spacecraft. The
+            primary data consist of time-series tables with descriptive
+            headers. The data set also includes ancillary data (including
+            geometry), documentation, and browse plots.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    The Mars Global Surveyor (MGS) Electron Reflectometer Angular Data
+    (ERAD) consist of time-ordered series of 100-600-eV electron flux
+    measurements for 16 look directions spanning a 360 x 14 degree field
+    of view.  These data are intended to supplement existing MGS ER
+    data, which cover the entire instrumental energy range (10 eV -
+    20 keV), but are omni-directional.
+ 
+    Separate data files are provided for each of four energy channels,
+    116, 191, 314, and 515 eV (dE/E = 25%).  These energies were chosen
+    because:
+ 
+        1) Electron trajectories are not significantly bent by the
+           spacecraft floating potential at energies &gt; 100 eV.
+ 
+        2) Count rates at energies &lt; 600 eV are typically &gt; 100 times
+           greater than instrument background.
+ 
+        3) Sunlight contamination can be safely neglected in this
+           energy range, except when sunlight directly enters the
+           instrument aperture, which rarely occurs in the mapping
+           configuration.
+ 
+    Each record consists of a time tag (UTC, spacecraft event time) with
+    16 scalars representing measurements of electron energy flux in 16
+    look directions, 16 scalars indicating the uncertainties in those
+    measurements, 1 scalar indicating instrument background, 2 scalars
+    for the magnetic field azimuth and elevation angles in sensor
+    coordinates, and 1 scalar indicating the size of the angular
+    uncertainty cone around the magnetic field direction.  Electron
+    fluxes, uncertainties, and background are in units of electron
+    differential energy flux, eV/(cm^2 sec ster eV).  Angles are in
+    degrees.
+ 
+    The Electron Reflectometer field of view is a 360 x 14 degree fan
+    that is divided into sixteen 22.5 x 14 degree sectors, numbered
+    0 through 15, each with its own counter.  The ER is mounted on the
+    nadir deck of the spacecraft.  Its orientation is shown in the
+    MGS ER mounting description currently located in the DOCUMENT
+    directory of the PDS volume containing these data.  ER azimuth is
+    defined in the ER X-Y plane with zero at the boundary between
+    sectors 0 and 15.  Note that ER coordinates are left handed,
+    so that azimuth increases with sector number.  ER elevation is
+    measured out of the ER X-Y plane.  The field of view extends to
+    +/- 7 degrees elevation.
+ 
+    During the Mapping Phase, as the spacecraft orbits the planet, the
+    ER field of view sweeps out the entire sky (4-pi ster) every 58.5
+    minutes, which is much longer than the integration time per record
+    (2-8 sec, depending on telemetry rate) and much longer than most
+    timescales of interest in Mars&apos; plasma environment.  Thus, the
+    field of view for each data record spans ~12% of the sky.  However,
+    since electrons are constrained to travel along magnetic field
+    lines, it is more important to consider an electron&apos;s motion with
+    respect to the magnetic field.
+ 
+    In a uniform field, electrons gyrate around magnetic field lines on
+    helical paths of constant radius (typically a few km) and pitch
+    angle, which is the angle between an electron&apos;s velocity and the
+    magnetic field.  With knowledge of the ambient magnetic field
+    direction measured by the MGS Magnetometer (MAG), the ER field of
+    view can be mapped into pitch angle.  In the ER X-Y plane, the
+    relationship between azimuth (az) and pitch angle is:
+ 
+ 
+        cos(Pitch Angle) = cos(az - Baz) * cos(Bel)
+ 
+ 
+    where Baz and Bel are the azimuth and elevation of the magnetic field
+    in ER sensor coordinates.  When Bel = 0, the ER measures the entire
+    pitch angle distribution (0-180 degrees) twice, once for each half of
+    the field of view.  When Bel = 90 degrees, the ER measures only pitch
+    angles of 90 degrees.  All values of Bel are possible, but the ER
+    field of view is oriented in such a way that when the magnetic field
+    has a large radial component (with respect to the planet), Bel is
+    small, and most of the pitch angle distribution is observed.  The
+    magnetic field tends to have a large radial component on the night
+    hemisphere and in the vicinity of crustal magnetic fields.
+ 
+    ER Angular Data is intended to be used in conjunction with ER omni-
+    directional data, MAG data, and spacecraft ephemeris data.  Time tags
+    are provided to synchronize the ERAD with all of these data sets.
+    The electron energy distribution (omni-directional data) contains
+    information about the plasma environment (i.e., whether the
+    spacecraft is in the magnetosheath, magnetotail, or ionosphere).  The
+    MAG data provide the strength and direction of the local magnetic
+    field (from crustal sources or induced by the Mars-solar wind
+    interaction).  The ERAD provide information about the large-scale
+    configuration of the magnetic field -- for example, whether the
+    spacecraft is on a closed crustal magnetic field loop, on an open
+    crustal field line connected to the solar wind, or on a solar wind
+    field line.  Electron reflectometry can be used on open field lines
+    to determine the magnetic field strength at altitudes near the
+    exobase (~180 km) and to probe the atmospheric density between the
+    spacecraft and the exobase.
+ 
+ 
+  Parameters
+  ==========
+    Each Mars Global Surveyor ER angle data file contains a time ordered
+    series of electron differential energy flux measurements at a given
+    energy (ranging from 100-600 eV).  ER data are organized into
+    &apos;&apos;packets&apos;&apos;, each of which contains 12, 24, or 48 seconds of data, for
+    high, medium, and low spacecraft telemetry rates, respectively.  Each
+    packet is further subdivided into samples.  There are 6 samples per
+    packet for each of the relevant energy channels, as displayed in the
+    table below, resulting in sample periods of 2, 4, or 8 seconds,
+    depending on telemetry rate.  The time listed for each record is the
+    center of the sampling interval.
+ 
+    The relevant energy channels and sampling intervals are as follows:
+ 
+ 
+        Channel Number        Energy Range     Samples per Packet
+    ---------------------------------------------------------------
+               7              415 - 639   eV           6
+               8              253 - 390   eV           6
+               9              153 - 237   eV           6
+              10               92 - 144   eV           6
+    ---------------------------------------------------------------
+ 
+ 
+    In-flight calibrations are available for each of the pre-mapping
+    mission phases (AB1, SPO1, SPO2, and AB2), and are performed about
+    once per month in the Mapping and Extended phases.  This calibration
+    is used to determine the relative instrumental sensitivity around
+    the FOV to an accuracy of 5-10%.  The sensitivity varies slowly
+    with time primarily because of aging of the microchannel plate (MCP),
+    which is used to amplify the signal from a single electron into an
+    electrical pulse that can be detected on the anode.  This information
+    is taken into account when converting count rates to calibrated
+    electron differential energy fluxes.
+ 
+    The local magnetic field measured by the Magnetometer is rotated
+    into ER sensor coordinates (see the MGS ER mounting description
+    mentioned above) to determine the pitch angle range spanned by each
+    angular sector of the instrument.  The magnetic field direction
+    changes continuously, so the pitch angle map must be determined
+    separately for every data record.
+ 
+ 
+  Processing
+  ==========
+    Processing is carried out at the Space Sciences Laboratory (SSL) of
+    the University of California, Berkeley, (UCB) to convert the raw data
+    to measurements of the electron energy flux eV/(cm^2 s ster eV).
+    Because of the instrument&apos;s high dynamic range (six decades), the
+    onboard digital processing unit (DPU) compresses the raw counts in a
+    logarithmic scale. The first step is to decompress the raw counts and
+    construct a three-dimensional data array, where the first dimension
+    is time (6 elements per telemetry packet), the second dimension is
+    direction around the FOV (16 elements), and the third dimension is
+    energy (4 elements).
+ 
+    The data array is converted from raw counts to differential energy
+    flux as follows.  Raw count rate (R) is obtained by dividing the raw
+    counts by the integration time (0.0625 sec per energy step).  The
+    data are next corrected for deadtime.  During the time it takes the
+    instrument to process a single electron (known as the &apos;&apos;deadtime&apos;&apos;,
+    which is about 0.5 microsec for the ER), it ignores any other
+    electrons.  The raw count rate is multiplied by the factor 1/(1 -
+    RT), where T is the deadtime, to obtain corrected count rate.  Data
+    values are masked (set to -9.999e-9) when the deadtime correction
+    factor exceeds 1.25.
+ 
+    These data are NOT CORRECTED for instrumental background, which is
+    caused primarily by high energy particles that penetrate the
+    ~2-mm-thick instrument casing and impact the MCP.  Electrons &gt; few
+    MeV and protons &gt; 20 MeV have sufficient energy to do this. (Lower
+    energy particles are also detected if any of the secondaries they
+    produce reach the detector.)  Since these particles bypass the
+    electostatic analyzer section, they produce a count rate that is
+    independent of the instrument&apos;s energy sweep, typically dominating
+    the signal in the highest 2-3 energy channels.  During quiet times,
+    the background count rate over the entire anode is 7-10 counts/sec,
+    which translates to 350-500 eV/(cm^2 s ster eV) in the ERAD.  Most of
+    the time, the signal in the highest energy channel (13-20 keV) is
+    dominated by background.  Exceptions to this sometimes occur during
+    bowshock or interplanetary shock crossings (when significant fluxes
+    of &gt;10 keV electrons are present) or during energetic solar events,
+    when bursts of solar energetic particles can increase the flux of
+    penetrating particles by several orders of magnitude.  Assuming that
+    the highest energy channel contains 100% background, the background
+    level for the lower energy channels used in this data set can be
+    estimated as B(E) = B(20 keV), where B(E) is the background level (in
+    units of eV cm-2 s-1 ster-1 eV-1) at energy E.  The background is
+    typically negligible at energies below about 1 keV.  Finally, we divide
+    by the geometric factor (0.02 cm2 ster) to obtain the differential
+    energy flux eV/(cm^2 s ster eV).
+ 
+    In order for the user to calculate pitch angles for each sector and
+    observation, the orientation of the magnetic field with respect to
+    the ER instrument must be supplied.  To accomplish this, the magnetic
+    field vectors recorded by MGS MAG, expressed in a payload coordinate
+    system, are first resampled to the time resolution of the electron
+    observations.  Then, the orientation of the local field vector in
+    azimuth and elevation are recorded, along with an uncertainty.  The
+    ER sectors are numbered 0-15 in a clockwise fashion as viewed from
+    above the ER instrument.  Azimuth is defined from 0-360 degrees, also
+    in a clockwise fashion as viewed from above ER, with 0 degrees
+    located at the boundary between instrument sectors 0 and 15.
+    Elevation is defined between -90 and 90 degrees, with 90 degrees
+    indicating the local magnetic field is orthogonal to the instrument
+    aperture and pointed &apos;&apos;up&apos;&apos; away from the instrument (in the +z
+    direction for the left-handed coordinate system defined by the azimuth
+    angles), 90 degrees pointing &apos;&apos;down&apos;&apos; toward the instrument, and 0
+    degrees indicating that the local magnetic field is in the plane of
+    the instrument aperture. The uncertainty in the local magnetic field
+    vector is supplied as a single angle defining a cone around the
+    nominal vector.  Therefore, the uncertainty for a given observation
+    could be in the azimuth direction or the elevation direction or (most
+    likely) both.
+ 
+    Finally, data for sectors 9 and 10 are supplied as for all other
+    sectors in this data set.  However, in-flight intercalibration
+    indicates that sectors 9 and 10 have significantly higher
+    uncertainties than the other sectors.  Therefore we recommend that
+    sectors 9 and 10 be disregarded in any science analysis using these
+    data.
+ 
+    After processing, data are written to ASCII tables, described below.
+ 
+ 
+  Data
+  ====
+    The ERDR data set consists of four time-ordered tables containing
+    electron fluxes in each of four different instrument energy ranges as
+    a function of instrument sector.  Each table contains 43 columns, as
+    follows:
+ 
+     COLUMN       CONTAINS
+     ------       ----------------------------------------------------
+      1-6         time stamp (yr, day of year, hr, min, sec, msec)
+      7-22        electron energy fluxes for 16 ER sectors
+      23-38       one-sigma error estimates for 16 ER sectors
+      39          estimate of instrument background (energy flux units)
+      40-41       azimuth and elevation of local B-field wrt ER
+      42          angular uncertainty in local B-field direction
+ 
+ 
+    (Note:  The column numbering given here differs from the column
+    numbering in the PDS labels for these data.  This is not a real
+    discrepancy; it reflects the fact that the PDS labels treat the
+    time stamp as a single multi-part column.)
+ 
+    File names in this data set currently follow the format
+ 
+    MyyDddd_PAD_eee.STS
+ 
+    where yy = 2-digit year, ddd = 3-digit day of year, and eee =
+    3-digit energy channel in eV as described under &apos;&apos;Data Set Overview&apos;&apos;
+    above.
+ 
+ 
+  Ancillary Data
+  ==============
+    No additional ancillary data is required for use of these data.
+    However, the user may wish to use MAG data and MGS spacecraft
+    ephemeris information in conjunction with this dataset, also
+    available from the PDS.
+ 
+ 
+  Coordinate System
+  =================
+    The data are presented in a coordinate system tied to the ER
+    instrument. Each of the 16 energy fluxes and error bars are
+    associated with a single angular sector of the instrument.  Azimuth
+    and elevation angles necessary to compute pitch angles for each
+    sector are supplied with respect to the instrument, as described in
+    the sections above.
+ 
+ 
+  Software
+  ========
+    No software is provided with this PDS data set.
+ 
+    Data reduction software for the ERAD is written in IDL.
+ 
+    Users are advised that the following line of pseudocode can be used
+    to compute the pitch angle range spanned by each of the ER&apos;s 16
+    angular sectors, given the azimuth (Baz) and elevation (Bel) of the
+    ambient magnetic field in sensor coordinates:
+ 
+ 
+               cos(pitch angle) = cos(az - Baz) * cos(Bel)
+ 
+ 
+    where az represents the azimuth range spanned by one of the sectors.
+    For example, to compute the pitch angle range spanned by Sector 0,
+    one would use a range of 0-22.5 degrees for az, together with values
+    of Baz and Bel in sensor coordinates provided for each data record.
+    Note that Baz and Bel vary continuously, so a separate pitch angle
+    map must be computed for each data record.  Also note that the
+    maximum and minimum pitch angles sampled by a given sector need not
+    be at the edges of the sector.  One way to present these data on a
+    plot of energy flux (Y axis) vs. pitch angle (X axis), is to plot
+    horizontal &apos;&apos;error bars&apos;&apos; representing the pitch angles spanned by
+    each sector and vertical error bars for the one-sigma flux
+    uncertainties.
+ 
+  Media/Format
+  ============
+    Currently these data are stored on hard disk at the PDS for online
+    distribution.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    The ER instrument design is typically used on a rapidly spinning
+    spacecraft (few seconds period), on which the disk-shaped FOV would
+    sweep out the entire sky in a time that is short compared with most
+    timescales of interest.  However, since MGS spins slowly (once per
+    orbit), each data record covers only a small region of the sky.
+    Any application of these data that requires an unbiased average over
+    all look directions (4-pi ster) is NOT RECOMMENDED.  Instead, use
+    the formula above for calculating a separate pitch angle map for
+    each data record.  Complete (0-180 degrees) pitch angle coverage is
+    rarely achieved, but the pitch angle coverage is often sufficient to
+    determine magnetic field topology and to detect loss cones caused by
+    atmospheric absorption of electrons.
+ 
+    The ER is mounted on the spacecraft body, where measurements are
+    susceptible to the following effects:
+ 
+    1. Spacecraft charging: The spacecraft typically charges to several
+       volts positive in sunlight and several tens of volts negative in
+       shadow.  Since electrons have to cross this potential before
+       reaching the ER aperture, the energy scale of the ER is effectively
+       shifted by the amount of the spacecraft potential.  In addition,
+       it is possible for different parts of the spacecraft to charge
+       to different potentials, because of differences in material
+       properties.  Differential charging sets up small-scale electric
+       fields that can bend the trajectories of low energy electrons.
+       At the &gt;100 eV energies used in this data set, these effects are
+       relatively small and can be safely neglected.  For increased
+       confidence, the user may compare pitch angle distributions at
+       100 and 500 eV.
+ 
+    2. Spacecraft photoelectrons: Parts of the spacecraft that are
+       illuminated by the sun will emit photoelectrons.  Most of these
+       spacecraft photoelectrons have energies below ~10 eV, but a
+       small part of the distribution extends up to ~60 eV.  Since
+       parts of the spacecraft are close to the ER field of view, some
+       of these spacecraft photoelectrons can enter the ER aperture
+       and contaminate the measurements.  The flux and angular
+       distribution of spacecraft photoelectrons as seen by the ER
+       depends on the illumination pattern of the spacecraft.  At the
+       &gt;100 eV energies of this data set, spacecraft photoelectron
+       contamination can be safely neglected.
+ 
+    3. Field-of-view blockage:  Parts of the field of view are partially
+       obstructed by the spacecraft.  In the mapping configuration (with
+       the high gain antenna deployed) these obstructions include the -Y
+       solar array gimbal and corners of the spacecraft bus.  To first
+       order, these fixed obstructions are accounted for in the
+       calibration of the ER field of view.  (Sectors that contain an
+       obstruction are assigned a lower effective sensitivity.)
+ 
+    4. Solar energetic particle (SEP) events:  The instrument background
+       is dominated by penetrating particles due to galactic cosmic rays
+       (GCRs) and solar energetic particles (SEPs), which are produced
+       during solar flares and associated coronal mass ejections (CMEs).
+       The GCR background is negligible in the 100-500 eV energy range --
+       the fluxes of ambient electrons dominate by several orders of
+       magnitude.  However, during large solar events (&apos;&apos;space weather&apos;&apos;),
+       SEPs can increase the background level enough to be significant
+       even in the 100-500 eV range.  The user is cautioned to use the
+       background data provided in this data set to identify SEP events.
+       Large events may prevent the reliable use of these data.
+ 
+ 
+  Review
+  ======
+    The ERAD will be reviewed internally by the MGS MAG/ER team prior to
+    release to the planetary community. The ERAD will also be reviewed
+    by the PDS.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    ER data are recorded continuously.  Data coverage depends almost
+    entirely on the fraction of the spacecraft telemetry that can be
+    received by the DSN.  The mapping orbit lies close to the ionopause
+    altitude.  Because of spatial and temporal variations in the
+    ionopause, the ER can sample several different plasma environments,
+    including the ionosphere, the magnetosheath, the magnetotail, and
+    closed magnetic field lines anchored to remanent crustal sources.
+    Data quality is best when the spacecraft is within the planet&apos;s
+    shadow.  In sunlight, data quality is a function of spacecraft
+    rotation phase, since photoelectron contamination depends on the
+    illumination pattern.  Additionally, pitch angle coverage is
+    controlled by a combination of ER look direction and the local
+    magnetic field direction. In some instances it is possible that the
+    local magnetic field is orthogonal to the ER field of view, so that
+    the pitch angle coverage is limited to a small range around 90 deg.
+    However, a much more typical situation is partial pitch angle
+    coverage, which is often sufficient to establish the topology of
+    the magnetic field and to identify loss cones caused by atmospheric
+    absorption of electrons.  The ER field of view is oriented in such
+    a way that the pitch angle coverage is best whenever there is a
+    large radial component (with respect to the planet) of the ambient
+    magnetic field.  This situation often occurs on the night hemisphere
+    (because of the draped magnetotail) and over strong crustal magnetic
+    fields.
+ 
+ 
+  Limitations
+  ===========
+    The ER is mounted on the spacecraft instrument deck and has a
+    disk-shaped FOV that is orthogonal to the spacecraft XY plane and
+    nearly orthogonal to the spacecraft Y axis.  (There is a 10-degree
+    rotation about the Z axis to minimize spacecraft obstructions in the
+    FOV.)  This 360-degree FOV is divided into 16 angular sectors, each
+    22.5 degrees wide.  Throughout mapping, the ER is in
+    &apos;&apos;fixed-sector&apos;&apos; mode, meaning that these 16 angular sectors
+    remained constant in the spacecraft reference frame, sweeping out
+    the entire sky every 1/2 of an orbit.
+ 
+    Parts of the spacecraft are within the instrument&apos;s FOV.  The high
+    gain antenna (HGA), which blocked ~70 degrees of the FOV during
+    aerobraking is not in the FOV during mapping.  Smaller amounts of
+    blockage are caused by attitude control thrusters and the -Y solar
+    array gimbal and yoke assembly.  One effect this has on the
+    measurements is to block ambient electrons from the directions of
+    the obstacles. This is most clearly seen at high energies (&gt; 100
+    eV), which are only slightly deflected by the spacecraft floating
+    potential.  In addition, when these obstacles are illuminated by the
+    sun, they emit photoelectrons up to ~50 eV, which can enter the ER
+    aperture and elevate the counting rate at low energies.  The
+    detailed signature of this effect depends on the illumination
+    pattern as the spacecraft rotates, which is a function of the angles
+    between Earth, Mars, and the Sun.  These angles varied throughout
+    the mapping phase. Photoelectron contamination has not been removed
+    from the data; however, observations that were likely to have been
+    contaminated have not been included in this dataset.  The presence of
+    contamination is readily identified in the low energy channels (&lt; 50
+    eV) by a sharp (nearly discontinuous) increase in counting rate which
+    appears at regular 100-minute intervals.  The contamination
+    disappears as abruptly as it appears.
+ 
+    For a duration of ~4 minutes every 1/2 spacecraft spin (when the
+    spacecraft is illuminated) sunlight can directly enter the ER
+    aperture and scatter inside the instrument, creating secondary
+    electrons.  (Note: the spacecraft spins once per orbit to keep the
+    nadir deck pointed at the planet.)  A tiny fraction of these photons
+    and secondary electrons can scatter down to the anode and create a
+    &apos;&apos;pulse&apos;&apos; of spurious counts.  This sunlight pulse appears at all
+    energies, but is most noticeable from 10 to 80 eV and above 1 keV,
+    outside the range of energies included with this dataset.  Sunlight
+    pulses, therefore, have not been removed from the data.
+ 
+    The instrument&apos;s energy scale is referenced to spacecraft ground.
+    In sunlight, spacecraft ground floats a few volts positive relative
+    to the plasma in which the spacecraft is immersed.  Electrons are
+    accelerated by the spacecraft potential before they can enter the ER
+    aperture, thus all energies are shifted upward by a few eV.  In
+    addition to shifting the electron energy, the trajectories of low
+    energy electrons can be significantly bent by electric fields around
+    the spacecraft.  Thus, the energy scale and imaging characteristics
+    are relatively poor at the lowest energies (10-30 eV), becoming much
+    more accurate at the higher energies used in this dataset.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

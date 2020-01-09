@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-mag-5-surface-field-map-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LP MOON MAG LEVEL 5 SURFACE MAGNETIC FIELD MAPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_prospector::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-mag-5-surface-field-map-v1.0__browserc_lp-l-mag-5-surface-field-map-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-mag-5-surface-field-map-v1.0__browserp_lp-l-mag-5-surface-field-map-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LP-L-MAG-5-SURFACE-FIELD-MAP-V1.0</data_set_id>
+        <data_set_name>LP MOON MAG LEVEL 5 SURFACE MAGNETIC FIELD MAPS V1.0</data_set_name>
+        <data_set_release_date>2003-10-01</data_set_release_date>
+        <start_time>1998-01-16</start_time>
+        <stop_time>1999-07-29</stop_time>
+        <producer_full_name>LON L. HOOD</producer_full_name>
+        <citation_text>not applicable</citation_text>
+        <data_set_terse_desc>
+            LUNAR PROSPECTOR MAGNETOMETER LEVEL 4 DATA (CODMAC LEVEL 5).
+            LARGE-SCALE VECTOR FIELD MAPS AT A COMMON ALTITUDE OF 37 KM. THE
+            SPATIAL RESOLUTION OF THE GRID (0.25 X 0.25 DEGREES) IS MUCH LESS
+            THAN THE MEAN S/C ALTITUDE.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    Lunar Prospector magnetometer (MAG) Level 4 Data (CODMAC Level 5).
+    Large-Scale Vector Field Maps at a Common Altitude of 37 km.
+    The spatial resolution of the grid (0.25 x 0.25 degrees) is much
+    less than the mean S/C altitude.
+ 
+ 
+  Sampling
+  ========
+    The measured parameters consist of the three vector components
+    of the lunar crustal magnetic field in East, North, and Radial (ENR)
+    coordinates, and the field magnitude at an altitude of 37 km.  The
+    units of the field measurements are nanoTeslas (nT). 1 nT = 0.00001
+    Gauss.  ENR coordinates are centered at the instantaneous spacecraft
+    location with X directed eastward, Y directed northward, and Z
+    directed radial to the Moon.
+ 
+    The constant spacecraft altitude is estimated by subtracting the mean
+    lunar radius (1738 km) from the radial distance of the spacecraft
+    to the lunar center of figure.
+ 
+ 
+  Processing
+  ==========
+    Step 1:  The Level 3 MAG data (two-dimensional, filtered regional field
+    maps at the spacecraft altitude) are continued to a common altitude.
+    Only those maps produced at relatively low altitudes (less than 50 km)
+    during the extended mapping phase of the LP mission are processed to
+    obtain maximum accuracy and horizontal resolution.  Only upward
+    continuation is applied in order to prevent amplification of data
+    errors by the continuation procedure.  The upward continuation was
+    accomplished by applying a simple power law algorithm to each field
+    component on the regional maps.  The exponent for the power law was
+    determined empirically by comparing measured field components at
+    several different altitudes over the same regions.  The field magnitude
+    is calculated from the smoothed component files on the same
+    two-dimensional grid.  The resulting two-dimensionally filtered
+    gridded files at a common altitude are the Level 4 data.  They
+    contain latitude, longitude, the field component in nT (or the
+    altitude in km), and the number of data points in each bin.
+ 
+    Step 2:  If a significant longitudinal gap between
+    usable orbit segments is present, linear interpolation between the
+    two nearest orbit segments is applied to create an interpolated
+    orbit segment.  This interpolated segment is then read into the
+    two-dimensional filtering code to fill in the missing grid values.
+    This method is applied only when the gap between usable orbits is
+    smaller than the 5-bin size of the two-dimensional filter.  Where
+    possible, the resulting regional gridded files at a common altitude
+    are joined together to construct larger-scale gridded files.
+ 
+    Step 3:  For visualization purposes, a suitable
+    graphics utility is applied to construct regional shaded contour plots
+    of the vector components of the crustal field and the field magnitude.
+    These are contained in .tif files that are included with the filtered
+    gridded files in appropriate subdirectories identifying their location
+    on the Moon.  The .tif files are labeled in the format east.tif,
+    north.tif, radial.tif, and total.tif.  The contour interval on all
+    field plots isfield plots is 2 nT.  (Note:  On the PDS disk volume,
+    the graphics files are JPEG files and are under the BROWSE directory.)
+ 
+ 
+  Media/Format
+  ============
+    File naming convention:  B_aaa-bbbc_ddd.TAB, where:
+       aaa and bbb indicate the initial and final latitude or
+         longitude for the file;
+       c is the letter N, S, E or W, indicating a compass direction
+         (this also tells you whether the aaa and bbb are latitude
+         or longitude; for example, if c is E, then aaa-bbb must
+         be east longitude);
+       ddd indicates which field component is mapped in the file
+         (EAS = East field component; NOR = North field component;
+         RAD = Radial field component; TOT = total field).
+ 
+     File name example:  B_120-180E_RAD.TAB describes the radial
+         component of B from 120-180 east longitude.
+ 
+     Data File Description:
+ 
+     Column 1: Latitude at this grid point (South is negative; North
+               is positive).
+     Column 2: East longitude at this grid point.
+     Column 3: Magnetic field value in nanoTeslas at constant altitude
+               of 37 km.  The extension of the file name indicates what
+               is contained in this column (EAS = East field component;
+               NOR = North field component; RAD = Radial field component;
+               TOT = total field)
+     Column 4: Number of data points in this latitude/longitude bin.
+               The bin size can be deduced from the difference between
+               successive latitude and longitude values (0.25 degrees
+               by 0.25 degrees for this altitude).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+    These data have been examined by the data producer, and as of
+    2003-10-01 are being prepared for peer review by the PDS.
+ 
+ 
+  Limitations
+  ===========
+    The quality of the measurements is a strong function of the
+    spacecraft altitude, which varies from a minimum of about 80 km
+    during the first year of the mission to a minimum of about 15 km
+    during the final six months of the mission.  The best crustal field
+    measurements were therefore obtained during the final
+    ``extended mission&apos;&apos; phase when the orbit periapsis was lowest.  The
+    surface resolution of the measurements is normally of the same order
+    as the spacecraft altitude. At the lowest altitudes (about 15 km), the
+    resolution is limited also by the orbit track separation, which is
+    approximately 30 km at the lunar equator.  The accuracy to which the
+    crustal field is measured at a single point along the spacecraft
+    trajectory is limited by residual external field variations and is
+    approximately 0.1 nT.  The upward continued field maps at 37 km
+    altitude have essentially the same horizontal resolution and accuracy
+    as the Level 3 regional maps (about 25 km and 0.1 nT, respectively).
+ 
+ 
+  Data Coverage
+  =============
+    The coverage of the measurements over the lunar surface is limited to
+    those areas on the near and far side when the Moon and the LP
+    spacecraft were favorably located to allow direct measurements of the
+    crustal magnetic field.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

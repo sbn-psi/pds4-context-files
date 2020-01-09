@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-grs-3-edr-eros-orbit-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR GRS SPECTRA FOR EROS/ORBIT</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:grs.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-grs-3-edr-eros-orbit-v1.0__browserp_near-a-grs-3-edr-eros-orbit-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cheng, A.F., R.W. Farquhar, and A.G. Santo, NEAR Overview, Johns Hopkins APL
+                   Technical Digest, Vol. 19, pp. 95-106, 1998.
+            </reference_text>
+            <description>reference.CHENGETAL1998</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-GRS-3-EDR-EROS/ORBIT-V1.0</data_set_id>
+        <data_set_name>NEAR GRS SPECTRA FOR EROS/ORBIT</data_set_name>
+        <data_set_release_date>2001-07-15</data_set_release_date>
+        <start_time>2000-01-11T19:30:16Z</start_time>
+        <stop_time>2001-02-10T16:39:57Z</stop_time>
+        <producer_full_name>JACOB TROMBKA</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            Level 2 NEAR Gamma Ray Spectrometer observations taken during the
+            Eros orbit phase of the mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The GRS Level 2 data products in this archive include daily time
+            series of spectra collected by the instrument along with selected
+            spacecraft engineering and instrument configuration and orbital
+            ephemerides. Supporting documentation includes as to the
+            specifics of how these data were generated. Selected ephemerides
+            and engineering parameters are averaged for the composite set of
+            information.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ Data Set Overview and Parameters
+ ================================
+ 
+The GRS Level 2 data products in this archive include daily
+time series of spectra collected by the instrument along with
+selected spacecraft engineering and instrument configuration and
+orbital ephemerides. Supporting documentation includes as to the
+specifics of how these data were generated. Selected ephemerides
+and engineering parameters are averaged for the composite set of
+information.
+ 
+  Processing
+  ==========
+ 
+The Level 2 data products comprise the time series of the GRS
+instrument&apos;s science data in physical units. At each integration
+time the instrument Data Processing Unit (DPU) samples instrument
+spectra accumulated during the integration period as well as
+instrument and engineering configuration information.  Ground
+processing activities at the University of Arizona produce Derived
+Engineering and Spatial Ephemerides information.  The Level-2 data
+are then combined into integral products within a relational
+database and exported as an integral Level-2 product. Each GRS record
+is comprised of the following logical data units:
+ 
+  Spectra:
+                      5, (1024 Channel) Spectra
+                       (NAI, BGO, ANTI, NAI1, NAI2, BGO1, BGO2)
+                       NAI = Sodium Iodide:     Asteroid Pointing
+                       BGO = Bismuth Germanate: Asteroid Pointing
+                       ANTI= Anti-Coincidence:  Asteroid Pointing
+                       NAI1= Sod. Iod 1 Escape: Asteroid Pointing
+                       NAI2= Sod. Iod 2 Escape: Asteroid Pointing
+                      2, (21 Channel) Spectra
+                       BGO1= Bis. Germ. 1 Escpe:Asteroid Pointing
+                       BGO2= Bis. Germ. 2 Escpe:Asteroid Pointing
+ Instrument HouseKeeping:  Instrument Rates and activity
+ Engineering Housekeeping: Engineering Configurations (volts, etc.)
+ Derived Engineering:      Ground derived data products
+ Spatial                   Orbital Ephemerides
+ 
+   Data and Ancillary Files
+   ========================
+ 
+Files for Level-2 are organized into a series of time subdirectories.
+ 
+ 
+   Coordinate System
+   =================
+   All products were derived in the Asteroid Body Fixed Coordinate
+   System
+ 
+   Software
+   ========
+   These products were derived from a specialized ground
+   processing system developed at the University of Arizona
+   Lunar and Planetary Laboratory.  All derived products are
+   described in the DOCUMENT Section of this volume:
+ 
+   Requirement Specifications For Level-2 Parameters Required
+   Stored or Derived by The Near Earth Asteroid Rendezvous
+   (NEAR) Gamma-Ray Spectrometer (GRS) Ground System
+ 
+   Media
+   ======
+   CD-ROM
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archive have been reduced as part of mission data
+      analysis activities of the NEAR XGRS  Science Team.  Data of
+      questionable validity have been omitted from the solutions.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the NEAR XGRS
+      Team prior to submission to the Planetary Data System (PDS).
+      It was one of several data sets included in a comprehensive
+      review by the PDS Small Bodies Node in August 2001, prior to
+      PDS acceptance and ingestion.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The data included in this archive were collected during the
+      NEAR orbital phase from 2000-02-14 to 2001-02-12.
+ 
+ 
+    Limitations
+    ===========
+    None
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

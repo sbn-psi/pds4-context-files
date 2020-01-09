@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-a-3-rdr-scas-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>SEVEN COLOR ASTEROID SURVEY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:unk.unk::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.asteroid::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-a-3-rdr-scas-v1.0__browserp_ear-a-3-rdr-scas-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Clark, B.E., J.F. Bell, F.P. Fanale, and D.J. O&apos;Connor, Results of the Seven
+                   Color Asteroid Survey: Infrared spectral observations of ~50-km size S-, K-,
+                   and M-type asteroids, Icarus, Vol. 113, pp. 387-402, 1995.
+            </reference_text>
+            <description>reference.CLARKETAL1995</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-A-3-RDR-SCAS-V1.0</data_set_id>
+        <data_set_name>SEVEN COLOR ASTEROID SURVEY V1.0</data_set_name>
+        <data_set_release_date>1996-03-29</data_set_release_date>
+        <start_time>1992</start_time>
+        <stop_time>1994</stop_time>
+        <producer_full_name>CAROL NEESE</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            The Seven-Color Asteroid Survey (SCAS) : Asteroid photometry at
+            0.9-2.3 microns from the IRTF survey, 1992-1994
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Seven-color Asteroid Survey (SCAS) was conducted at the IRTF
+            on Mauna Kea, Hawaii from 1992 to 1994. It consists of photometry
+            in seven filters from 0.9 to 2.3 microns, lettered A through G in
+            order of increasing wavelength. The bandpasses were specifically
+            designed to capture the essential mineralogic information present
+            in infrared asteroid spectra. The filter bandpasses were chosen
+            to avoid the atmospheric water features at 1.4 and 1.9 microns.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+  The Seven-color Asteroid Survey (SCAS) was conducted at the IRTF on
+  Mauna Kea, Hawaii from 1992 to 1994.  It consists of photometry in
+  seven filters from 0.9 to 2.3 microns, lettered A through G in
+  order of increasing wavelength.  The bandpasses were specifically
+  designed to capture the essential mineralogic information present
+  in infrared asteroid spectra.  The filter bandpasses were chosen to
+  avoid the atmospheric water features at 1.4 and 1.9 microns.
+ 
+  126 asteroids are included in this data set.
+ 
+ 
+  Parameters
+  ==========
+  The reflectances have been normalized to band A, at 0.913 microns,
+  and are thus referred to as B/A, C/A, D/A, E/A, F/A, and G/A.  The
+  band difference B-D (actually the difference in the normalized
+  values) is also tabulated as an indicator of band depth/continuum
+  slope.  Also included are the RMS errors associated with each
+  value.
+ 
+  The B-D band difference is a strong indicator of the main source of
+  variation in the SCAS data set.  In Clark, et al. (1995)
+  [CLARKETAL1995] it is shown that B-D can be used to distinguish
+  between typical S-class asteroid spectra and typical K-class
+  spectra.  B-D essentially measures the depth of the 1-micron
+  absorption feature, in which band B is located, as compared to the
+  continuum just outside the 1-micron feature, where band D is
+  located.
+ 
+ 
+  Data
+  ====
+  The data are included in the ascii table &apos;scas.tab&apos;.
+ 
+ 
+  Ancillary Data
+  ==============
+  The filter FWHM and center wavelengths are tabulated in the label
+  file &apos;scas.lbl&apos;.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+  The user is referred to the paper in which this data was
+  published:  Clark, et al. (1995) [CLARKETAL1995] for information on
+  the confidence level of the data.
+ 
+  Review
+  ======
+  This data set underwent external peer review on Mar. 29, 1996.
+ 
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>GD-11F</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

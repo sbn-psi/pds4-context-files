@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:quirc.cfht</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>QUICK INFRARED CAMERA for CFHT</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.cfht::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hodapp,K.-W., J. L. Hora, D.N.B. Hall, L.L. Cowie, M. Metzger, E.M. Irwin, T.J.
+                   Keller, K. Vural, L. J. Kozlowski, and W. E. Kleinhans, Astronomical
+                   Characterization of 1024x1024 HgCdTe HAWAII Detector Arrays, Proc. SPIE Int.
+                   Soc. Opt. Eng. 2475, 8-14, 1995.
+            </reference_text>
+            <description>reference.HODAPPETAL1995</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>QUICK INFRARED CAMERA</instrument_name>
+        <instrument_desc>
+ 
+        Instrument overview
+        ===================
+           The first prototype of a HgCdTe infrared detector array
+           with 1024x1024 pixels developed by the Rockwell
+           International Science Center has been tested in a new
+           infrared camera at UH 2.2 m telescope, the 0.6 m telescope,
+           and the CFHT. At the UH 2.2 m tests were conducted both at
+           f/31, where images of very high resolution were obtained
+           using tip-tilt corrections, and at f/10 for a wide field
+           of view. At the CFHT both wide field imaging (f/8) and
+           adaptive optics work was done. The HAWAII
+           ( HgCdTe Astronomical Wide Area Infrared Images) prototype
+           device achieved very good performance. In the camera system,
+           a double correlated readnoise of 15 e- rms was achieved.
+           the dark current at 1 V bias could be confirmed to be
+           below 1 e-, even though the device was operated above 77 K.
+           The quantum efficency is slightly below 50% and shows the
+           wavy pattern characteristic of LPE-grown HgCdTe. The full
+           well capacity is above 10^5 e- at 1 V bias, limited in the
+           system by the dynamic range of A/D converter. Data reduction
+           is practically identical to what is used for NICMOS3 256x256
+           devices. Combined integration times of more than 1 hour
+           have been used and demonstrate that the HAWAII devices
+           are suitable for very deep imaging. The residual excess
+           dark current problem known has not been resolved. However,
+           it seems less serious then in the first HAWAII prototype
+           device.
+ 
+ 
+        Electronics
+        ===========
+           The HAWAII arrays are operated by a controller system
+           intended to combine the best features of the older
+           controlers at the Institute of Astronomy with the more
+           flexible device operation allowed by a DSP based system.
+           The digital side of the system is based on the CCD
+           controller developed by R. Leach. The analog input and
+           D/A pulse shaping capabilities of Leach&apos;s system were not
+           used. It was decided to optically decouple digital
+           clocking and data processing from any analog signal going
+           into and coming out of the infrared array. To do this, a
+           digital interface board was developed that resides on the
+           Leach controller backpane and uses the same addresses as
+           the Leach Analog Board for the output of A/D values onto
+           the backpane. Some of the addresses used by Leach to
+           control the D/A converters for pulse shaping are used to
+           control the clocks. All signals are transmitted to the
+           device drivers and recieved from the analog board through
+           optocouplers. For the initial tests, the same device driver
+           board as in our NICMOS3 camera was used. The board switches
+           between two constant but manually adjustable voltage levels.
+           The analog signal from the devices is preamplified, shifted
+           by manually adjustable offset voltages, and sampled by a
+           1 MHz Analogic A/D converter. The signals from the 4
+           independant quadrants of the HAWAII detector array are
+           routed to the same A/D converter by an analog switch.
+ 
+           The DSP 56001 used in the Leach system is not used for
+           signal processing due to its limited memory space. All raw
+           data values are transmitted to the host computer (a SPARC LX
+           or SPARC 2) via fiber optics, a fiber optics interface
+           system, and a S-bus interface card, and are processed there.
+           The online data processing requirements for the long
+           integration times typically used with the HAWAII arrays are
+           not very demanding so this arrangement is adequete.
+ 
+        Detector
+        ========
+           The acronym QUIRC (Quick Infrared Camera) was chosen to
+           describe the purpose and design philosophy of this system.
+           The goal was to build a camera in a very short time
+           (7 months) to keep up with Rockwell&apos;s aggressive development
+           schedule for HAWAII devices. Similar to the camera used for
+           the NICMOS3 device the new camera is a simple refractive
+           optical system consisting of a field lens and an achromatic
+           reimaging system with approximately 1:1 reimaging ratio.
+           In fact, the reimaging system is the same as the Institute
+           for Astronomy&apos;s(IfA) NICMOS3 camera and only the field lens
+           needed to be changed to one with a higher index of
+           refraction, to keep spherical aberation in the pupil plane
+           within acceptable limits. QUIRC is equipped with a single
+           filter wheel operated by a cryogenic stepper motor.
+           Further, and different from the older camera, a cryogenic
+           pupil mask slide was installed to adapt the camera to
+           different f-ratios. The dewars is an up looking design
+           with a single large liquid nitrogen can (91 volume) of
+           a design similar to that of the CCD dewars used at the IfA.
+           The dewar was designed for long periods of cold operation
+           of the device, its vacuum stability is excelent, having
+           demonstrated in excess of 10 weeks of continuous operation
+           without pumping. The cryogenic hold time is in excess of
+           24 hours.
+ 
+           The very first HAWAII device produced by Rockwell was
+           tested in their laboratory through a number of thermocycles.
+           In Rockwell&apos;s dewar, the hybrid device was thermally
+           tightly coupled to the cryogen, and the cooldown time was
+           short. Under those testing conditions, hybrid #1
+           deteriorated rapidly from thermocycle to thermocycle.
+           Since the intention was to use the device for astronomical
+           observations for an extended period of time, the mechanical
+           forces exerted by the device mount on the chip were
+           minimized, and increased the thermal resistance between the
+           cold surface and the device. While this succeeded in
+           avoiding the rapid deterioration of the device (hybrid #3),
+           it led to such poor thermal contact that our device in QUIRC
+           does not achieve the same low dark currents that Rockwell
+           had measured for it. This higher than expected dark current
+           is clearly understood to be only due to higher than expected
+           operating temperature of the HAWAII array in QUIRC.
+ 
+ 
+       Performance
+       ===========
+ 
+           The HAWAII array used in QUIRC ( hybrid #3) performs very
+           well. However, the IfA was not was not able to fully
+           verify the dark current performance of the array. The
+           dark current values are around 1 electron per second and
+           are clearly caused by the detector array operating a few
+           degrees warmer than expected. The same array, when tested
+           in a dewar better suited for that purpose at Rockwell,
+           achieved dark-currents of less than 0.1 e-/s.
+ 
+           The read-noise at the telescope was measured to be 15 e- rms
+           with a filter time constant 0.8 microseconds, while
+           Rockwell, in a loboratory set up, measured 9 e- rms for the
+           same array. These noise values were achieved with simple
+           double correlated reading. It is expected that
+           multi-sampling techniques (Fowler sampling) can lead to
+           substantial further reductions in noise.
+ 
+           The Quantum efficency still leaves some room for
+           improvement. The efficency measured was about 42% in K,
+           45% in H, and 27% in J. Very similar values have in the past
+           been measured on a NICMOS3 device at the same telescope. It
+           should be noted that Rockwell has measured higher quantum
+           efficiencies on the same devices in their lab, and the
+           reason for the discrepency is not known to date.
+ 
+           The residual excess dark current, i.e., the fact pixels
+           previously exposed to radiation show an increased dark
+           current in subsequent exposures, had been a signifigant
+           problem in NICMOS3 devices. Several tests were conducted
+           with the HAWAII arrays to determine to which degree this
+           problem still persists. Saturated exposures of the device
+           were found to still leave a substantial level of residual
+           excess dark current that decays with a time constant of
+           about 150 seconds. A nonsaturated exposure (60%) leaves a
+           much smaller residual excess dark current that becomes
+           undetectable in about one minute.
+ 
+           Astronomical images taken through a narrow band filter
+           2.12 microns, i.e., under low background conditions, did
+           not leave a detectable residual image up to about 40% of
+           full-well exposure level in the preceeding exposure.
+ 
+ 
+        Filters
+        =======
+           In the current application this instrument uses three
+           filters. The following table lists the filters and
+           their characteristics:
+ 
+           filter name      central wavelength    FWHM
+                              (microns)         (microns)
+           ------------------------------------------------
+               H                1.65              2.96
+               J                1.22              1.64
+               K                2.20              3.36
+
+        </instrument_desc>
+        <instrument_id>QUIRC</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Camera</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

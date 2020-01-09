@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-rover-6-rdr-places-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS ROVER 6 RDR PLACES ROVER MOTION COUNTER V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-rover-6-rdr-places-v1.0__browserp_msl-m-rover-6-rdr-places-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Alexander, D. and R. Deen, Mars Science Laboratory Project Software Interface
+                   Specification (SIS) for Camera &amp; LIBS EDR and RDR Data Products, Jet Propulsion
+                   Laboratory Document D-38107, Version 3.5, 14 August 2014.
+            </reference_text>
+            <description>reference.JPLD-38107</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Deen, R., Mars Science Laboratory PLACES User Guide, Jet Propulsion Laboratory
+                   Document D-71121, MSL Document 586-3653, 19 August 2011.
+            </reference_text>
+            <description>reference.JPLD-71121</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Deen, R., Mars Science Laboratory Software Interface Specification PLACES Data
+                   Products for PDS, Jet Propulsion Laboratory Document D-78442, MSL Document
+                   477-3984, Version 0.7, 13 October 2014.
+            </reference_text>
+            <description>reference.JPLD-78442</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-ROVER-6-RDR-PLACES-V1.0</data_set_id>
+        <data_set_name>MSL MARS ROVER 6 RDR PLACES ROVER MOTION COUNTER V1.0</data_set_name>
+        <data_set_release_date>2015-03-16</data_set_release_date>
+        <start_time>2011-11-26T00:00:00.000Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>Robert Deen</producer_full_name>
+        <citation_text>
+            Deen, Robert, MSL MARS ENGINEERING 6 RDR PLACES ROVER MOTION
+            COUNTER V1.0, NASA Planetary Data System,
+            MSL-M-ENG-6-RDR-PLACES-V1.0, 2015.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Science Laboratory Rover Localization and Mechanism Position
+            Data
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+ 
+    This RDR is produced by OPGS to provide the position and
+    orientation of the rover throughout the mission, as well as
+    extra information such as mechanism locations, spacecraft clock
+    mappings, and a &apos;base map&apos; covering the rover traverse.
+    For an in depth discussion of all PLACES files, please refer
+    to the MSL Project Software Interface Specification (SIS), PLACES
+    Data Products for PDS, Version 1.0, JPL D-78442, February, 2015.
+ 
+  Processing
+  ==========
+    OPGS/MIPL creates this RDR by collecting data obtained from a
+    wide variety of telemetry data sources in its pipeline.  This is
+    supplemented by data provided by the MSL Localization team.
+    This data is maintained in a database for operational use.  The
+    RDR for PDS is created by extracting data from this database and
+    reformatting it to match PDS standards.
+ 
+  Data
+  ====
+    In this volume, the primary data source, extracted straight from
+    the database, is the XML files in the EXTRAS directory.  These XML
+    files are transformed to a more usable format in the DATA directory.
+ 
+    Comma-Separated-Value Files
+    ---------------------------
+ 
+    These files contain the rover position and orientation in several
+    different formats (e.g. meters relative to landing site, meters
+    relative to the global origin, latitude/longitude, and pixels in
+    the included map).  The data is in a convenient comma-separated-value
+    format.
+ 
+    There are several different &apos;views&apos; of this data, providing rover
+    position from different sources.  The SIS describes this fully, but
+    in brief, there are currently three views.  Telemetry contains the
+    rover&apos;s idea of where it is, which is known to be inaccurate over large
+    areas due to accumulation of error.  Localized_pos and localized_interp
+    contain the localization team&apos;s refinement of this location, which
+    provide more accurate locations registered to the base map.
+ 
+    Map
+    ---
+ 
+    There is also a map of the area surrounding the rover&apos;s traverse.  This
+    map is extracted from the Localization Team&apos;s base map, which is used
+    for all rover operations.  The entire traverse is contained in this map,
+    with an approximately 500m margin.  Metadata files describe the map,
+    as well as PDS label files.
+ 
+  Software
+  ========
+ 
+    The OPGS/MIPL PLACES database, its MATIS pipeline, and various
+    ancillary programs and scripts were used to capture and store the
+    rover localization and mechanism position data.
+ 
+  Media/Format
+  ============
+ 
+    The data set will be delivered and made available to the public
+    through the Planetary Data System web sites.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>PRE_PEER_REVIEW</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

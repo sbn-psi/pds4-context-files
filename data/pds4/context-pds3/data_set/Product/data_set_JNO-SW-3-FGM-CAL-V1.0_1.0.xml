@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.jno-sw-3-fgm-cal-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>JUNO FGM CALIBRATED DATA SW V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.juno::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.jno::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:fgm.jno::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:plasma_stream.solar_wind::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Connerney, J.E.P., M. Benn, J.B. Bjarno, T. Denver, J. Espley, J.L. Jorgensen,
+                   P.S. Jorgensen, P. Lawton, A. Malinnikova, J.M. Merayo, S. Murphy, J. Odom, R.
+                   Oliversen, R. Schnurr, D. Sheppard, and E.J. Smith, The Juno Magnetic Field
+                   Investigation, Space Science Reviews, TBD, TBD-TBD, doiTBD, 2016.
+            </reference_text>
+            <description>reference.CONNERNEYETAL2016</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>JNO-SW-3-FGM-CAL-V1.0</data_set_id>
+        <data_set_name>JUNO FGM CALIBRATED DATA SW V1.0</data_set_name>
+        <data_set_release_date>2016-11-04</data_set_release_date>
+        <start_time>2011-235T15:06:11Z</start_time>
+        <stop_time>2018-051T23:59:59Z</stop_time>
+        <producer_full_name>JOHN CONNERNEY</producer_full_name>
+        <citation_text>
+            J.E.P. Connerney (GSFC), Juno MAG CALIBRATED DATA SW/J V1.0, NASA
+            Planetary Data System, 2016
+        </citation_text>
+        <data_set_terse_desc>
+            The Juno Fluxgate Magnetomer (FGM) calibrated observations
+            consist of time and position tagged magnetic field samples in
+            physical units and coordinate systems collected by the FGM
+            instrument during cruise and orbital operations at Jupiter.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== This data set consists of the Juno FGM
+            calibrated observations. The FGM sensor block uses two miniature
+            ring-core fluxgate sensors to measure the magnetic field in three
+            components of the vector field There are multiple FGM data
+            products to accomodate different coordinate systems.
+        </abstract_desc>
+        <data_set_desc>
+ 
+   Data Set Overview
+   =================
+     The data set consists of calibrated observations.  The MAG measures
+     the vector magnetic field.
+ 
+     There are three principal coordinate systems used to represent the data
+     in this archive.  The SE  coordinate system is a Spacecraft- Solar
+     equatorial system and it will be used for cruise data only.  The
+     sun-state (ss) and planetocentric (pc) will be used for Earth Fly By
+     (EFB) and Jupiter orbital data. Cartesian representations are used for
+     all three coordinate systems. These coordinate systems are specified
+     relative to a &apos;target body&apos; which may be any solar system object (but
+     for this orbital operations will Jupiter). In what follows we will
+     reference Jupiter as the target body, but, for example, if observations
+     near a satellite (such as Io) are desired in Io-centric coordinates,
+     the satellite Io may be specified as the target body.
+ 
+     The SE coordinate system is defined using the sun-spacecraft vector
+     as the primary reference vector; sun&apos;s rotation axis  as the secondary
+     reference vector (z).    The x axis lies along the sun-spacecraft
+     vector, the z axis is in the plane defined by the Sun&apos;s rotation axis
+     and the spacecraft-sun vector. The y axis completes the system.
+ 
+     The ss coordinate system is defined using the instantaneous Jupiter-Sun
+     vector as the primary reference vector (x direction). The X-axis lies
+     along this vector and is taken to be positive toward the Sun. The
+     Jupiter orbital velocity vector is the second vector used to define
+     the coordinate system; the y axis lies in the plane determined by the
+     Jupiter-Sun vector and the velocity vector and is orthogonal to the x
+     axis (very nearly the negative of the velocity vector). The vector
+     cross product of x and y yields a vector z parallel to the northward
+     (upward) normal of the orbit plane of Jupiter. This system is sometimes
+     called a sun-state (ss) coordinate system since its principal vectors
+     are the Sun vector and the Jupiter state vector.
+     The planetocentric (pc) coordinate system is body-fixed and rotates
+     with the body as it spins on its axis. The body rotation axis is the
+     primary vector used to define this coordinate system. Z is taken to
+     lie along the rotation axis and be positive in the direction of
+     positive angular momentum. The X-axis is defined to lie in the
+     equatorial plane of the body, perpendicular to Z, and in the direction
+     of the prime meridian as defined by the IAU. The Y axis completes the
+     right-handed set.
+ 
+     Data in the vicinity of the moons of Jupiter (Io, Europa, Ganymede,
+     Callisto) may be provided in separate files in moon centered coordinate
+     systems, if it turns out that the mission plan affords an opportunity
+     to acquire data in the immediate vicinity of any of these bodies The
+     planetocentric and SS data follows the definitions above with the
+     reference body being the moon or target specified via option in the
+     command line All of the archived data files are simple and readable
+     ASCII files with attached documentation in a header that precedes the
+     columns of data. Files using a coordinate system centered on a target
+     body other than Jupiter are identified via the target body listed on
+     the command line which appears in the header along with an audit trail
+     of supplementary engineering (kernel) files.
+ 
+     The output from the processing program is in Standard Time Series (STS)
+     format. The Object Description Language (odl) header is included in the
+     STS file.  There will also be a detached PDS label file describing the
+     contents of the STS file.
+ 
+     Each data file contains the observations collected on a given UTC day.
+ 
+   Instrument Overview
+   ===================
+     The MAG Instrument Suite consists of two boom mounted observing
+     platforms (MAG Optical Bench, or MOB) each supporting a vector
+     Fluxgate Magnetometer (FGM) and two non-magnetic Advanced Stellar
+     Compass (ASC) Camera Head Units (CHUs). The ASC determines the
+     attitude of the MOB in inertial space and relative to the JUNO
+     spacecraft&apos;s Stellar Reference Units (SRU). The FGM was built at
+     the Goddard Space Flight Center (GSFC); the ASC was built at the
+     Technical University of Denmark (DTU).
+ 
+     The Juno FGM is fully redundant, with two identical power converters
+     providing power to one of two identical field programmable gate array
+     (FPGA)-based digital systems. Only one set (power converter and digital
+     system) is powered at a time; the other is a cold back-up. Either set
+     receives commands from, and transmits data to, either side of the
+     spacecraft command and data handling (C&amp;DH) unit through redundant
+     interfaces. Two identical sets of analog electronics, both continuously
+     powered by either power converter, drive the outboard (OB) and inboard
+     (IB) sensors, via separate cables connecting the remote FGM sensors and
+     electronics box, and both are controlled by and communicate with either
+     of the digital systems. No single point failure can result in loss of
+     data from both OB and IB FGM sensors.
+ 
+     Each FGM sensor block uses two miniature ring-core fluxgate sensors
+     to measure the magnetic field in three components of the vector field.
+     Each of the two ring-core sensors measures the field in two orthogonal
+     directions in the plane of the ring core. With two such sensors,
+     oriented in planes intersecting at 90 degrees, all three components
+     of the vector field are measured (one component measured, redundantly,
+     by both). The sensor electronics uses negative feedback to null the
+     magnetic field in each core, providing linearity over the full dynamic
+     range of the instrument. The field in each ring core is both sensed and
+     nulled by a pair of nested coils within which the ring core resides.
+     Each coil nulls the field in one of the two perpendicular axes that
+     define the plane of the ring core sensing element. All elements are
+     maintained in precise alignment by a sensor block assembly constructed
+     of a machinable glass ceramic with low thermal expansion (MACOR) and
+     excellent mechanical stability. The FGM sensor block attaches to the
+     optical bench via a three point kinematic mount to maintain accurate
+     alignment over the range or environments experienced. The FGM sensor
+     block is designed to operate at about 0 degrees C, whereas the optical
+     bench and CHUs are designed to operate at about -58 degrees C to
+     minimize noise and radiation effects. The FGM sensor block is thermally
+     isolated from the optical bench via the three point kinematic mount and
+     individual thermal blanketing. The FGM sensor itself is impervious to
+     radiation effects.
+ 
+     The two FGM sensors are separated by 2 meters on the MAG boom, one
+     sensor (inboard, or &apos;IB&apos; sensor) is located 2 m radially outward from
+     the end of the solar array and the other sensor (outboard, or &apos;OB&apos;
+     sensor) is located at the outer end of the MAG boom. This arrangement
+     (&apos;dual magnetometer&apos;) provides the capability to monitor spacecraft-
+     generated magnetic fields in flight. The MAG boom is located on the
+     outermost end of one (+x panel) of three solar panels and is designed
+     to mimic the outermost solar array panel (of the other two solar array
+     structures) in mass and mechanical deployment. The OB and IB sensor
+     packages are identical. The CHUs measure the attitude of the sensor
+     assembly continuously in flight to 20 arcsec and are used to establish,
+     and continuously monitor, the attitude of the sensor assembly with
+     respect to the spacecraft SRUs through cruise, orbit insertion at
+     Jupiter, and initial science orbits. In addition to the extraordinarily
+     accurate attitude reference provided by the MAG investigation&apos;s multiple
+     ASC CHUs, the spacecraft provides (reconstructed) knowledge of the FGM
+     sensor assembly attitude to an accuracy of 200 arcsec throughout the
+     mission, using sensors on the body of the spacecraft and knowledge of
+     the attitude transfer between the ASC camera heads and spacecraft SRUs.
+     This provides a redundant attitude determination capability that could
+     be used if ASC attitude solutions are interrupted for any reason (e.g.,
+     blinding by a sunlit Jupiter obscuring the field of view for certain
+     geometries, radiation effects). If this redundant capability is required
+     at any time, the stability of the mechanical system (MAG boom, solar
+     array hinges, structure, and articulation strut) linking the body of
+     the spacecraft (SRU reference) to the FGM sensors (and CHUs) is an
+     important element in satisfying the spacecraft requirement.
+ 
+     The Juno MAG sensors are remotely mounted (at approximately 10 m and
+     12 m) along a dedicated MAG boom that extends along the spacecraft +x
+     axis, attached to the outer end of one of the spacecraft&apos;s three solar
+     array structures. This design provides the maximum practical separation
+     between MAG sensors and spacecraft to mitigate spacecraft-generated
+     magnetic fields which would otherwise contaminate the measurements.
+     A comprehensive magnetic control program is in place to ensure that
+     the spacecraft magnetic field at the MAG sensors does not exceed 2 nT
+     static or 0.5 nT variable. The separated, dual FGM sensors provide
+     capability to monitor spacecraft-generated magnetic fields in flight.
+ 
+     The JUNO sensor design covers the wide dynamic range with six
+     instrument ranges (see below) increasing by factors of four the
+     dynamic range in successive steps. The analog signals are digitized
+     with a 16 bit analog to digital (A/D) converter, which yields a
+     resolution of +/- 32768 steps for each dynamic range. In the table
+     below, resolution, equal to 1/2 the quantization step size for each
+     range, is listed in parentheses.
+ 
+ 
+        FGM Characteristics        Dual Tri-Axial Ring Core Fluxgate
+ 
+        Dynamic range (resolution)       16.3840 G (+/-25.0 nT)
+                                          4.0960 G (+/-6.25 nT)
+                                          1.0240 G (+/-1.56 nT)
+                                          0.2560 G (+/-0.391 nT)
+                (1 G = 100,000 nT)         6400 nT (+/-0.10 nT)
+                                           1600 nT (+/-0.02 nT)
+        Measurement accuracy:       0.01% absolute vector accuracy
+        Intrinsic noise level       &lt;&lt;1 nT (range dependent)
+        Zero level stability        &lt;1 nT (calibrated)
+        Intrinsic sample rate       64 vector samples/s
+ 
+     The data from each sensor can be in one of eight data formats. The
+     instrument intrinsic sample rate of 64 samples/second is supported
+     in data formats 0 and 1; averages over 2 to the n power samples
+     (n = 1,2,3,4,5,6) are supported in telemetry modes 2 through 7.
+ 
+     See the JNO_FGM_INST.CAT file for more information and
+     [CONNERNEYETAL2016] for full details.
+ 
+   Parameters
+   ==========
+     The FGM powers up in operational mode and returns telemetry
+     immediately every clock tic (2 seconds). The FGM may be operated
+     in autoranging mode, or manual range commands may be sent to fix
+     the instrument in any of its dynamic ranges. Likewise any telemetry
+     mode may be selected, depending on telemetry resource allocation. In
+     addition, packets of engineering telemetry (in addition to science
+     telemetry packets) are telemetered at a variable rate, from one per
+     2 seconds to one per 512 seconds, per commanded state.
+ 
+   Calibration Overview
+   ====================
+     The FGMs were calibrated in the Planetary Magnetospheres Laboratory
+     and the GSFC Mario H. Acuna (MHA) Magnetic Test Facility (MTF), a
+     remote facility located near the GSFC campus. These facilities are
+     sufficient to calibrate the FGMs to 100 parts per million (ppm)
+     absolute vector accuracy. An independent measurement of the magnetic
+     field strength in the 0.25, 1, and 4 Gauss ranges was provided by
+     Overhausen Proton Precession magnetometers placed near the FGM. Scale
+     factor calibration is extended to 16 Gauss using a specialized high
+     field coil and measurement techniques (see JUNO Magnetic Field
+     Investigation instrument paper). A nuclear magnetic resonance
+     magnetometer (Virginia Scientific Instruments) provided the absolute
+     field strength measurements in the 16 Gauss range.
+ 
+     Two independent methods are used to calibrate the magnetometers. The
+     vector fluxgates are calibrated in the 22&apos; facility using a method
+     (&apos;MAGSAT method&apos;) developed by Mario Acuna and others. This technique
+     uses precise 90 degree rotations of the sensing element and a sequence
+     of applied fields to simultaneously determine the magnetometer
+     instrument model response parameters (the &apos;A matrix&apos;) as well as a
+     similar set of parameters (the &apos;B matrix&apos;) that describe the facility
+     coil orthogonality [instrument paper reference]. The second calibration
+     method (called the &apos;thin shell&apos; and &apos;thick shell&apos;) uses a large set of
+     rotations in a known field (magnitude) to obtain the same instrument
+     parameters, subject to an arbitrary rotation [Merayo 2000 &amp; 2001]. In
+     the &apos;thin shell&apos; method, the sensor is articulated through all
+     orientations in a fixed, or known field magnitude. This can be done in
+     a facility like the GSFC 22 foot coil system, wherein any fixed field
+     up to about 1.2 Gauss may be utilized, or it may be done in the Earth&apos;s
+     field using the ambient field in a gradient-free region and a system
+     to compensate for variations in the ambient field (normally corrected
+     via a secondary reference magnetometer coupled with a Proton Precession
+     total field instrument). Application of this method in a coil facility
+     (with closed loop control for ambient field variations) allows for the
+     &apos;thin shell&apos; to be performed at many field magnitudes (&apos;thick shell&apos;).
+ 
+     The MAGSAT calibration method provides the instrument calibration
+     parameters referenced to the optical cube mounted on the sensor
+     (or MOB) which defines the instrument coordinate system. These
+     parameters include the instrument scale factors, 3 by 3 instrument
+     response matrix (or &apos;A&apos; matrix), and zero offsets for each instrument
+     dynamic range. The &apos;thin shell&apos; method provides the same parameters,
+     but since the method conveys no attitude information, only the
+     symmetric part of the instrument response matrix is determined via
+     &apos;thin shell&apos;. Nevertheless, it provides a useful independent verification
+     of the MAGSAT calibration.
+ 
+     Inflight calibration activities are designed to monitor instrument
+     parameters, primarily zero offsets, and to monitor the relative
+     alignment of the magnetic field sensor platforms (the MOBs) and the
+     spacecraft attitude reference (Stellar Reference Units, or SRUs).
+     Spacecraft generated magnetic fields will be monitored using the dual
+     magnetometer technique and a series of magnetic compatibility tests
+     designed to identify the source of any magnetic signals (if any)
+     associated with spacecraft payloads. Since Juno is a spinning
+     spacecraft, spinning at 1 or 2 rpm nominally, any field fixed in the
+     frame of reference of the spacecraft (e.g., fixed spacecraft-generated
+     magnetic fields, sensor offsets, etc.) is easily identified. In practice
+     we apply an algorithm developed independently by several groups (Acuna,
+     Reviews of Scientific Instruments, 2002) to estimate bias offsets using
+     differences in the measured field. This method handily corrects for
+     biases in the spacecraft x and y axes, but since the spacecraft spins
+     about the z axis, biases in z must be estimated using different methods.
+     One technique utilizes the Alfvenic nature of fluctuations in the solar
+     wind, that is, the magnitude preserving nature of variations in the
+     field. Of course, not all fluctuations are Alfvenic (preserving
+     magnitude) so some care is taken in application of this method to select
+     appropriate events.
+ 
+LEFT OFF
+   Coordinate Systems
+   ==================
+     The MAG data are represented in the following coordinate systems:
+ 
+     - spacecraft-solar equatorial
+     - payload
+     - planetocentric
+     - sun-state
+ 
+     all described above.
+ 
+   Data
+   ====
+     Data products contain the observations collected on a given
+     UTC day.  Each coordinate system in a separate file.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+   Confidence Level Overview
+   =========================
+   Not applicable.
+ 
+   Review
+   ======
+     The FGM data set was reviewed internally by the MAG team prior to
+     release to the PDS. PDS also performed an external review of the MAG
+     data.
+ 
+ 
+   Limitations
+   ===========
+   The Juno magnetic field investigation was designed to measure fields
+   to 16 Gauss per axis over 6 dynamic ranges of the instrument, the most
+   sensitive of which is +/- 1600 nT with a quantization step size of
+   0.05 nT (16 bit A/D). Moreover, the spacecraft magnetic requirement was
+   not to exceed 2 nT static and 0.5 nT variable spacecraft-generated
+   magnetic field. In very weak field environments, such as encountered in
+   outer cruise, accuracy may be expected to be limited by sensor offset
+   and spacecraft magnetic field variations. The combined (static)
+   spacecraft-generated magnetic field and sensor offset may be continuously
+   monitored in flight in the spacecraft x and y axis, since the spacecraft
+   spins (nominally at 1 or 2 RPM) about an axis closely aligned with the
+   spacecraft payload z axis. However, offsets in the z axis need be
+   estimated using the Alfvenic properties in the solar wind (ref. Juno
+   Magnetic field investigation paper in Space Science Reviews). Statistical
+   in nature, estimates of z axis zeros are not continuously available and
+   are less accurate than the x and y zeros. Also, variations in spacecraft
+   field over a time span comparable to a spin period will also lead to
+   larger errors.
+        </confidence_level_note>
+        <archive_status>PRE_PEER_REVIEW</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

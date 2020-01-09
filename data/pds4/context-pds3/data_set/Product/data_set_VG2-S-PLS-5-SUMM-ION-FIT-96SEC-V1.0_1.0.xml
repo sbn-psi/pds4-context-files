@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-s-pls-5-summ-ion-fit-96sec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VOYAGER 2 SATURN PLASMA DERIVED ION FITS 96 SEC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pls.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-s-pls-5-summ-ion-fit-96sec-v1.0__browserp_vg2-s-pls-5-summ-ion-fit-96sec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bridge, H.S., J.W. Belcher, R.J. Butler, A.J. Lazarus, A.M. Mavretic, J.D.
+                   Sullivan, G.L. Siscoe, and V.M. Vasyliunas, The Plasma Experiment on the
+                   1977 Voyager Mission, Space Sci. Rev., Vol. 21, p. 259, 1977.
+            </reference_text>
+            <description>reference.BRIDGEETAL1977</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Richardson, J.D., Thermal Ions at Saturn: Plasma
+                   Parameters and Implications, J. Geophys. Res., 91,
+                   1381-1389, 1986.
+            </reference_text>
+            <description>reference.RICHARDSON1986</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-S-PLS-5-SUMM-ION-FIT-96SEC-V1.0</data_set_id>
+        <data_set_name>VOYAGER 2 SATURN PLASMA DERIVED ION FITS 96 SEC V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1981-08-25T07:21:12.002Z</start_time>
+        <stop_time>1981-08-26T01:33:59.937Z</stop_time>
+        <producer_full_name>JOHN D. RICHARDSON</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            Ion fit data from the Plasma experiment (PLS) on Voyager 2 in
+            Saturn&apos;s magnetosphere. The data set provides 96 second ion
+            mass, charge, number of ion species, density, thermal speed,
+            velocity for the first and second ion species.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+ 
+        Data Set Overview
+        =================
+          THIS DATA SET CONTAINS THE ION PARAMETERS IN THE PLS VOLTAGE
+          RANGE (10-5950 EV/Q) WITH FORMAL 1 SIGMA ERRORS OBTAINED FROM
+          VOYAGER 2 DATA AT SATURN BY FITTING THE MEASURED SPECTRA WITH
+          ISOTROPIC MAXWELLIAN DISTRIBUTIONS TO OBTAIN PLASMA DENSITIES,
+          TEMPERATURES, AND VELOCITY.  ONLY SPECTRA WHICH HAD DISTINCT
+          CURRENT PEAKS WERE FIT.  SPECTRA WERE FIT USING ONE OR TWO ION
+          SPECIES, PROTONS AND/OR A HEAVY ION WHICH WAS TAKEN TO BE
+          NITROGEN OUTSIDE OF 14 RS AND OXYGEN ELSEWHERE.  OUTSIDE
+          L=10-12 ION SPECTRA CHANGE RAPIDLY, SO THE VALUES IN THIS DATA
+          SET DO NOT REPRESENT AVERAGE PLASMA CONDITIONS IN THE OUTER
+          MAGNETOSPHERE.  THE VALUES FOR POSITION AND MAGNETIC FIELD
+          GIVEN IN THE DATA SET ARE ONLY APPROXIMATE AND SHOULD NOT BE
+          USED FOR PUBLICATION.  PARAMETERS WHICH ARE IDENTICALLY 0 AND
+          HAVE UNCERTAINTIES OF 0 WERE NOT FIT DUE TO INSUFFICIENT DATA;
+          THESE NUMBERS ARE THUS NOT REAL VALUES.  A COMPLETE DESCRIPTION
+          OF THIS DATA SET IS GIVEN IN RICHARDSON (1986).
+ 
+ 
+          DATA FORMATS ARE GIVEN AS BELOW:
+ 
+ 
+          ================================================================
+          name      type       description
+          ----------------------------------------------------------------
+          time      A24        time in the format yyyy-mm-ddThh:mm:ss.sssZ
+          r         1PE11.4    spacecraft radial distance from planet
+                                 (planetary radii)
+          rho       1PE11.4    spacecraft position angle rho (radians)
+          brho      1PE10.3    rho component of magnetic field (nT)
+          bphi      1PE10.3    phi component of magnetic field (nT)
+          bz        1PE10.3    z component of magnetic field (nT)
+          mode      A2         intrument mode (L or M)
+          fdate     A10        date the fit was performed (MMDDYY)
+          who       A6         intitials of person performing fit
+                                 (JDR = Dr. John Richardson, MIT)
+          chi2      1PE10.3    chi squared for the fit
+          num_fit   I3         number of ion species fit
+          ionspec1  I3         atomic number of first ion species for
+                                 the fit
+          ionmass1  I3         mass of the first ion species for the
+                                 fit (amu)
+          ionchrg1  I3         char of the first ion species for the fit
+          den1      1PE10.3    denisty of the first ion species for
+                                 the fit (cnts/cm**3)
+          xden1     1PE10.3    1 sigma uncertainty for den1 (cnts/cm**3)
+          vrho1     1PE10.3    velocity vector rho component of 1st ion
+                                 species (cm/sec)
+          xvrho1    1PE10.3    1 sigma uncertainty for vrho1 (cm/sec)
+          vphi1     1PE10.3    velocity vector phi component of 1st
+                                 ion species (cm/sec)
+          xvphi1    1PE10.3    1 sigma uncertainty for vphi1 (cm/sec)
+          vz1       1PE10.3    velocity vector z component of 1st ion
+                                 species (cm/sec)
+          xvz1      1PE10.3    1 sigma uncertainty for vz1 (cm/sec)
+          wpar1     1PE10.3    thermal speed in parallel direction
+                                 (cm/sec)
+          xwpar1    1PE10.3    1 sigma uncertainty for wpar1 (cm/sec)
+          wper1     1PE10.3    thermal speed in perpendicular direction
+                                 (cm/sec)
+          xwper1    1PE10.3    1 sigma uncertainty for wper1 (cm/sec)
+          ionspec2  I3         atomic number of second ion species for
+                                 the fit
+          ionmass2  I3         mass of the second ion species for the
+                                 fit (amu)
+          ionchrg2  I3         char of the second ion species for the fit
+          den2      1PE10.3    denisty of the second ion species for the
+                                 fit (cnt/cm**3)
+          xden2     1PE10.3    1 sigma uncertainty for den2 (cnts/cm**3)
+          vrho2     1PE10.3    velocity vector rho component of 2nd ion
+                                 species (cm/sec)
+          xvrho2    1PE10.3    1 sigma uncertainty for vrho2 (cm/sec)
+          vphi2     1PE10.3    velocity vector phi component of 2nd ion
+                                 species (cm/sec)
+          xvphi2    1PE10.3    1 sigma uncertainty for vphi2 (cm/sec)
+          vz2       1PE10.3    velocity vector z component of 2nd ion
+                                 species (cm/sec)
+          xvz2      1PE10.3    1 sigma uncertainty for vz2 (cm/sec)
+          wpar2     1PE10.3    thermal speed in parallel direction
+                                 (cm/sec)
+          xwpar2    1PE10.3    1 sigma uncertainty for wpar2 (cm/sec)
+          wper2     1PE10.3    thermal speed in perpendicular direction
+                                 (cm/sec)
+          xwper2    1PE10.3    1 sigma uncertainty for wper2 (cm/sec)
+ 
+ 
+          ADDITIONAL INFORMATION ABOUT THIS DATASET AND THE INSTRUMENT
+          WHICH PRODUCED IT CAN BE FOUND ELSEWHERE IN THIS CATALOG.
+          AN OVERVIEW OF THE DATA IN THIS DATA SET CAN BE FOUND IN
+          RICHARDSON (1986) AND A COMPLETE INSTRUMENT DESCRIPTION CAN
+          BE FOUND IN BRIDGE (1977).
+ 
+ 
+ 
+ 
+          Processing Level Id            : 5
+          Software Flag                  : Y
+ 
+ 
+ 
+ 
+        Parameters
+        ==========
+          Sampling Parameter Name        : TIME
+          Data Set Parameter Name        : ION DENSITY
+          Sampling Parameter Resolution  : 96.000000
+          Sampling Parameter Interval    : 96.000000
+          Minimum Available Sampling Int : 96.000000
+          Data Set Parameter Unit        : CM-3
+          Sampling Parameter Unit        : SECOND
+ 
+ 
+ 
+ 
+          Description
+          -----------
+            A DERIVED PARAMETER EQUALING THE VECTOR MOMENTUM FRAME OR
+            VELOCITY FRAME TO WHICH ONE MUST TRANSFORM IN A derived
+            parameter equaling the number of ions per unit ION THERMAL
+            SPEED: A measure of the velocity associated with ORDER TO
+            YIELD ION ANGULAR DISTRIBUTIONS AND-OR the temperature of the
+            ions.  It is formally defined as the volume over a specified
+            range of ion energy, energy/charge, ELECTRON ANGULAR
+            DISTRIBUTIONS THAT ARE ANGULARLY Ion Thermal Speed squared
+            equals two times K (Boltzmann&apos;s or energy/nucleon.
+            Discrimination with regard to mass and or ISOTROPIC AT ALL
+            ENERGIES.  SUCH A FRAME CAN BE constant) times T (temperature
+            of ion) divided by M (ion charge state is necessary to obtain
+            this quantity, however, FOUND ONLY IF OTHER EFFECTS THAT CAN
+            YIELD ANGULAR mass).  Each component of a plasma has a
+            thermal speed mass and charge state are often assumed due to
+            instrument limitations.  associated with it.  ANISOTROPIES
+            (E.G.  SPATIAL GRADIENTS) ARE
+ 
+ 
+            FACTORED OUT.  THE COMPONENT OF THE TRANSFORM VELOCITY VECTOR
+            PERPENDICULAR TO THE LOCAL Many different forms of ion
+            density are derived.  Some are MAGNETIC FIELD VECTOR IS
+            COUPLED TO THE distinguished by their composition (N+,
+            proton, ion, etc.) APPROXIMATELY TIME STATIONARY ELECTRIC
+            FIELD.  or their method of derivation (Maxwellian fit, method
+            of PARALLEL TO THE LOCAL MAGNETIC FIELD VECTOR A FLOW
+            moments).  In some cases, more than one type of density will
+            VELOCITY FRAME MAY OR MAY NOT BE A WELL DEFINED be provided
+            in a single data set.  In general, if more than QUANTITY.  one
+            ion species is analyzed, either by moment or fit, a total
+            density will be provided which is the sum of the ion
+            densities.  If a plasma component does not have a Maxwellian
+            distribution the actual distribution can be represented as
+            the sum of several Maxwellians, in which case the density of
+            each Maxwellian is given.
+ 
+ 
+ 
+ 
+        Source Instrument Parameters
+        ============================
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ION DENSITY
+          Instrument Parameter Name       : ION RATE
+          Important Instrument Parameters : 1
+ 
+ 
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ION DENSITY
+          Instrument Parameter Name       : ION CURRENT
+          Important Instrument Parameters : 1
+ 
+ 
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ION THERMAL SPEED
+          Instrument Parameter Name       : ION RATE
+          Important Instrument Parameters : 1
+ 
+ 
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ION THERMAL SPEED
+          Instrument Parameter Name       : ION CURRENT
+          Important Instrument Parameters : 1
+ 
+ 
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ION DENSITY
+          Instrument Parameter Name       : PARTICLE MULTIPLE PARAMETERS
+          Important Instrument Parameters : 1
+ 
+ 
+ 
+ 
+        Processing
+        ==========
+ 
+ 
+          Processing History
+          ------------------
+            Source Data Set ID          : VG2-PLS
+            Software                    : MJSANL
+            Product Data Set ID         : VG2-S-PLS-5-ION-FIT-96.0SEC
+ 
+ 
+ 
+ 
+          Software &apos;MJSANL&apos;
+          -----------------
+            Software Name               : MJSANL
+            Software Type               : PIN
+            Software Release Date       : N/A
+            Node ID                     : N/A
+            Cognizant Engineer          : N/A
+            Software Access Description : N/A
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level:
+    =================
+ 
+ 
+          THIS DATA SET PROVIDES AN ESTIMATE OF THE ION PARAMETERS IN THE
+          PLS ENERGY RANGE (10-5950 EV).  FORMAL 1 SIGMA UNCERTAINTIES
+          FOR THE DERIVED VELOCITIES, DENSITIES, AND THERMAL SPEEDS AND
+          RANGE FROM A FEW TO 100%.  SYSTEMATIC ERRORS MAY RESULT FROM
+          THE USE OF ISOTROPIC MAXWELLIAN DISTRIBUTIONS TO MODEL THE
+          IONS, WHICH RESULTS IN AN UNDERESTIMATE OF THE TOTAL ION
+          DENSITY AND ION THERMAL SPEED OF LESS THAN 20%, BUT HAS LITTLE
+          EFFECT (FEW PERCENT) ON THE VELOCITY DETERMINATION.  POSITION
+          AND MAGNETIC FIELD DATA IN THIS DATA SET ARE ONLY APPROXIMATE
+          AND SHOULD NOT BE RELIED UPON.  ONLY SPECTRA WITH AT LEAST ONE
+          CURRENT PEAK WERE FIT; THIS GIVES A BIASED SELECTION OF THE
+          DATA, PARTICULARLY OUTSIDE L=10 WHERE THE DATA GIVEN IS NOT
+          REPRESENTATIVE OF &apos;AVERAGE&apos; PLASMA CONDITIONS.  SEE RICHARDSON
+          (1986) FOR DETAILS.
+ 
+ 
+ 
+ 
+    Data Coverage
+    ==================
+    Filename Records Start                     Stop
+    ---------------------------------------------------------------------
+    Volume ID: VG_1601
+    ION_FIT.TAB  104  1981-08-25T07:21:12.002Z  1981-08-26T01:33:59.937Z
+    PLS_CUP.TAB  104  1981-08-25T07:21:12.002Z  1981-08-26T01:33:59.937Z
+ 
+ 
+ 
+ 
+    Missing Data Flag
+    ==================
+    Any data column whose value is  -9.999e+10 is a missing data value.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>1977-076A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

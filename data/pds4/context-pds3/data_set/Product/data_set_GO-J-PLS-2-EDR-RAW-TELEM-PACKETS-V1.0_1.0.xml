@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-j-pls-2-edr-raw-telem-packets-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO JUPITER PLASMA RAW PACKETIZED TELEMETRY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pls.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.amalthea::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.callisto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.europa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.ganymede::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-pls-2-edr-raw-telem-packets-v1.0__browserp_go-j-pls-2-edr-raw-telem-packets-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Frank, L. A., K. L. Ackerson, J. A. Lee, M. R. English, and G. L. Pickett, The
+                   Plasma Instrumentation for the Galileo Mission, Sp. Sci. Rev., 60, 283-307,
+                   1992.
+            </reference_text>
+            <description>reference.FRANKETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-J-PLS-2-EDR-RAW-TELEM-PACKETS-V1.0</data_set_id>
+        <data_set_name>GALILEO JUPITER PLASMA RAW PACKETIZED TELEMETRY V1.0</data_set_name>
+        <data_set_release_date>2000-01-01</data_set_release_date>
+        <start_time>1995-12-07T15:30Z</start_time>
+        <stop_time>2003-09-21T18:45Z</stop_time>
+        <producer_full_name>DR. KENT ACKERSON</producer_full_name>
+        <citation_text>
+            Frank, L.A., Paterson, W.R., Ackerson, K.L., GALILEO JUPITER
+            PLASMA RAW PACKETIZED TELEMETRY V1.0,
+            GO-J-PLS-2-EDR-RAW-TELEM-PACKETS-V1.0,NASA Planetary Data System,
+            2000
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains instrument packet files (IPFs) from the
+            Plasma Science experiment (PLS) onboard the Galileo spacecraft
+            during the Jupiter orbital operations phase. This data set is in
+            a very raw, complex binary form.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains instrument packet files (IPFs) from the
+            Plasma Science experiment (PLS) onboard the Galileo spacecraft
+            during the Jupiter orbital operations phase. This data set is a
+            very raw, binary form. It is archived for completeness only.
+            There is another PDS data set (GO-J-PLS-3-RDR-FULLRES-V1.0) that
+            contains all of the plasma detector counts in a form that is much
+            easier to work with. The primary advantage of this data set is
+            that it contains instrument housekeeping and engineering data in
+            addition to the counts.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set contains instrument packet files (IPFs) from the Plasma
+    Science experiment (PLS) onboard the Galileo spacecraft during the
+    Jupiter orbital operations phase. This data set is a very raw, binary
+    form. It is archived for completeness only. There is another PDS data
+    set (GO-J-PLS-3-RDR-FULLRES-V1.0) that contains all of the plasma
+    detector counts in a form that is much easier to work with. The
+    primary advantage of this data set is that it contains instrument
+    housekeeping and engineering data in addition to the counts.
+ 
+ 
+  Parameters
+  ==========
+    The packetized telemetry files for the PLS instrument are described
+    by the Galileo project document &apos;625-205 GLL-3-280 Phase 2: Telemetry
+    Measurements and Data Formats, Appendix A&apos;. This document is included
+    in the DOCUMENT/PROJECT/GLL3_280 directory of all PDS data volumes
+    that include files from this data set. The parameters include both
+    analog housekeeping values and digital data.
+ 
+ 
+  Processing
+  ==========
+    These data have been processed only by the Galileo ground data system
+    (GDS). The telemetry packets associated  with the PLS experiment have
+    been separated from other telemetry packets by the GDS.  In addition,
+    there has been  some effort to correct packet header problems
+    associated with telemetry dropouts by the GDS.
+ 
+ 
+  Ancillary Data
+  ==============
+    Each data volume contains a set of as-run spacecraft event files.
+    These files collect all of the uplink and downlink commands to the
+    spacecraft that affect the PLS instrument. These files are located
+    in the DATA/AR_SEF directory of the data volume that contains the PLS
+    data files.
+ 
+    In addition, calibration tables and a calibration document have been
+    included with this archive, primarily in support of the RDR data
+    product mentioned above.
+ 
+ 
+  Coordinate System
+  =================
+    Data are provided in PLS instrument coordinates. Please refer to the
+    instrument description paper [FRANKETAL1992] for a description of the
+    instrument mounting, detector fields of view, and spin phase
+    sectoring. PLS packets contain information about the spacecraft spin
+    phase that allows sectors to be computed.
+ 
+ 
+  Software
+  ========
+    There are no software provided with this archive.
+ 
+ 
+  Media/Format
+  ============
+    These data are archived on CDROM. The data files are  in a complex
+    binary format described by the GLL 3-280 document described above.
+    Data files are described by detached PDS minimum labels.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+    These data have been through the Galileo ground data system &apos;besting&apos;
+    process and are generally considered to be archive quality raw data.
+ 
+ 
+  Data Coverage/Quality
+  =====================
+    All data that was received on the ground from the PLS instrument
+    after 1996 are included in this data set. Note that the Io flyby data
+    in orbit zero were recorded on tape and not returned until June, 1996.
+    This data set contains gaps in coverage. Many of these gaps were
+    planned (insufficient telemetry coverage to provide continuous data)
+    and others were not (telemetry dropouts, station outages, etc.).
+ 
+ 
+  Limitations
+  ===========
+    These are raw data. No effort has been made to calibrate the data or
+    eliminate instrumental effects. Only users who are extremely familiar
+    with this instrument and its operation should attempt to use these
+    data in this form.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

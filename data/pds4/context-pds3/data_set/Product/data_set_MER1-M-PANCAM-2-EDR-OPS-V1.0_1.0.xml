@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-m-pancam-2-edr-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 1 MARS PANORAMIC CAMERA EDR OPS VERSION 1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pancam.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-pancam-2-edr-ops-v1.0__browserp_mer1-m-pancam-2-edr-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-pancam-2-edr-ops-v1.0__browser_geo_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-pancam-2-edr-ops-v1.0__dvo_imaging_mer1-m-pancam-2-edr-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bell, J.F. III, The Mars Exploration Rover Athena Panoramic Camera (Pancam)
+                   Investigation, Journal of Geophysical Research, June 23, 2003.
+            </reference_text>
+            <description>reference.BELLETAL2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1-M-PANCAM-2-EDR-OPS-V1.0</data_set_id>
+        <data_set_name>MER 1 MARS PANORAMIC CAMERA EDR OPS VERSION 1.0</data_set_name>
+        <data_set_release_date>2004-08-24</data_set_release_date>
+        <start_time>2004-01-25T07:18:28.780Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>Jim Bell</producer_full_name>
+        <citation_text>
+            Bell, Jim, MER 1 Mars Panoramic Camera EDR Ops V1.0, NASA
+            Planetary Data System, MER1-M-PANCAM-2-EDR-OPS-V1.0, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 1 Panoramic Camera Operations Experiment
+            Data Records
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set contains raw Pancam operational data. If 12 to 8 bit
+    scaling was commanded, these images HAVE NOT been transformed back
+    to 12 bits. These images are only used to asses the morphology,
+    topography, and geologic context of each rover site. These images
+    should not be used for quantitative scientific purposes.
+ 
+ 
+  Processing
+  ==========
+    This documentation uses the Committee on Data Management and
+    Computation (CODMAC) data level numbering system. The MER Camera
+    Payload EDRs referred to in this document are considered Level 2
+    or Edited Data (equivalent to NASA Level 0). The EDRs are to be
+    reconstructed from Level 1 or Raw Data, which are the telemetry
+    packets within the project specific Standard Formatted Data Unit
+    (SFDU) record. They are to be assembled into complete images, but
+    will not be radiometrically or geometrically corrected.
+ 
+    EDR data products will be generated by MIPL using the telemetry
+    processing software mertelemproc at JPL. The EDRs produced will be
+    raw uncalibrated data reconstructed from telemetry packet SFDUs
+    and formatted according to this SIS. Meta-data acquired from the
+    telemetry data headers and a meta-data database will be used to
+    populate the PDS label. Missing packets will be identified and
+    reported for retransmission to the ground as partial datasets.
+    Prior to retransmission, the missing EDR data will be filled with
+    zeros. The EDR data will be reprocessed only after all
+    partial datasets are retransmitted and received on the ground.
+    In these cases, the original EDR version will be overwritten.
+ 
+ 
+  Data
+  ====
+    The data packaged in the camera data files will be decoded,
+    decompressed camera image data in single frame form as an Experiment
+    Data Record (EDR). The Full Frame form of a standard image data file
+    has the maximum dimensions of 1024 lines by 1024 samples.
+ 
+    1) Full Frame EDR
+       Full Frame EDRs are stored as 16-bit signed integers. If 12-to-8
+       bit scaling is performed, then pixels are stored in 16-bit format
+       and only the last 8 bits of the 16-bit integer are used.
+ 
+    2) Thumbnail EDR
+       Thumbnail EDRs are stored as 16-bit signed integers or 8-bit
+       unsigned integers. If 12-to-8 bit scaling is performed, then
+       pixels are stored in 16-bit format and only the last 8 bits of
+       the 16- bit integer are used. The Thumbnail EDR is a sized down
+       version of the original acquired image (i.e., camera returned
+       pixel data), and size of the binary EDR image data is variable.
+       However, the original acquired image is not always downlinked.
+       The main purpose of a Thumbnail EDR is to provide an image
+       summary using a very low data volume compared to the original
+       image.
+ 
+    3) Sub-frame EDR
+       Sub-frame EDRs are a subset of rows and columns of the
+       1024 x 1024 full frame image. Sub-frame EDRs are stored as 16-bit
+       signed integers. If 12-to-8 bit scaling is performed, then pixels
+       are stored in 16-bit format and only the last 8 bits of the
+       16-bit integer are used.
+ 
+    4) Downsampled EDR
+       A downsampled EDR is a smaller version of the 1024 x 1024 full
+       frame or subframed image using the following methods: 1) nearest
+       neighbor pixel averaging, 2) pixel averaging with outlier
+       rejection or 3) computing the median pixel value. Downsampled
+       EDRs are stored as 16-bit signed integers. If 12-to-8 bit scaling
+       is performed, then pixels are stored in 16-bit format and only
+       the last 8 bits of the 16-bit integer are used.
+ 
+    5) Reference Pixels
+       The onboard CCD array has 16 pre-Reference dark pixels (12-bits)
+       located at the beginning and 15 post-Reference dark pixels
+       (12-bits) located at the end of each row. The values of these
+       pixels indicate the bias level of the camera at the time of each
+       observation. The Reference Pixel images were losslessly
+       compressed for downlink. For complex design reasons, the last
+       post-Reference pixel is a copy of the next-to-last
+       post-Reference pixel. Following the last post-Reference
+       dark pixel, at the very end of each row, is the camera hardware
+       serial number (left-shifted by 4 bits if 12-bit data).
+ 
+ 
+  Software
+  ========
+    MER Camera Payload downlink processing software is focused on rapid
+    reduction, calibration, and visualization of images in order to make
+    discoveries, to accurately and expeditiously characterize the
+    geologic environment around the rover, and to provide timely input
+    for operational decisions concerning rover navigation and Instrument
+    Deployment Device (IDD) target selection. Key software tools have
+    been developed at Cornell University, at JPL by the MIPL, SSV, and
+    APSS groups, at NASA Ames, and at the USGS/Flagstaff. These tools
+    can also be used to process MI images (see below), as well as Navcam
+    and Hazcam images, which have substantial scientific potential in
+    addition to their operational importance
+ 
+    PDS-labeled images and tables can be viewed with the program
+    NASAView, developed by the PDS and available for a variety of
+    computer platforms from the PDS web site
+    http://pdsproto.jpl.nasa.gov/Distribution/license.html.
+    There is no charge for NASAView.
+ 
+  Media/Format
+  ============
+    The data set will initally be delivered and kept online. Upon
+    Mission completion, the Pancam EDRs will be delivered to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

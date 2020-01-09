@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:tims.c130</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>THERMAL INFRARED MULTISPECTRAL SCANNER for C130</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.c130::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Palluconi, F.D., and G.R. Meeks, Thermal Infrared
+                   Multispectral Scanner (TIMS): An investigator&apos;s guide to
+                   TIMS data, JPL Publication 1985-32, 1985.
+            </reference_text>
+            <description>reference.JPLPUB1985-32</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kahle, A.B., and E. Abbott, (Eds.), The TIMS data user&apos;s
+                   workshop; June 18 and 19, 1985, JPL Publication 1986-38,
+                   1986.
+            </reference_text>
+            <description>reference.JPLPUB1986-38</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>THERMAL INFRARED MULTISPECTRAL SCANNER</instrument_name>
+        <instrument_desc>
+ 
+ 
+    INSTRUMENT: THERMAL INFRARED MULTISPECTRAL SCANNER
+          HOST: NASA C-130 AIRCRAFT
+ 
+ 
+    Instrument Information
+    ======================
+      Instrument Id                  : TIMS
+      Instrument Host Id             : C130
+      Instrument Name                : THERMAL INFRARED MULTISPECTRAL
+                                         SCANNER
+      Instrument Type                : THERMAL INFRARED SPECTROMETER
+      Build Date                     : 1981-01-01
+      Instrument Mass                : 99.800000
+      Instrument Length              : 0.940000
+      Instrument Width               : UNK
+      Instrument Height              : 0.762000
+      Instrument Manufacturer Name   : DAEDALUS ENTERPRISES, INC.
+ 
+ 
+    Instrument Description
+    ======================
+      The TIMS instrument is a six-channel thermal infrared
+      spectrometer with a spectral range between 8.0 and 12.0
+      micrometers.  Cross-track scanning is achieved through rotation
+      of a 45 degree flat scan mirror that reflects incident energy
+      to a 19 cm diameter, 33 cm focal length parabolic primary
+      mirror.  The energy is then directed into the spectrometer
+      section of the instrument by a flat secondary mirror.  Both the
+      primary and secondary mirrors are aluminum coated with an
+      overcoating of silicon oxides.  At the entrance to the
+      spectrometer section and at the focal plane of the primary
+      mirror is a 0.8 mm field stop aperture which defines the
+      instrument&apos;s 2.5 mrad Instantaneous-Field-of-View (IFOV).
+ 
+      After passing through the field stop the energy is collimated
+      by an off-axis parabolic section mirror and directed to a
+      replica grating of 12 grooves per mm with a blaze angle of 3.4
+      degrees, which produces the spectral dispersion.  A germanium
+      triplet image lens is used to form an image of the field stop
+      in the detector plane.  The image size is 0.38 mm in this
+      plane.
+ 
+      The detector consists of a linear array of six MCT
+      (mercury-cadmium-telluride) detector elements mounted on a
+      cold finger from the inner flask of a liquid nitrogen dewar.
+      The width of these detectors (0.43 mm) is a little larger than
+      the image of the field stop aperture and the length is set by
+      the desired bandwidth.  The thermal reference sources are
+      mounted on the scan head so the scan mirror views one after
+      scanning across the Field-of-View (FOV).  This permits line by
+      line calibration of the TIMS data.
+ 
+      The TIMS optical system consists of a 19 cm diameter Newtonian
+      reflector telescope mounted behind an object-plane 45 degree
+      flat scanning mirror and followed by a Czerny-Turner
+      spectrometer.  The primary optical system uses a f1.9 parabolic
+      primary mirror with a field determining aperture located in its
+      focal plane.  An off-axis parabolic mirror is used to collimate
+      the energy emerging from the aperture which is then dispersed
+      by the diffraction grating and re-imaged on the detector array
+      by a fast f0.6 germanium lens.
+ 
+      All of the primary optical elements, the field stop, the
+      off-axis collimator, and the detector dewar are mounted on
+      sliding blocks controlled by Invar metering rods to provide the
+      active thermal compensation for scan head ambient temperature
+      changes.  The three element germanium imaging lens is also
+      internally thermally compensated for changes in ambient
+      temperature.
+ 
+ 
+    Science Objectives
+    ==================
+      The objective of TIMS is to acquire data from which spectral
+      emissivity and thermophysical property parameters could be
+      extracted for selected targets.
+ 
+ 
+    Operational Considerations
+    ==========================
+      Not Applicable
+ 
+ 
+    Calibration Description
+    =======================
+      Two thermal references sources are mounted in the TIMS scanner
+      head; thus the scan mirror views one before and one after
+      scanning across the Field-of-View (FOV).  This permits
+      line-by-line calibration of TIMS data.  Each reference source
+      is a 20.3 cm square copper plate coated with Krylon 1602
+      ultra-flat black paint (paint layer is 0.64 cm thick).
+      Thermistors are mounted in slots cut into the rear of these
+      plates.
+ 
+      Reference source 1 can be heated or cooled and is used as the
+      lower temperature reference source.  Reference source 2 can be
+      heated only and is used for the higher temperature reference
+      source.  The emissivities of the thermal reference sources are
+      known (presumably emissivity=1.0 for the black paint surface).
+      The temperatures of both references are set before the flight
+      (usually 10 and 30 degrees C) and are measured independently
+      throughout the flight using the embedded thermistors
+      (temperatures of both reference sources are recorded from the
+      thermistors during each scan of the instrument).  At the same
+      time the thermistor temperatures are recorded, the scanner head
+      records a DN value for each reference source through all of the
+      six channel filters, consecutively.  Each DN value recorded for
+      the reference sources for each of the six channels can then be
+      related directly to a radiance value through the following
+      relationship which translates the scene DNs for each scan line
+      into physical units using the internal reference sources.  This
+      also allows any scan to scan differences in the system
+      operation to be easily detected.
+ 
+ 
+    Section &apos;TIMS&apos;
+    ==============
+      Total Fovs                     : 1
+      Scan Mode Id                   : UNK
+      Sample Bits                    : 8
+ 
+ 
+      &apos;TIMS&apos; Detectors
+      ----------------
+        TIMS
+ 
+ 
+      &apos;TIMS&apos; Electronics
+      ------------------
+        TIMS
+ 
+ 
+      In modes
+      --------
+        OPERATING
+ 
+ 
+      &apos;TIMS&apos; Section FOV Shape &apos;LINEAR&apos;
+      ---------------------------------
+        Section Id                     : TIMS
+        Fovs                           : 1
+        Horizontal Pixel Fov           : 0.143000
+        Vertical Pixel Fov             : 0.143000
+        Horizontal Fov                 : 76.560000
+        Vertical Fov                   : 0.143000
+ 
+ 
+      &apos;TIMS&apos; Section Parameter &apos;RADIANCE&apos;
+      -----------------------------------
+        Radiance is the amount of energy per time per projected area
+        per steradian.
+ 
+        Instrument Parameter Name      : RADIANCE
+        Sampling Parameter Name        : PIXEL
+        Instrument Parameter Unit      : WATT/(METER*METER)/STERADIAN
+        Sampling Parameter Resolution  : 0.143000
+        Sampling Parameter Unit        : DEGREE
+ 
+ 
+      Instrument Detector &apos;TIMS&apos;
+      --------------------------
+        Detector Type                  : MCT
+        Minimum Wavelength             : 8.200000
+        Maximum Wavelength             : 12.200000
+        Nominal Operating Temperature  : 80.000000
+ 
+ 
+      Description
+      -----------
+        The detector consists of a linear array of 6
+        mercury-cadmium-telluride (MCT) detector elements mounted on
+        a cold finger from the inner flask of a liquid nitrogen
+        dewar.  The width of these detectors (0.43 mm) is a little
+        larger than the image of the field stop aperture.  The length
+        of the detectors is set by the desired bandwidth.
+ 
+ 
+      Sensitivity
+      -----------
+        Sensitivity required to be less than 0.3 K.  All except Band
+        6 are within 0.2 K.
+ 
+ 
+    Instrument Electronics &apos;TIMS&apos;
+    =============================
+ 
+      Description
+      -----------
+        Not Applicable
+ 
+ 
+    Instrument Mode &apos;OPERATING&apos;
+    ===========================
+      Data Path Type                 : RECORDED DATA PLAYBACK
+      Instrument Power Consumption   : UNK
+ 
+ 
+      In sections
+      -----------
+        TIMS
+ 
+ 
+      Description
+      -----------
+        Not Applicable
+ 
+ 
+    Mounted On Platform &apos;NASA C130 AIRCRAFT&apos;
+    ========================================
+ 
+      Description
+      -----------
+        TIMS was mounted on NASA&apos;s C-130 in a nadir-pointing
+        position.
+ 
+
+        </instrument_desc>
+        <instrument_id>TIMS</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Thermal Infrared Spectrometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

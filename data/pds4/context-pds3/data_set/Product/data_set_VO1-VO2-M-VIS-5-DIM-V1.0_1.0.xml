@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vo1-vo2-m-vis-5-dim-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VO1/VO2 MARS VISUAL IMAGING SUBSYSTEM DIGITAL IMAGING MODEL</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.viking::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:visa.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:visa.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:visb.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:visb.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-5-dim-v1.0__browserp_vo1-vo2-m-vis-5-dim-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-5-dim-v1.0__browser_geo_vo1_vo2-m-vis-5-dim-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-5-dim-v1.0__browser_vo1-vo2-m-vis-5-dim-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-5-dim-v1.0__dvo_geo_offline::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-5-dim-v1.0__dvo_imaging_vo1_vo2-m-vis-5-dim-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-5-dim-v1.0__dvo_usgs_vo1-vo2-m-vis-5-dim-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Batson, R.M., Digital Cartography of the Planets: New Methods, Its Status, and
+                   Its Future: September 1987, Photogrammetric Engineering and Remote Sensing,
+                   Vol. 53, No. 9, pp. 1211-1218, 1987.
+            </reference_text>
+            <description>reference.BATSON1987</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Batson, R.M., Cartography, in Greeley, Ronald, and
+                   Batson, R.M., eds, Planetary Mapping: New York, Cambridge
+                   University Press, pp. 60-95, 1990.
+            </reference_text>
+            <description>reference.BATSON1990A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Batson, R.M., Appendix I: Map formats and projections
+                   used in planetary cartography, in Greeley, Ronald, and
+                   Batson, R.M., eds, Planetary Mapping: New York, Cambridge
+                   University Press, pp. 261-276, 1990.
+            </reference_text>
+            <description>reference.BATSON1990B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Batson, R.M., Appendix III: Digital planetary
+                   cartography, in Greeley, Ronald, and Batson, R.M., eds,
+                   Planetary Mapping: New York, Cambridge University Press,
+                   pp. 287-289, 1990.
+            </reference_text>
+            <description>reference.BATSON1990C</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Benesh, M., and T. Thorpe, Viking Orbiter 1975 Visual Imaging Subsystem
+                   Calibration Report, JPL document 611-125, 1976.
+            </reference_text>
+            <description>reference.BENESH1976</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Clark, David, Plane and geodetic surveying for engineers,
+                   Vol. 2, higher surveying [5th Ed., 1963, Revised
+                   by Clendinning, James]. Constable &amp; Co. Ltd., London,
+                   pp. 599-600, 1923.
+            </reference_text>
+            <description>reference.CLARK1923</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Johnson, T.V., L.A. Soderblom, J.A. Mosher, G.E. Danielson,
+                   A.F. Cook, and P. Kupferman, Global multispectral
+                   mosaics of the icy Galilean satellites. Journal of
+                   Geophysical Research, Vol. 88, No. B-7, pp. 5789-5805,
+                   1983.
+            </reference_text>
+            <description>reference.JOHNSONETAL1983</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Klaasen, K.P., T.E. Thorpe, and L.A. Morabito, Inflight performance of the
+                   Viking visual imaging subsystem, Applied Optics, 16, 3158-3170, 1977.
+            </reference_text>
+            <description>reference.KLAASENETAL1977</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Snyder, C.W., &apos;The Missions of the Viking Orbiters&apos;, Journal of Geophysical
+                   Research, vol. 82, p. 3971, 1977.
+            </reference_text>
+            <description>reference.SNYDER1977</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Snyder, C.W., &apos;The Extended Mission of Viking&apos;, Journal of Geophysical
+                   Research, vol. 84, p. 7917, 1979.
+            </reference_text>
+            <description>reference.SNYDER1979</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Soderblom, L.A., K. Edwards, E.M. Eliason, E.M. Sanchez,
+                   and M.P. Charette, Global color variations on the
+                   Martian surface. Icarus, vol. 34, pp. 446-464, 1978.
+            </reference_text>
+            <description>reference.SODERBLOM1978</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Wellman, J.B., F.P. Landauer, D.D. Norris, and T.E. Thorpe, The Viking Orbiter
+                   visual imaging subsystem, J. Spacecr. Rockets, 13, 660-666, 1976.
+            </reference_text>
+            <description>reference.WELLMANETAL1976</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VO1/VO2-M-VIS-5-DIM-V1.0</data_set_id>
+        <data_set_name>VO1/VO2 MARS VISUAL IMAGING SUBSYSTEM DIGITAL IMAGING MODEL</data_set_name>
+        <data_set_release_date>1991</data_set_release_date>
+        <start_time>1972-07-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>ERIC ELIASON</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Viking Orbiter 1 &amp; Viking Orbiter 2 Imaging (VIS) Digital
+            Image Map
+        </data_set_terse_desc>
+        <abstract_desc>
+            This digital image map of Mars is a cartographic extension of a
+            previously released set of CD volumes containing individual
+            Viking Orbiter Images (PDS volumes VO_1001, VO_1002, etc.). The
+            data in the latter are pristine, in the sense that they were
+            processed only to the extent required to view them as images.
+            They contain the artifacts and the radiometric, geometric, and
+            photometric characteristics of the raw data transmitted by the
+            spacecraft. This new volume set, on the other hand, contains
+            cartographic compilations made by processing the raw images to
+            reduce radiometric and geometric distortions and to form
+            geodetically controlled Mosaicked Digital Image Models (MDIMs).
+            (Because the photometric processing used in this MDIM was
+            oversimplified, quantitative radiometric analysis on this data is
+            not possible.) It also contains digitized versions of an
+            airbrushed map of Mars as well as a listing of all IAU-approved
+            feature names.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    This digital image map of Mars is a cartographic extension of a
+    previously released set of CD volumes containing individual
+    Viking Orbiter Images (PDS volumes VO_1001, VO_1002, etc.).
+    The data in the latter are pristine, in the sense that they
+    were processed only to the extent required to view them as
+    images.  They contain the artifacts and the radiometric,
+    geometric, and photometric characteristics of the raw data
+    transmitted by the spacecraft.  This new volume set, on the
+    other hand, contains cartographic compilations made by
+    processing the raw images to reduce radiometric and geometric
+    distortions and to form geodetically controlled Mosaicked
+    Digital Image Models (MDIMs).  (Because the photometric
+    processing used in this MDIM was oversimplified, quantitative
+    radiometric analysis on this data is not possible.) It also
+    contains digitized versions of an airbrushed map of Mars as
+    well as a listing of all IAU-approved feature names.
+ 
+    The MDIM CD collection serves two purposes.  First, the image
+    collection serves as a data base for interactive map browser
+    applications.  Secondly, the CD volume set provides a dense
+    delivery medium to build higher-derived cartographic image
+    products such as special map series and planning charts for
+    future Mars exploration missions.
+ 
+    This set contains twenty-two volumes with the following
+    contents:
+ 
+    Volume 1
+    --------
+      Vastitas Borealis Region of Mars (VO_2001): MDIMs in 373
+      image files covering the entire north polar region of Mars
+      southward from the pole to a latitude of 42.5 deg. North.
+      Polar Stereographic projection images of the North pole area
+      from 80 to 90 degrees are located in the POLAR directory on
+      this disk
+ 
+    Volume 2
+    --------
+      Xanthe Terra Region of Mars (VO_2002): MDIMs in 412 image
+      files covering the region of Mars from 47.5 deg.  North
+      latitude to 47.5 deg.  South latitude, and 0 deg.  longitude
+      to 90 deg.  West longitude.
+ 
+    Volume 3
+    --------
+      Amazonis Planitia Region of Mars (VO_2003): MDIMs in 412
+      image files covering the region of Mars from 47.5 deg.  North
+      latitude to 47.5 deg.  South latitude, and 90 deg.  West
+      longitude to 180 deg.  West longitude.
+ 
+    Volume 4
+    --------
+      Elysium Planitia Region of Mars (VO_2004): MDIMs in 412 image
+      files covering the region of Mars from 47.5 deg.  North
+      latitude to 47.5 deg.  South latitude, and 180 deg.  West
+      longitude to 270 deg.  West longitude.
+ 
+    Volume 5
+    --------
+      Arabia Terra Region of Mars (VO_2005): MDIMs in 412 image
+      files covering the region of Mars from 47.5 deg.  North
+      latitude to 47.5 deg.  South latitude, and 270 deg.  West
+      longitude to 0 deg.  West longitude.
+ 
+    Volume 6
+    --------
+      Planum Australe Region of Mars (VO_2006): MDIMs in 373 image
+      files covering the entire South polar region of Mars
+      northward from the pole to a latitude of 42.5 South latitude.
+      Polar Stereographic projection images of the south pole area
+      from 80 to 90 degrees are located in the POLAR directory on
+      this disk.
+ 
+    Volume 7
+    --------
+      Digital Topographic Map of Mars (VO_2007): MDIMs of the
+      entire planet at 1/64, 1/16, DTMs of the entire planet at
+      1/64, 1/16, and the digitized airbrush map of Mars at 1/16
+      and 1/4 deg./pixel.
+ 
+      Each of the first six volumes contains MDIMs of the areas
+      specified at resolutions of 1/256 deg./pixel (231m) and at
+      1/64 deg./pixel (943m).  Volumes 1 and 6 also contain MDIM
+      coverage of the entire planet at 1/16deg./pixel (3.69 km).
+      The six volumes also include a digitized airbrush map of the
+      entire planet at 1/16 deg./pixel (3.69 km) and at 1/4
+      deg./pixel.  The Sinusoidal Equal-Area Projection, is used as
+      the map projection for this image collection.  For a detailed
+      description of the Sinusoidal projection and use of the
+      cartographic keywords found in the image labels, refer to
+      Appendix E of this document.
+ 
+      The tiling layout of the 1/64 deg./pixel digital models is
+      the same on the first six volumes.  Note that the 1/64
+      deg./pixel MDIM, segments of which appear in Volumes 1
+      through 6, is duplicated in its entirety on Volume 7.  All of
+      the resolution compressions were done by averaging, not by
+      subsampling.  A gazetteer of IAU-approved feature names,
+      referenced by latitude/longitude coordinates is included as a
+      table file on each of the seven volumes.  The digital
+      Multi-look Color MDIMs are stored on seven CD volumes as
+      shown in the listing below:
+ 
+    Volume 8
+    --------
+      Vastitas Borealis Region of Mars (VO_2008): Color MDIM image
+      files covering the entire north polar region of Mars
+      southward from the pole to a latitude of 37.5 deg North.
+      Polar Stereographic projection images of the north pole area
+      from 80 to 90 degrees are located in the POLAR directory on
+      this disk.
+ 
+    Volume 9
+    --------
+      Xanthe Terra Region of Mars (VO_2009): Color MDIM image files
+      covering the region of Mars from 37.5 deg North latitude to
+      52.5 deg South latitude, and 0 deg longitude to 90 deg West
+      longitude.
+ 
+    Volume 10
+    ---------
+      Amazonis Planitia Region of Mars (VO_2010): Color MDIM image
+      files covering the region of Mars from 37.5 deg North
+      latitude to 52.5 deg South latitude, and 90 deg West
+      longitude to 180 deg West longitude.
+ 
+    Volume 11
+    ---------
+      Elysium Planitia Region of Mars (VO_2011): Color MDIM image
+      files covering the region of Mars from 37.5 deg North
+      latitude to 52.5 deg South latitude, and 180 deg West
+      longitude to 270 deg West longitude.
+ 
+    Volume 12
+    ---------
+      Arabia Terra Region of Mars (VO_2012): Color MDIM image files
+      covering the region of Mars from 37.5 deg North latitude to
+      52.5 deg South latitude, and 270 deg West longitude to 0 deg
+      West longitude.
+ 
+    Volume 13
+    ---------
+      Planum Australe Region of Mars (VO_2013): Color MDIM image
+      files covering the entire South polar region of Mars
+      northward from the pole to a latitude of 52.5 South latitude.
+      Polar Stereographic projection images of the south pole area
+      from 80 to 90 degrees are located in the POLAR directory on
+      this disk.
+ 
+    Volume 14
+    ---------
+      Global Mars Coverage (VO_2014): Color MDIM image files stored
+      in 8-bit color CompuServe GIF format.  Images files from
+      volumes 8-13 stored in a compressed format on this volume.
+      (see section 5.6)
+ 
+      Each of the volumes 8-14 contains Multi-look Color MDIMs of
+      the areas specified at resolutions of 1/64 deg/pixel (925m).
+      Each volume also contains black-white MDIM coverage of the
+      entire planet at 1/16 deg/pixel (3.70 km).  The volumes
+      include a digitized airbrush map of the entire planet at 1/16
+      deg/pixel (3.70 km) and at 1/4 deg/pixel.  Special color data
+      products exist in the SPECIAL directory.  These image files
+      contain orthographic, point-perspective, and oblique views of
+      the planet.  A gazetteer of IAU-approved feature names,
+      referenced by latitude and longitude coordinates is included
+      as a table file on each of the volumes.
+ 
+      The tiling layout for the Multi-look Color MDIM collection is
+      the same layout as found on volume 7.  The image data are
+      projected to a Sinusoidal Equal-area Projection.  Each tile
+      contains approximately 1000 lines and samples, and contains
+      15 degrees of latitude and longitude at the central
+      latitudes.  The high resolution MDIMs are stored on eight CD
+      volumes as shown in the listing below.  The directory and
+      file naming schemes are described ahead in Chapter 8 &apos;Files,
+      Directories, and Disk Contents&apos;, of this document.
+ 
+    Volume 15
+    ---------
+      VO_2015 contains quadrangles within the range of 0.0 to 60.0
+      degrees longitude.  These include image data for the Acidalia
+      Planitia, Argyre Planitia, Ganges Chasma, and Kasei Valles
+      regions.  South pole quadrangles are also included on this
+      volume.
+ 
+    Volume 16
+    ---------
+      VO_2016 contains quadrangles within the range of 60.0 to 90.0
+      degrees longitude.  These include image data for the Valles
+      Marineris, Kasei Valles, Mariotis Tempe, Tempe Fossae
+      regions.  South pole quadrangles are also included on this
+      volume.
+ 
+    Volume 17
+    ---------
+      VO_2017 contains quadrangles within the range of 90.0 to
+      120.0 degrees longitude.  These include image data for the
+      Claritas Fossae, Tharsis Montes, Mariotis Tempe, and Alba
+      Patera regions.
+ 
+    Volume 18
+    ---------
+      VO_2018 contains quadrangles within the range of 120.0 to
+      150.0 degrees.  These include image data for the Tharsis
+      Montes, Olympus Mons, and Acheron Fossae regions.
+ 
+    Volume 19
+    ---------
+      VO_2019 contains quadrangles within the range of 150.0 to
+      210.0 degrees longitude.  These include image data for the
+      Arcadia Planitia, Ma&apos;adim Valles, Apollinaris Patera, and
+      Orcus Patera.  North pole quadrangles are also included on
+      this volume.
+ 
+    Volume 20
+    ---------
+      VO_2020 contains quadrangles within the range of 210.0 to
+      300.0 degrees longitude.  These include image data for the
+      Borealis Planitia, Tyrrhena Patera, Isidis Basin, and
+      Nilosyrtis Mensae regions.
+ 
+    Volume 21
+    ---------
+      VO_2021 contains quadrangles within the range of 300.0 to
+      330.0 degrees longitude.  These include image data for the
+      West Hellas Planitia and Arabia North regions.
+ 
+    Volume 22
+    ---------
+      VO_2022 contains quadrangles within the range of 330.0 to
+      360.0 degrees longitude.  These include image data for the
+      Arabia West and Acidalia Planitia regions.
+ 
+      Each of the volumes 15-22 contains MDIMs of the areas
+      specified at 1/1024 degree/pixel (58 meters/pixel)
+      resolution.  This image collection is presented in the
+      Sinusoidal Equal-Area Projection.  For this high resolution
+      data set, each MDIM 1:500,000 quad for which high resolution
+      coverage was available has been divided into sixteen tiles
+      each approximately 1.25 x 1.25 degrees square.  Each set of
+      sixteen tiles exist in a single directory on the CD.  See
+      Chapters 7 and 8 of this document for further discussions
+      regarding the MDIM tiling schemes and file and directory
+      naming structure.
+ 
+ 
+      Processing Level Id            : 5
+      Software Flag                  : N
+      Processing Start Time          : 1990
+      Processing Stop Time           : 1991
+ 
+ 
+  Parameters
+  ==========
+ 
+    Description
+    -----------
+      Data Number is an integer expressing the digital value of an
+      experiment&apos;s telemetry data.
+ 
+      Sampling Parameter Name        : PIXEL
+      Data Set Parameter Name        : DATA NUMBER
+      Data Set Parameter Unit        : DIMENSIONLESS
+ 
+ 
+  Source Instrument Parameters
+  ============================
+    Instrument Host ID              : VO1
+    Data Set Parameter Name         : DATA NUMBER
+    Instrument Parameter Name       : RADIANCE
+    Important Instrument Parameters : 1
+ 
+    Instrument Host ID              : VO2
+    Data Set Parameter Name         : DATA NUMBER
+    Instrument Parameter Name       : RADIANCE
+    Important Instrument Parameters : 1
+ 
+ 
+  Processing
+  ==========
+ 
+    Processing History
+    ------------------
+      Source Data Set ID          : VO1/VO2-M-VIS-2-EDR-V2.0
+      Software                    : PICS
+      Product Data Set ID         : VO1/VO2-M-VIS-5-DIM-V1.0
+ 
+ 
+    Software &apos;PICS&apos;
+    ---------------
+      The Planetary Image Cartography System (PICS) is an
+      integrated computerized image processing and cartographic
+      system for the systematic reduction, display, mapping, and
+      analysis of planetary image data.
+ 
+      A design goal in PICS was to develop a single set of generic
+      software, simple to use, that would process any of the
+      150,000 planetary images from the Voyager, Viking, and
+      Mariner Missions.  This required standards to be developed so
+      that formats for the image files, calibration files,
+      geometric pointing and empherides files for all the missions,
+      cameras, and targets be identical.
+ 
+      Normally the PICS software modules are executed on images in
+      groups called procedures.  Provided in the PICS software set
+      are the procedures that are used in the USGS Planetary
+      Cartography effort.  They are referred to as Levels 0 through
+      4.  These five procedures are; Level 0 - data preparation,
+      read raw planetary image from magnetic tape or CD-ROM to
+      create a PICS image file, place geometry and camera
+      instrument mode information in the image file labels for
+      automatic processing; Level 1 - radiometric correction,
+      bit-error suppression, reseaux processing, coherent noise
+      suppression, and various cosmetic processes; Level 2 -
+      geometric transformation including geometric distortion
+      removal and projecting an image to a standard map projection
+      and scale; Level 3 - image mosaicking, and Level 4 -
+      photometric function processing (both characterizing the
+      function as well as removing model functions.)
+ 
+      The PICS manual describing more than 130 image processing
+      programs can be obtained by contacting the Branch of
+      Astrogeology, United States Geological Survey, 2255 North
+      Gemini Drive, Flagstaff, AZ, 86001.
+ 
+      Software Name               : PICS
+      Software Type               : N/A
+      Software Release Date       : 1988-02-01
+      Node ID                     : RAD
+      Cognizant Engineer          : ERIC M. ELIASON
+      Software Access Description : NOT ACCESSIBLE THROUGH PDS
+                                    CATALOG - CONTACT NODE.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+ 
+    COMPILATION OF DIMs
+    -------------------
+      Digital image models are compiled and archived in four stages
+      or &apos;levels&apos;, beginning with raw images.  All of the
+      corrections made during these stages have some level of
+      uncertainty, so the processing sequence is designed to
+      progress from corrections with the highest probability of
+      accuracy to the lowest, and intermediate stages are preserved
+      for future analytical use.  Image processing software exists
+      to perform the various stages of image correction and
+      enhancement [PETTENGILLETAL1980C; SODERBLOM1978].
+ 
+ 
+    LEVEL 1: RADIOMETRIC CORRECTION
+    -------------------------------
+      Level 1 processing includes removal of electronic shading,
+      which is inherent in the imaging system, and artifacts such
+      as minute dust specks on the vidicon tube, microphonic noise
+      introduced by operation of other instruments on the
+      spacecraft during imaging sequences, and data drop-outs and
+      spikes [WU&amp;DOYLE1990].  Reseau marks are also located and
+      removed during this stage; their precise locations are
+      recorded for use during later geometric processing.  A
+      digital image label is created, containing the reseau-mark
+      locations, geodetic control point and image tie-point
+      locations, and a computed camera orientation matrix that will
+      project the frame to a best-fit shape and position in a
+      mosaic.
+ 
+      Level 1 images have better resolution than those produced at
+      any subsequent processing level.  This is because they have
+      not been resampled for geometric correction and projection;
+      some loss of information is inevitable in any resampling,
+      because the density values of multiple pixels and/or
+      fractional pixels must be averaged to form new pixels in the
+      output array.  Photographic copies of Level 1 images, with
+      spatial filter enhancement, are therefore the more useful
+      photographic materials for visual interpretation.  Plans for
+      publication and distribution of Level 1 images on CDROM have
+      been cancelled, however, because the processing has become so
+      efficient that it is less expensive to reprocess images on
+      demand than to archive previous processing.  The control
+      information and projection matrices contained in Level 1
+      image labels are preserved as text files, and can be easily
+      recovered if reprocessing is needed.
+ 
+ 
+    LEVEL 2: GEOMETRIC CORRECTION
+    -----------------------------
+      Level 2 processing includes removal of camera distortions and
+      transformation from image to map coordinates in DM format
+      according to parameters derived at the end of the Level 1
+      processing phase [BATSON1990A].  The resolution of each frame
+      is preserved to some extent by oversampling in the output
+      array; that is, by selecting a resolution step that results
+      in an image with more lines and samples than the original
+      image.  Distortion corrections are based on preflight
+      calibration of the reseau.  Image transformation is based on
+      camera orientation matrices derived by photogrammetric
+      triangulation [25] modified as required for a best fit with
+      adjacent images.  On those images where matrices are not
+      available, they are derived by matching corresponding points
+      with images that have matrices.
+ 
+ 
+    LEVEL 3: PHOTOMETRIC CORRECTION
+    -------------------------------
+      At level 3 processing apparent inconsistencies in surface
+      brightness caused by variation in illumination geometry and
+      by atmospheric effects are treated.  Atmospheric scattering
+      is a significant consideration on Mars.  Different materials
+      on any planet have different light-reflecting properties.
+      Other photometric corrections are effective only to the
+      extent that all geometric parameters can be modeled.  In
+      general, local topography is not included in the model (i.e.,
+      the surface model used is flat).  Illumination geometry at
+      each pixel, however, certainly depends on local topography;
+      unless the topographic slope within a pixel is accurately
+      known and compensated, the photometric correction cannot be
+      perfect.  All of these conditions are so complex that
+      photometric correction of planetary images is likely to be
+      only approximate for some time into the foreseeable future,
+      although research into the effects and prototype examples of
+      full three-dimensional treatment are now being pursued.  An
+      obvious example of the complexity of the problem would
+      consist of a pair of images of the same landform illuminated
+      from opposite directions.  Only an extremely complex
+      algorithm could accurately modify the shading in one of the
+      images to match that of the other.  No algorithm could
+      restore detail lost in shadow.
+ 
+      The photometric processing used in this MDIM was necessarily
+      oversimplified, and incorporates spatial filtration that has
+      the effect of subduing regional albedo markings.
+ 
+ 
+    LEVEL 4: CONTROLLED MOSAICKING
+    ------------------------------
+      Compilation of an accurate digital mosaic (MDIM) of the
+      entire surface of a planet is the final stage in the
+      construction of a DIM.  The MDIM is a digital image of the
+      planet, with uniform resolution throughout.  The resolution
+      of level 2 images used in the compilation is compressed or
+      expanded to match that of the MDIM.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>75-075A-01f</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>75-083A-01c</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

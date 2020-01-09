@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.grail-l-lgrs-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GRAIL MOON LGRS RAW SCIENCE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.gravity_recovery_and_interior_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.grail-a::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lgrs-a.grail-a::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-lgrs-2-edr-v1.0__browserp_grail-l-lgrs-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-lgrs-2-edr-v1.0__dvo_grail-l-lgrs-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Rogstad, T.D., Telemetry Dictionary (TD) Gravity Recovery Processor Assembly
+                   (GPA) Flight Software Rev. E (Telemetry dictionary documentation extracted from
+                   JPL D-49059), Jet Propulsion Laboratory, Pasadena, CA, 2012.
+            </reference_text>
+            <description>reference.ROGSTAD2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GRAIL-L-LGRS-2-EDR-V1.0</data_set_id>
+        <data_set_name>GRAIL MOON LGRS RAW SCIENCE V1.0</data_set_name>
+        <data_set_release_date>2014-04-01</data_set_release_date>
+        <start_time>2012-03-01</start_time>
+        <stop_time>2012-12-18</stop_time>
+        <producer_full_name>DANIEL S. KAHAN</producer_full_name>
+        <citation_text>
+            KAHAN, D.S., GRAIL LGRS Raw Science Data Set V1.0,
+            GRAIL-L-LGRS-2-EDR-V1.0, NASA Planetary Data System, 2012.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw science data originating from the Lunar Gravity Ranging
+            System (LGRS) on each of the two spacecraft comprising the
+            Gravity Recovery and Interior Laboratory (GRAIL) mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival raw science data, acquired from
+            the Lunar Gravity Ranging System (LGRS) on each of the two
+            spacecraft comprising the Gravity Recovery and Interior
+            Laboratory (GRAIL) mission. The data are at NASA Level 0 and were
+            archived for historical purposes only. All Level 0 products were
+            processed to NASA Level 1A in the LGRS CDR data set by the GRAIL
+            Science Data System (SDS). The observations were used in
+            generating high-resolution gravity field models of the Moon. The
+            data set includes all of the LGRS raw data collected by GRAIL
+            (March-December 2012).
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Gravity Recovery and Interior Laboratory (GRAIL) Lunar
+      Gravity Ranging System (LGRS) Experimental Data Record Archive
+      is a time-ordered collection of raw and partially processed data
+      collected during the GRAIL mission to the Moon.
+ 
+      The DATA_SET_ID &apos;GRAIL-L-LGRS-2-EDR-V1.0&apos; includes the following
+      components:
+          Instrument host (i.e., &apos;GRAIL&apos;)
+          Target (i.e., &apos;L&apos; for Lunar)
+          Instrument (i.e., &apos;LGRS&apos; for Lunar Gravity Ranging System)
+          CODMAC Data processing level number (i.e., &apos;2&apos;)
+          Description (i.e., &apos;EDR&apos; for Experiment Data Record)
+          Version number (i.e., &apos;V1.0&apos;)
+ 
+      This data set was collected between March and December 2012.
+ 
+      Most of the data were extracted from spacecraft telemetry
+      (packet data) [ROGSTAD2012]. They were corrected for telemetry
+      errors and have been split or decommutated. Data are tagged with
+      time and location of acquisition within the spacecraft frame.
+ 
+      Each telemetry packet generated by the LGRS flight software was
+      wrapped inside a packet called a BlackJack Protocol Frame, which
+      ensured the integrity of the data; Blackjack was inherited from
+      the predecessor Gravity Recovery and Climate Experiment (GRACE)
+      terrestrial gravity mission. The documents
+      GPA_TD_D_71987_REVE.TXT and BLACKJACKDLP.TXT in the DOCUMENT
+      directory describe the format of the Blackjack binary data for
+      processing to Level 1A.
+ 
+      Typical users of GRAIL products will not need this data set.
+      The data are provided for the advanced user who wishes to
+      recreate the Level 1A LGRS CDR data products from scratch.
+ 
+    Parameters
+    ==========
+      The Standard Formatted Data Unit (SFDU) products S7200, S7300,
+      and STC00 are binary and contain (besides the appropriate
+      headers) the unscaled, encoded instrument communication
+      packets. For information on extracting the SFDU data contents,
+      see the following in the DOCUMENT directory:
+ 
+          0161_TELECOMM_L5_8.TXT
+          0171_TELECOMM_NJPL_L5.TXT
+          090_REVC_1.TXT, and
+          0172_TELECOMM_CHDO_REVE_L5.TXT
+ 
+      The remaining nine LGRS EDR product types are in ASCII format.
+      Of those, eight originated from telemetry queries from the GRAIL
+      Ground Data System (GDS).
+ 
+      File type TDE00 (Time Transfer System Direct to Earth)
+      originated from S-Band ranging data from the Time Transfer
+      System in the LGRS that was collected on the ground. It was
+      included in this Level 0 data set because it was an important
+      input to the creation of the Level 1 products in the LGRS CDR
+      data set.
+ 
+      All types except LTB00 are spacecraft-specific.
+ 
+      Each Level 0 product is accompanied by a minimal PDS label that
+      points to relevant documentation.
+ 
+      For additional information on parameters in this data set, see
+      the DATA section below.
+ 
+    Processing
+    ==========
+ 
+      Data in this set were extracted from telemetry (packet data).
+      They have been corrected for telemetry errors and have been
+      split or decommutated. They are tagged with time and location of
+      acquisition.
+ 
+      Level 0 files were provided by the GRAIL SDS; they are
+      constructed so that each file contains the data for one day.
+ 
+    Data
+    ====
+ 
+      Time Correlation Data Record File (DRF) (DTC00)
+      -----------------------------------------------
+        Clock correlation between Real Time Clock (RTC),
+        Binary Time Code (BTC),
+        and the 1-per-second pulse
+        associated with LGRS time (ASCII).
+ 
+      Spacecraft Engineering Housekeeping data (EHK00)
+      ------------------------------------------------
+        Includes temperature sensor data for locations near the LGRS
+        instrumentation (ASCII).
+ 
+      LGRS Time Bias of the Lunar Gravity Ranging System (LTB00)
+      ----------------------------------------------------------
+        Accumulated list of biases over the complete mission in BTC
+        time (ASCII). One file combined for BOTH spacecraft.
+ 
+      Satellite Mass Data (MAS00)
+      ---------------------------
+        Accumulated list of center of mass and spacecraft mass over
+        the complete mission (ASCII).
+ 
+      Engineering SFDU ID #72 (S7200)
+      -------------------------------
+        Spacecraft unscaled, binary encoded instrument communication
+        packets.
+ 
+      Science SFDU ID #73 (S7300)
+      ---------------------------
+        Spacecraft unscaled, binary encoded instrument communication
+        packets.
+ 
+      Solar Array Eclipse data (SAE00)
+      --------------------------------
+        Includes solar array short circuit currents and open circuit
+        voltages, to identify eclipse events for spacecraft ephemeris
+        models (ASCII).
+ 
+      Star Tracker Data (SCA00)
+      -------------------------
+        Includes attitudes from an on-board Kalman filter that
+        processes Star Tracker attitude data and Inertial Measurement
+        Unit (IMU) angular rotation data (ASCII).
+ 
+      Time Correlation SFDU (STC00)
+      -----------------------------
+        Spacecraft unscaled, binary encoded instrument communication
+        packets.
+ 
+      Time Transfer System Direct to Earth (TDE00)
+      --------------------------------------------
+        Measured time correlation between LGRS time and UTC, using
+        Time Transfer System (TTS) S-Band ranging collected at DSS-24.
+ 
+      Thruster Activation Data (THR00)
+      --------------------------------
+        Includes time tags, counts of cumulative work cycles for each
+        thruster, recent thruster on time, and cumulative thruster on
+        time (ASCII).
+ 
+      Wheel Rotational Speed Data (WRS00)
+      ------------------------------------------------------
+        WRS00 describes rotational wheel speed of each of four
+        Reaction wheels as determined by a digital tachometer (ASCII)
+ 
+    Coordinate System
+    =================
+      Data from the LGRS are typically related to their location
+      within the spacecraft frame. For more information about the
+      spacecraft mechanical frame, see GRAILCOMPONENTS.PDF in the
+      CALIB directory.
+ 
+    Naming Conventions
+    ==================
+      For all LGRS data, the product identifier, in conjunction with
+      either a date or a range of dates in a specified format,
+      determines the filename containing the data product.
+ 
+      The file naming convention for most Level 0/1A/1B LGRS products
+      is:
+ 
+        PRDID_YYYY_MM_DD_S_VV.EXT
+ 
+        where
+ 
+        PRDID   product identification label, e.g. CLK1B
+        YYYY    year
+        MM      month
+        DD      day of month
+        S       GRAIL satellite identifier:
+                        A     GRAIL-A
+                        B     GRAIL-B
+                        X     combined product of GRAIL-A and GRAIL-B
+        VV      data product version number (starting from 00)
+        EXT     file extension indicating binary (DAT) or ASCII (ASC)
+                files
+ 
+      The Product ID (PRDID) is of the form XXXLL, where:
+        XXX     is a three-character mnemonic, and
+        LL      specifies the data product Level (00, 1A, 1B).
+ 
+      The only exception to this naming convention is TDE00. To
+      accommodate multiple direct-to-earth measurements within the
+      same day, the convention is:
+ 
+        PRDID_YYYY_MM_DD_S_NNNNN_VV.EXT
+ 
+        where
+ 
+        PRDID   product identification label, e.g. CLK1B
+        YYYY    year
+        MM      month
+        DD      day of month
+        S       GRAIL satellite identifier:
+                        A     GRAIL-A
+                        B     GRAIL-B
+                        X     combined product of GRAIL-A and GRAIL-B
+        NNNNN   seconds past midnight start time (1 to 5 digits)
+        VV      data product version number (starting from 00)
+        EXT     file extension indicating binary (DAT) or ASCII (ASC)
+                files
+ 
+      The Product ID (PRDID) is of the form XXXLL, where:
+      XXX       is a three-character mnemonic, and
+      LL        specifies the data product Level (00).
+ 
+    Files in the CALIB Directory
+    ============================
+      One file, GRAILCOMPONENTS.TXT is included in the CALIB
+      directory. It describes the Spacecraft bus component model with
+      dimensions and orientations, as well as the spacecraft
+      components specular/diffuse reflectivity properties. It is
+      likely to have wide applicability in working with the raw data.
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at JPL and elsewhere. Because such
+      software must usually operate at the bit-level and is written
+      for a narrow range of platforms, it is not suitable for general
+      distribution. No distributable software is included with this
+      archival data set.
+ 
+      The SOFTWARE directory contains examples of utilities or
+      application programs to aid the user in viewing or extracting
+      data from the Level 0 data product files. The codes are provided
+      as illustrations of how to extract the Blackjack packets from
+      Blackjack binary data.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been collected to support
+      derivation of the gravity field of the Moon. These are similar
+      to data collected using the GRACE spacecraft and are believed to
+      be generally of good quality.
+ 
+    Review
+    ======
+      This archive underwent PDS external review from August 31, 2012
+      to November 30, 2012.
+ 
+    Data Coverage and Quality
+    =========================
+      Files in this data set were constructed to cover one day each.
+ 
+      Data coverage includes the science phase (March 1, 2012, to May
+      29, 2012), the extended mission phase (August 29, 2012, to
+      December 12, 2012), and the decommissioning phase (December 12,
+      2012, to December 18, 2012) as described in the mission catalog.
+ 
+    Limitations
+    ===========
+      Certain spacecraft events have an impact on the science
+      processing. These events include propulsive maneuvers, Ka
+      boresight calibration attitude maneuvers, telecommunication
+      configuration changes, and Lunar Gravity Ranging System (LGRS)
+      events.
+ 
+      Both spacecraft performed propulsive maneuvers. The mass change
+      history for both spacecraft can be found in the MAS1A/B Level-1
+      products, and the thruster on-times are available in the THR1A/B
+      level-1 products. LGRS measurements are taken during the
+      propulsive maneuvers, but it is recommended to break science
+      data arcs at the propulsive maneuver event times, since the
+      velocity changes imparted on the spacecraft are not known with
+      sufficient accuracy for science processing.
+ 
+      LGRS measurements are taken during the angular momentum
+      desaturation maneuvers, but it is recommended to break science
+      data arcs at the desaturation maneuver event times, since the
+      velocity changes imparted on the spacecraft are not known with
+      sufficient accuracy for science processing. For detailed
+      thruster on time histories see level-1 product THR1A/B.
+ 
+      The LGRS Gravity Processor Assemby (GPA) rebooted several times
+      resulting in the loss of Ka range and the Time Transfer System
+      (TTS) observables for about 1.5 minutes. After a GPA reboot the
+      LGRS clock is synched with the LGRS clock on the non-rebooting
+      spacecraft using the TTS system. GPA reboots will cause a gap in
+      the inter-satellite range data products (KBR1B, SBR1B) of about
+      2 minutes.
+ 
+      On GRAIL-B the TTS phase measurement is reset to zero due to a
+      software bug in the LGRS software. The TTS ranging measurement
+      is not affected, but the relative LGRS clock reconstruction
+      analysis needs to be restarted at a phase reset.
+ 
+      Due to orbital viewing geometry, the GRAIL spacecraft are
+      changing between the +X and -X S-band and X-band (Radio Science
+      Beacon) antennas approximately every 14 days. The complete
+      history for the antenna change are listed in the VGS1B product
+      (S-band) and VGX1B (X-band).
+ 
+      During the primary and extended missions, the GRAIL spacecraft
+      were in nominal science attitude called orbiter point attitude
+      mode. For  this mode the solar arrays of the spacecraft are
+      parallel to the orbital plane and the Ka boresight vectors (2.1
+      degrees off the -Z axis in the YZ spacecraft frame) are pointed
+      in the direction of line of sight toward the other spacecraft.
+      The GRAIL spacecraft remained in orbit point attitude mode
+      except during Ka boresight vector calibration maneuvers when the
+      spacecraft performed two orthogonal slews of 3 degrees about the
+      line of sight vector between the two spacecraft. LGRS
+      measurements are taken during the maneuvers but should not be
+      used in the science processing because the measured range change
+      is the sum of orbit geometry, lunar gravity and range change
+      induced by spacecraft attitude variation. Ka boresight vector
+      data contain range corrections for the phase center to center of
+      mass offset during the maneuvers but these corrections are not
+      reliable and should not be used.
+ 
+      For specific dates of the above events, see the operational
+      considerations section in LGRS_A_INST.CAT and LGRS_B_INST.CAT.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

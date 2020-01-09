@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-xgrs-2-edr-eros-orbit-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR XGRS SPECTRA FOR EROS/ORBIT</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:xgr.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-xgrs-2-edr-eros-orbit-v1.0__browserp_near-a-xgrs-2-edr-eros_orbit-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cheng, A.F., R.W. Farquhar, and A.G. Santo, NEAR Overview, Johns Hopkins APL
+                   Technical Digest, Vol. 19, pp. 95-106, 1998.
+            </reference_text>
+            <description>reference.CHENGETAL1998</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-XGRS-2-EDR-EROS/ORBIT-V1.0</data_set_id>
+        <data_set_name>NEAR XGRS SPECTRA FOR EROS/ORBIT</data_set_name>
+        <data_set_release_date>2001-09-01</data_set_release_date>
+        <start_time>2000-01-11T00:00:00.000Z</start_time>
+        <stop_time>2001-02-12T23:59:59.999Z</stop_time>
+        <producer_full_name>DOUGLAS B. HOLLAND</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            NEAR EDR volume sets contain a single data set, from one
+            instrument and one mission phase.
+        </data_set_terse_desc>
+        <abstract_desc>
+            NEAR EDR volume sets contain a single data set, from one
+            instrument and one mission phase (defined in the phase table in
+            /AAREADME.TXT).
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      NEAR EDR volume sets contain a single data set, from one instrument
+      and one mission phase (defined in the phase table in /AAREADME.TXT).
+ 
+      The data set directory structure is shown below. The first volume of
+      the set is the only volume which contains CATALOG, DOCUMENT
+      and other non-data subdirectories. Subsequent volumes contain
+      only DATA and INDEX subdirectories in order to minimize duplication.
+ 
+      Volume 1 directory structure:
+ 
+          |-CATALOG--
+          |          |-GRB--------
+          |          |-GRF--------
+          |-DATA-----|-GRS--------
+          |          |-XRF--------
+          |          |-XRS--------
+          |
+          |          |-INSTRUMENT-|-CALPAPER---
+          |-DOCUMENT-|
+          |          |-MISSION----|-OVERVIEW---
+          |                       |-TECHDIGEST-
+          |-GEOMETRY-
+          |-INDEX----
+ 
+      Volume 2-n directory structure
+ 
+          |-DATA-----|-GRB--------
+          |          |-GRF--------
+          |          |-GRS--------
+          |          |-XRF--------
+          |          |-XRS--------
+          |-INDEX----
+ 
+ 
+      Directory Name  Description
+      --------------  -------------
+ 
+      CATALOG         Templates for the mission, instrument host,
+                      instrument, and data set.
+ 
+      DATA            Instrument FITS data files and data labels.
+ 
+      DOCUMENT        Documentation of the instrument and mission  are
+                      provide as ASCII text and may also be available in
+                      the original PostScript, PDF or MMS Word format.
+                      Articles from the Johns Hopkins APL Technical Digest
+                      are provided for an overview of the NEAR mission.
+                      The instrument subdirectory contains documentation
+                      describing the instrument and the in flight
+                      calibration of instrument data.
+ 
+      GEOMETRY        This directory contains only a GEOMINFO.TXT file.
+                      A separate GEOMETRY volume contains all of the SPICE
+                      kernels in text transfer format for the mission phase
+                      and the supporting the supporting documentation.
+ 
+      INDEX           INDEX TABLES for this CD and the volume set
+                      describing times and key data file parameter values.
+ 
+     -------------------------------------------------------
+ 
+ 
+    Parameters
+    ==========
+      The definitions for the image parameters and other keywords are
+      given in the file {GRB,GRF,GRS,XRF,XRS}DEFINITIONS.TXT contained
+      in the DOCUMENT/INSTRUMENT subdirectory.
+ 
+ 
+    Data
+    ====
+      The data are in the form of FITS files with attached FITS headers
+      and detached PDS labels.  The data subdirectory has subdirectories
+      where needed to separate instrument sensors or to limit the number
+      of files per directory. Files contain all data for one day.
+ 
+    Ancillary Data
+    ==============
+      GEOMETRY subdirectory is described above.
+ 
+ 
+    Media/Format
+    ============
+      This data set is released as a CDROM set.
+ 
+ 
+    Processing History
+    ==================
+      The processing history includes no background, noise, geometry or
+      other corrections.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Data Quality Flag
+    =================
+      Each data file label includes a quality flag string in the
+      DATA_QUALITY_ID keyword, extracted from the FITS keyword NEAR-008 of
+      the original data label. The fields of this keyword are defined
+      below.  Data quality defects flag is raised when there is missing
+      data other fields informational and not quality related. The eight
+      characters of this field are described below.
+ 
+      Definition - Data Quality Index
+                c0 = Data Quality Flag (0=good,1=flagged for quality
+                     defects)
+                c1 = Instrument number for FC, CTP and AIU (1 or 2)
+                c2 - c6 = Processing Flags not quality related
+                c7 = CCDS Source (0=VC0, 1=VC1, 2=VC2, 3=VC3)
+ 
+    Review
+    ======
+      This data set underwent external peer review within PDS in June,
+      2000.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>DVD-R</medium_type>
+            <nssdc_collection_id>96-008A-02A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

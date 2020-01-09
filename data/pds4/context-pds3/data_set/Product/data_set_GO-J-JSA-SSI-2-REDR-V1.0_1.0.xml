@@ -1,0 +1,1677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-j-jsa-ssi-2-redr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO ORBITAL OPERATIONS SOLID STATE IMAGING RAW EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ssi.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.black_sky::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.non_science::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:ring.j_rings::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.amalthea::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.callisto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.europa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.ganymede::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.metis::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.thebe::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-jsa-ssi-2-redr-v1.0__browserp_go-j-jsa-ssi-2-redr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-jsa-ssi-2-redr-v1.0__browserp_go-j-jsa-ssi-2-redr-v1.1::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-jsa-ssi-2-redr-v1.0__browserp_go-j-jsa-ssi-2-redr-v1.1_s::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-jsa-ssi-2-redr-v1.0__dvo_imaging_go-j_jsa-ssi-2-redr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Klaasen, K.P., M.C. Clary, James R. Janesick, Charge-Coupled Device Television
+                   Camera for Nasa&apos;s Galileo Mission To Jupiter, 23(3). p. 334- 342, Optical
+                   Engineering, May 1984.
+            </reference_text>
+            <description>reference.BELTONETAL1984</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Belton, Michael J.S., K.P. Klaasen, M.C. Clary, J.L. Anderson, C.D. Anger, M.H.
+                   Carr, C.R. Chapman, M.E. Davies, R. Greeley, D. Anderson, L.K. Bolef, T.E.
+                   Townsend, R. Greenberg, J.W. Head III, G. Neukum, C.B. Pilcher, J. Veverka,
+                   P.J. Gierasch, F.P. Fanale, A.P. Ingersoll, H. Masursky, D. Morrison, J.B.
+                   Pollack, The Galileo Solid-State Imaging Experiment, Vol. 60, pp. 413-455,
+                   Space Science Reviews, 1992.
+            </reference_text>
+            <description>reference.BELTONETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mortensen, H., Solid State Imaging Raw Experiment Data Record CD-ROM
+                   Software Interface Specification, JPL Galileo Project Number 232-16,
+                   November 1, 1997.
+            </reference_text>
+            <description>reference.MORTENSEN1997</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   PDS, PDS Data Preparation Workbook, JPL Document D7669, February 1995.
+            </reference_text>
+            <description>reference.PDS1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   PDS and AMMOS, Planetary Science Data Dictionary, JPL Document D7116,
+                   Rev.D, July 15, 1996.
+            </reference_text>
+            <description>reference.PDS1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tong, K., Program Description Document for the ICT Data Decompression Task,
+                   JPL Galileo Project Number 625-644-232021, March 15, 1995.
+            </reference_text>
+            <description>reference.TONG1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   White, Mitchell, SSI Raw Experiment Data Record (REDR) for Phase 2 Software
+                   Interface Specification, JPL Galileo Project Number 232-15, September 25,
+                   1997.
+            </reference_text>
+            <description>reference.WHITE1997</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-J/JSA-SSI-2-REDR-V1.0</data_set_id>
+        <data_set_name>GALILEO ORBITAL OPERATIONS SOLID STATE IMAGING RAW EDR V1.0</data_set_name>
+        <data_set_release_date>2000-07-01</data_set_release_date>
+        <start_time>1996-06-03T17:47:18.857Z</start_time>
+        <stop_time>2000-02-18T10:16:40.726Z</stop_time>
+        <producer_full_name>THOMAS F. THALLER</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Galileo Imaging (SSI) Jupiter System Experiment Data Records
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set has been generated by NASA&apos;s Galileo Project
+            in order to distribute the images acquired by the Solid State
+            Imaging (SSI) camera to the scientists and later to the Planetary
+            Data System (PDS). This collection resides on volumes GO_0017
+            thru GO_0022. Included are all images of Jupiter, its satellites,
+            stars and calibrations, acquired during the Jupiter Orbital
+            Operations which comprise the Prime Mission and the Galileo
+            Europa Mission (GEM) phases. These phases extended from June,
+            1996 thru February, 2000 and included SCLKs from 346405900 thru
+            527365602.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set has been generated by NASA&apos;s Galileo Project in order to
+    distribute the images acquired by the Solid State Imaging (SSI) camera
+    to the scientists and later to the Planetary Data System (PDS).  This
+    collection resides on volumes GO_0017 thru GO_0022.  Included are all
+    images of Jupiter, its satellites, stars and calibrations, acquired
+    during the Jupiter Orbital Operations which comprise the Prime Mission
+    and the Galileo Europa Mission (GEM) phases.  These phases extended
+    from June, 1996 thru February, 2000 and included SCLKs from 346405900
+    thru 527365602.
+ 
+    To enhance image data return over the available spacecraft-to-Earth
+    telecommunication channel during this phase of the mission, an Integer
+    Cosine Transform data compressor was added as well as windowing
+    options and multiple exposure/single read-out mode (on-chip mosaic).
+ 
+ 
+    On-Chip-Mosaics:
+    ---------------
+      On-chip mosaics (OCMs) are images acquired in a multiple
+      exposure/single read-out mode.  A typical application is where four
+      images of a target-body are acquired by slewing the camera (and
+      stepping the filter wheel) to image the target in each of the four
+      corners of the CCD array.  CCD read-out is suppressed until all four
+      exposures are completed, thus resulting in a 2x2 mosaic.  3x3, 5x5,
+      or nxm mosaics are possible, where n and m are limited only by the
+      pixel diameter of the target and pointing accuracy of the scan
+      platform.
+ 
+      The OCM is referred to as the parent frame.  When the OCM is
+      separated into areas, the resulting UDRs are referred to as its
+      children.
+ 
+ 
+    Integer Cosine Transform Compression:
+    ------------------------------------
+      The Integer Cosine Transform (ICT) is a &apos;lossy&apos; compression
+      algorithm which is similar to the standard JPEG DCT (discrete cosine
+      transform) except that it requires only integer arithmetic to
+      implement [TONG1995].  Data loss occurs during the quantization
+      step, where frequency terms are divided by corresponding elements of
+      an 8x8 quantization matrix.  The elements of the quantization matrix
+      can be scaled (quantization step size) to achieve greater data
+      compression with correspondingly greater data loss.  Considerable
+      effort has been expended in designing quantization matrices with
+      non-uniform weights to maximize data compression while minimizing
+      data loss.
+ 
+      In the ICT compressed mode, two windowing options are available.
+      The image may be edited so that only an image area (called a cut-out
+      window) is compressed and transmitted to Earth.  In addition, a
+      96x96 pixel area within the image (called a truth window) will be
+      transmitted with only lossless Huffman compression applied.
+ 
+ 
+  Parameters
+  ==========
+    The Galileo SSI camera acquires data in a digital raster-format
+    containing 800 scan lines and 800 samples per scan line.  Each picture
+    element (pixel) in the two dimensional image array is represented as
+    an 8-bit value between 0 and 255, proportional to the amount of light
+    detected at that point (with 0 being the least amount of light and 255
+    being the greatest amount of light).  The camera is equipped with
+    seven color filters and a clear filter such that images taken through
+    complementary filters can be combined during ground processing to
+    produce color images.  To make full scientific use of the image
+    collection, the radiometric and geometric properties of the camera
+    system should be understood.
+ 
+    The ancillary disc, GO_0001, will provide calibration files and
+    technical documentation necessary for the understanding of the images
+    produced by the SSI camera.  Presently, calibration files and software
+    are available through the VICAR software system at MIPS and SPICE
+    files are available through the Galileo Project.
+ 
+ 
+  Processing
+  ==========
+    REDR Processing:
+    ---------------
+      The Raw Experiment Data Records (REDRs) were produced by the
+      Multimission Image Processing Laboratory (MIPL) at the Jet
+      Propulsion Laboratory using several Video Image Communications and
+      Retrieval (VICAR) programs.  The processing included the following
+      steps:
+ 
+      --The original telemetry data was processed into raster-formatted
+        files (GLLTELEMPROC)
+      --Multiple versions of each data file obtained from separate
+        downlinks or playbacks were merged together to create the best
+        version of the data (SSIMERGE2)
+      --The VICAR label was updated to reflect the most recent pointing
+        information of which was acquired by updating SPICE SPK and CK
+        data files (CATLABEL)
+      --Bad data value information was then added to the Telemetry Header
+        (BADLABELS)
+      --The PDS Index table and detached PDS label files were generated.
+        (CDGEN)
+      --The VICAR files and PDS files were premastered onto a WORM CD-ROM
+        which was validated.
+      --The WORM CD-ROM was sent to a vendor and CD-ROM&apos;s were generated.
+      --A final CD-ROM was compared bit-by-bit with the original data to
+        ensure the quality of the vendor product.
+ 
+      In the event that lines needed to be shifted due to CDS line
+      dropouts or bottom partial records, the program GLLMVLN was run
+      prior to the merging step.
+ 
+      For on-chip mosaics, the processing steps were identical except that
+      the program UNMOSAIC was used to extract each shutter event and
+      output it as a separate image of the same size as the input image.
+      (UNMOSAIC)  This step is run just after the merging step.
+ 
+    Multiple Playbacks/Different Compression:
+    ----------------------------------------
+      In the cases where an image is played back multiple times and
+      compression parameters vary for each playback, &apos;new&apos; SCLKs are
+      assigned with the SCLK incrementing by one minor frame each time.
+      For example, if the image with SCLK 351000000 were played back three
+      times with different compression parameters, the resulting SCLKs
+      would be:
+ 
+        351000000 for the first playback
+        351000001 for the second playback at different compression
+        351000002 for the third playback at another compression
+ 
+      Images from the same SCLK with different compression parameters will
+      not be merged together.
+ 
+ 
+  Data
+  ====
+    Each volume contains approximately 800 images stored as VICAR files.
+    A detached PDS label has been included for each image.  Documentation
+    files have been provided which inform the user about the organization
+    and contents of the disc, and the definition of the labels. An index
+    files have also been provided which contain information about the
+    images in the data set.
+ 
+    The REDR data are generated by MIPS using procedures specifically
+    developed or adapted for Galileo.  The files are generated on a VAX
+    and are written in VAX compatible (LSByte first) format.
+ 
+ 
+    REDR File Format:
+    ----------------
+      The Galileo REDR format was originally reserved for SSI calibration
+      data or data which should not be radiometrically corrected.  The SSI
+      Team decided that the REDR format will be used to archive all raw
+      SSI data.
+ 
+ 
+               ------------------------------------------------------
+               |                  VICAR LABEL                       |
+               |                                                    |
+               ------------------------------------------------------
+               |                 BINARY HEADER                      |
+               |           (Telemetry Header Record &amp;               |
+               |          Bad-Data Value Header Records)            |
+               |                                                    |
+               ------------------------------------------------------
+               |               |                                    |
+               |               |                                    |
+               |    BINARY     |           IMAGE DATA               |
+               |    PREFIX     |            (Pixels)                |
+               | (Line Header) |                                    |
+               |               |                                    |
+               |               |                                    |
+               |               |                                    |
+               ------------------------------------------------------
+ 
+ 
+      Each REDR file will begin with a VICAR label, followed by the REDR
+      telemetry header, and a number of bad-data value headers followed by
+      REDR line records.  Each line record will contain 200 bytes of line
+      header information plus the pixel data (8 bits/pixel).
+ 
+      All records have a fixed 1000-byte length within each REDR file.
+      All formats have 1000-byte records.  Note:  telemetry modes with
+      fewer than 800 lines and 800 samples occupy lines and samples of as
+      defined in the table below (e.g., summation mode which is 400 lines
+      and 400 samples, will occupy the first 400 lines and 400 samples of
+      the 800 by 800 REDR).  The table below lists the telemetry formats.
+ 
+ 
+     Telemetry     Downlink       # Lines X     Comment
+       Format      Data Rate      # Samples
+ 
+        HIS        115.2 Kbps     400 X 400     Last 6 pixels are fill
+        HMA        115.2 Kbps     400 X 800     Last 12 pixels are fill
+                                                Sample readout: 800x800;
+                                                   every 2nd line has data
+        HCA        115.2 Kbps     200 X 800     Sample readout:800x800;
+                                                   every 4th line has data
+        HIM        115.2 Kbps     800 X 800     Last 12 pixels are fill
+        IM8        806.4 Kbps     800 X 800
+        AI8        806.4 Kbps     400 X 400
+        IM4        403.2 Kbps     800 X 800
+ 
+ 
+      For all REDRs, the telemetry header is split into two physical
+      records.  The first 1000 bytes are placed in the first physical
+      record after the VICAR label (the VICAR label may span more than one
+      physical record), and the last 800 bytes are placed in the next
+      physical record.  The last 200 bytes are zero-filled.
+ 
+      There will be a one-to-one correspondence between line records and
+      image lines (Excluding the header records, line record &apos;n&apos; will
+      contain the data for image line &apos;n&apos;).
+ 
+      See the SSI Raw Experiment Data Record (REDR) for Phase 2 Software
+      Interface Specification [WHITE1997] located in the DOCUMENT
+      directory for a more detailed description of the REDR format.  In
+      addition, see the VICAR2.TXT and BADDATA.TXT  files, also located in
+      the DOCUMENT directory, and the RTLMTAB.FMT and RLINEPRX.FMT files
+      in the LABEL directory.
+ 
+ 
+  Ancillary Data
+  ==============
+    All document files and detached label files contain a carriage return
+    character (ASCII 13) and a line feed character (ASCII 10) at the end
+    of each record.  This allows the files to be read by the MacOS, DOS,
+    Unix, and VMS operating systems.  Tabular files are also described by
+    a detached PDS label. The PDS label file has the same name as the data
+    file it describes, with the extension .LBL; for example, the file
+    IMGINDEX.TAB is accompanied by the detached label file IMGINDEX.LBL in
+    the same directory.  The detached PDS labels for REDR images contain
+    information pertaining to the image.
+ 
+    Tabular files are formatted so that they may be read directly into
+    many database management systems on various computers.  All fields are
+    separated by commas, and character fields are enclosed in double
+    quotation marks. Character fields are left justified, and numeric
+    fields are right justified. The start byte and bytes values listed in
+    the labels do not include the commas between fields or the quotation
+    marks surrounding character fields. The records are of fixed length,
+    and the last two bytes of each record contain the ASCII carriage
+    return and line feed characters.  This allows a table to be treated as
+    a fixed length record file on computers that support this file type
+    and as a normal text file on other computers.
+ 
+ 
+  Software
+  ========
+    The following CD-ROM copy, display and processing software has been
+    successfully tested using the Galileo SSI data:
+ 
+    Copy Software:
+ 
+    --DCL Exchange/network - for ascii files.
+    --DCL  COPY (VMS) - available with VMS
+    --VICAR Copy (VMS and UNIX) - Available with VICAR package.
+ 
+      Display Software:
+ 
+    --NASAVIEW (PC, Apple Macintosh, UNIX) - Available from PDS.
+    --VICAR XVD  (VMS and UNIX) - Available with VICAR package
+    --PIXEL PUSHER (Apple Macintosh) - Available from COSMIC.
+    --NIH IMAGE  (Apple Macintosh) - A public domain program available
+      from the National Institute of Health.
+ 
+      Processing Software:
+ 
+    --VICAR (VMS and UNIX) - Available through the Multimission Image
+      Processing Lab at JPL
+    --ISIS (VMS and UNIX) - Available through the USGS in Flagstaff
+ 
+ 
+  Media/Format
+  ============
+    Each CD-ROM disc has been formatted such that a variety of computer
+    systems may access the data.  Specifically, the discs are formatted
+    according to the ISO 9660 level 1 Interchange Standard, and file
+    attributes are specified by Extended Attribute Records (XARs).
+    Formats are based on standards for archive EDR CD-ROM products
+    established by PDS.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    The SSI REDRs contain raw data as received from Galileo telemetry.
+    All of the images received were processed and are contained on these
+    volumes  Included in the &apos;limitations&apos; section are explanations of the
+    VICAR and PDS keywords and values, as well as a description of a
+    problem found with one frame in the data set.  This data set contains
+    all of the data acquired during the Gaspra and Earth 2 period, the
+    processing has been verified,  and is currently in use by science team
+    members in their analysis.
+ 
+ 
+  Review
+  ======
+    The SSI REDRs are reviewed prior to archiving by the SSI team.  Data
+    received is compared with data expected, and replays of missing data
+    is requested.  The status and validity information on the REDRs
+    themselves is examined.  Format and documentation of the CD-ROM
+    archive volume is reviewed by PDS and is documented in the &apos;Solid
+    State Imaging Raw Experiment Data Record CD-ROM Software Interface
+    Specification&apos; [MORTENSEN1997].  The mastered and replicated CD-ROM
+    volumes received from the vendor are compared bit-by-bit with the
+    original data to ensure the quality of the product.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Sequences/Observations for pre-Orbit 1
+    --------------------------------------
+      SCLK range:  346405900 - 349193900 (Optical Navigation-OPNAV)
+      ERT range:   96/155:17:47:18.857 - 96/175:07:41:11.980
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 0/0
+      number of OPNAVs expected/received - 33/31
+ 
+      Optical Navigation (OPNAV):
+      J0GSOPNAV115thru 116
+      J0GSOPNAV138 thru 139
+      J0GSOPNAV147
+      J0GSOPNAV150 thru 153
+      J0GSOPNAV156
+      J0GSOPNAV158 thru 162
+      J0GSOPNAV164 thru 165
+      J0GSOPNAV168 thru 169
+      J0GSOPNAV172 thru 173
+      J0GSOPNAV182
+      J0GSOPNAV188 thru 189
+      J0GSOPNAV194 thru 195
+      J0GSOPNAV196 thru 200
+ 
+ 
+    Sequences/Observations for Orbit 1 (Ganymede 1)
+    -----------------------------------------------
+      (sequence name, footprint size, and objectives)
+ 
+      SCLK ranges: 349542152 - 350029800
+                   356000600 - 359198400 (OPNAV)
+      ERT ranges:  96/183-07:38:25.928 - 96/231-13:43:20.690
+                   96/223:02:39:43.300 - 96/237:10:55:15.282 (OPNAV)
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 161/151
+      number of OPNAVs expected/received - 32/11
+ 
+      Europa:
+      G1ESGLOBAL01 (part 1)  2x2 Europa global, clear
+      G1ESGLOBAL01 (part 2)  1x1 Europa north pole, color
+      G1ESEUTERM01     1x2     Europa terminator, clear
+ 
+      Io:
+      G1ISGLOMON02     2x2     4-color global coverage, OCM
+      G1ISGLOMON04     2x2     4-color global coverage, OCM
+      G1ISGLOMON05     2x2     4-color global coverage, OCM
+      G1ISIOECLI02     1x2     Io eclipse observation, OCM
+      G1ISPLLOKI01     1x3     3-Clr plume; Loki on limb, OCM
+      G1ISPLATEN01     1x3     3-Clr plume; Aten on limb, OCM
+ 
+      Ganymede:
+      G1GSGLOBAL01     1x1     Geodetic control, red
+      G1GSGLOBAL02     1x1     Color global
+      G1GSURUSUL01     2x2     Uruk Sulcus Stereo
+      G1GSGREGIO01     2x2     Galileo Regio Dark terrain
+      G1GSMEMPHI01     1x8     Memphis Facula
+      G1GSSULCUS01     1x4     Unnamed sulcus; Very high res
+ 
+      Jupiter:
+      G1JSGRSEM101      3x2    emission 31 deg GRS, 2 clr
+      G1JSGRSEM201      3x2    emission 27 deg GRS, 4 clr
+      G1JSGRSEM301      3x2    emission 31 deg GRS, 4 clr
+      G1JSGRSEM401 (part 1)  1x2  emission 76 deg GRS, 3 clr
+      G1JSGRSEM401 (part 2)  2x2  emission 76 deg GRS, 2 clr
+ 
+      Optical Navigation (OPNAV):
+      G1GSOPNAV114 thru 115
+      G1GSOPNAV143 thru 145
+      G1GSOPNAV158 thru 159
+ 
+ 
+    Sequences/Observations for Orbit 2 (Ganymede 2)
+    -----------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK ranges: 359251000 - 359322300  (OPNAV)
+                   359402445 - 360361200
+      ERT ranges:  96/245:22:26:14.566 - 96/246:10:31:10.512 (OPNAV)
+                   96/255-14:03:53.827 - 96/301-02:37:09.523
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 213/168
+      number of OPNAVs expected/received -  26/24
+ 
+      Ganymede:
+      G2GSTRANST01     2x2     transitional terrain
+      G2GSGLLREG01     1x1     Galileo Regio furrows
+      G2GSCRATER01     1x1     dark floor crater
+      G2GSNIPPUR01     1x3     Nippur Sulcus
+      G2GSGRVLNS01     2x2     groove lanes
+      G2GSGLLREG02     1x1     Galileo Regio stereo with G1
+      G2GSPLMPST01     1x13    palimpsest  on bright terrain
+      G2GSURUKSL01     2x1     Uruk Sulcus stereo with G1
+      G2GSLTDKBD01     1x16    crater @ light/dark boundary
+ 
+      Callisto:
+      G2CSVGRGAP01     2x1     Voyager gap fill
+      G2CSPHOTOM01     1x1     low-phase photometry, 3 color
+ 
+      Europa:
+      G2ESPHOTOM01     1x1     low-phase photometry, 3 color
+ 
+      Io:
+      G2ISSRFMON01      1x1    surface monitoring
+      G2ISSRFMON02      1x1    surface monitoring, 3 color
+      G2ISPLUMON01 thru 09  1x3  various longitudes, OCM
+      G2ISPLUMON11 thru 32  1x2  various longitudes, OCM
+      G2ISPLUMON10      1x1    1 longitude
+ 
+      Small Satellites:
+      G2SSAMALTH01      1x3    Target Longitude 28 OCM
+ 
+      Jupiter:
+      G2JSSL9LAT01      1x4    emission 64-90 deg; SL9 impact
+ 
+      Calibration:
+      G2NSHISCAL01             Calibration darks, 4 gains
+ 
+      Optical Navigation (OPNAV):
+      G2ESOPNAV216 thru 218
+      G2GSOPNAV220
+      G2CSOPNAV100 thru 101
+      G2CSOPNAV107
+      G2GSOPNAV114 thru 115
+      G2GSOPNAV118 thru 119
+      G2ESOPNAV122 thru 125
+      G2GSOPNAV134
+      G2CSOPNAV138 thru 139
+      G2ISOPNAV142
+      G2CSOPNAV144 thru 145
+      G2CSOPNAV150 thru 151
+      G2CSOPNAV156 thru 157
+      G2CSOPNAV160 thru 161
+ 
+ 
+    Sequences/Observations for Orbit 3 (Callisto 3)
+    -----------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK ranges: 368211900 - 368992339
+                   372343200 - 374037400 (OPNAV)
+      ERT ranges:  96/316-05:27:12.172 - 96/348-02:11:05.236
+                   96/337:20:50:32.231 - 96/349:18:46:37.142 (OPNAV)
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 245/180
+      number of OPNAVs expected/received - 27/26
+ 
+      Callisto:
+      C3CSHEMCLR01     1x1    5-color, Asgard hemisphere
+      C3CSVGRGAP01     2+3    Voyager gap fill
+      C3CSASGRNG01     2x2    Asgard ring structure
+      C3CSVALPLM01     1x1    1-color Valhalla palimpsest; hi res
+ 
+      C3CSCATENA01     1x8    Catena
+      C3CSVALPLN01     2x5    Valhalla scarp &amp; smooth plains
+      C3CSVALGRB01     2x3    Valhalla graben
+ 
+      Europa:
+      C3ESWEDGES01     2x1+1  Wedges, Agenor Linea
+      C3ESAJTERM01     1x1    Terminator, Cilix crater
+      C3ESPLUMES01     6-image OCM Plume search; solar occultation
+ 
+      Io:
+      C3ISTOPMAP01     1x1    Topo Mapping, term @ 90.8 degrees
+      C3ISTOPMAP02     1x1    Topo Mapping, term @ 119.8 deg;Io
+      C3ISTOPMAP03     1x2    Topo Mapping, term @ 149.6 degrees
+      C3ISTOPMAP04     1x1    Topo Mapping, term @ 177.8 degrees
+      C3ISTOPMAP05     1x1    Topo Mapping, term @ 209.0 degrees
+ 
+      Rings and Small Satellites:
+      C3ASAMLTHE01     3-img  OCM Target Longitude:  233 degrees
+      C3ASAMLTHE02     1x1    Target Longitude:  330 degrees
+      C3SSTHEBE_01     1x1    Target Longitude:  62 degrees
+      C3RSRINGS_01     1x4    Main ring; S/C in solar occultation
+      C3RSRNGHAL01     3+2    Ring halo; S/C in solar occultation
+      C3RSGOSSMR01     1x2    Gossamer ring; S/C in solar occultat
+      C3RSRINGS_02     1x1    Main ring; S/C in solar occultation
+      C3RSRINGS_03     1x4    Main ring; S/C in solar occultation
+ 
+      Jupiter:
+      C3JSAURRGN01     1x2    emission 50-75 deg; aurora.
+      C3JSBZONEB01     2x2    emission 25-55 deg; Belt Zone, 4 clr
+      C3JSHICOLR01     1x1    High Res in 2 colors.
+      C3JSHICOLR02     1x1    High Res.
+      C3JSAURRGN02     1x2    emission 50-75 deg; auroral, 3 clr
+      C3JSBZONEB02     2x2    emission 15-30 deg; Belt Zone, 4 clr
+      C3JSBZONEB03     2x2    emission 30-50 deg; Belt Zone, 4 clr
+      C3JSBZONEB04     2x2    emission 55-90 deg; Belt Zone, 4 clr
+      C3JSLIMBHZ01     1+1    Jup limb at W equator &amp; s pole
+      C3JSLTGSPT01     1x1    Single spot search for lightning
+      C3JSAURORA01     1x1    Aurora obs at South pole
+      C3JSAURORA02     1x1    Aurora obs at South pole
+      C3JSAURORA03     1x1    Aurora obs at South pole
+      C3JSLTGSCN01 thru 06    East to W slew; lightning search
+      C3ISNA_CLD01     2-image OCM S/C in occultation; sodium cld
+      C3JSAURORA04 thru 06 1x1 Aurora obs at North pole
+ 
+      Optical Navigation (OPNAV):
+      C3ISOPNAV101 thru 127
+ 
+ 
+    Sequences/Observations for Orbit 4 (Europa 4)
+    -----------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK ranges: 374456500 and 374885901
+                   382058200 and 383085700 (OPNAV)
+      ERT ranges:  96/337:20:50:32.231 - 96/349:18:46:37.142
+                   97:040:02:06:39.721 - 97:047:10:36:59.533 (OPNAV)
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 214/137
+      number of OPNAVs expected/received - 12/10
+ 
+      Europa:
+      E4ESGLOMAP01     3+2    Global map
+      E4ESMACSTR01     1x1    High res maculae context
+      E4ESDRKMAT01     3x1    High res dark material
+      E4ESMACSTR02     2x2    High res macula
+      E4ESDRKMAT02     3+2    High res dark material
+ 
+      Io:
+      E4ISIOECLI01    1x2     Eclipse, OCM
+      E4ISIOECLI02    2x2     Eclipse, OCM 3-color
+      E4ISSURMON01    2-1x2   Surface monitor, 18.8 Rj, OCM
+      E4ISGLOCOL01    1x2     Global 6-color, 1deg phase, #1
+      E4ISGLOCOL02    1x1     Global 6-color, 1deg phase, #2
+      E4ISIOECLI03    1x1     Eclipse, OCM
+      E4ISIONITE01    1x1     Io in Jupiter shine, OCM, #1
+      E4ISIONITE02    1x1     Io in Jupiter shine, OCM, #2
+ 
+      Small Satellites:
+      E4ASAMALTH01    1x4     OCM Target Longitude: 0
+      E4SS_THEBE01    1x3     OCM Target Longitude: 180
+      E4SSADRAST01    1x1     Target Longitude: 180
+      E4SSADRAST02    1x1     Target Longitude: 300
+      E4ASAMALTH02    1x1     Target Longitude: 240
+      E4ASAMALTH02    1x1     Target Longitude: 240
+ 
+      Jupiter:
+      E4JSHOTSPT01    1x4     emiss 27deg Hot spot, 4-clr
+      E4JSHOTSPS01    1x3     emiss 27deg Hot spot, 2-clr
+      E4JSHOTSPN01    2x2     emiss 27deg N hot spot, 2-clr
+      E4JSHOTSPT02    1x4     emiss 31deg Hot spot, 4-clr
+      E4JSHOTSPS02    1x3     emiss 31deg Hot spot, 2-clr
+      E4JSHOTSPN02    2x2     emiss 31deg N hot spot, 2-clr
+      E4JSHOTSPT03    1x3     emiss 76deg Hot spot, 4-clr
+      E4JSHOTSPS03    1x2     emiss 76deg Hot spot, 2-clr
+      E4JSHOTSPN03    2x1     emiss 76deg N hot spot, 2-clr
+      E4JSHOTSPT04    1x4     emiss 31deg Hot spot, 1-clr
+      E4JSHOTSPS04    1x3     emiss 31deg Hot spot, 1-clr
+      E4JSHOTSPN04    2x2     emiss 31deg N hot spot, 2clr
+      E4JS148PHA03    1x1     bright limb Hot spot lat,2clr
+      E4JS148PHA04    1x1     bright limb 60 deg lat, 2-clr
+      E4JS160PHA03    1x1     bright limb Hot spot lat,2clr
+      E4JS160PHA04    1x1     bright limb 60 deg lat, 2-clr
+ 
+ 
+    Sequences/Observations for Orbit 6 (Europa 6)
+    ---------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK ranges: 383490245 and 383944168
+                   388834700 and 389042900 (OPNAV)
+      ERT ranges:  97/054-21:16:39.329 - 97/087-19:25:33.214
+                   97:087:16:02:08.615 - 97:089:03:12:51.757 (OPNAV)
+      Summary:
+      number of images w/ OCMs expected/received - 220/179
+      number of OPNAVs expected/received - 8/8
+ 
+      Europa:
+      E6ESGLOBAL01    2x1    Global tie frames
+      E6ESDRKLIN01    2x3    Dark linea, intersection
+      E6ESCRATER01    2x2    Crater &amp; bright ejecta
+      E6ESBRTPLN01    1x4    Bright plain material
+      E6ESCRATER02    1x6    Swath across crater &amp; ejecta
+      E6ESBRTPLN02    3+2    Hi-res bright plain material
+ 
+      Callisto:
+      E6CSCOLOR_01    1x1    Color
+ 
+      Io:
+      E6ISPELE__01    1x3    OCM Pele Plume
+      E6ISLOKI__01    2x2    OCM Loki Plume
+      E6ISRA____01    2x2    OCM Ra Patera Plume
+      E6ISSRFMON01    2x2    OCM Surface monitor
+      E6ISPLUME_01    1x1    clr Plume @ radio occult lon
+      E6ISTOPMAP01    1x1    Io topography
+      E6ISSRFMON02    1x1    color Surface monitor
+      E6ISECLIPS01    1x1    Io eclipse
+ 
+      Ganymede:
+      E6GSCOLOR_01    1x1    Global color, VGR gap
+      E6GSGLOBAL01    2x2    Global,VGR gap
+      E6GSGLOBAL02    2x1    Global, VGR gap
+ 
+      Small Satellites:
+      E6SSTHEBE_01    1x4    OCM Target Lon:300 Act:300
+      E6SSAMALTH01    1x1    Target Lon:120 Act:118
+ 
+      Jupiter:
+      E6JSWHTOVL01    4x2    White oval, 1-color
+      E6JSWHTOVL02    4x2    White oval, 4-colors
+      E6JSWHTOVL03    4x2    White oval, 4-colors
+      E6JSWHTOVL04    4x2    White oval, 4-colors
+ 
+ 
+    Sequences/Observations for Orbit 7 (Ganymede 7)
+    -----------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK ranges: 389266100 and 389269100 (OPNAV)
+                   389522100 and 389923946
+      ERT ranges:  97:090:16:37:46.549 - 97:090:17:15:21.121 (OPNAV)
+                   97/099-16:31:28.087 - 97/122-07:10:33.019
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 208/177
+      number of OPNAVs expected/received - 3/3
+ 
+      Callisto:
+      G7CSGLOBAL01    1x1    global
+ 
+      Europa:
+      G7ESECLIPS01    2*OCM  Solar eclipse by Jupiter
+      G7ESGLOBAL01    1x1    Global image
+      G7ESLOWFOT01    1x1    Low phase photometry
+      G7ESVLOFOT01    1x1    Very low phase photometry
+      G7ESTYRMAC01    1x1    Tyre Macula
+      G7ESAPEXCR01  5,1x1    Craters at apex of motion
+ 
+      Io:
+      G7ISECLIPS01  4*OCM    Solar eclipse by Jupiter
+      G7ISECLIPS02  4*OCM    Solar eclipse by Jupiter
+      G7ISSMONLO01  4*OCM    Surface monitor @ low lon
+      G7ISTOPMAP02    1x1    Topo mapping at lon 300
+      G7ISTOPMAP03    1x1    Topo mapping at lon 330
+      G7ISSMONHI01    1x1    Surface monitor @ high lon
+      G7ISSMONLO02  4*OCM    Surface monitor @ low lon
+ 
+      Ganymede:
+      G7GSPALIMP01    1x1    Palimpsest
+      G7GSCATENA01    1x1    Enki Catena
+      G7GSNICHOL01    1x3    Nicholson Regio
+      G7GSACHELS01    1x2    Achelous
+      G7GSNUNSUL01    1x2    Nun Sulci
+      G7GSNEITH_01    2x2    Nieth
+      G7GSKITTU_01    1x1    Kittu
+      G7GSKITTU_02    1x1    3-color Kittu
+ 
+      Small Satellites:
+      G7SSTHEBE_01  3*OCM    Target Longitude: 60
+      G7SSADRTEA01    1x1    Target Longitude: 60
+      G7SSMETIS_01    1x1    Target Longitude: 60
+ 
+      Jupiter:
+      G7JSAUROA01   6*1x1    Aurora
+      G7JSBRNBRG01  3+2+3    Brown Barge,4 clr
+      G7JSBRNBRG02  3+2+3    Brown Barge, 4 clr
+      G7JSBRNBRG03  2+2+2    Brown Barge, 4 clr
+      G7JSBRNBRG04  3+2+3    Brown Barge, 1 clr
+ 
+ 
+    Sequences/Observations for Orbit 8 (Ganymede 8)
+    -----------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK range:  394364268 and 394682801
+      ERT range:   97/132-16:07:33.779 - 97/170-13:14:08.541
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 243/217
+ 
+      Callisto:
+      G8CSVGRGAP01    3x5    Voyager gap fill
+      G8CSSPOLAR01  3x4+1    south polar
+      G8CSADLNDA01    3x4    Adlinda
+      G8CSPHOTOM01    1x1    high phase photometry
+ 
+      Io:
+      G8ISECLIPS01    1x3    Io in eclipse 3-image OCM
+      G8ISKANEHI01    1x3    Kanehikili plume monitor
+      G8ISAMRANI01    1x3    Amirani plume monitoring
+      G8ISMALIK_01    1x3    Malik plume monitoring
+      G8ISPROMTH01    1x3    Prometheus plume monitor
+      G8ISVOLUND01    1x3    Volund plume monitor, OCM
+      G8ISMARDUK01    1x1    Marduk plume monitor
+ 
+      Ganymede:
+      G8GSREGCON01    1x1    Regional Context
+      G8GSTIAMAT01    1x1    Tiamat Sulcus
+      G8GSMARIUS01    1x1    Marius Regio
+      G8GSRNGBAS01    1x2    multi-ringed basin
+      G8GSBUTOFC01    1x2    Buto Facula
+      G8GSMELKRT01    1x2    Melkart Crater
+      G8GSCALDRA01    2x3    caldera-like features
+      G8GSFRACDK01    1x1    fractured dark terrain
+      G8GSANSHAR01    1x2    Anshar Sulcus
+      G8GSPITCRA01    1x1    pit crater
+      G8GSERECH_01    1x2    Erech Sulcus
+ 
+      Small Satellites:
+      G8SSADRAST01    1x1    CLR
+      G8SSADRAST02    1x1    CLR
+      G8SSMETIS_01    1x1    Target Longitude: 97
+ 
+      Jupiter:
+      G8JSSOTEMP01    2x5    emission 34 to 90 deg
+      G8JSSOTEMP02 3+3+3+2   emission 34 to 70 deg
+      G8JSSOTEMP03 3+3+3+2   emission 45 to 90 deg
+ 
+ 
+    Sequences/Observations for Orbit 9 (Callisto 9)
+    -----------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK range: 401505300 and 412460845
+      ERT range:  97/180-17:21:45.765 - 97/256-07:30:49.661
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 416/222
+ 
+      Callisto:
+      C9CSHAR___01    1x1   Domed crater (Har)
+      C9CSCRATER01    2x3   Crater statistics, part 2
+      C9CSVALHAL01    2x7   Valhalla eastern ring
+      C9CSVALHAL02    1x1   Valhalla palimpsest, #1
+      C9CSVALHAL02    1x1   Valhalla palimpsest, #2
+ 
+      Europa:
+      C9ESGLOBAL01    1x1   Global clr mosaic,OCM, #1
+      C9ESGLOBAL01    1x2   Global clr mosaic,OCM, #2
+      C9ESGLOBAL01    1x2   Global clr mosaic,OCM, #3
+ 
+      Io:
+      C9ISECLIPS01    1x2   OCM Eclipse observation
+      C9ISPHOTOM01    1x1   Low-phase observation
+      C9ISSRFMON01    1x1   topo &amp; surface monitor, #1
+      C9ISSRFMON01    1x1   topo &amp; surface monitor, #2
+      C9ISSRFMON02    1x1   topo &amp; surface monitor, #1
+      C9ISSRFMON02    1x1   topo &amp; surface monitor, #2
+      C9ISPELE__01    1x1   Plume (Pele)
+      C9IECLIPS02     1x2   OCM Eclipse observation
+ 
+      Ganymede:
+      C9GSSULCUS01    1x4   regional
+      C9GSGLOBAL01    1x3   Global Mosaic, part 1
+      C9GSGLOBAL01    1x4   Global Mosaic, part 2
+ 
+      Small Satellites:
+      C9SSTHEBE_01    1x1   Target Lon: 60 Act: 49
+      C9SSMETIS_01    1x4   OCM Target Lon: 217 Act: 180
+      C9SSADRAST01    1x4   OCM Target Lon: 84 Act: 81
+      C9SSMETIS_02    1x4   OCM Target Lon: 337 Act: 246
+      C9SSADRAST02    1x4   OCM Target Lon: 204 Act: 189
+      C9SSMETIS_03    1x3   OCM Target Lon: 97 Act: 27
+      C9SSADRAST03    1x3   OCM Target Lon: 324 Act: 299
+      C9ASAMALTH01    1x1   Target Lon: 240 Act: 240
+      C9SSADRAST04    1x1   Target Lon: 204 Act: 187
+      C9SSTHEBE_02    1x1   Target Lon: 60 Act: 60
+      C9SSADRAST05    1x1   Target Lon: 84 Act: 60
+      C9SSMETIS_04    1x1   Target Lon: 337 Act: 298
+      C9SSTHEBE_03    1x1   Target Lon: 180 Act: 205
+      C9ASAMALTH02    1x1   Target Lon: 120 Act: 120
+      C9SSADRAST06    1x1   Target Lon: 204 Act: 186
+      C9SSMETIS_05    1x1   Target Lon: 97 Act: 60
+      C9SSADRAST07    1x1   Target Lon: 324 Act: 295
+      C9ASAMALTH03    1x1   Target Lon: 240 Act: 240
+      C9SSMETIS_06    1x1   Target Lon: 217 Act: 180
+      C9SSTHEBE_04    1x1   Target Lon: 300 Act: 300
+ 
+      Jupiter:
+      C9JSGRSFTK01    2x3   Great Red Spot, 1-clr
+      C9JSPLMHOT01    1x3   Plume hot spot, 4-clr
+      C9JSPLMHOT02    1x3   Plume hot spot, 4-clr
+      C9JSGRSFTK02    1x4+1 Great Red Spot, 4-clr
+      C9JSGRSFTK03    2x2   Great Red Spot, 4-clr
+      C9JSPLMHOT03    1x3   Plume hot spot, 1-clr
+      C9JSSCATT_01          High-phase aerosol 2-clr, #1
+      C9JSSCATT_01          High-phase aerosol 2-clr, #2
+      C9JSSCATT_02          High-phase aerosol 2-clr, #1
+      C9JSSCATT_02          High-phase aerosol 2-clr, #2
+ 
+ 
+    Sequences/Observations for Orbit 10 (Callisto 10)
+    -------------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK range: 413382800 and 413807200
+                  416072500 and 416114068
+      ERT range:  97/266-20:15:24.946 - 97/305-07:54:40.011
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 213/168
+ 
+      Callisto:
+      10CSASGARD01    1x12  Asgard transect
+      10CSSMTHPL01    1x1   Smooth plains
+      10CSSMTHPL02    1x2+1 Smooth plains
+      10CSTINDR_01    1x1   Dome crater Tindr
+      10CSRNGSTR01    1x2   Small ring structure
+ 
+      Europa:
+      10ESGLOBAL01    1x1   Global color
+      10ESGLOBAL02    1x1   Global color
+      10ESEURPLM01    1x3   Aurora/plume search, OCM, #1
+      10ESEURPLM01    1x3   Aurora/plume search, OCM, #2
+      10ESEURPLM02    1x3   Aurora/plume search, #1
+      10ESEURPLM02    1x3   Aurora/plume search, OCM, #2
+      10ESEURPLM03    1x3   Aurora/plume search, #1
+      10ESEURPLM03    1x3   Aurora/plume search, OCM, #2
+ 
+      Io:
+      10ISIOECLI01    1x1   Eclipse
+      10ISIOGLOC01    1x2   6-clr global, low longs, OCM, #1
+      10ISIOGLOCA1    1x2   6-clr global, low longs, OCM, #2
+      10ISIOGLOCB1    1x2   6-clr global, low longs, OCM, #3
+      10ISIOTOPO02    1x1   Topo, term long 65
+      10ISIOGLOC03    1x1   6-clr global, mid longs, #1
+      10ISIOGLOC04    1x3   6-clr global, mid longs, #2
+      10ISIOGLOC05    1x3   6-clr global, mid longs, #3
+      10ISIOGLOC06  1x3+1x3 6-clr global, high longs, OCM
+      10ISIOECLI02    1x2   Eclipse aurora, OCM
+      10ISIOAURO01    1x1   Io aurora during occultation
+      10ISIOAURO02    1x1   Io aurora during occultation
+ 
+      Ganymede:
+      10GSGLOCOL01    1x1   5-color global
+ 
+      Small Satellites:
+      10ASAMALTH01    1x1   Target Longitude: 0
+      10SSTHEBE_01    1x1   Target Longitude: 300
+ 
+      Rings:
+      10RSRINGS_01    1x1   Jupiter Rings
+ 
+      Jupiter:
+      10JSNPHAZE01    2x2+1 North pole aurora, 4-clr
+      10JSNPHAZE02    1X3   North pole aurora, 1-clr
+      10JSNPHAZE03    2x2+1 North pole aurora, 1-clr
+      10JSFLXTUB01    1x1   Footprint of Fluxtube
+      10JSLGHTN01     4-1x1 lightning survey
+      10JSLGHTN01     1x1   lightning survey, clr&amp;clear
+      10JSLGHTN01     4-1x1 lightning survey, color
+      10JSLGHTN01     1x1   lightning, limb haze &amp; ref
+      10JSLGHTN02     2-1x1 lightning survey
+      10JSLGHTN02     1x1   lightning, equator scan
+      10JSLGHTN02      2-1x1 lightning, N &amp; S high lat
+      10JSLGHTN02     1x1   lightning survey, clr&amp;clear
+      10JSLGHTN02     4-1x1 lightning survey, color
+      10JSLGHTN02     1x1   lightning, limb haze &amp; ref
+      10JSLGHTN03     2-1x1 lightning survey
+      10JSLGHTN03     1x1   lightning, equator scan
+      10JSLGHTN03     2-1x1 lightning, N &amp; S high lat
+      10JSLGHTN03     1x1   lightning survey, clr&amp;clear
+      10JSLGHTN03     4-1x1 lightning survey, color
+      10JSLGHTN03     1x1   lightning, limb haze &amp; ref
+      10JSLGHTN04     4-1x1 lightning survey
+      10JSLGHTN04     1x1   lightning survey, clr&amp;clear
+      10JSLGHTN04     4-1x1 lightning survey, color
+      10JSLGHTN04     1x1   lightning, limb haze &amp; ref
+      10JSLGHTN05     4-1x1 lightning survey
+      10JSLGHTN05     1x1   lightning survey, clr&amp;clear
+      10JSLGHTN05     4-1x1 lightning survey, color
+      10JSLGHTN05     1x1   lightning, limb haze &amp; ref
+      10JSAURORA01    2-1x1 South polar aurora zone
+      10JSAURORA01    5-1x1 South polar aurora zone #2
+      10JSAURORA02    2-1x1 South polar aurora zone
+      10JSAURORA02    5-1x1 South polar aurora zone #2
+      10JSAURORA03    2-1x1 North polar aurora zone
+      10JSAURORA03    6-1x1 North polar aurora zone
+      10JSAURORA04    2-1x1 North polar aurora zone
+      10JSAURORA04    6-1x1 North polar aurora zone
+      10JSAURORA05    2-1x1 North polar aurora zone
+      10JSAURORA05    6-1x1 North polar aurora zone
+      10JSAURORA06    2-1x1 North polar aurora zone
+      10JSAURORA06    6-1x1 North polar aurora zone
+ 
+ 
+   Sequences/Observations for Orbit 11 (Europa 11)
+   -----------------------------------------------
+      (sequence name, footprint Size, and Objectives)
+ 
+      SCLK range: 420361400 and 420900345
+      ERT range:  97/313-18:06:10.656 - 97/348-15:22:08.539
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 458/218
+ 
+      Callisto:
+      11CSPHOTOM01    1x1   low phase photometry
+ 
+      Io:
+      11ISECLIPS01    2x2   OCM Io in eclipse
+      11ISLOWPHA01    1x1   low phase angle photometry
+      11ISTOPO__01    1x1   topography
+      11ISCULANN01    1x3   OCM Culann plume monitor
+      11ISVOLUND01    1x3   OCM s. Volund plume monitor
+      11ISMARDUK01    1x3   OCM Marduk plume monitor
+      11ISPILLAN01    1x3   OCM Pillan plume monitor
+      11ISLOKI__01    1x3   OCM Loki plume monitor
+      11ISECLIPS02    2*1x2 OCMs Io in eclipse
+      11ISKANEHI01    1x3   OCM Kanehikili plume monitor
+ 
+      Europa:
+      11ESCOLORS01    1x1   regional color samples
+      11ESREGMAP01    2x5   near-terminator mapping
+      11ESMORPHY01    2x4   high-resolution morphology
+ 
+      Small Satellites:
+      11SSTHEBE_01    1x1   Thebe
+      11SSAMALTH01    1x1   high res Amalthea
+      11SSADRAST01    1x1   high res Adrastea
+      11SSMETIS_01    1x1   high res Metis
+      11SSMETIS_02    1x1   Metis global shape
+      11SSTHEBE_02    1x1   high res Thebe
+      11SSMETIS_03    1x1   high res Metis
+ 
+      Rings:
+      11RSRINGS_01    1x1   fill gaps in phase angle view
+      11RSRINGS_02    1x1   fill gaps in phase angle view
+ 
+      Jupiter:
+      11JSFEATRK01    3x1    possible &apos;brown barge&apos; site
+      11JSFEATRK02    3x1    possible &apos;brown barge&apos; site
+      11JSFEATRK03    3x1    possible &apos;brown barge&apos; site
+      11JSAURORA01    1x2    time-lapse rotation sequence
+      11JSAURORA02    1x2    time-lapse rotation sequence
+      11JSAURORA03    1x2    time-lapse rotation sequence
+      11JSAURORA04    1x2    time-lapse rotation sequence
+      11JSAURORA05    1x2    time-lapse rotation sequence
+      11JSAURORA06    1x2    time-lapse rotation sequence
+      11JSAURORA07    1x2    time-lapse rotation sequence
+      11JSAURORA08    1x2    time-lapse rotation sequence
+      11JSLTNING01    14     footprints day lightning areas
+      11JSLTNING02    13     footprints gain 1 &amp; 2
+ 
+ 
+   Sequences/Observations for Orbit 12 (Europa 12)
+   -----------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range: 426117300 and 426273839
+      ERT range:  97/352-08:19:59.260 - 98/082-02:15:37.966
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 121/101
+ 
+      Europa:
+      12ESGLOCOL01    1x3   Global Color
+      12ESFRTPLT01    1x1   Fretted Plateau
+      12ESDKLNCL01    2x2   Dark Lineament
+      12ESPWYCOL01    1X1   Pwyll crater
+      12ESCHAOS_01    1x5   Conamara Chaos
+      12ESMOTTLE01    1x1   Mottled terrain
+      12ESMOTTLE02    1x8   Mottled terrain
+      12ESWEDGE_01    1x18  Wedges
+      12ESWEDGE_02    1x18  Wedges
+      12ESWEDGE_03    2x2   Wedges
+ 
+      Ganymede:
+      12GSGLGMSH01    1x4   Gilgamesh crater
+ 
+      Io:
+      12ISIOECLI01    1x1   Eclipse
+ 
+ 
+   Sequences/Observations for Orbit 14 (Europa 14)
+   -----------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range: 440873539 and 441026827
+      ERT range:  98/090-03:50:04.362 - 98/148-20:59:05.930
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 126/117
+ 
+      Europa:
+      14ESTRPBND01    4x2   interacting triple bands
+      14ESTYREHR01    3x3   Tyre
+      14ESWEDGES01 2x3+2x2  wedges region
+      14ESGLOCOL01 (part 1) 3+2 global color
+      14ESGLOCOL01 (part 2) 3+2 global color
+      14ESGLOCOL01 (part 3) 2x1+1 global color
+ 
+      Ganymede:
+      14GSGLOCOL01 (part 1) 1x1 global shape and color
+      14GSGLOCOL01 (part 2) 1x1 global shape and color
+ 
+ 
+   Sequences/Observations for Orbit 15 (Europa 15)
+   -----------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range : 449841900 and 450111001
+      ERT range:   98/152-22:55:06.720 - 98/267-09:24:19.525
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 156/144
+ 
+      Io:
+      15ISHIPHAS01    1x3   hi phase photometry
+      15ISECLIPS01    1x1   early part of eclipse
+      15ISECLIPS02    1x1   middle part of eclipse
+      15ISECLIPS02          2nd record
+      15ISECLIPS02          3rd record
+      15ISECLIPS02          4th record
+      15ISECLIPS02          5th record
+      15ISSRFMON01 (part 1) 1x1 hi res surface outside ring str.
+      15ISSRFMON01 (part 2) 1x1 hi res surface outside ring str.
+      15ISECLIPS03    1x1   early part of eclipse
+      15ISECLIPS03          2nd record
+      15ISECLIPS03          3rd record
+      15ISECLIPS03          4th record
+      15ISECLIPS03          5th record
+      15ISECLIPS04    1x1   middle part of eclipse
+      15ISECLIPS04          2nd record
+      15ISECLIPS04          3rd record
+      15ISECLIPS04          4th record
+      15ISECLIPS04          5th record
+      15ISKANEHI01    1x3   Kanehekili plume monitor
+ 
+      Europa:
+      15ESREGMAP01    5+4   near-term. regional mapping
+      15ESPHOTOM01    1x1   coverage of G7 photometry
+      15ESCILIXS01    1x1   color and part 1 of stereo
+      15ESCILIXS02    4x4   2nd part of Cilix stereo
+      15ESCILIXS02          2nd record
+      15ESCILIXS02          3rd record
+      15ESCILIXS02          4th record
+      15ESRELIEF01    1x3   rugged area E of Tyre Macula
+      15ESRELIEF02    1x3   rugged area E of Tyre Macula
+      15ESREGMAP02  8x2+2   near-term. regional mapping
+ 
+ 
+    Sequences/Observations for Orbit 16 (Europa 16)
+    -----------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      Spacecraft went into safing.  Lost all onboard sequences and no
+      science observation data collected.
+ 
+ 
+    Sequences/Observations for Orbit 17 (Europa 17)
+    -----------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range : 466580845 and 450111001
+      ERT range:   98/270-08:58:01.595 - 99/026-06:09:21.324
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 154/154
+ 
+      Europa:
+      17ESGSHAPE01    1x1   global shape
+      17ESREGMAP01    19-footprint irregular regional near-terminator
+                            mapping
+      17ESNERTRM01    9x1   regional near-terminator mapping
+      17ESAGENOR01    1x5   Agenor Linea context
+      17ESAGENOR02    1x1   Agenor Linea color
+      17ESWEDGES01    1x1   wedges color
+      17ESDISSTR01    2x1   dissected terrain
+      17ESAGENOR03 3+2+2+1x3 Agenor Linea
+      17ESTHRACE01    1x3   Thrace Macula
+      17ESLIBLIN01    2x1   Libya Linea
+      17ESSTRSLP01    9x1   Astypalaea strike-slip fault zone
+      17ESRHIANN01    1x1   Rhiannon crater
+      17ESTHYLIN01    2x2   Thynia Linea plate spreading
+      17ESSOUTHP01    5x1   south pole highest resolution
+      17ESREGMAP02  8x2+1   regional near-terminator mapping
+      17ESREGMAP03   2x1    regional near-terminator mapping
+ 
+      Rings:
+      17RSRING8001   1x2    80 degrees phase
+      17RSRING6001   1x2    60 degrees phase
+      17RSRING3001 1x2+1+1+1 30 degrees phase
+ 
+      Jupiter:
+      17JSWHTOVL01   1x3    merged white oval
+      17JSWHTOVL02   1x3    merged white oval
+ 
+ 
+    Sequences/Observations for Orbit 18 (Europa 18)
+    -----------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      Spacecraft went into safing.  Lost all onboard sequences and no
+      science observation data collected.  Calibration data obtained
+      instead.
+ 
+      SCLK range : 477421600 and 477429800
+      ERT range:   98/345-22:06:56.149 - 98/347-11:51:56.339
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 5/5
+ 
+      Non Science:
+      18NSTITAN_01    1x6   calibration OCM frame
+      18NSTITAN_02    1X6   calibration OCM frame
+      18NSSATURN01    3X7   calibration OCM frame
+      18NSURANUS01    1X6   calibration OCM frame
+      18NSNEPTUN01    1X2   calibration OCM frame
+ 
+ 
+    Sequences/Observations for Orbit 19 (Europa 19)
+    -----------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range : 484864900 and 485082500
+      ERT range:   99/046-14:19:37.355 - 99/118-16:26:57.951
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 192/72
+ 
+      Europa:
+      19ESTEGID_01    1x1   Tegid crater
+      19ESSTRAT_01    1x2   Mottled terrain stratigraphy
+      19ESREGMAP01  1x1+1x1 Regional map coverage+terminator
+      19ESNORLAT01    1x3   North polar latitudes
+      19ESNORPLN01    2x4   North polar plains
+      19ESRHADAM01    1x4   Rhadamanthes Linea
+      19ESCOLOR_01    1x1   Pwyll crater ray
+      19ESCOLOR_02    1x1   Triple band junction
+      19ESCOLOR_03    1x1   Specular point
+      19ESPLUMES01    1x1   Europa plume search
+ 
+ 
+    Sequences/Observations for Orbit 20 (Callisto 20)
+    -------------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range : 497839700 and 498216345
+      ERT range:   99/126-23:31:54.780 - 99/175-02:30:53.100
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 291/224
+ 
+      Callisto:
+      20CSCRSTAT01    1x1   crater statistics
+      20CSDRKFLO01    1x1   dark flow high resolution
+      20CSCOLOR_01    1x1   high resolution color
+      20CSCRSTAT02    1x2   crater statistics
+      20CSDRKFLO02    1x1   dark flow context
+      20CSCRSTAT03    1x1   crater statistics
+      20CSBRANCR01    1x1   Bran Crater
+ 
+      Europa:
+      20ESECLIPS01    1x1   eclipse
+      20ESECLIPS02    1x1   eclipse
+ 
+      Ganymede:
+      20GSGEOGAP01    1x1   geodesy
+ 
+      Jupiter:
+      20JSSEBTRKxx    1x2   South Equatorial Belt feature track
+      20JSNEBTRKxx    1x2   North Equatorial Belt feature track
+      20JSWOVTRKxx    1x2   white ovals feature track
+      20JSJETTRKx1    1x1   high-speed jet feature track
+      20JSJETTRKxx    1x1   high-speed jet feature track
+      20JSWAVTRKxx    1x1   equatorial waves feature track
+      20JSAURORA01    1x1   high-resolution aurora
+ 
+ 
+    Sequences/Observations for Orbit 21 (Callisto 21)
+    -------------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range : 506142900 and 506584145
+      ERT range:   99/184-12:40:08.636 - 99/222-13:34:11.926
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 131/101
+ 
+      Callisto:
+      20CSCRSTAT01    1x1   crater statistics
+ 
+      Callisto:
+      21CSDRKMAT01    1x5   hi res surface outside ring str.
+      21CSDRKMAT02    1x1   hi res surface outside ring str.
+ 
+      Io:
+      21ISCOLOR_01    4x4   hi res color mapping
+      21ISALBEDO01    4x4   hi res albedo mapping
+      21ISALBEDO03    1x4 8 shuttered frames tape use to facilitate Dturn
+      21ISSTEREO01    12 frames stereo with I24
+      21ISIOPLUM01    1x2   plume inventory 1
+      21ISIOPLUM02    1x1   plume inventory 2
+      21ISIOPLUM03    1x2   plume inventory 3
+      21ISIOPLUM04    1x1   plume inventory 4
+      21ISIOPLUM05    1x1   plume inventory 5
+      21ISIOPLUM06    1x1   plume inventory 6
+      21ISIOPLUM07    1x1   plume inventory 7
+      21ISIOPLUM08    1x1   plume inventory 8
+      21ISIOPLUM09    1x1   plume inventory 9
+      21ISIOPLUM10    1x2   OCM plume inventory 10
+      21ISIOPLUM11    1x2   OCM plume inventory 11
+      21ISIOPLUM12    1x2   OCM plume inventory 12
+      21ISIOPLUM13    1x2   OCM plume inventory 13
+      21ISIOPLUM14    1x2   OCM plume inventory 14
+      21ISIOPLUM15    1x2   OCM plume inventory 15
+      21ISIOPLUM16    1x2   OCM plume inventory 16
+ 
+ 
+    Sequences/Observations for Orbit 22 (Callisto 22)
+    -------------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range : 512323300 and 512481168
+      ERT range:   99/227-15:12:11.408 - 99/252-20:34:20.792
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 266/110
+ 
+      Amalthea:
+      22SSAMALTH01    1x1   Global 153\260 Longitude
+      22SSAMALTH02    1x1   Global 215\260 Longitude
+ 
+      Io:
+      22ISPLUSUR01    1x1   Plume Survey 228\260 Longitude
+      22ISIOGEOD01    1x1   Geodesy at 4 deg. Phase
+      22ISPLUSUR02    1x1   Plume Survey 56\260 Longitude
+      22ISPLUSUR03    1x1   Plume Survey 68\260 Longitude
+      22ISPLUSUR04    1x2   OCM Plume Survey 80\260 Longitude
+      22ISPLUSUR07    1x2   OCM Plume Survey 101\260 Longitude
+      22ISPLUSUR08    1x2   OCM Plume Survey 115\260 Longitude
+      22ISPLUSUR09    1x2   OCM Plume Survey 126\260 Longitude
+      22ISPLUSUR10    1x2   OCM Plume Survey 136\260 Longitude
+      22ISPLUSUR11    1x2   OCM Plume Survey 146\260 Longitude
+      22ISPLUSUR12    1x2   OCM Plume Survey 156\260 Longitude
+ 
+      Jupiter:
+      22JSNEB28201    1x2   North Equatorial Belt
+      22JSLTN27901    1x2   Lightning latitude
+      22JSHTS26001    1x2   Hot spot latitude
+      22JSNEB29701    1x2   North Equatorial Belt
+      22JSLTN29701    1x2   Lightning latitude
+      22JSNEB31201    1x2   North Equatorial Belt
+      22JSLTN27902    1x2   Lightning latitude
+      22JSNEB32701    1x2   North Equatorial Belt
+      22JSNEB28202    1x2   North Equatorial Belt
+      22JSPOL29501    1x2   North Polar Region
+      22JSNOR29701    1x3   Northern High Latitudes
+      22JSLTN29702    1x2   Lightning latitude
+      22JSNEB29702    1x2   North Equatorial Belt
+      22JSHTS26002    1x2   Hot spot latitude
+      22JSNEB31202    1x2   North Equatorial Belt
+      22JSLTN27903    1x2   Lightning latitude
+      22JSNEB28203    1x2   North Equatorial Belt
+      22JSNEB32702    1x2   North Equatorial Belt
+      22JSLTN29703    1x2   Lightning latitude
+      22JSPOL29502    1x2   North Polar Region
+      22JSNEB29703    1x2   North Equatorial Belt
+      22JSNOR29702    1x3   Northern High Latitudes
+      22JSNEB31203    1x2   North Equatorial Belt
+      22JSNEB32703    1x2   North Equatorial Belt
+      22NSSATURN01    1x7   OCM Saturn, methane filter calibration
+      22NSSATURN02    1x7   OCM Saturn, methane filter calibration
+      22JSHTS26003    1x2   Hot spot latitude
+      22JSHTS26004    1x2   Hot spot latitude
+      22NSTITAN_01    1x3   OCM Titan, methane filter calibration
+      22NSTITAN_02    1x2   OCM Titan, methane filter calibration
+      22NSTITAN_03    1x2   OCM Titan, methane filter calibration
+      22JSLTN27904    1x2   Lightning latitude
+      22JSNEB28204    1x2   North Equatorial Belt
+      22JSPOL29503    1x2   North Polar Region
+      22JSNOR29703    1x3   Northern High Latitudes
+      22JSLTN29704    1x2   Lightning latitude
+      22JSNEB29704    1x2   North Equatorial Belt
+      22JSNEB31204    1x2   North Equatorial Belt
+      22JSNEB32704    1x2   North Equatorial Belt
+ 
+ 
+    Sequences/Observations for Orbit 24 (Io 24)
+    -------------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range : 520792749 and 520932552
+      ERT range:   99/292-09:47:02.212 - 99/325-20:32:52.249
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 167/162
+ 
+      Io:
+      24ISPELE__01    1x13  Pele in darkness
+      24ISPILLAN01    1x13  hi res Pillan Patera
+      24ISCOLCHS01    1x11  Colchis Montes
+      24ISZAMAMA01    1x13  hi res Zamama
+      24ISPROMTH01 1x9+1x7  hi res Prometheus
+      24ISCOLCHS02    2x1   lower res Colchis Montes
+      24ISTOHIL_01    2x3   hi res Tohil Mons
+      24ISPROMTH02 1x2+1x1  Prometheus in color
+      24ISZAMAMA02    3x6   lower res Zamama context
+      24ISDORIAN01    1x4   Dorian Montes
+      24ISAMSKGI01    3x6   Amirani/Skythia/Gish Bar Regions
+      24ISTERMAP01    7x1   terminator strip with Hi&apos;iaka
+      24ISPILLAN02    1x1   Pillan Plume
+      24ISSTEREO01    3x4   regional stereo
+      24ISGLOCOL01    1x1   Full-disk color
+      24ISECLIPS01  3*1x2   Eclipse, OCM
+ 
+ 
+    Sequences/Observations for Orbit 25 (Io 25)
+    -------------------------------------------------
+      (sequence name, footprint size, and Objectives)
+ 
+      SCLK range : 527272700 and 527365602
+      ERT range:   99/331-13:41:55.525 - 00/049-10:16:40.726
+ 
+      Summary:
+      number of images w/ OCMs expected/received - 75/45
+ 
+      Amalthea:
+      25ASAMALTH01    1x1   hi res Amalthea
+ 
+      Europa:
+      25ESDARKBP01    1x1   dark band pair
+      25ESGLOBAL01 2+2x4+2  global coverage
+      25ESMOTTER01    1x1   mottled terrain
+      25ESNRTHPL01    1x3   hi res north pole
+ 
+      Io:
+      25ISCULANN01    2x2   Culann Patera
+      25ISEMAKNG01    1x4   hi res Emakong flows
+      25ISEMAKNG02    1x2   Emakong context
+      25ISGIANTS01    1x2   Giant calderas
+      25ISSAPPNG01    1x4   hi res sapping feature
+      25ISSAPPNG02    1x1   sapping feature context
+      25ISSHMSHU01    1x2   Shamshu Patera
+      25ISSPOLE_01    1x2   hi res south pole
+      25ISSPOLE_02    1x1   south pole context
+      25ISTERM__01  2*3x1   near terminator mapping
+      25ISTUPAN_01    1x3   Tupan Patera
+ 
+ 
+  Limitations
+  ===========
+    This section documents the currently known information about errors
+    and discrepancies in the VICAR labels, and PDS labels and index tables
+    for the entire Jupiter Orbital Operations and extended Galileo Europa
+    Mission data set.  For the purpose of this section &apos;CD&apos;s &apos; refers to
+    the five Jupiter SSI REDR CD-ROM&apos;s GO_0017 through GO_0022.
+ 
+    Information regarding errors in specific images or problem images is
+    documented in the ERRATA.TXT.  Errors identified on previous volumes
+    will also be include in the ERRATA.TXT.
+ 
+    VICAR Labels:
+ 
+    Definitions for VICAR field names can be found in in &apos;SSI Raw
+    Experiment Data Record for Phase 2 Software Interface Specification&apos;
+    [WHITE1997] which is included in the Document sub-directory on these
+    volumes.
+ 
+    A) The RAD keyword (ring radius) within the VICAR label is only
+    applicable for ring images.  If the image is not of a ring, the value
+    is set to 0.0.
+ 
+    B) The following fields in the VICAR label were not implemented for
+    the entire set of CD&apos;s due to the angular velocity not being
+    returned.
+ 
+    SMEAR     -999.0
+    SMRAZ     0.0
+ 
+    C) If no SPICE C information is available the following pointing
+    fields in the VICAR label are not available (this affects OPNAV
+    images).
+ 
+    RA=0.0
+    DEC =0.0
+    TWIST =0.0
+ 
+    D) For targets other than a planetary body or asteroid (e.g. black
+    sky, stars, calibration etc.) the pointing information supplied for
+    the following label items is calculated for Jupiter.  A listing of the
+    missing fields is provided below.  These fields are missing if no
+    corresponding SPICE SP information is available for an image.
+ 
+    EMA
+    PHA
+    INA
+    LAT
+    LON
+    TCA
+    HSCL
+    VSCL
+    PLRANGE
+    SLRANGE
+    SUNAZ
+    NORAZ
+    SCAZ
+    SOLRANGE
+ 
+ 
+    PDS Labels:
+    ----------
+      Definitions for PDS field name can be found in the Planetary Science
+      Data Dictionary [PDS1996].
+ 
+      A) The following PDS fields are copied directly from the on-chip
+      mosaic parent&apos;s and thus only serve as very rough approximations for
+      the child:
+ 
+      MEAN_TRUNCATED_BITS
+      MEAN_TRUNCATED_SAMPLES
+      ENCODING_COMPRESSION_RATIO
+      ENCODING_MIN_COMPRESSION_RATIO
+      ENCODING_MAX_COMPRESSION_RATIO
+ 
+      B) The following PDS fields were not applicable for the entire set
+      of CD&apos;s.
+ 
+      BLEMISH_FILE_NAME = &apos;N/A&apos;
+      CENTER_RING_RADIUS = 0.0
+      DARK_CURRENT_FILE_NAME =&apos; N/A&apos;
+      EDR_FILE_NUMBER =&apos; N/A&apos;
+      EDR_TAPE_ID = &apos;N/A&apos;
+      MEAN_RADIANCE = &apos;N/A&apos;
+      MEAN_REFLECTANCE = &apos;N/A&apos;
+      RADIANCE_SCALING_FACTOR = &apos;N/A&apos;
+      REFLECTANCE_SCALING_FACTOR = &apos;N/A&apos;
+      SHUTTER_OFFSET_FILE_NAME = &apos;N/A&apos;
+      SLOPE_FILE_NAME = &apos;N/A&apos;
+      UNEVEN_BIT_WEIGHT_CORR_FLAG = &apos;N/A&apos;
+ 
+      C) The following PDS fields were not implemented for the entire set
+      of CD&apos;s.
+ 
+      SMEAR_AZIMUTH = 0.000
+      SMEAR_MAGNITUDE = &apos;unk&apos;
+ 
+      D) If the SPICE C information is unavailable the following pointing
+      fields in the PDS label are not available.
+ 
+      DECLINATION = 0.000
+      RIGHT_ASCENSION = 0.000
+      TWIST_ANGLE = 0.000
+ 
+      E) For targets other than a planetary body or asteroid (e.g. black
+      sky, stars, calibration etc.) or if the SPICE SP information is
+      missing, the pointing information supplied for the following label
+      items is calculated for Jupiter in the PDS labels. These fields are
+      missing if no corresponding SPICE SP information is available for an
+      image.
+ 
+      A_AXIS_RADIUS
+      B_AXIS_RADIUS
+      C_AXIS_RADIUS
+      CENTER_LATITUDE
+      CENTER_LONGITUDE
+      CENTRAL_BODY_DISTANCE
+      EMISSION_ANGLE
+      HORIZONTAL_PIXEL_SCALE
+      INCIDENCE_ANGLE
+      NORTH_AZIMUTH
+      PHASE_ANGLE
+      SATELLITE_TIME_FROM_CLST_APR
+      SLANT_DISTANCE
+      SUB_SOLAR_AZIMUTH
+      SUB_SOLAR_LATITUDE
+      SUB_SOLAR_LONGITUDE
+      SUB_SPACECRAFT_AZIMUTH
+      SUB_SPACECRAFT_LATITUDE
+      SUB_SPACECRAFT_LINE
+      SUB_SPACECRAFT_LINE_SAMPLE
+      SUB_SPACECRAFT_LONGITUDE
+      TARGET_CENTER_DISTANCE
+      NTV_TIME_FROM_CLOSEST_APPROACH
+      VERTICAL_PIXEL_SCALE
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>89-084B-10C</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

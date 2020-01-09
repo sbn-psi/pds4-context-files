@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-nis-5-edr-eros-orbit-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR NIS CALIBRATED SPECTRA FOR EROS/ORBIT V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nis.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-nis-5-edr-eros-orbit-v1.0__browserp_near-a-nis-5-edr-eros-orbit-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cheng, A.F., R.W. Farquhar, and A.G. Santo, NEAR Overview, Johns Hopkins APL
+                   Technical Digest, Vol. 19, pp. 95-106, 1998.
+            </reference_text>
+            <description>reference.CHENGETAL1998</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Warren, J., K. Peacock, E.H. Darlington, S.L. Murchie, S. Oden, J. Hayes, J.F.
+                   Bell III, S. Krein, and A. Mastandrea, Near-infrared spectrometer for the Near
+                   Earth Asteroid Rendezvous mission, Space Science Review, Vol. 82, pp. 101-167,
+                   1997.
+            </reference_text>
+            <description>reference.WARRENETAL1997</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-NIS-5-EDR-EROS/ORBIT-V1.0</data_set_id>
+        <data_set_name>NEAR NIS CALIBRATED SPECTRA FOR EROS/ORBIT V1.0</data_set_name>
+        <data_set_release_date>2001-09-05</data_set_release_date>
+        <start_time>1996-04-17T23:53:18.000Z</start_time>
+        <stop_time>2000-05-13T11:01:16.000Z</stop_time>
+        <producer_full_name>BRIAN T. CARCICH</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            This data set contains the NIS Level 2 delivery i.e. calibrated
+            NIS spectra in the Nixel database.
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set contains the NEAR infrared spectrometer (NIS)
+      data for the EROS/ORBIT phase.
+ 
+      The data are calibrated data, provided in scientific units,
+      that have been formatted into FITS file format (NASA Office
+      of Science and Technology (NOST), 100-1.0). In addition to the
+      raw spectrometer data, a calibration file and algorithm are
+      available. This data set is archived as a set of CDROM images
+      as a part of the NEAR EDR volume set.
+ 
+ 
+    Parameters
+    ==========
+      The only special parameter in the INDEX/INDEX.TAB file is MET,
+      which approximates the Mission Elapsed Time in seconds.
+ 
+ 
+    Data
+    ====
+      The data are in a FITS file called the nixel database.
+      The nixel database maintains large amounts of information
+      along with each spectrum:  instrument housekeeping; observational
+      geometry; footprint location on the target.
+ 
+      Some columns record user inputs that controlled Niscal, the NIS
+      calibration procedure run to generate the values in the table.
+      Those fields are CALIBRATION_MODE_BITS, DARK_MODE, NOISE_MODE,
+      RADIANCE_MODE, and SLIT_MODE.  Those columns&apos; possible values
+      and their meanings are described in the file NIXDB.LBL.
+ 
+      Some columns may be used to determine the type of observation e.g.
+      a spectrum with field-of-view completely on, partially on, or completely
+      off the asteroid, a spectrum of the calibration plaque a spectrum with
+      the slit set to narrow or wide and the shutter open or closed (dark).
+      Those columns are SLIT_SHUTTER_FLAG, MIRROR_POSITION, and
+      POLYGON_TYPE_FLAG.  Those columns&apos; possible values
+      and their meanings are described in the file NIXDB.LBL.
+ 
+      One column describes the data quality index which highlights suspect
+      spectra:  NIS_DQI.  Those columns&apos; possible values
+      and their meanings are described in the file NIXDB.LBL.
+ 
+ 
+    Ancillary Data
+    ==============
+      The files in CALIB/ are the ones used in the actual
+      calibration of the data in DATA/.  The DESCRIPTION field in each
+      calibration file&apos;s PDS label describes what role that file plays
+      in NIS calibration.  The calibration procedure is described in
+      even more detail under the DOCUMENT/ tree.
+ 
+      The GEOMETRY directory is described above.
+ 
+      The calibration plaque for the NIS instrument is made with
+      Infragold LF (trademarked) which is a porous metal surface
+      with a gold coating.
+      See files referred to by DOCUMENT/NIS.LBL for further information.
+ 
+ 
+    Media/Format
+    ============
+      This data set is released as a CDROM set.
+ 
+ 
+    Processing History
+    ==================
+      The processing history includes dark current
+      and lighting geometry corrections necessary to convert from
+      raw data to I/F units.  The location of each spectrum&apos;s
+      field of view was determined using a 22,540 plate shape
+      model of Eros, PDS PRODUCT_ID = &apos;PLATE-EROS-2001012-022540&apos;
+      of DATA_SET_ID = &apos;NEAR-A-MSI-5-EROS-SHAPE-MODELS-V1.0&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Data Quality Flag
+    =================
+      Each spectrum includes a quality flag value in the
+      data quality field, extracted from the original data label and adjusted
+      by the Niscal program. The values of this keyword are defined
+      below.  The data quality flag is non-zero when there is missing
+      data or other problems with the spectra.  The
+      possible values of this field are described in the file NIXDB.LBL.
+ 
+ 
+    Review
+    ======
+      This data set underwent external peer review within PDS in August,
+      2001.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

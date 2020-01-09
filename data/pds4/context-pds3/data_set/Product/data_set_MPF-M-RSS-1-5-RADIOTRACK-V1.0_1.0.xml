@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mpf-m-rss-1-5-radiotrack-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS PATHFINDER RADIO TRACKING</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_pathfinder::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mpfl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mpfl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpf-m-rss-1-5-radiotrack-v1.0__browserp_geo_mpf-m-rss-1_5-radiotrack-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpf-m-rss-1-5-radiotrack-v1.0__dvo_geo_mpf-m-rss-1_5-radiotrack-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Folkner, W.M., R.D. Kahn, R.A. Preston, C.F. Yoder, E.M. Standish, J.G.
+                   Williams, C.D. Edwards, R.W. Hellings, T.M. Eubanks, and B.G. Bills, Mars
+                   Dynamics from Earth-Based Tracking of the Mars Pathfinder Lander, J. Geophys.
+                   Res., 102, 4057-4064, 1997
+            </reference_text>
+            <description>reference.FOLKNERETAL1997A</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MPF-M-RSS-1/5-RADIOTRACK-V1.0</data_set_id>
+        <data_set_name>MARS PATHFINDER RADIO TRACKING</data_set_name>
+        <data_set_release_date>1998-07-31</data_set_release_date>
+        <start_time>1997-07-04</start_time>
+        <stop_time>1997-10-07</stop_time>
+        <producer_full_name>WILLIAM FOLKNER</producer_full_name>
+        <citation_text>
+            Folkner, W., MARS PATHFINDER RADIO TRACKING,
+            MPF-M-RSS-1/5-RADIOTRACK-V1.0, NASA Planetary Data System, 1998
+        </citation_text>
+        <data_set_terse_desc>
+            This archive contains archival raw, partially processed, and
+            ancillary/supporting radio science data acquired during Mars
+            Pathfinder surface operations.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Mars Pathfinder (MPF) Radio Science (RS) data archive
+            contains both raw radio tracking data collected during the
+            surface lifetime of the MPF Lander and results derived from those
+            data. Results include rotation rate, rotation axis, and (jointly
+            with Viking Lander data) the change in rotation rate for Mars.
+            For more information on the investigations see [FOLKNERETAL1997A].
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The Mars Pathfinder (MPF) Radio Science (RS) data archive
+    contains both raw radio tracking data collected during the
+    surface lifetime of the MPF Lander and results derived from those
+    data.  Results include rotation rate, rotation axis, and (jointly
+    with Viking Lander data) the change in rotation rate for Mars.
+    For more information on the investigations see
+    [FOLKNERETAL1997A].
+ 
+    The raw data include two primary data types.  Archival Tracking
+    Data Files (ATDFs or TDFs) are the most primitive (and most
+    voluminous) product.  Orbit Data Files (ODFs) are edited versions
+    of ATDF files generated for spacecraft navigators.
+ 
+    In addition to the ATDF and ODF binary data files, an ASCII
+    version of the edited Pathfinder data is included, along with an
+    ASCII version of the edited data from the Viking landers.
+ 
+    Investigation results are presented in the form of ASCII tables.
+ 
+ 
+  Parameters
+  ==========
+    The ATDF is the primary output from the Deep Space Network
+    tracking system.  ATDFs have up to 150 fields, though not all are
+    used for Pathfinder.  Each ATDF file in the data set is
+    accompanied by a full PDS label which defines both the content
+    and the format (at the bit level) of the file.  ATDF fields
+    include:
+ 
+         High- or low-rate Doppler
+         Uplink phase
+         Differential Range vs Integrated Doppler (DRVID)
+         Range
+         Allan deviation
+         Smoothed noise
+         High or low-rate downlink phase
+ 
+    Other information included in ATDF data records is date and time;
+    spacecraft ID; ground station and its configuration; status flags
+    and values reported by various ground systems; calibration
+    values, noise estimates, and tolerances (station delay,
+    transmitter power, etc.); and signal strength.
+ 
+    The ODF is an edited version of the ATDF; it is a smaller file,
+    issued more frequently than the ATDF.  It contains the most
+    important information (range and Doppler) needed by spacecraft
+    navigators and investigators interested in determining
+    gravitational fields of bodies such as Mars.  Each ODF is
+    accompanied by a full PDS label which describes both the content
+    and format of the associated file.  ODF fields include:
+ 
+         Narrowband spacecraft VLBI, Doppler mode (cycles)
+         Narrowband spacecraft VLBI, phase mode (cycles)
+         Narrowband quasar VLBI, Doppler mode (cycles)
+         Narrowband quasar VLBI, phase mode (cycles)
+         Wideband spacecraft VLBI (nanoseconds)
+         Wideband quasar VLBI (nanoseconds)
+         One-way Doppler (Hertz)
+         Two-way Doppler (Hertz)
+         Three-way Doppler (Hertz)
+         One-way total count phase (cycles)
+         Two-way total count phase (cycles)
+         Three-way total count phase (cycles)
+         PRA planetary operational discrete spectrum range (range
+              units)
+         SRA planetary operational discrete spectrum range (range
+              units)
+         RE[GSTDN] range (nanoseconds)
+         Azimuth angle (degrees)
+         Elevation angle (degrees)
+         Hour angle (degrees)
+         Declination angle (degrees)
+         X angle (where +X is east) (degrees)
+         Y angle (where +X is east) (degrees)
+         X angle (where +X is south) (degrees)
+         Y angle (where +X is south) (degrees)
+ 
+    Partially reduced data include tables of Doppler and range
+    measurements for MPF and the Viking Landers.
+ 
+    Tables of results give position of each lander in cylindrical
+    coordinates (longitude, radius, and z), pole right ascension and
+    declination, precession, Mars rotation at J2000, rotation rate,
+    obliquity, various drift rates, and uncertainties.
+ 
+ 
+  Processing
+  ==========
+    ATDFs are screened for &apos;bad&apos; data points, which are removed
+    before the file is released by the JPL Radio Metric Data
+    Conditioning Team (RMDCT).
+ 
+    ODFs are abstracted from subsets of ATDF data.
+ 
+    Range and Doppler measurements are used to define the relative
+    position and velocity of each lander with respect to the DSN
+    tracking station on Earth.  A aeries of such measurements allows
+    inference of Mars&apos; rotation and determination of lander
+    locations.  Details are given in [FOLKNERETAL1997A].
+ 
+ 
+  Data
+  ====
+    Data are stored on CD-WO volumes chronologically -- early ATDFs
+    appear on the first volume, later ATDFs appear on the second
+    volume.  All other files are repeated on both volumes.
+ 
+    ATDFs are stored in the TDF directory.  File names are of the
+    form ydddeeec.TDF, where y is the one-digit year of the first
+    data, ddd is the three-digit day-of-year of the first data, eee
+    is the three-digit day-of-year of the last data, and c is a
+    letter denoting the sequence in which files with the same ydddeee
+    were handled (beginning with &apos;A&apos;).  Generally ydddeeeB.TDF is a
+    revised version of ydddeeeA.TDF.  The PDS label has file name
+    ydddeeeC.LBL.  Typical ATDF file sizes are 39 Mbytes.
+ 
+    ODFs were issued approximately weekly; in some cases special ODFs
+    were also created.  Most of the ODFs which were released are
+    included in the archival data set.  ODFs are stored in the ODF
+    directory.  File names are of the form ydddeeec.ODF where y is
+    the one-digit year of the first data, ddd is the three-digit
+    day-of-year of the first data, eee is the three-digit day-of-year
+    of the last data, and c is a single letter denoting the sequence
+    in which files with the same ydddeee were handled (beginning with
+    &apos;A&apos;).
+ 
+    Partially processed data appear in the REDUCED directory.
+    MPF_DOPP.TAB and MPF_RANG.TAB are tables giving Doppler and
+    ranging results for Mars Pathfinder Lander.  VIK_DOPP.TAB and
+    VIK_RANG.TAB are the corresponding files for the Viking landers.
+ 
+    The RESULTS directory contains lander positions and pole and
+    rotation results.  LANDER.TAB gives longitude, radius, and z
+    coordinate for MPF, Viking Lander 1, and Viking Lander 2.
+    MAR_RA_D.TAB gives pole right ascension at J2000 and rate in
+    degrees/century, declination at J2000 and rate, rotation at J2000
+    and rotation rate in degrees/day.  MARS_ROT.TAB gives obliquity
+    and obliquity rate, longitude of node, precession rate, rotation
+    about the pole, rotation rate, annual sine and cosine variations,
+    and semi-annual sine and cosine variations.
+ 
+ 
+  Ancillary Data
+  ==============
+    An extensive set of ancillary files is needed for proper analysis
+    and interpretation of the radio data (file types TDF and ODF).
+    These are organized in parallel directories.  All Pathfinder
+    ancillary files appear on each CD-WO volume.
+ 
+ 
+    Files in the CALIB Directory
+    ----------------------------
+      The CALIB directory includes files with station calibrations
+      for ranging passes, and calibrations for Earth troposphere and
+      ionosphere.  Each file is accompanied by a PDS label.
+ 
+ 
+    Earth Orientation Parameter Files (EOP Directory)
+    -------------------------------------------------
+      Earth Orientation Parameter files are produced by the Time and
+      Earth Motion Precision Observation (TEMPO) Group at JPL.  These
+      are ASCII files of variable length records.  The file
+      EOP12_97.TXT covers past motion since about 1962 through
+      December 1997.  The EOP file is accompanied by a PDS label with
+      file name EOP12_97.LBL.
+ 
+ 
+  Software
+  ========
+    Software for parsing, reducing, and analyzing data such as these
+    has been developed at several institutions.  Because such
+    software must usually operate at the bit-level and is written for
+    a narrow range of platforms, it is not suitable for general
+    distribution.  No software is included with this archival data
+    set.
+ 
+ 
+  Media/Format
+  ============
+    The archival data set is written on CD-WO media using the
+    QuickTOPIX software for Macintosh.  The CD-WO volumes conform to
+    ISO 9660 standards.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    Review
+    ------
+      This archival data set was reviewed by the MPF Rotational and
+      Orbital Dynamics team prior to submission to the Planetary Data
+      System (PDS).
+ 
+ 
+    Data Coverage and Quality
+    -------------------------
+      This archive includes all radio tracking data collected from
+      MPF beginning with landing on 1997-07-04 and ending with loss
+      of contact on 1999-09-27.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

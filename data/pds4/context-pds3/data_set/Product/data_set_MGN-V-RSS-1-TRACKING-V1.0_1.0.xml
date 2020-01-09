@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rss-1-tracking-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MAGELLAN RAW RADIO TRACKING DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-1-tracking-v1.0__browserp_mgn-v-rss-1-tracking-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Konopliv, A.S., and W.L. Sjogren, Venus Gravity Handbook, Jet Propulsion
+                   Laboratory Publication 96-2, January 1996.
+            </reference_text>
+            <description>reference.KONOPLIV-SJOGREN1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Konopliv, A.S., W.B. Banerdt, W.L. Sjogren, Venus Gravity: 180th degree and
+                   order model, Icarus, 139, 3-18, 1999.
+            </reference_text>
+            <description>reference.KONOPLIVETAL1999</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RSS-1-TRACKING-V1.0</data_set_id>
+        <data_set_name>MAGELLAN RAW RADIO TRACKING DATA V1.0</data_set_name>
+        <data_set_release_date>2010-10-28</data_set_release_date>
+        <start_time>1989-05-04</start_time>
+        <stop_time>1994-10-12</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Simpson, R.A., Magellan Raw Radio Tracking Data V1.0,
+            MGN-V-RSS-1-TRACKING-V1.0, NASA Planetary Data System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw radio tracking data from the MAGELLAN mission to Venus
+            (1989-1994)
+        </data_set_terse_desc>
+        <abstract_desc>
+            Archival Tracking Data Files (ATDFs, also sometimes known as
+            TRK-2-25 data) from the MAGELLAN mission to Venus (1989-1994) and
+            Orbit Data Files (ODFs, also known as TRK-2-18 data) from the
+            final 2-3 years of the MAGELLAN mission (1992-1994). These data
+            include range and Doppler measurements from the radio tracking
+            system of the NASA Deep Space Network (DSN). The measurements can
+            be used to derive a spherical harmonic model of the Venus gravity
+            field.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      This data set contains 243 Archival Tracking Data Files (ATDFs) and
+      6 Orbit Data Files (ODFs) from the MAGELLAN mission to Venus.
+      The ATDFs were collected at Earth stations of the NASA Deep Space
+      Network (DSN) from May 1989 (as MAGELLAN began its cruise to Venus)
+      until October 1994 (after the MAGELLAN &apos;termination experiment&apos;).
+      ODF coverage is only from April 1992 to end of mission; ODFs were
+      reconstructed from NAVIO files (an in-house format at the NASA Jet
+      Propulsion Laboratory, JPL).  The data have been used to derive
+      spherical harmonic models of the Venus gravity field
+      [KONOPLIVETAL1999][KONOPLIV&amp;SJOGREN1996].  The models can be
+      obtained from the NASA Planetary Data System (PDS), where they are
+      part of data set MGN-V-RSS-5-GRAVITY-L2-V1.0.
+ 
+ 
+    Parameters
+    ==========
+      ATDFs and ODFs contain measurements of range between the Earth
+      station and MAGELLAN spacecraft, Doppler shift of the carrier
+      frequency, carrier signal strength, and ground station azimuth
+      and elevation angles.  They also contain many ground station
+      configuration parameters.  The ODF is an edited and compressed
+      (time integration) version of the ATDF.  The ODFs in this archive
+      are aggregations covering about one year each (1992, 1993, and
+      1994).
+ 
+ 
+    Processing
+    ==========
+      ATDF data were collected using one or more DSN closed-loop receivers,
+      which reported frequency and amplitude of the MAGELLAN carrier signal
+      at a rate (typically) of 10 times per second.  When a coded (ranging)
+      subcarrier was used, a correlator estimated round-trip time between
+      Earth and spacecraft, which can be interpreted as two-way distance.
+      The file of measured values was screened manually, and &apos;bad&apos;
+      measurements were removed.  There has been no other ATDF processing.
+ 
+      ODF files are usually derived from one or more ATDFs.  The MAGELLAN
+      ODFs were reconstructed from NAVIO files (an internal JPL format).
+      In addition to being edited versions of ATDFs, these ODFs contain
+      averaged values of observation parameters -- both 2- and 10-second
+      averages are available (in separate files).
+ 
+ 
+    Data
+    ====
+      The archive comprises 243 ATDFs, 6 ODFs, and supporting
+      documentation on the structure and content of the ATDF and ODF.
+ 
+ 
+    Ancillary Data
+    ==============
+      Also included in the data set are four data types that may be used
+      to calibrate the radio tracking measurements.  Angular Momentum
+      Desaturation (AMD) files -- also known as Small Forces Files -- are
+      included in the AMD directory.  Media calibration files for
+      ionospheric and tropospheric effects are in the ION and TRO
+      directories, respectively.  Local weather conditions at the
+      NASA DSN complexes are stored in the WEA directory.
+ 
+ 
+    Coordinate System
+    =================
+      The radio data are not strongly dependent on coordinate systems.
+      Ground antenna azimuth and elevation are in an unknown local frame;
+      but it is the range and Doppler measurements which are most important
+      and those are independent of the coordinate system chosen.
+ 
+ 
+    Software
+    ========
+      No software is included with this archive.
+ 
+ 
+    Media/Format
+    ============
+      This archival data set were delivered to the PDS Geosciences (GEO)
+      Node on three DVD+R discs.  They will be distributed electronically.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      These data have not been reviewed for quality.  Five original files
+      were not included in the archive for the reasons noted below:
+ 
+          Coverage (YYYY/DDD)   Reason for Omission from Archive
+          -------------------  ----------------------------------
+           1990/166-1990/193   Lost before GEO collection in 1997
+           1991/084-1991/112   Corrupted
+           1992/034-1992/050   Duplicate
+           1993/313-1993/313   Duplicate
+           1994/162-1994/164   Corrupted
+ 
+      The NAVIO files (parents of the ODFs) have been used to compute a
+      180x180 spherical harmonic model of the Venus gravity field
+      [KONOPLIVETAL1999].   Additional information on data quality may
+      be found in the Venus Gravity Handbook [KONOPLIV&amp;SJOGREN1996].
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by a peer review panel prior
+      to its acceptance by the Planetary Data System (PDS).  The peer
+      review was conducted by the PDS Geosciences Node in accordance with
+      PDS procedures.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The ATDF tracking data began on 1989-05-04, as MAGELLAN started its
+      cruise to Venus.  The last ATDF ends on 1994-10-12, the day after
+      the MAGELLAN &apos;termination&apos; experiment.  ODF coverage began on
+      1992-04-22 and ended on 1994-10-12.
+ 
+      The coverage and quality are variable, but were sufficiently good
+      that [KONOPLIVETAL1999] derived a 180x180 spherical harmonic model
+      of the gravity field from the tracking data.  Corrupted and lost data
+      are listed above under Overview.
+ 
+      There are five angular momentum desaturation (AMD) files covering
+      the years 1990 (days 215-365), 1991, 1992, 1993, and 1994 (to end of
+      mission).  Fifty-six (56) ION files cover 1990 to end of mission except
+      that June and July 1993 are missing.  Forty-four (44) TRO files cover
+      1990 (days 091-365), 1991 (except that February - April are missing),
+      1992 (January - August are missing), 1993, and 1994 (through end of
+      mission).  Fifteen (15) WEA files are included, covering 1989 through
+      1994 except that 1991 files are missing for all DSN complexes.
+ 
+    Limitations
+    ===========
+      No limitations are known other than those which would apply
+      when working with data of this quality.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

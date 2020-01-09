@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_Host_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument_host:earth-based.astr</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IHW ASTROMETRY NETWORK</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_Host_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_halley_watch::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:astr.astr::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.1p-halley_1_1682_q1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zdenek (ed.), &apos;The Comet Halley Archive Summary Volume&apos;, Jet
+                   Propulsion Laboratory, California Institute of Technology, Pasadena,
+                   California, JPL D-400-450, August 1991.
+            </reference_text>
+            <description>reference.JPL_D-400-450</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_Host_PDS3>
+        <instrument_host_name>IHW ASTROMETRY NETWORK</instrument_host_name>
+        <instrument_host_desc>
+      Instrument Host Overview
+      ========================
+      The International Halley Watch was an international effort
+      to coordinate ground-based observations of comet 1P/Halley
+      during its 1986 apparitions, in order to maximize the
+      benefits of ground-based observations and to support the
+      various international flight missions to the comet.  The
+      IHW was divided into several disciplines networks, each
+      headed by one or more discipline specialists.  The
+      Astrometry Network is one of these discipline networks.
+      The discipline specialists for Astrometry were:
+ 
+        Donald K. Yeomans     Jet Propulsion Laboratory
+        Richard M. West       European Southern Observatory
+        Robert S. Harrington  U.S. Naval Observatory
+        Brian G, Marsden      Harvard-Smithsonian Center
+                                for Astrophysics
+ 
+      The goal of the Astrometry Network as to coordinate and
+      archive astrometric observations of 1P/Halley.  These
+      data were fed to the orbit determination center at JPL,
+      and the resulting orbit and ephemeris information
+      forwarded to observers and flight missions around the
+      globe.  430 observers working at 148 different
+      observatories contributed observations to the final
+      archive
+ 
+      Observatories
+      =============
+      148 observatories were involved in this effort.  They are
+      identified by system code in the data tables.  Following
+      is a list of the system codes:
+ 
+                     ASTROMETRY DISCIPLINE
+ 
+          ___________________________________________________________
+          SYSTEM  OBSERVATORY            LOCATION
+          ___________________________________________________________
+          15030000 Cambridge              England,U.K.
+          15860000 Pic Du Midi            France
+          15010000 Royal Greenwich Obs.   Herstmonceux,
+                                          England,U.K.
+          15760000 Burwash                England,U.K.
+          15020000 Colchester             England,U.K.
+          10060000 Fabra Obs.             Barcelona,Spain
+          10910000 St. Etienne            France
+          10120000 Uccle Obs.             Uccle,Brussels, Belgium
+          15090000 La Seyne Sur Mer       France
+          15750000 La Chaux De Fonds      Switzerland
+          10170000 Hoher List Obs.        Hoher List,Federal
+                                          Republic of Germany
+          10100000 CERGA                  Caussols,France
+          10200000 Nice                   France
+          10260000 Berne-Zimmerwald       Berne, Switzerland
+          15770000 Metzerlen Obs.         Switzerland
+          10220000 Pino Torinese          Torino, Italy
+          10900000 Mainz                  Fed. Republic of Germany
+          10240000 State Obs.at           Heidelberg, Federal
+                   Konigstuhl             Republic of Germany
+          10960000 Merate                 Italy
+          15280000 Gottingen              Fed. Republic of Germany
+          15650000 Brescia                Italy
+          15740000 Gottolengo             Italy
+          15710000 Cavriana               Italy
+          15520000 Osservatorio           Bologna, Italy
+                   San Vittore
+          10980000 Cima Ekar              Padua, Italy
+                   Asiago Astrophys. Obs.
+          10330000 Karl Schwarzschild     Tautenburg, German
+                   Obs.                   Democratic Republic
+          15670000 Chions                 Italy
+          15440000 Wilhelm Foerster Obs.  Berlin, Federal
+                                          Republic of Germany
+          10460000 Klet Obs.              Ceske Budejovice,
+                                          Czechoslovakia
+          15800000 Graz                   Austria
+          15620000 Figl Obs.              Vienna, Austria
+          10450000 Vienna (since 1879)    Austria
+          10470000 Poznan                 Poland
+          10490000 Uppsala-Kvistaberg     Uppsala, Sweden
+          10510000 Cape of Good Hope      South Africa
+          10920000 Torun-Piwnice Obs.     Poland
+          15530000 Chorzow                Poland
+          15550000 Cracow-Fort Skala      Poland
+          15610000 Piszkesteto            Hungary
+          10560000 Skalnate Pleso Obs.    Skalnate Pleso,
+                                          Czechoslovakia
+          10930000 Skibotn Obs.           Skibotn, Norway
+          10570000 Belgrade               Yugoslavia
+          10610000 Uzhgorod               U.S.S.R.
+          10630000 Turku-Tuorla           Finland
+          15810000 Sedgefield Obs.        South Africa
+          10690000 Baldone (near Riga)    U.S.S.R.
+          10710000 Sofia                  Bulgaria
+          10990000 Lahti                  Finland
+          10730000 Bucharest              Romania
+          10750000 Tartu                  U.S.S.R.
+          15830000 Odessa - Mayaki        U.S.S.R.
+          10840000 Pulkovo Obs.           Leningrad, U.S.S.R.
+          10830000 Centr. Astrophys. Obs. Golosseevo-Kiev, U.S.S.R.
+          10850000 Kiev University Obs.   Kiev, U.S.S.R.
+          10870000 Helwan                 Egypt
+          10890000 Nikolaev               U.S.S.R.
+          10940000 Crimea-Simeis          U.S.S.R.
+          10950000 Crimea-Nauchnij        U.S.S.R.
+          11010000 Kharkov                U.S.S.R.
+          11020000 Zvenigorod             U.S.S.R.
+          11050000 Moscow                 U.S.S.R.
+          11150000 Zelenchukskaya         U.S.S.R.
+          11140000 Engelhardt Obs.        Zelenchuk Stn., U.S.S.R.
+          11190000 Abastuman              U.S.S.R.
+          11230000 Byurakan               U.S.S.R.
+          11290000 Ordubad                U.S.S.R.
+          11360000 Engelhardt Obs.        Kazan, U.S.S.R.
+          11680000 Kourovskaya            U.S.S.R.
+          11860000 Kitab                  U.S.S.R.
+          11880000 Majdanak               U.S.S.R.
+          11900000 Gissar                 U.S.S.R.
+          11910000 Dushanbe               U.S.S.R.
+          11930000 Sanglok                U.S.S.R.
+          11920000 Tashkent               U.S.S.R.
+          12100000 Alma-Ata               U.S.S.R.
+          12140000 Kazakh Astrophy. Inst. U.S.S.R.
+                   Coronal Sta.
+          12170000 Assah                  U.S.S.R.
+          12190000 Japal-Rangapur Obs.    Japal, India
+          12860000 Yunnan Obs.            Kunming, China
+          13050000 Purple Mt. Obs.        Hainan Island
+                                          Station, China
+          13120000 Xisha Islands          South China Sea
+                   (Paracel Is.)
+          13230000 Perth Obs.             Bickley,
+                                          Western Australia,
+                                          Australia
+          13240000 Beijing Obs.           Shaho Station,
+                                          China
+          13300000 Purple Mountain Obs.   Nanking, China
+          13340000 Qingdao                China
+          13370000 Zo-Se                  China
+          13710000 Tokyo-Okayama          Japan
+          13720000 Geisei                 Japan
+          13780000 Murou                  Japan
+          18810000 Toyota                 Japan
+          13810000 Tokyo-Kiso             Japan
+          13790000 Hamamatsu              Japan
+          18920000 YGCO Hoshikawa and     Japan
+                   Nagano Stations
+          18890000 Karasuyama             Japan
+          13910000 Sendai Obs.            Ayashi Stn.,
+                                          Ayashi, Japan
+          18930000 Sendai Municipal Obs.  Sendai, Japan
+          13920000 JCPM Sapporo Station   Sapporo, Japan
+          13970000 Sapporo Science Center Sapporo, Japan
+          13960000 Asahikawa              Japan
+          13990000 Kushiro                Japan
+          14140000 Mount Stromlo          A.C.T., Australia
+          14150000 Kambah (near Canberra) New South Wales,
+                                          Australia
+          14130000 Siding Spring Obs.     New South Wales,
+                                          Australia
+          14200000 Sydney                 New South Wales,
+                                          Australia
+          14250000 Taylor Range Obs.      Brisbane, Queensland,
+                                          Australia
+          14740000 Mount John Obs.        Lake Tekapo, New Zealand
+          14830000 Carter Obs.            Black Birch Station,
+                                          New Zealand
+          15680000 Mauna Kea              Hawaii, U.S.A.
+          16560000 Near Victoria          British Columbia, Canada
+          16570000 Victoria               British Columbia, Canada
+          16620000 Lick Obs.              Mount Hamilton,
+                                          California, U.S.A.
+          16750000 Palomar Mountain       California, U.S.A.
+          16910000 Steward Obs.           Kitt Peak, Tuscon,
+                                          Arizona, U.S.A.
+          16950000 Kitt Peak National Obs.Tucson, Arizona, U.S.A.
+          16880000 Lowell Obs.            Anderson Mesa,
+                                          Arizona, U.S.A.
+          16860000 U. Of Minn. Ir Obs.    Mt.Lemmon, Arizona,U.S.A.
+          16930000 Catalina Station       Tucson, Arizona, U.S.A.
+          17070000 Chamberlin Field Stn.  Bailey, Colorado, U.S.A.
+          17110000 McDonald Obs.          Fort Davis, Texas, U.S.A.
+          17710000 Boyeros                Habana, Cuba
+          17810000 Quito                  Ecuador
+          17820000 Comet Astrographic Stn.Quito, Ecuador
+          17880000 Mount Cuba Obs.        Greenville,
+                                          Delaware, U.S.A.
+          12930000 Burlington             New Jersey, U.S.A.
+                   (Remote Site)
+          17920000 University of Rhode Is.Quonochontaug,
+                                          Rhode Island, U.S.A.
+          18010000 Obs.Ridge Observatory  Harvard,
+                                          Massachusetts, U.S.A.
+          13020000 U. Of The Andes        Venezuela
+                   Astronomical Sta.
+          18050000 Santiago-Cerro El RobleChile
+          13030000 Merida                 Venezuela
+          18070000 Cerro Tololo Obs.      La Serena, Chile
+          18090000 European Southern Obs. La Silla, Chile
+          18080000 El Leoncito            Argentina
+          18200000 Tarija                 Bolivia
+          18210000 Cordoba-Bosque Alegre  Argentina
+          18220000 Cordoba                Argentina
+          19500000 La Palma               Canary Islands
+          14910000 Centro Astronomico     Yebes, Spain
+                   De Yebes
+          14820000 St. Andrews            Scotland,U.K.
+          19800000 Lancaster              England,U.K.
+          19840000 Eastfield              England,U.K.
+          14930000 Centro Astronomico     Calar Alto, Spain
+                   Hispano-Aleman
+          19930000 Woolston Obs.          England,U.K.
+          14940000 Stakenbridge           England,U.K.
+          19780000 Conder Brow            England,U.K.
+          19760000 Leamington Spa         England,U.K.
+          19960000 Oxford                 England,U.K.
+          19790000 South Wonston          England,U.K.
+          19750000 Valencia               Spain
+          __________________________________________________________
+
+        </instrument_host_desc>
+        <instrument_host_id>ASTR</instrument_host_id>
+        <instrument_host_type>Earth Based</instrument_host_type>
+    </Instrument_Host_PDS3>
+</Product_Instrument_Host_PDS3>

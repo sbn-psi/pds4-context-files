@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-chemcam-libs-4-5-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS CHEMCAM LIBS SPECTRA 4/5 RDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:chemcam_libs.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemcam-libs-4-5-rdr-v1.0__browserp_msl-m-chemcam-libs-4-5-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemcam-libs-4-5-rdr-v1.0__dvo_geo_msl-m-chemcam-libs-4-5-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-chemcam-libs-4-5-rdr-v1.0__pds.geo.msl.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Maurice, S., R.C. Wiens, et al., The ChemCam instrument suite on the Mars
+                   Science Laboratory (MSL) Rover: Science objectives and mast unit description,
+                   Space Sci. Rev. doi:10.1007/s11214-012-9912-2, 2012.
+            </reference_text>
+            <description>reference.MAURICEETAL2012</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Wiens, R.C., S. Maurice, et al., The ChemCam instrument suite on the Mars
+                   Science Laboratory (MSL) Rover: Body unit and combined system tests, Space Sci.
+                   Rev. doi:10.1007/s11214-012-9902-4, 2012.
+            </reference_text>
+            <description>reference.WIENSETAL2012A</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-CHEMCAM-LIBS-4/5-RDR-V1.0</data_set_id>
+        <data_set_name>MSL MARS CHEMCAM LIBS SPECTRA 4/5 RDR V1.0</data_set_name>
+        <data_set_release_date>2013-12-13</data_set_release_date>
+        <start_time>2012-08-06T00:00:00Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>ROGER WIENS</producer_full_name>
+        <citation_text>
+            Wiens, R., MSL ChemCam Laser Induced Breakdown Spectrometer
+            derived data, MSL-M-CHEMCAM-LIBS-5-RDR-V1.0, NASA Planetary Data
+            System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            The MSL ChemCam LIBS RDR data set contains calibrated spectra and
+            higher level products derived from raw data collected by the
+            ChemCam Laser Induced Breakdown Spectrometer on the Mars Science
+            Laboratory rover.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The MSL ChemCam LIBS RDR data set contains calibrated spectra and
+            higher level products derived from raw data collected by the
+            ChemCam Laser Induced Breakdown Spectrometer on the Mars Science
+            Laboratory rover. Standard derived products include summed
+            calibrated spectra (RDR), CCS (Intermediate Clean Calibrated
+            Spectra), and MOC (Multivariate Prediciton of Oxide Composition)
+            tables. Special products, which may be generated as needed and as
+            resources permit, are UEC (Univariate Prediction of Elemental
+            Composition) tables, UOC (Univariate Prediction of Oxide
+            Composition) tables, MEC (Multivariate Prediction of Elemental
+            Composition) tables, and RSM (Sammon&apos;s Map) tables.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+      ChemCam LIBS RDR data set contains calibrated spectra and higher level
+      products derived from raw data collected by the ChemCam Laser Induced
+      Breakdown Spectrometer on the Mars Science Laboratory rover. Standard
+      derived products include summed calibrated spectra (RDR),
+      CCS (Intermediate Clean Calibrated Spectra) and MOC (Multivariate
+      Prediciton of Oxide Composition) tables.
+ 
+      The MOC results are based on the average of the CCS.  Shot to shot
+      MOC results can be requested from the chemcam team.
+ 
+ 
+  Processing
+  ==========
+      The Committee On Data Management and Computation (CODMAC) data
+      level numbering system is used to describe the processing level
+      of the EDR data product.  ChemCam LIBS data products are considered
+      CODMAC Level 4/5(equivalent to NASA level 1B/level 2) products.
+ 
+      ChemCam processed data products are generated by the ChemCam team.
+      They consist of an RDR (reduced data record) spectrum produced by
+      averaging spectra from all but the first five laser pulses at each
+      observation point, subtracting a background, removing high-frequency
+      noise, and removing the white-light continuum; a clean calibrated
+      spectrum (CCS) produced by correcting for the instrument optical
+      response in addition to the RDR processing mentioned above; and mean
+      oxide compositions (MOC) for the major elements SiO2, TiO2, Al2O3,
+      FeOT, MgO, CaO, Na2O, and K2O determined by using a partial least
+      squares (PLS) regression algorithm trained on a LIBS spectral library.
+      Data processing details are given in Wiens et al., 2013. In place of
+      the PLS2 algorithm described in Wiens et al., 2013, the ChemCam team
+      now uses a PLS1 algorithm. Whereas PLS2 regresses against all elements
+      simultaneously, PLS1 regresses each element separately. Using PLS1 has
+      several advantages due to the fact that elements can be treated
+      separately.  The number of components used in determining the
+      oxide wt. % abundances can be optimized individually for each element.
+      This is helpful, as the major elements manifest themselves very
+      differently in the spectra, with some elements like Na and K having
+      very few major emission lines and other elements like Fe having
+      hundreds of emission lines.  Optimizing the number of components
+      separately for each element thus makes sense. Secondly, the list of
+      standards used in the training set can be changed for different
+      elements. This is important because a few elements, especially among
+      minor or trace elements, do not have certified values for all of the
+      standards. PLS1 also allows different normalization treatments for the
+      different elements. We have found that normalizing each spectrometer
+      output separately improves the results in a few cases over normalizing
+      to the combined output of all three spectrometers together.
+ 
+      The number of components and normalization (1 = normalization to total
+      emission sum; 3 = separate normalization of total emission for each
+      spectrometer) is given below, as well as statistics on the
+      compositional ranges and distributions for the training set, and the
+      root mean square error (RMSE) are given in the table below:
+ 
+                           SiO2 TiO2 Al2O3 FeOT   MgO  CaO Na2O K2O Total
+TRAINING SET MIN.           0.2    0     0    0     0  0.1    0   0
+TRAINING SET 1ST QUARTILE  40.8 0.27     5  2.7   0.8  2.5  0.3 0.3
+TRAINING SET MEDIAN        48.6 0.68  13.1    6   2.2  7.1  2.4 0.8
+TRAINING SET 3RD QUARTILE  59.3 1.47  16.1 12.1   6.4 12.8  3.4 1.8
+TRAINING SET MAX.          75.4  5.9  38.8 36.2  49.2 54.9  5.9 6.4
+NORMALIZATION                 3    1     1    1     1    3    1   3
+NUMBER OF COMPONENTS          8   10     4    7     8    8   10   4
+RMSEP                       7.1 0.55   3.7    4     3    3  0.7 0.9 10
+ 
+ 
+ 
+  Data
+  ====
+      Each ChemCam LIBS RDR data file is a table. Columns are
+      variable length and are delimited with commas. Each row is
+      terminated with a carriage return and line feed character.
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+       CCS: slight issues with continuum removal. See Wiens et al., 2013.
+       MOC:
+ 
+  Review
+  ======
+      This ChemCam archive has undergone a standard Planetary Data System
+      peer review.
+ 
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

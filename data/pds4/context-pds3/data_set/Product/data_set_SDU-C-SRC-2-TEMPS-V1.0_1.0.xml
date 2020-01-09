@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.sdu-c-src-2-temps-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>STARDUST SRC TEMPERATURE DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.stardust::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:src.sdu::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.81p-wild_2_1978_a2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:unk.unk::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.sdu-c-src-2-temps-v1.0__browserp_sdu-c-src-2-temps-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>SDU-C-SRC-2-TEMPS-V1.0</data_set_id>
+        <data_set_name>STARDUST SRC TEMPERATURE DATA V1.0</data_set_name>
+        <data_set_release_date>2006-07-07</data_set_release_date>
+        <start_time>1999-03-01T08:46:03Z</start_time>
+        <stop_time>2006-01-15T05:56:24Z</stop_time>
+        <producer_full_name>Tony Farnham</producer_full_name>
+        <citation_text>
+            Farnham, T.L., Semenov, B., STARDUST SRC TEMPERATURE DATA,
+        </citation_text>
+        <data_set_terse_desc>
+            Temperature measurements from multiple sensors in the Sample
+            Return Capsule of the Stardust spacecraft
+        </data_set_terse_desc>
+        <abstract_desc>
+            Temperature measurements from twelve different sensors in the
+            Sample Return Capsule of the Stardust spacecraft. Data begins
+            shortly after launch and ends shortly before the SRC separated
+            from the spacecraft and re-entered the Earth&apos;s atmosphere.
+        </abstract_desc>
+        <data_set_desc>
+ 
+The descriptions in this file were written by Tony Farnham using
+information from the ``Stardust Mission Plan document&apos;&apos; (used by
+permission from the Stardust project).
+ 
+ 
+Data Set Overview
+=================
+ 
+This data set presents the temperature measurements of the Stardust
+Sample Return Capsule (SRC).  Twelve different sensors were placed at
+various locations in the SRC and used to monitor the thermal
+environment and the temperature of the individual components of the
+instrument.  Temperatures measured by each sensor were recorded,
+typically every few minutes, throughout the mission.  The last
+measurements were taken shortly before the SRC separated from the main
+body of the spacecraft.
+ 
+  SRC Temperature Sensors
+  -----------------------
+ 
+    The following temperature sensors were installed inside Stardust
+    Sample Return Capsule (SRC).
+ 
+      Name                   Acronym   # on Diagram  Location
+      ---------------------  --------  ------------  -------------
+      Avionics/Sensor 1      AV_TMP1          1      Avionics side
+      Avionics/Sensor 2      AV_TMP2          2      Avionics side
+      Battery/Sensor 1       BAT_TMP1         3      Avionics side
+      Battery/Sensor 2       BAT_TMP2         4      Avionics side
+      Hinge Sensor           HING_TMP         5      Avionics side
+      Latch 1 Sensor         LAT1_TMP         6      Avionics side
+      Latch 2 Sensor         LAT2_TMP         7      Avionics side
+      Shoulder Sensor        SHLD_TMP         8      Avionics side (?)
+      Separation Mechanism   SEPM_TMP         9      Avionics side
+      Parachute Sensor       PARA_TMP        10      Avionics side
+      Wrist Motor/Sensor 1   WRT_M_T1        11      Collector side
+      Wrist Motor/Sensor 2   WRT_M_T2        12      Collector side
+ 
+   Notes: The heater(s) that maintained avionics and battery
+   temperature were located on the avionics side of the deck. The
+   shoulder and wrist sensor readouts are probably most representative
+   of the collector temperature.
+ 
+ 
+  Avionics Side of the SRC Deck:
+  ------------------------------
+ 
+                                   +Z
+                                    ^
+                                    |
+                                    |    Shoulder motor
+                                       /
+                                . ----/ .
+                  Latch 1 --&gt; /6    _v   7\ &lt;--- Latch 2
+                            .&apos;\/   |8|   \/`.
+                           /        -        \
+                              ___        3    .
+                          |  |   2  o   | |   |   ---&gt; +Y
+                          .  |   |      | | &lt;--- Battery
+          Avionics box ----&gt; |   |   --  4   /
+                            `.1--   | 9| &lt;--- Separation mechanism
+                              `.     --  .&apos;
+                                ` --5-- &lt;--- Hinge motor
+ 
+ 
+  Side View of SRC:
+  -----------------
+                                   +X
+                                    ^     Parachute
+                                    |    /
+                Avionics box        |   /    Battery
+                            \          /    /
+                             \ _______v___ /.
+                            //V__\_10__/  V \\ &lt;--- Back heat-shield
+                           //|   |       | | \\
+                          /=========x==========\  ---&gt; +Y
+                         // .------|    |----. \\
+                         |`.`------11  12----&apos;.&apos;|
+                          `.`.    ^|____|   ^  &apos;
+     Front heat-shield ---&gt; `.`  /        .  \
+                              ` / ______.&apos;.&apos;  \
+                               / --------&apos;      Collector
+                         Wrist Mechanism
+ 
+ 
+ 
+Event Timing
+------------
+ 
+Below is a list of mission phases and events that could affect the
+temperature of the SRC components, and the dates when they occurred
+during the mission.
+ 
+DSM events -- Deep space maneuvers, which produce changes in the
+              spacecraft orbit
+ISP events -- Periods when the SRC is open and the collector is deployed
+              to collect samples of interstellar dust particles
+ 
+Launch                        1999 Feb  7
+Spacecraft Checkout Phase     1999 Feb  7 - 1999 Mar  8
+Cruise 1 Phase                1999 Mar  8 - 2000 Nov 14
+DSM1                          2000 Jan 18-22
+Orbit 1 Aphelion (2.19 AU)    2000 Feb  9
+ISP1                          2000 Feb 22 - 2000 May  1
+Earth Flyby Phase             2000 Nov 14 - 2001 Feb 14
+Earth Gravitational Assist    2001 Jan 15
+Cruise 2 Phase                2001 Feb 14 - 2003 Sep 24
+DSM2                          2002 Jan 24
+Orbit 2 Aphelion (2.72 AU)    2002 Apr 18
+ISP2                          2002 Aug  5 - 2002 Dec  9
+Annefrank Encounter Phase     2002 Oct 31 - 2002 Nov  5
+Annefrank Flyby               2002 Nov  2
+DSM3                          2003 Jun 17-18
+Orbit 2 Perihelion (0.98 AU)  2003 Jul 22
+Wild 2 Encounter Phase        2003 Sep 24 - 2004 Feb 21
+Wild 2 Flyby                  2004 Jan  2
+DSM4                          2004 Feb  2
+Cruise 3 Phase                2004 Feb 21 - 2005 Oct 17
+Orbit 3 Aphelion (2.68 AU)    2004 Oct 17
+Earth Return Phase            2005 Oct 17 - 2006 Jan 16
+SRC Re-entry                  2006 Jan 15
+ 
+SRC separation from the main body of the spacecraft occurred at 05:57
+UT on 2006 Jan 15.  The capsule re-entered the Earth&apos;s atmosphere at
+09:57 UT and landed at 10:10 UT on the same date.
+        </data_set_desc>
+        <confidence_level_note>
+In general, the precision of
+       the temperature measurements is approximately 0.2 C, even
+       though the entries are given to six decimal places.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

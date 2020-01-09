@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.grail-l-rss-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GRAIL MOON RSS RAW DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.gravity_recovery_and_interior_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.grail-a::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lgrs-a.grail-a::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-rss-2-edr-v1.0__browserp_grail-l-rss-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.grail-l-rss-2-edr-v1.0__dvo_grail-l-rss-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Deep Space Mission System (DSMS) External Interface Specification (820-013, JPL
+                   D-16765), Radio Science Receiver Standard Formatted Data Unit (SFDU), Jet
+                   Propulsion Laboratory, Pasadena, CA, 2001.
+            </reference_text>
+            <description>reference.JPLD-16765</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GRAIL-L-RSS-2-EDR-V1.0</data_set_id>
+        <data_set_name>GRAIL MOON RSS RAW DATA V1.0</data_set_name>
+        <data_set_release_date>2014-04-01</data_set_release_date>
+        <start_time>2011-09-10</start_time>
+        <stop_time>2012-12-18</stop_time>
+        <producer_full_name>DANIEL S. KAHAN</producer_full_name>
+        <citation_text>
+            KAHAN, D.S., GRAIL RSS Raw Data Set V1.0, GRAIL-L-RSS-2-EDR-V1.0,
+            NASA Planetary Data System, 2012.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw radio science data and ancillary files from the Gravity
+            Recovery and Interior Laboratory (GRAIL) mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival raw, partially processed, and
+            ancillary/supporting radio science data acquired during the
+            Gravity Recovery and Interior Laboratory (GRAIL) mission. The
+            radio observations were carried out using the twin GRAIL
+            spacecraft and Earth-based receiving stations of the NASA Deep
+            Space Network (DSN). The observations were used in generating
+            high-resolution gravity field models of the Moon. Of most
+            interest are likely to be the Orbit Data Files in the ODF
+            directory, the Radio Science Receiver files in the RSR directory,
+            and the ionospheric and tropospheric media calibration files in
+            the ION and TRO directories, respectively. The data set includes
+            all raw radio science data collected in the course of the GRAIL
+            mission (September 2011 - December 2012).
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Gravity Recovery and Interior Laboratory (GRAIL) Radio
+      Science (RSS) Raw Data Archive is a time-ordered collection of
+      raw and partially processed data collected during the GRAIL
+      mission to the Moon.
+ 
+      The DATA_SET_ID &apos;GRAIL-L-RSS-2-EDR-V1.0&apos; includes the following
+      components:
+          Instrument host (i.e., &apos;GRAIL&apos;)
+          Target (i.e., &apos;L&apos; for Lunar)
+          Instrument (i.e., &apos;RSS&apos; for Radio Science Subsystem)
+          CODMAC Data processing level number (i.e., &apos;2&apos;)
+          Description (i.e., &apos;EDR&apos; for Experiment Data Record)
+          Version number (i.e., &apos;V1.0&apos;)
+ 
+      This data set was collected beginning in September 2011.
+ 
+      Two types of measurements were obtained; these are known as
+      closed-loop and open-loop recordings.  The closed-loop system
+      uses a phase-lock loop in the receiver to track the downlink
+      signal, reporting both amplitude and frequency 1-10 times per
+      second.  In the open-loop system, the signal is simply converted
+      to a baseband frequency range; the entire passband is sampled
+      and recorded at 1000 or more samples per second for later
+      processing.
+ 
+      Closed-loop data are efficient for characterizing slowly
+      changing signals and are the input to operational navigation and
+      orbit-determination processes. Open-loop data (because of their
+      much higher rate and volume) are usually collected when the
+      signal is expected to be very dynamic.
+ 
+      The data set includes two primary data types. Orbit Data Files
+      (ODFs) are a product of the closed-loop system, and they are
+      specifically targeted to spacecraft navigators and scientists
+      interested in gravity fields. Also included are Tracking and
+      Navigation Service Data Files (TNFs), the most primitive (and
+      most voluminous) product of the closed-loop system. Orbit Data
+      Files (ODFs) are compressed versions of TNFs.  In the GRAIL
+      context TNFs are not considered to be a primary data type.
+      Radio Science Receiver records (RSRs) are the primary data type
+      from the open-loop system.
+ 
+      Typical users of these data might analyze range and Doppler
+      measurements in ODFs to reconstruct the spacecraft trajectory.
+      Relevant questions would include the measurement uncertainties
+      in range and Doppler at different DSN antennas; these could set
+      constraints on any model of the Moon&apos;s gravity field developed
+      later, for example.
+ 
+ 
+    Parameters
+    ==========
+      The ODF is a compressed version of the TNF. It contains the most
+      important information (range, Doppler and frequency ramps)
+      needed by spacecraft navigators and investigators interested
+      in determining gravity fields. Each ODF is accompanied by a full
+      PDS label which describes both the content and format of the
+      associated file. ODF data fields include:
+           Narrowband spacecraft VLBI, Doppler mode (cycles)
+           Narrowband spacecraft VLBI, phase mode (cycles)
+           Narrowband quasar VLBI, Doppler mode (cycles)
+           Narrowband quasar VLBI, phase mode (cycles)
+           Wideband spacecraft VLBI (nanoseconds)
+           Wideband quasar VLBI (nanoseconds)
+           One-way Doppler (Hertz)
+           Two-way Doppler (Hertz)
+           Three-way Doppler (Hertz)
+           One-way total count phase (cycles)
+           Two-way total count phase (cycles)
+           Three-way total count phase (cycles)
+           PRA planetary operational discrete spectrum range (range
+                units)
+           SRA planetary operational discrete spectrum range (range
+                units)
+           RE(GSTDN) range (nanoseconds)
+           Azimuth angle (degrees)
+           Elevation angle (degrees)
+           Hour angle (degrees)
+           Declination angle (degrees)
+ 
+      The Radio Science Receiver (RSR) files are the primary output
+      from the Cassini open-loop system and they contain 16-bit
+      samples of receiver output. Each RSR file is accompanied by a
+      full PDS label which describes both the content and format of
+      the file at the bit level [JPLD-16765].
+ 
+ 
+    Processing
+    ==========
+      ODFs are constructed by the RMDCT; they are constructed so that
+      each file contains the data for approximately one day each. ODFs
+      are abstracted from subsets of TNF data.
+ 
+      A full PDS label accompanies each ODF file and gives a bit level
+      description of the content and format.
+ 
+      The open-loop Radio Science Receiver (RSR) files are screened
+      for gaps.  No gaps were found in the RSR files for this archive.
+      Each RSR file corresponds to one tracking pass at the DSN.
+ 
+ 
+    Data
+    ====
+      ODFs in this archive are primarily 1-sec Doppler S-band data.
+      RSRs in this archive are X-Band data.
+ 
+      The typical ODF contains about 3 Mbytes. The typical RSR
+      contains from about 30 Mbytes to about 165 Mbytes depending on
+      Doppler mode and station (i.e., track duration).
+ 
+      TNFs, from which ODFs originate, are included in this archive
+      for completeness.
+ 
+ 
+    Secondary Data
+    ==============
+      Secondary data are needed for proper analysis and interpretation
+      of the radio data (ODF and RSR). Sky frequency has been computed
+      from open-loop data (RSR) by the GRAIL Radio Science Systems
+      Group in file type XFR. The TDM contains the same information as
+      the XFR except in Tracking Data Message Standard format. The
+      Open Loop File (OLF) contains the sky frequency information
+      derived from RSR data, but in the format of the ODF.
+ 
+      The &apos;biased TDM&apos; product (BTM) is in exactly the same format as
+      the TDM. It is generated by subtracting off a one-way Doppler
+      frequency bias at X-band from the TDM file containing the raw
+      one-way Doppler measurement provided by the radio science team.
+      The one-way Doppler frequency bias was estimated every orbit
+      (approximately 2 hours) as part of the gravity field
+      determination process and the estimates are reported in the USO1A
+      data product (in the LGRS CDR data set). The one-way Doppler bias
+      is computed by linearly interpolating the one-way Doppler bias
+      time series in the USO1A product to the time tag of the one-way
+      Doppler measurement. The computed one-way Doppler bias is then
+      subtracted from the original raw TDM value and the result is
+      stored in the &apos;biased TDM&apos; product. The &apos;biased TDM&apos; product is
+      intended to remove non-linear drifts in the one-way Doppler bias
+      induced by solar activity during the GRAIL mission.
+ 
+      The Biased Open Loop File (BOF) is the same format as the OLF and
+      is converted from the BTM.
+ 
+ 
+      Sky Frequency Data (XFR Directory)
+      ---------------------------------------------------
+        Sky frequency (XFR) files are ASCII files with columns as
+        follows: year, day of year, seconds past midnight, sky
+        frequency, internal processing parameter generated in the
+        course of creating the XFR but not relevant to GRAIL, internal
+        processing parameter generated in the course of creating the
+        XFR but not relevant to GRAIL. Times are in UTC-ERT and values
+        were computed from RSR data by the Radio Science Systems Group
+        at JPL.
+ 
+      Tracking Data Message Standard (TDM Directory)
+      ---------------------------------------------------
+        XFR files are converted to TDM format by the Radio Science
+        Systems Group at JPL. TDMs are ASCII files, and their complete
+        format requirements are described in
+        TRACKINDATAMESSAGESTANDARD.TXT in the DOCUMENT directory.
+ 
+      Open Loop File (OLF Directory)
+      ---------------------------------------------------
+        For users who prefer to work with software designed for closed-
+        loop data, TDMs (which originate from open-loop data) are
+        converted to the OLF, which is the same (binary) format as the
+        (closed-loop) ODF.
+ 
+      Biased Tracking Data Message Standard (BTM Directory)
+      ---------------------------------------------------
+        BTM files are generated from TDM files as described above.
+        BTMs are ASCII files, and their complete format requirements
+        are described in TRACKINDATAMESSAGESTANDARD.TXT in the
+        DOCUMENT directory.
+ 
+      Biased Open Loop File (BOF Directory)
+      ---------------------------------------------------
+        For users who prefer to work with software designed for closed-
+        loop data, BTMs (which originate from open-loop data) are
+        converted to the BOF, which is the same (binary) format as the
+        (closed-loop) ODF.
+ 
+ 
+    Ancillary Data
+    ==============
+ 
+      The ANCILLARY directory contains calibration files EOP (earth
+      orientation parameters), ION (ionosphere), TRO (troposphere),
+      and WEA (weather).
+ 
+      Earth Orientation Parameter Files (EOP Directory)
+      ---------------------------------------------------
+        Earth Orientation Parameter files are ASCII files; for GRAIL
+        they were produced by the Kalman Earth Orientation Filter
+        (KEOF) Group at JPL. Typical file size is 24 KB.
+ 
+      Ionosphere Calibration Files (ION Directory)
+      ---------------------------------------------------
+        Ionosphere Calibration files were produced by the Tracking
+        System Analytic Calibration (TSAC) Group at JPL. They provided
+        historical and predicted Earth ionospheric conditions. Typical
+        file size is 23 KB.
+ 
+      Troposphere Calibration Files (TRO Directory)
+      ---------------------------------------------------
+        Troposphere Calibration files were produced by the Tracking
+        System Analytic Calibration (TSAC) Group at JPL. They provided
+        historical and predicted Earth tropospheric conditions.
+        Typical file size is 120 KB.
+ 
+      DSN Weather Files (WEA Directory)
+      ---------------------------------------------------
+        DSN Weather files were produced by the Tracking System
+        Analytic Calibration (TSAC) Group at JPL. Files give weather
+        calibration information for DSN complexes. These are ASCII
+        files of variable length records. Each record is delimited by
+        an ASCII line-feed &lt;LF&gt; (ASCII 10). WEA files were typically
+        released weekly and contained all weather data for the complex
+        since 1 January.
+ 
+ 
+    Naming Conventions
+    ==================
+      Orbit Data Files (ODFs) and Tracking and Navigation Files (TNFs)
+      are named, respectively, as follows:
+ 
+      sssttaayyyy_ddd_hhmmwuudV#.odf,
+      sssttaayyyy_ddd_hhmmwuudV#.tnf,
+ 
+      where
+      sss     3-character spacecraft identifier
+              GRA     GRAIL-A
+              GRB     GRAIL-B
+              GRX     both
+      tt      Target ID, e.g., LU = Moon
+      aa      Activity/Experiment ID, e.g. GF = gravity field
+      yyyy    year
+      ddd     day of year
+      hhmm    hours/minutes
+      w       Ground Transmitter Band(s):
+              N       none
+              M       multiple
+              S       S-band
+              X       X-band
+      uu      Uplinking Station(s) = the DSN station number, or
+              NN      none
+              MM      multiple
+      d       way
+              1       one-way
+              2       two-way
+              M       multiple
+      V#      version number
+ 
+      Radio Science Receiver (RSR) data, Tracking Data Messages (TDM),
+      Sky Frequency Files (XFR), Open Loop Files (OLF), Biased
+      Tracking Data Messages (BTM), and Biased Open Loop Files (BOF)
+      are named, respectively, as follows:
+ 
+      sssttaayyyyddd_hhmmxuudrrpD.rcs,
+      sssttaayyyyddd_hhmmxuudrrpD.tdm,
+      sssttaayyyyddd_hhmmxuudrrpD.xfr,
+      sssttaayyyyddd_hhmmxuudrrpD.olf
+      sssttaayyyyddd_hhmmxuudrrpD.btm,
+      sssttaayyyyddd_hhmmxuudrrpD.bof
+ 
+ 
+      where:
+      sss     3-character spacecraft identifier
+              GRA     GRAIL-A
+              GRB     GRAIL-B
+      tt      Target ID, e.g., LU = Moon
+      aa      Activity/Experiment ID, e.g. GF = gravity field
+      yyyy    year
+      ddd     day of year
+      hhmm    hours/minutes
+      xuu     Uplink Transmitter Band (e.g., S, X) and 2-digit
+              Uplinking Station number, or
+              &apos;NNN&apos; = 1-way
+      drr     Downlink Band (e.g., X) and 2-digit Receiving
+              Station number
+      p       Polarization
+               L      left hand
+               R      right hand
+               M      mixed
+      D       Open-loop data type
+               D      RSR data
+               V      VSR data
+               W      WVSR data
+      rcs     RSR number + channel + subchannel
+      tdm     Tracking Data Message
+      xfr     Sky Frequency File
+      olf     Open Loop File
+      btm     Biased Tracking Data Message
+      bof     Biased Open Loop File
+ 
+      Ionospheric Media Calibration (ION) files, Tropospheric Media
+      Calibration (TRO) files, Earth Orientation Parameter (EOP)
+      files, and weather (WEA) files are named, respectively, as
+      follows:
+ 
+      sssttaaYYYY_DDD_yyyy_ddd.ion,
+      sssttaaYYYY_DDD_yyyy_ddd.tro,
+      sssttaaYYYY_DDD_yyyy_ddd.eop,
+      sssttaaYYYYDDDyyyyddd_##.wea,
+ 
+      where:
+      sss     3-character spacecraft identifier
+              GRA     GRAIL-A
+              GRB     GRAIL-B
+              GRX     both
+      tt      Target ID, e.g., LU = Moon (Lunar)
+      aa      Activity/Experiment ID, e.g. GF = gravity field
+      YYYY    start year
+      DDD     start day of year
+      yyyy    end year
+      ddd     end day of year
+       ##     DSN complex number
+ 
+ 
+    Files in the CALIB Directory
+    ============================
+      Files in the CALIB directory are those likely to have wide
+      applicability in working with the raw data.
+ 
+      One file, GRAILCOMPONENTS.TXT is included in the CALIB
+      directory. It describes the Spacecraft bus component model with
+      dimensions and orientations, as well as the spacecraft
+      components specular/diffuse reflectivity properties.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as these
+      has been developed at Stanford University, JPL, and elsewhere.
+      Because such software must usually operate at the bit-level and
+      is written for a narrow range of platforms, it is not suitable
+      for general distribution. No software is included with this
+      archival data set.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been collected to support
+      radio science investigations, in particular derivation of the
+      gravity field of the Moon.  These are similar to data collected
+      using other spacecraft and are believed to be generally of good
+      quality.
+ 
+ 
+    Review
+    ======
+      This archive underwent PDS external review from August 31, 2012
+      to November 30, 2012.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data coverage in this dataset corresponds to individual tracking
+      passes at the DSN. In some cases, supplemental RSR data were
+      collected, in which GRAIL-A data were collected during GRAIL-B
+      tracks or GRAIL-B data were collected during GRAIL-A tracks.
+ 
+      XFRs, TDMs, OLFs, BTMs, and BOFs were created from RSR data with
+      specific parameters and software by the Radio Science Systems
+      Group at JPL. Other software or parameters could be used. Based
+      on the processing at JPL, data with signal-to-noise ratio less
+      than 20 dB-Hz (sometimes higher) were excluded in order to
+      eliminate noise that might be interpreted as signal.
+ 
+      Because DSN tracking occurred every day, the RSS EDR data set
+      contains data from launch until end of mission, whereas the LGRS
+      data sets only cover the periods when the LGRS was turned on.
+      Gaps in DSN coverage are either due to normal DSN scheduling
+      procedures or from occasional equipment problems. In either
+      case, the data set contains all data collected at the DSN.
+ 
+      See mission phases in CATALOG/MISSION.CAT.
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the coverage and
+      quality of the data, as described above.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

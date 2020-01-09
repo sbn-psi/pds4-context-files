@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-e-j-s-sw-mimi-2-chems-uncalib-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CASSINI E/J/S/SW MIMI CHEMS SENSOR UNCALIBRATED DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mimi.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:plasma_stream.solar_wind::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-e-j-s-sw-mimi-2-chems-uncalib-v1.0__browserp_co-e-j-s-sw-mimi-2-chems-uncalib-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Krimigis, S.M., D.G. Mitchell, D.C. Hamilton, S. Livi, J. Dandouras, S.
+                   Jaskulek, T.P. Armstrong, J.D. Boldt, A.F. Cheng, G. Gloeckler, J.R. Hayes,
+                   K.C. Hsieh, W.-H. Ip, E.P. Keath, E. Kirsch, N. Krupp, L.J. Lanzerotti, R.
+                   Lundgren, B.H. Mauk, R.W. McEntire, E.C. Roelof, C.E. Schlemm, B.E. Tossman, B.
+                   Wilken, and D.J. Williams, Magnetosphere Imaging Instrument (MIMI) on the
+                   Cassini Mission to Saturn/Titan, Space Sci Rev. 114, 233-329, 2004.
+            </reference_text>
+            <description>reference.KRIMIGISETAL2004</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kusterer, M.B., L.M. Burke, Level 1A File Layouts, Cassini/MIMI Data Analysis
+                   Center Level 1A File Layouts, The Johns Hopkins University Applied Physics
+                   Laboratory Document, Revision 18, December 2003.
+            </reference_text>
+            <description>reference.KUSTERER-BURKE2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Manweiler, J.W., W.A. Rasmuss, and S. Joy, MIMI Standard Data Products and
+                   Archive Volume Software Interface Specification, v2.1, JPL Document D-31634,
+                   Cassini document IO-AR-006, 2005.
+            </reference_text>
+            <description>reference.MANWEILERETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-E/J/S/SW-MIMI-2-CHEMS-UNCALIB-V1.0</data_set_id>
+        <data_set_name>CASSINI E/J/S/SW MIMI CHEMS SENSOR UNCALIBRATED DATA V1.0</data_set_name>
+        <data_set_release_date>2016-04-01</data_set_release_date>
+        <start_time>1999-01-03T00:00:00Z</start_time>
+        <stop_time>2015-06-30T23:59:59Z</stop_time>
+        <producer_full_name>Jerry W. Manweiler</producer_full_name>
+        <citation_text>
+            Manweiler, J.W., W. Rasmuss, and S. Joy,
+            CO-E/J/S/SW-MIMI-2-CHEMS-UNCALIB-V1.0, NASA Planetary Data
+            System, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains all of the data collected by the CHEMS
+            sensor of the MIMI instrument aboard the Cassini spacecraft for
+            the entire Cassini mission. CHEMS stands for CHarge Energy Mass
+            Spectrometer. See MANWEILERETAL2005
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Cassini Magnetospheric Imaging Instrument(MIMI) Charge Energy
+            Mass Spectrometer (CHEMS) uncalibrated data set includes all data
+            collected from the MIMI Data Processing Unit during the mission.
+            The original data has been decommutated and decoded by software
+            at the Applied Physics Laboratory (APL) and has been then further
+            ordered and filtered by software at Fundamental Technologies,
+            LLC. The data is provided in an uncalibrated form in conjunction
+            with a PDS MIMI calibration volume COMIMI_0000 which provides
+            specific algorithms for the derivation of calibrated data. This
+            data set includes uncalibrated values for each energy and mass
+            channel for the CHEMS sensor for all times during the mission
+            including the Earth flyby, the Jupiter flyby, interplanetary
+            cruise, and the entire Saturn tour. Data are presented in a set
+            of tables which are of variable length and use a comma to
+            separate various fields. This data set is intended to be the most
+            comprehensive and complete data set included in the Cassini MIMI
+            CHEMS archive. A browse data set is included with Key Parameter
+            data that is calibrated using the algorithms provided in the
+            Calibration volume. In addition, a series of images are provided
+            with the KP browse data that displays the KP data which can lead
+            the user to the particular times of interest. This data set
+            should be among the first used by a user of any of the MIMI CHEMS
+            archive as it will lead one to information required to search for
+            more detailed or highly specialized features in the original data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    The Cassini Magnetospheric Imaging Instrument(MIMI) Charge Energy Mass
+    Spectrometer (CHEMS) uncalibrated data set includes all data collected
+    from the MIMI Data Processing Unit during the entire Cassini mission
+    [MANWEILERETAL2005].  The original data has been decommutated and
+    decoded by software at the Applied Physics Laboratory (APL) and has
+    been then further ordered and filtered by software at Fundamental
+    Technologies, LLC. The data is provided in an uncalibrated form in
+    conjunction with a PDS MIMI calibration volume COMIMI_0000 which
+    provides specific algorithms for the derivation of calibrated data.
+    This data set includes uncalibrated values for each energy channel for
+    the CHEMS sensor for all times during the mission including the Earth
+    flyby, the Jupiter flyby, interplanetary cruise, and the entire Saturn
+    tour.  Data are presented in a set of tables which are of variable
+    length and use a comma to separate various fields.  This data set is
+    intended to be the most comprehensive and complete data set included
+    in the Cassini MIMI CHEMS archive.  A browse data set is included with
+    Key Parameter data that is calibrated using the algorithms provided in
+    the Calibration volume. In addition, a series of images are provided
+    with the KP browse data that displays the KP data which can lead the
+    user to the particular times of interest.  This data set should be
+    among the first used by a user of any of the MIMI CHEMS archive as it
+    will lead one to information required to search for more detailed or
+    highly specialized features in the original data.
+ 
+ 
+  Parameters
+  ==========
+    This data set comprises count rates associated with mass, energy, and
+    charge state spectrometer measurements for each telescope of the CHEMS
+    detector in accumulation and science modes.  In addition this data set
+    includes CHEMS PULSE HEIGHT ANALYSIS measurement data for a
+    statistically select sample of the particle measurements. The standard
+    product ID&apos;s are:
+ 
+    CHEMS Accumulation Rate Data - telescope count rate measurements
+    CHEMS Science Rate Data - mass per charge, mass and charge count rate
+                              measurements.
+    CHEMS Pulse Height Analysis Data - Statistically sampled set of
+                                       discrete particle measurements.
+ 
+    The data is organized in time by the spin of the spacecraft.  When the
+    spacecraft is in staring mode then the MIMI DPU automatically creates
+    a virtual spin that divides the time collection periods into 16
+    sectors, 16 subsectors, and 16 microsectors and maintains a simple
+    organizational structure for characterizing the collection of the time
+    into time segments.  When the spacecraft is spinning at a minimally
+    defined spin rate (adopted by the MIMI DPU) then the MIMI data is
+    automatically segregated into 16 sectors, 16 subsectors, and 16
+    microsectors.  When the spacecraft is spinning and the LEMMS
+    instrument is rotating the LEMMS rotation period is synchronized to
+    the spacecraft spin period so that there are 16 sectors in a spin, 16
+    subsectors in a sector and 16 microsectors in a subsector.  The CHEMS
+    and INCA instrument collection times are then also keyed to these
+    values.
+ 
+  Processing
+  ==========
+    Data in this data set were processed by the use of a number of
+    software programs which assemble segmented mini-packets in the raw
+    telemetry packets into complete sets, de-compress the data that were
+    compressed by one of a number of compression algorithms by the MIMI
+    flight software onboard and organize the channel data into
+    appropriate time segments.
+ 
+ 
+  Data
+  ====
+    The MIMI CHEMS uncalibrated data set includes three ASCII CSV tables
+    (each associated with a Standard Product ID of CHEMS Rate data as a
+    function of time collected from the MIMI CHEMS Detectors and collated
+    into data sets. Each table contains variable length records for which
+    the fields are comma delimited.
+ 
+ 
+    CHEMS Accumulation Rate Data
+    ----------------------------
+ 
+      Fields include:
+        a purpose identifier where science data records are identified
+        with purpose = sci
+        starting and ending ephemeris times
+        Spin, sector, subsector (and for CHEMS Fine Rate (FRT) data
+        microsector)
+        SCLOCK and spin period that are used to derive the starting
+        ephemeris time
+           Notes regarding the SCLOCK value:
+           1.  Only the SCLOCK major segment value is provided - MIMI
+               currently does not have access to the fine SCLOCK value
+               hence SCLOCK resolution is limited to +- 1/2 SCLOCK count
+           2.  The SCLOCK is only available from telemetry at the
+               beginning of each spin. All other published SCLOCKS are
+               derived from the spin starting SCLOCK, the spin numbers
+               (for the current and next available spins), and the spin
+               period.
+           3.  SCLOCK values are assumed to drive the value of the
+               ephemeris times and not vice-versa. All effort is made to
+               validate the published ephemeris times but since updates to
+               the Cassini SCLOCK kernel in SPICE can occur the values of
+               ephemeris time are only as accurate as the currently
+               published Cassini SCLOCK SPICE kernel.
+        Spacecraft staring mode where staring = 0 when spinning and 1
+        otherwise
+ 
+        CHEMS Accumulation rate data organized as:
+          DPPS Step - the controlling parameter that identifies the
+          current Spectrometer energy level
+          Start, Stop, and Sum of the number of triggering events for each
+          telescope
+          Energy count of the number of triggering events for each
+          telescope and a summation
+          Double coincidence counts for each telescope and a summation
+          triple coincidence counts for each telescope and a summation
+          UFSR counts (Universal Front SEDA Rate - Secondary Electron
+          Detector Assembly)
+          URSR counts (Universal Rear SEDA Rates)
+ 
+ 
+    CHEMS Science Rate Data
+    -----------------------
+ 
+      Fields include:
+        a purpose identifier where science data records are identified
+        with purpose = sci
+        starting and ending ephemeris times
+        Spin, sector, subsector
+        SCLOCK and spin period that are used to derive the starting
+        ephemeris time
+           Notes regarding the SCLOCK value:
+           1.  Only the SCLOCK major segment value is provided - MIMI
+               currently does not have access to the fine SCLOCK value
+               hence SCLOCK resolution is limited to +- 1/2 SCLOCK count
+           2.  The SCLOCK is only available from telemetry at the
+               beginning of each spin. All other published SCLOCKS are
+               derived from the spin starting SCLOCK, the spin numbers
+               (for the current and next available spins), and the spin
+               period.
+           3.  SCLOCK values are assumed to drive the value of the
+               ephemeris times and not vice-versa. All effort is made to
+               validate the published ephemeris times but since updates to
+               the Cassini SCLOCK kernel in SPICE can occur the values of
+               ephemeris time are only as accurate as the currently
+               published Cassini SCLOCK SPICE kernel.
+        Spacecraft staring mode where staring = 0 when spinning and 1
+        otherwise
+ 
+        CHEMS Science rate data organized as:
+          DPPS Step - the controlling parameter that identifies the
+          current Spectrometer energy level
+          Counts associated with Ranges 0-6 for each telescope plus the
+          sum over telescopes
+          He+, He++ doubles and triples count rates
+          O+ doubles and triples count rate per telescope plus the sum
+          over telescopes
+          CNO (mass 4 and higher) triples count rate
+          Counts of energy, tof, and mass (mass/q) under and overflow
+          conditions
+ 
+ 
+    CHEMS Pulse Height Analysis Data
+    --------------------------------
+ 
+      Fields include:
+        a purpose identifier where science data records are identified
+        with purpose = sci
+        starting and ending ephemeris times
+        Spin, sector, subsector
+        SCLOCK and spin period that are used to derive the starting
+        ephemeris time
+           Notes regarding the SCLOCK value:
+           1.  Only the SCLOCK major segment value is provided - MIMI
+               currently does not have access to the fine SCLOCK value
+               hence SCLOCK resolution is limited to +- 1/2 SCLOCK count
+           2.  The SCLOCK is only available from telemetry at the
+               beginning of each spin. All other published SCLOCKS are
+               derived from the spin starting SCLOCK, the spin numbers
+               (for the current and next available spins), and the spin
+               period.
+           3.  SCLOCK values are assumed to drive the value of the
+               ephemeris times and not vice-versa. All effort is made to
+               validate the published ephemeris times but since updates to
+               the Cassini SCLOCK kernel in SPICE can occur the values of
+               ephemeris time are only as accurate as the currently
+               published Cassini SCLOCK SPICE kernel.
+        Spacecraft staring mode where staring = 0 when spinning and 1
+        otherwise
+        Index in sector number - auto generated number to guarantee
+        uniqueness within a sector
+ 
+        CHEMS Pulse Height Analysis data organized as:
+          DPPS Step - the controlling parameter that identifies the
+          current Spectrometer energy/charge level
+          Energy - calibrated measure of the energy deposited into the SSD
+          TOF - calibrated measure of the time of flight for the particle
+          SSD - identifies which solid state detector was triggered
+          Start microchannel plate - identifies which microchannel plate
+          was used in particle identification
+          Range - identifies which PHA range was identified by the CHEMS
+          DPU for this particle
+ 
+ 
+  Ancillary Data
+  ==============
+    Included with the CHEMS data set volumes are ancillary data files
+    representing the MIMI Key Parameter (KP) data.  The MIMI KP data is a
+    calibrated subset of the important channels for each of the MIMI
+    detectors.  The subset of channels have been identified to most
+    reasonably show characteristic energetic particle events during the
+    mission.  The KP data is calculated at an arbitrarily defined 60
+    second cadence which is different than the approximate collection
+    times for the instruments as identified below for standard operations:
+    (It must be realized that the collection times vary based upon the
+    telemetry rate but nothing more than a factor of 2, 4, or 8.)
+ 
+        Instrument      Product Type     Approx Collection Time (s)
+        ------------------------------------------------------------
+        LEMMS           Accumulation     5 (each subsector)
+        LEMMS           Fine Rate        0.6 (each microsector)
+        LEMMS           PHA              5 (each subsector)
+        CHEMS           Accumulation     4
+        CHEMS           Science          5 (each subsector)
+        CHEMS           PHA              80 (each sector)
+        INCA            Accumulation     7.5
+        INCA            IMAGES           180 (2 sectors)
+        INCA            PHA              22
+ 
+     Data points for each record of the KP data are first Median Quartile
+     Filtered then averaged (except in the case where the median is zero)
+     for each sector.  The sectored data is then interpolated into the 60
+     second data cadence of the KP data file.  The KP data is then
+     converted into a flux in units of 1/(cm^2*sr*sec*KeV) or for the case
+     of CHEMS 1/(cm^2*sr*sec*keV/e)
+ 
+     Browse plots for each of the KP data files are produced.  There are 7
+     different browse plots available.
+ 
+     Inst    Wild Card File Name                  Plotted KP data
+     ---------------------------------------------------------------------
+     LEMMS   LEMMS_KP_ELEC_(yyyydoy)_(ver#).JPG   KP LEMMS Electron flux
+     LEMMS   LEMMS_KP_ION_(yyyydoy)_(ver#).JPG    KP LEMMS Ion flux
+     CHEMS   CHEMS_KP_HEP_(yyyydoy)_(ver#).JPG    KP CHEMS Helium Plus
+                                                  flux per charge
+     CHEMS   CHEMS_KP_HEPP_(yyyydoy)_(ver#).JPG   KP CHEMS Helium Plus
+                                                  Plus flux per charge
+     CHEMS   CHEMS_KP_HP_(yyyydoy)_(ver#).JPG     KP CHEMS Hydrogen Plus
+                                                  flux per charge
+     CHEMS   CHEMS_KP_OP_(yyyydoy)_(ver#).JPG     KP CHEMS Oxygen Plus
+                                                  per charge
+     INCA    INCA_KP_(yyyydoy)_(ver#).JPG         Hydrogen TOF flux
+ 
+     Usage Note
+     ----------
+       The KP browse data and associated browse plots are to be used as an
+       initial characterization of the particle environment and are NOT to
+       be used for publications.  The data is not at publication quality
+       and is provided as is.
+ 
+ 
+  Coordinate System
+  =================
+    The data in this data set are measurements of count rates based upon
+    the orientation of the CHEMS instrument (CHEMS Center look direction).
+    Particle flux effects are then determined by transforming from a
+    spacecraft centered coordinate system, properly rotated to account for
+    the appropriate CHEMS telescope direction, into whatever external
+    coordinate (reference system) is most appropriate.
+ 
+ 
+  Software
+  ========
+    There is no sample software provided as of the writing of this catalog
+    file although the calibration volume does provide algorithms for
+    conversion of count rates into flux.  In general the CHEMS Science
+    data can be converted into a measurement of flux per species with
+    these algorithms and the CHEMS PHA and Accumulation Rates data are
+    used for determining the health and wellness of the CHEMS detectors.
+ 
+ 
+  Media/Format
+  ============
+    These data are supplied to the Planetary Data System via electronic
+    means and are then broken into segments based upon the media currently
+    prescribed by PDS.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    This data set contains all calibrated data for the CHEMS Detector as
+    part of the Cassini MIMI instrument for the interval described above.
+    Every effort has been made to ensure that all data returned to APL
+    from the spacecraft is included and that the calibrated browse data
+    products are accurate.
+ 
+    As of this writing there are no known issues associated with the CHEMS
+    detector that would limit the usability or reliability of the data.
+ 
+ 
+  Review
+  ======
+    The MIMI CHEMS data will be reviewed internally by the Cassini MIMI
+    team prior to release to the PDS. The data set will also be peer
+    reviewed by the PDS.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    All data in the stated interval are included, to the best of our
+    knowledge and attempts to determine completeness.  In general, the
+    instrument was operated only briefly during early tour for the
+    following intervals:
+ 
+    1.  Antenna deployment   1997-10-25T00:00 - 1997-10-26T05:30
+    2.  Venus 1 flyby        1998-04-26T12:54 - 1998-05-08T19:21
+    3.  Instrument Checkout  1998-12-30T09:10 - 1999-01-19T05:40
+    4.  Venus 2 flyby        1999-06-24T09:08 - 1999-06-24T21:20
+    5.  Earth flyby          1999-08-13T17:39 - 1999-09-14T22:20
+ 
+    Only data for interval 5 is provided to PDS due to technical issues in
+    processing.
+ 
+    Beginning in February of 2000 the instrument was operated more-or-less
+    continuously with small daily runs of approximately 8 hours.
+    Intermittent data collection occurred during 2002 and 2003 with
+    multiple day gaps in the data
+ 
+    Large Data Gaps:
+    1.  Cruise               2000-066 - 2000-155
+    2.  Cruise               2000-210 - 2000-246
+    3.  Cruise               2000-311 - 2000-320
+    4.  Cruise               2000-322 - 2000-333
+    5.  Post Jupiter Cruise  2003-018 - 2003-104
+    6.  Post SOI             2004-187 - 2004-193 - Spacecraft safing
+                                                   shut off
+    7.  Saturn               2012-293 - 2012-303 - propellant gauging test
+ 
+    Those days for which the instrument did not collect data either due to
+    the instrument being off or due to communication issues, the data set
+    will not contain any files.
+ 
+ 
+  Limitations
+  ===========
+    As noted above there are no know issues associated with the data from
+    the CHEMS detector as of the writing of this catalog.
+ 
+    The KP browse data and associated browse plots are to be used as an
+    initial characterization of the particle environment and are NOT to be
+    used for publications.  The data is not at publication quality and is
+    provided as is.
+        </confidence_level_note>
+        <archive_status>IN_PEER_REVIEW</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

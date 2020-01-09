@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-n-pws-1-edr-wfrm-60ms-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VG2 NEP PWS RAW EXPERIMENT WAVEFORM 60MS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pws.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.neptune::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-n-pws-1-edr-wfrm-60ms-v1.0__browserp_vg2-n-pws-1-edr-wfrm-60ms-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gurnett, D.A., W.S. Kurth, R.L. Poynter, L.J. Granroth, I.H. Cairns, W.M.
+                   Macek, S.L. Moses, F.V. Coroniti, C.F. Kennel, and D.D. Barbosa, First Plasma
+                   Wave Observations at Neptune, Science, p. 1494, Vol. 246, 1989.
+            </reference_text>
+            <description>reference.GURNETTETAL1989</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-N-PWS-1-EDR-WFRM-60MS-V1.0</data_set_id>
+        <data_set_name>VG2 NEP PWS RAW EXPERIMENT WAVEFORM 60MS V1.0</data_set_name>
+        <data_set_release_date>1990-09-01</data_set_release_date>
+        <start_time>1989-06-06T14:16:56.980Z</start_time>
+        <stop_time>1989-09-27T17:52:43.287Z</stop_time>
+        <producer_full_name>DR. WILLIAM S. KURTH</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VG2 NEP PWS RAW EXPERIMENT WAVEFORM 60MS V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set consists of electric field waveform samples from
+            the Voyager 2 Plasma Wave Receiver waveform receiver obtained
+            during the Neptune encounter. The waveforms are collections of
+            4-bit samples of the electric field measured by the dipole
+            electric antenna at a rate of 28,800 samples per second. 1600
+            samples are collected in 55.56 msec followed by a 4.44-msec gap.
+            Each 60-msec interval constitutes a line of waveform samples. The
+            data set includes about 271 frames of waveform samples consisting
+            of up to 800 lines, each. The telemetry format for the waveform
+            data is identical to that for images, hence the use of line and
+            frame as constructs in describing the form of the data. The
+            waveform is sampled through a bandpass filter with a passband of
+            40 Hz to 12 kHz. The 4-bit samples provide sixteen digital values
+            of the electric field with a linear amplitude scale, but the
+            amplitude scale is arbitrary because of the automatic gain
+            control used in the waveform receiver. The instantaneous dynamic
+            range afforded by the 4 bit samples is about 23 db, but the
+            automatic gain control allows the dominant signal in the passband
+            to be set at the optimum level to fit within the instantaneous
+            dynamic range. With the gain control, the overall dynamic range
+            of the waveform receiver is about 100 db. The automatic gain
+            control gain setting is not returned to the ground, hence, there
+            is no absolute calibration for the data. However, by comparing
+            the waveform spectrum derived by Fourier transforming the
+            waveform to the spectrum provided by the spectrum analyzer data,
+            an absolute calibration may be obtained in most cases. The data
+            may be plotted in raw form to show the actual waveform useful for
+            studying events such as dust impacts on the spacecraft. But the
+            normal method of analyzing the waveform data is by Fourier
+            transforming the samples from each line to arrive at an amplitude
+            versus frequency spectrum. By stacking the spectra side-by-side
+            in time order, a frequency-time spectrogram can be produced.
+            Additional information about this dataset and the instrument
+            which produced it can be found elsewhere in this catalog. An
+            overview of the data in this data set can be found in Gurnett et
+            al. [1989] and a complete instrument description can be found in
+            Scarf and Gurnett [1977].
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set consists of electric field waveform samples from
+      the Voyager 2 Plasma Wave Receiver waveform receiver obtained
+      during the Neptune encounter.  The waveforms are collections of
+      4-bit samples of the electric field measured by the dipole
+      electric antenna at a rate of 28,800 samples per second.  1600
+      samples are collected in 55.56 msec followed by a 4.44-msec
+      gap.  Each 60-msec interval constitutes a line of waveform
+      samples.  The data set includes about 271 frames of waveform
+      samples consisting of up to 800 lines, each.  The telemetry
+      format for the waveform data is identical to that for images,
+      hence the use of line and frame as constructs in describing the
+      form of the data.  The waveform is sampled through a bandpass
+      filter with a passband of 40 Hz to 12 kHz.  The 4-bit samples
+      provide sixteen digital values of the electric field with a
+      linear amplitude scale, but the amplitude scale is arbitrary
+      because of the automatic gain control used in the waveform
+      receiver.  The instantaneous dynamic range afforded by the 4
+      bit samples is about 23 db, but the automatic gain control
+      allows the dominant signal in the passband to be set at the
+      optimum level to fit within the instantaneous dynamic range.
+      With the gain control, the overall dynamic range of the
+      waveform receiver is about 100 db.  The automatic gain control
+      gain setting is not returned to the ground, hence, there is no
+      absolute calibration for the data.  However, by comparing the
+      waveform spectrum derived by Fourier transforming the waveform
+      to the spectrum provided by the spectrum analyzer data, an
+      absolute calibration may be obtained in most cases.  The data
+      may be plotted in raw form to show the actual waveform; this is
+      useful for studying events such as dust impacts on the
+      spacecraft.  But the normal method of analyzing the waveform
+      data is by Fourier transforming the samples from each line to
+      arrive at an amplitude versus frequency spectrum.  By stacking
+      the spectra side-by-side in time order, a frequency-time
+      spectrogram can be produced.  Additional information about this
+      dataset and the instrument which produced it can be found
+      elsewhere in this catalog.  An overview of the data in this
+      data set can be found in Gurnett et al.  [1989] and a complete
+      instrument description can be found in Scarf and Gurnett
+      [1977].
+ 
+ 
+      Processing Level Id            : 1
+      Software Flag                  : N
+      Processing Start Time          : 1990-04-07T00:00:00.000
+      Processing Stop Time           : 1990-07-30T00:00:00.000
+ 
+ 
+    Parameters
+    ==========
+ 
+      Data Set Parameter &apos;PLASMA WAVE WAVEFORM&apos;
+      -----------------------------------------
+        A plasma wave waveform is a time series of measurements of
+        the electric or magnetic field component of the wave spectrum
+        taken through a broadband filter.  The temporal sample rate
+        is normally such that samples are made at more than twice the
+        analysis filter bandwidth.  A typical waveform will consist
+        of the order of 1000 contiguous samples of between 4 and 12
+        bits each.  For a 10-kHz analysis bandwidth, the sample rate
+        would normally be approximately 25 kHz or 25,000
+        samples/second.  Once received, the waveforms are typically
+        Fourier transformed in order to provide an amplitude versus
+        frequency spectrum across the analysis bandwidth.  The sample
+        rate, then, is required to be at least a factor of two
+        greater than the filter bandwidth in order to avoid aliasing
+        in the transformed spectrum.  The spectra can be stacked
+        side-by-side in time to build a frequency-time spectrogram
+        (that is, amplitude as a function of time and frequency) in
+        order to identify the temporal and spectral variations in the
+        wave spectrum.  Alternately, the untransformed time series
+        can be used to study the details of the waveform.  This has
+        been useful for measuring small-scale structures in the
+        plasma and for identifying the signature of micron-sized dust
+        impact on the spacecraft.
+ 
+        Data Set Parameter Name        : PLASMA WAVE WAVEFORM
+        Data Set Parameter Unit        : VOLT/METER
+        Sampling Parameter Name        : TIME
+        Sampling Parameter Unit        : SECOND
+        Sampling Parameter Resolution  : 3.4722e-05
+        Sampling Parameter Interval    : 3.4722e-05
+        Minimum Available Sampling Int : 3.4722e-05
+        Noise Level                    : 5e-06
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : PLASMA WAVE WAVEFORM
+      Instrument Parameter Name       : ELECTRIC FIELD COMPONENT
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : PLASMA WAVE WAVEFORM
+      Instrument Parameter Name       : WAVE ELECTRIC FIELD INTENSITY
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : PLASMA WAVE WAVEFORM
+      Instrument Parameter Name       : WAVE MAGNETIC FIELD INTENSITY
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID          : VG2-N-PWS-1-SMSF
+        Software                    : CDREF
+        Product Data Set ID         : VG2-N-PWS-1-EDR-WFRM-60MS-V1.0
+ 
+ 
+      Software &apos;CDREF&apos;
+      ----------------
+        CDREF is primarily a data format translation routine which is
+        used to convert Voyager PWS EDR tape files to CD-ROM files.
+        CDREF is written in FORTRAN and is not available for public
+        use.  The EDR, or Engineering Data Records, are produced at
+        Multi-mission Image Processing Laboratory at JPL as the
+        uncalibrated, full-resolution PWS spectrum analyzer data set.
+        The CD files contain uncalibrated, full-resolution PWS data
+        with minimal ancillary data in a simplified format which may
+        be used in CDROM production.
+ 
+        Software Name               : CDREF
+        Software Type               : N/A
+        Software Release Date       : 1990-04-07
+        Node ID                     : IMAGING
+        Cognizant Engineer          : MR. JASON J. HYON
+        Software Access Description : N/A
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      This data set includes all available waveform receiver data
+      obtained during the Neptune encounter.  There has been no
+      attempt to clean various interference signals from the data.
+      Most of these can normally be easily seen in frequency-time
+      spectrograms as narrowband, fixed-frequency tones.  The most
+      common include narrowband tones at 2.4 and 4.8 kHz which are
+      power supply harmonics.  There is sometimes a tone near 1.7 kHz
+      which is associated with the operation of the spacecraft gyros.
+      The spacecraft tape recorder results in a rather intense band
+      in the frequency range of a few hundred Hz.  There are few
+      times when the data in this frequency range can be used.
+      However, there are times when the real signals in this
+      frequency range can exceed the intensity of the interference
+      sufficiently so that the frequency range near a few hundred Hz
+      can be used.  Use of the spectrum analyzer data can be of use
+      to determine when these time periods occur.  The stepper motor
+      of the LECP instrument also interferes in the frequency range
+      of a few hundred Hz, but for periods of a few seconds.  The
+      LECP interference is very intense and captures the automatic
+      gain control so that real signals, even where there is no
+      interference, will appear to decrease in amplitude until the
+      LECP interference fades in amplitude.  The PLS instrument
+      periodically interferes at 400 Hz and odd harmonics because of
+      a 400-Hz square wave used to modulate a grid in the detector.
+      The PLS interference lasts for several seconds and ends
+      abruptly.  Telemetry errors result in a fairly graceful
+      degradation of the waveform data.  Assuming the telemetry
+      errors are randomly occurring bursts, they typically appear as
+      an enhanced background level in the spectrum.  Since the bursts
+      are short, their Fourier transform is a broadband spectrum.
+      When looking for relatively narrowband features or features
+      with distinct frequency-time characteristics, the result of the
+      bursts simply reduce the signal-to-noise in the spectrum.  One
+      way of reducing the effect of burst telemetry errors is to pass
+      the waveform data through a low-pass filter to despike it,
+      prior to running the Fourier transform.  The waveform data is
+      not subject to the negative effects of the failure in the
+      Voyager 2 Flight Data System which reduces the sensitivity of
+      the spectrum analyzer and affects the calibration above 1 kHz.
+      In fact, use of the 1 - 12 kHz waveform data is an effective
+      way of avoiding the problems with the spectrum analyzer data in
+      this frequency range.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XM-11A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

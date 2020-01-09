@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-m-hazcam-5-reachability-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 1 MARS HAZARD AVOID CAMERA REACHABILITY RDR OPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hazcam.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-hazcam-5-reachability-ops-v1.0__browserp_mer1-m-hazcam-5-reachability-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-hazcam-5-reachability-ops-v1.0__browser_geo_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-hazcam-5-reachability-ops-v1.0__dvo_imaging_mer1-m-hazcam-5-reachability-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Maki, J.N., et al., Mars Exploration Rover Engineering Cameras, J. Geophys.
+                   Res., 108(E12), 8071, doi:10.1029/2003JE002077, 2003.
+            </reference_text>
+            <description>reference.MAKIETAL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1-M-HAZCAM-5-REACHABILITY-OPS-V1.0</data_set_id>
+        <data_set_name>MER 1 MARS HAZARD AVOID CAMERA REACHABILITY RDR OPS V1.0</data_set_name>
+        <data_set_release_date>2004-08-24</data_set_release_date>
+        <start_time>2004-01-25T06:45:11.906Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JUSTIN MAKI</producer_full_name>
+        <citation_text>
+            Maki, Justin, MER 1 Mars Hazcam Reachability Map Ops RDR V1.0,
+            NASA Planetary Data System,
+            MER1-M-HAZCAM-5-REACHABILITY-OPS-V1.0, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 1 Hazard Avoidance Camera Reachability
+            Maps, Operations Reduced Data Records, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    An IDD Reachability map contains information about whether or not
+    the instruments on the IDD can reach (contact or image) the
+    object or location represented by each pixel in the scene.  It is
+    derived from the XYZ and Surface Normal (UVW) products.
+ 
+    The geometry of the reachability map matches the linearized
+    reference, XYZ, and Surface Normal (UVW) images, in that each pixel
+    in the file directly corresponds to the pixel at the same location
+    in theother products.
+ 
+    The reachability map is a 16-band byte image in standard Band
+    Sequential order. Thus for each pixel there are 16 values. These
+    values represent reachability for each of the 4 IDD instruments in
+    each of its 4 configurations. The mapping between band number and
+    instrument/configuration is given by the INSTRUMENT_BAND_ID and
+    CONFIGURATION_BAND_ID labels.
+ 
+    The value of the pixel is interpreted according to the instrument.
+    For RAT, 0 means the pixel is not reachable in that configuration,
+    while any other number represents the maximum preload in integer
+    Newtons that can be applied at that point. For all other
+    instruments, 0 means the pixel is not reachable by that instrument
+    in that configuration, while 255 means that the pixel is reachable.
+ 
+ 
+  Processing
+  ==========
+    MER Camera Payload RDRs are considered Level 3 (Calibrated Data
+    equivalent to NASA Level 1-A), Level 4 (Resampled Data
+    equivalent to NASA Level 1-B), or Level 5 (Derived Data
+    equivalent to NASA Level 1-C, 2 or 3). The RDRs are to be
+    reconstructed from Level 2 edited data, and are to be assembled
+    into complete images that may include radiometric and/or geometric
+    correction.
+ 
+    MER Camera Payload EDRs and RDRs will be generated by JPL&apos;s
+    Multimission Image Processing Laboratory (MIPL) under the OPGS
+    subsystem of the MER GDS. RDRs will also be generated by the Athena
+    Pancam Science and Microscopic Imager Science Teams under the SOAS
+    subsystem of the GDS.
+ 
+    RDR data products will be generated by, but not limited to, MIPL
+    using the Mars Suite of VICAR image processing software at JPL, the
+    Athena Pancam Science Team using IDL software at Cornell University
+    and JPL, and the Microscopic Imager Science Team using ISIS software
+    at USGS (Flagstaff) and JPL. The RDRs produced will be processed
+    data. The input will be one or more Camera EDR or RDR data products
+    and the output will be formatted according to this SIS. Additional
+    meta-data may be added by the software to the PDS label.
+ 
+ 
+  Data
+  ====
+    RDR products generated by MIPL will have a VICAR label wrapped by a
+    PDS label, and their structure can include the optional EOL label
+    after the binary data. RDR products not generated by MIPL may
+    contain only a PDS label. Or, RDR products conforming to a standard
+    other than PDS, such as JPEG compressed or certain Terrain products,
+    are acceptable without a PDS header during mission operations, but
+    may not be archivable.
+ 
+    The RDR data product is comprised of radiometrically decalibrated
+    and/or camera model corrected and/or geometrically altered versions
+    of the raw camera data, in both single and multi-frame (mosaic)
+    form. Most RDR data products will have PDS labels, or if generated
+    by MIPL (OPGS), dual PDS/VICAR labels. Non-labeled RDRs include JPEG
+    compressed products and the Terrain products.
+ 
+ 
+  Software
+  ========
+    The MIPL Mars Program Suite was used to generate these RDRs.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online.  Upon
+    Mission completion, the Hazcam Operations RDRs will be delivered
+    to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

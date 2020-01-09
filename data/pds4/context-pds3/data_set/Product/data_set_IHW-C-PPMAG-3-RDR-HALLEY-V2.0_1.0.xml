@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ihw-c-ppmag-3-rdr-halley-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IHW COMET HALLEY PHOTOMETRIC MAGNITUDES, V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_halley_watch::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.ppn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ppmag.ppn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.1p-halley_1_1682_q1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ihw-c-ppmag-3-rdr-halley-v2.0__browserp_ihw-c-ppmag-3-rdr-halley-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zdenek (ed.), &apos;The Comet Halley Archive Summary Volume&apos;, Jet
+                   Propulsion Laboratory, California Institute of Technology, Pasadena,
+                   California, JPL D-400-450, August 1991.
+            </reference_text>
+            <description>reference.JPL_D-400-450</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>IHW-C-PPMAG-3-RDR-HALLEY-V2.0</data_set_id>
+        <data_set_name>IHW COMET HALLEY PHOTOMETRIC MAGNITUDES, V2.0</data_set_name>
+        <data_set_release_date>1992-09-30</data_set_release_date>
+        <start_time>1981-12-02T12:50:24Z</start_time>
+        <stop_time>1988-05-19T00:46:09Z</stop_time>
+        <producer_full_name>GRAYZECK, E.J., KLINGLESMITH, D.A., III, NIEDNER, M.B., JR</producer_full_name>
+        <citation_text>
+            A&apos;Hearn. M.F. and V. Vanysek, IHW COMET HALLEY PHOTOMETRIC
+            MAGNITUDES, V2.0, IHW-C-PPMAG-3-RDR-HALLEY-V2.0, NASA Planetary
+            Data System, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            International Halley Watch Photometry and Polarimetry Net reduced
+            magnitude results for 1P/Halley
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set presents the photometric magnitude measurements of
+            1P/Halley submitted to the International Halley Watch (IHW)
+            Photometry and Polarimetry Network (PPN). Both broadband and
+            narrowband magnitudes are included, with filter parameters for
+            each measurement. In this second version, the FITS tables have
+            been converted to flat ASCII, the PDS labels rewritten, a table
+            combing all the measurements into a single, chronological set has
+            been added, and known errata have been corrected.
+        </abstract_desc>
+        <data_set_desc>
+      Data Set Overview
+      =================
+      This data set presents the photometric magnitude measurements
+      of 1P/Halley submitted to the International Halley Watch (IHW)
+      Photometry and Polarimetry Network (PPN).  Both broadband and
+      narrowband magnitudes are included, with filter parameters
+      for each measurement.  In this second version, the FITS tables
+      have been converted to flat ASCII, the PDS labels rewritten,
+      a table combing all the measurements into a single, chronological
+      set has been added, and known errata have been corrected.
+ 
+      Modification History
+      ====================
+      The first version of this data set contained 744 sets of
+      individual observation files.  Each file contained the results
+      from one observer during one night.  For each such file there
+      was a PDS label file, a FITS table header file detached from
+      the data, and the FITS table data segment.
+ 
+      PDS personnel made the following chages to create version 2:
+ 
+        o PDS labels were completely rewritten. All comments, history
+          notes and significant keywords from the FITS headers were
+          either included as PDS keywords or documented in the
+          DESCRIPTION section for each file.  The FITS headers were
+          then discarded.
+ 
+        o Observing times in the observation tables, originally
+          stated as day number and fraction, were converted to the
+          ISO standard time format (yyyy-mm-ddThh:mm:ss).  Day
+          fractions were always supplied with at least four
+          significant digits (five in some unusual cases).  Note
+          that, therefore, times are never more accurate than the
+          nearest second, and typically are only accurate to
+          +/- 5 seconds.
+ 
+        o Errata were corrected, including:
+ 
+           - Removal of three records in each of two files (pmag0389
+             and pmag0417);
+           - Deletion of several files described as &apos;accidentally
+             included&apos; (pmag0615, pmag0664 and pmag0682).  It was
+             noted that these files were missing required supporting
+             information (observing aperture, for example).
+ 
+        o The &apos;all.tab&apos; file was created by adding the observatory,
+          telescope, observer and file name to the records in each
+          individual table, and concatenating the results into a
+          single file.  This file was then sorted on the UTC field
+          at the beginning of each record.
+ 
+      20 October 2006, A.C.Raugh
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      Overview
+      ========
+      In general, quality varies from file to file among the
+      observations.  Observers were asked to provide error
+      bars (or an upper limit indicator) for all magnitude
+      estimates, but this was not done in all cases.
+ 
+      Users should check the file DESCRIPTION in the individual
+      observation files for notes regarding reduction or
+      observing conditions.
+ 
+      Also, note that the errata list for version 1 of this
+      data set included the following:
+ 
+        For a number of NARROW BAND measurements, the integration
+        times are not given; in these instances the original
+        submissions only reported &apos;average&apos; values.
+        </confidence_level_note>
+        <archive_status>IN_LIEN_RESOLUTION</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

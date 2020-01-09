@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:spice.rl</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>SPICE KERNELS for RL</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.rl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>SPICE KERNELS</instrument_name>
+        <instrument_desc>
+ 
+ 
+1. SPICE Overview
+   ==============
+ 
+   NOTE TO THE USER - there is no instrument directly associated with
+   SPICE data.  However, this template ensures that referential
+   integrity is maintained in the PDS Catalog. The information
+   contained in this catalog aims to give a brief introduction to the
+   basic concepts related to SPICE and its production. For a more
+   detailed description of the Rosetta SPICE data set implementation,
+   please refer to the SPICEDS.CAT in this archive.
+ 
+   SPICE deals with ancillary data in order to support the planning
+   for, and analysis of, science instrument data.
+ 
+   Ancillary data is made up of spacecraft and planetary ephemerides,
+   spacecraft orientation, instrument mounting alignments and field of
+   view geometry, reference frame specifications and data needed for
+   conversion between various time systems. They help scientists and
+   engineers to determine:
+ 
+      *  when and how an instrument was acquiring data.
+ 
+      *  where the spacecraft was located.
+ 
+      *  how the spacecraft and instruments were oriented (pointed).
+ 
+      *  what was the location, size, shape and orientation of the
+         target being observed.
+ 
+      *  what events were occurring on the spacecraft or ground that
+         might affect interpretation of:
+ 
+          -  science observations.
+ 
+          -  spacecraft systems performance.
+ 
+   The principal SPICE system components are two:
+ 
+      *  Data files, often called &apos;kernels&apos; or &apos;kernel files&apos;. They are
+         composed of ancillary information which has been created in
+         such a way as to allow easy access and correct usage by the
+         space science and engineering communities.
+ 
+      *  Software, known as the SPICE Toolkit.
+ 
+            -  The principal component is an extensive subroutine
+               library.
+ 
+            -  Also included are some:
+ 
+                  &gt; broadly useful application programs.
+ 
+                  &gt; utility programs.
+ 
+                  &gt; examples of how to use SPICE Toolkit subroutines.
+ 
+   Also part of SPICE are:
+ 
+      *  standards
+ 
+      *  documentation
+ 
+      *  customer support
+ 
+      *  system maintenance and continuing development.
+ 
+   SPICE is used on a number of space missions, such as ESA&apos;s Mars
+   Express, SMART-1, Venus Express and Rosetta missions, and all of
+   NASA&apos;s solar system exploration missions. The SPICE system has been
+   produced and is maintained by Caltech&apos;s Jet Propulsion Laboratory
+   under contract to the U.S. National Aeronautics and Space
+   Administration.
+ 
+ 
+2. SPICE Objectives
+   ================
+ 
+   SPICE has the following objectives:
+ 
+      *  to aid scientists in planning and interpreting scientific
+         observations made by instruments flown on spacecraft;
+ 
+      *  to assist with the correlation of individual data sets with
+         those from other instruments on the same, or different,
+         spacecraft.
+ 
+ 
+3. SPICE kernels
+   =============
+ 
+   The logical contents of the SPICE system are outlined below:
+ 
+      S - Spacecraft ephemeris, given as a function of time.
+ 
+      P - Planet, satellite, comet, or asteroid ephemerides. I.e. the
+          location and velocity of any target body as a function of
+          time. Also the associated physical and cartographic
+          constants.
+ 
+      I - Instrument description, containing descriptive data that
+          describes a particular scientific instrument, such as
+          field-of-view size, shape and orientation parameters.
+ 
+      C - Pointing information, containing a transformation,
+          traditionally called the C-matrix, which provides time-tagged
+          pointing (orientation) angles for a spacecraft structure upon
+          which science instruments are mounted. May also include
+          angular rate data.
+ 
+      E - Events, summarizing mission activities - both planned and
+          unanticipated. Events data are contained in the SPICE EK file
+          set, which consists of three components: Science Plans,
+          Sequences, and Notes. It should be noted that the EK system is
+          not used on Rosetta, and therefore no data are available
+ 
+   Additional SPICE data products are:
+ 
+      *  The &apos;Frame definitions Kernel&apos; (FK file) contains reference
+         frame specifications that are typically used by flight
+         projects. This file also includes mounting alignment
+         information for instruments, antennas and other structures
+         of interest.
+ 
+      *  Spacecraft clock (SCLK) and leapseconds (LSK) files are used
+         in converting time tags between various time measurement
+         systems.
+ 
+      *  Digital Shape Kernel (DSK) files and are used for storing
+         digital shape data for natural bodies.
+ 
+ 
+   Below is an outline of the SPICE logical components (left) and how
+   they relate to the SPICE physical kernel files (right).
+ 
+     ____________
+   |            |              _____
+   |     S      |             |     |        Space vehicle or
+   |            |   -------&gt;  | SPK |        target body
+   | spacecraft |         /   |_____|        trajectory
+   |____________|        /                   (ephemeris).
+                        /
+    ____________       /
+   |            |     /        _____
+   |     P      |    /        |     |        Target body size,
+   |            |   -------&gt;  | PcK |        shape and
+   |   planet   |             |_____|        orientation.
+   |____________|
+ 
+    ____________
+   |            |              _____
+   |     I      |             |     |        Instrument field-
+   |            |   -------&gt;  | IK  |        of-view size, shape
+   | instrument |             |_____|        and orientation.
+   |____________|
+ 
+    ____________
+   |            |              _____
+   |     C      |             |     |        Orientation of space
+   |   camera   |   -------&gt;  | CK  |        vehicle or any
+   |   matrix   |             |_____|        articulating
+   |____________|                            structure on it.
+ 
+    ____________
+   |            |              _____         Events information for
+   |     E (*)  |             |     |        - science plan(ESP)
+   |            |   -------&gt;  | EK  |        - sequence of events
+   |   events   |             |_____|          (ESQ)
+   |____________|                            - experimenters&apos;
+                                               notebook (ENB).
+                              ________       ______
+                             |        | --&gt; |__FK__|  Reference
+                             |        |      ______     Frame specs.
+                             | Others | --&gt; |_LSK__|  Leapsecond
+                             |        |      ______     tabulation.
+                             |        | --&gt; |_SCLK_|  Spacecraft clock
+                             |        |      ______     coefficient.
+                             |________|     |_DSK__|  Digital Shape
+                                                        model.
+ 
+    ____________
+   |            |
+   |     S      |                            Fortran, C, IDL, Matlab,
+   |            |   -------&gt;   SPICE         JNI libraries, plus a
+   |  software  |             Toolkit        few utilities and
+   |____________|                            example programs.
+ 
+ 
+ 
+4. SPICE Toolkit and documentation
+   ===============================
+ 
+   The SPICE system includes a large collection of software known
+   as the SPICE Toolkit. The principal component of this toolkit is a
+   library of portable subroutines, needed to read the kernel files and
+   to then calculate observation geometry parameters of interest. Users
+   integrate these SPICE &apos;Toolkit&apos; subroutines into their own
+   application programs to compute observation geometry parameters and
+   related information, as needed. The SPICE Toolkit, originally
+   implemented in ANSI FORTRAN 77, is also available in the C language
+   and as a set of Interactive Data Language (IDL), Matlab and Java
+   Native Interface (JPL) interfaces.
+ 
+   Also a comprehensive set of documents on SPICE is available,
+   made up of:
+ 
+      *  user manuals for the utility programs.
+ 
+      *  tutorials.
+ 
+      *  required readings on the several parts of SPICE as well
+         as on different mathematical concepts used by SPICE.
+ 
+   The SPICE toolkit and documentation can be found on:
+ 
+      http://naif.jpl.nasa.gov/naif/
+ 
+   The SPICE Toolkit is freely offered to the worldwide space science
+   and space mission engineering communities at the time this data set
+   was released. The few rules governing its use are posted on the
+   &apos;Rules&apos; page of the NAIF website:
+ 
+      http://naif.jpl.nasa.gov/naif/rules.html
+
+        </instrument_desc>
+        <instrument_id>SPICE</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Unknown</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

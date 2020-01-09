@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-mahli-4-rdr-vid-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS HAND LENS IMAGER 4 RDR VIDEO V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mahli.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-mahli-4-rdr-vid-v1.0__browserp_msl-m-mahli-4-rdr-vid-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-mahli-4-rdr-vid-v1.0__dvo_imaging_msl-m-mahli-4-rdr-vid-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-mahli-4-rdr-vid-v1.0__pds.geo.msl.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Malin, M.C., K. Edgett, E. Jensen, and L. Lipkaman, Mast Camera (Mastcam), Mars
+                   Hand Lens Imager (MAHLI), and Mars Descent Imager (MARDI) Experiment Data
+                   Record (EDR) and Reduced Data Record (RDR) PDS Data Products Software Interface
+                   Specification (SIS), JPL D-75410, SIS-SCI035-MSL, 2013.
+            </reference_text>
+            <description>reference.JPLD-75410</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-MAHLI-4-RDR-VID-V1.0</data_set_id>
+        <data_set_name>MSL MARS HAND LENS IMAGER 4 RDR VIDEO V1.0</data_set_name>
+        <data_set_release_date>2013-03-26</data_set_release_date>
+        <start_time>2012-08-07T04:46:02.401Z</start_time>
+        <stop_time>2015-11-08T06:36:56.901Z</stop_time>
+        <producer_full_name>KENNETH S. EDGETT</producer_full_name>
+        <citation_text>
+            Edgett, Kenneth, MSL Mars Hand Lens Imager Camera RDR V1.0, NASA
+            Planetary Data System, MSL-M-MAHLI-4-RDR-VID-V1.0, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            MSL MARS MAHLI DECOMPRESSED, RADIOMETRICALLY CALIBRATED, COLOR
+            CORRECTED, AND GEOMETRICALLY LINEARIZED VALIDATED VIDEO DATA
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set contains image products acquired by the MAHLI
+      instrument.
+ 
+      This data set uses the Committee on Data Management and
+      Computation (CODMAC) data level numbering system. The MSL
+      MAHLI RDRs are considered Level 4 or Resampled.  The RDRs
+      are created from EDR images and contain irreversibly
+      transformed data due to the nature of JPEG decompression.
+ 
+ 
+      Processing
+      ==========
+ 
+      After extracting and decompressing (if needed) EDR products,
+      4 RDR products are created for each EDR.  These are
+      generated from validated data. The products are:
+ 
+      (1) decompressed and radiometrically calibrated (16-bit),
+      (2) decompressed, radiometrically calibrated, and color corrected
+          (8-bit),
+      (3) decompressed, radiometrically calibrated, and geometrically
+          linearized (16-bit), and
+      (4) decompressed, radiometrically calibrated, color corrected,
+          and geometrically linearized (8-bit).
+ 
+ 
+      Data
+      ====
+ 
+      The RDRs produced have detached PDS-compliant labels.
+      The Mast Camera (Mastcam), Mars Hand Lens Imager (MAHLI),
+      and Mars Descent Imager (MARDI) Experiment Data Record (EDR)
+      and Reduced Data Record (RDR) PDS Data Products Software
+      Interface Specification contains a detailed description of the
+      RDR formatted products.
+ 
+      There are 8 video data types (5 images, 3 thumbnails) that can
+      be wrapped into the original data format that is transferred from
+      the cameras. Some of these are compressed in a format which can
+      reproduce an image identical to the original image on the
+      instrument (lossless compression), some are transferred in lossy
+      format, some are full-scale and others sub-sampled (the only sub-
+      sampled is by a factor of 8, used to produce thumbnail images).
+      The RDR data file includes the camera mini-header generated
+      by the camera, followed by original image data as formatted by
+      the camera.
+ 
+      Not including sub-framing, MAHLI can take a variety of image data
+      formats and accomplish this by internal processing. The cameras
+      always acquire raw 12-bit data. Normally, the 12-bit raw data
+      are converted from 12-to-8-bits through the use of a variety
+      of companding (compress/expand) lookup tables, the most generally
+      used being a modified square-root encoding scheme that allocates
+      additional values to low DNs. These companded 8-bit images can
+      then be processed either immediately, and stored into each
+      camera&apos;s 8-Gbyte buffer, or they can be stored unprocessed in the
+      buffer, and then later processed in response to downlink
+      commands.  It is this flexibility that leads to the complexities
+      of the raw data format and its description.
+ 
+      In addition to the 12-to-8-bit companding, on-board processing
+      includes the following capabilities: Bayer pattern interpolation,
+      lossless compression, and JPEG compression. Except for
+      thumbnails, the cameras do not support sub-sampling or
+      resampling, but do support sub-framing.
+ 
+      Thumbnails are produced by creating a scratch JPEG image, and
+      extracting the lowest order coefficients of the discrete cosine
+      transform 8x8 pixel compression block, or minimum compression
+      unit (MCU), which is essentially the average of the 8x8 spatial
+      domain MCU. These coefficients are then assembled into a smaller
+      image which is then JPEG compressed.  The extraction of these
+      coefficients is the only way MAHLI images are ever sub-sampled.
+ 
+      The following is a table of the different video product types
+      generated by MAHLI which are contained within the raw camera
+      data record.
+ 
+      Type  Product     Format      Pixel bits
+      -------------------------------------------
+      J     Video       Raster      48
+      K     Video       Lossless    48
+      L     Video       JPEG gray   16
+      M     Video       JPEG 422    48
+      N     Video       JPEG 444    48
+      O     Thumbnail   Raster      16
+      P     Thumbnail   JPEG gray   16
+      Q     Thumbnail   JPEG 444    48
+ 
+ 
+ 
+      Refer to the Mast Camera (Mastcam), Mars Hand Lens Imager (MAHLI),
+      and Mars Descent Imager (MARDI) Experiment Data Record (EDR)
+      and Reduced Data Record (RDR) PDS Data Products Software
+      Interface Specification for further details on the MAHLI data
+      products and RDR processing.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

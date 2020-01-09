@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mex-m-marsis-2-edr-ext1-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS EXPRESS MARSIS EDR DATA EXTENSION_1 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_express::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:marsis.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.phobos::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mex-m-marsis-2-edr-ext1-v1.0__browserp_geo_mex-m-marsis-2-edr-ext1-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mex-m-marsis-2-edr-ext1-v1.0__dvo_geo_mex-m-marsis-2-edr-ext1-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.psa::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Picardi, G. et. al., MARSIS: Mars Advanced Radar for Subsurface and Ionosphere
+                   Sounding, ESA-SP-1240, September 2004
+            </reference_text>
+            <description>reference.PICARDIETAL2004</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MEX-M-MARSIS-2-EDR-EXT1-V1.0</data_set_id>
+        <data_set_name>MARS EXPRESS MARSIS EDR DATA EXTENSION_1 V1.0</data_set_name>
+        <data_set_release_date>2009-01-21</data_set_release_date>
+        <start_time>2005-12-01T00:00:00Z</start_time>
+        <stop_time>2006-05-31T00:00:00Z</stop_time>
+        <producer_full_name>GIOVANNI PICARDI</producer_full_name>
+        <citation_text>
+            Picardi, G. et al. MARS EXPRESS MARS MARSIS EXPERIMENT DATA
+            RECORD EXTENSION_1V1.0, MEX-M-MARSIS-2-EDR-EXT1-V1.0,
+            Dipartimento INFOCOM, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains the CODMAC Level 2 MARSIS data for the
+            Mars Express mission
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains the scientific telemetry produced by the
+            MARSIS instrument after editing for duplicated and corrupted
+            packets, together with geometric information computed on ground
+            to locate observations in space and time. Both subsurface and
+            ionosphere sounding data are included in the dataset.
+        </abstract_desc>
+        <data_set_desc>
+ 
+Data Set Overview
+=================
+ 
+MARSIS Level 1b data products consist of the data produced
+by the  instrument reconstructed from the scientific telemetry,
+sorted by instrument state and data type, and provided
+with spacecraft position, velocity and attitude information.
+Any other spacecraft telemetry relevant for calibration and
+processing (e.g. temperature of the receiver) is also be included.
+ 
+ 
+Parameters
+==========
+ 
+MARSIS data are organized into groups of echoes called frames.
+A frame contains one or more echoes, with or without on-board
+processing. Each echo, depending on the kind of processing
+it underwent, is recorded either as a time series of signal samples,
+or as the complex spectrum of the signal itself produced
+by means of a FFT. Scientific data in a frame are complemented
+by a set of ancillary data, produced by the instrument and
+recording parameter values used in pulse transmission,
+echo reception and on-board processing.
+ 
+ 
+Processing
+==========
+ 
+Level 1b processing starts from the telemetry data, as produced
+by the C&amp;DH system on the spacecraft and passed to the telemetry
+subsystem:
+data are still in the form of transfer frame packets organised
+by contacts or ground tests data.
+Processing starts by cleaning, merging and time-ordering the packets.
+This means that duplicate data have been deleted, missing
+packets are padded out, and the data are organised
+by days (or orbits).
+ Data then need to be sorted by instrument data types and instrument
+modes.
+ 
+MARSIS Level 1b processing orders data in a useful way for the
+intended users (i.e. radar scientists) and applications
+(i.e. quick look to monitor hardware performance and higher-level
+processing), altering and manipulating them as little as possible
+to avoid the risk of introducing errors and, at the same time,
+including all necessary information from all relevant sources.
+Level 1b data are in scientifically useful form,
+i.e. individual spectra. These data are still uncalibrated.
+ 
+MARSIS Level 1b data products consist of the data produced
+by the instrument reconstructed from the scientific telemetry,
+sorted by instrument state and data type, and provided
+with spacecraft position, velocity and attitude information.
+Any other spacecraft telemetry relevant for calibration and
+Processing (e.g. temperature of the receiver) is also be included.
+ 
+Level 1b processing requires the acquisition of MARSIS scientific
+telemetry and any relevant spacecraft auxiliary data from the Mars
+Express Data Disposition System (DDS) in ESOC, and of SPICE kernels
+describing the spacecraft state and attitude from the Auxiliary Data
+Conversion System (ADCS) in ESTEC.
+ 
+Both instrument telemetry and ancillary data are stored at the PI
+processing facility as they accumulate over the course of the mission,
+to provide the capability to reprocess data in case of errors or to
+accommodate new information referring to existing data sets.
+ 
+Level 1b data distribution to the Co-Is and to the Mars Express
+mission archive is performed by ASDC. It is required by ESA that data
+products are delivered in batches of six-months worth
+of data within six months from the last data take
+(i.e. one year after the beginning of that particular data collection
+period), but it is necessary that level 1b processing be completed
+in a much shorter period, to allow enough time for level 2 data
+processing and data analysis within the MARSIS team before
+the expiration of the data proprietary period (which is the same
+six-month time span).
+ 
+ 
+Data
+====
+ 
+The MARS EXPRESS MARS MARSIS EXPERIMENT DATA RECORD V1.0 Data Set
+contains scientific telemetry generated by the instrument,
+edited to remove duplications, zero-padded for missing
+packets, and correlated with geometric information needed to locate
+observations in space and time. No other kind of processing is
+applied to the data.
+ 
+The list of EDR data Products is :
+ 
+AIS_EDR : Active Ionosphere Sounding data frames with geometry
+          information.
+CAL_EDR : Data frames acquired in Calibration mode with geometry
+          information.
+RXO_EDR : Data frames acquired in Receive Only mode with geometry
+          Information.
+SSx_yyy_CMP_EDR : On-board processed Subsurface Sounding data
+                 (either in Acquisition or Tracking state) with
+                 geometry information
+SSx_yyy_IND_EDR : Individual Echoes from Subsurface Sounding data
+                 (either in Acquisition or Tracking state).
+SSx_yyy_UNC_EDR : Uncompressed Subsurface Sounding data
+                 (either in Acquisition or Tracking state).
+SSx_yyy_RAW_EDR : Raw Subsurface Sounding data
+                  (either in Acquisition or Tracking state).
+Where   x   stands for a number between 1 and 5, while  yyy  stands
+either for ACQ or TRK.
+ 
+AIS_EDR, CAL_EDR, RXO_EDR and SSx_yyy_CMP_EDR Data Products
+is made by two files, each of which contains a PDS binary TABLE
+object preceded by a PDS attached label describing its structure.
+The first file, called Frame file (FRM) contains the instrument
+data proper, exactly in the same format (bit by bit) as they were
+produced by the instrument.
+Each frame corresponds to a record in the file,
+which is also a row in the PDS binary TABLE object into which
+frames are organised.
+A Data Product contains all frames acquired using the same
+instrument mode, in the same instrument state and after
+the same type of on-board processing during a single orbit.
+The second file constituting an EDR is called a Geometry file (GEO),
+ and contains one record, corresponding to one line of the PDS binary
+TABLE object into which data are organised, for every frame
+in the corresponding FRM file.
+ 
+Subsurface data from Individual Echoes are the unprocessed version
+of data that are also down-linked in processed form.
+A frame of Individual Echoes consists of a variable number
+of raw echoes, because, to produce a constant along-track ground
+resolution, synthetic aperture (Doppler) processing performed
+on board requires a number of echoes that increases with altitude
+of the spacecraft.
+The Data Product consists in just one file containing a PDS header
+and the data themselves, because any additional geometric information
+would just duplicate similar information already provided in
+SSx_yyy_CMP_EDR GEO data files.
+File names contain the first ten digits of the spacecraft clock
+count corresponding to the time at which data were acquired.
+ 
+Each record in a file contains a single unprocessed echo,
+preceded by auxiliary data and by a counter starting from 0 and
+increasing by one at each new echo. Echoes are ordered according
+to the time at which they were collected. Ancillary information is
+produced once per frame, and is thus the same for all
+echoes in a file: this duplication has been deemed necessary
+to simplify the data structure as much as possible.
+ 
+The number of echoes required in Doppler processing is a function
+of frequency, as well as of spacecraft altitude.
+In a dual-frequency mode, the exact number of echoes collected
+at each frequency is contained in the Ancillary data and echoes
+within a frame are ordered by frequency before being ordered in time.
+ 
+Subsurface UNC data are the uncompressed version of data that are
+also down-linked in fully processed form. Because they are structured
+exactly as CMP data, the only difference being the compression of
+individual echo samples from 4-byte IEEE real numbers to 1-byte
+integers, it has been chosen to produce one Data Product per orbit,
+just as for CMP data.
+The Data Product consists in just one file containing a PDS header
+and the data themselves, because any additional geometric information
+would just duplicate similar information already provided in
+SSx_yyy_CMP_EDR GEO data files.
+File names contains  the four-digit number of the orbit at which
+data were acquired.
+The structure of UNC Data Products is identical to the one used
+in CMP FRM files. Because UNC data are down-linked through a dump
+of the flash memory, rather than through the scientific telemetry
+of the instrument, they do not come with a full set of ancillary data
+ 
+Subsurface Raw Data are the unprocessed version of data that are also
+down-linked in processed form.
+A frame of Raw Data consists of a variable number of raw echoes,
+because, to produce a constant along-track ground resolution,
+synthetic aperture (Doppler) processing performed on board requires
+a number of echoes that increases with altitude of the spacecraft.
+ 
+Because of this, it has been chosen to produce one Data Product
+per each frame of Raw Data, rather than one per orbit, similarly to
+Individual Echoes. The Data Product consists in just one file
+containing a PDS header and the data themselves, because any
+additional geometric information would just duplicate similar
+information already provided in SSx_yyy_CMP_EDR GEO data files.
+File names contain the first ten digits of the spacecraft clock
+count corresponding to the time at which data were acquired.
+ 
+The structure of RAW Data Products is identical to the one used in
+IND files. Because RAW data are down-linked through a dump
+of the flash memory, rather than through the scientific telemetry
+of the instrument, they do not come with a full set of ancillary data.
+ 
+ 
+Ancillary Data
+==============
+ 
+Each frame of MARSIS data (with the exception of frames
+stored in flash memory) carries a 228 byte header of ancillary data,
+containing necessary information for subsequent analysis
+of the data and further processing.
+The exact content of the ancillary data depends on instrument mode.
+There are four major structure types of the ancillary data :
+acquisition, tracking /
+individual echoes for subsurface modes, calibration /
+receive only and active ionosphere
+ 
+ 
+Coordinate System
+=================
+ 
+Locations on the surface of Mars are expressed in planetocentric
+coordinates. Longitude is comprised in the range 0 - 360 degrees.
+ 
+ 
+Software
+========
+ 
+Marsis data products can be read by the PDS software NASAView, which
+reads a PDS label and displays the associated image or table.
+NASAView has been tested on both EDR and RDR data products.
+ 
+ 
+Media/Format
+============
+ 
+The standard distribution format for the data is transfer through
+Internet from the Planetary Science Archive of ESA, which can be
+accessed at the following URL:
+ 
+http://www.rssd.esa.int/psa
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Review
+======
+ 
+These data have been reviewed by the instrument team and are of the
+highest quality that can be generated at this time. Science results
+based on these data have been published in journals. The dataset is
+currently being reviewed by the Plannetary Science Archive of ESA.
+ 
+ 
+Data Coverage and Quality
+=========================
+ 
+Data in this dataset have been acquired only in the last six months of
+the nominal mission, because of the delay in the deployment of the
+MARSIS antenna. Because of this, coverage is limited mainly to
+southern latitudes.
+ 
+Data quality in a data product label is indicated through the
+DATA_QUALITY_ID element, and measures the integrity of the telemetry
+stream from the instrument. The permitted values of DATA_QUALITY_ID
+are the following:
+ 
+-1: percentage of corrupted data not available
+ 0: no corrupted data
+ 1: less than 2% corrupted data
+ 2: less than 5% corrupted data
+ 3: less than 10% corrupted data
+ 4: more than 10% corrupted data
+ 
+ 
+Limitations
+===========
+ 
+There are no known limitations at this time.
+ 
+ 
+ 
+At this point you may add additional headings for other
+relevant aspects
+of the data set: Data Compression, Time-Tagging, etc.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

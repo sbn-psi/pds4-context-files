@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-a-rpcies-2-ast1-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER STEINS RPCIES 2 AST1 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rpcies.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.2867_steins::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-a-rpcies-2-ast1-v1.0__browserp_ro-a-rpcies-2-ast1-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Burch, J. et al., IES - The ROSETTA Ion and Electron Spectrometer, Space Sci.
+                   Rev., 128(1-4), 697-712, Feb. 2007.
+            </reference_text>
+            <description>reference.BURCHETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-A-RPCIES-2-AST1-V1.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER STEINS RPCIES 2 AST1 V1.0</data_set_name>
+        <data_set_release_date>2011-03-16</data_set_release_date>
+        <start_time>2008-07-11T13:27:10.654Z</start_time>
+        <stop_time>2008-09-06T04:55:03.554Z</stop_time>
+        <producer_full_name>BRAD TRANTHAM</producer_full_name>
+        <citation_text>
+            2013-07-10 SBN:T.Barnes Corrected . RECORD_TYPE = STREAM OBJECT =
+            DATA_SET OBJECT = DATA_SET_MISSION END_OBJECT = DATA_SET_MISSION
+            OBJECT = DATA_SET_REFERENCE_INFORMATION REFERENCE_KEY_ID =
+            BURCHETAL2007 END_OBJECT = DATA_SET_REFERENCE_INFORMATION OBJECT
+            = DATA_SET_INFORMATION DATA_SET_NAME =Trantham, B.,
+            ROSETTA-ORBITER STEINS RPCIES 2 AST1 V1.0,
+            RO-A-RPCIES-2-AST1-V1.0, NASA Planetary Data System, 2013
+        </citation_text>
+        <data_set_terse_desc>
+            This dataset contains EDITED RAW DATA of the asteroid Steins
+            encounter (AST1). Included are data taken between 11 Jul 2008 and
+            06 Sep 2008.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains EDITED RAW DATA of the RPCIES instrument
+            taken during the asteroid Steins encounter (AST1). Included are
+            the data taken between 11 Jul 2008 and 06 Sep 2008.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The following describes the nature of instrument operation
+      during the various periods for which IES data are available in
+      this submission.  In all cases the data are raw electron and
+      ion counts as function of energy, azimuth (direction in the
+      instrument symmetry plane) and elevation (angle above or below
+      the symmetry plane).
+ 
+      This data set includes data obtained by IES during the period
+      11 July 2008 to 6 September 2008 (referred to as the Steins
+      flyby period by ESA for reference although instrument operation
+      was not continuous during this period).  The period between
+      5 July and 1 August 2008 encompassed the active checkout PC8.
+ 
+      Several tests were performed on IES and although the spacecraft
+      was in the solar wind during this period IES was able to see
+      the solar wind only briefly because of the spacecraft attitude.
+ 
+      The actual flyby of asteroid Steins occurred at 2038 UT
+      spacecraft time on 5 September 2008.  IES apparently saw no
+      signature of the asteroid nor did it see the solar wind (except
+      very briefly during the spacecraft &apos;flip&apos; at about 1840 UT on
+      5 September 2008).
+ 
+ 
+    Processing
+    ==========
+      All Rosetta Plasma Consortium (RPC) data packets are transmitted
+      together during downlinks with Rosetta. RPC data are retrieved
+      from the Data Distribution System (DDS) at European Space
+      Operations Centre (ESOC) to a central RPC data server at
+      Imperial College London. Data for IES is copied from the RPC
+      central data server by IESGS at Southwest Research Institute.
+ 
+      The pipeline processing software is the IES Ground System
+      (IESGS). IESGS extracts IES CCSDS packets from the RPC
+      collective data files stored on the RPC central data server at
+      Imperial College. These packets are used to build ion and
+      electron data products. The data products are grouped by date
+      and written out to PDS compliant archive data files. One data
+      file is created for each day. IESGS also generates the labels
+      for the archive data files. IES science products, archive and
+      label files, and limited spectrograms are available to team
+      scientists on the IESGS website.
+ 
+    Coordinate System
+    =================
+      In order to determine IES pointing, attitude data for the
+      Rosetta spacecraft is obtained through SPICE kernels and
+      converted from the J2000 coordinate system to the HGRTN
+      coordinate system.  HGRTN is the heliocentric RTN system such
+      that the sun-spacecraft vector defines the positive x-axis and
+      the positive y-axis is the cross-product of the heliographic
+      polar axis and the HGRTN positive x-axis. J2000 is the inertial
+      frame defined by the intersection of the Earth mean equator and
+      the ecliptic plane at the J2000 epoch of January 1, 2000 at
+      noon.
+ 
+      The pointing for each bin of IES is thereafter determined by
+      multiplying the converted spacecraft attitude matrix in HGRTN
+      by the vector representation of each particle measurement bin.
+      The resulting vectors represent the flow of particles through
+      the respective particle measurement bins in HGRTN coordinates.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      This dataset is used by the IES science team after processing.
+      This is done to ensure that the archived data contains good,
+      valid products.
+ 
+    Review
+    ======
+      This archival data set was examined by the IES science team
+      prior to submission to the Planetary Data System (PDS) and was
+      then reviewed by PDS and the Rosetta data archive working group.
+      The current set is a resubmission after correcting or
+      responding to the various RIDs resulting from that review.
+ 
+    Limitations
+    ===========
+      None.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

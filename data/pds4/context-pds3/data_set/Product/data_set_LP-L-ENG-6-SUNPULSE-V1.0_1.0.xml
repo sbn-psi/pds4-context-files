@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-eng-6-sunpulse-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LP MOON SUN PULSE DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_prospector::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:eng.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-eng-6-sunpulse-v1.0__browserp_lp-l-eng-6-sunpulse-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-eng-6-sunpulse-v1.0__browser_geo_lp-l-eng-6-sunpulse-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-eng-6-sunpulse-v1.0__dvo_geo_lp-l-eng-6-sunpulse-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Binder, A.B., W.C. Feldman, G.S. Hubbard, A.S. Konopliv, R.P. Lin, M.H. Acuna,
+                   and L.L. Hood, Lunar Prospector searches for polar ice, a metallic core, gas
+                   release events, and the moon&apos;s origin, Eos, Trans. AGU, 79, 97, 1998.
+            </reference_text>
+            <description>reference.BINDERETAL1998</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LP-L-ENG-6-SUNPULSE-V1.0</data_set_id>
+        <data_set_name>LP MOON SUN PULSE DATA V1.0</data_set_name>
+        <data_set_release_date>1998-06-01</data_set_release_date>
+        <start_time>1998-01-07T09:36Z</start_time>
+        <stop_time>1999-07-29T18:10Z</stop_time>
+        <producer_full_name>ALAN B. BINDER</producer_full_name>
+        <citation_text>
+            Binder, A.B., W.C. Feldman, A.S.Konopliv, R.P. Lin, M.H. Acuna,
+            L.L. Hood, and E.A. Guinness, LP MOON SUN PULSE DATA V1.0,
+            LP-L-ENG-6-SUNPULSE-V1.0, NASA Planetary Data System, 1998.
+        </citation_text>
+        <data_set_terse_desc>
+            The sun pulse data set is a record of times that the Lunar
+            Prospector sun sensor detects the Sun.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The sun pulse data set is a record of times that the Lunar
+            Prospector sun sensor detects the Sun. These sun pulse times are
+            derived from ground processing of the sun sensor data, earth-moon
+            limb sensor data, and the spacecraft ephemeris. This data set is
+            part of the Lunar Prospector Level 0 data archive. The sun pulse
+            times are used in determining the spacecraft spin rate and
+            orientation as a function of time. Because the Lunar Prospector
+            spacecraft is sometimes in eclipse with the Sun, the sun pulse
+            data set is generated on the ground to include both actual sun
+            pulse times based on the sun sensor measurements and estimated
+            sun pulse times based on the history of spin rate change during
+            all prior eclipses.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The sun pulse data set is a record of times that the Lunar Prospector
+    sun sensor detects the Sun.  These sun pulse times are derived from
+    ground processing of the sun sensor data, earth-moon limb sensor data,
+    and the spacecraft ephemeris.  This data set is part of the Lunar
+    Prospector Level 0 data archive.  The sun pulse times are used in
+    determining the spacecraft spin rate and orientation as a function of
+    time.  Because the Lunar Prospector spacecraft is sometimes in eclipse
+    with the Sun, the sun pulse data set is generated on the ground to
+    include both actual sun pulse times based on the sun sensor
+    measurements and estimated sun pulse times based on the history of
+    spin rate change during all prior eclipses.  See the
+    CONFIDENCE_LEVEL_NOTE field for further information on how sun pulse
+    time is estimated during eclipses.
+ 
+    The sun pulse data set is organized into files, each of which cover
+    about 4-6 hours of time.  In general, each sun pulse file matches the
+    time range of a corresponding merged telemetry file.  There is usually
+    one sun pulse record for every other minor frame of the merged
+    telemetry file.
+ 
+ 
+  Science Objectives
+  ==================
+    The Lunar Prospector science objectives relevant to this data set are
+    to map the Moon&apos;s surface composition and its magnetic field, and to
+    determine the frequency and location of gas release events.  A special
+    emphasis of the science objectives is to search for polar water ice
+    deposits [BINDERETAL1998].
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    When Lunar Prospector was in sunlight, the sun pulse time was set
+    equal to the sun sensor time extracted from the telemetry files.  When
+    the spacecraft was in eclipse, the sun pulse was estimated using the
+    pre-eclipse measured spin rate, the calibrated spin rate change during
+    eclipse, and limb sensor telemetry.  The uncertainty in an estimated
+    sun pulse time was also determined and stored in the data set.  Each
+    sun pulse record contains a flag indicating whether the value is an
+    actual or estimated value.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Sun sensor data were acquired continuously by Lunar Prospector during
+    the Primary and Extended Missions.  However, gaps can occur in the
+    telemetry data.  The times of these gaps are documented in a log file
+    included with the level 0 archive.  There were 18 sun pulse files
+    missing from the archive volume that contained the matching telemetry
+    file because solutions were not complete at the time the archive
+    volume was produced.  The missing sun pulse files are included on the
+    last level 0 volume (LP_0019) in the SUNPULSE/DXXX directory. The 18
+    late sun pulse files are documented in the ERRATA.TXT file.
+ 
+    The earth-moon limb sensor was turned off toward the end of the
+    Primary Mission and into the Extended Mission to extend the spacecraft
+    battery life.  Thus these data were not always available for
+    estimating sun pulses during times of spacecraft eclipses.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

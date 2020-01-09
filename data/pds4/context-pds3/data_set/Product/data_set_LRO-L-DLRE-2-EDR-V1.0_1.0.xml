@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO DLRE LEVEL 2 EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:dlre.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-2-edr-v1.0__browserp_lro-l-dlre-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-2-edr-v1.0__dvo_geo_lro-l-dlre-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-dlre-2-edr-v1.0__pds.geo.lro.orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Paige, D.A., et al., The Lunar Reconnaissance Orbiter Diviner Lunar Radiometer
+                   Experiment, Space Sci. Rev., doi: 10.1007/s11214-009-9529-2, 2009.
+            </reference_text>
+            <description>reference.PAIGEETAL2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-DLRE-2-EDR-V1.0</data_set_id>
+        <data_set_name>LRO DLRE LEVEL 2 EDR V1.0</data_set_name>
+        <data_set_release_date>2016-06-15</data_set_release_date>
+        <start_time>2009-07-05T16:50:26.259Z</start_time>
+        <stop_time>2016-03-15T23:59:59.897Z</stop_time>
+        <producer_full_name>DAVID PAIGE</producer_full_name>
+        <citation_text>
+            Paige et al., LRO DLRE LEVEL 2 EDR V1.0, NASA Planetary Data
+            System, LRO-L-DLRE-2-EDR-V1.0, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Unpacked, uncalibrated LRO DLRE engineering and science
+            measurements
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set consists of the Diviner Lunar Radiometer Experiment
+            uncalibrated observations, also known as EDRs. The DLRE is a
+            surface pushbroom mapper that measures emitted thermal radiation
+            and reflected solar radiation from the surface of the moon. Two
+            Diviner solar channels measure 0.3-3 micrometers reflected solar
+            radiation. Three Diviner channels near 8 micrometers classify
+            regolith mineralogy by mapping the location of the Christiansen
+            feature. The remaining four Diviner channels measure surface
+            temperature in four spectral bands ranging from 12.5 micrometers
+            to beyond 200 micrometers.
+        </abstract_desc>
+        <data_set_desc>
+ 
+Data Product Overview
+===========================================================================+
+ 
+Every 2.048 seconds Diviner collects a data &apos;frame&apos; containing
+the following:
+ 
+* 16 sets of science data, with each set containing 192 sixteen-bit
+  science measurements from the focal plane interface electronics
+  obtained over integration periods of 0.128 seconds
+* A single set of instrument engineering and housekeeping
+  measurements (or &apos;engineering data&apos;)
+ 
+The data are downlinked to the LRO Ground Data System (GDS) and are
+pushed to the Diviner SOC at the end of each downlink pass. Diviner
+software assembles the telemetry files into EDR data tables, each
+covering a one-hour time period.
+ 
+Each Diviner EDR data product will consist of two files.  The first
+file is an ASCII formatted detached PDS label.  The second file is
+the ASCII data table file.
+ 
+Each ASCII record contains 2656 bytes, and there will be a record
+every 0.128 seconds (unless there is a data gap; time periods which
+contain no data will not produce data records).  Each one-hour
+Diviner EDR ASCII data table will be up to approximately 75 MB. The
+volume of the EDR data product will be up to approximately 1800 MB
+per day.
+ 
+While there is only a single set of engineering data for the 16 sets
+of science data, it is known during which of the 16 science data
+sets a given engineering measurement was taken. In the EDR, the
+engineering data are propagated across each science data set for a
+completely uniform and flat file. Each engineering measurement will
+contain a valid value during the appropriate science data set, and
+the UNKNOWN_CONSTANT (-9999) during the other science data sets
+where engineering data were not obtained.
+ 
+In the ASCII data tables, each complete set of science data plus
+engineering data is considered a &apos;record&apos;, and is contained on a
+single line.    Where a data measurement is not valid or applicable,
+the UNKNOWN_CONSTANT will be found.
+ 
+ 
+Data Processing Level
+=====================
+ 
+This document uses the Committee on Data Management and Computation
+(CODMAC) data level numbering system to describe the processing
+level of the EDR data product. Diviner EDR data products are
+considered CODMAC &apos;Level 2&apos;, equivalent to NASA level 0. The EDR
+data files are generated from CODMAC Level 1 or &apos;Raw Data&apos;, which
+are the telemetry packets within the project specific Standard
+Formatted Data Unit (SFDU) record.
+ 
+ 
+Data Product Generation
+=======================
+ 
+The Diviner EDR data products will be generated by the Diviner
+Instrument Team at JPL. The EDR data products will be reconstructed
+from telemetry data products and formatted according to the EDR SIS.
+Meta-data acquired from the telemetry data headers will be used to
+populate the PDS label. The PDS archives will be assembled and
+delivered to the PDS from UCLA.
+ 
+Data Flow
+=========
+ 
+Diviner science and engineering telemetry are transferred to the
+Diviner JPL SOC. Once transferred, the Diviner software
+automatically processes the telemetry into Level 0 EDR data
+products. The Diviner EDR data products are then archived locally
+at the Diviner operation center.
+ 
+After an initial data validation period, the Diviner team will
+assemble the data products and ancillary files into archive
+volumes and will transfer the assembled volume to the PDS
+Geosciences Node.  The Diviner EDR archive will be made available
+via data releases scheduled at three month intervals as specified
+in the Lunar Reconnaissance Orbiter Project Data Management and
+Archive Plan.
+ 
+For more information please see the document DP_SIS.HTM
+(HTML format) or DP_SIS.PDF (Adobe Acrobat format) located
+in the DOCUMENT directory of this archive.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Overview
+========
+ 
+With respect to the EDR data, the data exists in 2 states -- Absent
+or Present.  For the data that is present, the confidence level is
+high due to simplicity of the processing and structure of the data.
+ 
+The quality flag (column 1) has limited meaning for the EDR
+records.  A value of 0 indicates present and completely valid
+data; a value of 1 indicates a record header line.
+ 
+Individual columns in the data records will contain the
+UNKNOWN_CONSTANT (-9999) where data is missing or unknown.
+ 
+ 
+Review
+======
+ 
+This archival data set was examined by a peer review panel prior to
+its acceptance by the Planetary Data System (PDS). The peer review
+was conducted in accordance with PDS procedures.
+ 
+Prior to creation of the final version of the archival data set,
+key elements of the archive were distributed for preliminary
+review.  These included electronic versions of example PDS labels,
+CATALOG files, and Software Interface Specifications (SISs).
+These materials were distributed to PDS personnel, the experiment
+investigator, and others, as appropriate.
+ 
+ 
+Data Coverage and Quality
+=========================
+ 
+The Diviner instrument has a 98% data return rate of expected data.
+Data loss is typically seen during data transmission or spacecraft and
+instrument anomalies.  Diviner performed a Warm Reset after failing to
+see a valid equator crossing from LRO on August 22, 2009.  The Warm
+Reset was needed to clear the bad equator crossing value.  Diviner
+lost a few soundings.  The LRO spacecraft triggered a sun-safed event
+that powered off all instruments on October 10, 2009. Approximately
+eight hours of Diviner data was lost due to the anomaly.  Two more
+sun-safed events occurred on both January 12, 2010 and February 9, 2010.
+The Diviner instrument was powered off for both events.  On July 23, 2010
+Diviner was powered off for almost five hours during a spacecraft maneuver
+during which Diviner data were not collected.  On December 23, 2010
+Diviner was powered off during for about 12 hours during an eclipse.
+On February 23, 2011 Diviner was powered off for about 46 hours due
+to a spacecraft safing event.  On April 03, 2011 Diviner was powered off
+for about 23 hours due to a spacecraft safing event.  On June 06, 2011
+Diviner lost about 14 hours of data due to a Ka-comm problem.
+On March 22, 2012 Diviner was powered off for about 40 hours due to a
+spacecraft safing event.  On September 04, 2012 Diviner was powered off
+for about 17 hours due to a spacecraft safing event.  One September 08,
+2012 Diviner was powered off for about 13 hours due to a spacecraft safing
+event.
+ 
+ 
+The following files were affected by the anomalies and are either partial
+files or completely missing:
+ 
+2009082202_EDR.TAB - partial - missing data between times
+    02:03:55.171-02:04:06.422 due to invalid equator crossing from LRO.
+ 
+2009101016_EDR.TAB - partial - missing data after 16:14:38.980
+2009101017_EDR.TAB through 2009101023_EDR.TAB ---------&gt; 7 files missing
+2009101100_EDR.TAB - partial - missing data before 00:41:15.607
+ 
+2010011210_EDR.TAB - partial - missing data after 10:00:00:468
+2010011211_EDR.TAB through 2010011220_RDR.TAB ---------&gt; 10 files missing
+2010011221_EDR.TAB - partial - missing data before 21:18:56:194
+ 
+2010020914_EDR.TAB - partial - missing data after 14:59:48:182
+2010020915_EDR.TAB through 2010021520_EDR.TAB --------&gt; 150 files missing
+2010021521_EDR.TAB - partial - missing data before 21:54:34:397
+ 
+2010072414_EDR.TAB - partial - missing data after 14:34:04:253
+2010072415_EDR.TAB through 2010072418_EDR.TAB --------&gt; 4 files missing
+2010072419_EDR.TAB - partial - missing data before 19:24:37:058
+ 
+2010122105_EDR.TAB - partial - missing data after 05:08:03:297
+2010122106_EDR.TAB through 2010122116_EDR.TAB --------&gt; 11 files missing
+2010122117_EDR.TAB - partial - missing data before 17:08:15:134
+ 
+2011022314_EDR.TAB - partial - missing data after 14:24:57:290
+2011022315_EDR.TAB through 2011022512_EDR.TAB --------&gt; 46 files missing
+2011022513_EDR.TAB - partial - missing data before 13:07:28:380
+ 
+2011040317_EDR.TAB - partial - missing data after 17:29:04:698
+2011040318_EDR.TAB through 2011040413_EDR.TAB --------&gt; 20 files missing
+2011040414_EDR.TAB - partial - missing data before 14:44:47:900
+ 
+2011061409_EDR.TAB - partial - missing data after 09:37:20:572
+2011061410_EDR.TAB through 2011061423_EDR.TAB --------&gt; 14 files missing
+2011061500_EDR.TAB - partial - missing data before 00:07:20:869
+ 
+2012032202_EDR.TAB - partial - missing data after 02:30:26:215
+2012032203_EDR.TAB through 2012032317_EDR.TAB --------&gt; 39 files missing
+2012032318_EDR.TAB - partial - missing data before 18:15:47570
+ 
+2012090405_EDR.TAB - partial - missing data after 05:15:27:414
+2012090406_EDR.TAB through 2012090420_EDR.TAB --------&gt; 15 files missing
+2012090421_EDR.TAB - partial - missing data before 21:01:36:575
+ 
+2012090801_EDR.TAB - partial - missing data after 01:15:04:908
+2012090802_EDR.TAB through 2012090812_EDR.TAB --------&gt; 11 files missing
+2012090813_RDR.TAB - partial - missing data before 13:51:51:681
+ 
+2013112704_EDR.TAB - partial - missing data after 04:09:51:689
+2013112705_EDR.TAB through 2013112919_EDR.TAB --------&gt; 63 files missing
+2013112920_EDR.TAB - partial - missing data before 20:51:58:203
+ 
+2014022611_EDR.TAB - partial - missing data after 11:20:42:962
+2014022612_EDR.TAB through 2014022620_EDR.TAB --------&gt; 9 files missing
+2014022621_EDR.TAB - partial - missing data before 21:29:57:716
+ 
+2014041504_EDR.TAB - partial - missing data after 04:25:43:225
+2014041505_EDR.TAB through 2014041516_EDR.TAB --------&gt; 12 files missing
+2014041517_EDR.TAB - partial - missing data before 17:31:47:179
+ 
+ 
+Limitations
+===========
+ 
+Data seen immediately after the instrument is powered on or after
+a restart is suspect for a few seconds to a few minutes.  The pointing
+information is typically incorrect or missing.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

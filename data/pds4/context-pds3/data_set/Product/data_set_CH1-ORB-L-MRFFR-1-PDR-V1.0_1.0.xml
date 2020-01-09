@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ch1-orb-l-mrffr-1-pdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CH1-ORB MOON MINI-RF 1 PACKETIZED DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.chandrayaan-1::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ch1-orb::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mrffr.ch1-orb::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ch1-orb-l-mrffr-1-pdr-v1.0__pds.geo.chandrayaan1.webservices::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Nozette, S., P. Spudis, B. Bussey, K. Raney, H. Winters, C.L. Lichtenberg, W.
+                   Marinelli, J. Crusan, and M. Gates, The LRO Miniature Radio Frequency (Mini-RF)
+                   technology demonstration, Space Sci. Rev., submitted, 2009.
+            </reference_text>
+            <description>reference.NOZETTEETAL2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CH1-ORB-L-MRFFR-1-PDR-V1.0</data_set_id>
+        <data_set_name>CH1-ORB MOON MINI-RF 1 PACKETIZED DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2008-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>MINI-RF POC</producer_full_name>
+        <citation_text>
+            Chandrayaan-1 Forerunner Raw Data Set V1.0,
+            CH1-ORB-L-MRFFR-1-PDR-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw telemetry packet files and ancillary files from the Mini-RF
+            (Mini-SAR) Forerunner lunar mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival raw data acquired from the
+            Mini-RF (Forerunner) instrument during the Chandrayaan-1 mission.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Raw Packetized Data Records (PDRs) are in the form of raw binary
+      telemetry in Consultative Committee for Space Data systems (CCSDS)
+      packet format that have been extracted from frames downlinked from
+      the instrument.  PDRs have duplications removed and include any
+      ancillary information needed to understand what is in a given packet.
+      They are retained so that future researchers can reproduce the
+      higher-level products if they so desire.  These data will not be
+      reformatted or processed further and are delivered to the PDS with
+      detached minimal PDS labels.  Because the higher-level products can be
+      reprocessed as often as desired, there may be a one-to-many
+      relationship a raw data product to a processed data product.
+ 
+ 
+    Parameters
+    ==========
+      See individual SIS documents, which are located in the
+      DOCUMENT directory, for detailed descriptions of each file
+      contained in this data archive.
+ 
+ 
+    Processing
+    ==========
+      A minimal PDS label accompanies each raw data file and gives
+      only a high-level description of the content and format.
+ 
+ 
+    Data
+    ====
+      The formats of these packets are identical, but their contents differ.
+      Each of these packets is composed of five segments:  the CCSDS Primary
+      Header which contains packet identification information, the CCSDS
+      Secondary Header which contains the packet time stamp, the Science
+      Header which contains associated metadata, the Science Data which
+      contains the data samples, and a trailer (Other Data) which contains
+      transmission information.  Byte values are 8-bits long, Integer values
+      are 32-bits long, short (integers) are 16-bits long, and floating
+      point values are 32-bit IEEE numbers.  These data only are provided in
+      big-endian format.
+ 
+      The science data are time-ordered and consist of Vertical (V) or
+      Horizontal (H) polarization channel samples contained within a pulse.
+      The packets will contain either H or V channel data, never both in the
+      same packet.  The V/H Channel Indicator flag in the Science Header
+      indicates if the data are H or V channel.  Data gaps in the derived
+      products or breaks in the sequence count field in the primary CCSDS
+      packet header would indicate missing packets. Please see documentation
+      in the DOCUMENT directory for additional information on the data files
+      and their format.
+ 
+      These data are stored in the DATA/SAR/&lt;orbit&gt;/RAW directory on
+      archival volumes. File names are described in MRFFR_DP_SIS.PDF.
+ 
+ 
+    Ancillary Data
+    ==============
+      Each raw science product is accompanied by a text metadata file
+      that contains the parameters that describe the state the instrument
+      was in at the time of data collection and location and timing
+      information about the data set.  This file is referenced in the
+      PDS label associated with the science data product.
+ 
+      This data set includes the complete set of Mini-SAR SPICE data
+      files (kernels), which can be accessed using SPICE
+      software from the PDS NAIF Node (http://naif.jpl.nasa.gov/naif/).
+      The SPICE data contain geometric and other ancillary
+      information needed to recover the full value of science
+      instrument data. In particular SPICE kernels provide spacecraft
+      and planetary ephemerides, instrument mounting alignments,
+      spacecraft orientation, and data needed for relevant time
+      conversions. The SPICE files are in the GEOMETRY directory of
+      this archive. See GEOMTERY/GEOMINFO.TXT for more information.
+ 
+    Housekeeping Data
+    =================
+      Instrument housekeeping data is included with this data set.  These
+      data are provided in text files in comma separated value (CSV)
+      spreadsheet-type format.
+ 
+ 
+    Coordinate System
+    =================
+      Raw data products are not dependent on definition of a
+      coordinate system.
+ 
+ 
+    Software
+    ========
+      No software is included with this archival data set.
+ 
+ 
+    Media/Format
+    ============
+ 
+      These products are delivered on a hard-drive or by ftp and
+      not on a specific formatted medium.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this data are collected from orbits around the Moon.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the Mini-RF
+      Team prior to submission to the Planetary Data System (PDS).
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications.  These materials were distributed to PDS
+      personnel, the experiment investigator, and others,
+      as appropriate.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The coverage on each archival volume is associated with the
+      orbit number.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

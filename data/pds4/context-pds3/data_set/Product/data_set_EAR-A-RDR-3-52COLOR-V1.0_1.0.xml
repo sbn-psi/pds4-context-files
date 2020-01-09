@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-a-rdr-3-52color-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>52 COLOR ASTEROID SURVEY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:unk.unk::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.asteroid::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-a-rdr-3-52color-v1.0__browserp_ear-a-rdr-3-52color-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cruikshank, D.P., and W.K. Hartmann, The meteorite-asteroid connection:
+                   Two olivine-rich asteroids, Science 223, 281-283, 1984.
+            </reference_text>
+            <description>reference.CRUIKSHANK-HARTM1984</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-A-RDR-3-52COLOR-V1.0</data_set_id>
+        <data_set_name>52 COLOR ASTEROID SURVEY V1.0</data_set_name>
+        <data_set_release_date>1995-03-31</data_set_release_date>
+        <start_time>1983</start_time>
+        <stop_time>1987</stop_time>
+        <producer_full_name>JEFFREY F. BELL</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            52-color IR spectra of numbered asteroids
+        </data_set_terse_desc>
+        <abstract_desc>
+            The observations were made using a double CVF (circularly
+            variable filter). The short wavelength portion of the CVF covered
+            the octave from 0.8 to 1.6 microns with 3 percent resolution,
+            while the long wavelength portion covered 1.5 to 2.6 microns with
+            5 percent resolution. There is some overlap in the spectral
+            coverage between 1.5 and 1.6 microns, which is evident as a
+            discontinuity in the wavelengths after the first 32 values, which
+            were obtained with the short wavelength portion, while the
+            remaining 20 values were obtained with the long wavelength
+            portion.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+  The observations were made using a double CVF (circularly variable
+  filter).  The short wavelength portion of the CVF covered the
+  octave from 0.8 to 1.6 microns with 3 percent resolution, while the
+  long wavelength portion covered 1.5 to 2.6 microns with 5 percent
+  resolution.  There is some overlap in the spectral coverage between
+  1.5 and 1.6 microns, which is evident as a discontinuity in the
+  wavelengths after the first 32 values, which were obtained with the
+  short wavelength portion, while the remaining 20 values were
+  obtained with the long wavelength portion.
+ 
+  Errors were computed from the standard deviation of the multiple
+  scans through the CVF.  If only one scan was performed, the error
+  is left blank.  Note that due to the small number of scans, the
+  errors are often both underestimated and overestimated.
+ 
+  Some wavelength positions correspond to telluric features and were
+  intentionally blanked.  In other cases, especially near the ends of
+  the CVF, the data were either not taken or were hopelessly noisy,
+  so those entries were also blanked.
+ 
+  The following code letters are used for the various solar analog
+  stars:
+                 A = 18 Aquarii
+                 B = 16 Cygni B
+                 O = 13 Orionis
+                 V = 70 Virginis
+ 
+  The observation date for 113 Amalthea is given as 054/05/85 in the
+  original machine readable data file.  The assumption has been made
+  that the 4 is a typographical error, based on the fact that other
+  observations were made on 05/05/85.
+ 
+  Not all dates of observation are available.  In particular, those
+  asteroid observations contributed by R.H. Brown did not include
+  observation dates in the original machine readable data file.
+ 
+  One observation was taken from the literature, namely Cruikshank
+  and Hartmann (1984) [CRUIKSHANK&amp;HARTM1984].
+ 
+  Reference:  Cruikshank, D.P., and W.K. Hartmann 1984.  The
+  meteorite- asteroid connection: Two olivine-rich asteroids.
+  Science 223, 281-283.
+ 
+ 
+  Parameters
+  ==========
+  The data tables have one entry for each observation, with fields
+  for the following parameters.  Asteroid catalog number, a code for
+  the solar analog star used with that observation, the date of
+  observation, and reflectances and error values for each of 52
+  bandpasses.
+ 
+ 
+  Data
+  ====
+  The reflectances in each of the 52 bands are given in the table
+  &apos;52color.tab&apos;.  The errors are given in the table &apos;52error.tab&apos;.
+  The asteroid identification, solar analog code, and observation
+  date are provided in each of these two files.
+ 
+ 
+  Ancillary Data
+  ==============
+  The ancillary file &apos;52waves.tab&apos; presents the effective wavelengths
+  of each of the 52 positions of the CVF which were used for the
+  survey, arranged in a single record with a separate field for each
+  wavelength.  The file &apos;52waves2.tab gives the same information
+  arranged with one wavelength per record.  Each record also contains
+  the FWHM of the bandpass.
+ 
+ 
+  Media/Format
+  ============
+  This dataset is released in the form of ASCII files which may be
+  stored on disk or other magnetic medium and which may be
+  distributed by ftp, email, real-time access by remote login, or by
+  whatever means is most convenient.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Review
+  ======
+  This dataset was included in an external review on March 31, 1995.
+ 
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>GD-11F</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

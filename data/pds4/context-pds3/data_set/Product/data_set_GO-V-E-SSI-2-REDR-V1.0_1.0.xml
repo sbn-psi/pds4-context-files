@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-v-e-ssi-2-redr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO VENUS AND EARTH SOLID STATE IMAGING 2 RAW EDR V1</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ssi.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.black_sky::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.non_science::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-v-e-ssi-2-redr-v1.0__browserp_go-v-e-ssi-2-redr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-v-e-ssi-2-redr-v1.0__dvo_imaging_go-v_e-ssi-2-redr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cribbs, M.A., and D.A. Wagner, Planetary Science Data Dictionary, JPL Document
+                   D7116, November, 1992.
+            </reference_text>
+            <description>reference.CRIBBS1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   McLaughlin, Bruce, EJ-7 Shoemaker-Levy 9 DMS Data Return
+                   Strategy,GLL-MDT-94-096.IOM, May 13, 1994.
+            </reference_text>
+            <description>reference.MCLAUGHLIN1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Wainio, Lisa, SSI REDR Software Interface Specification (SIS), JPL Document
+                   D12109, April 20, 1992.
+            </reference_text>
+            <description>reference.WAINIO1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   White, Mitchell, SSI REDR CD-ROM Software Interface Specification (SIS),
+                   JPL Document D232-15, July 9, 1993.
+            </reference_text>
+            <description>reference.WHITE1993</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-V/E-SSI-2-REDR-V1.0</data_set_id>
+        <data_set_name>GALILEO VENUS AND EARTH SOLID STATE IMAGING 2 RAW EDR V1</data_set_name>
+        <data_set_release_date>1992-11-01</data_set_release_date>
+        <start_time>1989-10-26T16:00:00Z</start_time>
+        <stop_time>1990-12-17T20:36Z</stop_time>
+        <producer_full_name>HELEN B. MORTENSEN</producer_full_name>
+        <citation_text>not applicable</citation_text>
+        <data_set_terse_desc>
+            This data set has been generated by NASA&apos;s Galileo Project
+            in order to distribute the images acquired by the Solid State
+            Imaging (SSI) camera to the scientists and later to the Planetary
+            Data System (PDS).
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set has been generated by NASA&apos;s Galileo Project in
+    order to distribute the images acquired by the Solid State
+    Imaging (SSI) camera to the scientists and later to the
+    Planetary Data System (PDS).  The collection resides on volumes
+    GO_0002 thru GO_0006 and consists of all images acquired by the
+    Galileo spacecraft during the period from launch in 1989
+    through the first encounter with the Earth (SCLK 3061100
+    through 62303500).  Included are images of Venus, the Earth&apos;s
+    Moon and the Earth taken during the 1990 encounters, as well as
+    additional star, calibration and other test data.
+ 
+ 
+  Parameters
+  ==========
+    The Galileo SSI camera acquires data in a digital raster-format
+    containing 800 scan lines and 800 samples per scan line.  Each
+    picture element (pixel) in the two dimensional image array is
+    represented as an 8-bit value between 0 and 255, proportional
+    to the amount of light detectessssssd at that point (with 0 being
+    the least amount of light and 255 being the greatest amount of
+    light).  The camera is equipped with seven color filters and a
+    clear filter such that images taken through complementary
+    filters can be combined during ground processing to produce
+    color images.  To make full scientific use of the image
+    collection, the radiometric and geometric properties of the
+    camera system should be understood.
+ 
+    The ancillary disc, GO_0001, will provide calibration files and
+    technical documentation necessary for the understanding of the
+    images produced by the SSI camera.  Presently, calibration
+    files and software are available through the VICAR software
+    system at MIPS and SPICE files are available through the
+    Galileo Science Data Team.
+ 
+ 
+  Processing
+  ==========
+ 
+    REDR Processing
+    ---------------
+      The Raw Experiment Data Records (REDRs) were produced by the
+      Multimission Image Processing Subsystem (MIPS) at the Jet
+      Propulsion Laboratory using several Video Image
+      Communications and Retrieval (VICAR) programs.  The
+      processing included the following steps:
+ 
+      --The original telemetry data was processed into
+        raster-formatted files (GLLTELEMPROC)
+ 
+      --Multiple versions of each data file obtained from separate
+        downlinks or playbacks were merged together to create the
+        best version of the data (SSIMERGE)
+ 
+      --The VICAR label was updated to reflect the most recent
+        pointing information (CATLABEL)
+ 
+      --Bad data value information was then added to the Telemetry
+        Header (BADLABELS)
+ 
+      --Missing line gaps of two lines or less were filled in, as
+        specified by the SSI Team. (GLLFILLIN)
+ 
+      --The PDS  Index table and detached PDS label files were
+        generated. (CDGEN)
+ 
+      --The VICAR files and PDS files were premastered onto a WORM
+        CD-ROM which was validated.
+ 
+      --The WORM CD-ROM was sent to a vendor and CD-ROM&apos;s were
+        generated.
+ 
+      --A final CD-ROM was compared bit-by-bit with the original data
+        to ensure the quality of the vendor product.
+ 
+ 
+  Data
+  ====
+    Each volume contains approximately 800 images stored as VICAR
+    files.  A detached PDS label has been included for each image.
+    Documentation files have been provided which inform the user
+    about the organization and contents of the disc, and the
+    definition of the labels.  An index files have also been
+    provided which contain information about the images in the data
+    set.
+ 
+    The REDR data are generated by MIPS using procedures
+    specifically developed or adapted for Galileo.  The files are
+    generated on a VAX and are written in VAX compatible (LSByte
+    first) format.
+ 
+ 
+    REDR File Format
+    ----------------
+      The Galileo REDR format (WHITE1993) was originally reserved
+      for SSI calibration data or data which should not be
+      radiometrically corrected.  The SSI Team recently decided
+      that the REDR format will be used to archive all raw SSI
+      data.
+ 
+      Each REDR file consists of a VICAR label, the telemetry
+      header, the bad-data value header records (if there are any),
+      and the Image Data which is preceded by a Binary Prefix.
+      There are 800 line records of image data.  All records are
+      fixed length.  The line record length is 1000 bytes; 200
+      bytes of a binary line prefix and 800 bytes of 8 bit pixel
+      data.  (Note, for the AI8 format or summation mode, the
+      record length is still 1000, but the data is placed in the
+      first 400 pixel samples and 400 lines only.) There will be a
+      one-to-one correspondence between line records and image
+      lines.  Data not received will be zero-filled.
+ 
+      The BINARY HEADER is composed of a Telemetry header and a
+      Bad-Data Value Header containing ancillary information
+      specific to the image.  The TELEMETRY HEADER is split into
+      two physical records.  The first 1000 bytes are placed in the
+      first physical record after the VICAR label, and the last 800
+      bytes are placed in the next physical record.  The last 200
+      bytes are zero filled.  The BAD-DATA VALUE HEADER is composed
+      of records describing several types of bad data values.  Each
+      record describes only one type and depending on the number of
+      bad pixels, they may span over several physical records.
+      Each record is identified by the Record IDS field which is
+      located at byte 0.
+ 
+ 
+  Ancillary Data
+  ==============
+    All document files and detached label files contain a carriage
+    return character (ASCII 13) and a line feed character (ASCII
+    10) at the end of each record.  This allows the files to be
+    read by the MacOS, DOS, Unix, and VMS operating systems.
+    Tabular files are also described by a detached PDS label.  The
+    PDS label file has the same name as the data file it describes,
+    with the extension .LBL; for example, the file IMGINDEX.TAB is
+    accompanied by the detached label file IMGINDEX.LBL in the same
+    directory.  The detached PDS labels for REDR images contain
+    information pertaining to the image.
+ 
+    Tabular files are formatted so that they may be read directly
+    into many database management systems on various computers.
+    All fields are separated by commas, and character fields are
+    enclosed in double quotation marks.  Character fields are left
+    justified, and numeric fields are right justified.  The start
+    byte and bytes values listed in the labels do not include the
+    commas between fields or the quotation marks surrounding
+    character fields.  The records are of fixed length, and the
+    last two bytes of each record contain the ASCII carriage return
+    and line feed characters.  This allows a table to be treated as
+    a fixed length record file on computers that support this file
+    type and as a normal text file on other computers.
+ 
+ 
+  Software
+  ========
+    The following CD-ROM copy, display and processing software has
+    been successfully tested using the Galileo SSI data:
+ 
+ 
+    Copy Software
+    -------------
+      -- DCL  COPY (VMS) - available with VMS
+ 
+      -- VICAR Copy (VMS and UNIX) - Available with VICAR package
+         from COSMIC.
+ 
+ 
+    Display Software
+    ----------------
+      -- VICAR JDISP  (VMS and UNIX) - Available with VICAR package
+         from COSMIC.
+ 
+      -- PIXEL PUSHER (Apple Macintosh) - Available from COSMIC.
+ 
+      -- NIH IMAGE  (Apple Macintosh) - A public domain program
+         available from the National Institute of Health.
+ 
+      -- CDBROWSE  (UNIX/Motif) - Software may be obtained from
+         richard@ben.jpl.nasa.gov on the internet.
+ 
+      -- IMDISP (IBM PC) - Program and information  about this
+         program are available from PDS.
+ 
+ 
+    Processing Software
+    -------------------
+      --VICAR (VMS and UNIX) - Available from COSMIC
+ 
+      --ISIS (VMS and UNIX) - Available through the USGS in Flagstaff
+ 
+ 
+  Media/Format
+  ============
+    N/A
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    The SSI REDRs contain raw data as received from Galileo
+    telemetry.  All the images received were processed and are
+    contained on this volume.  Included in the limitations section
+    are explanations of the VICAR and PDS keywords and values, as
+    well as a description of a problem found with one frame in the
+    data set.  This data set contains all of the data acquired
+    during the Venus and Earth 1 period, the processing has been
+    verified, and is currently in use by science team members in
+    their analysis
+ 
+ 
+  Review
+  ======
+    The SSI REDRs are reviewed prior to archiving by the SSI team.
+    Data received is compared with data expected, and replays of
+    missing data is requested.  The status and validity information
+    on the REDRs themselves is examined.  Format and documentation
+    of the CD-ROM archive volume is reviewed by PDS and is
+    documented in WAINIO1992.  The mastered and replicated CD-ROM
+    volumes received from the vendor are compared bit-by-bit with
+    the original data to ensure the quality of the product.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+ 
+    Sequences and Objectives
+    ------------------------
+    VFWS     Venus Pre-Encounter Lightning
+    VVLM     Venus Limb
+    WFT      Venus Feature Track
+    WGL      Venus Global
+    WLT      Venus Departure Lighning
+    LESH     Lunar Single Filter include Earthshine
+    LCLR     Lunar Multispectral
+    WZGF     Earth Zoom Geology Feature
+    WSPN     Earth Spin Movie
+    WROT     Earth Rotation Movie (daily samples)
+    WDRK     Earth Darkside
+    LCAL     Earth Camera Calibration
+ 
+ 
+  Limitations
+  ===========
+    This section documents the known bad images, blank or saturated
+    lunar frames and any problems which have been currently
+    identified in the Venus/Earth I dataset.  For the purpose of
+    this memo CD&apos;s refers to the five Earth I SSI REDR CD-ROM&apos;s
+    (GO_0002 through GO_0006).  GO_0001 is scheduled to be
+    generated after all of the IDA has been received sometime in
+    the mid-1994 time period.
+ 
+ 
+    General Information
+    -------------------
+      The following datasets are included on the CD&apos;s.  The
+      starting and ending SCLK&apos;s (rim + mod91) have been identified,
+      as well as any general information that might be needed to
+      document the dataset.
+ 
+ 
+    Post Launch Checkout
+    --------------------
+    (data taken after launch)
+ 
+      SCLK range: 3061100 - 3061945
+      - No SPICE info available
+ 
+      - VICAR/PDS labels incomplete due to lack of SPICE info.
+       (e.g. no SCET)
+ 
+ 
+    MINICAL
+    -------
+    (calibration frames taken before Venus)
+ 
+      SCLK range: 11890900 - 11895526
+      - No SPICE info available
+ 
+      - VICAR/PDS labels incomplete due to lack of SPICE info.
+       (e.g. no SCET)
+ 
+ 
+    VENUS
+    -----
+      SCLK range: 18062552 - 19064100
+      - SPICE available
+ 
+      - PICNO not available in Mini-E kernel
+       (i.e. not in VICAR/PDS labels)
+ 
+      - Activity id not in standard format.
+ 
+ 
+    PRE-EARTH CALIB
+    ---------------
+      SCLK range: 59335800 - 59905000
+      - SPICE available
+ 
+      - Additional no shutter frames were captured for which no
+        predict/SPICE info was available
+        (identified as activity_id=NO_SHUTTER
+ 
+ 
+    EARTH I/MOON
+    ------------
+      SCLK range: 60959100 - 62303500
+      - SPICE available
+ 
+ 
+    Bad Frames
+    ----------
+      The following is a the list of known bad SSI frames provided
+      by Ken Klaasen on April 9, 1992.  This is not an all
+      inclusive list, but it does provide the major problems
+      identified through Earth I.  Appendix A contains the listing
+      of lunar frames which were blank, saturated or redundant.
+ 
+      11894613 - 11894726 - Garbled Jupiter frames due to IM-4
+                            problem.
+ 
+      18062600 - 18062639 - Venus darkside frames saturated due to
+                            scattered light.
+ 
+      59466845 - 59480800 - PCT frames that missed target due to
+                            error in pointing command.
+ 
+ 
+  VICAR Labels
+  ============
+    Definitions for VICAR field names can be found in WHITE1993.
+ 
+    A) The RAD field (ring radius at frame center) within the VICAR
+       label was not applicable and is equal to 0.0, for the entire
+       set of CD&apos;s,.
+ 
+    B) The following fields in the VICAR label were not implemented
+       for the entire set of CD&apos;s.
+ 
+       CONE                             = 0.0
+       HRA                              = -999.0
+       SMEAR                            = -999.0
+       SMRAZ                            = 0.0
+       SOLRANGE                         = 7.779091
+       TCA                              = &apos;closest time&apos;
+ 
+    C) For targets other than a planetary body or asteroid (e.g.
+       black sky, stars, calibration etc.) most pointing information
+       is not available. A listing of the missing fields is provided
+       below.  More detailed information can be found in the
+       CATSTATUS.TXT file which located in the Documents directory on
+       all of the CD&apos;s,.
+ 
+       EMA                              = -999.0
+       HSCL                             = 0.0
+       INA                              = -999.0
+       LAT                              = 0.0
+       LON                              = 0.0
+       NORAZ                            = 0.0
+       PHA                              = -999.0
+       PLRANGE                          = 0.0
+       SCAZ                             = 0.0
+       SLRANGE                          = 0.0
+       SUNAZ                            = 0.0
+       VSCL                             = 0.0
+ 
+    D) When SPICE information is unavailable (e.g.  Post launch
+       checkout, Minical, additional No shutter frames) the following
+       CATSTATUS for more detailed information.
+ 
+       DEC                              = 0.0
+       EMA                              = -999.0
+       HSCL                             = 0.0
+       INA                              = -999.0
+       LAT                              = 0.0
+       LON                              = 0.0
+       NORAZ                            = 0.0
+       PHA                              = -999.0
+       PICNO                            = &apos;?&apos;
+       PLRANGE                          = 0.0
+       RA                               = 0.0
+       SCAZ                             = 0.0
+       SCETYEAR                         = -32768
+       SCETDAY                          = -32768
+       SCETHOUR                         = -32768
+       SCETMIN                          = -32768
+       SCETSEC                          = -32768
+       SCETMSEC                         = -32768
+       SLRANGE                          = 0.0
+       SUNAZ                            = 0.0
+       TWIST                            = 0.0
+       VSCL                             = 0.0
+ 
+    E) PLRANGE is equivalent to the spacecraft target range instead
+       of the spacecraft central body range.  This affects the lunar
+       frames only since the PLRANGE defines the distance from the
+       Moon rather than from the Earth.  For the rest of the dataset,
+       the spacecraft target range is equivalent to the spacecraft
+       central body range so PLRANGE is correct.
+ 
+ 
+  PDS Labels
+  ==========
+    Definations for PDS field names can be found in CRIBBS1992.
+ 
+    A) The following PDS fields were not applicable for the entire
+       set of CD&apos;s .
+ 
+    BLEMISH_FILE_NAME                = &apos;N/A&apos;
+    CENTER_RING_RADIUS               = 0.0
+    DARK_CURRENT_FILE_NAME           = &apos;N/A&apos;
+    EDR_FILE_NUMBER                  = &apos;N/A&apos;
+    EDR_TAPE_ID                      = &apos;N/A&apos;
+    MEAN_RADIANCE                    = &apos;N/A&apos;
+    MEAN_REFLECTANCE                 = &apos;N/A&apos;
+    ORBIT_NUMBER                     = &apos;unk&apos; or 12613
+    RADIANCE_SCALING_FACTOR          = &apos;N/A&apos;
+    REFLECTANCE_SCALING_FACTOR       = &apos;N/A&apos;
+    SHUTTER_OFFSET_FILE_NAME         = &apos;N/A&apos;
+    SLOPE_FILE_NAME                  = &apos;N/A&apos;
+    SPICE_FILE_NAME                  = &apos;unk&apos;
+    UNEVEN_BIT_WEIGHT_CORR_Flag      = &apos;N/A&apos;
+ 
+    B) The following PDS fields were not implemented for the entire
+        set of CD&apos;s.
+ 
+    CONE_ANGLE                       =0.000
+    LOCAL_HOUR_ANGLE                 =&apos;unk&apos;
+    SMEAR_AZIMUTH                    =0.000
+    SMEAR_MAGNITUDE                  =&apos;unk&apos;
+    SOLAR_DISTANCE                   =7.779091
+ 
+    C) For targets other than a planetary body or asteroid (e.g.
+        black sky, stars, calibration etc.) the following pointing
+        information is not available in the PDS labels.
+ 
+    A_AXIS_RADIUS                    = &apos;unk&apos;
+    B_AXIS_RADIUS                    = &apos;unk&apos;
+    C_AXIS_RADIUS                    = &apos;unk&apos;
+    CENTER_LATITUDE                  = 0.00000
+    CENTER_LONGITUDE                 = 0.00000
+    CENTRAL_BODY_DISTANCE            = 0.00000
+    EMISSION_ANGLE                   = &apos;unk&apos;
+    HORIZONTAL_PIXEL_SCALE           = 0.00000
+    INCIDENCE_ANGLE                  = &apos;unk&apos;
+    NORTH_AZIMUTH                    = 0.000
+    PHASE_ANGLE                      = &apos;unk&apos;
+    SATELLITE_TIME_FROM_CLST_APR     = &apos;unk&apos;
+    SLANT_DISTANCE                   = 0.00000
+    SUB_SOLAR_AZIMUTH                = 0.000
+    SUB_SOLAR_LATITUDE               = &apos;unk&apos;
+    SUB_SOLAR_LONGITUDE              = &apos;unk&apos;
+    SUB_SPACECRAFT_AZIMUTH           = 0.000
+    SUB_SPACECRAFT_LATITUDE          = &apos;unk&apos;
+    SUB_SPACECRAFT_LINE              = &apos;unk&apos;
+    SUB_SPACECRAFT_LINE_SAMPLE       = &apos;unk&apos;
+    SUB_SPACECRAFT_LONGITUDE         = &apos;unk&apos;
+    TARGET_CENTER_DISTANCE           = &apos;unk&apos;
+    TIME_FROM_CLOSEST_APPROACH       = &apos;unk&apos;
+    VERTICAL_PIXEL_SCALE             = 0.00000
+ 
+    D) When SPICE information is unavailable (e.g. Post launch
+       checkout, Minical, additional No shutter frames) the following
+       pointing fields in the PDS label are not available.
+ 
+    A_AXIS_RADIUS                    = &apos;unk&apos;
+    B_AXIS_RADIUS                    = &apos;unk&apos;
+    C_AXIS_RADIUS                    = &apos;unk&apos;
+    CENTER_LATITUDE                  = 0.000
+    CENTER_LONGITUDE                 = 0.000
+    CENTRAL_BODY_DISTANCE            = 0.00000
+    DECLINATION                      = 0.000
+    EMISSION_ANGLE                   = &apos;unk&apos;
+    HORIZONTAL_PIXEL_SCALE           = 0.00000
+    IMAGE_ID                         = &apos;unk&apos;
+    IMAGE_TIME                       = &apos;unk&apos;
+    INCIDENCE_ANGLE                  = &apos;unk&apos;
+    NORTH_AZIMUTH                    = 0.000
+    PHASE_ANGLE                      = &apos;unk&apos;
+    RIGHT_ASCENSION                  = 0.000
+    SATELLITE_TIME_FROM_CLST_APR     = -73T... or &apos;unk&apos;
+    SLANT_DISTANCE                   = 0.00000
+    SUB_SOLAR_AZIMUTH                = 0.000
+    SUB_SOLAR_LATITUDE               = &apos;unk&apos;
+    SUB_SOLAR_LONGITUDE              = &apos;unk&apos;
+    SUB_SPACECRAFT_AZIMUTH           = 0.000
+    SUB_SPACECRAFT_LATITUDE          = &apos;unk&apos;
+    SUB_SPACECRAFT_LINE              = &apos;unk&apos;
+    SUB_SPACECRAFT_LINE_SAMPLE       = &apos;unk&apos;
+    SUB_SPACECRAFT_LONGITUDE         = &apos;unk&apos;
+    TARGET_CENTER_DISTANCE           = &apos;unk&apos;
+    TIME_FROM_CLOSEST_APPROACH       = -73T... or  &apos;unk&apos;
+    TWIST_ANGLE                      = 0.000
+    VERTICAL_PIXEL_SCALE             = 0.00000
+ 
+    E) On CD-ROM  GO_0002 only, the INVERTED_CLOCK_STATE_FLAG  was
+       incorrectly set using the LIGHT_FLOOD_STATE_FLAG.  The
+       INVERTED_CLOCK_STATE_FLAG should have read NOT INVERTED for
+       all frames except for the 59335800, 59335900, 59336000,
+       59336100, 59336200, 59336400.
+ 
+    F) ORBIT_NUMBER for Earth and Moon frames incorrectly reads
+       12613 instead of UNK.
+ 
+ 
+  PDS Index Table
+  ===============
+    A) The following fields in the PDS Index table were not
+       applicable for the entire set of CD&apos;s, .
+ 
+    CENTER_RING_RADIUS               = 0.0
+    MEAN_RADIANCE                    = &apos;N/A&apos;
+    MEAN_REFLECTANCE                 = &apos;N/A&apos;
+    ORBIT_NUMBER                     = &apos;unk&apos; or 126
+    RADIANCE_SCALING_FACTOR          = &apos;N/A&apos;
+    REFLECTANCE _SCALING_FACTOR      = &apos;N/A&apos;
+ 
+    B) The following fields in the PDS Index table were not
+       implemented for the entire set of CD&apos;s.
+ 
+    CONE_ANGLE                       = 0.000
+    LOCAL_HOUR_ANGLE                 = &apos;unk&apos;
+    SMEAR_AZIMUTH                    = 0.000
+    SMEAR_MAGNITUDE                  = &apos;unk&apos;
+    SOLAR_DISTANCE                   = 7.779091
+ 
+    C) For targets other than a planetary body or asteroid (e.g.
+       black sky, stars, calibration etc.) some pointing information
+       is not available.  A listing of the missing fields is provided
+       below.
+ 
+    CENTER_LATITUDE                  = 0.00000
+    CENTER_LONGITUDE                 = 0.00000
+    CENTRAL_BODY_DISTANCE            = 0.00000
+    EMISSION_ANGLE                   = &apos;unk&apos;
+    HORIZONTAL_PIXEL_SCALE           = 0.00000
+    INCIDENCE_ANGLE                  = &apos;unk&apos;
+    NORTH_AZIMUTH                    = 0.000
+    PHASE_ANGLE                      = &apos;unk&apos;
+    SATELLITE_TIME_FROM_CLST_APR     = -73T... or &apos; unk&apos;
+    SLANT_DISTANCE                   = 0.00000
+    SUB_SOLAR_AZIMUTH                = 0.000
+    SUB_SOLAR_LATITUDE               = &apos;unk&apos;
+    SUB_SOLAR_LONGITUDE              = &apos;unk&apos;
+    SUB_SPACECRAFT_LATITUDE          = &apos;unk&apos;
+    SUB_SPACECRAFT_LINE              = &apos;unk&apos;
+    SUB_SPACECRAFT_LINE_SAMPLE       = &apos;unk&apos;
+    SUB_SPACECRAFT_LONGITUDE         = &apos;unk&apos;
+    TARGET_CENTER_DISTANCE           = &apos;unk&apos;
+    TIME_FROM_CLOSEST_APPROACH       = -73T... or  &apos;unk&apos;
+    VERTICAL_PIXEL_SCALE             = 0.00000
+ 
+    D) When SPICE information is unavailable (e.g. Post launch
+       checkout, Minical, additional No shutter frames) the following
+       pointing fields in the Index table are not available.
+ 
+    CENTER_LATITUDE                  = 0.00000
+    CENTER_LONGITUDE                 = 0.00000
+    CENTRAL_BODY_DISTANCE            = 0.00000
+    DECLINATION                      = 0.000
+    EMISSION_ANGLE                   = &apos;unk&apos;
+    HORIZONTAL_PIXEL_SCALE           = 0.00000
+    IMAGE_ID                         = &apos;unk&apos;
+    IMAGE_TIME                       = -3276.. or 0-00-00T..
+    INCIDENCE_ANGLE                  = &apos;unk&apos;
+    NORTH_AZIMUTH                    = 0.000
+    PHASE_ANGLE                      = &apos;unk&apos;
+    RIGHT_ASCENSION                  = 0.000
+    SATELLITE_TIME_FROM_CLST_APR     = -73T... or  unk&apos;
+    SLANT_DISTANCE                   = 0.00000
+    SUB_SOLAR_AZIMUTH                = 0.000
+    SUB_SOLAR_LATITUDE               = &apos;unk&apos;
+    SUB_SOLAR_LONGITUDE              = &apos;unk&apos;
+    SUB_SPACECRAFT_LATITUDE          = &apos;unk&apos;
+    SUB_SPACECRAFT_LINE              = &apos;unk&apos;
+    SUB_SPACECRAFT_LINE_SAMPLE       = &apos;unk&apos;
+    SUB_SPACECRAFT_LONGITUDE         = &apos;unk&apos;
+    TARGET_CENTER_DISTANCE           = &apos;unk&apos;
+    TIME_FROM_CLOSEST_APPROACH       = -73T... or  &apos;unk&apos;
+    TWIST_ANGLE                      = 0.000
+    VERTICAL_PIXEL_SCALE             = 0.00000
+ 
+    E) When TARGET_CENTER_DISTANCE  or CENTER _BODY_DISTANCE are
+       equal to UNK, the right double quote is missing in the index
+       table.
+ 
+ 
+  REDO Directory (GO_0006)
+  ========================
+    The following files have been reprocessed and placed in the
+    REDO directory located on GO_0006.  The files were previously
+    located in the Target and Directory indicated in the below
+    table.  There were three cases in which data was reprocessed.
+    Case 1 - several files had bad VICAR labels as indicated
+    earlier in this memo.  Case 2 - when gap fill in was requested
+    and either the line above or below the gap contained a
+    Reed-Solomon overflow error.  Case 3 - there was one file in
+    which the data on the CD-ROM was found to be corrupted.  All
+    data was reprocessed, a new PDS label created and the
+    information added to the INDEX table on GO_0006.
+ 
+    18062639 - Venus - C001806 - Bad VICAR label
+    18241745 - Venus - C001824 - Bad VICAR label &amp; Reed-Solomon
+               fillin problem
+    18353518 - Venus - C001835 - Bad VICAR label
+    18518445 - Venus - C001851 - Bad VICAR label
+    59469700 - Black Sky - C005946 - Bad VICAR label
+    59471700 - Black Sky - C005947 - Bad VICAR label
+    60964000 - Moon - C006096 - Reed-Solomon fillin problem
+    61078900 - Earth - C006107 - Reed-Solomon fillin problem
+    61116300 - Moon - C006111 - Reed-Solomon fillin problem
+    61116600 - Moon - C006111 - Reed-Solomon fillin problem
+    61424500 - Earth - C006142 - Reed-Solomon fillin problem
+    61441500 - Earth - C006144 - Reed-Solomon fillin problem
+    61469100 - Earth - C006146 - Reed-Solomon fillin problem
+    61508200 - Earth - C006150 - Bad image
+    61509700 - Earth - C006150 - Reed-Solomon fillin problem
+    61510400 - Earth - C006151 - Reed-Solomon fillin problem
+    61510800 - Earth - C006151 - Reed-Solomon fillin problem
+    61512600 - Earth - C006151 - Reed-Solomon fillin problem
+    61516300 - Earth - C006151 - Reed-Solomon fillin problem
+    61516400 - Earth - C006151 - Reed-Solomon fillin problem
+    61516700 - Earth - C006151 - Reed-Solomon fillin problem
+    61522100 - Earth - C006152 - Reed-Solomon fillin problem
+    61525200 - Earth - C006152 - Reed-Solomon fillin problem
+    61526200 - Earth - C006152 - Reed-Solomon fillin problem
+    61530600 - Earth - C006153 - Reed-Solomon fillin problem
+    61531400 - Earth - C006153 - Reed-Solomon fillin problem
+    61531700 - Earth - C006153 - Reed-Solomon fillin problem
+    61533800 - Earth - C006153 - Reed-Solomon fillin problem
+    61535500 - Earth - C006153 - Reed-Solomon fillin problem
+    61539600 - Earth - C006153 - Reed-Solomon fillin problem
+    61542500 - Earth - C006154 - Reed-Solomon fillin problem
+ 
+ 
+  Reed-Solomon Overflow
+  =====================
+    Many of the images in this dataset contain a Reed-Solomon
+    overflow.  This feature may be seen in images which were
+    Reed-Solomon encoded by the Galileo spacecraft.  If the data
+    was received on the ground and the Reed-Solomon decoder was
+    unable to completely decode the data, this overflow feature is
+    present in the data.
+ 
+    The Reed-Solomon overflow feature may be identified by the
+    following criteria.  It is present on a single line or series
+    of lines.  It starts about midway through a line and always
+    continues through sample 800.  The data numbers (dn&apos;s) can
+    shift between white, black or shades of gray.  In some cases,
+    the dn&apos;s may be just a few dn brighter or darker than the
+    surrounding lines.  Reed-Solomon overflows should not be
+    confused with the data gaps caused by the decompression of
+    data.  Decompression gaps are usually at the extreme right of
+    an image, they always have a dn=0 (black) and they are clearly
+    identified in the VICAR Binary Prefix.
+ 
+    It should be noted that the Reed-Solomon overflows have not
+    been identified in any way within this dataset.  Future data
+    acquired by the SSI instrument will have a flag, in the Binary
+    Prefix of the VICAR label, which will identify when a
+    Reed-Solomon overflow has occurred.
+ 
+ 
+    New Information About Venus/Earth I data set
+    --------------------------------------------
+      After the final Venus/Earth I data set memorandum was
+      released, additional information about the data set has been
+      identified.  First, one black sky image was found to be
+      missing from the data set.  This frame (59466445) was
+      processed and placed in the REDO directory located on
+      GO_0007.
+ 
+      The longitude values for the VENUS frames in the various
+      headers are in WEST longitude not the more commonly used EAST
+      longitude.
+ 
+      The text file name CATSTATUS.TXT is too long for the ISO
+      convention of 8.3.  This has been shortened to CATSTAT.TXT
+      for the Earth 2 CDs.
+ 
+      The PDS fields TIME_FROM_CLOSEST_APPROACH and
+      SATELLITE_TIME_FROM_ CLST_APR are not in the standard PDS
+      DATE/TIME format.  Since these fields are not a date and only
+      a time, PDS is in the process of defining a new data type for
+      these keywords.  PDS software is being modified to handle the
+      Galileo usage of these fields.
+ 
+      The PDS fields RIGHT_ASCENSION and TWIST are not in the PDS
+      defined range of values.  These keywords should have values
+      in the range of 0 to 360 degrees and instead have been
+      defined in the range of -180 to 180 degrees.  To get the 0 to
+      360 range, software should take the value from the PDS label,
+      add 360 and then take the mod of 360.  It should be noted
+      that the VICAR header and various VICAR software use the -180
+      to 180 degree convention.  The PDS fields in the Earth 2 CDs
+      are provided in the 0 to 360 degree conventions.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>89-084B-10C</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

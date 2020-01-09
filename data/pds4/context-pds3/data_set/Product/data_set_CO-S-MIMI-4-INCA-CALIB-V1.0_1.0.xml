@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-s-mimi-4-inca-calib-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CASSINI S MIMI INCA SENSOR CALIBRATED DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mimi.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-s-mimi-4-inca-calib-v1.0__browserp_co-s-mimi-4-inca-calib-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Krimigis, S.M., D.G. Mitchell, D.C. Hamilton, S. Livi, J. Dandouras, S.
+                   Jaskulek, T.P. Armstrong, J.D. Boldt, A.F. Cheng, G. Gloeckler, J.R. Hayes,
+                   K.C. Hsieh, W.-H. Ip, E.P. Keath, E. Kirsch, N. Krupp, L.J. Lanzerotti, R.
+                   Lundgren, B.H. Mauk, R.W. McEntire, E.C. Roelof, C.E. Schlemm, B.E. Tossman, B.
+                   Wilken, and D.J. Williams, Magnetosphere Imaging Instrument (MIMI) on the
+                   Cassini Mission to Saturn/Titan, Space Sci Rev. 114, 233-329, 2004.
+            </reference_text>
+            <description>reference.KRIMIGISETAL2004</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kusterer, M.B., L.M. Burke, Level 1A File Layouts, Cassini/MIMI Data Analysis
+                   Center Level 1A File Layouts, The Johns Hopkins University Applied Physics
+                   Laboratory Document, Revision 18, December 2003.
+            </reference_text>
+            <description>reference.KUSTERER-BURKE2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Manweiler, J.W., W.A. Rasmuss, and S. Joy, MIMI Standard Data Products and
+                   Archive Volume Software Interface Specification, v2.1, JPL Document D-31634,
+                   Cassini document IO-AR-006, 2005.
+            </reference_text>
+            <description>reference.MANWEILERETAL2005</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   J.D. Vandegriff, R. DiFabio, D. Hamilton, M.B. Kusterer, J. Manweiler, D.G.
+                   Mitchell, C. Paranicas, E. Roussos, Cassini/MIMI Instrument Data User Guide
+            </reference_text>
+            <description>reference.VANDEGRIFFETAL2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-S-MIMI-4-INCA-CALIB-V1.0</data_set_id>
+        <data_set_name>CASSINI S MIMI INCA SENSOR CALIBRATED DATA V1.0</data_set_name>
+        <data_set_release_date>2016-04-01</data_set_release_date>
+        <start_time>2004-01-01T00:00Z</start_time>
+        <stop_time>2015-06-30T23:59:47.828Z</stop_time>
+        <producer_full_name>Martha B. Kusterer</producer_full_name>
+        <citation_text>
+            Vandegriff J., Kusterer M.B., Mafi J.,
+            CO-S-MIMI-4-INCA-CALIB-V1.0, NASA Planetary Data System, 2012.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains all of of the calibrated Saturn tour data
+            for the INCA sensor of the MIMI instrument aboard the Cassini
+            spacecraft for the Cassini mission. INCA stands for Imaging
+            Neutral Camera.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Ion and Neutral Camera (INCA) obtains remote images of the
+            global distribution of energetic ions for energies from 7
+            keV/nucleon to 8 MeV/nucleon, discriminated according to energy
+            and mass species (oxygen and hydrogen). To obtain the images,
+            INCA measures the arrival directions, energy and mass species of
+            Energetic Neutral Atoms (ENA&apos;s) using the relatively new
+            technique of ENA imaging. INCA also can be commanded to obtain
+            very high sensitivity ion measurements, providing the angular,
+            energy and species distributions of in-situ O and H ions. The
+            Cassini Magnetospheric Imaging Instrument(MIMI) Imaging Neutral
+            Camera (INCA) calibrated data set includes all image data
+            collected from the MIMI Data Processing Unit during the Saturn
+            tour. The original data has been decommutated, decoded,
+            calibrated and further processed by software at the Applied
+            Physics Laboratory (APL). The calibrated image data is provided
+            in three forms: an averaged form where the original image N x N
+            pixel images pixels intensity are averaged to a single value for
+            one species and time-of-flight (TOF) combination, browse images
+            which display rows and columns of images for one species and TOF
+            combination, and movies which display averaged ENA image skymaps.
+            Calibration of INCA data has been described fully in the
+            Cassini/MIMI Data User Guide. [VANDEGRIFFETAL2012] This data set
+            should be among the first used by a user of any of the MIMI INCA
+            archive as it will lead one to information required to search for
+            more detailed or highly specialized features in the original data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+       The Ion and Neutral Camera (INCA) obtains remote images of the global
+       distribution of energetic ions for energies from 7 keV/nucleon to 8
+       MeV/nucleon, discriminated according to energy and mass species
+       (oxygen and hydrogen). To obtain the images, INCA measures the arrival
+       directions, energy and mass species of Energetic Neutral Atoms (ENA&apos;s)
+       using the relatively new technique of ENA imaging. INCA also can be
+       commanded to obtain very high sensitivity ion measurements, providing
+       the angular, energy and species distributions of in-situ O and H ions.
+ 
+       INCA image data are available in three different flavors, each flavor
+       being simultaneously generated. High spatial resolution images have a
+       larger number of pixels than other INCA images (up to 64 by 64), but
+       are available for fewer numbers of energies (usually just 2 energy
+       channels) and are taken at lower time resolution (one image every 4
+       sectors). High time resolution images are acquired each sector, but
+       have lower spatial resolution (usually 16 by 16 pixels)High
+       time-of-flight and mass resolution images are taken for 9 energy
+       ranges, but only every 4 sectors and with lower spatial resolution.
+ 
+       In neutral mode, which is used to obtain ENA images, alternate
+       collimator plates are charged to a high positive and negative voltage,
+       and these collimators sweep up ions and electrons entering the sensor.
+       Neutral atoms pass by the collimators through a slit. Alternately,
+       in ion mode, the collimators are not charged and the ions and
+       electrons pass into the detector.
+ 
+       The Cassini Magnetospheric Imaging Instrument(MIMI) Imaging Neutral
+       Camera (INCA) calibrated data set includes all image data collected
+       from the MIMI Data Processing Unit during the Saturn tour. The
+       original data has been decommutated, decoded, calibrated and further
+       processed by software at the Applied Physics Laboratory (APL).
+ 
+       The calibrated image data is provided in three forms: an averaged
+       form where the original image N x N pixel images pixels intensity are
+       averaged to a single value for one species and time-of-flight (TOF)
+       combination, browse images which display rows and columns of images
+       for one species and TOF combination,  and movies which display
+       averaged ENA image skymaps.
+ 
+       Calibration of INCA data has been described fully in the
+       Cassini/MIMI Data User Guide.  [VANDEGRIFFETAL2012]
+ 
+       This data set should be among the first used by a user of any of the
+       MIMI INCA archive as it will lead one to information required to
+       search for more detailed or highly specialized features in the
+       original data.
+ 
+ 
+  Parameters
+  ==========
+      This data set comprises image pixel angle averages where the original
+      image N x N pixel image (where N is usually 16, 32 or 64) images pixels
+      intensity in are averaged to a single value for one species and TOF
+      combination. The value displayed is the image intensity in
+      counts/(centimeters squared*steradian*seconds*keV). These are called
+      angle averages since each image pixel has a particular look direction
+      out of the INCA instrument specified in azimuth and elevation. The
+      azimuth directions range from -45 to 45 degrees over the index range
+      0 to N, where N is the number of rows in the image. The elevation
+      values for each pixel range from 60 to -60 degrees (note: this is
+      backwards) over the index range 0 to N, where N is the number of
+      columns in the image. The pixel sizes are different depending on the
+      resolution of the image. Also note that the look direction angles for
+      each pixel are relative to the center of the INCA image, which may be
+      offset from its nominal center due to the way images are integrated on
+      the spacecraft. The registration of an INCA image against the sky in a
+      specific coordinate system involves proper interpretation of the offset
+      of the image center from its nominal direction. Full details describing
+      this process has been described fully in the Cassini/MIMI Data User
+      Guide.  [VANDEGRIFFETAL2012]
+ 
+      The standard product ID&apos;s are:
+ MIMI_INCA_ANGAVE_S for the high spatial resolution angle averages
+ MIMI_INCA_ANGAVE_T for the high time resolution angle averages
+ MIMI_INCA_ANGAVE_M for the high mass TOF resolution angle averages
+ 
+      The data is organized in time by the spin of the spacecraft.  When the
+      spacecraft is in staring mode then the MIMI DPU automatically creates
+      a virtual spin that divides the time collection periods into 16
+      sectors, 16 subsectors, and 16 microsectors and maintains a simple
+      organizational structure for characterizing the collection of the time
+      into time segments.  When the spacecraft is spinning at a minimally
+      defined spin rate (adopted by the MIMI DPU) then the MIMI data is
+      automatically segregated into 16 sectors, 16 subsectors, and 16
+      microsectors.  The INCA instrument collection times are then also
+      keyed to these values. The high spatial and high mass TOF image
+      averages are collected over 4 sectors and the high time resolution
+      image averages are collected over 1 sector.
+ 
+      Each file contains all the species and tof combination image angle
+      averages for one image resolution type. The resolution type, species
+      and TOF values are included in the parameter set.
+ 
+      In addition, this data set includes two types of browse products. One
+      product type is a PNG file containing three rows by N columns of
+      panels, where the bottom three rows are a continuation in time of the
+      top three rows. Each row contains spin averaged high spatial ENA
+      image skymaps (each one accumulated over four sectors), displayed for
+      one species and TOF combinations.
+ 
+      The other browse product type is a PNG file containing 1 up to 10
+      columns, high TOF browse ion thumbnail images displayed for seven
+      time-of-flight ranges (rows) for one species. The value
+      displayed is the log of the image intensity in
+      counts/(centimeters squared*steradian*seconds*keV).
+ 
+      The standard product ID&apos;s are:
+ MIMI_INCA_ENAIMG_HO for the ENA image skymaps
+ MIMI_INCA_IONANG_H for the ion hydrogen image thumbnails
+ MIMI_INCA_IONANG_O for the ion oxygen image thumbnails
+ 
+      The data set also contains MP4 movies which display averaged ENA image
+      skymaps (averaged over a variable, listed number of original on-board
+      images), for one species and TOF combination. The value displayed is
+      the log of the image intensity in
+      counts/(centimeters squared*steradian*seconds*keV).
+ 
+      The standard product ID&apos;s for the movies are
+ MIMI_INCA_ENAMV_SH0 for the high spatial resolution hydrogen low TOF movies
+ MIMI_INCA_ENAMV_SH7 for the high spatial resolution hydrogen high TOF movies
+ MIMI_INCA_ENAMV_S00 for the high spatial resolution oxygen low TOF movies
+ MIMI_INCA_ENAMV_S07 for the high spatial resolution oxygen high TOF movies
+ MIMI_INCA_ENAMV_TA0 for the high time resolution low TOF movies
+ MIMI_INCA_ENAMV_TA7 for the high time resolution low TOF movies
+ 
+ 
+ 
+  Processing
+  ==========
+      Data in this data set were processed by the use of a number of
+      software programs which calibrate the images to differential intensity,
+      calculate the image angle averages, and display the images in either
+      the skymap or thumbnail display. The skymap and thumbnail images are
+      further processed by averaging the images together and displaying them
+      in rows and columns in browse products which reduces a days worth of
+      images to a few pages.
+ 
+      The display software makes use of the JPL Naif SPICE software which
+      contains algorithms to handle the various spacecraft rotation modes.
+      The MIMI team has created and maintain an analysis SPICE kernel set
+      which is available on the MIMI website. The many useful frames of
+      reference fordisplaying the INCA images with celestial bodies have
+      been included in the frame kernel. The SPICE frames used in the
+      products described here have been
+      explained in the coordinate system section below.
+ 
+      The skymaps are created by transforming the original image into
+      the following SPICE reference frame. The skymap frame is a dynamically
+      defined frame, XINCA_BORESIGHT_CENTERED, which is defined in the
+      Coordinate Systems section below.
+ 
+      Creation of the skymap and thumbnail image displays starts with the
+      calculation of each original image pixels look direction in aximuth
+      and elevation, based on the INCA boresight vector as well as the
+      azimuth and elevation offsets if applicable based on image collection
+      mode. The pixel matching the look direction in the skymap or thumbnail
+      display frame is calculated and the original image pixel intensity
+      value is loaded into the display frame pixel.
+ 
+      The thumbnail images are created by transforming the original images
+      into the INCA azimuth and elevation SPICE reference frame. The
+      definition of the thumbnail frame, CASSINI_MIMI_INCA_LL is described
+      in the Coordinate Systems section below. The elevation of the image
+      goes from -60 degrees at the bottom to 60 degrees at the top of the
+      image. The azimuth of the image goes from -45 degrees on the left
+      to 45 degrees on the right.
+ 
+      The MP4 movies are created using the skymap display software to output
+      consecutive ENA skymaps in time.  The QuickTime software was used to
+      convert the PNG files into the movies. Typically the movies display
+      the INCA image data in the Saturn frame, XINCA_SATURN_CENTERED which
+      is described in the Coordinate System section below. The Titan frame,
+      XINCA_TITAN_CENTERED, is used to display the images for the Titan
+      flybys. It is also described below in the Coordinate System section.
+      The use of the Saturn centered or Titan centered frame improves the
+      continuity of movies because it reduces the effect of the
+      spacecraft motion on the movie.
+ 
+ 
+  Data
+  ====
+      The MIMI INCA calibrated data set includes image angle averages,
+      browse images and movies. The image angle averages are an ASCII CSV
+      table. Each table contains variable length records for which the
+      fields are comma delimited.
+ 
+    INCA Image Angle Average Data
+    ---------------------------
+ 
+      Fields include:
+      a purpose identifier where science data records are identified
+      with purpose = sci
+      starting and ending ephemeris times
+      Spin, sector, subsector (and for INCA Fine Rate (FRT) data
+      microsector)
+      SCLOCK and spin period that are used to derive the starting
+      ephemeris time
+         Notes regarding the SCLOCK value:
+         1.  Only the SCLOCK major segment value is provided - MIMI
+             currently does not have access to the fine SCLOCK value
+             hence SCLOCK resolution is limited to +- 1/2 SCLOCK count
+         2.  The SCLOCK is only available from telemetry at the
+             beginning of each spin. All other published SCLOCKS are
+             derived from the spin starting SCLOCK, the spin numbers
+             (for the current and next available spins), and the spin
+             period.
+         3.  SCLOCK values are assumed to drive the value of the
+             ephemeris times and not vice-versa. All effort is made to
+             validate the published ephemeris times but since updates to
+             the Cassini SCLOCK kernel in SPICE can occur the values of
+             ephemeris time are only as accurate as the currently
+             published Cassini SCLOCK SPICE kernel.
+       Spacecraft staring mode where staring = 0 when spinning and 1
+       otherwise
+ 
+       INCA Images are organized as:
+         Type ID: a 4 byte word characterized as:
+                  Byte 0 - Type: 0 = High Spatial, 1 = High Time,
+                           2 = High m-TOF
+                  Byte 1 - Charge: 0 = Neutral, 1 = Ion
+                  Byte 2 - Species: 0 = H, 1 = He, 2 = CNO, 3 = Heavy,
+                           4 = Other, 5 = All
+                  Byte 3 - TOF: 0 = Low, 1-6 = Medium, 7 = High
+       Compression bits, Compression method, log compressed identifier
+       Theta and Phi offsets from spacecraft coordinates
+       The angle average and uncertainty are in units as image intensity in
+       counts/(centimeters squared*steradian*seconds*keV)
+ 
+       Each file contains all the species and tof combination image angle
+       averages for one image resolution type. The resolution type, species
+       and TOF values are included in the parameter set.
+ 
+    INCA Browse Images
+    ------------------
+      The skymap browse images are in PNG files containing three rows by N
+      columns of panels, where the bottom three rows are a continuation
+      in time of the top three rows. Each row contains spin average
+      high spatial ENA image skymaps (each one accumulated over four
+      sectors), displayed for one species and TOF combinations.
+ 
+      Row one contains the high TOF hydrogen images, row two contains the low
+      TOF hydrogen images and row three contains the low TOF oxygen images.
+      The energy range for each TOF range is shown to the right of each row.
+      ENA images are collected when a high voltage is present on the INCA
+      collimator. The value displayed is the log of the image intensity which
+      is counts/(centimeters squared*steradian*seconds*keV). The color bars
+      for each row are independent and are determined by the minimum and
+      maximum pixels in that row (i.e., for the entire day).
+ 
+      Each original image was 64 x 64 pixels and was transformed into the
+      skymap frame, XINCA_BORESIGHT_CENTERED, which is described below in
+      the coordinate system section. One days data is contained in one to
+      three PNG files.
+ 
+      The thumbnail browse images are in PNG files containing 1 up to 10
+      columns, high TOF browse ion thumbnail images displayed
+      for seven TOF ranges (rows). Ion images are
+      collected when no voltage is present on the INCA collimator.
+      The image species include hydrogen at TOF ranges, where the energy
+      range for each TOF range is shown to the right of each row. The
+      value displayed is the log of the image intensity which is
+      counts/(centimeters squared*steradian*seconds*keV).
+ 
+      The color bars for each row are independent and are determined by the
+      minimum and maximum pixels in that row (i.e., for the entire day).
+      Each original image was 16 x 16 pixels and was transformed into
+      the INCA azimuth and elevation frame, CASSINI_MIMI_INCA_LL,
+      which is described below in the coordinate system section.
+ 
+      One days data is contained in one to twenty-four PNG files.
+ 
+ 
+    INCA ENA Movies
+    ----------------
+      The INCA ENA movies consist of MP4 movies displaying averaged ENA
+      image skymaps (averaged over a variable, listed number of original
+      on-board images), for one species and TOF combination. ENA images are
+      collected when the voltage on the INCA collimator is high, typically
+      4kV. This excludes ions with E/q values less than ~180 to 200keV/q.
+      The value displayed is the log of the image intensity in
+      counts/(centimeters squared*steradian*seconds*keV).
+ 
+      The INCA ENA images are only produced for interesting features in the
+      INCA data and Titan flybys.
+ 
+      The color bar limits are set to a common minimum and maximum value
+      over the entire movie, chosen to  bring out the salient features over
+      the time covered. These values typically change from one movie to the
+      next, based on activity levels and orbital position.
+ 
+      Each original image N x N pixel image (where N is usually 32 or 64)
+      was transformed into the Saturn frame, XINCA_SATURN_CENTERED, which is
+      described in the coordinate system section below. For Titan flybys, the
+      image was transformed into the Titan frame, XINCA_TITAN_CENTERED which
+      is described in the coordinate system section below.
+ 
+      Typically, though not always, the orbit of Titan, Dione and Rhea
+      (dotted line), Titan center (dot), and the axis for Saturn equatorial
+      system frame (white, centered at Saturn) are displayed. The definition
+      of the Saturn equatorial system frame, is described in the coordinate
+      system section below.
+ 
+      The pink axis (when present) is the Saturn Kilometric Radiation frame.
+      Due to the work of the RPWS team we now have several Saturn Kilometric
+      Radiation frames available for use.[1] The SKR frame is also described
+      below in the coordinate system section
+ 
+  Ancillary Data
+  ==============
+ 
+ 
+  Coordinate System
+  =================
+      The MIMI INCA display software makes primary use of three SPICE frames
+      of reference which are used to display the images along with celestial
+      bodies. These SPICE frames are provided in their MIMI SPICE analysis
+      kernels set in the frame kernel.
+ 
+      The skymap frame, XINCA_BORESIGHT_CENTERED, is a dynamically defined
+      frame, defined as follows. The primary axis X is the INCA boresight
+      axis. The secondary Z axis is the Z axis of the IAU_SATURN frame. The
+      Y-axis completes the right-handed system. The skymap display is
+      defined to display every frame with the Z axis up,  X axis into the
+      page and Y axis out to the left. So in the skymap, using this frame,
+      Z or up is the spin axis of Saturn, into the page is the boresight.
+ 
+      The Saturn frame, XINCA_SATURN_CENTERED, a frame dynamically defined as
+      follows. The primary axis is the CASSINI spacecraft-to-Saturn vector
+      and is labeled X. The  secondary (Z) axis is the Z axis of the
+      IAU_SATURN frame (the Saturn spin axis). The Y-axis completes the
+      right-handed system.
+ 
+      The Titan frame, XINCA_TITAN_CENTERED, a frame dynamically defined as
+      follows. The primary axis is the CASSINI spacecraft-to-Titan vector and
+      is labeled X. The  secondary (Z) axis is the Z axis of the IAU_TITAN
+      frame (the Titan spin axis). The Y-axis completes the right-handed
+      system.
+ 
+      The INCA Azimuth and elevation frame, CASSINI_MIMI_INCA_LL, is the
+      primary axis X is the INCA boresight axis which goes into the page.
+      The secondary Z axis is the Z axis of Cassini. The Y-axis completes
+      the left-handed system.
+ 
+      The definition of the Saturn equatorial system,
+      SATURN_EQUITORIAL_SYSTEM, frame has the primary axis, labeled Z,
+      parallel to the Saturn spin axis. The Y-axis is then defined as the
+      cross product of this vector with the Saturn-Sun vector. The X-axis
+      completes the right-handed system and is directed roughly sunward,
+      lying in the plane containing both Z and the Saturn-sun vector.
+ 
+      The MIMI INCA display software also displays the axis of Saturn using
+      the Saturn Kilometric Radiation frame (SKR). Due to the work of the
+      RPWS team we now have several Saturn Kilometric Radiation frames
+      available for use.[1] The Z-axis is coincident with the instantaneous
+      body rotation vector (spin axis) of Saturn. [1] A SLS4 Longitude system
+      based on a tracking filter analysis of the rotation modulation of
+      Saturn kilometric radiation. D.A. Gurnett, et. al.
+ 
+  Software
+  ========
+      There is IDL software provided on the MIMI web site, which will
+      calibrate the INCA images conversion of count rates into flux.  In
+      addition, web applications are provided on the MIMI web site to
+      display the INCA images in the skymap and thumbnail displays both
+      singly and in multiple formats.
+ 
+ 
+  Media/Format
+  ============
+      These data are supplied to the Planetary Data System via electronic
+      means and are then broken into segments based upon the media currently
+      prescribed by PDS.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+      This data set contains all calibrated data for the INCA Detector as
+      part of the Cassini MIMI instrument for the interval described above.
+      Every effort has been made to ensure that all data returned to APL
+      from the spacecraft is included and that the calibrated browse data
+      products are accurate.
+ 
+      As of this writing there are no known issues associated with the INCA
+      detector that would limit the usability or reliability of the data.
+ 
+  Review
+  ======
+      The MIMI INCA data will be reviewed internally by the Cassini MIMI
+      team prior to release to the PDS. The data set will also be peer
+      reviewed by the PDS.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+      All data in the stated interval are included, to the best of our
+      knowledge and attempts to determine completeness.
+ 
+    Large Data Gaps:
+    1.  Post SOI                  2004-187 - 2004-193 - Spacecraft Safing
+                                                     shut off
+    2. Tour                       2005-006 - 2005-015 -
+    3. Tour                       2007-254 - 2007-258 - Spacecraft Safing
+                                                     shut off
+    3. Tour                       2007-279 - 2007-291 - Spacecraft Flight
+                                                     S/W testing shut off
+    3. Extended Mission           2009-071 - 2009-076 - Spacecraft Thruster
+                                                     branch swap,deactivated
+                                                     S48 background sequence.
+    3. Extended-Extended Mission  2010-306 - 2010-319 - Spacecraft Safing
+                                                     shut off
+    3. Extended-Extended Mission  2012-293 - 2012-303 - Spacecraft Propellant
+                                                     Gauging Test shut off.
+ 
+      On those days for which the instrument did not collect data either due
+      to the instrument being off or due to communication issues, the data
+      set will not contain any files.
+ 
+ 
+  Limitations
+  ===========
+      As noted above there are no know issues associated with the data from
+      the INCA detector as of the writing of this catalog.
+        </confidence_level_note>
+        <archive_status>IN_PEER_REVIEW</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

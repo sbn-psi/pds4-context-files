@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-e-mag-4-summ-earth1-summary-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO ORBITER EARTH MAG SUMM EARTH1 SUMMARY V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-e-mag-4-summ-earth1-summary-v1.0__browserp_go-e-mag-4-summ-earth1-summary-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kepko, E.L., K.K. Khurana, M.G. Kivelson, R.C. Elphic, and C.T. Russell,
+                   Accurate Determination of Magnetic Field Gradients from Four Point Vector
+                   Measurements -- Part I: Use of Natural Constraints on Vector Data Obtained From
+                   a Single Spinning Spacecraft, IEEE Trans. on Magnetics, 32, 2, P. 377-385, 1996.
+            </reference_text>
+            <description>reference.KEPKOETAL1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson, M.G., C.F. Kennel, R.L. McPherron, C.T. Russell, D.J. Southwood, R.J.
+                   Walker, K.K. Khurana, P.J. Coleman, C.M. Hammond, V. Angelopoulos, A.J.
+                   Lazarus, and R.P. Lepping, The Galileo Earth Encounter: Magnetometer and Allied
+                   Measurements, J. Geophys. Res., 98, A2, 11299, 1993.
+            </reference_text>
+            <description>reference.KIVELSONETAL1993B</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-E-MAG-4-SUMM-EARTH1-SUMMARY-V1.0</data_set_id>
+        <data_set_name>GALILEO ORBITER EARTH MAG SUMM EARTH1 SUMMARY V1.0</data_set_name>
+        <data_set_release_date>2004-05-01</data_set_release_date>
+        <start_time>1990-11-05T16:31:00.000Z</start_time>
+        <stop_time>1990-12-31T18:19:40.000Z</stop_time>
+        <producer_full_name>MARGARET G. KIVELSON</producer_full_name>
+        <citation_text>
+            Kivelson, M.G., Khurana, K.K., Russell, C.T., Walker, R.J., Joy,
+            S.P.,Green, J., GALILEO ORBITER EARTH MAG SUMM EARTH1 SUMMARY
+            V1.0, GO-E-MAG-4-SUMM-EARTH1-SUMMARY-V1.0, NASA Planetary Data
+            System, 2004
+        </citation_text>
+        <data_set_terse_desc>
+            Galileo Orbiter Magnetometer (MAG) calibrated 20 second averaged
+            data from the Earth-1 flyby in spacecraft, GSE, and GSM
+            coordinates. These data cover the interval 1990-11-05 to
+            1990-12-31.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Galileo Orbiter Magnetometer (MAG) calibrated 20 second averaged
+            data from the Earth-1 flyby in spacecraft, GSE, and GSM
+            coordinates. These data cover the interval 1990-11-05 to
+            1990-12-31.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This dataset contains data acquired by the Galileo Magnetometer
+    from the Earth 1 encounter. The data have benn averaged down to
+    twenty second resolution from the 7.68 kB Low Rate Science (LRS)
+    real time telemetry mode. These data have been fully processed to
+    remove instrument response function characteristics and
+    interference from magnetic sources aboard the spacecraft. The data
+    are provided in both Geocentric Solar Ecliptic (GSE) and
+    Geocentric Solar Magnetic (GSM) coordinates. Trajectory data has
+    been attached to this data for easier use. Trajectory data which
+    was at a sample rate of once per minute, was linearly interpolated
+    to match the 20 second sample rate of this data.
+ 
+    Primary Reference: [KIVELSONETAL1993]
+ 
+ 
+  Data
+  ====
+ 
+    -----------------------------------------------------------------
+    Table 1. Data record structure
+    -----------------------------------------------------------------
+    Column    type     description
+    -----------------------------------------------------------------
+    time      char     S/C event time (UT) in PDS time format:
+                       yyyy-mm-ddThh:mm:ss.sssZ
+    Bx        float    X component GSE or GSM coords. (20s res) &lt;nT&gt;
+    By_gse    float    Y component GSE coordinates (20s res) &lt;nT&gt;
+    Bz_gse    float    Z component GSE coordinates (20s res) &lt;nT&gt;
+    By_gsm    float    Y component GSM coordinates (20s res) &lt;nT&gt;
+    Bz_gsm    float    Z component GSM coordinates (20s res) &lt;nT&gt;
+    Bmag      float    |B| Magnitude of B (20s res) &lt;nT&gt;
+    stBx      float    Standard deviation for: Bx &lt;nT&gt;
+    stBy_gse  float    Standard deviation for: By_gse &lt;nT&gt;
+    stBz_gse  float    Standard deviation for: Bz_gse &lt;nT&gt;
+    stBy_gsm  float    Standard deviation for: By_gsm &lt;nT&gt;
+    stBz_gsm  float    Standard deviation for: Bz_gsm &lt;nT&gt;
+    stBmag    float    Standard deviation for: Bmag &lt;nT&gt;
+    npts      int      Points in average
+    dqf       int      Data quality flag
+    X         float    X component GSE and GSM &lt;Re = 6378 km&gt;
+    Y_gse     float    Y component GSE coordinates &lt;Re&gt;
+    Z_gse     float    Z component GSE coordinates &lt;Re&gt;
+    Y_gsm     float    Y component GSM coordinates &lt;Re&gt;
+    Z_gsm     float    Z component GSM coordinates &lt;Re&gt;
+ 
+    Data Acquisition:
+ 
+    The data for this dataset were acquired as part of the normal
+    instrument calibration activities associated with the cruise to
+    Jupiter. As such, the instrument was commonly configured in modes
+    which required calibration even though they may not have been the
+    optimal mode for science data acquisition. The Galileo
+    magnetometer has 8 possible LRS acquisition configurations
+    (modes). There are two sensor triads mounted 7 and 11 meters from
+    the rotor spin axis (inboard and outboard) along the boom. Each of
+    the sensor triads has two gain states (high and low). In addition,
+    the sensor triads can be &apos;flipped&apos; to move the spacecraft
+    spin-axis aligned sensor into the spin plane and visa versa.
+    Please see the instrument description for full details on the
+    instrument, sensors, and geometries. The combinations of sensor,
+    gain state, and flip direction form modes.
+ 
+    ------------------------------------------------------------------
+    Table 2. Mode Characteristics
+    ------------------------------------------------------------------
+             Mode Name            Acronym       range     quantization
+    ------------------------------------------------------------------
+    Inboard,  left,  high range*    ILHR    +/- 16384 nT    8.0   nT
+    Inboard,  right, high range*    IRHR    +/- 16384 nT    8.0   nT
+    Inboard,  left,  low  range*    ILLR    +/-   512 nT    0.25  nT
+    Inboard,  right, low  range*    IRLR    +/-   512 nT    0.25  nT
+    Outboard, left,  high range*    ULHR    +/-   512 nT    0.25  nT
+    Outboard, right, high range*    URHR    +/-   512 nT    0.25  nT
+    Outboard, left,  low  range*    ULLR    +/-    32 nT    0.008 nT
+    Outboard, right, low  range*    URLR    +/-    32 nT    0.008 nT
+ 
+    ------------------------------------------
+    Table 3. Mode change history
+    ------------------------------------------
+    s/c clock         date/time          mode
+    ------------------------------------------
+    00562976:00:0    90-305/16:31        ULHR
+    00572976:00:0    90-316/17:00        ULLR
+    00578673:00:0    90-320/17:00        URLR
+    00586204:00:0    90-325/23:55        URHR
+    00592915:00:0    90-330/17:01        ILLR
+    00597439:00:0    90-333/21:15        IRLR
+    00610156:00:0    90-342/19:33        IRHR
+    00610509:00:0    90-343/01:30        IRLR
+    00615701:00:0    90-346/17:00        URLR
+    00618550:00:0    90-348/17:00        URHR
+    00624261:00:0    90-352/17:15        ULHR
+ 
+    * range is the opposite of gain
+ 
+    In addition to exercising the various instrument modes during the
+    first earth encounter, numerous instrument calibration activities
+    were performed. These include using both the internal and external
+    calibration coils. Data corrupted by the use of the calibration
+    coils or by the flipper motor have been removed from the processed
+    data. These data have been archived with the Experimenter Data
+    Records (EDR) and other Magnetometer team raw data archive
+    products.
+ 
+    Data Sampling:
+ 
+    These data have been resampled to 20 seconds using overlapping 40
+    second averages of the high-resolution (~2/3 second) data. The
+    time tag represents the center of the averaging interval. For a
+    discussion regarding the high-resolution data please refer to the
+    catalog file for the GO-E-MAG-3-RDR-E1-HIGHRES-V1.0 data set
+    (/CATALOG/MAG_E1_HIGHRES_DS.CAT).
+ 
+ 
+  Coordinate Systems
+  ==================
+    Geocentric Solar Ecliptic (GSE) and Geocentric Solar Magnetic
+    (GSM) are related earth centered coordinate systems. Both the GSE
+    and GSM X directions are taken along the Earth - Sun line,
+    positive towards the Sun. The GSE Z direction is parallel to the
+    ecliptic normal, positive northward, and Y completes the
+    right-handed set (towards dusk). For GSM, the X-Z plane contains
+    the Earth&apos;s dipole moment vector, positive northward, and Y
+    completes the right-handed set. GSE coordinates are commonly used
+    for analyzing the solar wind near the Earth and GSM coordinates
+    are used when analyzing data inside the Earth&apos;s bow shock.
+ 
+ 
+  Data Processing
+  ===============
+    These data have been processed from the PDS dataset:
+    &apos;GO-E/V/A-MAG-3-RDR-HIRES-V1.0&apos;
+ 
+    In order to generate the IRC processed dataset, the following
+    procedure was followed:
+ 
+    1)  Sensor zero level corrections were subtracted from the raw
+        data,
+    2)  Data were converted to nanoTesla,
+    3)  A coupling matrix which orthogonalizes the data and corrects
+        for gains was applied to the data (calibration applied),
+    4)  Magnetic sources associated with the spacecraft were subtracted
+        from the data,
+    5)  Data were &apos;despun&apos; into inertial rotor coordinates,
+ 
+    Lastly, in order to generate the processed data in GSE/GSM
+    coordinates the data were transformed into geophysical coordinates
+    and averaged to twenty second resolution.
+ 
+    For a more detailed description of these proceedures please refer
+    to the file /CALIB/HR_PROC.TXT. For more information regarding
+    data calibration please refer to [KEPKOETAL1996].
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+    These data have been reviewed by the instrument team and are of
+    the highest quality that can be generated at this time. Science
+    results based on some of these data have been published in several
+    journals (Science, JGR, etc.). After submission to PDS, these data
+    successfully completed the peer review process.
+ 
+ 
+  Confidence Level Overview
+  =========================
+    Each aspect of the data processing sequence can be analyzed to
+    determine its maximum possible error contribution. In theory,
+    these errors could be summed to provide estimates of the maximum
+    error for each data point. Error analysis for these data have not
+    been taken to that level.
+ 
+    The MAG team believes that calibrations (sensor geometry and
+    gains) are good enough that they produce a negligible source of
+    data error. In addition, that the coordinate system
+    transformations which are derived from the SPICE kernels and
+    Toolkit are believed to be negligible sources of error in the
+    magnetic field vectors. The most significant sources of error are
+    those associated with magnetic sources aboard the spacecraft,
+    especially those with temporal or spacecraft orientation
+    variations. The next greatest contributor of error is the data
+    from the AACS which affects our knowledge of the spacecraft
+    orientation and hence rotates the magnetic field vector. Lastly,
+    telemetry or software errors which produce &apos;spikes&apos; or bit errors
+    in the data are error sources.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    In regions where the magnetic sources associated with the
+    spacecraft are fairly constant, magnetic interference is probably
+    reduced by data processing to better than 0.05 nT at the inboard
+    sensors. In these same regions, sensor zero levels (offsets) are
+    known equally well. The data processing software does a fairly
+    good job of removing all currently identified sources of magnetic
+    interference. However, there are some time intervals when the zero
+    levels of the spin plane sensors show large variations (1-5 nT) on
+    short time scales (minutes to hours). After a while (hours to
+    days) the offsets return to their nominal levels. The source of
+    these magnetic fields has not yet been identified. The method of
+    removing offsets from the spin plane sensors does remove these
+    effects, but the method of determining the spin axis aligned
+    sensor offsets does not. In regions where large variations are
+    detected in the spin plane sensors it is reasonable to assume that
+    similar variations are taking place in the spin axis aligned
+    sensor. Averaging reduces the level of the interference, though
+    it may not remove it completely.
+ 
+    A second problem in determining and removing the magnetic
+    interference associated with the spacecraft is the movement of
+    these magnetic sources. At the Earth 2 encounter an extensive test
+    was done to determine the interference patterns as a function of
+    the position of the magnetic sources. Data was taken with the scan
+    platform at fifteen degree intervals and the interference was
+    successfully modeled. However, this test was not done for the
+    Earth 1 encounter. After processing the data it is apparent that
+    there is a small time variation in the spacecraft magnetic
+    interference signature. As a result there is still a small amount
+    of magnetic interference left in the Earth 1 encounter data. Also
+    contributing to interference problems is the energetic particle
+    detector. Interference from this source has been removed only from
+    the data on day of year 342 of 1990. By looking at the dynamic
+    spectra of the data remaining interference can be detected.
+ 
+ 
+  Limitations
+  ===========
+    MAG data processing software creates a data quality flag (DQF)
+    which is an assessment of AACS and telemetry error source
+    contamination of a given data point. This number is binary integer
+    where each bit indicates the presence or absence of some error
+    source. A DQF is assigned to each point of the high-res (about 2/3
+    sec) data. The values given in this data set is the highest value
+    for the averaged interval.
+ 
+    The number 0 represents the absence of all error sources which are
+    tested. The higher order bit (larger number) error sources are
+    considered to be more significant error sources. Data are examined
+    for gradients in the field which might be associated with
+    telemetry bit errors, for regions of bad AACS angles, and for
+    completely missing data. If the error is considered completely
+    unrecoverable, the data values are replaced with a missing data
+    flag. In the case of a flag in the rotor spin angle, the vector
+    components may be flagged but the magnitude is still valid. Table
+    4 is a list of all of the error checks and the bits they set in
+    the DQF field.
+ 
+    ------------------------------------------------------------------
+    Table 4. Data Quality Flag (DQF) Values
+    ------------------------------------------------------------------
+    DQF_GOOD_DATA                 0  Good data
+    DQF_BX_GRAD_WARNING         2^0  Component gradient warning
+    DQF_BY_GRAD_WARNING         2^1  Component gradient warning
+    DQF_BZ_GRAD_WARNING         2^2  Component gradient warning
+    DQF_INTERP_ROTATTR          2^3  Missing rotor RA interpolated
+    DQF_INTERP_ROTATTD          2^4  Missing rotor DEC interpolated
+    DQF_INTERP_SPINDELT         2^5  Missing rotor Spin Delta
+                                     interpolated
+    DQF_INTERP_SCRELCON         2^6  Missing Relative Cone angle
+                                     interpolated
+    DQF_INTERP_SCRELCLK         2^7  Missing Relative Clock angle
+                                     interpolated
+    DQF_INTERP_ROTATTT          2^8  Missing rotor Twist interpolated
+    DQF_INTERP_SPINANGL         2^9  Missing rotor Spin interpolated
+    DQF_ROTATTR_FLAG            2^10 Missing rotor RA flagged
+    DQF_ROTATTD_FLAG            2^11 Missing rotor DEC flagged
+    DQF_SPINDELT_FLAG           2^12 Missing rotor Spin Delta flagged
+    DQF_SCRELCON_FLAG           2^13 Missing Relative Cone angle
+                                     flagged
+    DQF_SCRELCLK_FLAG           2^14 Missing Relative Clock angle
+                                     flagged
+    DQF_ROTATTT_FLAG            2^15 Missing rotor Twist flagged
+    DQF_AACS_TELEMETRY_HIT_FLAG 2^16 Telemetry hit in AACS record
+    DQF_MAG_TELEMETRY_HIT_FLAG  2^17 Telemetry hit in mag record
+    DQF_SPINANGL_FLAG           2^18 Missing rotor Spin flagged
+ 
+    DQF_BX_GRAD_ERROR           2^25 Component gradient error
+    DQF_BY_GRAD_ERROR           2^26 Component gradient error
+    DQF_BZ_GRAD_ERROR           2^27 Component gradient error
+    DQF_BX_FLAG                 2^28 Component flagged
+    DQF_BY_FLAG                 2^29 Component flagged
+    DQF_BZ_FLAG                 2^30 Component flagged
+ 
+    Magnetic field gradient warning or error levels are set during the
+    data processing according to expected variances depending on the
+    region of space.  In the solar wind, gradient warnings are usually
+    issued at gradients of 10 nT/sec and errors at 15 nT/sec. In the
+    magnetosheath, these values may be 50 percent larger. In the inner
+    magnetosphere, these dqf flags may be completely turned off.
+    Similarly, AACS angles are interpolated across gaps during the
+    processing if the gap length is relatively short (less than 10
+    minutes typically). If the gaps in spacecraft attitude are long,
+    the AACS angles are flagged and not interpolated.
+ 
+    Errors associated with AACS angles have various effects on the
+    data. The rotor right ascension and declination are crucial to the
+    understanding of the spacecraft orientation. Fortunately, these
+    angles are slowly varying and can be interpolated to better than 1
+    degree of accuracy for long (many hour) time periods except near
+    major spacecraft maneuvers. The relative clock and cone angles are
+    used to remove scan platform interference. In their absence, no
+    interference is removed (+/- 0.15 nT error possible in each
+    component). The rotor motion spin delta is used to determine the
+    instantaneous spin frequency for the phase delay computation. In
+    its absence, the last known phase delay is applied to the current
+    data point. The rotor spin angle and twist angle must be present
+    in order to despin the data. These angles are generally not
+    interpolated for more than ten minutes because the rotor spin
+    period drifts over time periods on this order.
+ 
+    On 1990-Dec-10 a thruster burn resulted in the loss of AACS data
+    over several small intervals. Because the spacecraft is in a
+    period of transition and the spin period is changing rapidly these
+    gaps in AACS can not be accurately interpolated. Without knowledge
+    of the spinangl, it is not possible to correctly despin the data.
+    As a result of the loss of the spinangl the following time periods
+    on Dec-10 have been deleted from the data set:
+ 
+    1990-Dec-10 7:05:00-7:08:05
+    1990-Dec-10 7:29:10-7:33:00
+    1990-Dec-10 7:53:40-8:09:00
+ 
+    Without knowledge of the spacecraft relative clock angle
+    (screlclk) the spacecraft interference can not be removed. As a
+    result of the loss of the clock angle no interference has been
+    removed from the following time period:
+ 
+    1990-Dec-10 7:00:00-8:25:00
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.di-c-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DEEP IMPACT SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.deep_impact::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dif::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dii::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.dif::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.dii::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.9p-tempel_1_1867_g1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.di-c-spice-6-v1.0__browserp_di-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.di-c-spice-6-v1.0__browser_di-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.di-c-spice-6-v1.0__browser_wgc_di-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DI-C-SPICE-6-V1.0</data_set_id>
+        <data_set_name>DEEP IMPACT SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2006-03-01</data_set_release_date>
+        <start_time>2005-01-12T19:22:28Z</start_time>
+        <stop_time>2009-01-15T00:03:56Z</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., and C.H. Acton, DEEP IMPACT SPICE KERNELS V1.0,
+            DI-C-SPICE-6-V1.0, NASA Planetary Data System, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the Deep Impact Flyby and Impactor spacecraft.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Deep Impact SPICE data
+            files (``kernel files&apos;&apos;), which can be accessed using
+            SPICE software. The SPICE data contains geometric and other
+            ancillary information needed to recover the full value of the
+            science instrument data. In particular SPICE kernels provide
+            spacecraft and planetary ephemerides, instrument mounting
+            alignments, spacecraft orientation, spacecraft sequences of
+            events, and data needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of Deep Impact (DI) SPICE
+      data files (``kernel files&apos;&apos;), which can be accessed using SPICE
+      software. The SPICE data contains geometric and other ancillary
+      information needed to recover the full value of the science
+      instrument data. In particular SPICE kernels provide spacecraft
+      and planetary ephemerides, instrument mounting alignments,
+      spacecraft orientation, spacecraft sequences of events, and data
+      needed for relevant time conversions.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or fixed
+      spacecraft and instrument structures. They provide position and
+      velocity, given in a Cartesian reference frame. SPK files are
+      located under the ``data/spk&apos;&apos; directory of this data set.
+ 
+      PCK kernels contain certain physical, dynamical and
+      cartographic constants for target bodies, such as size and shape
+      specifications, and the orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos;&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos;&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos;&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the ``data/ek&apos;&apos; directory of this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos;&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock calibration
+      data required to perform a mapping between Ephemeris time (ET)
+      and spacecraft on-board time (SCLK.) SCLK files are located under
+      the ``data/sclk&apos;&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under
+      the ``data/fk&apos;&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of Deep Impact kernels
+      included in this data set is provided in the
+      CONFIDENCE_LEVEL_NOTE section of this file while details specific
+      to individual files are found in the ``*info.txt&apos;&apos; files in the
+      corresponding data directory. The most detailed description of
+      the data in each file is provided in metadata included inside the
+      file -- in the description area of text kernels or in the comment
+      area of binary kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read
+      SPICE kernel files. SPICELIB software is highly documented
+      via internal headers. Additional documentation is available
+      in separate ASCII text files called Required Reading files.
+      For example, the S- and P- Kernel (SPK) Required Reading File,
+      named SPK.REQ, describes use of the SPK kernel file readers
+      and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos;&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos;&apos; directory. For more
+      information about the Stardust meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This data set contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here,
+      but the prospective user is also referred to extensive
+      descriptions about each file that are stored inside each kernel
+      file. These metadata provide detailed information regarding
+      the information source from which the data were derived, the
+      type of processing applied to the source data, applicability
+      of the data, etc. Metadata are located in the ``comment area&apos;&apos;
+      for binary kernel types (SPK, CK, ESQ), accessible using either
+      the COMMNT or SPACIT utility program found in the NAIF Toolkit.
+      Metadata are located after ``\begintext&apos;&apos; markers within the
+      text kernel types (PCK, IK, FK, LSK, SCLK), accessible by
+      using any available text file display tool such as a word
+      processor, text editor, or the unix ``more&apos;&apos; or ``cat&apos;&apos;
+      commands.
+ 
+      In some cases data accuracy information does not exist because
+      could not be estimated even after mission completion.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;&apos;
+      not addressed herein the reader is invited to examine subsequent
+      SPICE archive releases associated with this data set (if such
+      exist), or to contact the NAIF node of the Planetary Data System
+      for possible further information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      The SP-Kernel files included in this data set provide different
+      versions of the trajectory of the Deep Impact Flyby (DIF) and
+      Deep Impact Impactor (DII) spacecraft and ephemeris data for the
+      mission target comet Tempel 1. Some of these SPKs also include
+      ephemeris data for planets, the Sun, and a possible extended
+      mission target comet Boethin.
+ 
+      One version of the DIF and DII trajectories provided in this data
+      set (dif_preenc174_nav_v1, dii_preenc174_nav_v1) was generated by
+      merging regular orbit determination solutions based on radio
+      tracking and far approach optical navigation data produced by the
+      DI Navigation team, JPL during operations. This solution covers
+      the whole primary mission, from launch to the beginning of
+      August 2005, and extends four years past it, to January 2009.
+      While this solution does not provide accurate trajectory for
+      the close encounter because the encounter portion of it is based
+      on predicted data generated pre-encounter, it provides sufficient
+      coverage and accuracy for processing data taken at all other
+      times during the mission.
+ 
+      Another version of the DIF and DII trajectories provided in this
+      data set was generated as the result of post-encounter processing
+      of the close approach optical navigation data by Dan Kubitschek
+      and Nick Mastrodemos of the DI Navigation Team, JPL. This
+      solution covers only the two day period around the Tempel 1
+      encounter. While this solution provides much better accuracy
+      for processing of the close encounter data, it was found to be
+      inadequate for some applications because the spacecraft position
+      provided in it was referenced to the impact site rather than the
+      comet Tempel 1 center. Two SPKs files of this kind provide
+      early (di_finalenc_nav_v1.bsp) and final (di_finalenc_nav_v3.bsp)
+      versions of this solution with the earlier version being archived
+      only because it was used in processing image data in
+      November/December 2005.
+ 
+      The last version of the DIF and DII trajectories provided in this
+      data set (di_finalenc_nav_v3_to06048.bsp) was generated by
+      adjusting the final close approach optical navigation solution
+      mentioned above by Brian Carcich of the DI Science Data Center,
+      Cornell University. This solution also covers only the two day
+      period around the Tempel 1 encounter. The adjustment was done by
+      incorporating the offset between the impact site and the comet
+      center determined from the final optical navigation solution
+      SPK (v3) and the latest Tempel 1 shape model provided by
+      Peter Thomas. This solution was used to process the PDS archive
+      images in February 2006.
+ 
+      This data set also includes a separate, long-spanning SPK
+      (di_tempel1_ssd_v1.bsp) providing the latest ephemeris data for
+      comet Tempel 1 produced using all DI mission data by the Solar
+      System Dynamics Group, JPL. The ``original&apos;&apos; and ``adjusted&apos;&apos;
+      close approach solutions mentioned are consistent with and
+      incorporate a portion of this file.
+ 
+      Additional information about SPK files provided in this data set
+      is available in the file ``data/spk/spkinfo.txt&apos;&apos;.
+ 
+ 
+      CK Files
+      ========
+ 
+      C-kernel files included in this data set provide the orientation of
+      the DIF and DII spacecraft buses and the DIF high gain antenna
+      (HGA). Most of these CK files were produced from engineering
+      telemetry downlinked from the spacecraft. As is often the case
+      with spacecraft engineering telemetry-based measurements,
+      considerable uncertainty exists as to the accuracy of such
+      measurements, and, data quality (accuracy and completeness) can
+      vary significantly.
+ 
+      DIF Spacecraft Bus CK files
+      ---------------------------
+ 
+      Two kinds of the DIF spacecraft bus orientation CK files are
+      included in this data set. The first kind, based on the low rate
+      (1/8 Hz), provides coverage for the whole primary mission while
+      the second kind, based on the high rate telemetry (5 Hz) provides
+      coverage only for a short period in February 2005 and the for
+      about 50 minutes around closest approach to Tempel 1. Both types
+      of files need to be loaded to provide most complete coverage with
+      the high rate CKs, providing superior attitude, loaded last so
+      that data from them is accessed first. Also, while the low rate
+      CK covers the whole mission, its coverage contains numerous gaps
+      ranging from minutes to hours and, in some cases, even days. Due
+      to these gaps this CK does not provide attitude data for about
+      20% of the DIF images, particularly those taken during some cruise
+      calibration sequences and far approach. This lack of attitude can
+      be alleviated to some extent by modifying interpolation intervals
+      in the file by using the CKSPANIT program (as was done for
+      processing of the images for archiving in PDS in February 2006 -
+      see comments below on &apos;gap-filler CK files&apos;.)
+ 
+      The first archived versions of both the low rate and the high
+      rate CKs had problems with internal time tags. The tags in the
+      low rate CKs were ``compressed&apos;&apos; to the start of each second due
+      to discrepancy in interpretation of the fractional SCLK part,
+      causing timing error of up to 50 milliseconds and the end of each
+      second (see additional information about this in the ``SCLK
+      Files&apos;&apos; section below.) The tags in the high rate CKs were
+      truncated by up to 2 milliseconds, introducing attitude errors of
+      almost 20 microradians during the fastest spacecraft turn rates
+      in the ~100 second interval before the closest approach to Tempel
+      1 (at other times attitude errors due to this truncation were
+      negligible). These problems were fixed in the version 2 of these
+      CKs.
+ 
+      The accuracy of the DIF spacecraft bus orientation determined
+      on-board varied significantly, from 50 micro-radians (~5 MRI
+      pixels) at the times when the attitude was determined based on
+      the star tracker measurements to a few hundreds of micro-radians
+      (tens of MRI pixels) for the periods when the attitude was
+      determined by propagating ACS gyro data without any star tracker
+      updates for extended periods of time. For this reason, the actual
+      nucleus center position in the images is different from the
+      center position computed using the CK files provided in this data
+      set by as many as 20-30 MRI pixels for a number of the early
+      pre-encounter and post-encounter look-back images. Some of this
+      discrepancy may also be attributed to fact that the linear
+      interpolation done by the Type 3 CK readers between the rather
+      sparse, 1/8th Hz attitude points stored in the low-rate CK
+      file does not adequately represent the actual orientation between
+      the points.
+ 
+      A number of times during the mission the ACS system was reset due
+      to a safe mode entry or an update to the flight software. At the
+      time of each reset the attitude quaternion computed by the ACS
+      software was re-initialized (in some cases to an identity
+      quaternion, in other cases to a random quaternion) and for a
+      period of time following the reset, until the ACS was able to
+      re-estimated the actual orientation from the star tracker data,
+      the attitude data sent down in the channelized telemetry was
+      bogus. This table lists the times and reasons of the ACS resets
+      during the mission:
+ 
+         2005 JAN 12 19:25:30.858  post-launch safe mode
+         2005 JAN 12 19:29:44.578  post-launch safe mode
+         2005 JAN 12 19:33:37.578  post-launch safe mode
+         2005 JAN 12 19:37:18.578  post-launch safe mode
+         2005 JAN 12 19:45:05.007  post-launch safe mode
+         2005 JAN 20 06:59:48.398  solar flare induced safe mode
+         2005 FEB 09 21:32:48.264  flight s/w 6.3.0 update
+         2005 MAR 16 08:28:18.000  SCU-A reset safe mode
+         2005 APR 12 23:27:45.377  flight s/w 7.0.0 update
+         2005 JUN 06 04:12:39.808  flight s/w 7.0.0 update
+ 
+      DII Spacecraft Bus CK Files
+      ---------------------------
+ 
+      Two kinds of the DII spacecraft bus orientation CK files are
+      included in this data set. The first kind provides DII attitude
+      prior to its separation from DIF. This attitude -- constant with
+      respect to DIF -- was determined as the result of processing
+      instrument geometric calibration data. The second kind, based on
+      telemetry, provides attitude from separation through impact. The
+      coverage of this CK contains a number of gaps. Due to these gaps
+      this CK does not provide attitude data for some of the
+      post-separation DII images. This lack of coverage can be
+      alleviated by modifying the interpolation intervals in the file by
+      using the CKSPANIT program (as was done for processing of the
+      images for archiving in PDS in February 2006.) It is important to
+      note that during image archive preparation Science Data Center
+      team observed a bias (of up to 20 ITS pixels, decreasing to zero
+      at closer to the impact time) in image pointing solutions done
+      using this CK. No explanation was found for and no correction was
+      done to this bias at that time.
+ 
+      DIF HGA CK Files
+      ----------------
+ 
+      Two kinds of the DIF HGA orientation CK files are included in
+      this data set. The first kind is based on the measured HGA gimbal
+      angles provided in telemetry (``V-channels&apos;&apos;) while the second
+      kind is based on the commanded HGA gimbal angles provided in
+      telemetry (``B-channels&apos;&apos;). These files should be loaded together
+      to provide the most complete coverage with the file based on
+      measured angles loaded last (to be accessed first.) Even when
+      loaded together, the combined coverage provided by the files is
+      full of gaps, which can be alleviated by modifying the
+      interpolation interval information by using the CKSPANIT program.
+ 
+      Additional information about CK files provided in this data set
+      is available in the file ``data/ck/ckinfo.txt&apos;&apos;.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;&apos;
+      bodies such as planets, satellites, comets and asteroids. A
+      description of these data items and reference to their source is
+      provided inside the PCK file, which is a simple text file that
+      can be viewed using any word processor, text editor or text
+      display utility.
+ 
+      This data set contains generic PCK file based on the official
+      IAU/IAG/COSPAR values accepted in 2000 and PCK file for DI
+      mission target -- Tempel 1 -- providing constants determined
+      after the encounter. The PCK file for Tempel 1 contains both
+      rotation and shape/size data derived by the DI science team
+      during post encounter data analysis.
+ 
+      Additional information about PCK files provided in this data set
+      is available in the file ``data/pck/pckinfo.txt&apos;&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      Frames kernel files provide specifications for how one reference
+      frame is defined relative to another frame. The DI FK provided in
+      this data set contains a complete set of frame definitions for
+      the both spacecraft, their structures such as antennas, and all
+      of their science instruments. Comments in the FK file provide
+      the frame definitions, a description of the frame relationships,
+      the source of and accuracy of the mounting alignment information,
+      etc. The instrument frame definitions provided in the file
+      incorporate the latest mounting alignment data available at the
+      end of the mission.
+ 
+      Additional information about FK files provided in this data set
+      is available in the file ``data/fk/fkinfo.txt&apos;&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      Instrument kernel files provide specifications for the optical
+      and physical instrument parameters and -- where applicable --
+      field-of-view size, shape and orientation for the named
+      instrument. Metadata describing these estimates are provided in
+      each IK file included in this archive. While a majority of the of
+      parameters included in the IK files archived in this data set
+      are based on the nominal instrument data, the files incorporate
+      the latest version of optical distortion model derived by the DI
+      optical navigation team.
+ 
+      Additional information about IK files provided in this data set
+      is available in the file ``data/ik/ikinfo.txt&apos;&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data needed
+      to convert time measurements between ephemeris time (ET) and
+      spacecraft clock time (SCLK). A SPICE SCLK file is made from a
+      similar file -- SCLK/SCET or SCLKvSCET file -- produced by
+      another mission entity. Each newly made SCLK file fully replaces
+      the previous SCLK file.
+ 
+      This data set includes SCLK kernels providing the correlation
+      between the DIF spacecraft primary (SCU-A) on-board clock, DIF
+      spacecraft secondary (SCU-B) on-board clock, and DII spacecraft
+      on-board clock. Two SCLK kernels -- the ``official&apos;&apos; version and
+      ``science&apos;&apos; version -- are available for the DIF primary clock and
+      DII clock while only one SCLK kernel -- ``official&apos;&apos; version --
+      is available for the DIF secondary clock.
+ 
+      The main difference between the ``official&apos;&apos; versions of the SCLK
+      kernels and the ``science&apos;&apos; versions is that ``official&apos;&apos; versions
+      are based on the latest time correlations that were used by the
+      project during mission operations while the ``science&apos;&apos; versions
+      contain updated correlations that were used to process science
+      data for archiving in PDS.
+ 
+      The correlation updates for the DIF primary clock and for the DII
+      clock were done for two different reasons. The DIF correlation was
+      updated to eliminate ``artificial&apos;&apos; data points introduced by the
+      tool-set that created source SCLKvSCET file and to adjust clock
+      rates in order to connect actual data points in a continuous
+      fashion. The DII correlation, on the other hand, was updated to
+      simply enforce consistency between the DIF primary clock and the
+      DII clock based on the SCLK times of the impact determined from
+      the image data (DII SCLK = 1/173727875.105 +/-300ms per Dennis
+      Wellnitz and DIF SCLK = 1/173727702.218 +/-25ms per image
+      number 064 of ExpID 9000910) and DIF/DII trajectory solutions
+      based on close approach optical navigation data (time of impact
+      for DII trajectory at 2005-185T05:44:34.2 UTC).
+ 
+      The ``science&apos;&apos; versions of the SCLKs and trajectory solutions
+      based close approach optical navigation data were created in the
+      following sequence:
+ 
+        - correlation from ``official&apos;&apos; DIF primary clock SCLK kernel
+          was modified to get ``science&apos;&apos; DIF primary clock SCLK kernel
+ 
+        - ``science&apos;&apos; DIF primary clock SCLK kernel and ``official&apos;&apos;
+          DII SCLK kernels were used to process close approach optical
+          navigation images to generate trajectory solution
+ 
+        - UTC of impact (2005-185T05:44:34.2) was determined by
+          converting DIF SCLK of impact determined from DIF images
+          (1/173727702.218) to UTC using ``science&apos;&apos; version of DIF
+          primary clock SCLK kernel
+ 
+        - correlation from ``official&apos;&apos; DII SCLK kernel
+          was modified so that UTC mentioned above matched DII SCLK
+          of impact determined from DII images (1/173727875.105)
+ 
+        - DII trajectory was shifted so that impact happened at the
+          UTC mentioned above.
+ 
+      Because of the tight coupling between the SPK and SCLK kernels,
+      the ``science&apos;&apos; SCLK must be used for encounter image processing.
+ 
+      Unfortunately, the absolute accuracy of both ``official&apos;&apos; and
+      ``science&apos;&apos; correlations is no better than 1 second as was
+      determined by a DI Time Issues Working Group that included Ball
+      and JPL engineers and members of the DI science team. This group
+      was put together at the end 2005 with the goal to improve DIF and
+      DII time correlation knowledge. The group concluded that getting
+      improvement was not possible without substantial effort due a
+      number of factors among which were the lack of correlation data
+      during the last ten days before encounter, big changes in the
+      thermal conditions and strong temperature dependency of the clock
+      oscillators, and errors in the production of the time correlation
+      packets.
+ 
+      Note that the clock format defined by both ``official&apos;&apos; and
+      ``science&apos;&apos; SCLK kernels (seconds with fractional seconds given
+      as a count of 1/256 second ticks) does not match the format of
+      on-board time tags in mission telemetry (seconds with fractional
+      seconds given as top 8 or 16 or full 20 bits of a count of
+      micro-seconds). For details on this discrepancy and the algorithm
+      to fix it see ``sclk140.txt&apos;&apos; provided in Deep Impact and EPOXI
+      documentation set (DI-C-HRII/HRIV/MRI/ITS-6-DOC-SET-V3.0).
+ 
+      While all science images sent to the ground contained SCLK time
+      in the headers (spacecraft primary, SCU-A, SCLK for DIF
+      and main SCLK for DII), optical- and auto-navigation image
+      headers contain a different time. This time was so a called
+      on-board Ephemeris Time (ET) that optical/auto navigation
+      on-board software used internally to perform autonomous
+      trajectory and attitude solutions. This on-board ET was computed
+      from on-board clock by adding a constant delta to it to make it
+      synchronous with the actual ET to the extent possible. Since the
+      on-board clock was drifting throughout the mission, the delta had
+      to be changed a number of times. The table below shows the delta,
+      in seconds, that must be subtracted from the on-board ET to get
+      corresponding SCLK (spacecraft primary, SCU-A, SCLK for
+      DIF and main SCLK for DII) and the time when a particular
+      delta had been uplinked and took effect in the on-board software
+      (shown as UTC and on-board ET):
+ 
+        DIF:
+ 
+          Delta    Applicability Start UTC  Apl. Start on-board ET
+          -------  -----------------------  ----------------------
+           64.184  2005-014T02:50:20.1133   158943084.297
+          160.176  2005-083T11:14:00.1992   164934912.535
+          177.161  2005-103T02:14:28.7695   166630537.301
+          268.794  2005-157T04:17:00.0000   171303535.833
+          237.978  2005-175T03:58:33.1251   172857585.892
+ 
+        DII:
+ 
+          Delta    Applicability Start UTC  Apl. Start on-board ET
+          -------  -----------------------  ----------------------
+           64.184  2005-014T02:50:20.1133   158943084.297
+ 
+      Additional information about SCLK files provided in this data set
+      is available in the file ``data/sclk/sclkinfo.txt&apos;&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;&apos;
+      and some other terms used in converting time measurements between
+      ephemeris time (ET) and Universal Time (UTC). ``Spacecraft Event
+      Time&apos;&apos; (SCET) is the commonly used name for UTC events measured
+      at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed is
+      contained inside the LSK text file. The time conversion provided
+      by SPICE LSK files is accurate to approximately 0.000030 seconds.
+ 
+      Additional information about LSK files provided in this data set
+      is available in the file ``data/lsk/lskinfo.txt&apos;&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      Two Events kernel (EK) files are included in this archive: DIF
+      Sequence EK and DIF Command Dictionary EK.
+ 
+      DIF Sequence EK contains a summary of the commands sent to the
+      spacecraft during the mission as well as instrument state
+      (status) summaries as modeled by the sequence generation tools.
+      This file was created from integrated sequence Predicted Events
+      File (PEF) provided by Steve Wissler, DI Mission Operations
+      Systems Engineer as the end of the primary mission. While
+      significant effort was made to collect all necessary information
+      for producing complete PEF file, command logs for some periods
+      have not been available and the commands for these periods are
+      missing from the EK. Also, because the PEF file was the result
+      of sequence modeling process the EK records have times different
+      from the actual command execution times (although very close in
+      most cases).
+ 
+      DIF Command Dictionary EK is based on the last version of the
+      command dictionary available at the end of the primary mission.
+ 
+      Additional information about EK files provided in this data set
+      is available in the file ``data/ek/ekinfo.txt&apos;&apos;.
+ 
+ 
+      Kernel Files Not Included In This Data Set
+      ===========================================
+ 
+      A number of kernel files used to process image data archived in
+      PDS and mentioned in the image labels were not included in this
+      data set because they either were superseded by the files
+      provided in this archive, or were known to contain incorrect or
+      out-of-date information, or could be easily re-created from the
+      data provided in this archive using utility program(s) available
+      from NAIF. Among such files are:
+ 
+        - predicted SPK files:
+ 
+            spk_bet_050112_101_impactor.bsp
+            spk_bet_050112_101_flyby.bsp
+            spk_od023.bsp
+            dif_ort11_dss_merged.bsp
+            spk_diipredict_2005177_175028.bsp
+ 
+          These SPKs were used for processing of the images for
+          archiving in PDS during November/December 2005. They
+          contained earlier versions of the spacecraft trajectory and
+          comet ephemerides and were superseded by the SPKs included
+          in this data set.
+ 
+        - predicted CK files:
+ 
+            dii_attached_v10.bc
+            launch_bet050112_101_20050102t205819_att.bc
+            dif_rec_ck_ort11_merged.bc
+            dii_predict_2005177_175028.bc
+ 
+          These CKs were used for processing of the images for
+          archiving in PDS during November/December 2005. They
+          contained predicted attitude data for DII and DIF spacecraft.
+          The main purpose of using these files was to provide ``some&apos;&apos;
+          orientation data for under 20% of the images, for which
+          actual orientation data was not available in the
+          reconstructed CKs provided in this archive. While they served
+          this gap-filler purpose, the data provided by them was
+          incorrect in most/all cases due to differences between
+          planned and actual pointing profiles, timing issues, etc. For
+          this reason they were not included into this data set.
+ 
+        - nominal Tempel 1 PCK file:
+ 
+            di_tempel1_v00.tpc
+ 
+          This PCK was used for processing of the images for archiving
+          in PDS during November/December 2005. It contained nominal,
+          placeholder shape/size and rotation constants for comet Tempel
+          1. It was superseded by comet PCK ``di_tempel1_v01.tpc&apos;&apos;
+          provided in this data set. For the record, the nominal
+          constants provided in that PCK were:
+ 
+            BODY1000093_POLE_RA   = (   0.0    0.0              0.0 )
+            BODY1000093_POLE_DEC  = ( +90.0    0.0              0.0 )
+            BODY1000093_PM        = (   0.0  205.7142857142857  0.0 )
+            BODY1000093_RADII     = (   3.1    2.1              2.1 )
+ 
+        - star position SPK and PCK files:
+ 
+            naifstarnames_2005321_v01.tpc
+            stars_2005321_v01.bsp
+ 
+          These SPK and PCK were used in the Science Data Center image
+          processing pipeline to provide access via SPICE interfaces
+          to positions of a few stars used for instrument calibration
+          during the mission. While these kernels successfully served
+          their purpose, they were not fully compliant with official
+          NAIF practices. This reason they were not included into this
+          data set. On the other hand, recognizing the importance of
+          this data, it was decided to include the star positions
+          stored in these files into this data set&apos;s documentation for
+          the reference. The table below provides these positions.
+          Each line contains J2000 RA (hours, arc-minutes,
+          arc-seconds), J2000 DEC (degrees, arc-minutes, arc-seconds)
+          and name.
+ 
+            10,24,23.71,-74,1,53.8,PRETEND I CAR HD90589
+            0,25,45.07,-77,15,15.3,BET HYI HD2151
+            10,2,42,-60,7,0,NGC3114
+            6,23,57.11,-52,41,44.4,CANOPUS HD45348
+            1,37,42.85,-57,14,12.3,ACHERNAR HD10144
+            21,7,6,42,14,0,NGC7027
+            19,41,48.95,50,31,30.2,16 CYG A HD186408
+            7,33,27.32,-50,35,3.3,HD60753
+            18,36,56.34,38,47,1.3,VEGA HD172167
+            0,24,5.22,-72,4,57.9,47 TUC NGC104
+            6,45,08.92,-16,42,58.0,SIRIUS HD48915
+            9,11,16.72,-62,19,1.1,I CAR HD79447
+            11,5,33,-58,43,48,NGC3532
+            18,51,6,-6,16,0,M11
+            10,36,16.079,-58,16,38.20,HD92044
+            08,40,36,-53,02,0,OMI VEL CLUSTER IC2391
+ 
+        - ``gap-filler&apos;&apos; CK files
+ 
+            dii_predict_050703_050704.bc
+            dif_predict_050112_050809.bc
+ 
+          These CKs were used for processing of the images for
+          archiving in PDS during February to fulfill the same purpose
+          as the predicted CKs mentioned above -- to provide ``some&apos;&apos;
+          orientation data for under 20% of the images, for which
+          actual orientation data was not available in the
+          reconstructed CKs. Unlike the other predicted CKs these two
+          kernels did not provide truly predicted orientation. Instead
+          they stored the same data as the reconstructed CKs but
+          allowed interpolation across gaps of any size between actual
+          attitude data points. These files were not included in this
+          data set because they were created -- and can be recreated at
+          any time -- from the reconstructed CKs provided in this data
+          set using CKSPANIT application with the tolerance of 44236800
+          ticks (= 2 days).
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>PSCM-00027</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

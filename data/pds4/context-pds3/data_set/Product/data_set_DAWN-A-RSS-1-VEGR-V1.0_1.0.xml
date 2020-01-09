@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.dawn-a-rss-1-vegr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DAWN VESTA RAW GRAVITY SCIENCE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.dawn_mission_to_vesta_and_ceres::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.dawn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.4_vesta::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.dawn-a-rss-1-vegr-v1.0__browserp_dawn-a-rss-1-vegr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Konopliv, A.S., S.W. Asmar, R.S. Park, B.G. Bills, F. Centinello, A.B.
+                   Chamberlin, A. Ermakov, R.W. Gaskell, N. Rambaux, C.A. Raymond, C.T. Russell,
+                   D.E. Smith, P. Tricarico, and M.T. Zuber, The Vesta gravity field, spin pole
+                   and rotation period, landmark positions, and ephemeris from the Dawn tracking
+                   and optical data, Icarus 240, 103-117, doi:10.1016/j.icarus.2013.09.005, 2014.
+            </reference_text>
+            <description>reference.KONOPLIVETAL2014B</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DAWN-A-RSS-1-VEGR-V1.0</data_set_id>
+        <data_set_name>DAWN VESTA RAW GRAVITY SCIENCE V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>2011-07-10</start_time>
+        <stop_time>2012-09-05</stop_time>
+        <producer_full_name>DUSTIN R. BUCCINO</producer_full_name>
+        <citation_text>
+            Buccino, D.R., Konopliv, A.S., Park, R.S., Asmar, S.W., DAWN
+            VESTA RAW GRAVITY SCIENCE 1 V1.0 Data Set,
+            DAWN-A-RSS-1-VEGR-V1.0, NASA Planetary Data System, 2014.
+        </citation_text>
+        <data_set_terse_desc>
+            Raw Vesta gravity science data and ancillary files from the Dawn
+            mission to Vesta.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains archival raw, partially processed, and
+            ancillary/supporting gravity science data acquired during the
+            Dawn mission while the spacecraft was in orbit around the
+            asteroid Vesta. The radio observations were carried out using the
+            Dawn spacecraft and Earth-based receiving stations of the NASA
+            Deep Space Network (DSN). The data set was designed primarily to
+            support generation of high-resolution gravity field models for
+            Vesta. Of most interest are likely to be the Orbit Data Files in
+            the ODF directory, which provided the raw input to gravity
+            investigations, as well as the ionospheric and tropospheric media
+            calibration files in the ION and TRO directories, respectively.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Dawn Mission to Vesta and Ceres (DAWN) Gravity Science (GR) Raw
+      Data Archive (RDA) is the set of raw and partially processed
+      radio science data collected during the Dawn mission to Vesta.
+ 
+      The earliest data in this data set were collected
+      on 2011-07-10.
+ 
+      The closed-loop system used a phase-lock loop in the ground receiver
+      to track the downlink signal, reporting both amplitude and frequency at
+      rates typically of 1-10 times per second. Closed-loop data are efficient
+      for characterizing slowly changing signals and are the input to
+      operational navigation and orbit-determination processes.
+ 
+      The data set includes one type of primary data, the ODF. TNFs (Tracking
+      and Navigation Service Data Files) are the output of the closed-loop
+      receiver. Orbit Data Files (ODFs) are compressed versions of TNFs. ODFs
+      are specifically targeted to spacecraft navigators and scientists
+      interested in gravity fields.
+ 
+      Typical users of these data might analyze range and Doppler
+      measurements in ODFs to reconstruct the spacecraft trajectory.
+      Relevant questions would include the measurement uncertainties
+      in range and Doppler at different DSN antennas; the uncertainties
+      could set constraints on any model of Vesta&apos;s gravity field developed
+      later, for example.
+ 
+ 
+    Parameters
+    ==========
+ 
+      The ODF is a minimally processed output of the closed-loop receiver.
+      It contains the most important information (range, Doppler and frequency
+      ramps) needed by spacecraft investigators, and investigators interested
+      in determining gravity fields. Each ODF is accompanied by a full
+      PDS label which describes both the content and format of the
+      associated file. ODF data fields include:
+ 
+           Narrowband spacecraft VLBI, Doppler mode (cycles)
+           Narrowband spacecraft VLBI, phase mode (cycles)
+           Narrowband quasar VLBI, Doppler mode (cycles)
+           Narrowband quasar VLBI, phase mode (cycles)
+           Wideband spacecraft VLBI (nanoseconds)
+           Wideband quasar VLBI (nanoseconds)
+           One-way Doppler (Hertz)
+           Two-way Doppler (Hertz)
+           Three-way Doppler (Hertz)
+           One-way total count phase (cycles)
+           Two-way total count phase (cycles)
+           Three-way total count phase (cycles)
+           PRA planetary operational discrete spectrum range (range
+                units)
+           SRA planetary operational discrete spectrum range (range
+                units)
+           RE(GSTDN) range (nanoseconds)
+           Azimuth angle (degrees)
+           Elevation angle (degrees)
+           Hour angle (degrees)
+           Declination angle (degrees)
+ 
+ 
+    Processing
+    ==========
+ 
+      ODFs are abstracted from subsets of TNF data, the uncompressed output
+      of the closed-loop receiver at the Deep Space Network.  A full PDS label
+      accompanies each ODF file and gives a bit level description of
+      the content and format.
+ 
+ 
+    Data
+    ====
+      The data set contains primary data and secondary data.  Primary
+      data are those files which would normally be used to derive science
+      products and investigation results.  Secondary data are needed
+      for the processing or interpretation of primary data but are
+      not usually considered to have science value of their own.
+      For gravity science, there is one type of primary data.
+      Listings of primary and secondary files can be found in INDEX/INDEX.TAB
+      for the data set (as of the most recent delivery).
+ 
+      ODFs are stored in the ODF directory. ODFs contain the output of the
+      closed-loop tracking system of the Deep Space Network. File names are
+      of the form DAWNVEGRyyyy_ddd_hhmmXuuwVn.odf where &apos;DAWNVEGR&apos; identifies
+      the mission and the data set; &apos;yyyy&apos; is the four-digit year, &apos;ddd&apos;
+      is the three-digit day-of-year, &apos;hh&apos; is the two-digit hour,
+      and &apos;mm&apos; is the two-digit minute at the beginning of the file;
+      &apos;X&apos; indicates an X-Band uplink (&apos;N&apos; denotes no uplink);
+      &apos;uu&apos; indicates the uplink station (set to &apos;NN&apos; for no uplink or
+      &apos;MM&apos; for two or more uplinking stations during the time interval
+      covered), &apos;w&apos; indicates the downlink mode (&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, or &apos;M&apos;
+      for 1-way, 2-way, 3-way, or &apos;multiple&apos;, respectively), and &apos;Vn&apos;
+      indicates the version number of the file.  Dates and times in the
+      file name are UTC. The ODF label has file name
+      DAWNVEGRyyyy_ddd_hhmmXuuwVn.lbl. The typical ODF contains about
+      100 Kbytes.
+ 
+      A sample ASCII dump of an ODF file is available in the DOCUMENTS
+      directory.
+ 
+ 
+    Secondary Data
+    ==============
+      An extensive set of ancillary files is needed for proper analysis
+      and interpretation of the data.  In the paragraphs below
+      &apos;yyyy_ddd_yyyy_ddd&apos; gives the start and end dates of the data in
+      the file.  All dates in the file names unless otherwise specified are
+      UTC dates. All ASCII files have records delimited by an ASCII
+      carriage-return (ASCII 13) line-feed (ASCII 10) pair.  In some cases
+      (especially for NAIF files) the &lt;CR&gt;&lt;LF&gt; may need to be converted to
+      either &lt;CR&gt; or &lt;LF&gt; before the file is used on the local machine.
+ 
+      Antenna Phase Center File (APC Directory)
+      ---------------------------------------------------
+        Antenna Phase Center files were produced by the JPL Dawn Gravity
+        Science team for release. The Dawn spacecraft utilizes four antennas
+        during operations (1 high gain antenna and 3 low gain antennas). The
+        Antenna Phase Center files contain the start times and stop times when
+        any of the low gain antennas were being used. During times not
+        specified in these files, the high gain antenna is being used. These
+        are ASCII format with a detached PDS label describing the format of
+        the data. File names have the form DAWNVEGR_yyyy_ddd_yyyy_ddd.APC.
+        The accompanying PDS label describes the content and structure of the
+        file.
+ 
+      Ionosphere Calibration Files (ION Directory)
+      ---------------------------------------------------
+        Ionosphere Calibration files are ASCII files produced by the Tracking
+        System Analytic Calibration (TSAC) Group at JPL. They provide
+        historical and predicted Earth ionospheric conditions. File
+        names have the form DAWNVEGR_yyyy_ddd_yyyy_ddd.ION. Each ION
+        file is accompanied by a PDS minimal label with file name
+        DAWNVEGR_yyyy_ddd_yyyy_ddd.LBL. Typical file size is 24 KB.
+ 
+      Spacecraft Mass History Files (SCM Directory)
+      ---------------------------------------------------
+        Spacecraft Mass History files were produced by the Dawn Spacecraft
+        Team. They contain the estimates of the spacecraft mass, center of
+        mass, and propellant usage. These are ASCII files of variable length
+        records. File names have the form DAWNVEGR_yyyy_ddd.SCM, where
+        yyyy_ddd is the applicable start date of the file. Files are
+        accompanied by a PDS label describing the format of the data. Typical
+        file size is 8 KB. The accompanying PDS label describes the content
+        and structure of the file.
+ 
+      Small Forces File (SFF Directory)
+      ---------------------------------------------------
+        Small Forces Files were created from the Dawn spacecraft
+        engineering telemetry stream. These are ASCII files of
+        variable length records.  File names have the form
+        DAWNVEGR_yyyy_ddd_yyyy_ddd.SFF.  Each SFF file is accompanied by a
+        PDS minimal label with file name DAWNVEGR_yyyy_ddd_yyyy_ddd.LBL.
+        Typical file sizes are 2.5 MB. File content and
+        structure is defined by DAWN_SFF_SIS in the DOCUMENT
+        directory.
+ 
+      Troposphere Calibration Files (TRO Directory)
+      ---------------------------------------------------
+        Troposphere Calibration files are ASCII files produced by the Tracking
+        System Analytic Calibration (TSAC) Group at JPL. They provide
+        historical and predicted Earth tropospheric conditions. File
+        names have the form DAWNVEGR_yyyy_ddd_yyyy_ddd.TRO. Each TRO
+        file is accompanied by a PDS minimal label with file name
+        DAWNVEGR_yyyy_ddd_yyyy_ddd.LBL. Typical file size is 150 KB.
+ 
+      DSN Weather Files (WEA Directory)
+      ---------------------------------------------------
+        DSN Weather files were produced by the Tracking System
+        Analytic Calibration (TSAC) Group at JPL. Files give weather
+        calibration information for DSN complexes. These are ASCII
+        files of variable length records.  File names have the form
+        DAWNVEGR_yyyy_ddd_yyyy_ddd_ss.WEA, where &apos;ss&apos; is the DSN complex
+        where weather data were acquired. WEA files are typically
+        released weekly and contain all weather data for the complex
+        since 1 January. The files retained in the archive cover 365 days
+        in 2011 and 366 days in 2012. Each WEA file is accompanied by a PDS
+        minimal label with file name DAWNVEGR_yyyy_ddd_yyyy_ddd_ss.LBL.
+        The files grow at the rate of approximately 90 KB  per month.
+ 
+ 
+    Relevant Data Archived At Other Sites
+    =====================================
+    The Navigation and Ancillary Information Facility (NAIF) is the
+    navigation node of the PDS. NAIF provides the archives for spacecraft
+    navigation, attitude, events, clock conversion, and planetary
+    ephemerides for most NASA missions. Additionally, NAIF provides the
+    SPICE toolkit, containing useful algorithms to utilize and manipulate
+    data NAIF provide.
+ 
+    Relevant to gravity science are the following types:
+     * CK: Spacecraft and solar array attitude orientation files
+     * EK: Spacecraft events kernel
+     * FK: Reference frame specification
+     * SCLK: Conversion between spacecraft time and ephemeris time
+     * SPK: Spacecraft and Planetary ephemeris data
+ 
+    The NAIF PDS archive for Dawn is located at:
+    naif.jpl.nasa.gov/pub/naif/pds/data/dawn-m_a-spice-6-v1.0/
+ 
+    Coordinate System
+    =================
+      For the APC and SCM files, unless otherwise specified, the coordinate
+      system is the spacecraft-fixed coordinate frame as described in the
+      Dawn instrument host catalog file.
+ 
+      Other data types are not dependent on definition of a
+      coordinate system.
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at several institutions.
+      Because such software must usually operate at the bit-level and
+      is written for a narrow range of platforms, it is not suitable
+      for general distribution.  No software is included with this
+      archival data set.
+ 
+ 
+    Media/Format
+    ============
+      These data have been delivered to the PDS Small Bodies Node
+      electronically.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      Data in this archival data set have been collected to support
+      radio science investigations, including derivation of the
+      gravity field of Vesta.  These are similar to data collected
+      using other spacecraft at different targets and are believed
+      to be generally of good quality.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The ODFs in this archive contain data from all nominal Dawn
+      passes suitable for gravity science. They are primarily for
+      the gravity investigation of Vesta.
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

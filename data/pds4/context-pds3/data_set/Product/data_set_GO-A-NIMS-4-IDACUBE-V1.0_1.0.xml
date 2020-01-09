@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-a-nims-4-idacube-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>HIRES NIMS IDA SPECTRAL IMAGE CUBES</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nims.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.ida::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-a-nims-4-idacube-v1.0__browserp_go-a-nims-4-idacube-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Carlson, R.W., P.R. Weissman, W.D. Smythe, J.C. Mahoney, and the NIMS Science
+                   and Engineering Teams, Near-Infrared Mapping Spectrometer Experiment on
+                   Galileo, Space Science Reviews 60: 457-502, 1992.
+            </reference_text>
+            <description>reference.CARLSONETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-A-NIMS-4-IDACUBE-V1.0</data_set_id>
+        <data_set_name>HIRES NIMS IDA SPECTRAL IMAGE CUBES</data_set_name>
+        <data_set_release_date>2013-07-22</data_set_release_date>
+        <start_time>1993-08-28T16:47:45Z</start_time>
+        <stop_time>1993-08-28T16:45:30Z</stop_time>
+        <producer_full_name>DR. JAMES C. GRANAHAN</producer_full_name>
+        <citation_text>
+            Granahan, J.C., HiRes Galileo NIMS Ida Spectral Image Cube
+            GO-A-NIMS-4-IDACUBE-V1.0. NASA Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            Radiance spectral image cube of the spatially resolved Galileo
+            NIMS observations of asteroid 243 Ida.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data volume contains 17 channel spectral image cubes of
+            asteroid 243 Ida ranging from 0.7 to 5.2 micrometers in
+            wavelength in cgs units of radiance. These data were obtained by
+            the Galileo spacecraft Near Infrared Mapping Spectrometer on
+            August 28, 1993. They were radiometrically calibrated using
+            calibration measurements obtained by the Near Infrared Mapping
+            Spectrometer during its observations of Europa on June 28, 1996.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      This data volume contains a radiometrically corrected spectral image
+      cube of the spatially resolved observations of asteroid 243 Ida as
+      acquired by the Galileo spacecraft Near Infrared Mapping Spectrometer
+      (NIMS) on August 28, 1993.  These are products of the calibration of
+      the raw data number files idu002tn.qub and idu004tn.qub with calibration
+      factors contained in the file g1e003ci.qub and projected in a point
+      perspective geometry. All of the source files are contained within
+      the NASA pds archive of Galileo NIMS data. These spectral image cubes,
+      ida_nims_002_scan1_radiance.fit, ida_nims_002_scan2_radiance.fit,
+      ida_nims_002_scan3_radiance.fit, and ida_nims_004_radiance.fit, combine
+      data acquired during the asteroid 243 Ida encounter and the Galilean
+      Satellite encounters to produce radiometrically calibrated products.
+ 
+      The Near-Infrared Mapping Spectrometer (NIMS) instrument is an imaging
+      spectrometer covering the wavelength region 0.7 to 5.2 micrometers --
+      a region not studied by the Pioneer and Voyager spacecraft.  Its
+      spectral resolution is 0.025 micron beyond 1 micron, and 0.0125
+      microns below 1 micron, yielding 204 spectral elements in nominal
+      mode.  The nominal pixel size is a square 0.5 x 0.5 milliradians.
+      The instrument acquires data in the order: (1) sampling of 17
+      detectors, (2) stepping of the scan mirror (20 elements in cross-cone),
+      (3) stepping of the grating (nominally 12 steps per cycle).  The
+      nominal 204 wavelength cycle requires 4 1/3 seconds.  The detectors
+      (2 Silicon, 15 Indium Antimonide) sample approximately uniformly
+      across the spectrum.  A detailed description of the instrument may be
+      found in [CARLSONETAL1992] and in the document directory of this
+      data volume.
+ 
+      The natural form of imaging spectrometer data is the spectral image
+      cube.  It is normally in band sequential format, but has a dual
+      nature.  It is a series of &apos;images&apos; of the target, each in a different
+      wavelength.  It is also a set of spectra, each at a particular line
+      and sample, over the area observed.  Each spectrum describes a small
+      portion of the area.  When transformed into cubes, the data may be
+      analyzed spatially, an image at a time, or spectrally, a spectrum at
+      a time, or in more complex spatial-spectral fashion.
+ 
+      The HIRES NIMS SPECTRAL IMAGE CUBE data products are spectral image
+	  cubes of the spatially resolved NIMS observations of asteroid 243 Ida.
+	  They are derived from data archived in the NASA Planetary Data Systems
+	  files idu002tn.qub and idu004tn.qub consisting of data in raw data
+	  number values stored as spectral image cubes in a band sequential
+	  integer arrays.  These raw data numbers were converted into little
+	  endian floating point values using sensor sensitivity values contained
+	  in the NIMS Galilean satellite observations g1e003ci.qub archived in
+	  the NASA Planetary Data System.  The HIRES NIMS SPECTRAL IMAGE CUBES
+	  pixels were rectified by creating a point perspective instrument
+	  projection and limbfitting pixels to the corresponding 243 Ida Galileo
+	  spacecraft CCD (Solid State Imager).  The result are rectified band
+	  sequential radiance spectral image cubes of 243 Ida that are stored in
+	  the HIRES NIMS SPECTRAL IMAGE CUBE FITS files.
+ 
+ 
+    Parameters
+    ==========
+      A band in a NIMS tube is generated for each of the 17 detectors at
+      each grating step.  (The detectors cover the range 0.7 to 5.2
+      microns.)  The motion of the grating is determined by the commanded
+      instrument mode:
+ 
+        Mode                         Grating   Grating   Bands  Samples/RIM
+                                      steps   increment
+ 
+        Fixed Map/Spectrometer          1         0        17      182
+        Short Map/Spectrometer          6         4       102       26
+        Full Map/Spectrometer          12         2       204       14
+        Long Map/Spectrometer          24         1       408        7
+ 
+      A secondary mirror moves through twenty cross-track positions in the
+      map modes, or is fixed near the center of its scan in the
+      spectrometer modes.  The number of lines in each image of a tube is
+      always twenty, whether or not the mirror is moving.  The number of
+      samples is determined by the mode and the duration of the
+      observation.  (In the mosaic dataset, the image dimensions are
+      determined by the pattern created by the motions of the secondary
+      mirror and the scan platform.)
+ 
+      The approximate wavelengths of the bands are determined by the mode,
+      and by offset and start grating positions.  The true wavelengths are
+      functions of the temperature of the grating and parameters
+      determined from the ground calibration and frequent optical flight
+      calibrations.  Known absorptions on some targets are also useful in
+      determining these parameters.
+ 
+      The commanded gain state is one of four sets of gains for the 14
+      non-thermal detectors.  The three thermal detectors have two gains,
+      automatically switching to the lower one near the mid-point of their
+      range.  Raw data values of each detector and grating step are
+      functions of the gain state and the temperature of the focal plane
+      assembly (FPA).  Radiances are determined from raw data values using
+      sensitivities based on the original ground calibration corrected by
+      frequent photometric and radiometric flight calibrations.  I/F
+      values are simply radiances divided by the solar absorption at the
+      target&apos;s distance from the sun for the wavelength in question.
+ 
+      Further details may be found in VOLINFO.TXT in the DOCUMENT
+      directory of the archive volume, and in the instrument paper
+      [CARLSONETAL1992].
+ 
+ 
+    Processing
+    ==========
+      The HIRES NIMS SPECTRAL IMAGE CUBES data products are spectral image
+	  cubes of the spatially resolved NIMS observations of asteroid 243 Ida.
+	  They are derived from data archived in the NASA Planetary Data Systems
+	  files idu002tn.qub and idu004tn.qub consisting of data in raw data
+	  number values stored as spectral image cubes in a band sequential
+	  integer array.  These raw data numbers were converted into little endian
+      floating point values using sensor sensitivity values contained in the
+      NIMS Galilean satellite observations g1e003ci.qub archived in the NASA
+      Planetary Data System.  The HIRES NIMS SPECTRAL IMAGE CUBES pixels were
+      rectified by creating a point perspective instrument projection and
+      limbfitting pixels to the corresponding 243 Ida Galileo spacecraft CCD
+      (Solid State Imager) images.  The results are rectified band sequential
+	  radiance spectral image cubes of 243 Ida that are stored in the
+      HIRES NIMS SPECTRAL IMAGE CUBES FITS files.
+ 
+    Data structure
+    ==============
+      The HIRES NIMS SPECTRAL IMAGE CUBES spectral image files are FITS
+	  formatted files.  Each file contains three little endian floating point
+	  arrays with associated header data.  The first array is a three
+	  dimensional that is a radiance spectral image cube of the asteroid 243
+	  Ida in a band sequential format. The second array is another three
+      dimensional array that contains the per pixel wavelength value
+      of the pixels in the first array.  The third array is a three
+      dimensional array that contains the radiance precision of each
+      pixel of the radiance spectral image cube.
+ 
+      This FITS file has a detached PDS label file that describes
+      the FITS data file structure, spacecraft mission, and
+      the observation geometry.
+ 
+    Ancillary Data
+    ==============
+      A Postscript-format Guide to the planned observations, including
+      footprint plots on the target, instrument parameters, etc. is
+      included in the data set, as are tables of parameters for each
+      observation. A copy of the NIMS instrument paper [CARLSONETAL1992]
+      is also included.
+ 
+      Tagged Image File Format (TIFF) and Adobe Acrobat Portable Document
+	  files contain sample images and plots of the data in the HIRES NIMS
+	  SPECTRAL IMAGE CUBES can be found in the BROWSE directory.
+ 
+ 
+    Software
+    ========
+      NIMS tubes were designed to be accessed by the ISIS system, which
+      No software is provided with the HIRES NIMS SPECTRAL IMAGE CUBES data
+	  volume. The FITS formatted file can be read with astronomical image
+	  software packages that can ingest the FITS file format.  This includes
+	  IDL, a product of ITTVIS (http://www.ittvis.com) with the IDL Astronomy
+      User&apos;s Library at NASA Goddard Space Flight Center at
+      http://idlastro.gsfc.nasa.gov .  ISIS (Integrated Software for Imagers
+      and Spectrometers) 3.0 may also be used to ingest the FITS file for
+      analysis and is available from the USGS via
+      http://isis.astrogeology.usgs.gov/ .
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      The radiance and reflectance cubes in this volume have not been
+	  photometrically corrected, nor have they been corrected for
+	  thermal emission.  Thus, apparent surface variations will be
+	  affected by viewing geometry and thermal properties.
+ 
+      The radiance values contained in the HIRES NIMS SPECTRAL IMAGE CUBES
+      data set were checked against corresponding values obtained by
+      the Galileo Solid State Imager (SSI) multi-spectral imagery,
+      NASA Infrared Telescope Facility spectra, and Eight Color
+      Asteroid Survey data for asteroid 243 Ida.  These were used to
+      find the best calibration factors for the first grating step of
+      the 243 Ida NIMS observations.  Data from other grating steps
+      were found to vary from these values.  This variations in this
+      data is thought to be caused by unplanned scan platform motions
+      durint the NIMS 243 Ida observations.
+ 
+      The shape of the limb of asteroid 243 Ida as observed by SSI
+      was also used as a constraint for the position of the NIMS
+      pixels in the data set.  Each NIMS scan line was aligned with
+      the SSI imaged asteroid limb during the time of the observation.
+      The updated alignment was used to position the NIMS pixels
+      in the HIRES NIMS SPECTRAL IMAGE CUBES data products.
+ 
+    Data Coverage and Quality
+    =========================
+      The HIRES NIMS SPECTRAL IMAGE CUBES data volume contains the spatially
+      resolved NIMS observations of asteroid 243 Ida as archived as images
+      in the NASA PDS Imaging Node.  It contains data from the NIMS
+      observations that are of a high signal to noise and that are consistent
+      with other data sets.  Lower signal to noise scans of the asteroid were
+      omitted from this data set.  Inconsistent data, those belonging to
+      observations beyond the first grating step, were also omitted. It is
+      thought that the 243 Ida data beyond the first grating step suffered
+      from non-standard scan motions due to malfunctions of the Galileo
+      Orbiter scan platform during the asteroid encounter.  This resulted
+      in archived image files with some spectral data that are not properly
+      calibrated by coefficients obtained during the Galilean satellite
+      encounter observations.
+    ===========
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

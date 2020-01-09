@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-apxs-4-5-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL MARS ALPHA PARTICLE X-RAY SPECTROMETER 4/5 RDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_science_laboratory::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:apxs.msl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-apxs-4-5-rdr-v1.0__browserp_msl-m-apxs-4-5-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-apxs-4-5-rdr-v1.0__dvo_geo_msl-m-apxs-4-5-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msl-m-apxs-4-5-rdr-v1.0__pds.geo.msl.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Campbell, J. L., et al., Calibration of Mars Science Laboratory Alpha Particle
+                   X-ray Spectrometer, Space Sci. Rev. doi:10.1007/s11214-012-9873-5, 2012.
+            </reference_text>
+            <description>reference.CAMPBELLETAL2012</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSL-M-APXS-4/5-RDR-V1.0</data_set_id>
+        <data_set_name>MSL MARS ALPHA PARTICLE X-RAY SPECTROMETER 4/5 RDR V1.0</data_set_name>
+        <data_set_release_date>2013-03-20</data_set_release_date>
+        <start_time>2012-07-16</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>RALF GELLERT</producer_full_name>
+        <citation_text>
+            Gellert, R., Mars Science Laboratory Alpha Particle X-Ray
+            Spectrometer RDR Data V1.0, MSL-M-APXS-4/5-RDR-V1.0, NASA
+            Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated spectra and oxide weight percent data derived from
+            observations of the APXS instrument aboard the Mars Science
+            Laboratory rover.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The MSL APXS RDR data set contains calibrated spectra and oxide
+            weight percent data derived from observations of the APXS
+            instrument aboard the Mars Science Laboratory rover. Two types of
+            products are included: summed X-ray spectra in counts as a
+            function of energy, and abundance data for a set of standard
+            elements and oxides, derived from the summed spectra. Both
+            product types are given as ASCII text files in
+            comma-separated-value (CSV) format, suitable for reading with
+            spreadsheet software.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Alpha-Particle X-Ray Spectrometer (APXS) is a contact
+      instrument that uses X-ray spectroscopy to determine the
+      elemental composition of soils and rocks. Atmosphere argon can
+      also be measured by the APXS. The APXS is deployed on
+      selected targets along the rover traverse to determine the
+      elemental composition of samples. Materials processed by the
+      Sample Acquisition - Sample Processing and Handling (SA/SPaH)
+      system can also be delivered to the observation tray or to the
+      martian surface for analysis by APXS. Elements heavier than Na
+      can be detected by APXS. If present at sufficient levels, the
+      abundances of these elements can also be determined.
+ 
+      There are two APXS RDR data products. The first product is the summed
+      X-ray spectrum in counts as a function of energy, which is
+      derived from the APXS EDR. The second product is the standard elemental
+      oxide abundance, which is derived from the summed X-ray spectrum.
+      Both products are stored as ASCII text in a Comma Separated
+      Value (CSV) format. Each CSV file has an associated detached PDS
+      label, also stored as ASCII text.
+ 
+    Processing
+    ==========
+      The APXS X-ray spectrum RDR products are considered CODMAC Level 4 or
+      Resampled Data, equivalent to NASA level 1B. The spectra
+      are generated from the APXS EDR products (CODMAC Level 2, NASA Level 0)
+      archived in the PDS data set MSL-M-APXS-2-EDR-V1.0.
+ 
+      The summed X-ray spectrum, product type RSP, is generated from the APXS
+      EDR product by converting channel number to energy and summing
+      together all buffers acquired at good temperatures. The RSP product
+      consists of two fields, the first of which contains an energy value
+      in eV and the second contains total counts for that energy channel.
+      The count field value for first record is the counting time in
+      seconds. The value for the last record is the overflow, that is,
+      counts observed at that energy and higher. There is a header record
+      at the start of the file that gives field headings for the two
+      fields.
+ 
+      The APXS oxide abundance RDR products are considered CODMAC Level 5 or
+      Derived Data, equivalent to NASA Level 2. The oxide abundance products,
+      product type RWP, are generated from the X-ray spectra.
+ 
+      The oxide abundance product contains abundance data for
+      a set of standard oxides and elements. There are three fields in the
+      product: the oxide or element name, the weight percent, and the
+      standard error of the weight percent value. The first record in the
+      file is a header record that provides a description
+      of the target sample.
+ 
+ 
+    Software
+    ========
+      APXS RDR products are ASCII comma-delimited files that can be
+      read using a text editor or with spreadsheet software such as
+      Excel.  No special software is required.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      See CAMPBELLETAL2012 for a description of the calibration
+      applied to the APXS data.
+ 
+    Review
+    ======
+      The APXS RDR products are reviewed internally by the APXS team
+      prior to release to the PDS. PDS also performs an external peer
+      review of the APXS RDR.
+ 
+    Data Coverage and Quality
+    =========================
+      Nominally one APXS RDR spectrum is generated for each APXS EDR data
+      product, and one APXS RDR oxide abundance product is generated for
+      each RDR spectrum. Both the EDR and the RDR products may be revised
+      during the course of the mission. Revisions are indicated in the
+      product&apos;s PDS label by the keywords PRODUCT_VERSION_ID and
+      PRODUCT_CREATION_TIME, and in the ERRATA.TXT file that accompanies
+      the APXS archive.
+ 
+    Limitations
+    ===========
+      N/A
+ 
+    Data Compression
+    ===============
+      No data compression is used.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

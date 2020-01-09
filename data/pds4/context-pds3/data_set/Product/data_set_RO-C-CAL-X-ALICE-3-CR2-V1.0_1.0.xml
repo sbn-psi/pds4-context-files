@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-c-cal-x-alice-3-cr2-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER 9P/CAL/CHECK ALICE 3 CR2 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:alice.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.9p-tempel_1_1867_g1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:unk.unk::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-c-cal-x-alice-3-cr2-v1.0__browserp_ro-c-cal-x-alice-3-cr2-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Stern, S.A., D.C. Slater, J. Scherrer, J. Stone, M. Versteeg, M.F. A&apos;Hearn,
+                   J.L. Bertaux, P.D. Feldman, M.C. Festou, J.W. Parker, and O.H.W. Siegmund,
+                   Alice: The Rosetta Ultraviolet Imaging Spectrograph, Space Sci. Rev., 128(1-4),
+                   507-527, Feb 2007.
+            </reference_text>
+            <description>reference.STERNETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-C/CAL/X-ALICE-3-CR2-V1.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER 9P/CAL/CHECK ALICE 3 CR2 V1.0</data_set_name>
+        <data_set_release_date>2006-11-06</data_set_release_date>
+        <start_time>2005-06-27T18:48:06.415Z</start_time>
+        <stop_time>2006-03-04T21:14:30.679Z</stop_time>
+        <producer_full_name>ANDREW J. STEFFL</producer_full_name>
+        <citation_text>
+            Stern, S.A., et al., ROSETTA-ORBITER 9P/CAL/CHECK ALICE 3 CR2
+            V1.0 RO-C/CAL/X-ALICE-3-CR2-V1.0, NASA Planetary Data System,
+            2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Contains calibrated instrument checkout data from the Rosetta
+            Orbiter ALICE instrument during the Cruise 2 mission phase
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains CODMAC level 3 instrument checkout data
+            acquired by the Rosetta Orbiter ALICE UV Spectrometer during the
+            second cruise phase of the Rosetta mission, which occurred
+            2005-04-05 to 2006-07-28.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Required Reading
+  ================
+    The format of all Alice data are described in detail by the EAICD
+    document located in the /DOCUMENT directory. In addition, the
+    Rosetta Alice logbook file, RA_LOGBOOK_VVV.ASC, also located in
+    the /DOCUMENT directory provides observational details such as
+    observation target, commanded exposure time, etc., for all Alice
+    data. The Alice team strongly recommends reading this
+    documentation before using the data.
+ 
+ 
+  Data Set Overview
+  =================
+    This data set contains calibrated data acquired by the Rosetta
+    Orbiter ALICE UV Spectrometer during the second cruise phase of
+    the Rosetta mission, which occurred April 5, 2005 to July 28,
+    2006. Observations of comet 9/P Tempel 1, calibration targets and
+    instrument checkouts were made during this mission phase.
+    A detailed listing of all Alice observations is given in the
+    observation log file located in the DOCUMENT directory.
+ 
+ 
+  Processing
+  ==========
+    The data in this data set are calibrated, CODMAC Level 3 data. As
+    such, corrections for detector dead time, dark counts, flatfield,
+    and effective area have generally been applied. The primary FITS
+    header contains a list of which corrections have been applied to
+    that file.  There are some significant discrepancies in the
+    absolute calibration that will be corrected in a subsequent
+    data delivery when the calibration is better understood.
+ 
+ 
+  Data
+  ====
+    The data are in FITS format and text format. Each FITS file
+    has a detached PDS label so that they can be read either by
+    FITS or PDS tools. A detailed description of the data format
+    is given in the ALICE EAICD document located in the DOCUMENT
+    directory of this data set.
+ 
+ 
+  Ancillary Data
+  ==============
+    No ancillary data included in this data set.
+ 
+ 
+  Coordinate System
+  =================
+      The geometry items SC_SUN_POSITION_VECTOR,
+      SC_TARGET_POSITION_VECTOR and SC_TARGET_VELOCITY_VECTOR
+      provided in the label of the data product are relative to the
+      Earth Mean Equator frame of J2000.
+ 
+      SUB_SPACECRAFT_LATITUDE, SUB_SPACECRAFT_LONGITUDE are
+      given in the PLANETOGRAPHIC coordinate system. These parameters
+      are computed at time t=START_TIME. Distances are given in km,
+      angles in degrees.
+ 
+ 
+  Software
+  ========
+    All FITS readers should be able to successfully read the data.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    Data confidence is nominal, meaning that all data have been
+    validated by the Alice team and found as expected. Any exceptions
+    are noted by the DATA_QUALITY field in the label files.
+ 
+    There are some significant discrepancies in the
+    absolute calibration that will be corrected in a subsequent
+    data delivery when the calibration is better understood.
+ 
+ 
+  Review
+  =====
+    Rosetta internal archive review Jan 2006.
+    Formal review process Jan 2007.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    Data quality is good unless otherwise noted by the DATA_QUALITY
+    keyword.
+ 
+ 
+  Limitations
+  ===========
+    These data have been calibrated and are in physical units
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

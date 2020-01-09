@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.phx-m-met-3-pt-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PHOENIX MARS METEOROLOGICAL PRESSURE / TEMPERATURE RDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.phoenix::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:met.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-met-3-pt-rdr-v1.0__browserp_phx-m-met-3-pt-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-met-3-pt-rdr-v1.0__browser_geo_phx-m-met-3-pt-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-met-3-pt-rdr-v1.0__dvo_atm_phx-m-met-3-pt-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Taylor, P. et al., Meteorology Station MET on the Phoenix Mars Lander:
+                   Pressure, Temperature and Wind Speed, J. Geophys. Res. E00A10,
+                   doi:10.1029/2007JE003015, 2008.
+            </reference_text>
+            <description>reference.TAYLOR2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PHX-M-MET-3-PT-RDR-V1.0</data_set_id>
+        <data_set_name>PHOENIX MARS METEOROLOGICAL PRESSURE / TEMPERATURE RDR V1.0</data_set_name>
+        <data_set_release_date>2008-12-23</data_set_release_date>
+        <start_time>2008-05-26T00:08:36.308Z</start_time>
+        <stop_time>2008-06-25T18:14:37.816Z</stop_time>
+        <producer_full_name>CAMERON S. DICKINSON</producer_full_name>
+        <citation_text>
+            Dickinson, C. D., PHX METEOROLOGICAL DATA V1.0, NASA Planetary
+            Data System, 2008.
+        </citation_text>
+        <data_set_terse_desc>
+            PHX MET calibrated Pressure and Temperature Data
+        </data_set_terse_desc>
+        <abstract_desc>
+            The PHX METEOROLOGICAL DATA product contains calibrated
+            temperature and pressure data. The temperature data was collected
+            at 250, 500 and 1000mm above the Phoenix Lander deck, and the
+            pressure data was collected at (nearly) the height of the Lander
+            deck. Nominally the data was collected at 2 sec resolution, but
+            is also provided at 512 sec averages (with distribution
+            statistics). Owing to the placement of a heater near the pressure
+            sensor, a corrected set of values was required, and is provided
+            for the pressure data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Modification History
+  ====================
+    Version 1 data volumes include volumes MS000 through LS029, released
+    Dec 2008.  These volumes contain MET data collected May 2008
+    through June 2008, sols 0-29.
+ 
+  Data Set Overview
+  =================
+ 
+    The Phoenix Mars Lander arrived at 68.2184N, 234.2487E on May 25, 2008.
+ 
+    The PHX METEOROLOGICAL DATA product contains calibrated values of pressure
+    and temperature data, as well as corrected values of pressure data.
+    Each product is approximately 24 hours (LMST) in duration, and was
+    collected continuously over the entire mission at a data rate of 2 sec.
+ 
+    The Data are organized into &apos;High Resolution&apos; (2 sec) and &apos;Low
+    Resolution&apos; (512 sec).  There are three temperature sensors
+    along the vertical 1.0 m MET Mast (250, 500 and 1000mm), a
+    reference Platinum Resistance Thermometer (PRT) at the base, and a
+    pressure sensor on the Lander Deck on the Payload Electronic
+    Box.  [TAYLOR2008]
+ 
+    The collection of High Resolution Data is determined by the setting
+    of P &amp; T threshold values ranging from setting the thresholds to
+    zero (constantly triggering, creating continuous 2 sec data) to
+    essentially infinity (never triggering, creating no 2 sec data).
+    Owing to favorable transmission bandwidth, the unit was operated over
+    the entire mission in triggered (2 sec) mode.
+ 
+    During surface operations, it was discovered that a dissipative heater
+    was causing interference with the pressure measurements, owing to its
+    placement very near to the sensor head.  A corrective algorithm
+    was developed, employing housekeeping temperature measurements made
+    internal to the pressure sensor head once every 512 sec, and with the
+    interpolated corrections applied to the 2 sec resolution data.  A
+    further two tables are included which contain these data.
+ 
+    The Data is organized by a unique identifier (Token) is keeping with
+    the other Phoenix instruments.  The token for the PT was nominally
+    set each sol, when the PT instrument stopped recording to allow
+    for transfer of data to the Lander (and hence telemetry to Earth).
+    The token is provided as a 4 byte hex value.
+ 
+ 
+  Parameters
+  ==========
+ 
+    Each RDR file contains time as the seconds since START_TIME.
+ 
+    The MET PT instruments were nominally operated 24 hours of each Martian
+    sol.  Once each sol, the instrument was transitioned out of RECORD
+    to allow for transfer of data from MET flash to the Lander.  Thus
+    there will nominally be a ~20 min gap each sol.
+ 
+    The MET P&amp;T threshold was commanded each sol, to trigger constantly,
+    creating 2 sec data.  The calibration constants used internally onboard
+    the unit were determined prior to launch, and outlined in the CCC report.
+ 
+    During surface operations the MET PT was operated continuously, with a
+    gap early in the mission (Sol 19/20) owing to a spacecraft event.
+    Smaller data gaps exist, from dropouts in telemetry, but these were
+    often recovered owing to use of the MET PT internal flash and data
+    retransmits.
+ 
+ 
+  Processing
+  ==========
+ 
+    The RDR products have had the following changes as compared to the EDRs:
+ 
+    1.  The data has been changed and reordered where required to be
+      consistent with the SIS.
+ 
+    2.  The Frame Count is converted to the duration of each
+      measurement in Earth seconds.
+ 
+    3.  Temperature Digital Numbers have been converted to degrees
+      Kelvin.
+ 
+    The Pressure Corrected data, has been modified as outlined in the
+    SIS document.  Very briefly, a thermocap, internal to the pressure
+    sensor head, was employed as a proxy of the pressure sensor
+    temperature, and used to correct the temperature effects in the
+    data.
+ 
+    Finally, the data were converted to PDS format, converting the
+    tab-delimited fields to fixed-width fields, and exchanging the
+    multiple packet headers for a single session header by the MET GDS.
+ 
+    Address:     Cameron Dickinson
+                 Dept. of Earth and Space Science Engineering
+                 York University
+                 4700 Keele St
+                 Toronto, ON M3J 1P3
+ 
+    Phone:       (416) 736-2100 X 23870
+    Email:       cameron.dickinson@gmail.com
+ 
+    For science related questions about the data, please contact the
+    MET Instrument Science Team Lead:
+ 
+    Address:     James Whiteway
+                 Dept. of Earth and Space Science Engineering
+                 York University
+                 4700 Keele St
+                 Toronto, ON M3J 1P3
+ 
+    Phone:       (416) 736-2100 X 22310
+    Email:       whiteway@yorku.ca
+ 
+ 
+  Data
+  ====
+ 
+    All of the data in this data set are contained in ASCII tabular files
+    with detached PDS labels.  Data is stored in a separate directory
+    relating to the sol in which the recording of data commenced (i.e.
+    data acquired from 003 10:00 local to 004 10:15 will be in the sol
+    3 directory)
+ 
+    Individual filenames are constructed as follows:
+ 
+                             MS000RMH_00896227243_10CCM0.LBL
+ 
+        1: The first character will always be an &apos;M&apos;, representing MET
+           data.
+        2: The second character will be an &apos;S&apos;, signifying surface
+           data (versus &apos;C&apos; for Cruise)
+      3-5: The next three characters provide the sol number of the data
+           file.
+      6-8: The next three characters describe the type of MET data,
+           EML - EDR MET LOW (Resolution)
+           EMH - EDR MET HIGH (Resolution)
+           RML - RDR MET LOW (Resolution)
+           RMH - RDR MET HIGH (Resolution)
+           RMC - RDR MET Corrected (Pressure Corrected Values)
+           RMA - RDR MET Ancillary (Pressure Sensor Temperatures)
+        9: Blank
+    10-20: SCLK - Spacecraft clock
+       21: Blank
+    22-25: Operations Token
+       26: Producer (M for MET Team)
+       27: Version
+       28: Period
+    29-31: Extension, LBL or TAB
+ 
+    The tabular files are formatted so that they may be read directly into
+    many database management systems (DBMS) or spreadsheet programs on
+    various computers.  Each of the files contains two tables.  The first
+    is the header table, and is only a single record in length.  The
+    second table contains all of the data records for a session and varies
+    in length.
+ 
+    All fields in the tables are stored in columns of fixed width and are
+    right justified.  The records are of fixed length; since the header
+    records are shorter than the data records, they have been padded with
+    blank spaces at the end of the record.  The last two bytes of each
+    record contain the ASCII carriage return and line feed characters.
+    This allows the tables to be treated as fixed length record files on
+    computers that support this file type and as normal text files on
+    other computers.
+ 
+    The PDS labels are object-oriented. The object to which the labels
+    refer (the tables) is denoted by a statement of the form:
+ 
+        ^object = location
+ 
+    in which the carat character (&apos;^&apos;, also called a pointer in this
+    context) indicates that the object starts at the given location.  For
+    an object located outside the label file (as in this case), the
+    location denotes the name of the file containing the object, along
+    with the starting record.  For example:
+ 
+        ^TABLE = &apos;MS013RML_00126907202_15C6M1.TAB&apos;
+ 
+    indicates that the TABLE object is in the same directory as the
+    detached label file. (Records are counted starting at 1, not 0.)
+ 
+    The detached label files are stream format files, with a carriage
+    return (ASCII 13) and a line feed character (ASCII 10) at the end of
+    each record.  This allows the files to be read by the MacOS, DOS,
+    UNIX, and VMS operating systems.
+ 
+ 
+  Software
+  ========
+ 
+    The EDR/RDR tables can be displayed on UNIX, Macintosh,
+    and PC platforms as simple ASCII files, or using the PDS developed
+    program, NASAView.  This software is freely available from the PDS
+    Central Node and may be obtained from their web site at
+    http://pds.nasa.gov/.  For more information or help in obtaining
+    the software, contact the PDS operator at the following address:
+ 
+    Address:     Planetary Data System, PDS Operator
+                 Jet Propulsion Laboratory
+                 4800 Oak Grove Drive
+                 Pasadena, CA 91109
+ 
+    Phone:       (818) 354-4321
+    Email:       pds_operator@jpl.nasa.gov
+    WWW URL:     http://pds.nasa.gov/
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Review
+  ======
+ 
+    The contents of this data have been peer reviewed by the following
+    people:
+ 
+    Lyle Huber        - PDS Atmospheres Node, New Mexico State University
+    Jim Murphy        - PDS Atmospheres Node, New Mexico State University
+    Cameron Dickinson - MET/Lidar Data Manager, York University
+    Jim Whiteway      - MET/LIDAR Instrument Co-Investigator, York University
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

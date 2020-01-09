@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:isis.wht</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>INTERMEDIATE DISPERSION SPECTROGRAPH AND IMAGING SYSTEM for WHT</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.wht::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>INTERMEDIATE DISPERSION SPECTROGRAPH AND IMAGING SYSTEM</instrument_name>
+        <instrument_desc>
+ 
+  Instrument Overview
+  ===================
+    The information in this document was taken from the website
+    www.ing.iac.es/ on June 19, 2001.
+ 
+    The Intermediate dispersion Spectrograph and Imaging System (ISIS)
+    was designed and built by the Royal Greenwich Observatory (RGO)
+    and Oxford University in a collaborative effort with the design
+    and construction carried out predominantly at the RGO.
+ 
+    Description:  This versatile Cassegrain instrument consists of two
+    intermediate dispersion spectrographs which can be operated one at
+    a time or simultaneously, and are separately optimized for the
+    blue and red spectral regions.
+ 
+ 
+  Scientific Objectives
+  =====================
+    The main goals are to provide:  a range of dispersions between 130
+    and 16 angstroms/mm in first order, corresponding to a range in
+    resolving power respectively between 800 and 7000 when using a
+    narrow (0.5 arcsecond) slitwidth; maximum possible throughput;
+    high operating efficiency in both the setting-up and observing
+    modes, with the capability of operating the blue and red
+    spectrographs as a single unit; rapid interchange between ISIS and
+    the Faint Object Spectrograph, which share the same slit assembly;
+    long slit (4 arcminute), multi-slit and fibre optic feed
+    capabilities; a cross-dispersed mode capable of recording the
+    wavelength range from 3000 to 1100 nm with a resolving power of
+    about 2000; facilities for spectro-polarimetry; and full
+    capability of being remotely operated.
+ 
+ 
+  Operational Considerations
+  ==========================
+    Local seeing can be degraded by the presence in the atmosphere of
+    dust from Sahara dust storms, and by the presence of moisture or
+    clouds.
+ 
+ 
+  Detectors
+  =========
+ 
+      Note: Additional information is available in
+          DOCUMENT/U_MAN.PDF
+ 
+    The detector in each arm for this data set was a TEK CCD (1k*1k).
+ 
+ 
+    Blue Arm
+    --------
+      The CCD used on the blue arm of ISIS was the thinned, AR coated
+      chip named TEK1.  It is an array of 1024x1024, 24 micron pixels
+      with a pixel scale on the blue arm of 0.33 arcsec/pixel.
+ 
+ 
+    Operational Characteristics of TEK1
+    -----------------------------------
+      Measurements made on ISIS Blue 17/7/95
+ 
+      Speed            Slow   Standard    Quick     Turbo     Nonastro
+      Bias(ADU)        2379     2289       2250      2220       1787
+      Gain(e/ADU)      1.16     1.28       1.74      2.73       4.77
+      Noise(e)         5.02     5.24       5.73      8.38      23.56
+      Linear to(ADU)   60k       60k        60k       50k        15k
+      Readout time(s)  160       105         70        50         35
+ 
+      Binning - When binning the readout speed will always be TURBO
+      regardless of the readout speed selected.
+ 
+      Vertical CTE 0.99999 Horizontal CTE 0.99999
+ 
+ 
+    Physical Characteristics
+    ------------------------
+      Pixel Scale (ISIS)                    :  0.33 arc/pixel
+      X Pixel size                          :  24 microns
+      Y Pixel size                          :  24 microns
+      X size in pixels of digitised area    :  1124
+      Y size in pixels of digitised area    :  1124
+      X size of useful imaging area         :  1024
+      Y size of useful imaging area         :  1024
+      X start of useful imaging area        :  50
+      Y start of useful imaging area        :  0
+      LN2 capacity of cryostat              :  2.5 liters
+      Cryostat window thickness             :  4 mm
+      Cryostat window size                  :  40mm x 40mm
+ 
+ 
+    Operational Parameters
+    ----------------------
+      Flooding type                         :  none
+      Operating temperature                 :  173K
+      Preferred amplifier                   :  B
+ 
+ 
+    Red Arm
+    -------
+      The CCD used on the red arm of ISIS was the thinned, AR coated
+      chip named TEK2.  It is an array of 1024x1024, 24 micron pixels
+      with a pixel scale on the red arm of 0.36 arcsec/pixel.
+ 
+ 
+    Operational Characteristics
+    ---------------------------
+      Speed            Slow   Standard    Quick     Turbo     Nonastro
+      Bias(ADU)         996     1088       1231        849        379
+      Gain(e/ADU)      1.07     1.19       1.62       2.45       4.56
+      Noise(e)         5.22     4.99       5.77      10.26       22.6
+      Linear to(ADU)    60k      60k        60k        50k        15k
+      Readout time(s)   164      112         73         58         40
+ 
+      Binning - When binning the readout speed will always be TURBO
+      regardless of the readout speed selected.
+ 
+      Vertical CTE 0.99999 Horizontal CTE 0.99999
+ 
+ 
+    Physical Characteristics
+    ------------------------
+      Pixel Scale (ISIS red)                :  0.36 arcsec/pixel
+      X Pixel size 24 microns Y Pixel size  :  24 microns
+      X size in pixels of digitised area    :  1124
+      Y size in pixels of digitised area    :  1124
+      X size of useful imaging area         :  1024
+      Y size of useful imaging area         :  1024
+      X start of useful imaging area        :  50
+      Y start of useful imaging area        :  0
+      LN2 capacity of cryostat              :  2.5 liters
+      Cryostat window thickness             :  4 mm
+      Distance from window to CCD           :  11.5 mm
+      Cryostat window size                  :  40 mm x 40 mm
+ 
+ 
+    Operational Parameters
+    ----------------------
+      Flooding type                         :  none
+      Operating temperature                 :  173k
+      Preferred amplifier                   :  A
+ 
+ 
+  Electronics
+  ===========
+    Unknown
+ 
+ 
+  Filters
+  =======
+   No filter was used for the ISIS blue arm. For the ISIS red arm, the
+   GG495 filter was used. The GG495 filter is an order-separation
+   filter designed to filter out second order blue from the first
+   order red in usual applications. In the case of ISIS, where a
+   dichroic splits the beam into red and blue components, it helps
+   define the &apos;red&apos; channel short wavelength.  GG495 is a standard
+   Schott filter which passes long wavelengths and suppresses short
+   wavelengths. According to the Schott catalogue the half-power
+   wavelength is 495 +/- 6 nm with &lt; 1.E-5 for wavelengths less than
+   450 and &gt; 0.99 for 550 nm with a standard thickness of 3mm.
+ 
+ 
+  Location
+  ========
+    Coordinates of WHT, from ING Observers&apos; Guide section 1.2
+    Latitude:             28 45 38.3 N (+28.761 deg)
+    Longitude:            17 52 53.9 W (-17.882 deg)
+    Ground floor height:  2332 m
+
+        </instrument_desc>
+        <instrument_id>ISIS</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Spectrograph</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

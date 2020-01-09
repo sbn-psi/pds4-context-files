@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lamp-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO MOON LAMP 2 EXPERIMENT DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lamp.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lamp-2-edr-v1.0__browserp_lro-l-lamp-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lamp-2-edr-v1.0__dvo_imaging_lro-l-lamp-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lamp-2-edr-v1.0__pds.geo.lro.orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gladstone, G.R., S.A. Stern, K.D. Retherford, R.K. Black, D.C. Slater, M.W.
+                   Davis, M.H. Versteeg, K.B. Persson, J.Wm. Parker, D.E. Kaufmann, A.F. Egan,
+                   T.K. Greathouse, P.D. Feldman, D. Crider, W.R. Pryor, and A.R. Hendrix, LAMP:
+                   The Lyman Alpha Mapping Project on NASA&apos;s Lunar Reconnaissance Orbiter Mission,
+                   Space Sci. Rev., submitted (2008).
+            </reference_text>
+            <description>reference.GLADSTONEETAL2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-LAMP-2-EDR-V1.0</data_set_id>
+        <data_set_name>LRO MOON LAMP 2 EXPERIMENT DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>2010-03-15</data_set_release_date>
+        <start_time>2009-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>DAVID E. KAUFMANN</producer_full_name>
+        <citation_text>
+            Kaufmann, D.E., LRO L LAMP EXPERIMENT DATA RECORD V1.0,
+            LRO-L-LAMP-2-EDR-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            The Lunar Reconnaissance Orbiter (LRO) Lyman Alpha Mapping
+            Project (LAMP) CODMAC Level 2 Experiment Data Record is a
+            collection of the far ultraviolet photon detections obtained by
+            the LAMP instrument, in raw form.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Lunar Reconnaissance Orbiter (LRO) Lyman Alpha Mapping
+            Project (LAMP) CODMAC Level 2 Experiment Data Record is a
+            collection of the far ultraviolet photon detections obtained by
+            the LAMP instrument, in raw form. As such, it constitutes the
+            permanent record of the raw LAMP data. These data include both
+            the instrument science and housekeeping data, organized into
+            extensions within files formatted according to the Flexible Image
+            Transport System (FITS) standard, version 2.1b. The LAMP EDR
+            archive enables reprocessing of the raw science data as
+            radiometric and geometric calibration processing routines
+            improve. Investigators interested in applying advanced
+            calibration methods or needing to understand the properties of
+            the raw data will find the EDR products useful. Most
+            investigators, however, will be interested in using either the
+            LAMP data products contained in the CODMAC Level 3 Reduced Data
+            Record, as radiometric and geometric calibration processing has
+            already been done for these products, or the LAMP CODMAC Level 5
+            far ultraviolet map products.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  DATA SET OVERVIEW
+  =================
+    The Lunar Reconnaissance Orbiter (LRO) Lyman Alpha Mapping Project (LAMP)
+    CODMAC Level 2 Experiment Data Record is a collection of the far
+    ultraviolet photon detections obtained by the LAMP instrument, in raw
+    form. As such, it constitutes the permanent record of the raw LAMP data.
+    These data include both the instrument science and housekeeping data,
+    organized into extensions within files formatted according to the Flexible
+    Image Transport System (FITS) standard, version 2.1b.  The LAMP EDR
+    archive enables reprocessing of the raw science data as radiometric and
+    geometric calibration processing routines improve.  Investigators
+    interested in applying advanced calibration methods or needing to
+    understand the properties of the raw data will find the EDR products
+    useful.  Most investigators, however, will be interested in using either
+    the LAMP data products contained in the CODMAC Level 3 Reduced Data
+    Record, as radiometric and geometric calibration processing has already
+    been done for these products, or the LAMP CODMAC Level 5 far ultraviolet
+    map products.
+ 
+ 
+  PARAMETERS
+  ==========
+    The fundamental measured parameters contained in the LAMP EDR data set are
+    the nearest time markers and the spatial and spectral locations on the
+    LAMP detector for each of the recorded far ultraviolet photon detection
+    events. From these values raw calculated count rates (counts/sec)
+    integrated over all spatial and spectral bins are also derived.  The
+    sampling interval for the derived count rate values is determined by the
+    commanded rate at which the time markers are inserted into the data
+    stream.  This value will normally be set to 250 Hz.
+ 
+ 
+  PROCESSING
+  ==========
+    LAMP EDR data products will be generated at the LAMP Science Operations
+    Center (SOC), located at the Southwest Research Institute in Boulder,
+    Colorado.  The products will be generated by an automated pipeline
+    process. The LAMP instrument will nominally generate one housekeeping
+    telemetry file and one science data file per orbit.  Once per day these
+    LAMP-generated files will be retrieved from the LRO spacecraft by the LRO
+    Mission Operations Center (MOC) and then transferred by the MOC to the
+    LAMP SOC. The automated LAMP SOC pipeline will ingest these files and
+    invoke software to process them, in pairwise fashion (one housekeeping and
+    one science data file at a time), into EDR data product files.  No
+    calibration of the science data will be done at this time.  Raw
+    housekeeping telemetry values will be converted to engineering units,
+    where applicable, and these converted values will be included in the EDR
+    data product files.
+ 
+ 
+  DATA
+  ====
+    The LAMP EDR data product file will contain the following seven types of
+    data:
+ 
+    1) Spectral Image (Aperture Door Open) - This is a reconstructed histogram
+    generated from the pixel list data in the science data file.  Using
+    information from the housekeeping data, only the pixel list data acquired
+    when the aperture door was open are included in this dataset.  If
+    housekeeping data are unavailable, all pixel list data are included in
+    this histogram.  If the science data file contains only data acquired with
+    LAMP operating in histogram mode, this dataset will contain a copy of the
+    first histogram image.  This summary image is used as a &apos;quick-look&apos; check
+    on data quality.  [Extension 0, primary FITS header and data unit (HDU)]
+ 
+    2) Spectral Image (Aperture Door Closed) - This is similar to the first
+    dataset above, but the reconstructed histogram here is generated from
+    pixel list data acquired when the aperture door was closed.  If
+    housekeeping data are unavailable, this dataset will be empty.  If the
+    science data file contains only data acquired in histogram mode, this
+    dataset will contain a copy of the second histogram image in the file.
+    This summary image is used as a &apos;quick-look&apos; check on data quality.
+    [Extension 1]
+ 
+    3) Acquisition List - This dataset contains a list of the generated frame
+    acquisitions as determined from the housekeeping data file.  The list
+    includes, for each frame, the instrument frame sequence number, start and
+    stop times, mode type, aperture door and other instrument state
+    information.  The frame acquisition times and instrument state data
+    contained in this list are used to cross-reference with the pixel list
+    mode data for purposes of selecting data and checking timing consistency.
+    [Extension 2]
+ 
+    4) Raw Frame Data - This dataset contains all of the raw data from the
+    science data file except for the file header.  [Extension 3]
+ 
+    5) Calculated Count Rate - This dataset contains a high-resolution
+    sequence of UV photon count rates computed from the pixel list data for
+    each acquisition (nominally the whole orbit).  The resolution of this
+    count rate sequence depends on the commanded &apos;hack time&apos; interval.  If no
+    consecutive pixel list science data are available, e.g., if data are
+    acquired only in histogram mode, then this dataset will contain the lower
+    resolution (1-Hz) count rate data that are available from the housekeeping
+    data file. [Extension 4]
+ 
+    6) LTS Data - LAMP housekeeping data contain up to 10 values per second of
+    gain     and offset corrected measurement values from each of the two LAMP
+    Lunar Terminator Sensors (LTS).  This dataset provides the full 10-Hz LTS
+    dataset. These coincident LTS data will be used with the count rate
+    sequence in Extension 4 to confirm that LAMP is viewing the appropriate
+    day/night/shadow scenes.  (Raw 14-bit LTS data sampled at the 1-Hz HK rate
+    is included together with this 10-Hz gain and offset corrected LTS dataset
+    in the housekeeping data Extension 6.)  [Extension 5]
+ 
+    7) Housekeeping Data - This dataset contains the complete housekeeping
+    dataset, both in raw format and, where applicable, in calibrated
+    engineering units.  HK data are included here to assist with joint
+    instrument and data quality trending analyses (foreseen and unforeseen).
+    [Extension 6]
+ 
+ 
+  ANCILLARY DATA
+  ==============
+    Ancillary data used in the generation of the LAMP EDR data set include
+    those values required to convert instrumental engineering quantities
+    contained in the housekeeping data from raw values to physical units.
+    These data have been obtained from the LAMP engineers at the Southwest
+    Research Institute in San Antonio, Texas.
+ 
+ 
+  COORDINATE SYSTEM
+  =================
+    The LAMP EDR data product is a CODMAC Level 2 product. As such, the
+    science data contained therein have not been corrected for instrumental
+    effects, calibrated, or located in space.  The data are reported according
+    to the two-dimensional detector coordinate system in X and Y (1024 x 32,
+    respectively).
+ 
+ 
+  SOFTWARE
+  ========
+    Because the LAMP EDR data product files adhere to version 2.1b of the FITS
+    standard, all FITS readers up to this standard should be able to
+    successfully read these files.  There are many such FITS readers freely
+    available in the public domain.
+ 
+ 
+  MEDIA/FORMAT
+  ============
+    The LAMP EDR data product files are written in FITS format, and the format
+    of each file is described in an accompanying detached PDS label.  The EDR
+    archive itself will be written on DVD-R media and physically delivered
+    from the LAMP SOC to the PDS Imaging Node, where it will be made generally
+    available via the World Wide Web.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence level information will be provided after more thorough analysis
+  of the data.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

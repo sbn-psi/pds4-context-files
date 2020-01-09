@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ody-m-accel-5-profile-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ODY ACCELEROMETER PROFILE DATA RECORDS V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.2001_mars_odyssey::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ody::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:accel.ody::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ody-m-accel-5-profile-v2.0__browserp_ody-m-accel-5-profile-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tolson, R.H., A.M. Dwyer, J.L. Hanna, G.M. Keating, B.E. George, P.E. Escalera
+                   and M.R. Werner, M. R., Application of accelerometer data to Mars Odyssey
+                   aerobraking and atmospheric modeling. J. Spacecraft Rockets 42, 435-443, 2005
+            </reference_text>
+            <description>reference.TOLSONETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ODY-M-ACCEL-5-PROFILE-V2.0</data_set_id>
+        <data_set_name>ODY ACCELEROMETER PROFILE DATA RECORDS V2.0</data_set_name>
+        <data_set_release_date>2007-11-01</data_set_release_date>
+        <start_time>2001-10-31T01:00:57.00Z</start_time>
+        <stop_time>2002-01-11T07:19:04.00Z</stop_time>
+        <producer_full_name>ROBERT H. TOLSON</producer_full_name>
+        <citation_text>
+            R.H. Tolson, J.R. Murphy, R.F. Beebe and L.F. Huber,
+            ODY-M-ACCEL-5-PROFILE-V2.0, NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Odyssey Accelerometer profile data
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      All PROFILE data are packaged by periapsis number for each
+      aerobraking orbit. PROFILE data are provided at one second resolution
+      in a table labeled Pyyy.tab where &apos;yyy&apos; is the three digit periapsis
+      number.
+ 
+ 
+    Parameters
+    ==========
+      Time from periapsis:          Units = seconds
+      Latitude:                     Units = degrees
+      Longitude:                    Units = degrees
+      Local Solar Time:             Units = hours
+      Solar Zenith Angle:           Units = degrees
+      Altitude:                     Units = km
+      Density:                      Units = kg/km**3
+      Sigma density:                Units = kg/km**3
+ 
+ 
+    Data
+    ====
+      For each orbit, PROFILE data consist of an n-by-8 array in the file
+      Pyyy, where n is the number of seconds of data received during the
+      aerobraking pass. Column 1 contains the time from periapsis. Columns
+      2 through 8 contain Latitude, Longitude, Local Solar Time, Solar Zenith
+      Angle, Altitude, Density, Sigma Density.
+ 
+ 
+    Processing
+    ==========
+      Accelerometer data were processed in the PROFILE stage through several
+      steps and the entire process with examples is given in [TOLSONETAL2005]
+      First, traditional Euler terms were removed body angular rates. During
+      operations, no attempt was made to synchronize data or to remove the
+      effects of thruster firings.
+ 
+ 
+    Coordinate System
+    =================
+      Latitude and longitude are in the IAU Mars Centered Mars Equatorial
+      System. Altitude is above the IAU reference ellipsoid, with a=3396 km
+      and f=0.005206.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      The standard deviation on density data consist of a noise term based on
+      the rms residual outside the atmosphere and a 1% bias to account for
+      instrument and aerodata base scale factors.
+ 
+ 
+    Review
+    ======
+      Version 2 products are based on operational data sets which underwent
+      orbit to orbit comparisons with navigation team and spacecraft team
+      results, see TOLSONETAL2005.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data coverage during an aerobraking pass varied throughout the mission.
+      The nominal pass assured that sufficient data were recovered above 250
+      km to calibrate the accelerometers both inbound and outbound.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

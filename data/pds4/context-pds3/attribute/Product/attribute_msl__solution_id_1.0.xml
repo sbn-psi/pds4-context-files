@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.msl__solution_id</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>msl:solution_id</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>msl:solution_id</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>msl:solution_id</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+ 
+     The MSL:SOLUTION_ID element specifies the unique identifier for the
+     solution set to which the values in the group belong.
+ 
+     For certain kinds of information (such as pointing correction and rover
+     localization), more than one valid set of values may exist
+     simultaneously.  Each of these sets is called a &apos;solution&apos; to the
+     unknown actual value.  The SOLUTION_ID is used to identify which
+     solution is being expressed by the containing group.
+ 
+     It is recommended that projects adopt a specific naming convention for
+     MSL:SOLUTION_ID.  The convention will assist the user in identifying a
+     specific instance of values used.  Components making up the naming
+     convention for SOLUTION_ID include one or more or the following:
+     date/time, group id, institution, program, purpose, request ID, user,
+     and version.  New components may be added as needed.
+ 
+     NOTES: The value of SOLUTION_ID must not be reused for
+            new solutions - it must be globally unique.
+ 
+            A single solution can cross many data sets (e.g. for a
+            mosaic).  Therefore, you may see an SOLUTION_ID
+            with the same value appearing in many different data
+            sets.
+ 
+     When in a COORDINATE_SYSTEM_STATE group, this keyword identifies the
+     solution ID of the coordinate system being defined by that group.
+ 
+     The special name &apos;telemetry&apos; is used for values telemetered from the
+     rover.
+        </definition>
+        <comment>msl:solid</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>msl:solution_id</name>
+            <definition>
+ 
+     The MSL:SOLUTION_ID element specifies the unique identifier for the
+     solution set to which the values in the group belong.
+ 
+     For certain kinds of information (such as pointing correction and rover
+     localization), more than one valid set of values may exist
+     simultaneously.  Each of these sets is called a &apos;solution&apos; to the
+     unknown actual value.  The SOLUTION_ID is used to identify which
+     solution is being expressed by the containing group.
+ 
+     It is recommended that projects adopt a specific naming convention for
+     MSL:SOLUTION_ID.  The convention will assist the user in identifying a
+     specific instance of values used.  Components making up the naming
+     convention for SOLUTION_ID include one or more or the following:
+     date/time, group id, institution, program, purpose, request ID, user,
+     and version.  New components may be added as needed.
+ 
+     NOTES: The value of SOLUTION_ID must not be reused for
+            new solutions - it must be globally unique.
+ 
+            A single solution can cross many data sets (e.g. for a
+            mosaic).  Therefore, you may see an SOLUTION_ID
+            with the same value appearing in many different data
+            sets.
+ 
+     When in a COORDINATE_SYSTEM_STATE group, this keyword identifies the
+     solution ID of the coordinate system being defined by that group.
+ 
+     The special name &apos;telemetry&apos; is used for values telemetered from the
+     rover.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>Unknown</specified_unit_id>
+            <DD_Permissible_Value_Full>
+                <value>TELEMETRY</value>
+                <value_begin_date>2014-01-06T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

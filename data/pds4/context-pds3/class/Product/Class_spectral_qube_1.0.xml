@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Class_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:class:class.spectral_qube</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>spectral_qube</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Class_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Class_Full>
+        <name>spectral_qube</name>
+        <version_id>1.0</version_id>
+        <local_identifier>spectral_qube</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+Note that the SPECTRAL_QUBE described here is specifically a PDS
+SPECTRAL_QUBE.  While similar to the ISIS Qube, it is not identical.
+(For guidelines on producing a spectral qube that is compliant with
+both PDS and ISIS, see the SPECTRAL_QUBE chapter of Appendix A of the
+PDS Standards Reference.)
+ 
+The SPECTRAL_QUBE object is a three-dimensional object with two
+spatial dimensions and one spectral dimension.  The axes have the
+interpretations &apos;sample&apos;, &apos;line&apos;, and &apos;band&apos;, respectively.
+ 
+Each of the three axes in a SPECTRAL_QUBE object may optionally
+include suffix data that extend the length of the axis.  Conceptually,
+this can be viewed as forming one or more suffix planes that are
+attached to the core qube.  Suffix planes that extend the band
+dimension are called BACKPLANES.  Suffix planes that extend the sample
+dimension are called SIDEPLANES.  Suffix planes that extend the line
+dimension are called BOTTOMPLANES.
+ 
+Note that these terms refer to the &apos;logical&apos; axes -- that is, how the
+axes are conceptually modeled -- and are not necessarily related to
+the physical storage of the SPECTRAL_QUBE object.  The suffix planes
+are used for storing auxiliary data that are associated with the core
+data.  For example, a backplane might be used for storing the latitude
+values for each spatial-spatial pixel.  Another backplane might be
+used for storing the wavelength of the deepest absorption feature that
+was found in the spectrum at each spatial-spatial pixel.  One or more
+SIDEPLANES might be used for storing engineering data that are
+associated with each spatial line.
+ 
+Within the logical structure of the SPECTRAL_QUBE, SAMPLE=1 is the
+left edge of the spatial-spatial core image.  LINE=1 is the top edge
+of the spatial-spatial core image.  BAND=1 corresponds to the
+spatial-spatial images at the &apos;front&apos; of the qube.  Core coordinates
+do not carry over to the suffix regions.
+ 
+The file in which a SPECTRAL_QUBE data object is stored is physically
+access as though it were a one-dimensional data structure.  Storing
+the SPECTRAL_QUBE thus requires that the &apos;logical&apos; three-dimensional
+structure be mapped into the one-dimensional physical file structure.
+This involves moving through the three-dimensional structure in
+certain patterns to determine the linear sequence of core and suffix
+pixel values that occur in the file.  In SPECTRAL_QUBE files, this
+pattern is defined by specifying which axis index varies fastest in
+the linear sequence of pixel values in the file, which axis varies
+second fastest, and which axis varies slowest.
+ 
+In SPECTRAL_QUBE files, the names of the three axes are always SAMPLE,
+LINE, and BAND.  The AXIS_NAME keyword has an array of values that
+list the names of the axes in the qube.  The order of the names
+specifies the qube storage order in the file.  The first axis is the
+fastest varying, and the third axis is the slowest varying.  The
+SPECTRAL_QUBE supports the following three storage order:
+ 
+- (SAMPLE, LINE, BAND) - Band Sequential (BSQ)
+- (SAMPLE, BAND, LINE) - Band Interleaved by Line (BIL)
+- (BAND, SAMPLE, LINE) - Band Interleaved by Pixel (BIP)
+ 
+The lengths of the core axes are given by the CORE_ITEMS keyword and
+the lengths of the suffix axes are given by the SUFFIX_ITEMS keyword.
+Both these keywords have array values, whose order corresponds to the
+order of the axes given by the AXIS_NAME keyword.
+ 
+In the physical file storage, suffix pixel data (if present) are
+interspersed with the associated core pixel data.  For example, in a
+BSQ storage order file, the physical qube storage in the file begins
+with the pixels in the first (top) line of the spatial-spatial image
+plane at the first wavelength band.  This is followed by the sideplane
+pixel values that extend this line of core pixels.  Next are the core
+pixels for the second line, followed by the sideplane pixels for the
+second line.  After the last line of this first core image plane (and
+its associated sideplane pixels) comes the bottomplane pixels
+associated with the first band.  This is then repeated for the second
+through last bands.  Finally, all the backplane data are stored after
+all the core data and associated sideplane and bottomplane pixels.
+ 
+If a SPECTRAL_QUBE file includes suffixes on more than one axis, then
+the region that is the intersection between two (or all three) of the
+suffix regions is called a CORNER region.  The PDS requires that space
+for CORNER region data be allocated in the data files.  However, this
+space is never actually used.
+ 
+In a SPECTRAL_QUBE file, core pixels can occupy one, two or four
+bytes.  All core pixels within a single file must be of the same
+physical storage size.  Suffix pixels can also occupy one, two, or
+four bytes of storage in the file.  All the suffix pixels within a
+single file must be of the same physical storage size.  Suffix pixels
+need not be the same size as core pixels.  Handling of different pixel
+data types is described in detail below.
+ 
+In SPECTRAL_QUBE files, core pixel values can be represented by one of
+several formats.  The formats available are dependent on the number of
+bytes used to store the values in the file.  The format is given by
+the CORE_ITEM_TYPE keyword and the number of bytes stored is given by
+the CORE_ITEM_BYTES keyword.  The following table shows the allowable
+formats and the number of bytes of storage the use:
+ 
+CORE_ITEM_BYTES     CORE_ITEM_TYPE    Type Conversion
+                                        Parameters
+  1, 2, or 4       UNSIGNED_INTEGER        Yes
+  1, 2, or 4     MSB_UNSIGNED_INTEGER      Yes
+  1, 2, or 4     LSB_UNSIGNED_INTEGER      Yes
+  1, 2, or 4           INTEGER             Yes
+  1, 2, or 4         MSB_INTEGER           Yes
+  1, 2, or 4         LSB_INTEGER           Yes
+       4              IEEE_REAL             No
+       4               VAX_REAL             No
+       4               PC_REAL              No
+ 
+As the table above indicates, stored integer values can be converted
+to real values, representing the actual pixel.  The type conversion
+parameters are given by the CORE_BASE and CORE_MULTIPLIER keywords,
+and the real value being represented is determined as follows:
+ 
+  &apos;real_value&apos; = CORE_BASE + (CORE_MULTIPLIER * REAL(stored_value))
+ 
+For 4-byte real formats, the stored values are floating point values
+that directly represent the pixel values.
+ 
+The same data types and number of storage bytes that are shown in the
+above table are also available to suffix pixels.  However, suffix
+pixels need not be the same size or have the same data type as the
+core pixels.  Therefore, there is a SUFFIX_ITEM_BYTES keyword to
+indicate the number of bytes stored for suffix pixels and a
+SUFFIX_ITEM_TYPE keyword to describe the data type of the suffix
+pixels.  Each suffix plane within a single file can have a different
+data format.  Thus, the values of these keywords are arrays.  Each
+element of the array refers to a separate suffix plane.
+ 
+The SPECTRAL_QUBE allows the number of bytes used to store data in
+each suffix pixel (SUFFIX_ITEM_BYTES) to be less than the total number
+of bytes allowcated to each suffix pixel (SUFFIX_BYTES).  It is
+therefore necessary to describe how the stored bytes are aligned
+within the allocated bytes.  The BIT_MASK keyword is used for this
+purpose.
+ 
+Note that in the following list of required and optional objects and
+groups, while the *_SUFFIX groups are listed as optional, they are
+required if their named axis appears in the qube.
+        </definition>
+        <comment>specqube</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <DD_Association>
+            <local_identifier>axes</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>axis_name</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_item_bytes</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_item_type</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_items</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>suffix_items</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_base</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_high_instr_saturation</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_high_repr_saturation</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_low_instr_saturation</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_low_repr_saturation</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_multiplier</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_name</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_null</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_unit</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>core_valid_minimum</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>isis_structure_version_id</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>line_display_direction</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>md5_checksum</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>sample_display_direction</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>suffix_bytes</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>band_bin</local_identifier>
+            <reference_type>component_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>band_suffix</local_identifier>
+            <reference_type>component_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>image_map_projection</local_identifier>
+            <reference_type>component_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>line_suffix</local_identifier>
+            <reference_type>component_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>sample_suffix</local_identifier>
+            <reference_type>component_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+    </DD_Class_Full>
+</Product_Class_Definition>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lamp-5-gdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO MOON LAMP 5 GRIDDED DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:lamp.lro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lro-l-lamp-5-gdr-v1.0__dvo_imaging_lro-l-lamp-5-gdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gladstone, G.R., S.A. Stern, K.D. Retherford, R.K. Black, D.C. Slater, M.W.
+                   Davis, M.H. Versteeg, K.B. Persson, J.Wm. Parker, D.E. Kaufmann, A.F. Egan,
+                   T.K. Greathouse, P.D. Feldman, D. Crider, W.R. Pryor, and A.R. Hendrix, LAMP:
+                   The Lyman Alpha Mapping Project on NASA&apos;s Lunar Reconnaissance Orbiter Mission,
+                   Space Sci. Rev., submitted (2008).
+            </reference_text>
+            <description>reference.GLADSTONEETAL2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LRO-L-LAMP-5-GDR-V1.0</data_set_id>
+        <data_set_name>LRO MOON LAMP 5 GRIDDED DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>2011-03-15</data_set_release_date>
+        <start_time>2009-09-16</start_time>
+        <stop_time>2010-09-14</stop_time>
+        <producer_full_name>DAVID E. KAUFMANN</producer_full_name>
+        <citation_text>
+            Kaufmann, D.E., LRO L LAMP GRIDDED DATA RECORD V1.0,
+            LRO-L-LAMP-5-GDR-V1.0, NASA Planetary Data System, 2011.
+        </citation_text>
+        <data_set_terse_desc>
+            The LRO LAMP CODMAC Level 5 Gridded Data Record is a collection
+            of gridded data products (maps) derived from the far ultraviolet
+            photon detections obtained by the LAMP instrument, corrected,
+            calibrated, and located in space and time.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Lunar Reconnaissance Orbiter (LRO) Lyman Alpha Mapping
+            Project (LAMP) CODMAC Level 5 Gridded Data Record is a collection
+            of gridded data products (maps) derived from the far ultraviolet
+            photon detections obtained by the LAMP instrument, corrected for
+            instrumental effects, radiometrically calibrated, and correlated
+            with the auxiliary information needed to locate the observations
+            in space and time. These gridded data products are presented as
+            standalone maps, formatted as standard PDS images. The LAMP GDR
+            archive will be of interest to investigators studying the far
+            ultraviolet properties of the Moon.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  DATA SET OVERVIEW
+  =================
+    The Lunar Reconnaissance Orbiter (LRO) Lyman Alpha Mapping Project (LAMP)
+    CODMAC Level 5 Gridded Data Record is a collection of gridded data
+    products (maps) derived from the far ultraviolet photon detections
+    obtained by the LAMP instrument, corrected for instrumental effects,
+    radiometrically calibrated, and correlated with the auxiliary information
+    needed to locate the observations in space and time. These gridded data
+    products are presented as standalone maps, formatted as standard PDS
+    images, with detached PDS labels.  The LAMP GDR archive will be of
+    interest to investigators studying the far ultraviolet properties of the
+    Moon.
+ 
+ 
+  PARAMETERS
+  ==========
+    The fundamental parameters contained in the LAMP GDR data set are:
+ 
+    1) far-UV brightness
+    2) far-UV albedo
+    3) H2O absorption feature depths
+    4) raw far-UV photon counts
+    5) calibrated far-UV photon counts
+    6) exposure times
+    7) far-UV illumination
+    8) statistical errors (noise)
+    9) data quality
+ 
+ 
+  PROCESSING
+  ==========
+    LAMP GDR data products are generated at the LAMP Science Operations Center
+    (SOC), located at the Southwest Research Institute in Boulder, Colorado.
+    The map processing proceeds generally as follows.  (Please refer to the
+    LAMP EDR and RDR Data Product SIS documents for more information about the
+    LAMP EDR and RDR data products, as this discussion assumes the existence
+    of LAMP RDR products containing radiometrically calibrated and spatially
+    located far-UV photon detections.)  From each RDR product a corresponding
+    &apos;exposure record&apos; is generated that records the exposure time of each LAMP
+    spatial pixel in each map cell.  Calibrated photon counts (i.e.,
+    photons/cm2, where the cm2 is related to the wavelength-dependent
+    instrument effective area) from the RDR products are then paired with
+    these exposure records, one-to-one, to produce integrated photon count and
+    exposure maps.  These, in turn, are used to generate the brightness maps
+    themselves.  Far-UV illumination models are separately used to estimate
+    the time-dependent far-UV flux incident on the Moon&apos;s night side and
+    permanently shaded regions (PSRs).  These, combined with the brightness
+    maps yield the albedo maps.  Finally, the ratios of the off-band
+    brightness/albedo to the on-band brightness/albedo yields the H2O
+    absorption feature depth maps.
+ 
+ 
+  DATA
+  ====
+    As alluded to above, the LAMP Gridded Data Record contains the following
+    nine types of maps:
+ 
+    1) far-UV brightness - units are photons/cm2/sec/sr
+                         - four wavelength ranges are included:
+                             Lyman-alpha  (119.57 nm - 123.57 nm)
+                             full stellar (129.57 nm - 189.57 nm)
+                             on-band      (129.57 nm - 155.57 nm)
+                             off-band     (155.57 nm - 189.57 nm)
+    2) far-UV albedo - units are dimensionless albedo
+                     - the above four wavelength ranges are used
+    3) H2O absorption feature depths (ratios) - units are dimensionless
+    4) raw photon counts - units are photons
+                         - the above four wavelength ranges are used
+    5) calibrated photon counts - units are photons/cm2
+                                - the above four wavelength ranges are used
+    6) exposure times - units are secs
+    7) far-UV illumination - units are photons/cm2/sec
+                           - the above four wavelength ranges are used
+    8) statistical errors (noise) - units are photons/cm2
+                                  - the above four wavelength ranges are used
+    9) data quality - units are dimensionless
+                    - the above four wavelength ranges are used
+ 
+    All of these maps are derived from &apos;night side&apos; data (i.e., when the LAMP
+    detector FOV was located on the night side of the Moon or in a permanently
+    shaded region [PSR] and the instrument aperture door was open).  In
+    addition to the cumulative ensemble average maps generated using data
+    taken during the whole nominal ESMD phase of the LRO mission, monthly maps
+    are also provided for all of the above products except for the H2O
+    absorption feature depth maps.
+ 
+    Each map is a polar stereographic map centered on either the north or
+    south lunar pole and extending 10 degrees in latitude away from the pole
+    (i.e., to either +80 deg or -80 deg latitude).  Each map has a true
+    resolution at the pole of 240 meters/pixel, thus yielding a map of
+    2501 x 2501 pixels.  Each map element is stored using a 4-byte floating
+    point value, thus giving a total size of 25 MB per map image.
+ 
+    For each map type (except for the exposure and H2O absorption feature
+    depth maps) there are 112 maps (4 wavelength ranges x 2 poles x 14
+    [13 monthly + 1 cumulative]).  Since the exposure times are the same for
+    all wavelengths, there are only 28 exposure maps.  Also, there are only
+    4 H2O absorption feature depth maps (2 [brightness and albedo as ratio
+    source] x 2 poles).  All told, there are 816 total maps in the GDR data
+    set.
+ 
+ 
+  ANCILLARY DATA
+  ==============
+    Other than the ancillary data used in the generation of the LAMP RDR data
+    set, the only ancillary data specifically used in the creation of the LAMP
+    GDR data set is the illumination model (used to generate the illumination
+    maps, which are in turn used to derive the albedo maps).
+ 
+    The ancillary data used in the generation of the LAMP RDR data set include
+    those calibration values required to apply instrumental corrections and
+    calibrations to the science data as well as trajectory and pointing
+    information for the LRO spacecraft and clock conversion tables required
+    to enable the geometric calibration of the science data.  The source of
+    the instrumental calibration data are the LAMP engineers and LAMP
+    scientists at the Southwest Research Institute in San Antonio, Texas
+    [see GLADSTONEETAL2008 for further details], while the source of the
+    spacecraft trajectory, pointing, and clock data are SPICE kernels
+    provided to the LAMP SOC by the LRO MOC, having been ultimately generated
+    by the MOC itself, the Flight Dynamics Facility (FDF) at GSFC, or the
+    Navigation and Ancillary Information Facility (NAIF) at JPL.
+ 
+ 
+  COORDINATE SYSTEM
+  =================
+    The Lunar Reconnaissance Orbiter mission uses a standard coordinate
+    system to describe all RDR (and hence GDR) data, namely lunar
+    planetocentric/body-fixed coordinates with east-positive longitude from 0
+    to 360 degrees.  A mean Earth/polar axis (ME) reference system (also
+    called the mean Earth/rotation system) is used, with the z-axis being the
+    mean rotational pole and with the prime meridian (zero degrees longitude)
+    defined by the mean Earth direction.
+ 
+    The ME reference system is used for all LRO archival data.  This LRO
+    standard is documented in &apos;A Standardized Lunar Coordinate System for
+    the Lunar Reconnaissance Orbiter, LRO Project White Paper, 451-SCI-000958,
+    Version 4, May 14, 2008&apos;.  Using coordinates in the ME system is
+    consistent with recommendations from the International Astronomical Union
+    (IAU)/International Association of Geodesy (IAG) Working Group on
+    Cartographic Coordinates and Rotational Elements.
+ 
+    A Jet Propulsion Laboratory (JPL) planetary and lunar ephemeris and
+    corresponding Euler angle set are used to define an ME frame to which the
+    LRO data are registered.  The LRO Data Working Group (LDWG) determines
+    which ephemeris and Euler angle set should be used.  Alternatively, LRO
+    data can be registered to an existing or new reference frame in the ME
+    system, via ties to surface points known in the frame (examples include
+    Lunar Laser Ranging [LLR] retroreflectors, points in images and Digital
+    Elevation Models).
+ 
+    When a JPL planetary and lunar ephemeris is used, the JPL Navigation and
+    Ancillary Information Facility (NAIF) provides the necessary lunar
+    ephemeris file (SPK) and binary lunar orientation file (PCK) in a
+    Principal Axes (PA) reference frame for use with the SPICE Toolkit.  NAIF
+    also provides the frames kernel (FK) used for accessing the PA orientation
+    in the PCK and for transforming from the PA frame to the ME frame.
+ 
+    Alternatively, the JPL lunar ephemeris information is available in an
+    ASCII format not requiring the use of the SPICE Toolkit.  This information
+    is available from a JPL website: http://ssd.jpl.nasa.gov.
+ 
+ 
+  SOFTWARE
+  ========
+    Because the LAMP GDR data product files adhere to the image format
+    described in version 3 of the PDS standards reference, the PDS-supplied
+    NASAView software should be able to successfully read these files.  There
+    are likely other such image readers freely available in the public domain
+    capable of reading the LAMP GDR maps.
+ 
+ 
+  MEDIA/FORMAT
+  ============
+    The LAMP GDR data product files are written in standard PDS image (.img)
+    format, and the format of each file is described in an accompanying
+    detached PDS label.  The GDR archive itself will be written on hard drive
+    media and physically delivered from the LAMP SOC to the PDS Imaging Node,
+    where it will be made generally available via the World Wide Web.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence level information is provided as part of the LAMP GDR data set
+  itself, by means of the supplied statistical error and data quality maps.
+  In the case where a given map cell contains no data at all, the value
+  assigned is the IEEE NaN value.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.iras-d-fpa-3-rdr-zohf-med-res-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IRAS MEDIUM RESOLUTION ZODIACAL HISTORY FILE V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.infrared_astronomical_satellite::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.iras::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:fpa.iras::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:dust.dust::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.iras-d-fpa-3-rdr-zohf-med-res-v1.0__browserp_iras-d-fpa-3-rdr-zohf-med-res-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Beichman, C.A., G. Neugebauer, H.J. Habing, P.E. Clegg, and T.J. Chester,
+                   1988, Infrared Astronomical Satellite Catalog and Atlases, Volume 1,
+                   Explanatory Supplement, NASA RP-1190.
+            </reference_text>
+            <description>reference.BEICHMANETAL1988</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Boulanger, F., Gain and offset corrections for ZOHF Version 3, IRAS
+                   Circular, December 28, 1988.
+            </reference_text>
+            <description>reference.BOULANGER1988</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Oken, C.A., Gautier, T.N., and Wheelock, S.L., Version 3 of the Zodiacal
+                   History File, IRAS Circular, December 28, 1988.
+            </reference_text>
+            <description>reference.OKENETAL1988</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>IRAS-D-FPA-3-RDR-ZOHF-MED-RES-V1.0</data_set_id>
+        <data_set_name>IRAS MEDIUM RESOLUTION ZODIACAL HISTORY FILE V1.0</data_set_name>
+        <data_set_release_date>1993-04-26</data_set_release_date>
+        <start_time>1983-01-26</start_time>
+        <stop_time>1983-11-22</stop_time>
+        <producer_full_name>MARK V. SYKES</producer_full_name>
+        <citation_text>
+            Oken C.A., Boulanger F., and M.V. Sykes, IRAS MEDIUM RESOLUTION
+            ZODIACAL HISTORY FILE V1.0, IRAS-D-FPA-3-RDR-ZOHF-MED-RES-V1.0,
+            NASA Planetary Data System, 1993.
+        </citation_text>
+        <data_set_terse_desc>
+            IRAS medium-resolution zodiacal observation history data,
+            averaged, with pinting and timing information
+        </data_set_terse_desc>
+        <abstract_desc>
+            The IRAS Medium-Resolution (2 arcminute in-scan) Zodiacal
+            Observational History File (ZOHF) consists of the time-ordered
+            IRAS survey data averaged into 2&apos; X 1/2 degree rectangular
+            pixels along with pointing and timing information, covering the
+            entire mission.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The IRAS Medium-Resolution (2 arcminute in-scan) Zodiacal
+      Observational History File (ZOHF) consists of the time-ordered
+      IRAS survey data averaged into 2&apos; X 1/2 degree rectangular
+      pixels along with pointing and timing information, covering the
+      entire mission.
+ 
+      The data used in generating these files (Version 2) is not
+      identical to that used in generating the 1/2 X 1/2 degree ZOHF
+      (Version 3).  An explanation of the differences in calibration
+      between the two datasets and a statistical analysis of the
+      differences in the resultant positions and fluxes may be found
+      in Oken et al.  (1988) and Boulanger (1988).
+ 
+      While generally characterized as being 2&apos; x 1/2 degree pixels,
+      the actual pixel dimensions (in arc-minutes) are as follows:
+ 
+		    Band    Wavelength   In-Scan  Cross-Scan
+ 
+                      1          12        1.925      28.4
+                      2          25        1.925      30.3
+                      3          60        1.925      28.5
+                      4         100        1.925      30.5
+ 
+      (Oken et al. 1988).
+ 
+      Eight scans have been deleted from the IRAS Medium-Resolution
+      ZOHF as released by the Infrared Processing and Analysis
+      Center.  These scans are not released in the Low-Resolution
+      product and correspond to Pointed Observation scans that were
+      mistakenly included in the Medium-Resolution product.  The
+      OBSERVATION_ID numbers of the excluded scans are 154.32,
+      157.06, 158.33, 239.35, 267.42, 427.08, 465.38, and 479.20 .
+ 
+   Parameters
+   ==========
+ SAMPLING PARAMETER NAME         : OBSERVATION ID
+ MINIMUM_SAMPLING_PARAMETER      : 029.01
+ MAXIMUM_SAMPLING_PARAMETER      : 600.36
+ 
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+      Confidence Level Overview
+      =========================
+      N/A
+ 
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>83-004A-01w</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

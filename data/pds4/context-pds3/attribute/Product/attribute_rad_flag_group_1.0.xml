@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.rad_flag_group</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>rad_flag_group</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>rad_flag_group</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>rad_flag_group</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+ The RAD_FLAG_GROUP element identifies the following flag
+fields.
+RR_GEOC=0x0001
+Geometry values have been corrected
+for ephemeris errors in the phase.
+RR_RADC=0x0002
+The average_planetary_radius value has been
+corrected by altimeter radius values.
+RR_NOS1=0x0004
+sar_average_backscatter[0] value missing.
+RR_NOS2=0x0008
+sar_average_backscatter[1] value missing.
+RR_BAD=0x0010
+The elements brightness_temperature,
+average_planetary_radius, planet_reading_system_temp,
+assumed_warm_sky_temperature, rad_receiver_system_temp,
+surface_emission_temperature, and surface_emissivity, and
+surface_temperature should be ignored.
+RR_CAL=0x0020
+The spacecraft is operating in its &apos;radiometric
+calibration&apos; mode, in which the SAR boresight is pointed
+away from the planet. The rad_footprint_latitude and
+rad_footprint_longitude fields contain the boresight
+latitude and longitude in the inertial (J2000) coordinate
+system, not in VBF85.
+RR_NRAD=0x0040
+The average_planetary_radius value could not be estimated
+from the topography model.
+RR_RAD2=0x0080
+This record was created under software version 2 or
+higher, in which elements rad_emissivity_partial,
+surface_temperature, raw_rad_antenna_power,
+raw_rad_load_power, alt_skip_factor, alt_gain_factor,
+and alt_coarse_resolution are significant.
+        </definition>
+        <comment>mgn50</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>rad_flag_group</name>
+            <definition>
+ The RAD_FLAG_GROUP element identifies the following flag
+fields.
+RR_GEOC=0x0001
+Geometry values have been corrected
+for ephemeris errors in the phase.
+RR_RADC=0x0002
+The average_planetary_radius value has been
+corrected by altimeter radius values.
+RR_NOS1=0x0004
+sar_average_backscatter[0] value missing.
+RR_NOS2=0x0008
+sar_average_backscatter[1] value missing.
+RR_BAD=0x0010
+The elements brightness_temperature,
+average_planetary_radius, planet_reading_system_temp,
+assumed_warm_sky_temperature, rad_receiver_system_temp,
+surface_emission_temperature, and surface_emissivity, and
+surface_temperature should be ignored.
+RR_CAL=0x0020
+The spacecraft is operating in its &apos;radiometric
+calibration&apos; mode, in which the SAR boresight is pointed
+away from the planet. The rad_footprint_latitude and
+rad_footprint_longitude fields contain the boresight
+latitude and longitude in the inertial (J2000) coordinate
+system, not in VBF85.
+RR_NRAD=0x0040
+The average_planetary_radius value could not be estimated
+from the topography model.
+RR_RAD2=0x0080
+This record was created under software version 2 or
+higher, in which elements rad_emissivity_partial,
+surface_temperature, raw_rad_antenna_power,
+raw_rad_load_power, alt_skip_factor, alt_gain_factor,
+and alt_coarse_resolution are significant.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Integer</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

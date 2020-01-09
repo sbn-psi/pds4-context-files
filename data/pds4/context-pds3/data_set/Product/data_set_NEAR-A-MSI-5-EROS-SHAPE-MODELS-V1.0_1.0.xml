@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.near-a-msi-5-eros-shape-models-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEAR MSI SHAPE MODEL FOR 433 EROS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.near_earth_asteroid_rendezvous::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.near::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:msi.near::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.eros::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.near-a-msi-5-eros-shape-models-v1.0__browserp_near-a-msi-5-eros-shape-models-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.THOMASETAL2001</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NEAR-A-MSI-5-EROS-SHAPE-MODELS-V1.0</data_set_id>
+        <data_set_name>NEAR MSI SHAPE MODEL FOR 433 EROS V1.0</data_set_name>
+        <data_set_release_date>2001-09-30</data_set_release_date>
+        <start_time>1996-02-17</start_time>
+        <stop_time>2001-02-14</stop_time>
+        <producer_full_name>BRIAN CARCICH</producer_full_name>
+        <citation_text>
+            Thomas P.C., J. Joseph, B.T. Carcich, A.C. Raugh, NEAR MSI SHAPE
+            MODEL FOR 433 EROS V1.0, NEAR-A-MSI-5-EROS-SHAPE-MODELS-V1.0,
+            NASA Planetary Data System, 2001.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set consists of a shape model, in varying resolutions
+            and formats, of the surface of 433 Eros, derived from
+            observations made by the NEAR Multi-Spectral Imager (MSI)
+            instrument.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the Peter Thomas shape model for asteroid
+            433 Eros, based on optical data from the NEAR MSI instrument.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+      Data Set Overview
+      =================
+        This data set contains the Peter Thomas shape model for
+        asteroid 433 Eros, based on optical data from the NEAR
+        MSI instrument.  The current version of this data set contains
+        the following shape model files and PRODUCT_ID&apos;s
+ 
+        eros_2001012_001708.tab       PLATE-EROS-2001012-001708
+        eros_2001012_007790.tab       PLATE-EROS-2001012-007790
+        eros_2001012_010152.tab       PLATE-EROS-2001012-010152
+        eros_2001012_022540.tab       PLATE-EROS-2001012-022540
+        eros_2001012_088398.tab       PLATE-EROS-2001012-088398
+        eros_2001012_200700.tab       PLATE-EROS-2001012-200700
+        erosrgst_2001012.tab          RGST-EROS-2001012
+ 
+        Each shape model file also has a detached label file, with a
+        suffix of .lbl, which describes the respective formats.
+ 
+        The first six files are in a plate model format and only
+        represent the model shape.  The last file is in a modified
+        Peter Thomas RGST model format and includes shape, gravity,
+        slope and topograpic information.
+ 
+        N.B.:  In the RGST-EROS-2001012 product, some radii starting from
+        the model center intersect the surface in more than one point.
+        This happens mostly around 160 degrees west longitude.  That means
+        that the RGST format used in that product is not able to adequately
+        represent the shape model&apos;s surface.  Caveat emptor.  If this is an
+        issue, users may use one of the plate models.
+ 
+        The plate file naming convention uses three fields, separated by
+        underscores:  the first field is the target, eros; the second
+        field represents the version of the base shape model, 2001012;
+        the third field gives the number of plates in that file&apos;s
+        representation of the base shape model.
+ 
+        All files represent the same Eros shape model (2001012)
+        only the resolution and format changes between files.
+ 
+        These shape models are distinct from the Peter Thomas shape
+        models based on optical data from other sources, included
+        in a separate data set:  EAR-A-5-DDR-SHAPE-MODELS-V2.0.
+ 
+        These shape models are also distinct from the shape models
+        based on radar observations, included in a separate
+        data set:  EAR-A-5-DDR-RADARSHAPE-MODELS-V1.0.
+ 
+ 
+      Parameters
+      ==========
+        A single data table contains both the cartesian coordinates
+        of the vertices and the list of vertices defining
+        triangular facets.  Details of mapping and production of the
+        model are given in the Processing section below, and
+        further details are given in the relevant published paper.
+        [THOMASETAL2001].
+ 
+ 
+      Processing
+      ==========
+        Shape model derived via stereogrammetry of 1,888 NEAR MSI
+        images.  The model is based on 31,532 observations of 6,328
+        control points.  The actual plate models have triangular
+        plates, with  vertices interpolated from the control
+        points.  To transform the set of individual coordinates of
+        control points into these plate model files, we make use of
+        software internally called &apos;WaG,&apos; currently being developed
+        by Applied Research Associates NZ Limited.
+ 
+ 
+      Coordinate System
+      =================
+        The 433 Eros body-fixed planetocentric coordinate system is
+        defined as follows:
+ 
+        North Spin Pole with respect to the J2000 reference frame:
+ 
+          RA = 11.350 Dec = 17.216, +/- 0.02 degrees
+ 
+        Prime Meridian:
+ 
+          W = 326.027 + 1639.38864745 d, degrees
+ 
+          (d in days after the J2000 epoch, JD 2451545.0)
+ 
+        The body-fixed ``Planetocentric&apos;&apos; coordinate system referred to
+        here is defined for solar system bodies as follows:
+ 
+         --   The x-axis of the Planetocentric coordinate system for a
+              specified body lies both in the body&apos;s equatorial plane and
+              in the plane containing the body&apos;s prime meridian.
+ 
+         --   The z-axis is parallel to the body&apos;s mean axis of rotation
+              and points North of the invariable plane of the solar system
+              (regardless of the body&apos;s spin direction). The north pole is
+              this pole of rotation.
+ 
+         --   The y-axis is defined as the cross product of the z and x
+              axes, in that order. Thus, the frame is right-handed.
+ 
+        The above definition implies that the axes of a planetocentric
+        system are time-varying. Thus a complete specification of the
+        axes requires identification of an epoch as well as the body.
+        This frame is relative to J2000.
+ 
+ 
+      Software
+      ========
+        The plate model format is compatible with software developed
+        at Cornell.  The two packages are POINTS, written by Jonathan
+        Joseph, which is used to collect and solve for the control
+        points that are the basis for the shape model, and ORBIT,
+        written by Brian Carcich, which used the model to aid science
+        planners when they created the sequences of images during
+        the NEAR mission.  None of these software packages will
+        be archived with these shape models.
+ 
+ 
+      Media/Format
+      ============
+        These data are included as part of the NEAR mission archive,
+        and are also available for Internet download.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+      Confidence Level Overview
+      =========================
+        The center of figure is within 50 m of the center of mass
+        provided by the NEAR Navigation team at JPL.
+ 
+        The control point RMS error is less than 10 m.  The error
+        at any point on the surface is typically less than 50 m.
+ 
+ 
+      Review
+      ======
+        External review of the NEAR mission archive, including this
+        data set, was peformed in August, 2001.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>DVD-R</medium_type>
+            <nssdc_collection_id>1996-008A-01A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Class_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:class:class.index_table</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>index_table</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Class_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Class_Full>
+        <name>index_table</name>
+        <version_id>1.0</version_id>
+        <local_identifier>index_table</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The INDEX_TABLE object is a specific type of TABLE object
+that provides information about the data stored on an
+archive volume.  The INDEX table contains one row for each
+data file (or data product label file in the case where
+detached labels are used) on the volume.  The table is
+formatted so that it may be read directly by many data
+management systems on various host computers.  All fields
+(columns) are separated by commas, and character filesd are
+enclosed by double quotation marks.  Each record ends in a
+carriage return/line feed sequence.  This allows the table
+to be treated as a fixed length record file on hosts that
+support this file type, and as a normal text file on other
+hosts.  It is recommended that RECORD_BYTES and ROW_BYTES
+be even numbers to simplify ingestion of these files on
+systems where byte-level parsing is either difficult or
+impossible.  There are two categories of columns for an
+Index table:  Identification and Search.  PDS data element
+names should be used as column names wherever appropriate.
+The required columns are used for identification.  The
+optional columns are data dependent and are used for
+search.  For example, the following may be useful for
+searching:
+ 
+LOCATION (e.g., LATITUDE, LONGITUDE,ORBIT_NUMBER)
+TIME (e.g., START_TIME,SPACECRAFT_CLOCK_START_COUNT)
+FEATURE (e.g., FEATURE_TYPE)
+OBSERVATIONAL CHARACTERISTICS (e.g., INCIDENCE_ANGLE)
+INSTRUMENT CHARACTERISTICS (e.g., FILTER_NAMES)
+ 
+For archive volumes created before this standard was approved:
+ 
+1) If the keyword INDEX_TYPE is not present, the value defaults
+to SINGLE unless the Index&apos;s filename is given as CUMINDEX.TAB.
+2) If the keyword INDEXED_FILE_NAME is not present,
+the value defaults to &apos;*.*&apos; indicating that the index
+encompasses all files on the volume.
+ 
+The required COLUMN objects must be named (NAME=):
+ 
+FILE_SPECIFICATION_NAME OR PATH_NAME and FILE_NAME
+PRODUCT_ID (**)
+VOLUME_ID (*)
+DATA_SET_ID (*)
+PRODUCT_CREATION_TIME (*)
+LOGICAL_VOLUME_PATH_NAME (must be used with PATH_NAME and
+FILE_NAME for a logical volume) (*)
+ 
+(*)  If the value is constant across the data in the index
+table, this keyword can appear as a keyword inside the
+INDEX_TABLE object.  If the value is not constant, then a
+column of the given name must be used.
+(**) PRODUCT_ID is not required if it has the same value as
+FILE_NAME or FILE_SPECIFICATION_NAME.
+ 
+Required keywords for required COLUMN Objects:
+ 
+NAME
+DATA_TYPE
+START_BYTE
+BYTES
+DESCRIPTION
+ 
+Optional keywords for required COLUMN Objects:
+ 
+UNKNOWN_CONSTANT
+NOT_APPLICABLE_CONSTANT
+NULL_CONSTANT
+ 
+ Optional COLUMN Objects (NAME=):
+ 
+MISSION_NAME
+INSTRUMENT_NAME (or ID)
+INSTRUMENT_HOST_NAME (or ID)
+TARGET_NAME
+PRODUCT_TYPE
+MISSION_PHASE_NAME
+VOLUME_SET_ID
+START_TIME
+STOP_TIME
+SPACECRAFT_CLOCK_START_COUNT
+SPACECRAFT_CLOCK_STOP_COUNT
+any other search columns
+        </definition>
+        <comment>indextable</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <DD_Association>
+            <local_identifier>columns</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>index_type</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>interchange_format</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>row_bytes</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>rows</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>description</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>indexed_file_name</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>name</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>not_applicable_constant</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>unknown_constant</local_identifier>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <local_identifier>column</local_identifier>
+            <reference_type>component_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+    </DD_Class_Full>
+</Product_Class_Definition>

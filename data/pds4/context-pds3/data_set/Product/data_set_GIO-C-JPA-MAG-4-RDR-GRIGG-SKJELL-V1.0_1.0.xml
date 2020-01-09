@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gio-c-jpa-mag-4-rdr-grigg-skjell-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GIOTTO JPA/MAG MERGED RESULTS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.giotto_extended_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:jpa.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.26p-grigg-skjellerup_1_1922_k1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gio-c-jpa-mag-4-rdr-grigg-skjell-v1.0__browserp_gio-c-jpa-mag-4-rdr-grigg-skjell-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GIO-C-JPA/MAG-4-RDR-GRIGG-SKJELL-V1.0</data_set_id>
+        <data_set_name>GIOTTO JPA/MAG MERGED RESULTS V1.0</data_set_name>
+        <data_set_release_date>1995-12</data_set_release_date>
+        <start_time>1992-07-09T18:42:23.427Z</start_time>
+        <stop_time>1992-07-11T02:23:22.306Z</stop_time>
+        <producer_full_name>PDS SMALL BODIES NODE</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            Combined results from the Giotto particle analyser and
+            magnetometer experiments for comet 26P/Grigg-Skjellerup (SAVED
+            DATA)
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains combined and correlated results from the
+            Johnstone Particle Analyser (JPA) and magnetometer experiments
+            flown aboard the Giotto spacecraft during its extended mision to
+            fly by comet P/Grigg-Skjellerup. These data have not been
+            formally reviewed.
+        </abstract_desc>
+        <data_set_desc>
+      Data Set Overview
+      =================
+      This data set contains combined and correlated results from the
+      Johnstone Particle Analyser (JPA) and magnetometer experiments
+      flown aboard the Giotto spacecraft during its extended mision to
+      fly by comet P/Grigg-Skjellerup.
+ 
+ 
+      Parameters
+      ==========
+ 
+      There are two data files in this set:
+ 
+        jpamg_sc     provides results in the spacecraft frame of reference.
+                     This file lists time, proton density velocity and
+                     temperature, and magnetic field values, with additional
+                     related parameters.
+ 
+        jpamgcse     provides results in the comet-Sun-ecliptic frame.
+                     This file lists time and position, proton velocity,
+                     electric and magnetic field vectors, and drift velocity
+                     (ExB).
+ 
+      Processing
+      ==========
+      The files were received as ASCII table from the project team.  SBN
+      personal performed cosmetic reformatting (removing extra blanks) and
+      prepared the PDS documentation.  No changes were made to the data
+      values after receipt.
+ 
+      Media/Format
+      ============
+      These data are included in the GEM CDROM disk prepared by the PDS
+      Small Bodies Node.
+        </data_set_desc>
+        <confidence_level_note>
+      Confidence Level Overview
+      =========================
+      Note that while this data has undergone the standard internal PDS
+      review, no external review has been held.
+        </confidence_level_note>
+        <archive_status>SAFED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>85-056A-00E</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>PSSB-00025</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

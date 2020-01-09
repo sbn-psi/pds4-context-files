@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-a-3-rdr-apd-polarimetry-v3.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ASTEROID POLARIMETRIC DATABASE V3.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.publit::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:compil.publit::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.asteroid::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-a-3-rdr-apd-polarimetry-v3.0__browserp_ear-a-3-rdr-apd-polarimetry-v3.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Lupishko, D.F., and R.A. Mohamed, A New Calibration of the Polarimetric Albedo
+                   Scale of Asteroids, Icarus 119, 209-213, 1996.
+            </reference_text>
+            <description>reference.LUPISHKO-MOHAMED1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-A-3-RDR-APD-POLARIMETRY-V3.0</data_set_id>
+        <data_set_name>ASTEROID POLARIMETRIC DATABASE V3.0</data_set_name>
+        <data_set_release_date>1999-04-09</data_set_release_date>
+        <start_time>1969</start_time>
+        <stop_time>1998</stop_time>
+        <producer_full_name>CAROL NEESE</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Compilation of published polarimetry from numbered asteroids
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Asteroid Polarimetric Database (APD) is compiled by Dmitrij
+            Lupishko of Kharkov University. This database tabulates the
+            original data comprising degree of polarization as a function of
+            phase angle of the asteroid, and additional parameters where
+            available. This data set, together with &apos;polar.tab&apos;
+            containing the TRIAD polarimetry, includes most if not all
+            existing asteroid polarimetry data published by 1998. The APD is
+            an ongoing compilation and this data set will be updated yearly.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The Asteroid Polarimetric Database (APD) is compiled by Dmitrij
+    Lupishko of Kharkov University.  This database tabulates the
+    original data comprising degree of polarization as a function of
+    phase angle of the asteroid, and additional parameters where
+    available.  This data set, together with &apos;polar.tab&apos; containing the
+    TRIAD polarimetry, includes most if not all existing asteroid
+    polarimetry data published by 1998.  The APD is an ongoing
+    compilation and this data set will be updated yearly.
+ 
+ 
+  Modification History
+  ====================
+    This data set was first reviewed and ingested in 1996, and was
+    updated in 1997 with additional polarimetric data published since
+    then, as well as an added table of derived polarimetric parameters
+    including polarization curves and polarimetric albedos of selected
+    asteroids.  In 1999 the data set was updated again with additional
+    polarimetric observations published since the previous version.
+ 
+ 
+  Parameters
+  ==========
+    The parameters tabulated in &apos;apd.tab&apos; are filter, phase angle,
+    degree of polarization, polarization position angle, position angle
+    of the scattering plane, and both degree of polarization and
+    position angle in the proper coordinate system measured from the
+    perpendicular to the scattering plane.
+ 
+ 
+  Data
+  ====
+    The Asteroid Polarimetric Database is included in the file
+    &apos;apd.tab&apos;.
+ 
+ 
+  Ancillary Data
+  ==============
+    Parameters of the polarimetric curve for individual asteroids, as
+    well as polarimetric albedos, are compiled in the file
+    &apos;apdcurv.tab&apos;.  This file reproduces the data in Table 2 of Lupishko
+    and Mohamed (1996) [LUPISHKO&amp;MOHAMED1996].
+ 
+    The entries in &apos;apd.tab&apos; include a reference to the published paper
+    in which the data appeared.  The full references of these papers, as
+    well as many other asteroid polarimetry papers compiled by Lupishko,
+    are given in the file &apos;apdref.tab&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+    This is a compilation of asteroid polarimetry results from the
+    published literature.  The user is referred to the individual
+    publications for information on the confidence level of any given
+    observation.
+ 
+    The table of polarimetric parameters and polarimetric albedos,
+    &apos;apdcurv.tab&apos;, provides no error values, but instead gives a quality
+    code as an assessment of the quality of the data.
+ 
+ 
+  Review
+  ======
+    This data set underwent external peer review on April 9, 1999.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>GD-11F</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

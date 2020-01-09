@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ds1-a-c-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>DEEP SPACE 1 SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.deep_space_1::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ds1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.ds1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.9969_braille::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.19p-borrelly_1_1904_y2::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ds1-a-c-spice-6-v1.0__browserp_ds1-a-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ds1-a-c-spice-6-v1.0__browser_ds1-a-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ds1-a-c-spice-6-v1.0__browser_wgc_ds1-a-c-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>DS1-A/C-SPICE-6-V1.0</data_set_id>
+        <data_set_name>DEEP SPACE 1 SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2003-10-15</data_set_release_date>
+        <start_time>1998-10-24T09:00:00Z</start_time>
+        <stop_time>2003-12-31T00:00:00Z</stop_time>
+        <producer_full_name>BORIS V. SEMENOV</producer_full_name>
+        <citation_text>
+            Semenov, B.V., L.S. Elson, and C.H. Acton, DEEP SPACE 1 SPICE
+            KERNELS V1.0, DS1-A/C-SPICE-6-V1.0, NASA Planetary Data System,
+            2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the Deep Space 1 (DS1) spacecraft.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Deep Space 1 (DS1)
+            SPICE data files (``kernel files&apos;&apos;), which can be
+            accessed using SPICE software. The SPICE data contains geometric
+            and other ancillary information needed to recover the full value
+            of science instrument data. In particular SPICE kernels provide
+            spacecraft and planetary ephemerides, instrument mounting
+            alignments, spacecraft orientation, spacecraft sequences of
+            events, and data needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of Deep Space 1 (DS1)
+      SPICE data files (``kernel files&apos;&apos;), which can be accessed using
+      SPICE software. The SPICE data contains geometric and other
+      ancillary information needed to recover the full value of science
+      instrument data. In particular SPICE kernels provide spacecraft
+      and planetary ephemerides, instrument mounting alignments,
+      spacecraft orientation, spacecraft sequences of events, and data
+      needed for relevant time conversions.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or
+      fixed spacecraft and instrument structures. They provide
+      position and velocity, given in a Cartesian reference frame.
+      SPK files are located under the data/spk directory on the
+      volumes comprising this data set.
+ 
+      PCK kernels contain certain physical, dynamical and
+      cartographic constants for target bodies, such as size and shape
+      specifications, and orientation of the spin axis and prime
+      meridian. PCK files are located under the data/pck directory
+      on the volumes comprising this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      data/ik directory on the volumes comprising this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the data/ck directory on the volumes comprising
+      this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      located under the data/ek directory on the volumes comprising
+      this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the data/lsk directory on the volumes
+      comprising this data set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock calibration
+      data required to perform a mapping between Ephemeris time (ET)
+      and spacecraft on-board time (SCLK.) SCLK files are located under
+      the data/sclk directory on the volumes comprising this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames supported
+      within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under
+      the data/fk directory on the volumes comprising this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      Details specific to individual files are found in the *info.txt
+      files in the corresponding data directory. The most detailed
+      description of the data in each file is provided in metadata
+      included inside the file -- in the description area of text
+      kernels or in the comment area of binary kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read
+      SPICE kernel files. SPICELIB software is highly documented
+      via internal headers. Additional documentation is available
+      in separate ASCII text files called Required Reading files.
+      For example, the S- and P- Kernel (SPK) Required Reading File,
+      named SPK.REQ, describes use of the SPK kernel file readers
+      and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms such
+      as PC, Mac, SUN, HP, SGI, VAX, DEC Alpha, etc. is available at
+      the NAIF Node of PDS electronically (via anonymous FTP and WWW
+      servers). Each version of the Toolkit is also archived at the
+      NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The following list of kernels in SPICE meta-kernel format can be
+      used with a SPICE-based application running on a UNIX workstation
+      to load all DS1 SPICE data provided in this data set together
+      (note that the logical path provided the PATH_VALUES keyword and
+      pointing to the volume root directory should be changed to be the
+      actual path of the volume root directory on the system where the
+      volume is mounted):
+ 
+         \begindata
+ 
+            PATH_VALUES       = (
+                                 &apos;./data&apos;
+                                )
+            PATH_SYMBOLS      = (
+                                 &apos;KERNELS&apos;
+                                )
+            KERNELS_TO_LOAD   = (
+                                 &apos;$KERNELS/lsk/naif0007.tls&apos;
+                                 &apos;$KERNELS/pck/ds1_borrelly_v01.tpc&apos;
+                                 &apos;$KERNELS/pck/ds1_braille_v02.tpc&apos;
+                                 &apos;$KERNELS/pck/pck00007.tpc&apos;
+                                 &apos;$KERNELS/fk/ds1_v70.tf&apos;
+                                 &apos;$KERNELS/ik/ds1_micas_v32.ti&apos;
+                                 &apos;$KERNELS/ik/ds1_pepe_v20.ti&apos;
+                                 &apos;$KERNELS/sclk/ds1_sclkscet_00071.tsc&apos;
+                                 &apos;$KERNELS/spk/de405s.bsp&apos;
+                                 &apos;$KERNELS/spk/ds1_radionav.bsp&apos;
+                                 &apos;$KERNELS/spk/ds1_opnav_borrelly.bsp&apos;
+                                 &apos;$KERNELS/spk/ds1_opnav_braille.bsp&apos;
+                                 &apos;$KERNELS/ck/ds1_sa_1998.bc&apos;
+                                 &apos;$KERNELS/ck/ds1_sa_1999.bc&apos;
+                                 &apos;$KERNELS/ck/ds1_sa_2000.bc&apos;
+                                 &apos;$KERNELS/ck/ds1_sa_2001.bc&apos;
+                                 &apos;$KERNELS/ck/ds1_sc_1998.bc&apos;
+                                 &apos;$KERNELS/ck/ds1_sc_1999.bc&apos;
+                                 &apos;$KERNELS/ck/ds1_sc_2000.bc&apos;
+                                 &apos;$KERNELS/ck/ds1_sc_2001.bc&apos;
+                                )
+ 
+         \begintext
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This volume contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here,
+      but the prospective user is also referred to extensive
+      descriptions about each file that are stored inside each kernel
+      file. These metadata provide detailed information regarding
+      the information source from which the data were derived, the
+      type of processing applied to the source data, applicability
+      of the data, etc. Metadata are located in the ``comment area&apos;&apos;
+      for binary kernel types (SPK, CK, ESQ), accessible using either
+      the COMMNT or SPACIT utility program found in the NAIF Toolkit.
+      Metadata are located after ``\begintext&apos;&apos; markers within the
+      text kernel types (PCK, IK, FK, LSK, SCLK), accessible by
+      using any available text file display tool such as a word
+      processor, text editor, or the unix ``more&apos;&apos; or ``cat&apos;&apos;
+      commands.
+ 
+      In some cases data accuracy information does not exist, or
+      may be estimated after mission completion.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;&apos;
+      not addressed herein the reader is invited to examine subsequent
+      SPICE archive releases associated with this data set (if such
+      exist), or to contact the NAIF node of the Planetary Data System
+      for possible further information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      SP-Kernel files included in this data set provide the trajectory
+      of the Deep Space 1 spacecraft. These files also include
+      ephemeris data for the mission targets -- asteroid Braille and
+      comet Borrelly -- along with ephemeris data for Earth, Moon, and
+      Sun. The spacecraft trajectory stored in these SPKs was
+      determined by the Deep Space 1 Radio Navigation (Radio NAV) and
+      Optical Navigation (OPNAV) teams, both from JPL.
+ 
+      The SPKs produced by DS1 Optical NAV team were created by
+      processing images taken during the approach to and departure from
+      the target. These solutions provide the best trajectory relative
+      the specific target ephemerides that has been included in these
+      SPKs to ensure that the s/c trajectory and that specific target
+      ephemerides are always used together. These SPKs provide more
+      accurate trajectory relative the target and, therefore, should be
+      used to compute derived geometry during the encounters.
+ 
+      The substantial difference between the DS1 trajectory provided by
+      the OPNAV and Radio NAV solutions -- on average about 400 km for
+      the Braille encounter and about 120 km for the Borrelly encounter
+      -- can be attributed to the error in the knowledge of the target
+      position. Since the OPNAV solution was done relative to the
+      target and the Radio NAV was done relative to the Solar System
+      ephemerides, the error is the target position became the main
+      contributor to the difference between the two spacecraft
+      trajectory solutions.
+ 
+      Unfortunately the coverage of the OPNAV SPKs is relatively short,
+      starting about a month before each encounter and ending shortly
+      after it. For this reason the Radio NAN SPKs should be used
+      wherever OPNAV SPK coverage is not available.
+ 
+ 
+      CK Files
+      ========
+ 
+      C-kernel files included in this data set provide orientation of
+      the spacecraft bus and its solar array. Both kinds
+      of CK files are produced from engineering telemetry downlinked
+      from the spacecraft. As is often the case with spacecraft
+      engineering telemetry-based  measurements, considerable
+      uncertainty exists as to the accuracy of such measurements, and,
+      data quality (accuracy and completeness) can vary significantly.
+ 
+      Spacecraft Bus CK Files
+      -----------------------
+ 
+      These CK files containing the orientation of the spacecraft bus
+      (``the spacecraft&apos;&apos;) are provided to support interpretation of
+      data obtained by all science experiments. The spacecraft
+      orientation CK file included in this data set were produced from
+      the stream of orientation quaternions computed on-board
+      and send down in channelized telemetry.
+ 
+      The fact that the spacecraft could successfully point to and
+      track the desired targets (Borrelly and Braille) and that the
+      targets were found close to the expected location in the images
+      indicates that the accuracy of orientation information sent down
+      from the spacecraft was within the mission requirements. At the
+      same time it should be mentioned that at the time of this archive
+      release there are no known reports assessing accuracy of the
+      spacecraft orientation provided in these CK files.
+ 
+      Attitude knowledge, represented by quaternions stored in the
+      reconstructed s/c orientation CK files, ceased to be valid within
+      a short time of the failure of the SRU on November 11, 1999.
+      On-board knowledge (based on inertial celestial reference) was
+      not restored until 01:00 on June 15, 2000. The reconstructed s/c
+      orientation CKs provide no data during this period.
+ 
+      Attitude knowledge was also subject to gyro drift inaccuracies
+      during the following periods, in which our Science Camera/Star
+      Tracker lost lock:
+ 
+         2000-07-16T20:00  until  2000-07-19T01:00
+         2001-03-13T16:00  until  2001-03-16T20:00
+         2001-07-15T20:00  until  2001-07-24T18:00
+         2001-08-16T12:00  until  2001-08-24T11:00
+         2001-09-13T17:00  until  2001-09-14T01:00
+         2001-12-02T16:00  until  2001-12-04T23:00
+ 
+      Although the magnitude of the inaccuracy is not known for each
+      period, the reconstructed s/c orientation CKs provide data during
+      these periods because the attitude was determined using real gyro
+      measurements and may be, at least at the starts of the intervals,
+      close to reality.
+ 
+      This data set also includes a CK providing DS1 spacecraft
+      predicted orientation for Borrelly encounter. Although the
+      reconstructed orientation is available for the encounter, this
+      file is included in the archive because its comments provide a a
+      detailed description of the encounter attitude profile.
+ 
+      Solar Array CK Files
+      --------------------
+ 
+      These CK files containing orientation of the solar arrays
+      relative to the spacecraft bus are provided to support the PEPE
+      data analysis. The orientation data in these files was computed
+      the solar array gimbal angles measured on-board and sent down
+      in channelized telemetry.
+ 
+      The validation of the data in these CKs involved computing the
+      angle between the solar array normal direction from the
+      spacecraft to the Sun and verifying that it was close to zero. While
+      it was the case whenever the arrays were supposed to be tracking
+      the Sun no formal reports assessing accuracy of the solar array
+      orientation provided in these CK files were available at the time
+      of archiving.
+ 
+      Though a solar array CK file is provided for each year of the
+      mission, the combination of all these files is lacking coverage
+      from 1999-11-10 through 2001-09-08 (two little coverage windows
+      in Dec 2000 and May 2001 are exceptions.)
+ 
+      Caution on Using CK Files
+      -------------------------
+ 
+      While not a data accuracy issue, the CK user is nevertheless
+      cautioned to understand and properly use the data found and
+      tolerance arguments that are inputs to the CK reader provided
+      in the SPICE Toolkit. Descriptions about how to read CK files
+      are found in the CK reader routine headers (top of the source
+      code files) and in the ``CK Required Reading&apos;&apos; document; these
+      are contained in each SPICE Toolkit package.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;&apos;
+      bodies such as planets, satellites, comets and asteroids. A
+      description of these data items and reference to their source is
+      provided inside the PCK file, which is a simple text file that
+      can be viewed using any word processor, text editor or text
+      display utility.
+ 
+      The two PCK files provided in this data set are for the mission
+      target -- asteroid Braille and comet Borrelly. Both files are
+      were created around the times of encounters and contain
+      preliminary size and orientation data.
+ 
+ 
+      FK Files
+      ========
+ 
+      Frames kernel files provide specifications for how one reference
+      frame is defined relative to another frame. The Deep Space 1 FK
+      provided in this data set contains a complete set of frame
+      definitions for the spacecraft, its structures such as solar
+      arrays, and all of its science instruments. Meta information
+      provided in the comments included in this file consists of the
+      frame definitions, description of the frame relationships, source
+      of and accuracy of the mounting alignment information, etc.
+ 
+ 
+      IK Files
+      ========
+ 
+      Instrument kernel files provide specifications for the optical
+      and physical instrument parameters and -- where applicable --
+      field-of-view size, shape and orientation for the named
+      instrument. Metadata describing these estimates are provided in
+      each IK file included in this archive.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data
+      needed for converting time measurements between ephemeris time
+      (ET) and spacecraft clock time (SCLK). A SPICE SCLK file is
+      made from a similar file -- SCLK/SCET file, or SCLKvSCET
+      file -- produced by another mission entity. Each newly made SCLK
+      file fully replaces the previous SCLK file.
+ 
+      While no formal report on the Deep Space 1 time correlation
+      accuracy was available at the time of archiving, since the
+      SCLK/SCET were created by the same process as the SCLK/SCET files
+      for other JPL mission the accuracy can be assumed to be better
+      than a few tens of milliseconds. The SPICE SCLK file has
+      essentially the same accuracy as the SCLK/SCET file.
+ 
+      SPICE software does not prohibit an SCLK file from being used
+      for time conversions occurring for ``future times&apos;&apos; (or more
+      accurately, for epochs that occur later than the epoch of the
+      last telemetry data used in producing the last correlation
+      coefficients found in the SCLK file). Such ``predict&apos;&apos; time
+      conversions are likely to be inaccurate (changed somewhat)
+      once the epoch of interest has been passed.
+ 
+      Note that this SCLK provides correlation for the main spacecraft
+      on-board clock. While this clock was used to tag sequences
+      up-linked to and all telemetry sent from the spacecraft, a
+      different time was used to tag MICAS images (i.e. was included
+      into the image headers.) That time was a count of ephemeris
+      seconds past 1998 JAN 01 12:00:00 ET. Because this counter was
+      also ``running&apos;&apos; on-board the spacecraft, it was not ``running&apos;&apos;
+      at the true ET rate. Instead it was ``running&apos;&apos; at the rate of
+      the main on-board clock and, therefore, was drifting from the
+      true ET as time when on. To correct the drift, a special command
+      was sent to the spacecraft every so often -- once every few weeks
+      -- to synchronize the counter with the actual ET.
+ 
+      If an image was taken long after the previous counter adjustment,
+      the drift had usually accumulated into a substantial error, up to
+      a few seconds. If an image was taken right after adjustment, the
+      error have not yet accumulated and the counter value was very
+      close to the true ephemeris time. Fortunately, the counter was
+      adjusted right before both encounters and, therefore, the error
+      between the counter value and the actual ET for in the encounter
+      images is less than 0.1 second.
+ 
+      The following small fragment of SPICE FORTRAN and C code
+      illustrates how the 1998-based ET counter (IMGTIM/imgtim)
+      provided in the MICAS image headers can be converted to UTC:
+ 
+         FORTRAN:
+ 
+            CALL STR2ET ( &apos;1998 JAN 01 12:00:00 TDB&apos;, ETBASE )
+            ET = ETBASE + IMGTIM
+            CALL TIMOUT ( ET, &apos;YYYY-MM-DDTHR:MN:SC.###&apos;, UTC )
+ 
+         C:
+ 
+            str2et_c ( &apos;1998 JAN 01 12:00:00 TDB&apos;, &amp;etbase );
+            et = etbase + imgtim;
+            timout_c ( et, &apos;YYYY-MM-DDTHR:MN:SC.###&apos;, utc );
+ 
+      This example does not take the drift into account; should it try
+      to do that, the accumulated drift, in seconds, has to be
+      estimated and added to the ET before converting to UTC.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;&apos;
+      and some other terms used in converting time measurements
+      between ephemeris time (ET) and Universal Time (UTC). ``Spacecraft
+      Event Time&apos;&apos; (SCET) is the commonly used name for UTC events
+      measured at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed
+      is contained inside the LSK text file. The time conversion
+      provided by SPICE LSK files is accurate to approximately
+      0.000030 seconds.
+ 
+ 
+      EK Files
+      ========
+ 
+      One kind of Events kernel (EK) files is included in this
+      archive -- predicted Sequence EKs for target encounters.
+ 
+      Sequence EKs comprise a summary of the commands sent to the
+      spacecraft as well as instrument state (status) summaries as
+      modeled by the sequence generation tools. This data set includes
+      predicted Sequence EKs created from integrated sequence Predicted
+      Events Files (PEFs) produced by the Deep Space 1 Sequence team.
+      As seen from the source product name these files contain
+      predicted information -- background sequences, as should have
+      executed by the spacecraft. Because of that the EK records have
+      times different from the actual command execution times (although
+      very close in most cases.) These EKs are also missing any
+      commands that were not part of the background sequences
+      (real-time commands).
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>DVD-R</medium_type>
+            <nssdc_collection_id>PSCM-00028</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>PSCM-00028</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

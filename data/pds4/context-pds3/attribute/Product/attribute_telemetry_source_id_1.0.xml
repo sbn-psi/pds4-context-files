@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.telemetry_source_id</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>telemetry_source_id</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>telemetry_source_id</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>telemetry_source_id</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The telemetry source identifier element identifies the telemetry (TLM)
+source. Normally, the telemetry from the spacecraft is routed through a
+dedicated channel into the user workstation.  All of these elements in the
+TLM source may, however, be different over the lifecycle of a mission,
+e.g., the spacecraft flight model 1 and flight model 2 (FM1, FM2) or an
+electrical model (EM) might be used to send the data via a virtual channel
+0 (VC0) or virtual channel 1 (VC1) to a electrical ground support equipment
+(EGSE) computer 0 (EGSE_ID_0). The different routes can be defined with the
+telemetry source id element.
+ 
+Examples (substitute quotes instead of apostrophe in the below example):
+TELEMETRY_SOURCE_ID = (&apos;FM1&apos;,&apos;VC0&apos;,&apos;EGSE_ID_1&apos;)
+TELEMETRY_SOURCE_ID = (&apos;EM&apos;,&apos;VC1&apos;,&apos;EGSE_ID_1&apos;)
+        </definition>
+        <comment>tlm_src_id</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>telemetry_source_id</name>
+            <definition>
+The telemetry source identifier element identifies the telemetry (TLM)
+source. Normally, the telemetry from the spacecraft is routed through a
+dedicated channel into the user workstation.  All of these elements in the
+TLM source may, however, be different over the lifecycle of a mission,
+e.g., the spacecraft flight model 1 and flight model 2 (FM1, FM2) or an
+electrical model (EM) might be used to send the data via a virtual channel
+0 (VC0) or virtual channel 1 (VC1) to a electrical ground support equipment
+(EGSE) computer 0 (EGSE_ID_0). The different routes can be defined with the
+telemetry source id element.
+ 
+Examples (substitute quotes instead of apostrophe in the below example):
+TELEMETRY_SOURCE_ID = (&apos;FM1&apos;,&apos;VC0&apos;,&apos;EGSE_ID_1&apos;)
+TELEMETRY_SOURCE_ID = (&apos;EM&apos;,&apos;VC1&apos;,&apos;EGSE_ID_1&apos;)
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>true</enumeration_flag>
+            <value_data_type>ASCII_VID</value_data_type>
+            <formation_rule>
+N/A
+</formation_rule>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>40</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>Unknown</specified_unit_id>
+            <DD_Permissible_Value_Full>
+                <value>EGSE</value>
+                <value_begin_date>2012-09-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>EGSE_ID_0</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>EGSE_ID_1</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>EM</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>FM0</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>FM1</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>VC0</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>VC1</value>
+                <value_begin_date>2004-09-27T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

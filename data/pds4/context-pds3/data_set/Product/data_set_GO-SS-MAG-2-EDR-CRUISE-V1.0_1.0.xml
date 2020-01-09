@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-ss-mag-2-edr-cruise-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO MAGNETOMETER CRUISE EDR DATA</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-ss-mag-2-edr-cruise-v1.0__browserp_go-ss-mag-2-edr-cruise-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-SS-MAG-2-EDR-CRUISE-V1.0</data_set_id>
+        <data_set_name>GALILEO MAGNETOMETER CRUISE EDR DATA</data_set_name>
+        <data_set_release_date>1996-06-01</data_set_release_date>
+        <start_time>1989-12-31T00:14:12.369Z</start_time>
+        <stop_time>1994-12-31T03:58:41.145Z</stop_time>
+        <producer_full_name>MARGARET G. KIVELSON</producer_full_name>
+        <citation_text>
+            Kivelson, M.G., Khurana, K.K., Russell, C.T., Walker, R.J., Joy,
+            S.P.,Green, J., GALILEO MAGNETOMETER CRUISE EDR DATA,
+            GO-SS-MAG-2-EDR-CRUISE-V1.0, NASA Planetary Data System, 1996
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains data acquired by the Galileo Magnetometer
+            during the Interplanetary Cruise to Jupiter. The data are at
+            varying resolution depending on the averaging constant applied to
+            the instrument.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains data acquired by the Galileo Magnetometer
+            during the Interplanetary Cruise to Jupiter. The data are at
+            varying resolution depending on the averaging constant applied to
+            the instrument. The EDR files are given in IBM 370 binary
+            representation and are stored in an extremely compact format.
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set contains data acquired by the Galileo Magnetometer
+    during the Interplanetary Cruise to Jupiter. The data are at varying
+    resolution depending on the averaging constant applied to the
+    instrument. The EDR files (Experimentor Data Record) were delivered to
+    the Galileo Magnetometer Team by the Galileo project. The EDR files
+    are given in IBM 370 binary representation and are stored in an
+    extremely compact format. The structure of the EDR files is completely
+    described in the documents GLL280 and GLL640. The pages pertinent to
+    the MAG description have been scanned into bit map images (TIFF) that
+    are stored in the /DOCUMENT directory off the root of this volume.
+ 
+ 
+  Data Acquisition
+  ================
+    The data for this dataset were acquired as part of the normal
+    instrument calibration activities associated with the cruise to
+    Jupiter. As such, the instrument was commonly configured in modes
+    which required calibration even though they may not have been the
+    optimal mode for science data acquisition. The Galileo magnetometer
+    has 8 possible LRS acquisition configurations (modes). There are two
+    sensor triads mounted 6.87 and 11.03 meters from the rotor spin axis
+    (inboard and outboard) along the boom. Each of the sensor triads has
+    two gain states (high and low). In addition, the sensor triads can be
+    &apos;flipped&apos; to move the spacecraft spin-axis aligned sensor into the
+    spin plane and visa versa. Please see the instrument description for
+    full details on the instrument, sensors, and geometries. The
+    combinations of sensor, gain state, and flip direction form modes.
+ 
+  ______________________________________________________________________
+                             Mode Characteristics
+  ______________________________________________________________________
+            Mode Name            Acronym         range      quantization
+  ______________________________________________________________________
+   Inboard,  left,  high range*    ILHR      +/- 16384 nT       8.0   nT
+   Inboard,  right, high range*    IRHR      +/- 16384 nT       8.0   nT
+   Inboard,  left,  low  range*    ILLR      +/-   512 nT       0.25  nT
+   Inboard,  right, low  range*    IRLR      +/-   512 nT       0.25  nT
+   Outboard, left,  high range*    ULHR      +/-   512 nT       0.25  nT
+   Outboard, right, high range*    URHR      +/-   512 nT       0.25  nT
+   Outboard, left,  low  range*    ULLR      +/-    32 nT       0.008 nT
+   Outboard, right, low  range*    URLR      +/-    32 nT       0.008 nT
+ 
+                  __________________________________________
+                          Summary of Mode Changes
+                  __________________________________________
+                   s/c clock         date/time          mode
+                  __________________________________________
+                   00104651:00:0    89-353/20:53        ULLR
+                   00120107:00:0    89-364/17:21        URHR
+                   00120117:00:0    89-364/17:31        IRHR
+                   00120150:00:0    89-364/18:04        IRLR
+                   00120178:00:0    89-364/18:33        ILLR
+                   00120199:00:0    89-364/18:54        ILHR
+                   00120209:00:0    89-364/19:04        URHR
+                   00120231:00:0    89-364/19:26        URLR
+                   00120283:00:0    89-364/20:19        ULLR
+                   00120313:00:0    89-364/20:49        ULHR
+ 
+                   00572976:00:0    90-040/03:00        ULHR
+                   00572976:00:0    90-316/17:00        ULLR
+                   00578673:00:0    90-320/17:00        URLR
+                   00586204:00:0    90-325/23:55        URHR
+                   00592915:00:0    90-330/17:01        ILLR
+                   00597439:00:0    90-333/21:15        IRLR
+                   00610156:00:0    90-342/19:33        IRHR
+                   00610509:00:0    90-343/01:30        IRLR
+                   00615701:00:0    90-346/17:00        URLR
+                   00618550:00:0    90-348/17:00        URHR
+                   00624261:00:0    90-352/17:15        ULHR
+ 
+                   01072247:00:0    91-302/06:39        ULHR
+ 
+                   01600269:00:0    92-308/00:48        ULLR
+                   01605562:00:0    92-311/18:10        ILLR
+                   01629549:00:0    92-328/14:14        IRLR
+                   01632087:00:0    92-330/09:00        ULLR
+                   01635479:00:0    92-332/18:23        URHR
+                   01638675:00:0    92-335/00:01        URLR
+                   01639786:00:0    92-335/18:45        IRLR
+                   01639974:00:0    92-335/21:55        URLR
+                   01640958:00:0    92-336/14:30        IRLR
+                   01641285:00:0    92-336/20:40        URHR
+                   01641351:00:0    92-336/21:07        IRHR
+                   01641407:00:0    92-336/22:15        ILHR
+                   01641465:00:0    92-336/23:02        URLR
+                   01642481:00:0    92-337/16:22        ULHR
+                   01644143:00:0    92-338/20:10        IRLR
+                   01646048:00:0    92-340/04:16        ILLR
+                   01649533:00:0    92-342/15:00        ULLR
+                   01650524:00:0    92-343/07:42        ULHR
+                   01650907:00:0    92-343/14:09        ILHR
+                   01651026:00:0    92-343/16:10        ULHR
+                   01656418:00:0    92-347/11:01        ILLR
+                   01659057:00:0    92-349/07:30        ULLR
+ 
+                   02035626:00:0    93-240/16:51        ULLR
+ 
+    * range is the opposite of gain
+ 
+    In addition to exercising the various instrument modes during the
+    first earth encounters, numerous instrument calibration activities
+    were performed. These include using both the internal and external
+    calibration coils. Data corrupted by the use of the calibration coils
+    or by the flipper motor have been removed from the raw data and kept
+    in seperate calibration directories.
+ 
+ 
+  Coordinate Systems
+  ===================
+    The EDR data are being archived in inertial rotor coordinates (IRC).
+    This coordinate system has the Z axis along the rotor spin axis,
+    positive away from the antenna and the X and Y axes lies in the rotor
+    spin plane. In a crude sense, when the spacecraft is far from Earth,
+    +X points south, normal to the ecliptic plane, positive Y lies in the
+    ecliptic plane in the sense of Jupiter&apos;s orbital motion and positive Z
+    is in the anti-earth direction. The spacecraft antenna (negative Z
+    direction) is kept earthward pointing to about +/- 10 deg accuracy.
+ 
+ 
+  Data Processing
+  ===============
+    The EDR files can be &apos;unbundled&apos; using the software entitled
+    &apos;unbundle_mro80&apos; or &apos;unbundle_mro32&apos;. The unbundling software will
+    read in a raw EDR and convert the data to IEEE binary flatfiles
+    (tables of data). Prior to doy 169 1993 the EDR&apos;s were delivered to
+    the magnetometer team by the Galileo Project in a 32 byte format. The
+    appropriate software to unbundle EDR data in a 32 byte format is
+    &apos;unbundle_mro32&apos;. After doy 169 1993 the Galileo Project delivered EDR
+    data in an 80 byte format. The appropriate software to unbundle the 80
+    byte format data is &apos;unbundle_mro80&apos;. More information regarding this
+    software can be found in the SOFTWARE directory of this CDROM.
+    Information regarding the structure and format of the EDR binary file
+    is contained in the documents GLL280 and GLL640. The pages pertinent
+    to the MAG description have been scanned into bit map images (TIFF)
+    that are stored in the DOCUMENT directory off the root of this
+    volume.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Several of the EDR files contain errors which make it impossible to
+    correctly &apos;unbundle&apos; them.  These files have been retained in there
+    EDR form but they have not been processed. These files can be
+    identified by checking the start and stop time in the EDR label.
+    Files which were not processed have a start and stop time labeled
+    as &apos;UNK&apos; or unknown.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

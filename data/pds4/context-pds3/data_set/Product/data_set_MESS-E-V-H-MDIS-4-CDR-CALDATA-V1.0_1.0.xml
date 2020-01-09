@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-mdis-4-cdr-caldata-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER MDIS CALIBRATED DATA RECORD V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mdis-nac.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.cal_target::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.dark_sky::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.ob_star::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.space::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.spacecraft_deck::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.starfield::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.2p-encke_1_1818_w1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.c-ison_2012_s1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:open_cluster.m7::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:open_cluster.pleiades::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.neptune::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.uranus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.alioth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.arcturus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.epsilon_centauri::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.eta_carinae::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.fomalhaut::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.mirzam::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.rigel::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.sirius::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.star::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.vega::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mdis-4-cdr-caldata-v1.0__browserp_mess-e-v-h-mdis-4-cdr-caldata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mdis-4-cdr-caldata-v1.0__browser_geo_mercury_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mdis-4-cdr-caldata-v1.0__browser_mess-e-v-h-mdis-4-cdr-caldata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-mdis-4-cdr-caldata-v1.0__dvo_imaging_mess-e-v-h-mdis-4-cdr-caldata-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hawkins, S.E., III, J. Boldt, E.H. Darlington, R. Espiritu, R.E. Gold, B.
+                   Gotwols, M. Grey, C. Hash, J. Hayes, S. Jaskulek, C. Kardian, M. Keller, E.
+                   Malaret, S.L. Murchie, P. Murphy, K. Peacock, L. Prockter, A. Reiter, M.S.
+                   Robinson, E. Schaefer, R. Shelton, R. Sterner, H. Taylor, T. Watters, and B.
+                   Williams, The Mercury Dual Imaging System on the MESSENGER spacecraft, Space
+                   Science Reviews, 131, 247-338, 2007.
+            </reference_text>
+            <description>reference.HAWKINSETAL2007</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hawkins, S.E., III, S.L. Murchie, K.J. Becker, C.M. Selby, F.S. Turner, M.W.
+                   Noble, N.L. Chabot, T.H. Choo, E.H. Darlington, B.W. Denevi, D.L. Domingue,
+                   C.M. Ernst, G.M. Holsclaw, N.R. Laslo, W.E. McClintock, L.M. Prockter, M.S.
+                   Robinson, S.C. Solomon, and R.E. Sterner, II, In-flight performance of
+                   MESSENGER&apos;s Mercury Dual Imaging System, Proceedings of the SPIE, Volume 7441,
+                   pp. 74410Z-74410Z-12, 2009.
+            </reference_text>
+            <description>reference.HAWKINSETAL2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H-MDIS-4-CDR-CALDATA-V1.0</data_set_id>
+        <data_set_name>MESSENGER MDIS CALIBRATED DATA RECORD V1.0</data_set_name>
+        <data_set_release_date>2016-05-06</data_set_release_date>
+        <start_time>2004-08-19T18:01:23Z</start_time>
+        <stop_time>2015-04-30T11:07:43Z</stop_time>
+        <producer_full_name>CHRISTOPHER HASH</producer_full_name>
+        <citation_text>
+            C. Hash, MESSENGER MDIS CALIBRATED (CDR) DATA E/V/H V1.0, NASA
+            Planetary Data System, 2008
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated data records for narrow- angle and wide-angle MDIS
+            cameras on MESSENGER.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== The Mercury Dual Imaging System (MDIS) consists
+            of two cameras, a Wide Angle Camera (WAC) and a Narrow Angle
+            Camera (NAC), mounted on a common pivot platform. This dataset
+            includes the Calibrated Data Record (CDR) version of valid images
+            than can be turned into physical units, that were acquired during
+            the cruise phase to Mercury, and includes post- launch checkout
+            images, flyby images of Earth, Venus, Mercury, images acquired
+            from Mercury orbit, and inflight calibration images. This CDR
+            dataset is the product of conversion of raw data (Experiment Data
+            Records, or EDRs) to one of three options: physical units of
+            radiance; or radiance factor or I/F, with or without an empirical
+            correction for time variable instrument responsivity. In addition
+            to the imagery, anciliary information (including calibration
+            files used to calibrate the data) is included.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The Mercury Dual Imaging System (MDIS) consists of two cameras, a
+      Wide Angle Camera (WAC) and a Narrow Angle Camera (NAC), mounted on
+      a common pivot platform. This dataset includes the Calibrated Data
+      Record (CDR) version of all valid, calibratable images acquired
+      during the cruise phase to Mercury and the Mercury orbital phase,
+      and includes post-launch checkout images, flyby images of Earth,
+      the Moon, Venus, and Mercury, in-flight calibration images, and
+      images taken during Mercury orbit including those targeted at
+      Mercury, or taken during imaging of comets or searches for Mercury
+      satellites or vulcanoid asteroids. This CDR dataset is the product
+      of conversion of raw data (Experiment Data Records, or EDRs) to
+      one of two options:
+ 
+         physical units of radiance, or
+         radiance factor or I/F
+ 
+      as indicated by the filename:
+ 
+      &apos;pcrnnnnnnnnnf_tt_v&apos;, where
+ 
+         p = product type = C calibrated
+         c = camera (W WAC or N NAC)
+         r = spacecraft-clock-partition-number minus 1 [0, 1]
+             for pre- or post-spacecraft-clock-reset
+         nnnnnnnnn = Mission Elapsed Time (MET) counter taken from the
+                      image header (and same as original compressed
+                      filename from SSR). NOTE: this is a spacecraft clock
+                      seconds counter, and the value in the filename
+                      corresponds to the LAST second of the exposure.
+         f = Filter wheel position (A, B, C, D, E, F, G, H, I, J, K, L, U)
+             for the WAC.  It is M for the NAC, which has no filter wheel.
+             It is U if the position is unknown.
+         tt = data type (RA radiance, IF for NAC I/F or WAC I/F corrected
+             for time variations in responsivity, or IU for WAC I/F
+             uncorrected for time variations in responsivity)
+         v = version number
+ 
+      The data exist in a format paralleling that of the raw data: images
+      have the same line and sample dimensions, and information in
+      attached PDS labels is updated to convey differences in units and
+      processing history. This dataset also includes ancillary data files
+      that tabulate the contents of the volume and documentation files.
+ 
+      For more information on the contents and organization of the volume
+      set refer to the aareadme.txt file located in the root directory of
+      the data volumes.
+ 
+ 
+    Versions
+    ========
+ 
+      Version numbers of CDRs increment when there is a change to the
+      content of the calibrated image data, typically resulting from an
+      update to radiometric calibration.
+ 
+      Version 1 was the prototype version of the CDRs produced internally
+      to the MDIS team for validation.
+ 
+      Version 2 was the first publicly released version of MDIS CDRs, and
+      was first released in MDIS PDS release 3 which contains data through
+      Mercury flyby 1. In version 2 the labels were modified to include
+      additional information on image statistics, and to replace the values
+      in un-calibratable pixels (saturated pixels, pixels under the dark
+      strip at the edge of the CCD) with special values. In addition the
+      calibrations of WAC filters 3 and 6 (C and F, at 480 and 433 nm)
+      were adjusted from the version 1. See the discussion
+      below for description of the calibrations applied to CDR images,
+      or the file CALINFO.TXT in the CALIB directory for version histories
+      of each of the calibration matrices. Version 2 CDRs were produced
+      using:
+        - version 0 of the dark model;
+        - version 4 of the flat-field correcton (except version 2 of the
+          flat field correction in WAC filter 2 and NAC binned);
+        - version 2 of the WAC responsivity correction (except version 3
+          in filters 3 and 6), and version 1 of the NAC responsivity
+          correction; and
+        - in I/F images, version 0 of the solar spectrum.
+ 
+      Version 3 CDRs were first released in MDIS PDS release 4 containing
+      data through Mercury flyby 2. In version 3 there were no changes to
+      labeling of CDRs, but the responsivity correction was updated. The
+      previous linear model of the effect of CCD temperature was replaced
+      with a quadratic function. In addition the calibration of the NAC
+      was adjusted. Version 3 CDRs were produced using:
+        - version 0 of the dark model;
+        - version 4 of the flat-field correction (except version 2 of the
+          flat field correction in WAC filter 2 and NAC binned);
+        - version 4 of the WAC responsivity correction, and version 3 of
+          the NAC responsivity correction; and
+        - in I/F images, version 0 of the solar spectrum.
+ 
+      Beginning in MDIS PDS release 5, which contains data through Mercury
+      flyby 3, labeling of CDR images was updated in response to an MDIS
+      flight software upload in August 2009. Several additional items of
+      housekeeping were added to the headers of downlinked images, and
+      propagated into the CDR labels. No changes in radiometric
+      calibration were made at this time
+ 
+      Beginning in MDIS PDS release 6, which contains data through the
+      beginning of Mercury orbit, three additional items were added to
+      CDR labels providing information on timing and image targeting. One
+      small change was made to radiometric calibration to null a problematic
+      column of image data.
+ 
+      No changes of these types pertain to PDS releases 7 or 8 which contain
+      data from months 3-12 of Mercury orbit.
+ 
+      Beginning in PDS release 9, which contains data from months 13-18 of
+      Mercury orbit, version 4 CDRs are first released. In this update,
+      five further corrections and additions to radiometric calibration are
+      implemented. (a) A small error in calculation of the correction for
+      frame transfer smear is corrected. (b) The flat-field correction for
+      WAC filters 3 and 6 is updated, using normalized median values of
+      several hundred images acquired during orbit, to which a photometric
+      correction is applied to remove a gradient to illumination across the
+      images. This retires a problem with the flat-field originating
+      from the ground calibration. (c) The WAC temperature-dependent
+      responsivity is updated using median values of images covering a
+      narrow range of photometric angles, in the period prior to the
+      change in WAC performance described in the following discussion.
+      (d) A new term is added to the calibration equation, &apos;Correct&apos;,
+      to correct for time variation in responsivity in all WAC filters.
+      Beginning 24 May 2011, later analysis indicated that transmission
+      decreased by different amounts in each filter, most in the shortest-
+      and longest-wavelength filters. Subsequently response increased
+      slowly over several months approaching previous values. This is
+      believed to result from deposition and subsequent bakeoff of a
+      contaminant on the MDIS outer optic. The deposition may have
+      resulted from MESSENGER&apos;s first period with periapsis of its orbit
+      near the sub-solar longitude at planet perihelion. The correction
+      is maintained as a look-up table, derived empirically by comparing
+      median properties of WAC images taken within a narrow range of
+      photometric geometries. (e) Following the apparent recovery of
+      responsivity about 10 months after the &apos;contamination event&apos;,
+      response in several WAC filters - especially 6 and 7 (F and G) -
+      began to fall again relative that response through other filters.
+      It was determined that the rate of falloff in response was related
+      to the amount of time the filter was &apos;in position&apos; for imaging;
+      generally MDIS is pointed in the direction of the illuminated
+      surface of Mercury. It is speculated that intense radiance from
+      Mercury caused loss of transmission in the affected filters. A
+      correction is maintained as part of the same look-up table derived
+      to track dissipation of the contaminant.
+ 
+      Version 4 CDRs are produced using:
+        - version 0 of the dark model;
+        - version 5 of the flat-field correction in WAC filters 3 and 6;
+          version 2 of the flat field correction in WAC filter 2
+          and NAC binned, and version 4 in all other WAC filters whether
+          binned or unbinned;
+        - version 3 of the NAC responsivity correction; version 5
+          of the WAC responsivity correction; and
+        - version 3 of the temporal correction to WAC responsivity
+            &apos;Correct&apos;; and
+        - in I/F images, version 0 of the solar spectrum.
+ 
+      In PDS release 15, the final end-of-mission data release which
+      includes all data, version 5 CDRs are released. In this update,
+      three further corrections and additions to radiometric calibration
+      are implemented. (a) The flat-field correction for several WAC
+      filters in non-binned and binned states is updated, using the same
+      approach of normalized median values of low-contrast field filling
+      images acquired during orbit, except using more images less
+      affected by compression than in version 4 CDRs. (b) The NAC and
+      WAC temperature-dependent responsivity are updated based on
+      further analysis of images acquired at differing temperatures.
+      (c) The &apos;Correct&apos; term in the calibration equation is updated
+      based on extensive analysis of overlaps of images acquired at
+      different times, and covers the entire period of Mercury orbit.
+ 
+      Version 5 CDRs are produced using:
+        - version 0 of the dark model;
+        - version 6 of the flat-field correction in WAC filters 3 and 6;
+          version 2 in WAC filter 2 and NAC binned; version 6 in binned
+          images in WAC filters 3, 4, 5, 6, 7, 9, and 12; and version 4
+          in all other WAC filters whether binned or unbinned;
+        - version 4 of the NAC responsivity correction; version 6
+          of the WAC responsivity correction;
+        - version 5 of the temporal correction to WAC responsivity
+            &apos;Correct&apos;; and
+        - in I/F images, version 0 of the solar spectrum.
+ 
+ 
+    Parameters
+    ==========
+      MDIS observing scenarios are constructed using a set of key
+      variables (&apos;configurations&apos;) which include the following. All, with
+      the exception of filter selection, are available for both the NAC
+      and the WAC. Only the WAC has selectable filters. The imagers can
+      only be used one at a time.
+ 
+      Compression: MDIS images may optionally be compressed in a number
+      of ways, including pixel binning on-chip, 12-8 bit compression, and
+      FAST/Differential pulse code modulation (DCPM) lossless
+      compression, all carried out in the instrument hardware; further
+      pixel binning, subframing, wavelet compression, and jailbars, are
+      all carried out in the spacecraft Main Processor (MP), either
+      individually or in combinations.
+ 
+      Pixel Binning: MDIS images can undergo 2x2 pixel binning in the
+      focal plane hardware (also known as &apos;on-chip&apos; binning), resulting
+      in a 512 x 512 image. Images can also be compressed using the MP,
+      either in addition to DPU binning, or instead of DPU binning. MP
+      pixel binning options of 2x2, 4x4 or 8x8 are available.
+ 
+      12-8 bit compression: Images are read off the detector in 12-bit
+      format. 12 bit images may converted to 8 bit images using lookup
+      tables (LUTs) designed to preferentially retain information at low,
+      medium, or high 12-bit DN values. Eight LUTs are available, and
+      shared between the NAC and WAC.
+ 
+      FAST/DPCM compression: All images are compressed losslessly using
+      FAST/DCPM compression as they are read out of the DPU, to conserve
+      recorder space. Once the data are written to the recorder, they can
+      be uncompressed and recompressed more aggressively in the MP.
+ 
+      Wavelet compression: Images may be integer wavelet transform-
+      compressed in the MP, typically at 3:1 for color data and 4:1 for
+      monochrome data, but any value from 1 to 32 can be used.
+ 
+      Subframing: In order to manage downlink resources, up to 5 portions
+      of the image can be selected in the MP and downlinked as subframes.
+      The subframes are allowed to overlap. During EDR construction the
+      subframes are all mosaicked into the original image, and this
+      reconstruction is carried through to the CDR level.
+      During orbital operations this option is not regularly used.
+ 
+      Jailbars: Intended for data management during optical navigation,
+      jailbars are selected columns of an image retained by the MP.
+      Commanded column spacing values are not restricted and can be
+      set to any integer value between 1 and 1024, but the spacing is
+      fixed throughout the image. During EDR construction the
+      jailbars are all mosaicked into the original image, and this
+      reconstruction is carried through to the CDR level.
+      During flight this option is not regularly used.
+ 
+      Exposure Control: The exposure time of MDIS images can be set
+      manually by command, or automatically by the software. In manual
+      mode, exposure times from 1-989, 1001-1989, ..., to 9001-9989 ms
+      are available. In autoexposure mode the exposure time of the next
+      image is computed by the DPU software, and cannot exceed 989 ms
+      in duration. If the time of the next image occurs before the
+      calculation can be completed, and pixel binning or filter
+      position change, then the algorithm compensates for predicted
+      changes in scene brightness and filter transmission using an
+      onboard data structure.
+ 
+      Pointing: The MDIS imagers are mounted on a pivot platform, which
+      is itself mounted to the MESSENGER spacecraft deck. The pivot
+      platform is controlled by a stepper motor, which is controlled by
+      the Data Processing Unit (DPU). The pivot platform can move in
+      either direction. The total range of motion is 240 degrees, limited
+      by mechanical &apos;hard&apos; stops, and is further constrained by &apos;soft&apos;
+      stops applied by the software. The nominal pointing position for
+      MDIS is defined as 0 degrees, aligned with the spacecraft +Z axis
+      and the boresight for several other instruments. The range of the
+      soft stops is set to 40 degrees in the spacecraft -Y direction
+      (toward the MESSENGER sunshade) and +50 degrees in the +Y direction
+      (away from the sunshade). The pivot position can be commanded in
+      intervals of 0.01 degrees within this range.
+ 
+      Filter selection: The WAC imager contains a 12 position filter
+      wheel to provide spectral imaging over the spectral range of the
+      CCD detector. Eleven spectral filters span the range from 395 to
+      1040 nm, while the twelfth position is a broadband filter for
+      optical navigation.
+ 
+ 
+    Processing
+    ==========
+      An MDIS image downlinked by the spacecraft unpacks into a
+      succession of one or more compressed image subframes with binary
+      headers containing housekeeping items that contain full status of
+      the instrument hardware, including imager, software configuration,
+      temperature, voltage, and current readings, pivot position, and a
+      time stamp.
+ 
+      The data in one CDR consists of a single reconstructed image frame,
+      with the accompanying header translated into text format in the
+      label, and converted in physical units. Each frame has dimensions
+      of spatial samples in the form of detector columns and detector
+      rows. Each frame is formatted into one file (suffix *.IMG),
+      with an attached label.
+ 
+      Each image has dimensions XX pixels in the sample dimension and YY
+      pixels in the line dimension, where:
+ 
+      XX (columns) = 1024/binning, where 1024 is the number of columns
+      read off the detector, and binning is 2, 4, or 8 (the product of
+      binning at the instrument level and by the MP).
+ 
+      YY (rows) = 1024/binning, where 1024 is the number of columns read
+      off the detector, and binning is consistent with the sample
+      binning.
+ 
+      Subframes are not retained as separate entities but are reassembled
+      into their original coordinates in the image. Parts of the
+      reconstructed image not included in the subframes are given a value
+      of zero.
+ 
+      The label contains all of the housekeeping information in their raw
+      form. Selected ones are listed in duplicate in calbrated form (e.g.
+      degrees Celsius, volts, or amperes. In addition, value-added
+      information in the label describes image pointing and objectives.
+ 
+      The relationship of radiance in CDRs to raw data in EDRs is
+      described by the following equation:
+ 
+      L(x,y,f,T,t,b) = Lin[DN(x,y,f,T,t,b) - Dk(x,y,T,t,b) -
+      Sm(x,y,t,b)] / {Flat(x,y,f,b) * t * Resp(f,b,T)}
+ 
+      where:
+ 
+      L(x,y,f,T,t,b) is calibrated radiance in units of
+      W / (m**-2 microns**-1 sr**-1), measured by the pixel in column x,
+      row y, through filter f, at CCD temperature T and exposure time t,
+      for binning mode b. F, T, t, and b are all given in the label.
+ 
+      DN(x,y,f,T,t,b,MET) is the raw DN measured by the pixel in
+      column x, row y, through filter f, at CCD temperature T and exposure
+      time t, for binning mode b, and Mission Elapsed Time (MET).
+      f, T, t, b, and MET are all given in the label.
+ 
+      Dk(x,y,T,t,b,MET) is the dark level in a given pixel, derived from
+      a model based on exposure time and CCD temperature,
+ 
+      Sm(x,y,t,b) is the scene-dependent frame transfer smear for the
+      pixel,
+ 
+      Lin is a function that corrects small nonlinearity of detector
+      response,
+ 
+      Flat(x,y,f,b) is the non-uniformity or &apos;flat-field&apos; correction,
+ 
+      Resp(f,b,T) is the responsivity, relating dark-, flat-, and
+      smear-corrected DN per unit exposure time to radiance,
+ 
+      and
+ 
+      t is the exposure time.
+ 
+      The above equation assumes that data are in the native 12-bit
+      format in which they were read off the CCD, and that onboard
+      application of 12-to-8 bit lookup tables (LUTs) has been inverted.
+ 
+      This correction is done step-wise using the calibration tables and
+      images in this directory as follows.
+ 
+ 
+      (1) Inversion of 12 to 8 bit Compression
+      ========================================
+ 
+      8-to-12 bit inversion of DN values is required when the data are
+      8-bit. There are 8 inverse lookup tables (LUTs). The table to use
+      is indicated by the choice of forward LUT that was applied, as
+      indicated by the keyword MESS:COMP_ALG whose value is
+      from 0 through 7. An 8-bit value (in a row of the table) is
+      inverted by replacing it with the 12-bit value in the column
+      corresponding to a particular LUT.
+ 
+      (2) Subtraction of modeled dark level
+      =====================================
+ 
+      There are four separate models of dark level (dark current plus
+      electronics bias), for the MDIS-WAC and MDIS-NAC (as indicated
+      by the keyword INSTRUMENT_ID), and for each camera, without pixel
+      binning turned on (MESS:FPU_BIN = 0) or with pixel binning turned
+      on (MESS:FPU_BIN = 1). The models estimates the dark level
+      Dk(x,y,t,T) as a function of column position x, row position y,
+      exposure time t in units of milliseconds (as indicated by the
+      keyword MESS:EXPOSURE or EXPOSURE_DURATION), and CCD temperature
+      T (as indicated by the keyword MESS:CCD_TEMP).
+ 
+      (3) Frame Transfer Smear Correction
+      ===================================
+ 
+      Accumulation of signal continues during the finite duration
+      of frame transfer induces a streak or frame-transfer smear in the
+      wake of an illuminated object in the field of view, parallel to
+      the direction of frame transfer. This smear is approximated as:
+ 
+      For each pixel in column x and row y of an image, a correction is
+      applied where:
+ 
+      DN_dark_smear(x,y,t,b,f) = DN_dark(x,y,t,b,f) - Sm(x,y,t,b,f)
+ 
+      where
+ 
+      DN_dark_smear(x,y,t,b,f) is dark- and smear- corrected DN,
+ 
+      DN_dark(x,y,t,b,f) is dark-corrected DN,
+ 
+      Sm(x,y,t,b,f) is the estimated smear, and
+ 
+      t is exposure time measured in milliseconds.
+ 
+      (4) Correction for CCD non-linearity
+      ====================================
+      To remove effects of nonlinearity in WAC image data, each data
+      value processed to this point is divided by a function that
+      approximates the slight increase in detector sensitivity with
+      increasing brightness level. The general form is:
+ 
+      DN_lin = DN_dark_smear/[C1 * Ln(DN_dark_smear) + C2]
+      where
+ 
+      DN_dark_smear is the input dark- and smear-corrected DN,
+ 
+      DN_lin is linearized dark- and smear-corrected DN, and
+ 
+      C1 and C2 are constants.
+ 
+      (5) Flat-field correction
+      =========================
+      The flat field correction removes pixel to pixel differences in
+      detector responsivity, so that the responsivity coefficients can
+      be expressed as scalars for each filter. There is a separate
+      flat-field image for MDIS-WAC and MDIS-NAC (as indicated by the
+      keyword INSTRUMENT_ID), without pixel binning turned on
+      (MESS:FPU_BIN = 0) or with pixel binning turned on
+      (MESS:FPU_BIN = 1), for each separate filter (as indicated by
+      the keyword FILTER_NUMBER).
+ 
+      For each pixel in column x and row y of an image, application of
+      the correction is
+ 
+      DN_flat(x,y,f,b) = DN_lin(x,y,f,b) / Flat(x,y,f,b)
+ 
+      where
+ 
+      DN_flat(x,y,f,b) is flat-fielded, linearized, dark- and
+      smear-corrected DN,
+ 
+      DN_lin(x,y,f,b) is linearized dark- and smear-corrected DN, and
+ 
+      Flat(x,y,f,b) is the value in the appropriate flat-field image.
+ 
+      (6) Conversion from DNs to radiance
+      ===================================
+      The value that relates corrected DN&apos;s measured per unit time to
+      radiance is the responsivity, modeled as a function of which camera
+      is being used (MDIS-WAC or MDIS-NAC as indicated by the keyword
+      INSTRUMENT_ID), its binning state (as indicated by the keyword
+      MESS:FPU_BIN), and in the case of the WAC the filter number (as
+      indicated by the keyword FILTER_NUMBER). The value also depends on
+      CCD temperature (as indicated by the keyword MESS:CCD_TEMP).
+ 
+      To apply responsivity to obtain radiance L, the expression is
+ 
+      L(f) = DN_flat(f) / (t * Resp(f,T,b))
+ 
+      where
+ 
+      L(f) is radiance in filter in units of W / (m**2 microns**1 sr**1),
+ 
+      DN_flat(f) is dark-, smear-, linearity-, and flat field-corrected DN,
+ 
+      t is the exposure time in seconds, and
+ 
+      Resp(f,T,b) is the responsivity in filter f at CCD temperature T and
+      binning state b.
+ 
+      Images calibrated to units of radiance have a data type in the
+      file name denoted as &apos;RA&apos;.
+ 
+      (7) Conversion from radiance to I/F
+      ===================================
+ 
+      To convert from radiance to I/F (also known as radiance factor, the
+      ratio of measured radiance to that which would be measured from a
+      white perfectly Lambertian surface), the following is applied:
+ 
+      I_over_F(f, MET) = L(f) / Correct(f,MET)* pi *
+       (SOLAR_DISTANCE/149597870.691)**2 / F(f)
+ 
+      where
+ 
+      Correct(f,MET) is the responsivity correction in filter f at time MET,
+      which is a real number not equal to unity in WAC images where the
+      correction is applied, or unity in other images,
+ 
+      L(f,MET) is calibrated radiance calculated as described above for some
+      filter f at time MET,
+ 
+      SOLAR_DISTANCE is that value for distance of the target object from
+      the center of the sun in kilometers (as indicated by the keyword
+      SOLAR_DISTANCE),
+ 
+      149597870.691 is the number of kilometers in 1 AU, and
+ 
+      F(f) is effective average solar irradiance sampled under the filter
+      bandpass.
+ 
+      Images calibrated to units of I/F have a data type in the file name
+      denoted as &apos;IF&apos; if the Correct term is applied. Alternatively the
+      Correct term may be omitted in which case the data type is denoted
+      as &apos;IU&apos;.
+ 
+      (8) Treatment of special pixels
+      ===============================
+ 
+      Two types of pixels cannot be validly calibrated to either radiance
+      or I/F:
+ 
+      (a) Pixels under the dark mask at the edge of the detector do not
+      measure light from the scene, yet deviation of their calibrated
+      value from zero is a valuable measure of calibration residuals.
+      The average calibrated value under the dark mask is reported in the
+      label as DARK_STRIP_MEAN, but the actual pixel values are replaced
+      by the value indicated in the label for CORE_NULL.
+ 
+      (b) Saturated pixels do not have a known correspondence to scene
+      radiance. The pixel values in saturated pixels are replaced by the
+      value indicated in the label for CORE_HIGH_INSTR_SATURATION.
+ 
+ 
+    Data
+    ====
+      There are up to two data types associated with this volume,
+      single-frame calibrated images in units of radiance, or
+      single-frame calibrated images in unitless I/F. All data are stored
+      as 32-bit PC_REAL.
+ 
+ 
+    Ancillary Data
+    ==============
+ 
+      There are two types of ancillary data provided with this
+      dataset:
+ 
+      1. The GEOMETRY directory contains the file GEOMINFO.TXT that points
+      to and describes the function of each SPICE kernel relevant to MDIS.
+ 
+      2. The CALIB directory contains a summary of the processing
+      required to convert raw data to units of radiance or I/F, as well
+      as all of the matrices and coefficients needed. See CALINFO.TXT
+      in that directory for more details.
+ 
+ 
+    Coordinate System
+    =================
+ 
+      The cartographic coordinate system used for the MDIS data products
+      conforms to the J2000 celestial reference frame for star imaging,
+      and the IAU planetocentric system with East longitudes being
+      positive for planetary surfaces. A Mercury radius of 2440.0 km was
+      used for data products delivered prior to delivery 15. In delivery
+      15, that value is updated to 2439.4 km.
+ 
+ 
+    Media/Format
+    ============
+ 
+      The MDIS archive is organized and stored in the directory
+      structure described in the Mercury Dual Imaging System (MDIS)
+      Calibrated Data Record (CDR) and Reduced Data Record (RDR)
+      Software Interface Specification (SIS). The contents of the
+      archive, along with fiduciary checksums, are compressed into
+      a single &apos;zip archive&apos; file for transmittal to the PDS Imaging
+      node.  The zip archive preserves the directory structure
+      internally so that when it is decompressed the original
+      directory structure is recreated at the PDS Imaging node.
+      The zip archive is transmitted to the PDS Imaging node via
+      FTP to the URL specified by the node for receiving it.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level Overview
+    =========================
+      This is a calibrated data set.  Known issues of concern are
+      described below.
+ 
+ 
+    Review
+    ======
+      This archival data set was examined by a peer review panel
+      prior to its acceptance by the Planetary Data System (PDS).  The
+      peer review was conducted in accordance with PDS procedures.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+ 
+      The majority of raw EDR data are calibrated to CDRs. Briefly,
+      for calibration to radiance, the following criteria are met:
+ 
+      (a) The data represent a scene and not the instrument test
+      pattern, as indicated by byte 0 of the data quality index (DQI)
+      for the EDR.
+ 
+      (b) The exposure time is greater and zero (zero exposures
+      occur in some images due to software features), as indicated
+      by DQI byte 1.
+ 
+      (c) Less than 20 percent of the image is saturated (empirically
+      this is a threshold dividing wholly corrupted images from
+      everything else)
+ 
+      An additional criterion is met for calibration to I/F:
+ 
+      (d) The target of the image is MERCURY, VENUS, EARTH, MOON,
+      or CAL_TARGET.
+ 
+      THE USER OF CALIBRATED MDIS DATA IS URGED TO EXAMINE THE
+      DQI IN THE LABEL FOR POSSIBLE ISSUES OF DATA QUALITY, AND
+      TO UNDERSTAND SOURCES OF UNCERTAINTY IN THE DATA NUMBERED
+      (1) THROUGH (14) BELOW. These issues are itemized in order
+      of their recognition in the data set.
+ 
+      The 16-byte Data Quality Index or DQI is used to encode
+      figures-of-merit into one parameter, including automated
+      assessments of validity of the exposure time, presence of an
+      excessive number of pixels at or approaching saturation, validity
+      of the reported pivot position, quality of spacecraft attitude
+      knowledge from the MESSENGER star cameras, CCD temperature
+      within range that supports nominal image calibration accuracy,
+      and completeness of data within the commanded selection of
+      subframes or full frame.
+ 
+      A &apos;1&apos; in any of the fields of the data quality index indicates a
+      condition that could adversely affect data quality. A value of &apos;1&apos;
+      in bytes 0, 1, or 4 leads to a raw image or EDR not being
+      calibrated to a CDR, hence no CDR should exist. A value of
+      &apos;1&apos; in byte 2 indicates that radiance values derived from the
+      columns of the image experiencing saturation in any row are either
+      invalid or suspect. A value of &apos;1&apos; in byte 3 or 5 means
+      that even if the image is radiometrically accurate, its
+      reconstructed pointing is suspect. A value of &apos;1&apos; in byte 6 (CCD
+      out of temperature range at which radiometric calibration is well-
+      constrained) is a warning and does not necessarily indicate invalid
+      data.
+ 
+      Byte 0: Image source is CCD.
+        1 = Image source is test pattern as indicated by
+            MESS:SOURCE=1=Test pattern or
+            MESS:SOURCE=2=Inverted test pattern.
+        0 = Image source is CCD as indicated by MESS:SOURCE=0=CCD.
+ 
+      Byte 1: Valid exposure time.
+        1 = Exposure time in ms as indicated by MESS:EXPOSURE equals 0 ms
+            (during cruise) or is less than or equal to 2 ms (orbit).
+        0 = Exposure time in ms as indicated by MESS:EXPOSURE is greater
+            than or equal to minimum valid value.
+ 
+      Byte 2: Presence of an excessive number of pixels at or approaching
+      saturation.
+ 
+      As saturation is approached responsivity decreases, and signal
+      becomes nonlinear with brightness for small sources. Saturation can
+      be exceeded for very bright or large sources once pixel
+      antiblooming is overwhelmed. The raw 12-bit DN level indicative of the
+      onset of saturation varies between the two CCDs. In the WAC
+      (MESS:IMAGER=0) it is approximately 3600; in the NAC
+      (MESS:IMAGER=1) it is approximately 3400. If a LUT has been used
+      to convert 12-bit to 8-bit DN, then an 8-bit DN value of 255
+      also indicates saturation. An 8-bit 255 is encountered before
+      saturation of the 12-bit DN in the case of LUT 1. In autoexposure
+      mode, the typical threshold for the allowable number of saturated
+      pixels is 5 pixels. In manual exposure mode the number of saturated
+      pixels is uncontrolled.
+ 
+        1 = There are  &gt; 5 pixels exceeding the DN indicating onset
+            of saturation.
+        0 = There are  &lt; 5 pixels exceeding the DN indicating onset
+            of saturation.
+ 
+      Byte 3: Valid pivot position.
+        1 = Pivot position not valid, as indicated by pivot position
+            validity flag MESS:PIV_PV=0=invalid.
+        0 = Pivot position valid as indicated by MESS:PIV_PV=1=valid.
+ 
+      Byte 4: Filter wheel in position (WAC only; requires
+      MESS:IMAGER=0, or else value of this byte = 0).
+        1 = Filter wheel not in position, as indicated by either of
+            two conditions:
+            (a) filter wheel position validity flag MESS:FW_PV=0=invalid,
+            (b) an excessive difference between filter wheel resolver
+                goal and actual position as given in table below.
+        0 = Filter wheel in position as indicated by an allowable
+            difference between goal and position, and by MESS:FW_PV=1.
+ 
+            Filter wheel encoder positions
+            FILTER_NUMBER   MESS:FW_GOAL   Allowable (abs(MESS:FW_POS -
+                                           MESS:FW_GOAL))
+            1               17376          +/- 500
+            2               11976          +/- 500
+            3               6492           +/- 500
+            4               1108           +/- 500
+            5               61104          +/- 500
+            6               55684          +/- 500
+            7               50148          +/- 500
+            8               44760          +/- 500
+            9               39256          +/- 500
+            10              33796          +/- 500
+            11              28252          +/- 500
+            12              22852          +/- 500
+ 
+      Byte 5: Quality of spacecraft attitude knowledge.
+        1 = Spacecraft attitude knowledge is bad (MESS:ATT_FLAG is in
+            the range 0-3).
+        0 = Spacecraft attitude knowledge is good (MESS:ATT_FLAG is in
+            the range 5-7).
+ 
+      Byte 6: CCD temperature range.
+        1 = CCD out of temperature range at which performance is well
+            calibrated (MESS:CCD_TEMP is outside a range of between
+            1005 and 1130, which for the WAC is -45C to -11 C, and for
+            the NAC is -48C to -14C).
+        0 = CCD within well calibrated temperature range (MESS:CCD_TEMP
+            is within the stated range).
+ 
+      Byte 7: Completeness of data within the commanded selection of
+      subframes or full frame. Missing frames or portions of frames are
+      indicated in an EDR with a value of 0 (this cannot be a valid data
+      value).
+        1 = There are missing data (some pixels populated with 0).
+        0 = There are no missing data.
+ 
+      Bytes 8-15: spare.
+ 
+      In addition, the following caveats are applicable to radiance, I/F,
+      and map-projected products derived from the EDRs.
+ 
+      (1) WAC CLEAR FILTER. Filter 2 on the wide-angle camera is broad-
+      band and designed for star imaging. Even extremely short exposure
+      times saturate on Mercury or other typical extended sources.
+      Flat-field and responsivity corrections for WAC filter 2
+      are less accurate than in other filters.
+ 
+      (2) NAC PSF. Due to mass constraints, the NAC aperture is smaller
+      than what is required for diffraction-limited performance. The
+      expected size of the Airy disk (approximately, the full-width at
+      half-maximum of the point-spread function including only effects of
+      diffraction) is &gt; 2 pixels. In practice the PSF is further
+      broadened by surface imperfections of optical elements and scatter
+      centers on optical surfaces.
+ 
+      (3) COMPRESSION ARTIFACTS. Wavelet compression applied to science
+      images is lossy. At higher compression ratios, compression artifacts
+      will degrade data precision over spatial scales comparable to or
+      smaller than several pixels. The degradation can be greater
+      proportionally to the image dynamic range of brightness, if the data
+      are converted from 12 to 8 bits in such a way that a 1 DN error
+      occupies a greater fraction of the digital dynamic range. Wavelet
+      compression was used minimally prior to Mercury orbit. The initial
+      configuration in Mercury orbit was to perform 12 to 8 bit conversion
+      using LUT0 for the WAC and LUT2 for the NAC, with a wavelet
+      compression ratio usually set to 4:1 for color, 8:1 for monochrome
+      imaging, or lossless for star imaging. Initial images
+      exhibited unexpectedly visible compression artifacts. Beginning
+      19 April 2011, LUT0 and LUT2 were replaced with LUT1 which better
+      preserves image dynamic range. Beginning 19 May 2011, targeted color
+      images began to be acquired with lossless compression. Beginning
+      31 May 2011, the wavelet compression ratio for color images was
+      reduced to 3:1 for global mapping. Wavelet compression is bypassed
+      for a variety of types of images depending on downlink bandwidth and
+      availability of space on the spacecraft solid-state recorder.
+ 
+      (4) FRAME TRANSFER SMEAR. At very short exposure times (&lt;7 ms), the
+      time for frame transfer is close to the total exposure so that the
+      correction for frame transfer smear may leave perceptible
+      artifacts. In October 2011 it was discovered that a software
+      error in the image calibration pipeline leads to small filter- and
+      exposure time-dependent systematic errors in correction of
+      frame transfer smear. These are corrected beginning with version 4
+      CDRs.
+ 
+      (5) TIME VARIATIONS IN MDIS ATTITUDE. The orientation of MDIS
+      relative to the spacecraft reference frame was determined inflight
+      using star calibrations to solve for WAC-NAC coalignment, the
+      orientation of the pivot plane, and the origin of the reported
+      pivot position within the plane. These alignments can be
+      affected by thermal state of the spacecraft, or by any other
+      events that potentially shift the position of the MDIS base
+      relative to the spacecraft star cameras that generate the attitude
+      measurements. Mercury and Venus flybys are thermally benign.
+      However in Mercury orbit there are thermal perturbations from which
+      errors in reported MDIS attitude of up to 350 microradians might be
+      expected. Regular star calibrations are conducted in orbit and
+      indicate up to two or more types of time variation in attitude of an
+      image relative to a given reported pivot position: (a) A small number
+      of abrupt shifts of WAC and NAC image alignment, near the time of
+      Mercury orbit insertion and again in July 2012, several hundred
+      microradians in magnitude. The first is being addressed in an updated
+      frames kernel, and was first describe in a frames kernel released in
+      conjunction with release 9. The frames kernel in conjunction with
+      release 11 and the first release of DDRs also includes the shift of
+      NAC image alignment near the time of orbit insertion.
+      (b) In addition to abrupt shifts of WAC and NAC image orientation,
+      subsequent gradual drift is observed in both from star calibration
+      images. That shift and the abrupt one in July 2012 are addressed by
+      modifications to the pivot C kernel that incorporate drift
+      as part of the pivot attitude. Limited star calibrations that
+      determine the relative alignments of the WAC and NAC during the
+      orbital phase of the mission indicate that the two fields of view
+      drift together, so a single modified pivot C kernel
+      is used to describe the pointing for both cameras.
+ 
+      (6) ARTIFACTS IN GROUND-DERIVED FLAT-FIELD CORRECTIONS.
+      Two factors make the ground-derived flat-fields less than ideal.
+      First, MDIS&apos;s structure generated reflections so that in
+      the calibration chamber, the illuminated source created glint off
+      MDIS blanketing that reflected off the chamber window, adding
+      spatially non-uniform stray light to the measurements.
+      Eliminating the backscattering off the chamber window required
+      acquisition of flat-fields at ambient (room-temperature) conditions
+      at which residuals from the dark current correction introduce
+      artifacts. Ultimately the latter approach was chosen for ground
+      derivations. Second, there are dust donuts (shadows behind out-
+      of-focus dust on the CCD cover glass) in the WAC. The locations of
+      some WAC dust donuts moved during launch, and other dust donuts
+      disappeared. Application of the ground-derived flat-fields
+      systematically under- or over-corrects the non-identical WAC dust
+      donuts.
+ 
+      The flat-fields were rederived inflight using images of the onboard
+      calibration target, and validated with bland areas of Venus during
+      Venus flyby 2. These images were taken with a cold CCD, eliminating
+      residuals from dark current, and are thought to have WAC dust
+      donuts in their &apos;final&apos; post-launch position. The onboard target
+      is uniform, but at the several-percent level shows evidence for low
+      spatial frequency glint off the MDIS structure. Therefore to
+      rederive the flat field for each WAC filter, an average of several
+      images of the calibration target was divided by a median-filtered
+      version of the same image, and multiplied by a median-filtered
+      ground-derived flat field taken through the same filter with
+      the same instrument binning. For the NAC the same procedure was
+      used, with the inputs being Venus images.
+ 
+      The following regions of different flat-fields were initially subject
+      to errors tracing back to the ground calibration. In calibrated images,
+      too-high values of the flat fields yielded too-low values of
+      radiance or I/F, or vice versa. The most significant issues were in
+      the upper rows of WAC filters 3 and 6.
+ 
+        WAC filter 2: Flat-field values are place-holders only.
+ 
+        WAC not-binned, all filters: In the last 25 columns on the right,
+        values that are too high by 1-2%.
+ 
+        WAC not-binned, filter 3: In the top 32 rows, long
+        spatial frequency errors of up to a few percent, increasing to
+        the top of the image.
+ 
+        WAC not-binned, filter 6: In the top 145 rows, long
+        spatial frequency errors of up to a few percent, increasing to
+        the top of the image.
+ 
+        WAC binned, all filters: In the last 15 columns on the right,
+        values that are too high by 1-2%.
+ 
+        WAC binned, filter 6: In the top 24 rows, long spatial
+        frequency errors of up to a few percent, increasing to the top
+        of the image.
+ 
+        WAC, filter 5: A weak horizontal banding in the flat-field
+        image probably originating from ground calibration.
+ 
+        NAC binned: The most recent flat-field is ground-derived and
+        flight measurements do not yield any improvement.
+ 
+      For WAC filters 3 and 6 only, the flat-fields were updated
+      in Mercury orbit, to version 5. Approximately 400 images in
+      each filter and with DPU binning on and off (4 data sets) were
+      calibrated using the previous flat field version, and
+      photometrically corrected to remove cross-scene illumination
+      gradients. To produce updated flat-fields, the median of the 400
+      images was scaled to unity over the same central region as with
+      ground-derived flat-fields.
+ 
+      A final update to version 6 in the end-of-mission delivery 15
+      used a similar procedure, but more images for improved
+      statistics, and excluded images with compression artifacts.
+      An improved photometric correction reduced low spatial frequency
+      errors. The following filter and binning combinations were
+      upgraded to version 6: WAC filters 3 and 6, and binned images
+      in WAC filters 3, 4, 5, 6, 7, 9, and 12.
+ 
+      (7) RADIOMETRIC ACCURACY. The responsivities used to convert DNs
+      to radiance are based on ground calibrations that were validated
+      by comparison of MDIS with MASCS-VIRS measurements of Venus and
+      Mercury. Except for 3 of the 12 filters, WAC radiances based on
+      ground calibrations yielded a similar spectral shape with
+      a 10-15% difference in absolute value. Filters 3 and 6 (at 480
+      and 433 nm) were systematically too low and too high
+      respectively, so the responsivites used to calibrate them were
+      adjusted empirically to improve correspondence with MASCS-VIRS.
+      In addition WAC filter 2 (clear filter) radiances have not been
+      validated. The relative accuracy of NAC and WAC filter 7 data
+      (which correspond in central wavelength) were examined by
+      comparing nearly simultaneous images taken during the Mercury 2
+      flyby and the NAC calibration was adjusted empirically to
+      produce agreement.
+ 
+      Both the NAC and WAC have CCDs whose responsivity to different
+      wavelengths of light varies with CCD temperature. Inflight
+      including Mercury orbit the CCD operating temperature range is
+      typically -10C to -45C; however ground calibration
+      measurements were acquired only at +23C, -31C, and -34C
+      rendering the initial characterization of the temperature
+      dependence inaccurate especially below -34C. M1 and M2
+      measurements of comparable surfaces, acquired at CCD
+      temperatures of -34C to -43C, were used to improve the
+      calibration of CCD temperature dependence over the lower
+      end of the temperature range, and this correction was applied
+      to version 3 CDRs.
+ 
+      In version 4 CDRs, an additional update to responsivity
+      improved temperature dependence over the full operating range.
+      The correction was derived empirically by fitting as a function
+      of CCD temperature the median values of images acquired at a
+      wide range of temperatures but a narrow range of photometric
+      geometries.
+ 
+      In version 5 CDRs, a similar correction to responsivity used
+      all Mercury images satisfying the illumination criteria.
+ 
+      (8) SCATTERED LIGHT. In the NAC, scattered light from out-of-field
+      sources is an issue. The geometry contributing most of the scatter
+      is 1-2 fields-of-view sunward of the NAC boresight. For a very
+      large, evenly illuminated source that overfills the field-of-view
+      by a factor of several, ray-trace studies supported by testing
+      during Venus flyby 2 suggest that 2-7% of the radiance measured in
+      the field-of-view will have come from out-of-field sources. The
+      spatial pattern of the scatter is variable, due to diffuse
+      reflections off the internal instrument housing.
+ 
+      The WAC is subject to scattered light originating from within the
+      field-of-view or just outside it. In overexposed images, the source
+      is evidently multiple reflections off of 13 optical surfaces (2
+      sides of each of 4 lenses, the spectral filter, and the CCD cover
+      glass, as well as the CCD surface itself). The scatter becomes
+      worse at longer wavelengths. Just off the limb of a large
+      extended source near 1 field-of-view in size, like Venus or
+      Mercury, measured radiance increases with wavelength from 2% to 7%
+      of the value measured on the extended source. The value decreases
+      with distance off the target more quickly at longer than at
+      shorter wavelengths, but remains at 1% hundreds of pixels from
+      the source. Conversely, light must be scattering from bright
+      parts of an image to dark parts of an image. Averaged over
+      sources tens of pixels in area, and away from abrupt brightness
+      contrasts, scattered light affects shapes of spectra measured
+      from WAC data at least at the 1-2% level, worse near brightness
+      boundaries or for small, bright crater ejecta. The expected effect
+      is enhanced brightness at &gt;650 nm in dark areas, and decreased
+      brightness at &gt;650 nm in small bright areas.
+ 
+      In the end-of-mission delivery 15, a forward model of the
+      expected WAC scatter from a given scene was derived using
+      optical design software modeling CCD structure and hardware,
+      with magnitudes of scatter calibrated against flight measurements.
+      The ray trace analysis reveal an in-scene component from light
+      diffracted by the CCD and reflected by the CCD cover glass, and
+      an out-of-scene component from light reflected off metallic
+      surfaces alongside the CCD and back off the cover glass.
+      CDRs with bright craters and other albedo non-uniformities located
+      at geometries with the strongest scatter were identified, and
+      excluded from the final version of color map products (MDRs,
+      MD3s, and MP5s).
+ 
+      (9) POINTING UNCERTAINTY. MDIS pivot C-kernels generated prior
+      to September 2009 were based on counting steps of the pivot motor.
+      There is periodicity at the scale of 3 degrees of pivot rotation
+      in the relationship between pivot step size and physical angle,
+      leading to reported pivot geometries being in error by up to 350
+      microradians in early versions of the pivot C kernel. Inflight
+      tests during 2009 supported development of an alternative
+      calculation of pivot angle using the pivot position resolver;
+      this approach is included in MDIS pivot C kernels since MDIS
+      release 5 (after Mercury flyby 3). The uncertainties
+      in pivot attitude in latter kernels are of the order of
+      35 microradians.
+ 
+      Uncertainty in spacecraft pointing is by requirement less than 350
+      microradians, but unofficial estimates from the guidance and
+      control team suggest a more typical value near 70 microradians.
+      When convolved with error in pivot pointing, this results in the
+      majority of error in knowledge of image pointing (exclusive of
+      thermal distortion or time variations that can be calibrated out).
+ 
+      An additional and generally larger source of error in map
+      projection of MDIS images acquired during Mercury orbit may be
+      uncertainty in spacecraft position. At low altitudes that source
+      of error dominates, whereas at high altitudes pointing error
+      dominates, such that in either case typical errors in map
+      projection from the best reconstructed spacecraft position are
+      expected to be smaller than 1 km.
+ 
+      In the end-of-mission delivery 15 of SPICE files and map products,
+      these errors are reduced by controlling images using c-smithed
+      kernels and a global digital elevation model (DEM), both
+      derived using a least-squares bundle adjustment of common
+      features, measured as tie point coordinates in overlapping NAC and
+      WAC-G filter images of Mercury at favorable solar incidence and
+      emission angles.
+ 
+      (10) OUT OF FOCUS PARTICULATES IN LONG-EXPOSURE IMAGES OF DEEP
+      SPACE. A number of images collected by the MDIS wide-angle camera
+      using long (longer than 5 s) exposure times contain artifacts that
+      are most likely caused by glint from microscopic particles that
+      are in close proximity to the spacecraft. Because the particles
+      are out of focus they appear as extended sources. The length of
+      these artifacts is most likely due to motion of the particles
+      over the significantly large exposure time of the images.
+ 
+      (11) ANOTHER FLAT-FIELD ARTIFACT. In Mercury orbit, it was
+      discovered that the flat-field correction in the image column
+      immediately adjacent to the 4 column wide dark strip at the edge
+      of the CCD is made problematic by low raw DN levels. Therefore
+      beginning with version 3 CDRs, in not-binned 1024x1024 pixel
+      images, during the calibration process the leftmost 5 columns are
+      assigned null values; in 512x512 binned images the leftmost 3
+      columns are assigned null values; and in 256x256 binned images
+      the leftmost 2 columns are assigned null values.
+ 
+      (12) TIME-VARIABLE WAC RESPONSIVITY. During Mercury orbit it was
+      recognized that filter-dependent changes in WAC responsivity on
+      the order of +/- 15% occurred over timescales as short as several
+      days. Because those variations were not consistent from filter to
+      filter, they led to spurious spectral features, which were
+      particularly conspicuous near 750 nm. The cause(s) of these
+      variations in responsivity are not known, but they could include
+      transient radiation effects on the detector or electronics, aging
+      of filters, periodic deposition and burn-off of contaminants on
+      filters, or incorrect recording of exposure time. An initial
+      empirical correction for images acquired in the first year of
+      operations was developed at utilized in version 4 WAC CDRs.
+ 
+      For version 5 WAC CDRs in delivery 15 at end of mission, an
+      updated correction covers the full duration of the orbital
+      phase. Overlaps between color image sets in color mapping campaigns
+      were used to derive a multiplicative correction factor for each
+      filter and for each Earth day (2-3 orbits). It used all image data
+      with a pixel scale &gt;50 m and incidence angle (measured at the
+      center pixel of the 750-nm image in the image set) of &lt;80 degrees.
+      The images were calibrated to I/F using the standard calibration
+      with Correct(f,MET) set to unity, the latest
+      version of temperature-dependence of detector responsivity, the
+      latest correction for frame-transfer smear, and newly derived
+      flat-field corrections. Images were then photometrically
+      normalized to 30 degrees incidence angle, 0 degrees emission angle,
+      and 30 degrees phase angle. Any portions of image sets lacking
+      coverage in all filters, or with incidence angles &gt;70 degrees or
+      emission angles &gt;30 degrees, were trimmed. Image sets were mapped
+      to an equal-area (sinusoidal) projection at 4 km/pixel. All images
+      acquired on each day were mosaicked for each filter, typically
+      resulting in a fairly narrow north-south strip that had substantial
+      overlap with surrounding days. With this dataset, multiplicative
+      correction factors for each day were calculated through a weighted
+      least-squares optimization that minimized the discrepancy between
+      the median values for all spatial overlaps. The optimization was
+      performed in two steps. First, a mosaic of data acquired before
+      22 May 2011 was held as constant, because this dataset was seen to
+      be largely self-consistent. However, these data covered only a
+      fraction of the planet, so a mosaic with greater coverage was
+      created from images that were corrected in the first iteration with
+      low residual values. In the second step, all data were allowed to
+      vary in the simultaneous optimization, with the new mosaic held as
+      reference. Correction factors were derived for days on which no data
+      were included in our optimization process by interpolating between
+      adjacent days. Filters with center wavelengths at 700, 950, and
+      1020 nm were not used for regional or global mapping and thus did not
+      have enough overlap to derive correction factors with this method.
+      Instead, their empirical correction was derived by comparing them
+      with a synthetic global mosaic created by linear interpolation from
+      images acquired with adjacent filters.
+ 
+      Final 1-, 3-, 5-, and 8-color mosaics use CDRs with this updated
+      correction. An analysis of overlap among individual images shows
+      that residual differences (which include errors from calibration,
+      scattered light, and possible incomplete correction of photometric
+      variation) average &lt;2% for the majority of the planet.
+ 
+      (13) TEMPERATURE-DEPENDENCE OF WAC and NAC FOCAL LENGTH. The
+      star calibrations used to track the position of the MDIS pivot
+      base, augmented by special calibrations using fields with high
+      spatial densities of stars, sample much of the range of thermal
+      environments experienced in orbit. Analyses of these data showed
+      that focal length of each camera is correlated with temperature
+      of the focal plane housing &apos;FOCAL_PLANE_TEMPERATURE&apos;, and that
+      focal length varies over the cameras&apos; operating temperature range
+      by several parts in 10,000. This dependence is included in an
+      updated delivery of the instrument kernel associated with PDS
+      release 11.
+ 
+ 
+    Limitations
+    ===========
+      None
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

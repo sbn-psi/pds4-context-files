@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vo1-vo2-m-vis-2-edr-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VO1/VO2 MARS VISUAL IMAGING SS EXPRMNT DATA RECORD V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.viking::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:visa.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:visa.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:visb.vo1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:visb.vo2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.deimos::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.phobos::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:star.star::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-2-edr-v2.0__browserp_vo1-vo2-m-vis-2-edr-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-2-edr-v2.0__browser_geo_vo1_vo2-m-vis-2-edr-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-2-edr-v2.0__dvo_geo_vo1_vo2-m-vis-2-edr-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-2-edr-v2.0__dvo_imaging_vo1_vo2-m-vis-2-edr-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vo1-vo2-m-vis-2-edr-v2.0__dvo_usgs_vo1-vo2-m-vis-2-edr-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Guinness, E.A., S. Slavney, E. Eliason, M. Martin, and
+                   J. Hyon, Archive of Digital Images from NASA&apos;s Viking
+                   Orbiter 1 and 2 Missions, Jet Propulsion Laboratory,
+                   CD-ROM (USA_NASA_PDS_VO_1001), 1990.
+            </reference_text>
+            <description>reference.GUINNESSETAL1990</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VO1/VO2-M-VIS-2-EDR-V2.0</data_set_id>
+        <data_set_name>VO1/VO2 MARS VISUAL IMAGING SS EXPRMNT DATA RECORD V2.0</data_set_name>
+        <data_set_release_date>1990-12-01</data_set_release_date>
+        <start_time>1976-06-22T17:59:00.046Z</start_time>
+        <stop_time>1980-07-30T22:14:59.046Z</stop_time>
+        <producer_full_name>EDWARD A. GUINNESS</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Viking Orbiter 1 &amp; Viking Orbiter 2 Imaging (VIS) Mars
+            Experiment Data Records
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set is a digital archive of images acquired by the
+            Viking Orbiter 1 and 2 spacecraft. The archive will include the
+            best available Experiment Data Record (EDR) versions of images
+            acquired by the Viking Orbiter Visual Imaging Subsystems (VIS).
+            The archive is stored on compact read-only optical disk media
+            (CD-ROM) for distribution. The EDR image data are stored on
+            CD-ROM in a compressed format that allows exact reconstruction of
+            the original image. The images were compressed in order to reduce
+            the number of CD-ROMs required for the archive. The average
+            Viking Orbiter image is compressed by a factor of about 3.5. Each
+            CD-ROM in the archive also includes documentation about the
+            organization and contents of the disk. Software is included to
+            provide programmers with tools to decompress image files. The
+            CD-ROM has index files containing information about all the
+            images stored in the archive. These index files can be loaded
+            into a database management system to help the user locate images
+            of interest.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set is a digital archive of images acquired by the
+      Viking Orbiter 1 and 2 spacecraft.  The archive will include
+      the best available Experiment Data Record (EDR) versions of
+      images acquired by the Viking Orbiter Visual Imaging Subsystems
+      (VIS).  The archive is stored on compact read-only optical disk
+      media (CD-ROM) for distribution.  The EDR image data are stored
+      on CD-ROM in a compressed format that allows exact
+      reconstruction of the original image.  The images were
+      compressed in order to reduce the number of CD-ROMs required
+      for the archive.  The average Viking Orbiter image is
+      compressed by a factor of about 3.5.  Each CD-ROM in the
+      archive also includes documentation about the organization and
+      contents of the disk.  Software is included to provide
+      programmers with tools to decompress image files.  The CD-ROM
+      has index files containing information about all the images
+      stored in the archive.  These index files can be loaded into a
+      database management system to help the user locate images of
+      interest.
+ 
+      The EDR images in this archive have not been processed in any
+      form other than organizing the original telemetry into raster
+      formatted files and compressing the image data using a Huffman
+      encoding algorithm.  The reason for distributing unprocessed
+      data rather than processed versions of the images is that the
+      calibration files and processing procedures will continue to
+      evolve.  This is due to improvements, not only in the
+      procedures, but also in the radiometric calibration data and in
+      the geometric information concerning spacecraft position and
+      pointing.  By providing unprocessed images, improved image
+      processing capabilities can be reapplied to the original
+      unprocessed data.
+ 
+      To make full scientific use of the image collection, it is
+      necessary to understand the radiometric and geometric
+      properties of the Viking Orbiter imaging systems and to perform
+      corrections to the EDR data.  A number of image processing
+      systems are available that provide radiometric and geometric
+      corrections, display capabilities, and analysis tools for
+      planetary images.  Further information on processing Viking
+      Orbiter image data and the necessary radiometric and geometric
+      calibration data is available through the PDS Image Node at the
+      U.S.  Geological Survey in Flagstaff, Arizona.
+ 
+ 
+      Processing Level Id            : 2
+      Software Flag                  : N
+      Processing Start Time          : 1990-11-01
+      Processing Stop Time           : UNK
+ 
+ 
+    Parameters
+    ==========
+ 
+      Description
+      -----------
+        Data Number is an integer expressing the digital value of an
+        experiment&apos;s telemetry data.
+ 
+        Sampling Parameter Name        : PIXEL
+        Data Set Parameter Name        : DATA NUMBER
+        Data Set Parameter Unit        : DIMENSIONLESS
+        Noise Level                    : UNK
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : VO1
+      Data Set Parameter Name         : DATA NUMBER
+      Instrument Parameter Name       : RADIANCE
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VO2
+      Data Set Parameter Name         : DATA NUMBER
+      Instrument Parameter Name       : RADIANCE
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID          : MASTER DATA RECORD (MDR)
+        Software                    : UNK
+        Product Data Set ID         : VO1/VO2-M-VIS-2-EDR-V2.0
+ 
+        Source Data Set ID          : VO1/VO2-M-VIS-2-EDR-V1.0
+        Software                    : UNK
+        Product Data Set ID         : VO1/VO2-M-VIS-2-EDR-V2.0
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      In the process of preparing the EDR images for inclusion in
+      this data set, several steps were taken to insure that the best
+      available image data and label information were archived.  The
+      primary digital data source was a collection of magnetic tapes
+      produced by the Planetary Image Conversion Task.  These tapes,
+      also known as the Planetary Archive tapes, constitute PDS
+      Version 1 of the Viking Orbiter image data set (PDS data set id
+      &apos;VO1/VO2-M-VIS-2-EDR-V1.0&apos;).  The data on the Planetary Archive
+      tapes were derived from EDR tapes.  The quality of the image
+      data on the Planetary Archive tapes was checked for problems
+      such as missing lines, segments of data from other images, and
+      mismatched images and labels.  Some of the images received on
+      Earth were not available on these Planetary Archive tapes.  In
+      addition, some Viking Orbiter images were never transferred to
+      EDR tapes.  For images with data problems and for images not
+      available from either tape source, attempts were made to
+      retrieve the data from the Viking Master Data Record (MDR)
+      tapes.  The accuracy of the image description keywords in the
+      image label was verified by comparing data from several
+      sources.  These sources included the PDS Central Node image
+      catalog, image labels on the Planetary Archive tapes, and
+      Mission Test and Imaging System (MTIS) photoproducts.  In cases
+      where there were discrepancies among the sources, label values
+      were chosen that occurred most frequently among the sources,
+      maintained consistency among images within a sequence, and
+      agreed with the VIS team planning notes.  For example, a
+      discrepancy in exposure duration for an image might be resolved
+      by choosing the value of exposure duration for other images in
+      the same sequence.  If a discrepancy could not be resolved,
+      that keyword was assigned the value &apos;UNKNOWN&apos;.  As a check on
+      the data compression procedure, each image was decompressed and
+      compared to the original image.  The compressed image file was
+      accepted only if the results of decompression exactly matched
+      the original image data.
+ 
+      Many Viking Orbiter images are missing data and contain some
+      amount of noise.  A common pattern of missing data is a series
+      of vertical bars with zero value pixels spaced at an interval
+      of 7 samples.  The 7-sample interval results from the raw data
+      being stored on the spacecraft and transmitted to Earth in
+      packets that contained every seventh pixel.  In addition, data
+      for a few horizontal image lines may be missing and such lines
+      are filled with zero values.  The types of noise found in
+      Viking Orbiter images include single-pixel random noise and
+      several sources of coherent noise.  The random noise is usually
+      due to telemetry errors.  The coherent noise arises from
+      shuttering of the adjacent camera, filter wheel stepping, and
+      scan platform movements.  If the amount of missing data and
+      noise is large, noise removal procedures may be needed to make
+      the image viewable.  Box filtering techniques that fill in zero
+      values or average the bright and dark spikes of random noise
+      are often successful at noise removal.
+ 
+      It should be noted that the START_TIME and the STOP_TIME in the
+      PDS catalog, with values 1976-06-22T17:59:00.469Z and
+      1980-07-30T22:14:59.469Z respectively, are the times associated
+      with the version 1 data set VO1/VO2-M-VIS-2-EDR-V1.0.  These
+      times are approximately correct for the current data set but
+      will be known more accurately only after data processing has
+      been completed.  PDS labels embedded in each image file and the
+      index tables on the CD-ROM contain the exact times associated
+      with each image.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>75-075A-01c</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>75-083A-01a</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

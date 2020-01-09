@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rdrs-5-scvdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MAGELLAN SURFACE CHARACTERISTICS VECTOR DATA RECORD</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rdrs.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rdrs-5-scvdr-v1.0__browserp_geo_mgn-v-rdrs-5-scvdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rdrs-5-scvdr-v1.0__dvo_geo_mgn-v-rdrs-5-scvdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Barry, S., Magellan Mission Operations System: Radar System Interface
+                   Requirements, Hughes Aircraft Co. Report HS513-823-3, May 1987
+            </reference_text>
+            <description>reference.BARRY1987</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Brill, R., and C. Meisl, Magellan Altimeter Processing: Algorithms and
+                   Constants, Jet Propulsion Laboratory Document D-6143, 15 February 1990
+            </reference_text>
+            <description>reference.BRILL-MEISL1990</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Cuevas, C., Magellan Radar Sensor Compensation Report, Hughes Aircraft
+                   Co. Report HS513-5029, 18 August 1989
+            </reference_text>
+            <description>reference.CUEVAS1989</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Lyons, D.T., Magellan Planetary Constants and Models, JPL D-2300, Jet
+                   Propulsion Laboratory, Pasadena, Calif., 1988.
+            </reference_text>
+            <description>reference.LYONS1988</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Planetary Data System Standards Reference, Jet Propulsion Laboratory Document
+                   D-7669, Part 2, 20 November 1992
+            </reference_text>
+            <description>reference.PDSSR1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Project Magellan Software Interface Specification: Magellan Science EDR
+                   (TPS-101), 30 January 1991
+            </reference_text>
+            <description>reference.SCIEDR</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Project Magellan Software Interface Specification: Full-Resolution Basic
+                   Image Data Record, Revision E, 31 August 1992
+            </reference_text>
+            <description>reference.SDPS101</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Magellan Project Radar System: Analysis Methods and Performance Estimates,
+                   Hughes Aircraft Co. Report HS513-062-49, July 1989
+            </reference_text>
+            <description>reference.SE011</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Tyler, G.L., R.A. Simpson, M.J. Maurer, and E. Holmann, Scattering
+                   Properties of the Venusian Surface: Preliminary Results from Magellan,
+                   Journal of Geophysical Research, 97, 13115-13139, 1992
+            </reference_text>
+            <description>reference.TYLER1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RDRS-5-SCVDR-V1.0</data_set_id>
+        <data_set_name>MAGELLAN SURFACE CHARACTERISTICS VECTOR DATA RECORD</data_set_name>
+        <data_set_release_date>1995-01-01</data_set_release_date>
+        <start_time>1990-09-15T16:22:14Z</start_time>
+        <stop_time>1992-09-14T02:28:41Z</stop_time>
+        <producer_full_name>DR. G. LEONARD TYLER</producer_full_name>
+        <citation_text>
+            Tyler, G. L., MAGELLAN SURFACE CHARACTERISTICS VECTOR DATA
+            RECORD, MGN-V-RDRS-5-SCVDR-V1.0, NASA Planetary Data System, 1995
+        </citation_text>
+        <data_set_terse_desc>
+            The Magellan Surface Characteristics Vector Data Record (SCVDR)
+            archive contains orbit-by-orbit reductions of Magellan scattering
+            and emission measurements acquired during its mission to Venus.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the Magellan Surface Characteristics
+            Vector Data Record (SCVDR) which is an orbit-by-orbit reduction
+            of Magellan scattering and emission measurements carried out at
+            Stanford University. The SCVDR includes near-nadir scattering
+            functions obtained by numerical inversion from altimetry (ALT)
+            echoes, results (e.g., rms surface slopes and Fresnel
+            reflectivity) from fitting analytic functions to those
+            inversions, scattering function segments at oblique incidence
+            angles derived from synthetic aperture radar (SAR) echoes, and
+            estimates of surface emissivity derived from thermal microwave
+            radiometry (RAD) measurements. The SCVDR is one of several inputs
+            to the Global Vector Data Record (GVDR), a gridded summary of
+            scattering results, also produced at Stanford.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Surface Characteristics Vector Data Record (SCVDR) is an
+      orbit-by-orbit reduction of Magellan scattering and emission
+      measurements carried out at Stanford University.  The SCVDR
+      includes near-nadir scattering functions obtained by numerical
+      inversion from altimetry (ALT) echoes, results (e.g., rms
+      surface slopes and Fresnel reflectivity) from fitting analytic
+      functions to those inversions, scattering function segments
+      at oblique incidence angles derived from synthetic aperture
+      radar (SAR) echoes, and estimates of surface emissivity
+      derived from thermal microwave radiometry (RAD) measurements.
+      The SCVDR is one of several inputs to the Global Vector Data
+      Record (GVDR), a gridded summary of scattering results, also
+      produced at Stanford.
+ 
+      The SCVDR parallels the Altimetry and Radiometry Composite
+      Data Record (ARCDR) produced at the Massachusetts Institute
+      of Technology in its orbit-by-orbit organization.  But the
+      SCVDR differs from the ARCDR in that no a priori assumptions
+      are made regarding the form of the scattering function.
+ 
+      The SCVDR was originally recorded on a set of 8 mm Unix &apos;tar&apos;
+      tapes.  Data were blocked typically in groups of 100 orbits,
+      but the coverage in a few cases was as large as several
+      hundred orbits or as few as a dozen depending on mapping
+      activity or mission scheduling.  For transfer to CD-WO (the
+      SCVDRCD) blocking was adjusted to match the capacity of the
+      CD media.
+ 
+ 
+    Parameters
+    ==========
+      The Magellan raw data set comprises three basic data types:
+      echoes from the nadir-viewing altimeter (ALT), echoes from
+      the oblique backscatter synthetic aperture radar (SAR)
+      imaging system, and passive radiothermal emission
+      measurements (RAD) made using the SAR high-gain antenna
+      (HGA).  The objective in compiling the SCVDR is to obtain
+      an accurate estimate of the surface backscattering function
+      (sometimes called the specific backscatter function or
+      &apos;sigma-zero&apos;) for Venus from these three data types and to
+      show its variation with incidence (polar) angle, azimuthal
+      angle, and surface location.
+ 
+      The Magellan data have been &apos;inverted&apos; using techniques
+      described by [TYLER1992].  If a surface is statistically
+      homogeneous and scatters isotropically, the distribution
+      of echo signal can be predicted using the radar equation on
+      small surface elements, then sorting and accumulating the
+      incremental power contributions by time-delay and Doppler
+      frequency.  Given a measured radar echo versus range and
+      Doppler, the process may be inverted to yield the specific
+      radar cross section as a function of incidence angle.  In
+      the SCVDR the Magellan empirical backscattering function
+      has been obtained from ALT data at nadir to as much as 10
+      degrees from normal incidence in steps of 0.5 degrees.
+      The empirical backscattering function at oblique angles
+      (15 to 50 degrees from normal incidence) has been obtained
+      over narrow ranges (1-4 degrees) from the SAR data.  The
+      emissivity, which in some models is the complement of the
+      Fresnel reflectivity, has been obtained from the RAD
+      measurements.
+ 
+ 
+    Processing
+    ==========
+      ALT and SAR data have been processed at Stanford University
+      using &apos;inversion&apos; methods, whereby the radar equation is
+      converted to a matrix-vector relationship and that is solved
+      (using least-squares techniques) to obtain an &apos;empirical&apos;
+      scattering function for each radar echo [TYLER1992].  In
+      the case of ALT data, stability of the solution requires
+      considerable attention; in the case of SAR data, it is the
+      variability of the surface scattering itself that leads to
+      the most uncertainty.  Stanford has also independently
+      confirmed the results of the MIT processing of emissivity
+      data but without developing separate algorithms.
+ 
+      At Stanford ALT-EDR tapes were the input for calculation of
+      near-nadir empirical backscattering functions.  For oblique
+      backscatter, C-BIDR tapes from the Magellan Project and
+      F-BIDR files obtained via Internet from Washington
+      University were the input products.  Emissivity results were
+      calculated from radar burst headers, which are included among
+      both the ALT-EDR and C/F-BIDR files.  Output was collected
+      on an orbit-by-orbit basis into the SCVDR.
+ 
+ 
+    Data
+    ====
+      Each SCVDR includes data from several orbits.  For each orbit,
+      there are six files:
+        (1) Orbit Header File
+        (2) Altimetry Inversion File (ANF)
+        (3) Inversion Fit File (NNF)
+        (4) Sinusoidal Image File (SIF)
+        (5) Oblique Image File (OIF)
+        (6) Emissivity Data File (EDF)
+ 
+      The Orbit Header File contains basic information about the
+      Magellan orbit and summary data from the other five files.
+      OHF information includes average Keplerian orbit elements,
+      the number of entries in each of the other files, and
+      starting and ending times for data in the other files.
+ 
+      The Altimetry Inversion file contains the results of the
+      altimetry echo inversion (sigma-zero versus incidence
+      angle at spacings typically of 0.5 degree to a maximum of
+      about 10 degrees from nadir).  The ANF also includes
+      uncertainties in sigma-zero, geometry for the ALT
+      observations, parameters of the radar system used in
+      computing the absolute backscatter, and echo timing
+      estimates which could be converted to Venus radius values.
+ 
+      The Inversion Fit File contains results from fitting up to
+      five scattering laws to the experimentally derived near-nadir
+      sigma-zero function (the ANF).  The five laws include:
+      Hagfors, exponential, gaussian, Rayleigh, and Muhleman.
+      Free parameters (for example, the roughness parameter C and
+      the Fresnel reflectivity R for the Hagfors law) are also
+      reported, as is an estimate of the rms surface roughness
+      corresponding to each fit.  Residuals between the analytic
+      function and the data indicate which function best matches
+      the experimental results.
+ 
+      The Sinusoidal Image File contains the results of fitting
+      a quadratic function to the average SAR pixel values across
+      a sinusoidal equal area image strip.  The image strips are
+      from either C-BIDR or F-BIDR files; the best fit quadratic
+      represents the sigma-zero function over a few degrees of
+      incidence angle for a surface area about 20 km across track
+      and about 2 km along track.  Geometrical data, uncertainties,
+      and other information is also included in the SIF.
+ 
+      The Oblique Image File contains the results of fitting a
+      quadratic approximation to pixel values stored in the
+      Magellan oblique sinusoidal equal area projection.  The OIF
+      and SIF are identical except for the projection of the input
+      pixel data.  The OIF contains data for north and south polar
+      regions.
+ 
+      The Emissivity Data File contains results of analysis of
+      Magellan RAD data.  Surface emissivities, uncertainties,
+      geometrical data, and system parameter values are included.
+ 
+ 
+    Ancillary Data
+    ==============
+      Inversion of the altimetry data requires use of matrices
+      incorporating information about the geometry of the
+      observations and the relationships of geometry to radar
+      range, Doppler frequency offset, and incidence angle on
+      the planet&apos;s surface.  Matrices were computed at
+      approximately one degree increments in spacecraft latitude
+      for orbits on which viewing conditions were distinctly
+      different.  These matrices are included with the SCVDR
+      data in the GEOMETRY directory on the CD-WO.
+ 
+      Ancillary data for most processing at Stanford was obtained
+      from the data tapes and files received from the Magellan
+      Project.  These included trajectory and pointing information
+      for the spacecraft, clock conversion tables, spacecraft
+      engineering data, and SAR processing parameters.  For
+      calibration of the radar instrument itself, Magellan Project
+      reports (including some received from Hughes Aircraft Co.
+      [BARRY1987; CUEVAS1989; SE011]) were used.  Documentation on
+      handling of data at the Jet Propulsion Laboratory was also
+      used [BRILL&amp;MEISL1990; SCIEDR; SDPS101].
+ 
+ 
+    Coordinate System
+    =================
+      Most information about spacecraft positions and velocities
+      is stored using J2000 inertial coordinates.  Most
+      information about surface locations is stored using
+      Venus Body Fixed 1985 coordinates [LYONS1988].
+ 
+ 
+    Software
+    ========
+      A special library and several example programs are provided
+      in source code form for reading the SCVDR data files.  One
+      main program is provided for each file type (including the
+      geometry files).  These are provided to illustrate access to
+      the data using the reader subroutine(s); the main programs
+      themselves do nothing beyond returning diagnostic messages.
+      Source code and include files are in the C language; a Unix
+      makefile (for creating executables) and a Perl script (to
+      list contents of SCVDR files) are also provided.
+ 
+ 
+    Media/Format
+    ============
+      The SCVDR will be delivered using compact disc write once
+      (CD-WO) media.  Formats will be based on standards for such
+      products established by the Planetary Data System (PDS)
+      [PDSSR1992].
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      The SCVDR is intended to be a systematic and comprehensive
+      reduction of radar and radio data acquired by the Magellan
+      Mission.  It emphasizes extraction of electromagnetic
+      properties of the Venus surface with minimal assumptions
+      regarding the form of the backscatter function.  Limitations
+      implicit in the analysis approach and in the resulting data
+      are summarized below.
+ 
+ 
+    Review
+    ======
+      The SCVDR has been reviewed internally by the Magellan Project
+      prior to release to the planetary community.  The review
+      included compilation of the Global Vector Data Record (GVDR)
+      at Stanford and independent confirmation of formats and
+      values at M.I.T.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Because the orbit of Magellan was elliptical during most of
+      its mapping operations, the character of the signal varied
+      considerably over an orbit as well as from place to place
+      on the surface.  Although the SCVDR quantifies much of the
+      spatial variation, systematic limitations of both the
+      instrument and the mission mean that some variability was
+      missed or only partially captured.
+ 
+ 
+      General Limitations
+      -------------------
+        It is important to remember that, since the SAR and ALT
+        antennas were aimed at different parts of the planet
+        during each orbit, building up a collection of composite
+        scattering data for any single surface region requires
+        that results from several orbits be integrated.  In the
+        case of data from polar regions, where only the SAR was
+        able to probe, there will be no ALT data.  When scheduling
+        or other factors interrupted the systematic collection of
+        data, there may be ALT data for some regions but no
+        comparable SAR or radiometry data (or vice versa).
+ 
+        Outages played an important role in determining coverage
+        for all Cycles.  For example, although a goal of Cycle 3
+        radar mapping was radar stereo, early orbits were used to
+        collect data at nominal incidence angles that had been
+        missed during Cycle 1 because of thermal problems with the
+        spacecraft.  A transmitter failure during Cycle 3 caused a
+        further loss of data.  It is not within the scope of this
+        description to provide detailed information on data
+        coverage.
+ 
+        Leading Edge: Identification of the echo leading edge is
+        critical for both topographic analysis and extraction of
+        the near-nadir scattering function from ALT data.  For
+        topography, a timing error translates directly into an
+        error in planetary radius.  For calculation of the
+        scattering function, both the inferred echo dispersion and
+        the inferred echo amplitude will be in error if the
+        initial rise of the echo is improperly identified.  This
+        limitation applies most commonly when the spacecraft ALT
+        antenna was aimed away from nadir and the surface was
+        rough (e.g., during Cycle 1 over Aphrodite Terra).
+ 
+        Inversion Stability: Although the ALT inversions require
+        no assumptions about the form of the backscatter function,
+        inversion processes are unstable in the presence of noise.
+        Second differences were constrained during ALT inversions
+        to improve stability.  The quantitative constraint was
+        varied from periapsis to the poles based on whether the
+        &apos;noise&apos; was radar echo speckle or speckle plus thermal
+        system noise in the receiver.  Instabilities affect
+        primarily the inversion results at the largest incidence
+        angles.
+ 
+        Noise Baseline: During ALT inversion, an estimate of
+        &apos;thermal&apos; noise was derived from the data.  At low
+        spacecraft altitudes noise was primarily radar clutter
+        (for example, aliased signal from frequencies outside the
+        nominal Doppler window).  At high spacecraft altitudes,
+        both range aliasing and real system thermal noise
+        contributed.  The erroneous inclusion of high-angle
+        scattered signal in the &apos;noise&apos; estimate leads to the
+        following consequences:
+          (1) the derived scattering function amplitude will be
+              underestimated (inferred reflectivity will be too
+              small);
+          (2) the echo decay rate with incidence angle will be
+              overestimated (inferred rms surface slope will be
+              too small);
+          (3) uncertainty in the derived scattering function
+              will be too small (especially at the largest angles).
+ 
+        Orbit Eccentricity: Periapsis throughout the radar mapping
+        mission was near 10 degrees N latitude at altitudes of
+        approximately 300 km.  The altitude near the poles, on the
+        other hand, was on the order of 3000 km.  For all data
+        types this means lower confidence in results obtained at
+        the poles than near the equator.
+ 
+        Dynamic Antenna Pointing: The spacecraft attitude varied
+        during each orbit to compensate partially for the changing
+        SAR range to the surface and to provide scattering at
+        higher incidence angles when the echo signal was expected
+        to be strongest.  The SAR antenna was pointed at about 45
+        degrees from nadir near periapsis; this was reduced to
+        about 15 degrees at the poles.  The ALT antenna, at a
+        constant 25 degree offset from the SAR antenna, followed
+        in tandem but at angles which were not optimized for
+        obtaining the best altimetry echo.
+ 
+        Footprints: A nominal nadir footprint can be assigned to
+        altimetry results, but this footprint is biased near
+        periapsis because the ALT antenna is rotated about 20
+        degrees from nadir (during Cycle 1).  Over polar regions
+        in Cycle 1, the ALT antenna is rotated about 10 degrees
+        to the opposite side of nadir.  A more important
+        consideration in polar regions is that the area
+        illuminated by the ALT antenna is approximately 100 times
+        as large as near periapsis because of the higher spacecraft
+        altitude.  The region contributing to echoes in polar
+        regions -- and therefore the region over which estimates
+        of Fresnel reflectivity and rms surface tilts apply -- is
+        much larger than at periapsis.
+ 
+ 
+      Cycle 1 Mapping
+      ---------------
+        During Mapping Cycle 1 almost half the orbits provided SAR
+        images of the north pole; because of the orbit inclination,
+        ALT data never extended beyond about 85N latitude in the north
+        and 85S in the south.  No SAR images of the south pole were
+        acquired during Mapping Cycle 1 because the SAR antenna was
+        always pointed to the left of the ground track; Cycle 1 SAR
+        image strips near the south pole were at latitudes
+        equatorward of 85S.
+ 
+        Beginning at approximately orbit 600 and extending until
+        nearly orbit 1100, onboard recording of radar data slowly
+        degraded.  Most of these data were subsequently reprocessed,
+        with some improvement in data quality.  Where available, the
+        reprocessed data have been included in the SCVDR.
+ 
+ 
+      Cycle 2 Mapping
+      ---------------
+        During much of Mapping Cycle 2, the spacecraft was flown
+        &apos;backwards&apos; so as to provide SAR images of the same terrain
+        but with &apos;opposite side&apos; illumination.  This adjustment also
+        meant that the SAR could image near the Venus south pole (but
+        not near the north pole).  The ALT data continued to be
+        limited to latitudes equatorward of 85N and 85S.
+ 
+        SCVDR processing of image data within about two degrees of
+        the south pole suffers from errors.  This apparently
+        resulted from reprojection of the oblique sinusoidal pixels
+        but the precise cause of the problem was never isolated and
+        corrected.  This problem potentially affects all south pole
+        OIF data, including any obtained in Cycle 3 as well as the
+        larger volume from Cycle 2.
+ 
+ 
+      Cycle 3 Mapping
+      ---------------
+        During Mapping Cycle 3 the emphasis was on obtaining SAR
+        data at the same viewing azimuth as in Cycle 1 but at
+        different incidence angles (for radar stereo).  In fact,
+        most data were acquired at an incidence angle of about 25
+        degrees, which meant that the ALT antenna was usually aimed
+        directly at nadir instead of drifting from side to side,
+        as had been the case in Cycles 1 and 2.  These Cycle 3 data,
+        therefore, may be among the best from the altimeter.
+        Dynamic range in SAR data was larger than in Cycles 1 and 2
+        because the incidence angle was fixed rather than varying to
+        compensate for the changing spacecraft altitude.
+ 
+ 
+    Other Comments
+    ==============
+      Although information on radar echo timing is included in the
+      ANF, a thorough analysis for topography was not attempted in
+      the SCVDR.  Comparison of the preliminary SCVDR results with
+      results in the ARCDR showed consistency in the altitude
+      estimates.  Systematic errors were more carefully addressed
+      in the ARCDR.  ARCDR topography was carried forward to the
+      GVDR.
+ 
+      Likewise, the EDF results in the SCVDR are consistent with
+      emissivity data in the ARCDR.  The ARCDR emissivity results
+      were carried forward to the GVDR.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>89-033B-011</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

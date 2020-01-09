@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-a-ssi-3-gaspra-calimages-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO SSI/GASPRA RADIOMETRICALLY CALIBRATED IMAGES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ssi.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.951_gaspra::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.gaspra::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-a-ssi-3-gaspra-calimages-v1.0__browserp_go-a-ssi-3-gaspra-calimages-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-A-SSI-3-GASPRA-CALIMAGES-V1.0</data_set_id>
+        <data_set_name>GALILEO SSI/GASPRA RADIOMETRICALLY CALIBRATED IMAGES V1.0</data_set_name>
+        <data_set_release_date>2014-05-16</data_set_release_date>
+        <start_time>1991-10-29T15:44:34.831Z</start_time>
+        <stop_time>1991-10-29T22:26:15.153Z</stop_time>
+        <producer_full_name>DEBORAH DOMINGUE</producer_full_name>
+        <citation_text>
+            Domingue, D.L., Galileo SSI/Gaspra Radiometrically Calibrated
+            Images V1.0. GO-A-SSI-3-GASPRA-CALIMAGES-V1.0. NASA Planetary
+            Data System, 2015.
+        </citation_text>
+        <data_set_terse_desc>
+            Galileo Orbiter SSI images of the asteroid Gaspra, extracted from
+            the Galileo archive, and calibrated to units of reflectance.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes Galileo Orbiter SSI radiometrically
+            calibrated images of the asteroid 951 Gaspra, created using ISIS
+            software and assuming nadir pointing. This is an original
+            delivery of radiometrically calibrated files, not an update to
+            existing files. All images archived include the the asteroid
+            within the image frame. Calibration was performed in 2013-2014.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+ 
+  This dataset includes the Galileo Orbiter Solid State Imaging
+  data on the asteroid 951 Gaspra.  The raw data have already been archived in
+  PDS with the data set name &apos;Galileo Imaging (SSI) Asteroid, Earth and Moon
+  Experiment Data Records&apos; and can be found by searching on the data set
+  identification &apos;GO-A/E-SSI-2-REDR-V1.0&apos;. Only those images in which Gaspra
+  actually appears have been included here. Images in both FITS and ISIS Cube
+  format are provided.
+ 
+ 
+  Processing
+  ==========
+ 
+  Preparation in IRAF
+  -------------------
+ 
+  The raw images were converted from VICAR format to FITS format using the
+  image reduction package IRAF.  The image prefix tables, telemetry tables,
+  and bad data value headers were removed from the raw images.  All relevant
+  label keywords describing the image have been retained in the raw image
+  labels.
+ 
+  Processing in ISIS and preparation of ISIS cube versions
+  --------------------------------------------------------
+ 
+  The FITS images prepared as above in IRAF were converted from FITS format
+  to ISIS cube format using GLLSSI2ISIS, and radiometrically calibrated using
+  GLLSSICAL.  GLLSSICAL was the tool provided in the original, raw data
+  delivery for calibration of Galileo SSI images.
+ 
+   - GLLSSI2ISIS inputs were the raw image file name and the output image file
+  name for the ISIS format image.
+ 
+   - GLLSSICAL inputs were image file name in the ISIS format created by
+  GLLSSI2ISIS, units = IOF, scale=1.
+ 
+   - The GLLSSICAL output was the radiometrically calibrated image in ISIS
+  cube format, which is archived in the data/qube directory of this data set.
+ 
+  Preparation of the FITS versions
+  --------------------------------
+ 
+  The radiometrically calibrated ISIS cube format images were converted to
+  FITS format using the ISIS routine ISIS2FITS.
+ 
+   - ISIS2FITS inputs were the radiometrically calibrated image file name (in
+  ISIS cube format), bittype=32, minpercent=0.5, maxpercent=99.5, info=Nominal
+  (nominal fits header).
+ 
+   - The ISIS2FITS output was the radiometrically calibrated image in
+  FITS format, which is archived in the data/fits directory of this data set.
+ 
+  References for ISIS software
+  ----------------------------
+ 
+  Anderson, J.A., 2008. ISIS camera model design, 39th LPSC (Houston), p.
+  Abstract #2159, Lunar and Planetary Institute.
+ 
+  Anderson, J.A., Sides, S.C., Sotesz, D.L., Sucharski, T.L., Beker, K.J.,
+  2004. Modernization of the integrated software for imagers and
+  spectrometers, 35th LPSC (Houston), p. Abstract #2039, Lunar and Planetary
+  Institute.
+ 
+ 
+  Data
+  ====
+ 
+  The data are included in a series of files with filenames of the
+  form *rcal_XXX.FIT, where * denotes the spacecraft cloak start count, rcal
+  denotes the image has been radiometrically calibrated, and XXX denotes the
+  filter name where:
+ 
+            Filter Name       XXX
+            CLEAR             clr
+            RED               red
+            GREEN             gre
+            VIOLET            vio
+            IR-7560           ir7
+            IR-8890           ir8
+            IR-9680           ir9
+ 
+  The filename of the original, raw files were the last four digits of the
+  spacecraft clock start count.
+ 
+  Filter response curves taken from Klaasen et al. 1997 are included in the
+  document directory.
+ 
+  The general table, color-set_id.tab, denotes which images were acquired at
+  similar viewing conditions but in separate filters, thus constituting a
+  color image set. The table includes image file named, filter name, and a
+  designator for which color set the image belongs. Images with the same
+  designator value (A-F) belong to the same color image set.
+ 
+  K.P. Klaasen, M.J.S. Belton, H.H. Brenenman, A.S. McEwen, M.E. Davies, R.J.
+  Sullivan, C.R. Clark, G. Neukum, C.M. Heffernan, A.P. Harch, J.M. Kaufman,
+  W.J. Merline, L.R. Gaddis, W.F. Cunningham, P. Helfenstein, T.R. Colvin.
+  Inflight performance characteristics, calibration, and utilization of the
+  Galileo solid-state imaging camera, Opt. Eng.36(11) 3001-3027 (November
+  1997).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    Data Coverage and Quality
+    =========================
+ 
+    This dataset includes only those Galileo SSI images in which
+    951 Gaspra actually appears. No viable camera kernels for the time frame
+    in which the Gaspra images were acquired were included in the original PDS
+    archive. These kernels are used by GLLSSICAL to convert raw values to
+    reflectance. A work around was used in which GLLSSICAL was set to assume
+    nadir pointing for all images. This produces negligible errors in
+    radiometric values, but disables any calculations of viewing and
+    illumination conditions.
+ 
+    Several images include saturated lines (rows of pixels) and pixels. These
+    were present in the original raw images and not removed in the radiometric
+    calibration process.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

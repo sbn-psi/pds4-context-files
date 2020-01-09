@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-s-uvis-2-ssb-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CASSINI SATURN UVIS SOLAR STELLAR BRIGHTNESS TIME SERIES 1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:uvis.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-s-uvis-2-ssb-v1.0__browserp_co-s-uvis-2-ssb-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-s-uvis-2-ssb-v1.0__browser_co-s-uvis-2-ssb-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Esposito, L.W., J.E. Colwell, K. Larsen, W.E. McClintock, A.I.F. Stewart, J.
+                   Tew Hallett, D.E. Shemansky, J.M. Ajello, C.J. Hansen, A.R. Hendrix, R.A. West,
+                   H.U. Keller, A. Korth, W.R. Pryor, R. Reulke, and Y.L. Yung, Ultra-Violet
+                   Imaging Spectroscopy shows an active Saturn system, Science, 307, 1251-1255,
+                   2005, LASP reprint 1000.
+            </reference_text>
+            <description>reference.ESPOSITOETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-S-UVIS-2-SSB-V1.0</data_set_id>
+        <data_set_name>CASSINI SATURN UVIS SOLAR STELLAR BRIGHTNESS TIME SERIES 1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1999-01-07T00:00Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>LARRY ESPOSITO</producer_full_name>
+        <citation_text>
+            Esposito, L. (et al.), Cassini Ultraviolet Imaging Spectrograph
+            Jupiter Flyby Data, NASA Planetary Data System,
+            CO-S-UVIS-2-SSB-V1.0, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            A set of time series of photometer data.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Photometric observations of stellar occultations by Saturnian
+            rings, satellites, atmospheres, and Jovian atmosphere.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      The UVIS Solar Stellar Brightness Dataset
+      =========================================
+          The UVIS instrument is part of the remote sensing payload of
+       the Cassini orbiter spacecraft.  UVIS has two spectrographic
+       channels that provide images and spectra covering the ranges
+       from 56 to 118 nm and 110 to 190 nm.  A third optical path
+       with a solar blind CsI photocathode is used for a high
+       signal-to-noise ratio stellar occultation by rings and
+       atmospheres.  A separate hydrogen deuterium absorption cell
+       measures the relative abundance of deuterium and hydrogen
+       from their lyman-alpha emission.  These channels are
+       referred to as EUV, FUV, HSP, and HDAC in this document.
+       The UVIS science objectives include investigation of the
+       chemistry, aerosols, clouds, and energy balance of the Titan
+       and Saturn atmospheres; neutrals in the Saturn magnetosphere;
+       the deuterium-to-hydrogen ratio for Titan and Saturn; icy
+       satellite surface properties; and the structure and
+       evolution of Saturns rings.  The basic instrument design
+       adapts proven design concepts using a grating spectrometer
+       followed by a multi-element detector.  We chose to use
+       imaging, pulse-counting microchannel plate detectors because
+       of more than a decade of experience using this kind of
+       detector equipped with a CODACON readout anode.  The CODACON
+       (Coded Anode Array Converter) acts as a photon locator.  The
+       photon counts are accumulated in an external memory to build a
+       picture that is periodically read out for transfer to the
+       spacecraft memory and eventually, transmission to the ground.
+       The two dimensional format for the CODACON detectors allows
+       simultaneous spectral and one-dimensional spatial coverage.
+       The detector format is 1024 x 64 (spectral by spatial).
+          The Cassini HDAC consists of a channel electron
+       Multiplier photodetector equipped with 3 absorption cell
+       filters:  a hydrogen cell, a deuterium cell and an oxygen
+       cell.  The oxygen cell is not utilized in flight.  The
+       hydrogen and deuterium cells function as adjustable
+       absorption filters.  In each cell a hot tungsten filament
+       disassociates the hydrogen and deuterium molecules into
+       atoms, producing an atomic density determined by each of 16
+       different filament temperatures.  These atoms resonantly
+       absorb the hydrogen and deuterium Lyman-alpha lines passing
+       through the cells.  Cycling the filaments on and off and
+       comparing the differences in signal gives a direct
+       measurement of the relative hydrogen and deuterium signals.
+       Each cell has two filaments controlled by separate filament
+       current regulators.  Only one filament at a time per cell is
+       used during flight.  A Pulse Amplifier Discriminator detects
+       photoelectrons from the CEM and sends pulses to the UVIS
+       instrument logic.   UVIS contains a high speed photometer
+       with an integration time as short as 2.0 ms to observe stars
+       occulted by the rings of Saturn.  The photon counts collected
+       from the photocathode are passed as a time ordered sequence to
+       the instrument, then to spacecraft memory for transfer to the ground.
+          The data in a UVIS observation are a copy of what was in the UVIS
+       memory buffer. That is, the observation consists of unprocessed
+       experiment data stored in binary format. An observation
+       belongs to one of four different types of data product: a
+       spectrum, a time series of spatial-spectral images, a time
+       series of detector counts, or an image at one wavelength.
+       Each observation has a unique identifier that associates it
+       with a time range and with the configuration of the
+       instrument during that time.  Each data product will contain
+       one observation and will be completely defined by a PDS
+       label.  The objects will be correct in the sense that they
+       will conform to PDS formatting requirements and will be
+       consistent with data archived by the UVIS team.  They will
+       be complete in that they will represent all data taken by
+       the UVIS instrument.  In addition, CODMAC level 3 data products
+       will be derivable from the archived data and an associated set
+       of calibration data.
+          The UVIS instrument can generate time series from the HSP and
+       the HDAC channels.  A time series consists of a sequence of
+       photometer counts each taken during a fixed time interval.
+       An observation consists of a time series taken during a
+       particular instrument configuration.  The time series
+       generated by the HDAC channel may have additional
+       complexity.  If the instrument dwell time configuration
+       parameter is equal to one, the HDAC is in photometer mode and
+       its output is a time series of detector counts.  If the
+       dwell time is greater than one, the time series can be mapped
+       into a table of 32 columns, each column corresponding to an
+       HDACfilament voltage level in the order: d1..d16, h1..h16
+       where d1..d16 correspond to the 16 voltage levels of the d
+       cell and h1..h16 the same for the h cell.  The time series
+       can be mapped to the table by mapping contiguous subsequences
+       into the successive columns of the table.  The length of the
+       subsequence is determined by the dwell time parameter of the
+       instrument configuration.  A data product (also referred to
+       as an observation) consists of a set of data taken during a
+       single instrument configuration.
+          The UVIS time series data product will be archived as PDS time
+       series objects.  All instrument configuration data for an
+       observation will be contained in the associated PDS label.
+          For a detailed description of the UVIS instrument see the file
+       ROOT/DOCUMENT/UVIS.TXT on this archive volume.
+ 
+      Parameters
+      ==========
+      The following observation types are found on this volume.
+ 
+      UFPSCAN: Interplanetary hydrogen survey.  The purpose of this
+      observation type is to search for and measure Lyman Alpha
+      emissions while scanning the interplantary medium.
+ 
+      The observation type for each observation is found in OBSERVATION_TYPE
+      column of INDEX.TAB.  The specific purpose of each observation
+      may be found in the object DESCRIPTION field contained in the label.
+ 
+      Processing
+      ==========
+      The observation data products are generated by the Laboratory for
+      Atmospheric and Space Physics at the University of Colorado using
+      the Data Archiving and Processing System (DAPS) software.  This
+      software receives telemetry packet SFDUs from the Telemetry Data
+      System, extracts science and engineering data, archives the data
+      in a database management system and produces PDS data and label
+      object files located on a CD-ROM or DVD physical storage medium.
+ 
+      All time information is generated from the spacecraft clock using
+      the Cassini SCLKSET files.  The DAPS system uses NAIF software and
+      project generated SPICE Kernels to generate pointing information.  All
+      of these values are contained in the PDS object label.
+ 
+      Data
+      ====
+      The UVIS instrument can generate time series from the HSP and the HDAC
+      channels.  A time series consists of a sequence of photometer counts
+      each taken during a fixed time interval.  An observation consists of a
+      time series taken during a particular instrument configuration.  The
+      time series generated by the HDAC channel may have additional
+      complexity.  If all the filament levels are 0 then the HDAC is in
+      photometer mode and its output is a time series of detector counts.  If
+      there is a non-zero filament level the detector is in modulation mode
+      and the time series can be mapped into a table of 32 columns, each
+      column corresponding to an HDAC filament voltage level in the order:
+      d1...d16, h1...h16 where d1..d16 correspond to the 16 voltage levels
+      of the d cell and h1..h16 the same for the h cell.  The time series
+      can be mapped to the table by mapping contiguous subsequences into
+      the successive columns of the table.  The length of the subsequence is
+      determined by the dwell time parameter of the instrument configuration.
+      A  data product consists of a set of data taken during a single
+      instrument configuration.
+ 
+      The UVIS solar and stellar brightness time history data product is
+      archived as a PDS time series object.  All instrument configuration
+       data for an observation is contained in the associated PDS label.
+ 
+      Ancillary Data
+      ==============
+      HSP and HDAC calibrations do not have a software implementation,
+      however a description of HSP calibration is located in
+      SOFTWARE/CALIB/HSP_CALIBRATION.TXT.
+ 
+      Coordinate System
+      =================
+      In the UVIS data products, all time values that are represented as
+      strings  are in UTC time.  All time values are derived from the
+      spacecraft clock  using the SCLKSCET translation table supplied by
+      the  Cassini project.  All pointing data are expressed in the J2000
+      coordinate system.
+ 
+      Software
+      ========
+      LASP provides software for reading PDS data products.  This software
+      is  located in the ROOT/SOFTWARE/READERS directory.  The software
+      requires Java 1.4 compatible class libraries and RSI/IDL version 6.
+      Instructions for running the  routines are located in the file
+      READERS_README.TXT, located in the same directory.
+ 
+      These readers are provided as a convenience for users to access the
+      data. Users may choose another approach if desired.  The readers
+      enable users to load PDS objects into an RSI/IDL process where they
+      are represented as 3  dimensional arrays of integers corresponding to
+      the PDS Qube object in which they are stored.  PDS label data are
+      stored in an IDL structure variable.
+ 
+      DISC FORMAT
+      =================================================================
+      (e.g. IBM PC, Macintosh, Sun, VAX) may access the data.  Specifically,
+      the disc is formatted according to the UDF-Bridge DVD format
+      standard which provides ISO 9660 level 2 standard compatibility.
+      For further information, refer to the ISO 9660 Standard Document:
+      RF# ISO 9660-1988, 15 April 1988.
+ 
+      Specific to the ISO 9660 level 2 standard, filenames on this CD
+      conform to the 27.3 file naming convention i.e.,
+      1.  The file name portion may be up to 29 characters long; or
+      2.  The extension may be up to 29 characters long,
+      3.  In no case, however, may the total file name length, including
+      the . exceed 31 characters.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      Confidence Level Overview
+      =========================
+      The UVIS data objects are organized into separate observations.
+      Each observation contains data taken from one configuration of
+      the instrument.  There may be more than one observation generated
+      from one instrument configuration.  This may occur because science
+      data generated by the UVIS instrument is dropped when corrupted
+      data is detected or transmission failures occur.  The UVIS ground
+      system detects this and divides the data into two observations, one
+      terminated prior to the data drop the next beginning immediately
+      afterword.  The start time and duration of an observation correspond
+      to the actual times of the first and last records in the observation.
+      Incomplete observations are filled with zeroes.  Over 95% of data
+      taken by the instrument is contained in the UVIS archive.
+ 
+      Only one hardware feature affects UVIS data.  A light leak in the
+      instrument casing causes an increase in the background counts in
+      the lower half of the EUV channel wavelength range.  This effect is
+      detectable by visual inspection of a graph of the data.  No tools
+      for detection or correction of these background counts exists.
+ 
+      One anomaly in the flight software caused data errors to appear
+      when multiple windows which do not cover the entire EUV or FUV
+      detector are defined.  In an observation, the data errors appear
+      as randomly located spikes in detector count values, and one
+      completely incorrect spatial line located at a random spatial
+      index.  These errors are detectable by visual inspection of a
+      plot of the data.  The anomaly was fixed by a revison to the
+      software and effects data between launch and 2001-071 09:00:00 UTC
+ 
+      Review
+      ======
+      This volume has completed a peer review by the PDS. The peer review
+      panel consisted of Lyle Huber, Mitch Gordon, Steven Adams, Ron Joyner
+      and Mark Vincent representing PDS, David Judd and Wayne Pryor from the,
+      UVIS team Diane Connor from the Cassini Project and Kurt Retherford
+      and John Clarke as outside users.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

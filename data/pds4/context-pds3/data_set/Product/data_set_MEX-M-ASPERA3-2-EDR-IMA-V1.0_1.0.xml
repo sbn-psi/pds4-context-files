@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mex-m-aspera3-2-edr-ima-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MARS EXPRESS ASPERA-3 RAW EDR ION MASS ANALYZER V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_express::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:aspera-3.mex::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:plasma_stream.solar_wind::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mex-m-aspera3-2-edr-ima-v1.0__browserp_mex-m-aspera3-2-edr-ima-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Barabash, S., et. al., ASPERA-3: Analyser of Space Plasmas and Energetic Ions
+                   for Mars Express, ESA SP-1240, September 2004
+            </reference_text>
+            <description>reference.BARABASHETAL2004</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MEX-M-ASPERA3-2-EDR-IMA-V1.0</data_set_id>
+        <data_set_name>MARS EXPRESS ASPERA-3 RAW EDR ION MASS ANALYZER V1.0</data_set_name>
+        <data_set_release_date>2009-07-31</data_set_release_date>
+        <start_time>2003-06-02T17:45:00Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>SANDEE JEFFERS</producer_full_name>
+        <citation_text>
+            Lundin, R., S. Barabash, D. Winningham, R. Frahm, MARS EXPRESS
+            ASPERA-3 RAW EDR ION MASS ANALYZER V1.0,
+            MEX-M-ASPERA3-2-EDR-IMA-V1.0, ESA Planetary Science Archive
+            (PSA), NASA Planetary Data System (PDS), 2006
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains Mars Express ASPERA-3 Ion Mass Analyzer
+            (IMA) data from launch (June 2, 2003) to the end of nominal
+            mission (through December 2005). The data are provided in raw
+            units of counts/accumulation.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains Mars Express ASPERA-3 Ion Mass Analyzer
+            (IMA) data from launch (June 2, 2003) to the end of nominal
+            mission (through December 2005). These data are provided in raw
+            units of counts/accumulation.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Overview:
+    =========
+ 
+    The Ion Mass Analyzer (IMA) provides in situ ion measurements in
+    the energy range 0.01 - 40 keV/q for the main ion components H+,
+    He++, He+, O+, with 20-80 amu/q to help satisfy the following
+    scientific objectives:
+ 
+       1. Determine the instantaneous global distributions of plasma
+          and neutral gas near Mars by providing undisturbed solar
+          wind parameters
+ 
+       2. Define the local characteristics of the main plasma regions
+ 
+       3. Complement the ENA images
+ 
+    Parameters:
+    ===========
+ 
+    All IMA data products have the same format and parameters, and
+    each row (data file record) in the IMA SPREADSHEET data products
+    has seven (7) COLUMN objects (parameters):
+       1. Start Time - Begin Date/Time in UTC of data samples
+       2. Stop Time - Ending Date/Time in UTC of data samples
+       3. Data Type Name - SENSOR or MODE. The SENSOR rows are the
+          IMA science data for each mass channel (32 channels).  The
+          32 SENSOR rows are followed by 10 rows of MODE data for the
+          same time period.  The MODE rows contain informational data
+          such Mask indicators, Indexes, and Summations.
+       4. Data Type Id - Numeric ID indicating SENSOR or MODE.
+       5. Data Name - Short description for data on that row.  For
+          example &apos;Mass Channel x&apos; where x = 0-31 to indicate the
+          mass channel in the SENSOR rows or &apos;Polar Angle Index&apos; for
+          informational data (MODE row).
+       6. Data Unit - Indicates the data unit (c/acc for SENSOR
+          data, unitless for MODE data).
+       7. Values - These are the actual data values.  For this column
+          there are multiple values as indicated by the ITEMS keyword
+          in the label files.  For IMA data, there are 96 ITEMS.  In
+          the SENSOR rows, these are the science data sampled for
+          each energy step starting at 0 and ending at 95.  The MODE
+          data rows contain only one value each with remaining ITEMS
+          indicated as &apos;missing&apos; with nothing between the commas
+          (value,,...,,).  Please note that the data values are
+          formatted for best accuracy and that this is not the
+          accuracy of the IMA instrumentation.  In addition, even
+          though the IMA data are in units of c/acc (raw counts)
+          which are typically integer values, the data are formatted
+          with 2-3 decimal places to account for possible fractions
+          that can occur due to onboard data compression and ground
+          data decompression.
+ 
+    Data Products:
+    ==============
+ 
+    The Standard Data Products for IMA PSA Level 1b (EDR) products
+    are:
+ 
+       1. IMA_AZ00_C_ACC - Ion Mass Analyzer AZimuth anode 0 data
+          in Counts / ACCumulation units.
+ 
+       2. IMA_AZ01_C_ACC - Ion Mass Analyzer AZimuth anode 1 data
+          in Counts / ACCumulation units.
+ 
+       3. IMA_AZ02_C_ACC - Ion Mass Analyzer AZimuth anode 2 data
+          in Counts / ACCumulation units.
+ 
+       4. IMA_AZ03_C_ACC - Ion Mass Analyzer AZimuth anode 3 data
+          in Counts / ACCumulation units.
+ 
+       5. IMA_AZ04_C_ACC - Ion Mass Analyzer AZimuth anode 4 data
+          in Counts / ACCumulation units.
+ 
+       6. IMA_AZ05_C_ACC - Ion Mass Analyzer AZimuth anode 5 data
+          in Counts / ACCumulation units.
+ 
+       7. IMA_AZ06_C_ACC - Ion Mass Analyzer AZimuth anode 6 data
+          in Counts / ACCumulation units.
+ 
+       8. IMA_AZ07_C_ACC - Ion Mass Analyzer AZimuth anode 7 data
+          in Counts / ACCumulation units.
+ 
+       9. IMA_AZ08_C_ACC - Ion Mass Analyzer AZimuth anode 8 data
+          in Counts / ACCumulation units.
+ 
+      10. IMA_AZ09_C_ACC - Ion Mass Analyzer AZimuth anode 9 data
+          in Counts / ACCumulation units.
+ 
+      11. IMA_AZ10_C_ACC - Ion Mass Analyzer AZimuth anode 10 data
+          in Counts / ACCumulation units.
+ 
+      12. IMA_AZ11_C_ACC - Ion Mass Analyzer AZimuth anode 11 data
+          in Counts / ACCumulation units.
+ 
+      13. IMA_AZ12_C_ACC - Ion Mass Analyzer AZimuth anode 12 data
+          in Counts / ACCumulation units.
+ 
+      14. IMA_AZ13_C_ACC - Ion Mass Analyzer AZimuth anode 13 data
+          in Counts / ACCumulation units.
+ 
+      15. IMA_AZ14_C_ACC - Ion Mass Analyzer AZimuth anode 14 data
+          in Counts / ACCumulation units.
+ 
+      16. IMA_AZ15_C_ACC - Ion Mass Analyzer AZimuth anode 15 data
+          in Counts / ACCumulation units.
+ 
+    Ancillary Data:
+    ===============
+ 
+    It is important for ASPERA-3 science studies to know where in
+    space and time the Mars Express spacecraft and ASPERA-3
+    instruments are located and what objects (Sun, Mars, Earth,
+    Phobos, Deimos) are in the fields of views. The ASPERA-3 view
+    directions for each sensor can be derived using the SPICE kernels
+    and software. The ASPERA-3 Sensor Frames and Geometry Information
+    document (in DOCUMENT directory) provides a code example (in C
+    and FORTRAN) for determining the view directions for the ASPERA-3
+    sensors.
+ 
+    Coordinate System:
+    ==================
+ 
+    The ASPERA-3 data are always in the instrument reference frame
+    since data are sampled in situ. The GEOMETRY table contains
+    spacecraft related parameters expressed in the J2000 reference
+    frame, and the ASPERA-3 Sensor Frames and Geometry Information
+    document (in DOCUMENT directory) provides information for
+    determining the ASPERA-3 sensors view directions and transforming
+    to the J2000 reference frame.
+ 
+    References:
+    ===========
+ 
+    Refer to the ASPERA-3 Experiment to Archive Interface Control
+    Document (EAICD - MEX_ASPERA3_PSA_ICD_V02_00) found in the
+    DOCUMENT directory for more information and detail concerning
+    data set formulation and contents.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Review:
+    =======
+ 
+    These data have been reviewed by the instrument team and are of
+    the highest quality that can be generated at this time. Science
+    results based on these data have been published in several
+    journals (Science, Nature, EGU, etc.). After submission to the
+    PDS, these data successfully completed the peer review process.
+ 
+    Data Coverage/Quality:
+    ======================
+ 
+    IMA cannot measure the positive ions at very low energies and
+    are indicated by negative values for the CENTER_ENERGY for the
+    energy steps affected in the IMA_ENERGYn.TAB files in the CALIB
+    directory.  Data at these energy levels should be ignored and
+    not used.  Also included in the IMA_ENERGYn.TAB files are the
+    elevation angles per polar angle index and per energy step.
+    Elevation angles than -50.0 (degrees) indicate invalid data that
+    should also be excluded from data analysis.
+ 
+    Limitations:
+    ============
+ 
+    The ASPERA-3 IMA data is complicated and there are many issues to
+    address when analyzing the data. The IMA_CALIBRATION_REPORT.PDF
+    (in the DOCUMENT directory) addresses many of these issues and it
+    is strongly advised to contact the ASPERA-3 IMA team in guidance
+    in analyzing the IMA data.
+ 
+ ** Please contact the ASPERA-3 IMA Team for more information before
+     using IMA data:
+       Rickard Lundin - rickard@irf.se
+       Stas Barabash - stas@irf.se
+       Andrei Fedorov - Andrei.Fedorov@cesr.fr
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

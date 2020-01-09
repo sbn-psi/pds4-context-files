@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ro-cal-cosima-3-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ROSETTA-ORBITER CAL COSIMA 3 V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.international_rosetta_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:cosima.ro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ro-cal-cosima-3-v2.0__browserp_ro-cal-cosima-3-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Archive Review Board, ROSETTA Science Archive, 1st delivery Review Report for
+                   orbiter Instruments, Issue 1, Revision 0, March 15, 2007.
+            </reference_text>
+            <description>reference.RO-EST-RP-3461</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>RO-CAL-COSIMA-3-V2.0</data_set_id>
+        <data_set_name>ROSETTA-ORBITER CAL COSIMA 3 V2.0</data_set_name>
+        <data_set_release_date>2008-11-17</data_set_release_date>
+        <start_time>2002-05-29</start_time>
+        <stop_time>2008-07-23</stop_time>
+        <producer_full_name>JOHAN SILEN</producer_full_name>
+        <citation_text>
+            2010-07-30 SBN:T.Barnes Added ABSTRACT_DESC, and ,NONE SUPPLIED
+        </citation_text>
+        <data_set_terse_desc>
+            COSIMA substrate operations and calibrations
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset contains data from COSIMA instrument in the Rosetta
+            spacecraft. The set covers the substrate history from the
+            calibration period of the instrument starting 2002-05-29 up to
+            the payload checkout #8 2008-11-17. (Version 2.0 is the first
+            version archived.)
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+ 
+    This dataset contains data from COSIMA instrument in the Rosetta
+    spacecraft. The set covers the substrate history from the
+    calibration period of the instrument starting 2002-05-29 up to the
+    payload checkout #8 2008-11-17.
+ 
+    Note that Version 2.0 is the first version archived for this
+    dataset.  Version 1 was never archived.
+ 
+    During the calibration period the instrument was operated with
+    several software versions and for test purposes the operations
+    were not always nominal. The substrate histories are anyway
+    considered to be complete.
+ 
+    During the first commissioning period from 2004-03-02 to
+    2004-06-06 the substrates from the target holder #D8 covering the
+    dust inlet was stored.
+ 
+    During the second commissioning period from 2004-09-06 to
+    2004-10-16 the first ever in space secondary ion mass spectra were
+    generated. These can be found from the substrate #1C2 data.
+ 
+    During the passive payload checkouts (PC) no science data was
+    generated.  The target holder #C2 was to be lifted to test the
+    target manipulator unit. This failed in PC1 and PC3 due to
+    hardware anomaly. Due to spacecraft telemetry problem, this
+    history is not available from PC2 either.
+ 
+    Test images from empty COSISCOPE slot were taken in all payload
+    checkouts. All the substrates were also imaged in space to be used
+    later as initial reference images.
+ 
+    During the active checkouts the main operational concentration was
+    to heal the baddly behaving ion emitter A. During those operations
+    some spectra was acquired, but without intention to generate
+    really scientifically usable background spectra from the
+    substrates.
+ 
+  Parameters
+  ==========
+ 
+    The primary measured parameter is the time of flight mass spectrum
+    of a grain, ion events collected for 131072 time bins, each
+    1.953125 ns in length. For data selection purposes, three
+    individual time windows can be selected for each generated
+    spectrum. In addition or instead, a peak list separating the
+    organic and inorganic peaks can be generated. For quantitive
+    analysis and gain optimisation, instead of individual time bins,
+    a sum of events in three time windows can be collected. These are
+    called scans in the COSIMA system.
+ 
+    Grains in the substrate are searched with the COSISCOPE camera.
+    COSISCOPE main task is to generate grains list of the prominent
+    features on the substrate surface. The images itself can also be
+    generated.
+ 
+ 
+  Processing
+  ==========
+ 
+    The spectrum time of flight ion data is mass calibrated with the
+    same procedure as is used in space for the peak data. The
+    calibration should be used only as rude starting point and for
+    scienctific analysis each calibration must be checked.
+ 
+    The housekeeping data covering the data aqcuisition period is
+    calibrated to physical units and statistically analyzed were
+    applicable to support the evaluation of the data quality.
+ 
+  Data
+  ====
+ 
+    COSIMA generates the following PDS products
+ 
+    spectrum
+    --------
+      The spectrum is generated by bombing the comet grains collected
+      on the substrate by indium ions. The seconday ions are measured
+      by time of flight mass spectrometer. The spectrometer collects
+      individual ion arriving times to an array of 131072 bins, each
+      1.953125 nanosecond in size. From accumulated ion data, peaks
+      are detected and from the assumed mass scale and detected peak
+      positions a mass is given to each time bin. This calibration
+      is automatic and the user must check the scale for real use.
+ 
+      The spectrum can be divided in time to at most tree different
+      subspectrums to reduce the amout of data to be transmitted.
+ 
+      The product files have the naming convention
+      CS_YXX_YYYYMMDDTHHMMSS_SP_Z.TAB, where the Y is either 1 for
+      top, 2 for middle and 3 for bottom substrate. The XX is target
+      holder number in the range C1 to D8, counting in hexadecimal
+      number base. The YYYYMMDDTHHMMSS gives the start year, month,
+      day, hour, minute and second. The Z is P for positive and N for
+      negative ion spectrum.
+ 
+    peaks
+    -----
+      Generated as the spectrum, but the spectrum mass scale is
+      established onboard COSIMA. The list of 300 first organic and
+      inorganic peaks is transmitted. For higher masses, the total of
+      count hits for a mass range is given.
+ 
+      The product files have the naming convention
+      CS_YXX_YYYYMMDDTHHMMSS_PK_Z.TAB, where the Y is either 1 for
+      top, 2 for middle and 3 for bottom substrate. The XX is target
+      holder number in the range C1 to D8, counting in hexadecimal
+      number base. The YYYYMMDDTHHMMSS gives the start year, month,
+      day, hour, minute and second. The Z is P for positive and N for
+      negative ion spectrum.
+ 
+    scan
+    ----
+      Used for instrument calibration and gain optimisation. Currently
+      no PDS product available, as the spectrum window limits are very
+      difficult to find to all the scans made. Produces total sum of
+      the event counts over three possible time windows.
+ 
+    spectrum housekeeping
+    ---------------------
+      There&apos;s three kind of housekeeping information.
+ 
+      First, the minimum, maximum, mean and standard deviation of the
+      analog data, temperatures, voltages and currents, is calculated
+      for the period of the measurement.
+ 
+      Second, the used time to digital converter timing for the ion
+      beam chopper, bunchers and ion optics is given.
+ 
+      Third, the time to digital converter temperature calibration for
+      the delay line is given. The calibration is needed to adjust the
+      delay line so, that the 16 bin hardware event counter gets even
+      bin distribution over the sampling period.
+ 
+      The product files have the naming convention
+      CS_YXX_YYYYMMDDTHHMMSS_S_HK.TAB, where the Y is either 1 for
+      top, 2 for middle and 3 for bottom substrate. The XX is target
+      holder number in the range C1 to D8, counting in hexadecimal
+      number base. The YYYYMMDDTHHMMSS gives the start year, month,
+      day, hour, minute and second.
+ 
+    grains
+    ------
+      The grain list is taken by the COSISCOPE camera from the
+      substrate surface. The orientation of the substrate is
+      calculated from the reference dots on target holder. The
+      binding box of the substrate feature is given in substrate
+      coordinates, which has origo at lower left corner and is 10000
+      times 10000 micrometers. The grain quality, based on the
+      brightness is given as relative number from 0-255.
+ 
+      The product files have the naming convention
+      CS_YXX_YYYYMMDDTHHMMSS_GR__.TAB, where the Y is either 1 for
+      top, 2 for middle and 3 for bottom substrate. The XX is target
+      holder number in the range C1 to D8, counting in hexadecimal
+      number base. The YYYYMMDDTHHMMSS gives the start year, month,
+      day, hour, minute and second.
+ 
+    image
+    -----
+      The image take by the COSISCOPE camera. The image has 1024*1024
+      pixels resolution with 10 bit brightness information. The PDS
+      product uses 16 bits for brightness storage.
+ 
+      The product files have the naming convention
+      CS_YXX_YYYYMMDDTHHMMSS_IM_Z.IMG, where the Y is either 1 for
+      top, 2 for middle and 3 for bottom substrate. The XX is target
+      holder number in the range C1 to D8, counting in hexadecimal
+      number base.The YYYYMMDDTHHMMSS gives the start year, month,
+      day, hour, minute and second. The ZX is P for right (plus) side
+      and N for left (minus) side led illumination.
+ 
+      The image files can be viewed only with software, that
+      understands PDS data formats, like &apos;NASAView&apos;, available from
+      PDS.
+ 
+    COSISCOPE housekeeping
+    ----------------------
+      For the COSISCOPE housekeeping the operating temprature mimimum,
+      maximum, mean and standard deviation is calculated for the
+      operation time period. In addition, the COSISCOPE operation
+      setup parameters are given. Also the subsrate orientation
+      information is given.
+ 
+      The product files have the naming convention
+      CS_YXX_YYYYMMDDTHHMMSS_G_HK.TAB, where the Y is either 1 for
+      top, 2 for middle and 3 for bottom substrate. The XX is target
+      holder number in the range C1 to D8, counting in hexadecimal
+      number base.The YYYYMMDDHHMMSS gives the start year, month, day,
+      hour, minute and second.
+ 
+  Ancillary Data
+  ==============
+ 
+    Other data required to interpret this data, especially if it is
+    not included in the dataset (for example, laboratory calibration
+    values)
+ 
+  Coordinate System
+  =================
+ 
+    COSIMA substrates are exposed 3 at a time to the +Z side of the
+    spacecraft. The dust funnel has 20 * 34 degree field of view.
+ 
+ 
+                                ^
+                                |  direction of
+                                |    flight
+                                |
+ 
+                                ^ +Xcosima (down-track)
+                                |
+                                |
+     ---              +---------|---------+
+      ^               |         |         |
+      |               |         |         |
+      |               |         |         |
+      |               |         |         |
+      | 20 deg        |         x-------------&gt; +Ycosima (cross-track)
+      |               |     +Zcosima      |
+      |               |                   |
+      |               |                   |
+      V               |                   |
+     ---              +-------------------+
+ 
+                      |       34 deg      |      Boresight (+Z axis)
+                      |&lt;-----------------&gt;|       is into the page
+                      |                   |
+ 
+    No S/C geometry is calculated for the data.
+ 
+  Software
+  ========
+ 
+All the data can be used by PDS tools or any ASCII reading software.
+ 
+  Media/Format
+  ============
+ 
+    The data is delivered as PDS standard compliant electronic files.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    The data have been automatically processed from raw data. Care
+    should be taken in spectrum analysis, the housekeeping values for
+    operating voltages should be checked for possible anomalies. Some
+    of the operations during the calibration were really outside of
+    normal instrument operation.
+ 
+  Review
+  ======
+ 
+    The dataset review is available from the RO-EST-RP-3461, ROSETTA
+    Science Archive 1st Delivery Review Report for Orbiter instruments
+    (15 March 2007). This covers the dataset v1.0, where there was no
+    spectrum mass scale.
+ 
+  Data Coverage and Quality
+  =========================
+ 
+    The data covers the COSIMA flight model operations from the flight
+    substrate delivery 2002-05-29 to the eight payload checkout
+    2008-07-23.
+ 
+    The production of the substrates is not part of the substrate
+    history.
+ 
+    Regardless of the several anomalies in the instrument operations
+    during the calibration period, the substrate histories are
+    complete. Only the scan results are missing, but the ion emission
+    and positions on the substrates are known from the housekeeping
+    data.
+ 
+  Limitations
+  ===========
+ 
+    Housekeeping data outside spectral measurements and COSISCOPE
+    operations is not delivered. This would include indium ion emitter
+    history and target manipulator operations. Though vital to the
+    instrument operations, they are not needed in the scientific
+    interpretation of the COSIMA data.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

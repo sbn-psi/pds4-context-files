@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-s-rss-1-sroc17-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CASSINI RSS RAW DATA SET - SROC17 V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-s-rss-1-sroc17-v1.0__browserp_co-s-rss-1-sroc17-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kliore, A.J., J.D. Anderson, J.W. Armstrong, S.W. Asmar, C.L. Hamilton, N.J.
+                   Rappaport, H.D. Wahlquist, R. Ambrosini, B. Bertotti, F.M. Flasar, R.G. French,
+                   L. Iess, E.A. Marouf, and A.F. Nagy, Cassini Radio Science, Space Sciences
+                   Reviews, in press, 2000.
+            </reference_text>
+            <description>reference.KLIOREETAL2000</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-S-RSS-1-SROC17-V1.0</data_set_id>
+        <data_set_name>CASSINI RSS RAW DATA SET - SROC17 V1.0</data_set_name>
+        <data_set_release_date>2013-10-01</data_set_release_date>
+        <start_time>2012-10-01</start_time>
+        <stop_time>2012-12-31</stop_time>
+        <producer_full_name>ELIAS BARBINIS</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            Cassini RSS SROC17 raw data.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Cassini Radio Science Saturn Ring and Atmospheric Occultation
+            experiments (SROC17) Raw Data Archive is a time-ordered
+            collection of radio science raw data acquired on November 10,
+            2012, during the Cassini Extended Extended Mission.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Cassini Radio Science Saturn Ring Occultation experiment (SROC17)
+      Raw Data Archive is a time-ordered collection of radio science raw
+      data acquired on November 10, 2012, during the Cassini Extended
+      Extended Mission.
+ 
+      The DATA_SET_ID &apos;CO-S-RSS-1-SROC17-V1.0&apos; includes the following
+      components:
+          Instrument host (i.e., &apos;CO&apos; for CASSINI ORBITER)
+          Target (i.e., &apos;S&apos; for Saturn)
+          Instrument (i.e., &apos;RSS&apos; for Radio Science Subsystem)
+          Data processing level number (i.e., &apos;1&apos;)
+          Description (i.e., &apos;SROC17&apos;)
+          Version number (i.e., &apos;V1.0&apos;)
+ 
+      Two types of measurements were obtained; these are known
+      as closed-loop and open-loop recordings.  The closed-loop
+      system uses a phase-lock loop in the receiver to track the
+      downlink signal, reporting both amplitude and frequency 10
+      times per second.  In the open-loop system, the signal is
+      simply converted to a baseband frequency range; the entire
+      passband is sampled and recorded at 16000 samples per second.
+ 
+      The data set includes three primary data types.  Tracking and
+      Navigation Service Data Files (TNFs) are the most primitive (and
+      most voluminous) product of the closed-loop system. Orbit Data Files
+      (ODFs) are compressed versions of TNFs, specifically targeted to
+      spacecraft navigators and scientists interested in gravity fields.
+      Radio Science Receiver (RSR) files are the primary data type from
+      the open-loop system.
+ 
+ 
+    Parameters
+    ==========
+      The TNF is the primary output from the Cassini closed-loop system.
+      Each TNF in the data set is accompanied by a PDS label which
+      defines both the content and the format of the file.
+      TNF data fields include:
+           High- or low-rate Doppler
+           Range
+           Uplink frequencies (ramps)
+           Differential Range vs Integrated Doppler (DRVID)
+           Allan deviation
+           Smoothed noise
+      Other information in TNF data records includes sample date and
+      time; spacecraft ID; ground station and its configuration;
+      status flags and values reported by various ground systems;
+      calibration values, noise estimates, and tolerances (station
+      delay, transmitter power, etc.); and signal strength.
+ 
+      The ODF is a product of the closed-loop system;it contains the most
+      important information (range, Doppler and frequency ramps) needed by
+      spacecraft navigators, and investigators interested in determining
+      gravitational fields.  Each ODF is accompanied by a full PDS label
+      which describes both the content and format of the associated file.
+      ODF data fields include:
+           One-way Doppler (Hertz)
+           Two-way Doppler (Hertz)
+           Three-way Doppler (Hertz)
+           SRA planetary operational discrete spectrum range (range
+                units)
+ 
+      The Radio Science Receiver (RSR) files are the primary output
+      from the Cassini open-loop system and they contain 16-bit samples
+      of receiver output. Each RSR file is accompanied by a full PDS label
+      which describes both the content and format of the file at the
+      bit level.
+ 
+ 
+    Processing
+    ==========
+ 
+      The closed-loop Tracking and Navigation Service Files (TNFs)
+      and the  Orbit Data Files (ODFs) for the Cassini SROC17 are
+      constructed so that each file contains the data for each day.
+ 
+      ODFs are constructed by the RMDCT; they are constructed so that
+      each file contains the data for each day.
+ 
+      The open-loop Radio Science Receiver (RSR) files are screened for
+      gaps.  No gaps were found in the RSR files for SROC17.
+ 
+ 
+    Primary Data
+    ============
+      The primary data are stored on DVD volumes in subdirectories TNF,
+      ODF, and RSR in per-day directories TIGR5_ddd (where ddd specifies
+      the day of year based on the start time of the data). Users should
+      refer to the INDEX/CUMINDEX.TAB listing to locate primary data files.
+ 
+      TNFs are stored in the TNF directory on archival volumes.
+      File names are of the form sssttaayyyy_ddd_hhmmxuuwVn.TNF,
+      where &apos;sss&apos; is the sequence/orbit id (e.g., S23), &apos;tt&apos; is the
+      target id (e.g., SR),&apos;aa&apos; is the activity/experiment id (e.g., OC),
+      &apos;yyyy_ddd_hhmm&apos; is the date and time for the start of included data
+      (e.g., 2006_258_1901), &apos;xuu&apos; is the transmitter band and uplink
+      station (e.g., X55), &apos;w&apos; is the ground mode or &apos;way&apos; (e.g., M
+      for multiple ground modes) and Vn is the file version number
+      (e.g., V1).
+      The PDS label has file name sssttaayyyy_ddd_hhmmxuuwVn.LBL.
+      For this archive, the typical TNF contains about 330 Mbytes.
+ 
+ 
+            ODFs are stored in the ODF directory on archival volumes.
+      File names are of the form sssttaayyyy_ddd_hhmmxuuwVn.ODF.
+      The PDS label has file name sssttaayyyy_ddd_hhmmxuuwVn.LBL.
+      For this archive, the typical ODF contains about 22 Mbytes.
+ 
+      RSR files are stored in the RSR directory on archival volumes.
+      File names are of the form sssttaayyyyddd_hhmmxuudrrPD.rcs,
+      where &apos;sss&apos; is the sequence, (e.g., S23), &apos;tt&apos; is the target,
+      (e.g., RS), &apos;aa&apos; is the activity, (e.g., OE), &apos;yyyy&apos; is the
+      year, (e.g., 2006), &apos;hhmm&apos; is the start time, (e.g., 1955),
+      &apos;xuu&apos; is the uplink band and uplinking station, (e.g., X14 or
+      NNN for no uplink),
+      &apos;drr&apos; is the downlink band and receiving station, (e.g., K25),
+      P is the polarization, (e.g., R for right circular polarization),
+      and &apos;rcs&apos; is the RSR, channel and subchannel that were used to
+      collect the data (e.g., 1A1). The PDS label has file name
+      sssttaayyyyddd_hhmmxuudrrPD.LBL. The typical RSR contains
+      about 900 Mbytes.
+ 
+ 
+    Secondary Data
+    ==============
+      Secondary data are needed for proper analysis and interpretation
+      of the radio data (file type, RSR). Secondary data
+      that cover a time span of 24 hours or less are stored in
+      subdirectories of SROC17_ddd (i.e., 158, PD1, PD2 and TLM).
+      Secondary data that cover a time span greater than 24 hours are
+      provided in subdirectories CKF, EOP, ION, SPK and TRO in the
+      SROC17_ANCILLARY directory. Users should refer to the
+      INDEX/CUMINDEX.TAB listing to locate secondary data files.
+ 
+      0158-Monitor Files (158 Directory)
+      ---------------------------------------------------
+        0158-Monitor files are ASCII files with names
+        sssttaayyyy_ddd_hhmm_hhmmrr.158 where &apos;hhmm_hhmm&apos; is the start
+        and end time of the file and &apos;rr&apos; is the receiving station.
+        They are channelized DSN Monitor Data files (new format) and
+        they are produced at JPL by a Query Server operating on DSN Monitor
+        packets stored in the JPL Telemetry Delivery System (TDS) Data
+        Base.  Each 0158-Monitor file is accompanied by a PDS label
+        with file name sssttaayyyy_ddd_hhmm_hhmmrr.LBL. Typical file size
+        is about 15 MB.
+ 
+ 
+      Path Delay Files (PD1 and PD2 Directories)
+      -----------------------------------------------------------
+       Path Delay files are ASCII files and they are produced by the
+       RSSG at JPL. File names have the form
+       sssttaayyyy_ddd_hhmm_hhmmrr.PD1 (stored in the PD1 directory - the
+       &apos;1&apos; in &apos;PD1&apos; indicates that the data have been collected from
+       Advanced Water Vapor Radiometer (AWVR) Unit 1) and
+       sssttaayyyy_ddd_hhmm_hhmmrr.PD2 (stored in the PD2 directory - the
+       &apos;2&apos; in &apos;PD2&apos; indicates that the data have been collected from AWVR
+       Unit 2) where &apos;hhmm_hhmm&apos; is the start and end time of the data
+       and rr is the receiving station. Each Path Delay file
+       is accompanied by a PDS  minimal label with file name
+       sssttaayyyy_ddd_hhmm_hhmmrr.LBL. Typical file size is 135 KB.
+ 
+ 
+      Telemetry Files (TLM Directory)
+      ---------------------------------------------------
+        Telemetry files are ASCII files with names
+        sssttaayyyy_ddd_hhmm_hhmm.TLM where &apos;hhmm_hhmm&apos; is the start and
+        end time of the file. They are channelized DSN Telemetry Data files
+        and they are produced at JPL by a Query Server operating on DSN
+        Telemetry packets stored in the JPL Telemetry Delivery System (TDS)
+        Data Base. Each Telemetry file is accompanied by a PDS label
+        with file name sssttaayyyy_ddd_hhmm_hhmmrr.LBL. Typical file size
+        is  about 80 MB.
+ 
+ 
+      C-Kernel Files (CKF Directory)
+      ---------------------------------------------------
+        C-Kernel Files are in transfer format and they are produced by the
+        Cassini Attitude and Articulation Control Subsystem team (AACS).
+        File names have the form sssttaayyyy_ddd_yyyy_ddd.CKF where
+        &apos;yyyy_ddd_yyyy_ddd is the start and end time of the file. Each
+        C-Kernel file is accompanied by a PDS minimal label with file name
+        sssttaayyyy_ddd_yyyy_ddd.LBL. Typical file size is 20 MB.
+ 
+ 
+      Earth Orientation Parameter files (EOP Directory)
+      ---------------------------------------------------
+        Earth Orientation Parameter files are ASCII files and they are
+        produced by the Kalman Earth Orientation Filter (KEOF) Group
+        at JPL. File names have the form sssttaayyyy_ddd_yyyy_ddd.EOP.
+        Each EOP file is accompanied by a PDS minimal label with file
+        name sssttaayyyy_ddd_yyyy_ddd.LBL.  Typical file size is 24 KB.
+ 
+ 
+      Ionosphere Calibration Files (ION Directory)
+      ---------------------------------------------------
+        Ionosphere Calibration files are produced by the Tracking
+        System Analytic Calibration (TSAC) Group at JPL.  They provide
+        historical and predicted Earth ionospheric conditions.
+        File names have the form sssttaayyyy_ddd_yyyy_ddd.ION.
+        Each ION file is accompanied by a PDS minimal label with file
+        name sssttaayyyy_ddd_yyyy_ddd.LBL. Typical file size is 23 KB.
+ 
+ 
+      Spacecraft/Planetary Ephemeris (SP-Kernel) Files (SPK Directory)
+      ----------------------------------------------------------
+        Spacecraft/Planetary Ephemeris Files (also known as SP kernels
+        or SPK files) are produced by the Cassini Navigation Team
+        (NAV).  These files give spacecraft and planetary ephemerides.
+        File names have the form sssttaayyyy_ddd_yyyy_ddd.SPK.
+        Each SPK file is accompanied by a PDS minimal label with file
+        name having the form sssttaayyyy_ddd_yyyy_ddd.LBL. Typical
+        file size is 20 MB.
+ 
+ 
+      Troposphere Calibration Files (TRO Directory)
+      ---------------------------------------------------
+        Troposphere Calibration files are produced by the
+        Tracking System Analytic Calibration (TSAC) Group at JPL.
+        They provide historical and predicted Earth tropospheric
+        conditions.  File names have the form sssttaayyyy_ddd_yyyy_ddd.TRO.
+        Each TRO file is accompanied by a PDS minimal label with file name
+        sssttaayyyy_ddd_yyyy_ddd.LBL. Typical file size is 120 KB.
+ 
+ 
+    Files in the CALIB Directory
+    =============================
+       The CALIB directory contains a Leapsecond kernel file, a Spacecraft
+       Clock Conversion file, a USO Characterization Report and a
+       Boresight Calibration Report. All files in the CALIB directory are
+       ASCII text files with variable length records delimited by
+       ASCII carriage-return line-feed pairs. All file names in this
+       directory contain the string &apos;yymmdd&apos;, where yy, mm, dd
+       indicate the year, month and day of the file creation.
+ 
+       Leapsecond kernel files are a record of leap seconds (past and
+       predicted) that allow proper conversion between ephemeris time
+       and UTC. File names are of the form:
+ 
+                 LSK_yymmdd.TLS
+ 
+       Each file LSK_yymmdd.TLS is accompanied by a PDS detached minimal
+       label with name LSK_yymmdd.LBL.
+ 
+       Spacecraft Clock Conversion files allow time measured by the
+       spacecraft clock to be converted to other time systems (e.g.,
+       ephemeris time or UTC). File names are of the form:
+ 
+                 TSC_yymmdd.SCK
+ 
+       Each file TSC_yymmdd.SCK is accompanied by a PDS detached minimal
+       label with name TSC_yymmdd.LBL.
+ 
+       The Boresight Calibration Report and the USO Characterization Report
+       are produced by the Radio Science Systems Group (RSSG) at JPL.
+       The naming convention for these files is:
+ 
+       BORESIGHT_yymmdd.TXT
+ 
+       USO_yymmdd.TXT
+ 
+ 
+    Coordinate System
+    =================
+      SPK files are produced in the J2000 inertial
+      reference frame. Other data types are not dependent on any
+      definition of a coordinate system.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at JPL and elsewhere. Because such
+      software must usually operate at the bit-level and is written
+      for a narrow range of platforms, it is unsuitable for
+      general distribution. As such, no software is included with
+      this archival data set.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set is written on DVD-R media. The DVD-R volumes
+      conform to the &apos;UDF_ISO-9660_BRIDGE&apos; structure as required by PDS.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+      In general, this is a good data set.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by the Cassini Radio Science
+      Team prior to submission to the Planetary Data System (PDS).
+ 
+ 
+    Data Coverage and Quality
+    =========================
+     The data are contained in 3 volumes (DVDs) - CORS_0389
+     through CORS_0391 - and they cover the Radio Science Saturn
+     Ring Occultation experiments, which were done on November 10, 2012.
+     There are no known problems with this data set.
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of
+      the execution, which is described above under Data Coverage
+      and Quality.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

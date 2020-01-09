@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rss-5-losapdr-l2-v1.13</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGN V RSS LINE OF SIGHT ACCELERATION PROFILES V1.13</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-5-losapdr-l2-v1.13__browserp_geo_mgn-v-rss-5-losapdr-l2-v1.13::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-5-losapdr-l2-v1.13__dvo_geo_mgn-v-rss-5-losapdr-l2-v1.13::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Special issue, The Geophysics of Venus, Icarus, 112, 1-295, 1994.
+            </reference_text>
+            <description>reference.ICARUSMGN1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Konopliv, A.S., and W.L. Sjogren, Venus Gravity Handbook, Jet Propulsion
+                   Laboratory Publication 96-2, January 1996.
+            </reference_text>
+            <description>reference.KONOPLIV-SJOGREN1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Archival Tracking Data File Data Record (ATDFDR), Magellan Software
+                   Interface Specification: DSN Document 820-13, Rev. A, TRK-2-25, Jet
+                   Propulsion Laboratory, Pasadena, CA, 1986.
+            </reference_text>
+            <description>reference.MGN-ATDFDR1986</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Navigation Constants File Data Record (NCFDR), Magellan Software Interface
+                   Specification: NAV-103, Rev. A, Jet Propulsion Laboratory, Pasadena, CA,
+                   1991.
+            </reference_text>
+            <description>reference.MGN-NCFDR1991</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Orbit Data File Data Record (ODFDR), Magellan Software Interface
+                   Specification: DSN Document 820-13, Rev. A, TRK-2-18, Jet Propulsion
+                   Laboratory, Pasadena, CA, 1988.
+            </reference_text>
+            <description>reference.MGN-ODFDR1988</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Small Forces File Data Record (SFFDR), Magellan Software Interface
+                   Specification: SES-121, Jet Propulsion Laboratory, Pasadena, CA, 1987.
+            </reference_text>
+            <description>reference.MGN-SFFDR1987</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moyer, T.D., Mathematical Formulation of the Double-Precision Orbit
+                   Determination Program (DPODP), TR 32-1527, Jet Propulsion Laboratory, Pasadena,
+                   CA, 1971.
+            </reference_text>
+            <description>reference.MOYER1971</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moyer, T.D., Changes to the ODP and the ODE for processing X-Band Uplink
+                   Data, EM-314-430, Jet Propulsion Laboratory, Pasadena, CA, 1987.
+            </reference_text>
+            <description>reference.MOYER1987</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Planetary Data System Standards Reference, Jet Propulsion Laboratory Document
+                   D-7669, Part 2, 20 November 1992
+            </reference_text>
+            <description>reference.PDSSR1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RSS-5-LOSAPDR-L2-V1.13</data_set_id>
+        <data_set_name>MGN V RSS LINE OF SIGHT ACCELERATION PROFILES V1.13</data_set_name>
+        <data_set_release_date>1997-01-01</data_set_release_date>
+        <start_time>1992-09-15</start_time>
+        <stop_time>1994-10-12</stop_time>
+        <producer_full_name>WILLIAM L. SJOGREN</producer_full_name>
+        <citation_text>
+            Sjogren, W. L., MGN V RSS LINE OF SIGHT ACCELERATION PROFILES
+            V1.13, MGN-V-RSS-5-LOSAPDR-L2-V1.13, NASA Planetary Data System,
+            1997
+        </citation_text>
+        <data_set_terse_desc>
+            The Magellan Line of Sight Acceleration Profile Data Record
+            (LOSAPDR) archive (V1.13) contains results from processing of
+            radio tracking data during Cycles 4, 5, and 6 of the Magellan
+            spacecraft.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Line of Sight Acceleration Profile Data Records (LOSAPDR) consist
+            of data from Doppler tracking of the orbiting spacecraft. The
+            relative motion of the spacecraft and the earth-based radio
+            receiver is measured very precisely, and known motions are
+            removed a priori (i.e. earth rotation, planetary motions,
+            spacecraft orbital motion, solar pressure, drag), leaving small
+            velocity changes caused by variations in the mass distribution of
+            the planet. The residual Doppler frequency shifts are linearly
+            proportional to the component of velocity in the Earth direction.
+            Numerical differentiation of these velocity residuals with
+            respect to time produces line-of-sight (LOS) gravity. These
+            measures are accelerations at spacecraft altitude which can be
+            modeled for geophysical interpretation. For information on
+            Magellan gravity investigations see papers in [ICARUSMGN1994].
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      Line of Sight Acceleration Profile Data Records (LOSAPDR)
+      consist of data from Doppler tracking of the orbiting
+      spacecraft.  The relative motion of the spacecraft and the
+      earth-based radio receiver is measured very precisely, and
+      known motions are removed a priori (i.e.  earth rotation,
+      planetary motions, spacecraft orbital motion, solar pressure,
+      drag), leaving small velocity changes caused by variations in
+      the mass distribution of the planet.  The residual Doppler
+      frequency shifts are linearly proportional to the component of
+      velocity in the Earth direction.  Numerical differentiation of
+      these velocity residuals with respect to time produces
+      line-of-sight (LOS) gravity.  These measures are accelerations
+      at spacecraft altitude which can be modeled for geophysical
+      interpretation.  For information on Magellan gravity
+      investigations see papers in [ICARUSMGN1994].
+ 
+      Note:  JPL documents describing the Magellan gravity experiment,
+             including the acquisition, processing, and quality of
+             the LOSAPDR data, are available from the PDS
+             Geosciences Node, Washington University, St. Louis, MO.
+             [KONOPLIV&amp;SJOGREN1996] provides the most detailed
+             description of the Magellan gravity experiment.
+ 
+ 
+ 
+    Parameters
+    ==========
+      Users of these data should be aware of particular events and
+      tracking station operations to properly reduce the complex
+      motions inherent in the Doppler signals.
+ 
+      Many of the spacecraft parameters can be found in the
+      Navigation Constants Document, [MGN-NCFDR1991].  There is a
+      small force record, [MGN-SFFDR1987], which lists the times and
+      duration of the momentum dumps.  There were several maneuvers
+      and their times and durations are given in the Maneuver Profile
+      Listing (MPL) data product.  The spacecraft orientations are
+      all listed in the Spacecraft Attitude During Hide Maneuver
+      Listing (SADHML) data product.
+ 
+      On every orbit the spacecraft orientation changed with the high
+      gain antenna pointing at Venus or at the Earth or some other
+      direction to keep the spacecraft temperature within safe
+      bounds.  The transmitter ramp rates and initiation times are
+      listed in the ODFDR (Orbit Data File Data Record) and ATDFDR
+      (Archival Tracking Data File Data Record) [MGN-ODFDR1988;
+      MGN-ATDFDR1986].  The equations to incorporate the ramp data as
+      well as the complete theoretical Doppler observable are given
+      in [MOYER1971; MOYER1987].
+ 
+      Note:  All the ancillary data and information to process and
+             interpret the Doppler data are located at the PDS
+             Geosciences Node, Washington University St. Louis, MO.
+ 
+ 
+    Processing
+    ==========
+      The raw X-Band uplink/downlink Doppler observations have been
+      fit with a model which accounts for theoretical motions and
+      other signal effects.  The difference between the observed or
+      measured Doppler and the theoretical model are Doppler
+      residuals.  These are small systematic variations and are
+      attributed to unmodeled gravity field perturbations.
+ 
+      The Doppler residuals are then spline fitted and analytically
+      differentiated to produce line-of-sight (LOS) accelerations.
+      The spacecraft position in orbit at each acceleration point is
+      noted at a specific altitude, latitude and longitude.
+ 
+      All the Doppler residuals are two-way (round trip), where the
+      Doppler shift is the shift between the outgoing and returned
+      frequency.  The Doppler residuals can be converted into
+      velocity residuals of the spacecraft relative to Earth using:
+ 
+           (Doppler residual * c) / (2 * frequency),
+ 
+      where c is the velocity of light, 2.997925E11 mm/sec, and the
+      frequency is 8.43E09 Hz, which reduces to 1 Hz Doppler being
+      equivalent to 17.78 mm/sec (range-rate).
+ 
+      The LOS data during cycle 4 (Sept.  92 - May 93), cycle 5 (Aug.
+      93 - April 94) and cycle 6 (April 94 - Oct.  94) have been
+      produced using a 120th degree and order spherical harmonic
+      model (MGN120P) of the Venusian gravity field, which causes the
+      Doppler residuals to be much smaller and thus the LOS
+      accelerations to be also small (i.e.  on the order of a few
+      milligals as compared to 50-80 milligals with the GM only
+      model, which has only a central term and without any spherical
+      harmonic coefficients).
+ 
+ 
+ 
+    Ancillary Data
+    ==============
+      N/A
+ 
+ 
+ 
+    Coordinate System
+    =================
+      The coordinates extracted from the JPL ODP (Orbit Determination
+      Program) and given in the data files for the spacecraft
+      position and velocity are: space-fixed cartesian,
+      Venus-centered, referenced to the Venus true equator and prime
+      meridian at the epoch time given.
+ 
+ 
+ 
+    Software
+    ========
+      N/A
+ 
+ 
+ 
+    Media/Format
+    ============
+      The Cycle 4, 5 and 6 LOSAPDR dataset will be available
+      electronically via the World-Wide Web and anonymous FTP
+      transfer.  The archive will also be delivered to the National
+      Space Sciences Data Center (NSSDC) using compact disk write
+      once (CD-WO) media.  Formats will be based on standards
+      established by the Planetary Data System (PDS).
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      The Doppler residuals were differentiated to produce LOS
+      acceleration profiles.  These LOS profiles however have
+      distortions in them due to viewing geometry, variations in
+      spacecraft altitude and the least squares reduction process.
+      With the high degree and order spherical harmonics, similar
+      profiles can be generated that are free from most of the above
+      effects, but may suffer from loss of high frequency components
+      that remain in the raw data.  The LOS data should be used for
+      refinements when small features are important to the analyst,
+      but otherwise the gravity field as defined by the harmonics is
+      the most valid.
+ 
+ 
+ 
+    Review
+    ======
+      The LOSAPDR archive will be reviewed by PDS and planetary
+      scientists familiar with the dataset, prior to release to the
+      planetary community.
+ 
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      There were 990 LOSAPDRs for cycle 4 (orbits 5827-7615) produced
+      at JPL and then validated and archived at the Planetary Data
+      System&apos;s Geophysics Subnode at Washington University, St.
+      Louis, MO.  There was 360 degrees of longitude coverage with
+      periapsis altitude near 180 km.
+ 
+      During cycle 5, the coverage was redundant and there was a gap
+      in the longitude coverage.  Some profiles were acquired across
+      apoapsis (550 km altitude) while others were across periapsis.
+      There were 1679 LOSAPDRs produced at JPL and then validated at
+      the Geophysics Subnode for cycles 5 and 6 combined.  There were
+      736 LOSAPDRs for cycle 5 (orbits 8606-12248) and 943 for cycle
+      6 (orbits 12250-14992).
+ 
+ 
+ 
+      January 17 to January 24, 1992
+      ------------------------------
+        There was a week of Doppler periapsis data during January
+        (17-24) 1992 when there was battery recharging.  The data
+        were at S-Band from the medium gain antenna and periapsis was
+        at 280 km.
+ 
+ 
+ 
+      April 22 to May 16, 1992
+      ------------------------
+        From April 22 to May 16, 1992 (23 days) with periapsis at 261
+        km there were sixteen orbits of X-Band periapsis data
+        acquired.
+ 
+ 
+ 
+      August 1990 to September 1992
+      -----------------------------
+        Other than these two prior blocks of data, all Doppler
+        gravity data from August 1990 to September 1992 were taken
+        when spacecraft altitudes were well above 2000 km.
+ 
+ 
+ 
+      September 15, 1992 to May 24, 1993
+      ----------------------------------
+        The first block of high quality and high resolution gravity
+        data were acquired.  Periapsis was lowered to 180 km and
+        coverage across periapsis was obtained continuously for 360
+        degrees of longitude.  Periapsis latitude remained
+        essentially constant at 10 degrees N latitude and good
+        resolution was maintained within +/- 30 degrees (i.e.  40
+        degrees N to 20 degrees S where spacecraft altitudes reached
+        ~450 km).  There were only a few days where no data were
+        obtained, but in general excellent data coverage was
+        maintained providing at least two orbits per day and much of
+        the time 4 to 5 orbits per day.  All of these were X-Band
+        uplink and downlink having a noise level of 0.1 mm/sec.  In
+        addition there were also two or more orbits with S-Band
+        coverage each day.
+ 
+ 
+ 
+      May 1993 to August 6, 1993
+      --------------------------
+        The MGN spacecraft successfully completed an aerobraking
+        sequence that nearly circularized its orbit.  This new orbit
+        provided high resolution data in the high latitude regions
+        which previously had poor gravity model determination.  The
+        orbit had a periapsis altitude of 180 km and an apoapsis of
+        550 km and provided ~300 - 400 km altitudes over the high
+        latitude regions.  The orbital period changed from 195
+        minutes to 94 minutes, so there were approximately fifteen
+        orbits per day.
+ 
+        Because of operational sequencing of the onboard computers
+        and the necessity to orient the spacecraft for thermal
+        conditions, the first good coherent X-Band data were acquired
+        on Aug 19, 1993.  There were some short S-Band data blocks
+        starting on August 6, 1993.  The data during aerobraking are
+        on ODF and ATDF files, but were not used for any of the
+        gravity experiment reductions.  The Doppler data acquired
+        during aerobraking were all S-Band at relatively high
+        altitudes.  There were no data near periapsis since the
+        spacecraft was oriented with its high gain antenna pointed
+        along the spacecraft velocity vector and not toward the
+        earth.
+ 
+        The daily coverage in this orbit was excellent with data for
+        several orbits every day.  However orbital geometry of the
+        Earth and Venus have made the coverage redundant for some
+        longitudes and none existent for others.
+ 
+ 
+ 
+      January 6 to January 26, 1994
+      -----------------------------
+        There was a solar conjunction on January 16, 1994 and as a
+        result data from January 6, 1994 to January 26, 1994 are very
+        noisy and essentially non-usable for gravity extraction.  The
+        data immediately after solar conjunction have low altitude
+        passes over Maxwell Montes and provides the very best
+        information for this unique feature.
+ 
+ 
+ 
+      June 22 to July 14, 1994
+      ------------------------
+        During this period (orbits 13298-13635), the Doppler radio
+        tracking on each orbit of Magellan was cut short due to
+        inadvertent spacecraft event sequencing of the thermal
+        control where the spacecraft was turned-off of earth-pointing
+        (loss of radio contact) earlier than it should have been.
+        This was corrected in the next up-load to the spacecraft,
+        making the arcs about another 10 minutes longer.
+ 
+ 
+ 
+    Limitations
+    ===========
+      N/A
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>89-033B-02G</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

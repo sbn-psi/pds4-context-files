@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.msx-l-spirit3-2-4-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSX LUNAR ECLIPSE OBSERVATION V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.midcourse_space_experiment::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.msx::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spirit3.msx::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msx-l-spirit3-2-4-v1.0__browserp_geo_msx-l-spirit3-2-4-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.msx-l-spirit3-2-4-v1.0__dvo_geo_msx-l-spirit3-2-4-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Price, S.D., Egan, M.P., Carey, S.J., Mizuno, D.R., and Kuchar, T.A.,
+                   Midcourse Space Experiment survey of the galactic plane, Astronomical
+                   Journal 121, 2819-2842, 2001.
+            </reference_text>
+            <description>reference.PRICEETAL2001</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Price, S.D., D. Mizuno, and T.L. Murdock, Thermal Profiles of the Eclipsed
+                   Moon, Adv. Space Res., 31, 2299-2304, 2003.
+            </reference_text>
+            <description>reference.PRICEETAL2003A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Price, S.D., C. Paxson, C. Engelke, and T.L. Murdock, Spectral irradience
+                   calibration in the infrared. XV. Absolute calibration of standard stars by
+                   experiments on the Midcourse Space Experiment, Astronomical Journal 128,
+                   889-910, 2004.
+            </reference_text>
+            <description>reference.PRICEETAL2004</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSX-L-SPIRIT3-2/4-V1.0</data_set_id>
+        <data_set_name>MSX LUNAR ECLIPSE OBSERVATION V1.0</data_set_name>
+        <data_set_release_date>2005-06-03</data_set_release_date>
+        <start_time>1996-09-27T02:12:35.746Z</start_time>
+        <stop_time>1996-09-27T04:25:55.745Z</stop_time>
+        <producer_full_name>KATHLEEN KRAEMER</producer_full_name>
+        <citation_text>
+            Kraemer, K., and J. Ward, MSX Lunar Eclipse Observation,
+            MSX-L-SPIRIT3-2/4-V1.0, NASA Planetary Data System, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            Midcourse Space Experiment (MSX) infrared observations of the 27
+            September 1996 lunar eclipse.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Midcourse Space Experiment (MSX) lunar eclipse observation on
+            September 27, 1996 resulted in six 4.3 micron brightness
+            temperature maps of the moon. In addition, qualitative
+            observations were made at 8.3 microns.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    As part of the Midcourse Space Experiment (MSX), the Spatial
+    Infrared Imaging Telescope (Spirit III) observed the lunar eclipse
+    of September 27, 1996 with 30 arcsecond resolution.  This data set
+    consists of three FITS image cubes corresponding to three data
+    collection events about 50 minutes apart, during which the eclipse
+    was observed for a duration of approximately 20 minutes each time.
+    The data are stored in each image cube as two bands, A and B, each
+    consisting of six planes.  Band B data were acquired in two narrow
+    spectral bands (FWHM = 4.22 to 4.36 and 4.24 to 4.45 microns),
+    converted to brightness temperatures in Kelvin, and then co-added
+    to produce brightness temperature maps centered at 4.3 microns.
+    Band A consists of qualitative (uncalibrated) data from 6.8 to
+    10.8 microns, with an effective wavelength of 8.3 microns.  The
+    file names reflect the naming convention from the various
+    observations that MSX performed.  In this case, the observations
+    were made in a calibration program in which all were designated
+    &apos;DC.&apos;  &apos;35&apos; indicates the specific subprogram involved, and &apos;02&apos; -
+    &apos;04&apos; are the Data Collection Event (DCE) numbers for the lunar
+    eclipse set of observations.  Hence the files are DC3502, DC3503,
+    and DC3504.  Additional details of MSX and the SPIRIT III
+    instrument can be found on pages 3-4 of the accompanying
+    presentation (Price_Eclipsed_Moon.pdf/Price_Eclipsed_Moon.htm in
+    the &apos;doc&apos; folder).  Page numbers given in this overview refer to
+    that presentation (which should be viewed with the &apos;notesview&apos;
+    option).  Further information on other astronomy experiments by
+    MSX can also be found in Price et al. (2001); discussion of the
+    calibration can be found in Price et al. (2004).
+ 
+    Each DCE consisted of ten 6 degree long legs (raster scans), in
+    inertial coordinates of the Moon, and lasted 24 minutes (see page
+    6).  The scan rate was 0.05 degrees per second, and roughly two-
+    thirds of the Moon was in the field of view of the arrays on each
+    scan.  The Moon was within the field of view near the end of the
+    even numbered legs and near the beginning of the odd numbered
+    legs.  Due to the scan rate, length, and geometry, the time
+    intervals between complete scans were 3 min, 1 min, 3 min, etc.
+    Therefore, data from even- and odd-numbered legs were co-added to
+    fill data gaps, thereby reducing the ten legs to six segments.
+    Segment 1 is the data from leg 1, Segment 2 is the data from legs
+    2 and 3, Segment 3 is the data from legs 4 and 5, Segment 4 is the
+    data from legs 6 and 7, Segment 5 is the data from legs 8 and 9,
+    and Segment 6 is the data from leg 10.  Note that this is slightly
+    different from the averaging done for the presentation (page 6),
+    in which the scans were simply paired 1 &amp; 2, 3 &amp; 4, etc.  The
+    remaining data &apos;dropouts&apos; are a combination of the filter mask
+    that separates the two 4.3 micron bands on the focal plane array
+    and a group of dead detectors (which show up as lines due to the
+    scanning).
+ 
+    The spatial resolution is 45 km or 1.5 degrees in selenographic
+    coordinates     at the center of the lunar disk.  Off-moon data
+    values are representative of the system and processing noise (for
+    best results in viewing image planes, limit the data values to
+    &gt;0).  The uncertainty in the derived temperatures is ~1 K (see
+    pages 5-6).  The 8.3 micron data (band A) are all in at least soft
+    saturation and thus could not be calibrated. The worst areas went
+    into hard saturation and those data were set to 0.  Also, in
+    DC3504, band B went into saturation as the Moon came out of
+    eclipse, which affected portions of the still-eclipsed Moon as
+    well (this can be seen on page 8).
+ 
+    The three FITS image cubes each have 600 lines, 600 samples per
+    line, and 20 planes, with a standard FITS header embedded at the
+    beginning of the file and a detached PDS label. Image pixels are
+    4-byte IEEE floating-point values. The first six planes in the
+    cube are the six segments corresponding to the Band B wavelength
+    (4.3 microns), and planes 7 through 12 are the six segments
+    corresponding to the Band A wavelength (8.3 microns).  Planes 13
+    through 18 give the data acquisition times in msec for each pixel
+    in each of the six segments.  These describe when in the scan the
+    data were taken.  The values are such that a time datum plus the
+    value for DCESTART (in the FITS header) equals the number of
+    milliseconds from the start of 1996.  Planes 19 and 20 give the
+    selenographic longitude and latitude in degrees, respectively, for
+    each pixel.
+ 
+    Price et al. (2003) describe the data collection and processing in
+    more     detail, although it should be noted that the images in
+    the paper were averaged differently from the images in this data
+    set.  The presentation accompanying this data set also contains
+    much of this information.  Since the data set is a time series of
+    the eclipse, a mosaic of the Moon is not quantitatively
+    meaningful.  For qualitative purposes, though, averaged images of
+    the 4.3 and 8.3 micron data near totality are shown on pages 9 and
+    10, respectively.  Thermal profiles of selected lunar regions
+    during the eclipse are shown and discussed on page 12.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    This data set underwent external peer review from December 19,
+    2005 to March 15, 2006.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

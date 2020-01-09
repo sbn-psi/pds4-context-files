@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-e-nims-4-mosaic-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NIMS SPECTRAL IMAGE CUBES OF THE EARTH: E1 &amp; E2 ENCOUNTERS</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nims.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-e-nims-4-mosaic-v1.0__browserp_go-e-nims-4-mosaic-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-e-nims-4-mosaic-v1.0__dvo_imaging_go-e-nims-4-mosaic-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-e-nims-4-mosaic-v1.0__dvo_usgs_go-e-nims-4-mosaic-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Carlson, R.W., P.R. Weissman, W.D. Smythe, J.C. Mahoney, and the NIMS Science
+                   and Engineering Teams, Near-Infrared Mapping Spectrometer Experiment on
+                   Galileo, Space Science Reviews 60: 457-502, 1992.
+            </reference_text>
+            <description>reference.CARLSONETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-E-NIMS-4-MOSAIC-V1.0</data_set_id>
+        <data_set_name>NIMS SPECTRAL IMAGE CUBES OF THE EARTH: E1 &amp; E2 ENCOUNTERS</data_set_name>
+        <data_set_release_date>1996-01-19</data_set_release_date>
+        <start_time>1990-11-26T16:57Z</start_time>
+        <stop_time>1992-12-11T18:12Z</stop_time>
+        <producer_full_name>Dr. Robert W. Carlson</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            Galileo Imaging Spectrometer (NIMS) Earth Spectral Qubes
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+ 
+    The natural form of imaging spectrometer data is the spectral image
+    cube.  It is normally in band sequential format, but has a dual
+    nature.  It is a series of &apos;images&apos; of the target, each in a different
+    wavelength, in ascending order.  It is also a set of spectra, each at
+    a particular line and sample, over the target area.  Each spectrum
+    describes a small portion of the target.  When transformed into cubes,
+    the data may be analyzed spatially, an image at a time, or spectrally,
+    a spectrum at a time, or in more complex spatial-spectral fashion.
+ 
+    NIMS Spectral Image Cube files are derived from NIMS Experiment
+    Data Records (EDRs), which contain raw data from the Galileo Orbiter
+    Near Infrared Mapping Spectrometer (CARLSONETAL1992).  The raw EDR data
+    have been re-arranged into band sequential form, converted to spectral
+    radiance units based on ground and flight calibration of the NIMS
+    instrument, and (in most cases) projected onto the target based on
+    the position of the spacecraft and target and the orientation of
+    the spacecraft&apos;s scan platform.  This dataset contains files of
+    projected data (&apos;mosaics&apos;) only.  Another dataset contains files
+    of unprojected data (&apos;tubes&apos;).
+ 
+    Calibration and geometric information used are the best available
+    at the time of publication of these files, but they are subject to
+    continual improvements as data analysis proceeds.  Thus better cubes
+    may be generated in the future.
+ 
+  Parameters
+ 
+    A band in a NIMS cube is generated for each of the 17 detectors
+    at each grating step.  The motion of the grating is determined by the
+    commanded instrument mode:
+ 
+      Mode                         Grating   Grating   Bands
+                                    steps   increment
+ 
+      Fixed Map/Spectrometer          1         0        17
+      Bandedge Map/Spectrometer       2     variable     34
+      Short Map/Spectrometer          6         4       102
+      Full Map/Spectrometer          12         2       204
+      Long Map/Spectrometer          24         1       408
+ 
+    The wavelengths of the bands are determined by the commanded start and
+    offset grating positions, and by wavelength calibrations conducted on
+    the ground and occasionally during flight.  They are also weak functions
+    of grating temperature.
+ 
+    The pixels in a cube of a targeted observation are in (scaled)
+    units of radiance, derived from the 10-bit raw data numbers by
+    applying band-dependent sensitivities, which are in turn products
+    of ground and flight calibrations, of the commanded gain state and
+    chopper mode and of the focal-plane-assembly (FPA) temperature.  The
+    radiance scaling is band-dependent, and is specified by vectors of
+    offset and multiplier values.
+ 
+  Processing
+ 
+    Cube files in this dataset were generated by the Multimission
+    Image Processing System (MIPS) at the Jet Propulsion Laboratory (JPL)
+    from raw NIMS data on EDRs, which are available in a separate CD-ROM
+    series (GO_10xx).  For each planned observation, raw 10-bit data numbers
+    have been re-arranged into band sequential form, converted to spectral
+    radiance units according to ground and flight calibration of the NIMS
+    instrument, and projected onto the target according to spacecraft
+    and target position and scan platform orientation, using a complex
+    binning procedure.  A secondary &apos;browse&apos; product of this procedure is a
+    hardcopy &apos;mask&apos;, a digital image of which accompanies the cube.
+ 
+  Data structure
+ 
+    The cube files follow PDS structure and labeling conventions.
+    A PDS/ISIS label begins each file, and describes all the &apos;objects&apos;
+    within using ASCII keyword=value statements.  The first object is
+    an ISIS history object [8] which describes the various steps of the
+    generation process. The second object is a 2-D histogram of the cube.
+    A third object is a &apos;sample spectrum qube&apos;: a &apos;stack&apos; of six spectral
+    plots, each an average over a selected area of the cube.  (These
+    also appear on the hardcopy and digital &apos;masks&apos;.)  The fourth and
+    principal object is the actual NIMS spectral image cube.
+ 
+    Spectral image cube structure follows PDS and ISIS &apos;qube&apos; object
+    standards.  The &apos;core&apos; of the qube is a 3-dimensional array of 16-bit
+    signed integers, arranged in band sequential order: sample, line and
+    band.  (ISIS also supports 8-bit unsigned integers and 32-bit real
+    values.)  The core of NIMS cubes in this dataset contains
+    scaled 16-bit radiance values, the result of applying the NIMS
+    calibration to 10-bit raw data numbers. The scaling parameters (offset
+    and multiplier) for each band are stored in the label, as are the
+    wavelengths and other band-dependent quantities.
+ 
+    The core is followed by a set of backplanes, or &apos;extra&apos; bands, made
+    up of 32-bit VAX floating point pixels.  The backplanes contain seven
+    geometric parameters, the standard deviation of one of them, the
+    standard deviation of a selected data band, and 0 to 10 &apos;spectral
+    index&apos; bands, each a user-specified function of the data bands.
+    (The latter might be ratios of bands, or band depths.)  The geometric
+    backplanes are latitude, longitude, incidence, emission and phase angle,
+    slant distance and &apos;intercept altitude&apos;. (See NOTEs in the cube label
+    for details.)
+ 
+  Ancillary Data
+ 
+    A Postscript-format Guide to the planned observations, including
+    footprint plots on the target, instrument parameters, etc. is included
+    in the data set, as are tables of parameters for each observation.
+    Most of these parameters are also present in the cube labels.  A
+    late version of the NIMS instrument paper (CARLSONETAL1992) is also
+    included.
+ 
+    Calibration files, spike files and SPICE files (spacecraft positions,
+    planetary positions and constants, processed pointing geometry,
+    spacecraft clock versus universal time, etc.) were used in generating
+    the cubes from EDRs but are not included in this dataset.  But much
+    of the geometric information, transformed into &apos;images&apos;, is present
+    as backplanes of the cube.
+ 
+  Software
+ 
+    NIMS cubes were designed to be accessed by the ISIS system,
+    which includes extensive software for generating, manipulating,
+    analyzing and displaying them.  ISIS exists in VMS and Unix versions,
+    which must be obtained independently, as described in the documentation
+    of this data set.
+ 
+    But simple software for displaying bands, backplanes and spectra of
+    cubes will be available by soon as an enhancement to the NASAview image
+    display program, under development by PDS.  It will be included with
+    later versions of this data set.
+ 
+  Media/Format
+ 
+    The NIMS cubes and &apos;mask&apos; images are archived on CD-ROM for
+    delivery to the Planetary Data System (PDS).  Formats are based
+    on standards for such products established by PDS.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>89-084B-01D</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

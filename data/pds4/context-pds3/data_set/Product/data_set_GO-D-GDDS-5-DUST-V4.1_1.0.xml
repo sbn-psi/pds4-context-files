@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-d-gdds-5-dust-v4.1</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO DUST DETECTION SYSTEM V4.1</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:gdds.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:dust.dust::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-d-gdds-5-dust-v4.1__browserp_go-d-gdds-5-dust-v4.1::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Goller, J.R., and Gruen E., Calibration of the Galileo/Ulysses dust detectors
+                   with different projectile materials and at varying impact angle, Planet. Space
+                   Sci. 37, 1197-1206, 1989.
+            </reference_text>
+            <description>reference.GOLLER-GRUEN1989</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Goller, J.R., Kalibrationsmessungen an Mikrometeoritendetektoren fur die
+                   Missionen Ulysses, Galileo, und Giotto. Inaugural- Dissertation, Universitat
+                   Heidelberg, 1988.
+            </reference_text>
+            <description>reference.GOLLER1988</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gruen, E., M. Baguhl, N. Divine, H. Fechtig, D.P. Hamilton, and 14 others, Two
+                   years of Ulysses dust data, Planet. Space Sci, 43, 971-999, 1995.
+            </reference_text>
+            <description>reference.GRUENETAL1995A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gruen, E., M. Baguhl, N. Divine, H. Fechtig, D.P. Hamilton, and 14 others,
+                   Three years of Galileo dust data, Planet. Space Sci, 43, 953-969, 1995.
+            </reference_text>
+            <description>reference.GRUENETAL1995B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gruen, E., M. Baguhl, D.P. Hamilton, J. Kissel, D. Linkert, and 2 others,
+                   Reduction of Galileo and Ulysses dust data, Planet. Space Sci, 43, 941-951,
+                   1995.
+            </reference_text>
+            <description>reference.GRUENETAL1995C</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Krueger, H., E. Gruen, M. Landgraf, M. Baguhl, S. Dermott, and 16 others, Three
+                   years of Ulysses dust data: II. 1993 to 1995, Planetary and Space Science 47,
+                   363-383, 1999.
+            </reference_text>
+            <description>reference.KRUEGERETAL1999A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Krueger, H., E. Gruen, D. Hamilton, M. Baguhl, S. Dermott, and 16 others, Three
+                   years of Galileo dust data: II. 1993 to 1995, Planetary and Space Science 47,
+                   85-106, 1999.
+            </reference_text>
+            <description>reference.KRUEGERETAL1999B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Krueger, H., D. Bindschadler, S.F. Dermott, A.L. Graps, E. Gruen, and 16
+                   others, Galileo dust data from the jovian system: 1997-1999, Planetary and
+                   Space Science 54, 879-910, 2006.
+            </reference_text>
+            <description>reference.KRUEGERETAL2006</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Krueger, H., D. Bindschadler, S.F. Dermott, A.L. Graps, E. Grun, and 15 others,
+                   Galileo dust data from the jovian system: 2000-2003, submitted to Planetary and
+                   Space Science, 2009.
+            </reference_text>
+            <description>reference.KRUEGERETAL2009</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-D-GDDS-5-DUST-V4.1</data_set_id>
+        <data_set_name>GALILEO DUST DETECTION SYSTEM V4.1</data_set_name>
+        <data_set_release_date>2009-11-10</data_set_release_date>
+        <start_time>1989-10-18</start_time>
+        <stop_time>2003-09-21</stop_time>
+        <producer_full_name>CAROL NEESE</producer_full_name>
+        <citation_text>
+            Krueger, H., Gruen, E., Baguhl, M., Bindschadler, D., Dermott,
+            S., Divine, N., Fechtig, H., Graps, A., Gustafson, B., Hamilton,
+            D., Hanner, M., Horanyi, M., Kissel, J., Lindblad, B.-A.,
+            Linkert, D., Linkert, G., McDonnell, J.A.M., Mann, I., Moissl,
+            R., Morfill, G., Polanskey, C., Schwehm, G., Riemann, R.,
+            Siddique, N., Srama, R., Staubach, P., and Zook, H., Galileo Dust
+            Detection System V4.1. GO-D-GDDS-5-DUST-V4.1. NASA Planetary Data
+            System, 2010.
+        </citation_text>
+        <data_set_terse_desc>
+            Galileo Dust Detection System data from start of mission through
+            end of mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the data from the Galileo dust detector
+            system (GDDS) from start of mission through the end of mission.
+            Included are the dust impact data, noise data, laboratory
+            calibration data, and location and orientation of the spacecraft
+            and instrument.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    This data set contains information on the dust environment in
+    interplanetary space within the inner solar system and in the Jupiter
+    system, within and without the Jovian magnetosphere and around the
+    Galilean satellites. This information is collected with a dust impact
+    experiment, DDS, from which may be inferred direction of motion, mass,
+    velocity and charge. (See the instrument catalog file for further
+    information.)  The data presented in this dataset include instrumental
+    readouts, inferred metadata, calibration information and a calendar of
+    events. Specifically:
+ 
+     1) galddust.tab - data received from the dust detector, the spacecraft,
+    and physical properties derived from the detector data for reliable dust
+    impacts (Gruen et al. 1995b, Krueger et al. 1999b, Krueger et al. 2006,
+    and Krueger et al. 2009).
+ 
+     2) galdevnt.tab - data received from the dust detector, the spacecraft,
+    and physical properties derived from the detector data for reliable dust
+    impacts plus noise events.
+ 
+     3) galdcode.tab - value ranges corresponding to codes found in
+    galddust.tab.
+ 
+     4) galdcalb.tab - laboratory calibration data used to relate instrument
+    responses to physical properties of the impacting dust particles.
+ 
+     5) galdarea.tab - the area of the dust detector exposed to particles as a
+    function of their velocity direction relative to the detector axis.
+ 
+     6) galdstat.tab - time history of Galileo mission and dust detector
+    configuration, tests and other events.
+ 
+    The data received from the spacecraft are used for determining the
+    location and orientation of the spacecraft and instrument. Given are the
+    SPACECRAFT-SUN DISTANCE, ECLIPTIC LONGITUDE, ECLIPTIC LATITUDE,
+    SPACECRAFT-EARTH DISTANCE, ROTATION ANGLE, DETECTOR ECLIPTIC LONGITUDE,
+    and DETECTOR ECLIPTIC LATITUDE.  Full spacecraft ephemeris and
+    orbit/attitude data (SPICE) are available at the PDS Planetary Plasma
+    Interactions (PPI) Node, at http://ppi.pds.nasa.gov.
+ 
+    Data received from the dust detector are given in an integer code format.
+    Some of the integer codes represent a range of values within which the
+    data could fall (e.g., ION AMPLITUDE CODE), some may represent a specific
+    value (e.g., ION COLLECTOR THRESHOLD), and others, a classification based
+    upon other integer codes (e.g., EVENT CLASS).  Information for
+    interpreting the codes and flag values given in the data files
+    galdevnt.tab and galddust.tab is given in the file galdinfo.asc in the
+    document directory.
+ 
+     The instrument data consists of cataloging information, instrument
+    status, instrument readings at time of impact, and classification
+    information.  The cataloging information includes the SEQUENCE NUMBER
+    (impact number), JULIAN DATE (time of impact), and SECTOR (the pointing of
+    the instrument at time of impact).  The instrument status data are the
+    threshold levels of the detectors and the CHANNELTRON VOLTAGE LEVEL.
+ 
+     The instrument readings include the amplitude codes of the detectors
+    aboard the instrument and the integer codes representing the charge level
+    rise times of the detectors, the difference in starting times of the ion
+    signal and the electron signal, electron and ion signal coincidence, and
+    ion and channeltron signal coincidence.
+ 
+     The classification information is used to assist in classifying an event
+    into probable impact and non-impact categories.  There are three variables
+    used in classification:  EVENT DEFINITION which records which detectors
+    begin a measurement cycle; ION AMPLITUDE RANGE which is the classification
+    of the ION AMPLITUDE CODE into 6 subranges (used with EVENT CLASS); and
+    EVENT CLASS which categorizes events into a range of probable impacts to
+    probable non-impacts.
+ 
+     The PARTICLE SPEED and PARTICLE MASS and their corresponding error
+    factors are determined from the instrument and calibration data given in
+    galddust.tab and galdcalb.tab, respectively.
+ 
+    In 2010 it was discovered that the julian dates provided in the files
+    galddust.tab and galdevnt.tab had been calculated incorrectly from the UT
+    times.  The julian dates were recalculated and the data set was
+    incremented from version 4.0 to version 4.1.
+ 
+    Calibration Data
+    ----------------
+ 
+     ION RISE TIME, ELECTRON RISE TIME, ION CHARGE MASS RATIO, and ELECTRON
+    CHARGE MASS RATIO were measured for iron, glass, and carbon particles of
+    known mass and impacting at known speeds. Since the composition of
+    particles striking the Galileo spacecraft is unknown, logarithmic averages
+    of the above values are used to infer the particle speed and mass from the
+    instrumental measurements. See Goller (1988).
+ 
+     The data were provided in a private communication to M. Sykes (Jun 29
+    03:04 MST 1995) by M. Baguhl. They are the results of these experiments
+    for impacts at an angle of 34 degrees from the detector axis.
+ 
+    Processing Level
+    ----------------
+ 
+     The data contain different levels of processing.  Some processing was
+    done at the time of the impact observation.  This processing categorized
+    the detector responses to transmit the data efficiently back to Earth.
+    Data received on Earth is given as an integer code. These integer codes
+    can, for example, represent ranges of values, or can be a classification
+    determined from other integer codes.  On Earth, these integer codes were
+    then fit to calibration curves to determine the speed and mass of the
+    impacting particle (Goller and Gruen 1989; Gruen et al., 1995c).
+ 
+     This data set contains the information from the spacecraft instrument as
+    received on Earth, information about the location and pointing direction
+    of the spacecraft, and the physical properties determined from the data
+    analysis.
+ 
+     The calibration data are included as part of this dataset.
+ 
+    Sampling Parameters
+    -------------------
+ 
+     The occurrence of an impact with the instrument begins a measurement
+    cycle.  The on-board detectors measure a charge accumulation versus time
+    in order to measure the rise time of the accumulation and any coincidences
+    between detector readings.  The on-board computer converts these
+    measurements to integer codes to minimize the amount of data that is
+    transferred back to Earth.  After the conversion, the integer codes are
+    categorized to determine if an event is more likely to be an impact or
+    noise event.  The data are then stored until it is time to transmit to
+    Earth.
+ 
+    Data Reduction - Impact Speed
+    -----------------------------
+ 
+     Impact speed (V) is obtained from the rise-time measurements of the ion
+    and electron detectors (IT and ET, respectively) using procedures
+    described in part by Gruen et al. (1995c) and a private communication to
+    M. Sykes (Jul 22 03:43 MST 1995) from M. Baguhl. The calibration tables
+    used correspond to the mean values obtained for the three different
+    projectile materials with which the instruments were calibrated (Goller
+    and Gruen 1989; Gruen et al., 1995c). A rise-time measurement is started
+    when the respective signal exceeds its threshold and is stopped by a flag
+    pulse from the peak-detector. Impact calibration was performed in the
+    speed interval from about 2 km/s to 70 km/s, so impact speeds derived from
+    rise-time measurements will be limited to this range.
+ 
+     Dust accelerator tests as well as experience with flight data have shown
+    that (1) the shape of the ion signal is less susceptible to noise than the
+    shape of the electron signal and (2) for true impacts, ELECTRON AMPLITUDE
+    CODE values (EA) are generally greater than the ION AMPLITUDE CODE values
+    (IA) by 2 to 6.  As a consequence, the electron rise-time is only used for
+    impact speed determination if 2 =&lt; EA-IA =&lt; 6. Since both speed
+    measurements, if available, are independent, one obtains two (often
+    different) values VIT and VET, respectively. The impact speed is then
+    taken to be the geometric mean of VIT and VET.
+ 
+     Determining VIT:
+ 
+        If IA &gt; 16 and IT &gt; 12, then fix IT=14.
+        Else, if IA &gt; 16 and IT =&lt; 12, then add 2 to the corresponding
+            value of IT.
+        VIT is then found in Table 5a of Gruen et al. (1995c) or galdcode.tab.
+ 
+        Note: If IT=0, then VIT is invalid. This differs from
+              Gruen et al. (1995c).
+ 
+     Determining VET:
+ 
+        If EA &gt; 16 and ET &gt; 12, then fix ET=14.
+        Else, if EA &gt; 16 and ET =&lt; 12, then add 2 to the corresponding
+           value of ET.
+        VET is then found in Table 5a of Gruen et al. (1995c) or galdcode.tab.
+ 
+        Note: If ET=0, then VET is invalid. This differs from
+              Gruen et al. (1995c).
+ 
+     If IA=49, or IA=18, or IA&lt;3, then IT is not valid, and only VET is used
+    to determine impact speed.
+ 
+     If EA=49, or EA=31, or EA&lt;5, then ET is not valid, and only VIT is used
+    to determine impact speed.
+ 
+     If IT is invalid and 6&lt;EA-IA or EA-IA&lt;2, then there is no valid impact
+    speed.
+ 
+     If neither IT nor ET is valid, then there is no valid impact speed.
+ 
+ 
+    Data Reduction - Impact Speed Error Factor
+    ------------------------------------------
+ 
+     The upper and lower estimates of impactor speed are obtained by
+    multiplying and dividing, respectively, the mean particle speed by the
+    velocity error factor, VEF. If only one speed is measured, and is from the
+    electron detector, the minimum uncertainty is VEF=2. If only one speed is
+    measured, and is from the ion detector, the minimum uncertainty is
+    VEF=1.9. It is assumed that minimum error of 1.6 is achieved if both
+    individual speeds agree to within a factor of 4. This error corresponds to
+    the logarithmic mean of the minimum errors in the two cases when only a
+    single speed is valid.
+ 
+     Since these are all 1-sigma errors, it may happen that VIT or VET fall
+    outside the error bar given for the mean impact speed, V. In order to
+    avoid this, the error factor is &apos;stretched&apos; to contain the values:
+ 
+     If VIT &gt; 4*VET, then
+ 
+         VEF=(VIT/VET-4.)/31.*(1.6*sqrt(35.)-1.6)+1.6
+ 
+     If VET &gt; 4*VIT, then
+ 
+         VEF=(VET/VIT-4.)/31.*(1.6*sqrt(35.)-1.6)+1.6
+ 
+     (private communication to M. Sykes from M. Baguhl, Mar  6 03:57 MST
+    1996).
+ 
+     If the ratio of both speeds exceeds 4, then the uncertainty can increase
+    to about 10 in the calibrated speed range. In any case, a speed value with
+    an uncertainty factor VEF&gt;6 should be ignored.
+ 
+    Data Reduction - Impactor Mass
+    ------------------------------------------
+ 
+     Once a particle&apos;s impact speed (V) has been determined, the charge to
+    mass ratio can be determined from calibration measurements (Figure 3,
+    Gruen et al. (1995c); galdcalb.tab). The charge to mass ratio for a given
+    impact speed (V) is determined by linear interpolation of the calibration
+    table (galdcalb.tab) on a double logarithmic scale, yielding a separate
+    value for the ion grid measurement (QIM) and and electron grid measurement
+    (QEM).
+ 
+     From these values and the respective impact charges (QI and QE)
+    corresponding to IA and EA, respectively (Table 4, Gruen et al. (1995c);
+    galdcalb.tab), mass values (MQI=QI/QIM and MQE=QE/QEM) are determined
+    corresponding to the ion and electron grid measurements. When both MQI and
+    MQE are valid, the impact particle mass, M, is the geometric mean of these
+    two values, or the value corresponding to the valid measurement if the
+    other is invalid. If there is no valid impact speed, then there is no
+    valid impactor mass.
+ 
+     Note: when V is invalid, M is invalid.
+ 
+     Note: when IA=0, QI is invalid and MQI is invalid.
+ 
+     Note: when EA=0, QE is invalid and MQE is invalid.
+ 
+    Data Reduction - Impactor Mass Error Factor
+    ------------------------------------------
+ 
+     The upper and lower estimate of impactor speed is obtained by multiplying
+    and dividing, respectively, the mean particle speed by the mass error
+    factor, MEF. If the speed is well determined (VEF=1.6) then the mass value
+    can be determined with an uncertainty factor MEF=6. Larger speed
+    uncertainties can result in mass uncertainty factors greater than 100.
+ 
+     The mass error is calculated from the speed error, keeping in mind that
+    mass detection threshold is proportional to speed to the 3.5th power. In
+    addition, there is an error factor of 2 from the amplitude
+    determination. Added together (logarithmically) these yield
+ 
+     MEF=10**(sqrt((3.5*log(VEF))**2+(log(2.))**2))
+ 
+     (Private communication to M. Sykes from M. Baguhl, Mar  6 03:57 MST 1996.
+    This differs from the exponent of 3.4 given in Gruen et al. (1995a))
+ 
+    Coordinate System
+    -----------------
+ 
+     The coordinates of the spacecraft are given in heliocentric ecliptic
+    latitude and longitude (equinox 1950.0), where the pointing direction of
+    the sensor is given in spacecraft centered ecliptic latitude and longitude
+    (equinox 1950.0).
+ 
+    On-off times and download times
+    -------------------------------
+ 
+    Galileo DDS was turned on all the time, even during Galileo probe release,
+    Jupiter orbit insertion, a reprogramming event in December 1996 and during
+    several spacecraft safings. However, during these events the high voltage
+    of the channeltron was reduced or switched off and the detection
+    thresholds were raised to reduce the instrument sensitivity for noise
+    events. During Galileo safings DDS continued to measure dust impacts but
+    because of the missing downlink and the limited instrument memory of DDS
+    the majority of the impact data were usually lost. Between 95-341 and
+    96-087 the high voltage was switched off entirely but still the instrument
+    continued to measure dust impacts.
+ 
+    The downlink capability of the instrument limited the number
+    of transmitted events most of the time, in particular when the spacecraft
+    was in the inner jovian system. When no continuous downlink (Realtime
+    Science or RTS) was available, data were received as Memory Readouts
+    (MROs) which gave only snapshots of the dust activity during the previous
+    days or weeks.  The periods when these different types download methods
+    were used are listed in the status table (galdstat.tab).  These times give
+    periods when DDS data were transmitted in the various modes.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    Impact times
+    ------------
+ 
+       The impact times during the Cruise phase of the mission were recorded
+    with an accuracy of 1.1 hours. After June 25, 1990, inclusive, the
+    accuracy was 4.3 hours (this value has been set in order to bridge gaps in
+    the data transmission as long as one month) (Gruen et al. 1995b; Krueger
+    et al. 1999b). There were also periods in which more frequent memory reads
+    resulted in a time resolution of 2/3 seconds.
+ 
+    After 1995, during periods of realtime science mode (RTS) and record mode,
+    more accurate times were recorded.  The Time Error Value (TEV) listed in
+    the data files gives the time accuracy of any given impact or event.
+ 
+       Sector
+       ------
+ 
+    In a private communication to M. Sykes (Nov 17 02:25 MST 1998), H. Krueger
+    stated that when the ROTATION ANGLE is invalid, SECTOR is also invalid. In
+    the data that have been published in the literature electronically, prior
+    to 11/98, valid values of SEC are reported when ROTATION ANGLE is invalid.
+    This has been corrected. See Baguhl (1993) for the relationship between
+    ROTATION ANGLE and SECTOR.  When SECTOR and ROTATION ANGLE are invalid,
+    detector ecliptic latitude and longitude are also invalid and represented
+    by a null value.
+ 
+       In V1.0 of this data set, SECTOR was reported in degrees. In subsequent
+    versions, Sector is reported as its original 8-bit word, and has a value
+    between 0 and 255 (when valid). Conversion to degrees may be accomplished
+    through scaling by 1.40625.
+ 
+       Ion Channeltron Coincidence (ICC)
+       ----------------------------------
+ 
+       The designation ICC is used following Gruen et al. (1995c) and Krueger
+    et al. (1999b), noting that in Gruen et al. (1995a and b) and Krueger et
+    al. (1999a) the designation is IIC.
+ 
+       Entrance Grid Amplitude Code (PA)
+       ---------------------------------
+ 
+       In the data that have been published in the literature and
+    electronically prior to 11/98, there are values of PA which exceed 47. In
+    a private communication to M. Sykes (Mar  6 03:57 MST 1996), Michael
+    Baguhl and Rainer Riemann stated:
+ 
+    &apos;Values of PA greater 47 are caused by a bit flip (caused by a
+    timing bug in the sensor electronics) of the MSB. For values
+    greater 47, a value of 16 has to be subtracted.&apos;
+ 
+       This correction was made to all PDS DDS files prior to 11/98.
+ 
+       As a consequence of subsequent uncertainty about the origin of PA
+    values greater than 47, in a private communication to M. Sykes (Nov  6
+    04:07 MST 1998), H. Krueger requested that PA values greater than 47 be
+    corrected to &apos;99&apos;. This has been done in releases of the DDS data through
+    the PDS after 11/98.
+ 
+       Channeltron Voltage Level (HV)
+       ------------------------------
+ 
+       The nominal high voltage HV=4 (1250V) could not be used before 1999
+    because of unexpected noise on the channeltron. It is assumed that the
+    nearby radioactive thermal generators (RTGs) are to blame, although other
+    causes cannot be excluded. During ground tests (without RTGs) no such
+    noise was observed. See Gruen et al. (1995b).  By 1999 the channeltron had
+    significantly degraded and the instrument was not sensitive enough to
+    detect the RTG noise at HV=4.    In mid-1999 the channeltron was set to
+    HV=4 to compensate for the degradation, and later the channeltron voltage
+    was increased even further.  See the instrument status file, galdstat.tab,
+    for   the times of voltage increases.
+ 
+       Spacecraft Earth distance
+       -------------------------
+ 
+       The value for the same impact event in galddust.tab and galdevnt.tab is
+    different, but by less than 7500 km.
+ 
+       Impact speed
+       ------------
+ 
+       In a private communication to M. Sykes (Jul 22 03:43 MST 1995), M.
+    Baguhl stated that the reason for the exclusion of the values IA=49 and
+    EA=15 is empirical. These values are close to the switching points of the
+    amplifier ranges and therefore produce incorrect time measurements. The
+    adjustment of the times in amplifier range 2 was made in order to prevent
+    illegal time values.
+ 
+       Calibration data
+       ----------------
+ 
+       Instrumental values were extrapolated for particle masses and speeds
+    outside the range of those tested, and are so marked. The accuracy of
+    these numbers is unknown. An explication of the experiments and data used
+    to generate the calibration may be found in Goller (1988).
+ 
+    Velocity and Mass Mismatches
+    ----------------------------
+ 
+    The calculated mass and velocity (and their error factors) of impact
+    numbers 340 and 418 do not match the values that would be derived from the
+    data reduction procedures given in the data set description above.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

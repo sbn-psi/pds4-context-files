@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.phx-m-ase-2-edl-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PHOENIX MARS ATMOSPHERIC STRUCTURE EXPERIMENT DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.phoenix::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ase.phx::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-ase-2-edl-v1.0__browserp_phx-m-ase-2-edl-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.phx-m-ase-2-edl-v1.0__dvo_atm_phx-m-ase-2-edl-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Smith, P.H., L. Tamppari, R.E. Arvidson, D. Bass, D. Blaney, W. Boynton, A.
+                   Carswell, D. Catling, B. Clark, T. Duck, E. DeJong, D. Fisher, W. Goetz, P.
+                   Gunnlaugsson, M. Hecht, V. Hipkin, J. Hoffman, S. Hviid, H. Keller, S.
+                   Kounaves, C.F. Lange, M. Lemmon, M. Madsen, M. Malin, W. Markiewicz, J.
+                   Marshall, C. McKay, M. Mellon, D. Michelangeli, D. Ming, R. Morris, N. Renno,
+                   W.T. Pike, U. Staufer, C. Stoker, P. Taylor, J. Whiteway, S. Young, and A.
+                   Zent, Introduction to special section on the Phoenix Mission: Landing site
+                   characterization experiments, mission overviews, and expected science, Journal
+                   of Geophysical Research, 113, E00A18, 2008, doi:10.1029/2008JE003083.
+            </reference_text>
+            <description>reference.SMITHETAL2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>PHX-M-ASE-2-EDL-V1.0</data_set_id>
+        <data_set_name>PHOENIX MARS ATMOSPHERIC STRUCTURE EXPERIMENT DATA V1.0</data_set_name>
+        <data_set_release_date>2008-12-24</data_set_release_date>
+        <start_time>2008-05-25T23:30:47.918Z</start_time>
+        <stop_time>2008-05-25T23:38:36.899Z</stop_time>
+        <producer_full_name>DAVID C. CATLING</producer_full_name>
+        <citation_text>
+            D. C. Catling, R.F. Beebe, J.R. Murphy and L.F. Huber, NASA
+            Planetary Data System, 2008.
+        </citation_text>
+        <data_set_terse_desc>
+            Phoenix Lander Atmospheric Stucture Experiment Data Records,
+            Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+   The DATA directory is divided up into two subdirectories: EDR_DATA
+   and RDR_DATA. In each subdirectory, there will be experiment data
+   records (EDRs) or reduced data records (RDRs) for the Inertial
+   Measurement Unit (IMU) on Phoenix. The location of the IMU within the
+   Phoenix spacecraft with respect to various frames of reference is
+   described in the EDR Software Interface Specification (SIS) with the
+   aid of diagrams.
+ 
+   Data files in the EDR_DATA subdirectory consist of time ordered
+   records of linear velocity changes or &apos;delta-v&apos; values every 5
+   milliseconds in three Cartesian axes and angle change or the
+   &apos;delta-angle&apos; values every 5 milliseconds in three Cartesian
+   axes. Data comes from the IMU measurements during the entry and
+   descent of the Phoenix spacecraft. NASA Level 1A data have been
+   converted to physical units and transformed in space from the local
+   reference frame of the IMU to the mechanical Cartesian frame of the
+   spacecraft described in the EDR SIS.
+ 
+   Data files in the RDR_DATA subdirectory will contain time-ordered
+   altitude, latitude, east longitude, velocity, atmospheric pressure
+   (and uncertainty), atmospheric temperature (and uncertainty), and
+   atmospheric density (and uncertainty).
+ 
+  Parameters
+  ==========
+ 
+   The NASA Level 1A data files in the EDR_DATA subdirectory contain the
+   following measurements:
+    Relative spacecraft event time from start of data acquisition:
+      Units = seconds
+    Angle change (delta-angle) about the X-axis of the mechanical frame
+     of the spacecraft: Units = radians
+    Angle change (delta-angle) about the Y-axis of the mechanical frame
+     of the spacecraft: Units = radians
+    Angle change (delta-angle) about the Z-axis of the mechanical frame
+     of the spacecraft: Units = radians
+    Velocity change (delta velocity) in the X-axis of the mechanical frame
+     of the spacecraft: Units = m/s
+    Velocity change (delta velocity) in the Y-axis of the mechanical frame
+     of the spacecraft: Units = m/s
+    Velocity change (delta velocity) in the Z-axis of the mechanical frame
+     of the spacecraft: Units = m/s
+ 
+   The Level 2 data files in the RDR_DATA subdirectory contain the
+   following data:
+    Spacecraft Clock count: Units = seconds
+    Relative time from a defined entry state: Units = seconds
+    The altitude of the spacecraft above the landing site: Units = seconds
+    Planetocentric latitude of the spacecraft at the time of sample
+     acquisition: Units = degrees
+    Planetocentric east longitude of the spacecraft at the time of sample
+     acquisition: Units = degrees
+    Speed of the Phoenix entry probe at the given location: Units = m/s
+    Derived atmospheric density along the flight path: Units = kg/m**3
+    Derived atmospheric pressure along the flight path: Units = Pascal
+    Derived atmospheric temperature along the flight path: Units = Kelvin
+    The estimated uncertainty of the atmospheric density: Units = kg/m**3
+    The estimated uncertainty of the atmospheric pressure: Units = Pascal
+    The estimated uncertainty of the atmospheric temperature: Units = Kelvin
+ 
+   Ancillary quantities are necessary to understand the derivation of
+   RDR data and are also found within this archive volume. The CALIB
+   directory in the DOCUMENT directory will contain a tabulation of
+   three-dimensional force and moment coefficients of the Phoenix
+   spacecraft as a function of atmospheric conditions and spacecraft
+   attitude with respect to the atmosphere-relative velocity
+   vector. INST.CAT contains the entry state of the Phoenix probe,
+   consisting of a position vector and entry attitude at a defined
+   time. INST.CAT also contains the following additional ancillary
+   quantities: the Phoenix entry vehicle mass and its uncertainty: Units
+   = kg The entry vehicle cross-sectional area: Units = m**2
+ 
+  Data
+  ====
+   The Phoenix Lander spacecraft had two Inertial Measurement Units
+   (IMUs) that were mounted on the underside of the lander, one as
+   backup only that was never turned on. The IMUs were manufactured by
+   Honeywell (Clearwater, FL) with part number YG9666BC. The IMUs were
+   on the spacecraft as engineering sensors, primarily to assist in
+   Entry, Descent and Landing (EDL).  Thus the data were processed and
+   collected for engineering use and their scientific use was not a
+   driver for the selection of the IMU performance characteristics.
+   Consequently, the IMU that collected data was not located close to
+   the entry capsule center of mass or spin axis. Data were output from
+   one IMU and collected at the full instrument rate of 200 Hz. The DN
+   values from the IMU were transmitted back to Earth from the
+   spacecraft and converted to physical values after ground
+   depacketization using factory calibration data. Frames of reference
+   and transformation of the data to the mechanical frame of reference
+   are described in the EDR SIS with the aid of diagrams.
+ 
+  Processing
+  ==========
+   The &apos;raw&apos; DN values were stored on the spacecraft at the instrument
+   acquisition rate of 200 Hz. The EDR data presented are those derived
+   from the raw DN transmitted from the spacecraft and processed using
+   the ancillary information and method described in the EDR SIS.  The
+   EDR data products are the time-ordered delta-velocity change (the
+   time integral of acceleration) per count in three Cartesian axes and
+   delta-angle change (the time integral of angular rate) per count in
+   three Cartesian axes. The density, pressure and temperature of the
+   atmosphere along the flight path was deduced from this data by
+   methods generally outlined in the RDR SIS.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+     TBD
+ 
+  Data Coverage and Quality
+  =========================
+   Within the 1 to 93798 data samples recorded every 5 milliseconds in
+   the EDR data set, spurious data was recorded for samples 12031 to
+   12040 (inclusive) because of a downlink transmission problem. These
+   data points are zero-filled. Because of the 50 millisecond duration
+   of this anomaly, the effect on higher level analysis is likely to be
+   negligible with suitable interpolation in using the data. Another
+   noticeable quality aspect of the EDR data is the comparatively high
+   noise level, which is a function of the way the instrument was
+   selected and configured by spacecraft engineers, as described in
+   INST.CAT.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

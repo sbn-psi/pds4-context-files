@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-j-aat-3-edr-sl9-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ANGLO-AUSTRALIAN OBSERVATORY DATA FROM SL9 IMPACTS</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.aao::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:iris.aao::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.sl9::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-j-aat-3-edr-sl9-v1.0__browserp_ear-j-aat-3-edr-sl9-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-J-AAT-3-EDR-SL9-V1.0</data_set_id>
+        <data_set_name>ANGLO-AUSTRALIAN OBSERVATORY DATA FROM SL9 IMPACTS</data_set_name>
+        <data_set_release_date>1997-10-01</data_set_release_date>
+        <start_time>1994-07-17T05:03:08Z</start_time>
+        <stop_time>1994-07-22T12:25:59Z</stop_time>
+        <producer_full_name>VIKKI MEADOWS</producer_full_name>
+        <citation_text>
+            Meadows,V., ANGLO-AUSTRALIAN OBSERVATORY DATA FROM SL9 IMPACTS,
+            EAR-J-AAT-3-EDR-SL9-V1.0, NASA Planetary Data System, 1997.
+        </citation_text>
+        <data_set_terse_desc>
+            This SL9 data set contains imaging, spectroscopy, &amp; spectral
+            mapping ofJupiter from 1994Jul16 through 1994Jul23. This includes
+            datafrom the C,D,G,K,N,R,V, and W impacts in addition to before
+            andafter observations for baseline and comparison.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This SL9 data set contains imaging, spectroscopy, &amp; spectral
+            mapping of Jupiter from 1994Jul16 through 1994Jul23. This
+            includes data from the C,D,G,K,N,R,V, and W impacts in addition
+            to before and after observations for baseline and comparison.
+        </abstract_desc>
+        <data_set_desc>
+ 
+Data Set Overview
+=================
+ 
+The data set contains imaging, spectroscopy, and spectral mapping of
+Jupiter from July 16, 1994 through July 23, 1994.  This includes data
+from the C, D, G, K, N, R, V, and W impacts in addition to before and
+after observations for baseline and comparison.
+ 
+The imaging for the V impact is composed of .455 second exposures of the
+planet taken about 10 seconds apart with one image per file.  This mode
+has a low duty cycle, but allows continuous monitoring of the event
+without significant loss of large blocks of time which is encountered
+when dumping a data cube to disk.
+ 
+The imaging for the N impact is composed of 100 .455-second exposures
+taken one after another and then all dumped onto disk at once in a
+60x60x100 cube with the x and y dimensions corresponding to spatial
+dimensions (xy planes are IMAGES in this case, in comparison to the
+spectral mapping data, where the yz plane holds the image) and the z
+dimension corresponding to time.  These large image cubes took a
+significant amount of time to dump to disk, causing the N data to be
+composed of 45 second periods of constant monitoring with excellent
+temporal resolution interspersed with data gaps of approximately 40
+seconds.
+ 
+The majority of the impact sequences (C, D, G, K, R, W) were done using
+spectral mapping.  This is done by taking multiple spectra through a
+slit and then moving the slit back and forth across the planet to obtain
+a second dimension of spatial information.  So:  these cubes will (most
+likely) be 128x128x153 cubes with the x dimension being a spectral
+dimension and corresponding to a wavelength scale between 2.2 and 2.39
+microns for K-band data.  The y dimension corresponds to spatial
+information, with high y values being farther to astronomical east.  The
+z dimension corresponds to both north-south spatial information and
+temporal information as well.  The slit was moved first from south to
+north, and then from north to south across the planet to produce each
+discrete cube.  Thus when a ytplane is cut through the cube at a desired
+wavelength range, two images of Jupiter appear in the resulting image.
+The image on the left has south to the left and north to the right, and
+the image on the right is flipped, having north to the left and south to
+the right.  It is important to also remember that the image on the right
+is actually from a later point in time than the image on the left, thus
+fast moving objects (satellites) may change position slightly between
+the two images and fast changing objects (impact sites) will change in
+either morphology or intensity (or both) between the two images as well.
+For a full planet scan, the data cube takes about 4 minutes to complete
+a double scan and 1-2 minutes to dump to disk.  We therefore monitor the
+impact region with a temporal resolution of 3 minutes in the full scan
+case, but this time interval can be decreased by sacrificing spatial
+coverage.  This compromise was made for parts of the C, K and G
+sequences, resulting in temporal resolution as fast as 15 seconds
+between impact spectra.   Therefore the spectral mapping achieves
+coarser temporal resolution compared to photometric imaging
+observations,  but in return provides near simultaneous acquisition of
+spatially resolved spectra across the entire impact region.
+ 
+There are also several image cubes of nonstandard size, such as those
+taken with a small (60 pixel) window and/or those which scan across the
+impact site only, but many times thus improving the temporal resolution
+of the impact data.
+ 
+Lastly, there are many two-dimensional spectra such as sky frames and
+standard stars which are similar to the spectral mapping cubes but with
+only one frame.  In these, like in the mapping cubes, the x dimensions
+correspond to spectral data and the y dimensions to spatial data.
+ 
+ 
+Parameters
+==========
+ 
+Wavelengths are measured in microns and intensities
+in Watts per meter squared per micron.
+(W/(m^2*um)  or sometimes W*m^-2*um^-1).
+ 
+In the spatial dimension, pixels are 0.6 arcseconds square (yz).
+ 
+The slit used was 1.2 arcseconds wide.
+ 
+Coordinate System
+=================
+ 
+1950AD equinox.
+ 
+Software
+========
+ 
+No software is provided with this data set. However, this data set was
+written using the Figaro software package which is publicly available
+from the AAO. See the following URLs for access to this software
+package: http://www.aao.gov.au/ http://www.aao.gov.au/figaro.html A
+sample summary of how to view the images using Figaro follows: In the
+following description, Figaro commands are shown lowercase in line
+commands, and in uppercase in the general text.  However, they should
+always be typed all lowercase on Unix systems.
+ 
+Once Figaro is installed and running:
+ 
+Type FIGDISP to bring up the Figaro display window.  On a Sun, press the
+F6 key to bring up the pixel position and value display on the top bar
+of the Figaro window (pressing F5 will display help information on the
+features of this image display program).
+ 
+To read in a given *.fit file, type RDFITS with a carriage return and
+answer the prompts for input and output file names.  On a Sun, take the
+defaults (yes) for byte swapping and conversion to floating point.  Note
+that all the parameters can be entered on the command line, thus:
+ 
+rdfits filename.fit figaro_out \\
+ 
+will read in filename.fit, take the defaults for byte swapping and
+conversion to floating point, and output a file figaro_out.sdf which is
+in Figaro format.
+ 
+To add the wavelength scale, use RDIPSO to convert the wavelengths.dat
+file into a Figaro file:
+ 
+rdipso wavelengths.dat 2 wavelength_scale \\
+ 
+This will create a Figaro file wavelength_scale.sdf which should then be
+XCOPYd onto the Figaro data, so:
+ 
+xcopy figaro_out wavelength_scale figaro_out
+ 
+This will replace the x-axis in the file figaro_out with wavelength
+value in microns.  The above command will write the output file back
+over the input file.  If you wish to keep both steps, change the second
+&apos;figaro_out&apos; to something else.
+ 
+The Figaro format cube can now be examined using the commands XYPLANE,
+YTPLANE, IMAGE and EXTRACT.
+ 
+YTPLANE will slice through the cube in the YT direction (corresponding
+to the YZ direction in the PDS data) to show image planes within the
+cube.  The user must specify over which X range (wavelength) the image
+is to be extracted.  To extract an image in the wavelength range 2.32 to
+2.38um, use the command
+ 
+ytplane figaro_out 2.32 2.38 ytimage \\
+ 
+If you have not tacked the wavelength scale on yet, simply specifying a
+range of pixel values will also work.
+ 
+Now, ytimage can be displayed:
+ 
+image ytimage reset opt=0 \\
+ 
+will give an autoscaled version of the image in the figdisp window.  You
+can also simply type in IMAGE, carriage return, and answer the prompts
+to optimize the display.
+ 
+The command XYPLANE works in much the same way, extracting and adding
+together a range of contiguous planes in the t (PDS z) direction.  t in
+this case corresponds to time, or scan step, and in the ytimage you have
+just displayed, you can isolate which t pixels correspond to the desired
+spatial region you wish to extract a spectrum from (e.g.  the impacts,
+or perhaps the poles).  The t pixels correspond to the x-axis direction
+in a ytplane. Once you have your chosen t range (say, t1 to t2, where t1
+and t2 are integers) from the ytplane image, use:
+ 
+xyplane figaro_out t1 t2 xyimage \\
+ 
+image xyimage reset opt=0 \\
+ 
+This will now show you the spatially resolved spectra for that scan time
+and region, with the x axis corresponding to x in the cube, and being
+the wavelength axis, and y being a spatial dimension along the slit.
+Isolate which spectrum you wish to extract on the xyimage by choosing a
+range of y values (say y1 to y2) and then use:
+ 
+extract xyimage y1 y2 impact_spectrum \\
+ 
+To display the spectrum, use the figaro SPLOT command:
+ 
+splot impact_spectrum wh au \\
+ 
+will bring up a graphics window and autoscale the spectrum.  Again,
+typing SPLOT and carriage return will allow you to step through the
+prompts and optimize the display.
+ 
+Further information on more detailed functions with Figaro can be found
+at http://www.aao.gov.au/figaro.html
+ 
+ 
+The QUBE OBJECT does not have much software support in the PDS at this
+time. However, because these files are in FITS format, they are easily
+read in by a standard FITS reading routine such as in IDL.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Confidence Level Overview
+=========================
+ 
+The AAT data were taken in photometric conditions with seeing that was
+typically 1 arcsec.  Poorer seeing was experienced during the R impact
+(up to ~ 5&apos;&apos;).  However, although the data were taken in photometric
+conditions, the drift-scanning technique used to take the majority of
+the data contains inherent errors which compromise photometric accuracy
+when used on point sources (such as the early stages of the impact
+phenomena).  As the narrow slit is stepped across the object, variations
+in seeing result in a time-varying point-spread function (PSF) which
+changes both FWHM and spatial position, making it difficult to correctly
+sample the object&apos;s PSF.  This effect can be ameliorated by taking
+several scans back and forth across the object to average the effects of
+the seeing.  However, for the rapidly changing phenomena associated with
+the impact events, this was not possible. In an attempt to quantify the
+error, we performed aperture photometry on the Galilean satellites
+present in the impact data (as approximations to point sources) and
+found typical standard deviations of 10%, with errors as large as 23% on
+21 July (R impact).  This error is correlated with the seeing, being
+larger on nights of poorer seeing.  However, when the observations are
+averaged, absolute fluxes derived for the same satellite observed on
+different nights show a standard deviation of 12% for Europa, which was
+observed on 17, 19 and 21 July (if measurements taken only on 17 and 19
+July are considered, this discrepancy falls to 3%), and 1% for Io, which
+was observed on 19 and 21 July.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>GD-11F</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

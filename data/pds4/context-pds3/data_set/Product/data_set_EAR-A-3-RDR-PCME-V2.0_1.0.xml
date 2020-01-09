@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.ear-a-3-rdr-pcme-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PLUTO-CHARON MUTUAL EVENTS V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.support_archives::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.mko::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.pal::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rcac31034a.mko::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rcac31034a.pal::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.pluto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.charon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.ear-a-3-rdr-pcme-v2.0__browserp_ear-a-3-rdr-pcme-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Buie, M.W., D.J. Tholen, and K. Horne, Albedo maps of Pluto and Charon:
+                   Initial mutual event results, Icarus 97, 211-227, 1992.
+            </reference_text>
+            <description>reference.BUIEETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Buratti, B.J., R.S. Dunbar, E.F. Tedesco, J. Gibson, R.L. Marcialis, F. Wong,
+                   and S. Bennett, Modeling Pluto-Charon mutual events, II. CCD observations with
+                   the 60 in. telescope at Palomar Mountain, Astron. J. 110, 1405-1419, 1995.
+            </reference_text>
+            <description>reference.BURATTIETAL1995</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>EAR-A-3-RDR-PCME-V2.0</data_set_id>
+        <data_set_name>PLUTO-CHARON MUTUAL EVENTS V2.0</data_set_name>
+        <data_set_release_date>2002-01-31</data_set_release_date>
+        <start_time>1985-01-16T11:01:21Z</start_time>
+        <stop_time>1990-09-23T02:27:10Z</stop_time>
+        <producer_full_name>DAVID J. THOLEN</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            Ground-based observations of Pluto-Charon mutual eclipses
+        </data_set_terse_desc>
+        <abstract_desc>
+            Ground-based observations of Pluto-Charon mutual eclipses
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+      During the period 1985-1990, the earth entered the orbital plane
+      of Pluto and its moon Charon, and the mutual eclipse events were
+      observed from ground-based observatories.  A subset of these data
+      are included in this data set, and more will be added in future
+      updates.  The current version contains photoelectric photometry
+      data from thirty-nine events observed at Mauna Kea Observatory by
+      Tholen, and CCD photometry data from fifteen events observed at
+      Palomar Observatory by Buratti and colleagues.
+ 
+      Data
+      ====
+      The Mauna Kea data is in the file pcmemko.tab, and includes
+      standard B magnitudes and errors, and Julian date at mid-
+      observation, corrected for light-travel time.  The Palomar data is
+      in the file pcmepal.tab, and includes differential magnitudes and
+      errors, and Julian date at mid-observation (uncorrected).
+ 
+      Modification History
+      ====================
+      In January 2002 SBN personnel calculated UTC based on the Julian
+      dates provided and added it to the data files. At the time
+      resolution of the Julian date (less than 1.e-05), UTC and UT are
+      equivalent. START_TIME and STOP_TIME values were updated
+      throughout as appropriate. No other data values were changed.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      Review
+      ======
+      This version of the data set underwent formal external review on
+      May 10, 2002.
+ 
+      Data Coverage and Quality
+      =========================
+      The data set is eventually intended to be a complete collection of
+      groundbased observations of the Pluto-Charon mutual events.  At
+      present, it contains visual photometric data from Mauna Kea
+      Observatory and Palomar Observatory.  Additional data will be
+      added in future updates.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>GD-11F</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

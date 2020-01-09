@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:nnsn.nnsn</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IHW NEAR-NUCLEUS STUDIES NETWORK for NNSN</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.nnsn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bobrovnikoff, N.T., Publications of the Lick Observatory, 17, 305, 1931.
+            </reference_text>
+            <description>reference.BOBROVNIKOFF1931</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zdenek (ed.), &apos;The Comet Halley Archive Summary Volume&apos;, Jet
+                   Propulsion Laboratory, California Institute of Technology, Pasadena,
+                   California, JPL D-400-450, August 1991.
+            </reference_text>
+            <description>reference.JPL_D-400-450</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Larson, S.M., and R.B. Minton, &apos;In Comets: Scientific Data and Missions,
+                   Kuiper, G.P. and Roemer, E. (Eds.), University of Arizona, Tucson, pp. 183,
+                   1972.
+            </reference_text>
+            <description>reference.LARSON-MINTON1972</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Rahe, J., B. Donn, and K. Wurm, &apos;Atlas of Cometary Forms&apos;, NASA SP-198, U.S.
+                   Government Printing Office, Washington D.C., 128 pp., 1969.
+            </reference_text>
+            <description>reference.RAHEETAL1969</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zedenek, Icarus, 37, 420, 1979.
+            </reference_text>
+            <description>reference.SEKANINA1979</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zedenek, Annual Review of Earth and Planetary Science, 9, 113, 1981.
+            </reference_text>
+            <description>reference.SEKANINA1981A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sekanina, Zedenek, Astronomical Journal, 86, 1741, 1981.
+            </reference_text>
+            <description>reference.SEKANINA1981B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Whipple, F.L., Nature, 273, 134, 1978.
+            </reference_text>
+            <description>reference.WHIPPLE1978</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Whipple, F.L., Astronomical Journal, 85, 305, 1980.
+            </reference_text>
+            <description>reference.WHIPPLE1980</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>IHW NEAR-NUCLEUS STUDIES NETWORK</instrument_name>
+        <instrument_desc>
+ 
+ 
+    Instrument Overview
+    ===================
+    Correspondence indicated the existence of about 4000 images
+    that might qualify for the archive, and about 3700 were
+    received. Most observers had done a good job of filtering
+    out the unusable data, and 3540 images were cataloged and
+    reformatted for the archive. Digital CCD images comprise 98%
+    of the collection. Many observers, faced with the task of
+    flat fielding large numbers of CCD images for the first
+    time, submitted images up until the deadline. With the
+    exception of 65 photographs digitized at the NNSN Center,
+    only reduced data were accepted. It was assumed that the
+    observers were the best qualified and equipped properly to
+    flat field their images. Improved detectors, more
+    telescopes, and dedicated observers overcame the poor
+    observing circumstances of Comet Halley&apos;s 1986 apparition to
+    obtain some truly remarkable images that show much finer
+    detail than the best images taken during the very favorable
+    1910 apparition. This, and the fact that there is nearly
+    continuous coverage for 2 months both pre- and post-
+    perihelion, provides an unprecedented data set for the study
+    of near-nucleus phenomena for any comet.
+ 
+         The NNSN data are of uneven quality for many possible
+    reasons, and sub- standard images were often included in
+    cases when there were no other data. The rationalization for
+    including substandard images is that it may be possible,
+    with future sophisticated image reconstruction software, to
+    compensate for imperfect focus or guiding that currently
+    limits the value of these images. It was felt that a
+    present-day archivist cannot accurately predict what data
+    may be useful in the future as far as the next apparition of
+    Comet Halley. In some cases, the images are very weak, but
+    these were usually the only narrow- band images available.
+    In most cases, information on identified defects is included
+    in the header comments.
+ 
+         The Halley Archive contains 3540 NNSN images, which
+    range in time from recovery in 1982 through the 1989
+    observing season. The number of images is near the middle of
+    our range of early estimates. The majority of images (about
+    three quarters) were taken from 1985 mid-October through
+    1986 May, during the period of major jet activity, when the
+    comet was within 2 AU of the Sun. The coverage was excellent
+    during the spacecraft encounters. There are some gaps during
+    full moon periods pre-perihelion, as well solar conjunction
+    1986 January 29 through February 27.
+ 
+         There are no calibration frames included in the
+    archive. Calibration information, such as step wedge input
+    intensities and output counts, are included in the HISTORY
+    or COMMENT lines. In some cases, there might be conversion
+    factors from counts to magnitude or flux units. In other
+    cases, total counts, times and exposures of standard stars
+    are given.
+ 
+         Table I (see below) lists the filters used and their
+    wavelengths at 50 percent (and for some also at 10 percent)
+    of maximum transmission. These numbers do not take into
+    account detector responses or atmospheric extinction. For
+    more information on transmission characteristics, the
+    observers should be contacted directly (Note: in the table
+    below, the broadband I filter response is affected by the
+    choice of CCD). There are five general categories of
+    filters:
+ 
+         (1) Four standard broadband photometry filters sets are
+    not specifically intended to isolate cometary emissions.
+    During the period of maximum activity (1986 January-April)
+    the dominant source was dust, but the V and B bands have
+    sizable contributions from C2 and CN emissions. Some filter
+    data were obtained from Thuan and Gunn (1976) and from
+    Bessell (1979).
+ 
+         (2) Schott glass filters were used primarily as
+    short-wavelength cutoff filters. The table indicates the 10
+    percent and 50 percent cutoff wavelengths, while the
+    effective peak and the long wavelength cutoffs were defined
+    by the detectors.
+ 
+         (3) IHW/IAU cometary filters are imaging quality
+    versions of the standard photometry bandpasses. The values
+    in the table are the mean of all those measured and are
+    correct to 1 nm. Further details can be found in the
+    Photometry and Polarimetry Network summary. Our IHW filter
+    names are intended to indicate the effective peak
+    wavelengths (in nm) and the emissions they should isolate.
+    The continuum bands are indicated by BC (blue continuum), MC
+    (mid continuum) and RC (red continuum).
+ 
+         (4) Giotto Halley Multicolor Camera filters were used
+    to provide ground- based calibration during the flyby. The
+    filter characteristics are taken from Keller et al. (1982).
+ 
+         (5) Special bandpass filters are the remaining
+    miscellaneous filters that observers usually selected to
+    investigate special spectral features. A particularly useful
+    example is the 618H2O+, which isolates the (0,8,0) emission
+    of H2O+ and provides excellent images of the ion tail.
+ 
+    Table I. Characteristics of Filters Used for NNSN Images.
+    _________________________________________________________
+ 
+       Category       Cut-on [nm]          Cut-off [nm]
+    ________________________________ Central ________________
+                                    Wavelength
+    IHW name Other name 10%    50%   [nm]   50%   10%
+    _________________________________________________________
+ 
+    Standard Broadband
+ 
+    B       Johnson B        386    440    494
+    V       Johnson V        491    548    605
+    R       Johnson R        585    650    715
+    I       Johnson I        729    825    921
+ 
+    Gunn G                   458    493    528
+    Gunn R                   610    655    700
+    Gunn I                   690    780    880
+ 
+    Mould B                  386    442    498
+    Mould V                  501    546    591
+    Mould R                  585    647    708
+    Mould I                  732    829    927
+ 
+    Cousins B                390    440    530
+    Cousins V                500    550    600
+    Cousins R                620    640    700
+    Cousins I                700    790    900
+ 
+    Wide B                   400    450    500
+    Wide R            550    560     -      -     -
+ 
+    Schott Glass
+ 
+    GG7               475    460     -      -     -
+    GG11              420    480     -      -     -
+    GG13              440    490     -      -     -
+    GG455             450    455     -      -     -
+    GG495             490    495     -      -     -
+    OG530             525    530     -      -     -
+    RG1               600    610     -      -     -
+    RG610             600    610     -      -     -
+    RG665             660    665     -      -     -
+ 
+    IHW/IAU Comet Imaging
+ 
+    309OH             305    306    309    313   314
+    365BC             360    362    365    368   370
+    387CN             384    386    387    390   401
+    406C3             401    402    406    409   410
+    426CO+            422    423    426    429   430
+    485MC             481    482    485    487   489
+    514C2             507    508    514    519   520
+    684RC             678    679    684    688   689
+    703H2O+           689    691    703    713   714
+ 
+    Giotto Multicolor Camera
+ 
+    314OH   C10       293    295    298    323   336
+    408C3   C11       399    403    410    419   422
+    HMCB    C5        320    336    395    488   489
+    450BC   C8        441    443    453    457   458
+    509C    C12       499    502    511    520   524
+    HMCO    C4        578    585    652    702   714
+    731RC   C9        715    718    728    743   746
+    HMCR    B/C3      695    705     -      -     -
+ 
+    Special Bandpasses
+ 
+    315OH                    310    315    320
+    457CO+                   454    457    459
+    598NH2                   596    598    600
+    600HN2                   580    600    620
+    619H2O+                  617    619    621
+    625CONT                  624    625    625
+    630OI                    628    630    632
+    630TLT                   627    629    631
+    H ALPHA                  646    656    666
+    701RC                    691    701    711
+    852CONT                  826    852    878
+    860CONT                  854    860    866
+    910CN                    900    910    920
+    918CN                    912    918    924
+    ___________________________________________________________
+ 
+ 
+         Listed below some features of some specific data sets
+    that the user should be aware of.
+ 
+         The Wise Observatory polarization images of Eaton
+    (402601-21) are broken into separate fields separated by
+    blank spaces.
+ 
+         The COMETMAX and SKYMIN values for the images taken
+    when Comet Halley was at large heliocentric distances
+    (400001-012, 403801-950, 406001-124) are only guideline
+    values to produce a good display, since the comet is
+    sometimes only a few counts above the background.
+ 
+         The photographs from Mt. Johns Observatory and Cerro El
+    Roble (402501- 546, 402551-566) were digitized using an LPL
+    CCD camera and macro lens adjusted to give an appropriate
+    scale. When there is sensitometric calibration, the
+    digitized step values and their relative input intensities
+    are given in the header comments. The Cerro El Roble films
+    had multiple exposures, so when there are two images per
+    field, the time and exposure of the faintest image is given
+    in the header comment. The user should be aware that there
+    will be two sets of field stars in these images.
+ 
+    Details on the instrument system are given in the table
+    below:
+ 
+       NEAR-NUCLEUS STUDIES DISCIPLINE
+ 
+    ___________________________________________________________
+    SYSTEM  OBSERVATORY        TELESCOPE         APER.(M)
+    ___________________________________________________________
+    40710202 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710210 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710101 BNAO - ROZHEN      2.0M REFL.            2.00
+    40710206 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710103 BNAO - ROZHEN      2.0M REFL.            2.00
+    40710203 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710211 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710205 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710208 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710102 BNAO - ROZHEN      2.0M REFL.            2.00
+    40710209 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710207 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40710204 BNAO - ROZHEN      0.7M SCHMIDT          0.70
+    40740107 BOYDEN OBS.        1.5M REFL.            1.50
+    40740100 BOYDEN OBS.        1.5M REFL.            1.50
+    40740108 BOYDEN OBS.        1.5M REFL.            1.50
+    40740106 BOYDEN OBS.        1.5M REFL.            1.50
+    40740109 BOYDEN OBS.        1.5M REFL.            1.50
+    40740105 BOYDEN OBS.        1.5M REFL.            1.50
+    40740104 BOYDEN OBS.        1.5M REFL.            1.50
+    40970106 WISE OBS.          1.0M REFL.            1.00
+    40970103 WISE OBS.          1.0M REFL.            1.00
+    40970102 WISE OBS.          1.0M REFL.            1.00
+    40970104 WISE OBS.          1.0M REFL.            1.00
+    42000104 SANGLOK            1.0M                  1.02
+    42000105 SANGLOK            1.0M                  1.02
+    42000101 SANGLOK            1.0M                  1.02
+    42000102 SANGLOK            1.0M                  1.02
+    42000103 SANGLOK            1.0M                  1.02
+    45000507 GURUSHIKAR         C-14                  0.34
+    45000506 GURUSHIKAR         C-14                  0.34
+    45000502 GURUSHIKAR         C-14                  0.34
+    45000508 GURUSHIKAR         C-14                  0.34
+    45000509 GURUSHIKAR         C-14                  0.34
+    45000501 GURUSHIKAR         C-14                  0.34
+    45000510 GURUSHIKAR         C-14                  0.34
+    43230105 PERTH OBSERVATORY  0.6M REFL.            0.61
+    43230110 PERTH OBSERVATORY  0.6M REFL.            0.61
+    43230103 PERTH OBSERVATORY  0.6M REFL.            0.61
+    43230104 PERTH OBSERVATORY  0.6M REFL.            0.61
+    43230108 PERTH OBSERVATORY  0.6M REFL.            0.61
+    43230107 PERTH OBSERVATORY  0.6M REFL.            0.61
+    43230109 PERTH OBSERVATORY  0.6M REFL.            0.61
+    43230101 PERTH OBSERVATORY  0.6M REFL.            0.61
+    43230106 PERTH OBSERVATORY  0.6M REFL.            0.61
+    45000803 KAGOSHIMA SP. CNT. 0.6M REFL.            0.60
+    45000802 KAGOSHIMA SP. CNT. 0.6M REFL.            0.60
+    45000801 KAGOSHIMA SP. CNT. 0.6M REFL.            0.60
+    43710202 OKAYAMA AST. OBS.  1.88M REFL.           1.88
+    43710201 OKAYAMA AST. OBS.  1.88M REFL.           1.88
+    43870101 DODAIRA AST. OBS.  0.91M REFL.           0.91
+    43880101 TOKYO AST. OBS.    0.65M REFR.           0.65
+    44130104 ANGLO-AUSTRALIA    AAT                   3.90
+    44130102 ANGLO-AUSTRALIA    AAT                   3.90
+    44130103 ANGLO-AUSTRALIA    AAT                   3.90
+    44130106 ANGLO-AUSTRALIA    AAT                   3.90
+    44130101 ANGLO-AUSTRALIA    AAT                   3.90
+    44130108 ANGLO-AUSTRALIA    AAT                   3.90
+    44130110 ANGLO-AUSTRALIA    AAT                   3.90
+    44130107 ANGLO-AUSTRALIA    AAT                   3.90
+    44130105 ANGLO-AUSTRALIA    AAT                   3.90
+    44130109 ANGLO-AUSTRALIA    AAT                   3.90
+    44740102 MT. JOHN           0.6M REFL.            0.61
+    44740101 MT. JOHN           0.6M REFL.            0.61
+    45680201 MAUNA KEA          3.6M CFHT             3.60
+    45680202 MAUNA KEA          3.6M CFHT             3.60
+    45680206 MAUNA KEA          3.6M CFHT             3.60
+    45680445 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680446 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680435 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680434 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680213 MAUNA KEA          3.6M CFHT             3.60
+    45680444 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680456 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680203 MAUNA KEA          3.6M CFHT             3.60
+    45680204 MAUNA KEA          3.6M CFHT             3.60
+    45680436 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680413 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680414 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680447 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680443 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680448 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680437 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680449 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680450 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680205 MAUNA KEA          3.6M CFHT             3.60
+    45680453 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680442 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680433 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680454 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680439 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680410 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680209 MAUNA KEA          3.6M CFHT             3.60
+    45680207 MAUNA KEA          3.6M CFHT             3.60
+    45680432 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680412 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680451 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680431 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680455 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680411 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680438 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680415 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680416 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680417 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680418 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680419 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    45680478 MAUNA KEA          U OF HAWAII 88 inches 2.24
+    46750225 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750224 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750227 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750228 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750221 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750222 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750212 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750254 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750214 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750213 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750223 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750102 PALOMAR            5.1M REFL.            5.08
+    46750229 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750226 PALOMAR            1.5M OSCAR MAYER      1.50
+    46750101 PALOMAR            5.1M REFL.            5.08
+    46900102 LOWELL OBSERVATORY MORGAN 0.6M REFL.     0.61
+    46900101 LOWELL OBSERVATORY MORGAN 0.6M REFL.     0.61
+    46900109 LOWELL OBSERVATORY MORGAN 0.6M REFL.     0.61
+    46900110 LOWELL OBSERVATORY MORGAN 0.6M REFL.     0.61
+    46900106 LOWELL OBSERVATORY MORGAN 0.6M REFL.     0.61
+    46950107 KITT PEAK NATIONAL MAYALL 4.0M           4.00
+    46950206 KITT PEAK NATIONAL 2.1M                  2.13
+    46950105 KITT PEAK NATIONAL MAYALL 4.0M           4.00
+    46950106 KITT PEAK NATIONAL MAYALL 4.0M           4.00
+    46950102 KITT PEAK NATIONAL MAYALL 4.0M           4.00
+    46950207 KITT PEAK NATIONAL 2.1M                  2.13
+    46950202 KITT PEAK NATIONAL 2.1M                  2.13
+    46950201 KITT PEAK NATIONAL 2.1M                  2.13
+    46950208 KITT PEAK NATIONAL 2.1M                  2.13
+    46950210 KITT PEAK NATIONAL 2.1M                  2.13
+    46940127 TUMAMOC            0.5M REFL.            0.50
+    46940128 TUMAMOC            0.5M REFL.            0.50
+    46940129 TUMAMOC            0.5M REFL.            0.50
+    46860143 MT. LEMMON         1.5M REFL             1.52
+    46930115 CATALINA           1.5M REFL             1.54
+    46930113 CATALINA           1.5M REFL             1.54
+    46930114 CATALINA           1.5M REFL             1.54
+    46930116 CATALINA           1.5M REFL             1.54
+    46930119 CATALINA           1.5M REFL             1.54
+    46930117 CATALINA           1.5M REFL             1.54
+    46930111 CATALINA           1.5M REFL             1.54
+    46930118 CATALINA           1.5M REFL             1.54
+    46930110 CATALINA           1.5M REFL             1.54
+    46930163 CATALINA           1.5M REFL.            1.54
+    46930157 CATALINA           1.5M REFL.            1.54
+    46930150 CATALINA           1.5M REFL.            1.54
+    46930152 CATALINA           1.5M REFL.            1.54
+    46930155 CATALINA           1.5M REFL.            1.54
+    46930145 CATALINA           1.5M REFL.            1.54
+    46930153 CATALINA           1.5M REFL.            1.54
+    46930159 CATALINA           1.5M REFL.            1.54
+    46930158 CATALINA           1.5M REFL.            1.54
+    46930154 CATALINA           1.5M REFL.            1.54
+    46930151 CATALINA           1.5M REFL.            1.54
+    46930156 CATALINA           1.5M REFL.            1.54
+    46930144 CATALINA           1.5M REFL             1.54
+    46930162 CATALINA           1.5M REFL.            1.54
+    46930142 CATALINA           1.5M REFL             1.54
+    48050102 CERRO EL ROBLE     0.7M MAKSUTOV         0.70
+    48050103 CERRO EL ROBLE     0.7M MAKSUTOV         0.70
+    48050101 CERRO EL ROBLE     0.7M MAKSUTOV         0.70
+    48070207 CERRO TOLOLO       1.5M                  1.50
+    48070206 CERRO TOLOLO       1.5M                  1.50
+    48070202 CERRO TOLOLO       1.5M                  1.50
+    48090307 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090302 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090301 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090310 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090308 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090309 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090306 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090303 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090304 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    48090305 EUROPEAN SOUTHERN  DANISH 1.5M REFL.     1.50
+    43040301 U. TORONTO S. OBS. 0.6M REFL.            0.61
+    ___________________________________________________________
+ 
+ 
+    Scientific Objectives
+    =====================
+         When the International Halley Watch (IHW) was formed,
+    cometary near nucleus study was a field with little
+    quantitative foundation, based largely on descriptive
+    reports of primarily visual observations of coma morphology.
+    One of the most extensive of these was Bobrovnikoff&apos;s (1931)
+    monograph on the 1910 apparition of Comet Halley. The
+    potential of such studies was underscored with the
+    publication of the Atlas of Cometary Forms by Rahe et al.
+    (1969), which illustrated some of the interesting coma
+    patterns in Comet Halley observed over the previous two
+    apparitions. The application of modern photographic
+    emulsions in recording the spectacular spiral jets in Comet
+    Bennett (1970 II) (Larson and Minton, 1972), the analysis of
+    expanding haloes to estimate nucleus rotation periods by
+    Whipple (1978, 1980), and the quantitative modeling of fans
+    and jets by Sekanina (1979, 1981a,b) provided further
+    justification for a dedicated network to observe the
+    expected changing coma pattern of Comet Halley. From the
+    onset it was clear that the NNSN strategy for obtaining data
+    would be similar to that of the Large Scale Phenomena
+    Network (LSPN), but that details, such as optimum detectors,
+    plate scales, temporal coverage, and acquisition of
+    telescope time needed to be defined.
+ 
+         In the broadest sense, the goal of near-nucleus studies
+    is to understand the processes taking place in the coma as
+    they relate to the physical nature of the cometary nucleus.
+    Assuming that the observed coma distribution results from
+    the ejection of material from a possibly inhomogenous,
+    rotating nucleus, coma anisotropy can be used as a tracer of
+    nucleus activity and motion. By measuring the motions of
+    coma features and extrapolating back to the time of
+    ejection, it is possible to locate the active areas on the
+    nucleus, and by observing a sufficient number of features
+    over time, determine or constrain the nucleus rotational
+    motion. Knowledge of the distribution and evolution of
+    active areas may provide important clues to the internal
+    structure of the nucleus and of the comet formation
+    environment. To fulfill these goals for Comet Halley, the
+    Near Nucleus Studies Network (NNSN) was designed to obtain
+    data on the spatial and temporal distribution of matter in
+    the coma at the highest possible resolution, especially
+    during the period of maximum activity in 1985-86.
+ 
+ 
+
+        </instrument_desc>
+        <instrument_id>NNSN</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Ccd</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

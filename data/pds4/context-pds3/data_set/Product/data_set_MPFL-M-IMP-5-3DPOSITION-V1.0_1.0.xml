@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mpfl-m-imp-5-3dposition-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MPF LANDER MARS IMP STEREO-DERIVED 3D POSITIONS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_pathfinder::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mpfl::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:imp.mpfl::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpfl-m-imp-5-3dposition-v1.0__browserp_mpfl-m-imp-5-3dposition-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mpfl-m-imp-5-3dposition-v1.0__dvo_geo_mpfl-m-imp-5-3dposition-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Baxes, G.A., Digital Image Processing Principles and Applications, John
+                   Wiley and Sons Inc., New York, pp 350-353, 1994.
+            </reference_text>
+            <description>reference.BAXES1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Crowe, D.G., P.H. Smith, J.D. Weinberg, N. Chabot, et al., Imager for Mars
+                   Pathfinder calibration report, version 1.0 , Lunar and Planetary
+                   Laboratory, September 30, 1996.
+            </reference_text>
+            <description>reference.CROWEETAL1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gaddis, L.R., et al. Digital mapping of the Mars Pathfinder landing site:
+                   Design, acquisition, and derivation of cartographic products for science
+                   application, J Geophys. Res., 104(E4), 8853-8868, doi:10.1029/1998JE900013.
+            </reference_text>
+            <description>reference.GADDISETAL1999</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kirk, R., E. Howington-Kraus, D. Cook, T.M. Hare and D. Becker, Mapping
+                   the Sagan Memorial Station Site: Geometric Control with Self-Calibration
+                   of the IMP Camera and Implications for Future Mars Landers. Lunar and
+                   Planetary Science Conference 21, 1869, 2001.
+            </reference_text>
+            <description>reference.KIRKETAL2001</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Smith, P.H., M.G. Tomasko, D. Britt, D.G. Crowe, R. Reid, H.U. Keller, N.
+                   Thomas, F. Gliem, P. Rueffer, R. Sullivan, R. Greeley, J.M. Knudsen, M.B.
+                   Madsen, H.P. Gunnlaugsson, S.F. Hviid, W. Goetz, L.A. Soderblom, L. Gaddis,
+                   and R. Kirk, The Imager for Mars Pathfinder Experiment, J. Geophys. Res.,
+                   102, 4003-4025, 1997.
+            </reference_text>
+            <description>reference.SMITHETAL1997A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Smith, P.H., J.F. Bell III, N.T. Bridges, D.T. Britt, L. Gaddis, R.
+                   Greeley, H.U. Keller, K.E. Herkenhoff, R. Jaumann, J.R. Johnson, R.L. Kirk,
+                   M. Lemmon, J.N. Maki, M.C. Malin, S.L. Murchie, J. Oberst, T.J. Parker,
+                   R.J. Reid, R. Sablotny, L.A. Soderblom, C. Stoker, R. Sullivan, N. Thomas,
+                   M.G. Tomasko, W. Ward, and E. Wegryn, Results from the Mars Pathfinder
+                   Camera, Science, 278, 1758-1765, 1997.
+            </reference_text>
+            <description>reference.SMITHETAL1997B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Stoker, C., E. Zbinden, T.T. Blackmon, B. Kanefsky, J. Hagen, C. Neveu, D.
+                   Rasmussen, K. Schwehr and M. Sims, Analyzing Pathfinder data using virtual
+                   reality and super- resolved imaging, Journal Geophysical Research 104,
+                   8889-8908, 1999.
+            </reference_text>
+            <description>reference.STOKERETAL1999</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MPFL-M-IMP-5-3DPOSITION-V1.0</data_set_id>
+        <data_set_name>MPF LANDER MARS IMP STEREO-DERIVED 3D POSITIONS V1.0</data_set_name>
+        <data_set_release_date>2003-10-01</data_set_release_date>
+        <start_time>1996-01-01</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>CAROL STOKER</producer_full_name>
+        <citation_text>
+            Stoker, C., and S. Slavney, Imager for Mars Pathfinder
+            Stereo-Derived 3D Positions, MPFL-M-IMP-5-3DPOSITION-V1.0, NASA
+            Planetary Data System, 2003.
+        </citation_text>
+        <data_set_terse_desc>
+            This archive contains three-dimensional position information for
+            pixels in Imager for Mars Pathfinder (IMP) stereo-pair images.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This volume contains data from the Imager for Mars Pathfinder 3D
+            Position data set.The data set consists of tables of
+            three-dimensional spatial coordinates of each pixel in an IMP EDR
+            stereo pair. The coordinates are derived from the Ames Stereo
+            Pipeline, an automated machine vision algorithm that correlates
+            features between the left and right images of stereo pairs to
+            determine their disparity, then computes their position using the
+            stereo camera properties
+        </abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set represents the primary results of three dimensional
+    (3-D) modeling of the Mars Pathfinder landing site using data from
+    the Imager for Mars Pathfinder camera.  The camera system is
+    described by Smith et.al., [SMITHETAL1997A, SMITHETAL1997B].  It
+    consisted of a stereo imager pair located on a pan and tilt
+    platform. Each imager of the pair was equipped with a filter wheel
+    so that the camera set could image the landscape in 15 narrow-band
+    filters.
+ 
+    This data set consists of a set of tables.  Each table contains 3-D
+    object position information in the form of a Cartesian (x,y,z)
+    coordinate in units of meters corresponding to each pixel in an IMP
+    EDR stereo pair acquired in the 670 nm filter. The coordinates are
+    deduced using an automated machine vision algorithm that correlates
+    features between the left and right images of stereo pairs to
+    determine their disparity (difference in image position between the
+    left and right eye) then computes their 3-D object position taking
+    into account the camera pointing and stereo optics.  The computer
+    algorithm is described by Stoker et al. [STOKERETAL1999] and
+    summarized below.
+ 
+    Stereo model products (and corresponding tables) have been produced
+    for two IMP Pathfinder data sets acquired in stereo in the 670 nm
+    filter. The IMP data sets are described by Gaddis et
+    al. [GADDISETAL1999].  The stereo data sets that were analyzed are
+    called the Monster Pan and the Super Pan.  The Monster Pan was a
+    complete stereo panorama of the Pathfinder landing site acquired
+    early in the mission (sols 3-6).  The monster pan images in the
+    670 nm filter were compressed using lossy JPEG compression
+    (6:1 compression factor) and the image to image overlap in the
+    panoramic product was relatively low.  The Super Pan was designed
+    to produce a full panorama of the landing site with low compression
+    ratio in all 15 narrow-band filters and the 670 nm stereo filter
+    set was losslessly compressed using Rice compression. It was
+    designed with increased frame-to-frame overlap relative to the
+    Monster Pan to assist with automated matching between images and
+    insure gap-free stereo coverage.  The Super Pan represented a large
+    data volume and was acquired over an 8 week period from sols 13 to
+    80.  It was 83% complete when the mission ended. While incomplete,
+    the 3-D reconstructions from the Super Pan images are somewhat
+    better than for the Monster Pan due to the increased image overlap
+    and lower image compression.
+ 
+ 
+  Parameters
+  ==========
+    Each table entry consists of a Cartesian coordinate corresponding to
+    the object position computed for each pixel of the left member of a
+    stereo pair for which a model solution was obtained.  The origin of
+    the coordinate system for the values provided in these tables is at
+    the intersection of the camera elevation and azimuth axes.  The X
+    axis is aligned with north so that +X values are north of the
+    origin, the Y axis is aligned with west so that +Y values are west
+    of the origin, and the +Z direction is up.  Other parameters which
+    enter into the stereo reconstruction are described below along with
+    a description of the Stereo Pipeline algorithm.
+ 
+ 
+  Processing
+  ==========
+    The computer program which produces the 3-D reconstruction is called
+    the Ames Stereo Pipeline [STOKERETAL1999].  The input to the
+    stereo matching algorithm consists of raw EDR images from an IMP
+    stereo pair.  Results are better if images are used that have not
+    been flat field corrected or photometrically calibrated because
+    these processes resample the pixel information. The first stage in
+    the Stereo Pipeline algorithm is called the &apos;preprocessing&apos; stage
+    and involves preparing the input stereo pair to improve the
+    correlation in the later stages.  First, a linear stretch is applied
+    to normalize the image intensity between the left and right members
+    of the stereo pair. This is needed because the correlation algorithm
+    works by matching the intensity values between the image pairs.
+    Then, a uni-directional Sobel edge enhancement technique [BAXES1994]
+    is applied.  Next calculations are performed to correct for
+    translational, rotational, and pixel-scale differences between the
+    left and right eyes.
+ 
+    The next stage of processing in the Stereo Pipeline is to correlate
+    the features in the images between the left and right cameras.  The
+    result of this stage is a disparity calculation for each pixel in
+    the image pair.  A texture-based sum-of-absolute-difference (SOAD)
+    correlation algorithm is used and the consistency of each match is
+    validated by doing both a correlation and cross-correlation. This
+    almost eliminates matches between wrong local figures. A small
+    subframe of the image surrounding a considered pixel, called the
+    kernel, is selected from one member of the stereo pair.  The kernel
+    is slid over the other image of the pair by a step of one pixel at a
+    time, a subtraction is performed, and the elements of the resulting
+    matrix are summed.  This procedure is used to find the position of
+    the most similar portion of the test image with the kernel. Three
+    correlation passes, using different sized kernels, are used to
+    improve both computational speed and accuracy. The same correlation
+    algorithm, with different parameters, is used for all three passes.
+    The first pass of the correlator is used to bound the disparity
+    range of the image.  It uses a small kernel and searches across the
+    complete range of possible disparity values.  For this first pass,
+    a relatively low rate of correlations are found, but these are used
+    to limit the search space of the disparity for the next pass.  The
+    second correlation pass uses a larger kernel which results in a high
+    percentage of pixels being matched.  In the final (third) pass, the
+    disparity search is constrained to the neighborhood of the disparity
+    calculated in the previous pass. Ideally, a small kernel size is
+    preferred for this pass because the disparity value assigned to the
+    pixel is the average over the kernel.  Kernel size for the second
+    and third pass are user selectable.  For the models published here,
+    kernel size was interactively varied to minimize the amount of
+    pixel-to-pixel variance in computed 3-D position. High variance
+    results from errors in the estimate of disparity. Small errors in
+    the estimate of disparity can lead to large errors in the estimate
+    of position along the camera&apos;s line of site. The Kernel size for the
+    second and third correlation pass is a user defined quantity of n
+    columns by m rows.  Values used for this data set were 14x14 pixels
+    (second pass) and 27x27 pixels (third pass).  The correlation stage
+    is followed by a filtering stage that removes &apos;outliers&apos;-- disparity
+    values much different than those in the nearby area.  Next, gaps in
+    the disparity map are filled. Gaps are places which had no match,
+    inconsistent cross-correlations, or outlier disparities.  Some gaps
+    are the result of real-world
+    discontinuities in surface shape, such as the occluding boundaries
+    of rocks in the terrain.  In order to retain these boundaries in the
+    map, gaps occurring at large discontinuities are filled with the
+    minimum disparity value (corresponding to the point furthest from
+    the camera) in the gap neighborhood. Gaps in regions with small
+    disparity variance are more likely due to a smooth, texture free
+    surface. These gaps can be filled by interpolation or set to zero.
+    In the models published here they are set to zero to avoid confusing
+    them with values computed by the algorithm.  The next processing
+    stage derives 3-D position points from disparity values. Each pixel
+    is projected along a vector defined by the (line, sample) coordinate
+    of the pixel and the nodal point of the camera to a distance
+    consistent with its disparity. This intersection point is the object
+    coordinate.  Then, using the camera pan and tilt angle, the object
+    coordinates are rotated to the lander coordinate system.  This
+    computation is repeated for each pixel of the stereo pair to get a
+    set of object points.  These object points, in tabular form, are the
+    data set provided.
+ 
+ 
+  Ancillary Data
+  ==============
+    The data are referenced to raw IMP EDR images.  These will be
+    required for interpretation of the 3-D model data.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Data Coverage and Quality
+  =========================
+    As discussed above, the 3-D position information is deduced matching
+    brightness patterns in the left and right eyes of the stereo pair.
+    When no match is found, or inconsistent matches found in the
+    correlation and cross correlation, no disparity is calculated and a
+    value of zero is assigned to the Cartesian coordinate (X=Y=Z=0) in
+    the table. Thus, zero values in the table indicate that the stereo
+    matching algorithm did not yield a good solution at that location.
+ 
+ 
+  Confidence Level and Limitations
+  ================================
+    For the Mars Pathfinder IMP camera data sets, the error in the 3-D
+    position of an object point in the model comes from the following
+    sources:
+ 
+    1) The uncertainty in the azimuth and elevation of the camera leads
+    to uncertainty in the 3-D model position.  According to the IMP
+    calibration report [CROWEETAL1996] the pointing error acts in a
+    plane perpendicular to the camera optical axis.  This error is a
+    linear function of the camera-point distance and is within +/- 2.7%
+    in azimuth and +/- 1.2% in elevation of the absolute position of the
+    point (assuming a pan error of +/- 1.5 degrees and a tilt error of
+    +/- 0.65 degrees.  These are worst case values due to backlash in
+    the camera motors.
+ 
+    Of the uncertainty sources, this is the largest, but the camera
+    pointing uncertainty affects all points from one stereo pair equally
+    as a solid body.  This source of error can be minimized by
+    determining actual camera pointing after the fact by using tiepoints
+    between stereo pairs. The United States Geological Survey
+    Astrogeology Branch, under the direction of R. Kirk, undertook a
+    project to provide improved camera pointing information using a
+    control network for the site and bundle adjustment.  This procedure
+    is described by Kirk et al. [KIRKETAL2001]. The values they
+    determined were substituted for surface based instrument azimuth and
+    elevation for the instrument telemetry values provided in the
+    original EDR headers.  Inspection of the results showed that using
+    these values produced a noticeable improvement in how well models
+    from adjacent images fit together. They also computed values for
+    left toe-in (-13.732 radians), right toe-in (24.63 radians) and
+    boresight angles (1.116 radians) that are different from those
+    published by the IMP camera team [CROWEETAL1996]. We also used
+    these values in our computations.
+ 
+    2) Uncertainty in the computed camera-point distance results from
+    the disparity computation method.  For any pixel, the computed
+    disparity represents an average over the Kernel for the final
+    correlation pass. Smaller Kernel sizes lead to a high percentage of
+    false correlations. Thus the models appear more noisy. Even though a
+    disparity point is assigned to each pixel, the real resolution of
+    the model is a function of the Kernel size in the final pass.
+ 
+    3) Image resolution limits stereo matching precision.  Subpixel
+    disparity is not computed by the algorithm.
+ 
+    4) The stereo images of the Monster Pan were compressed using lossy
+    JPEG compression.  High correlation rates are achieved even with the
+    compressed data of the Monster Pan but the results are clearly
+    noisier (defined as pixel to pixel variance in 3-D position computed
+    by the algorithm) than for the losslessly compressed Super Pan.  As
+    discussed above, this variance is due to errors in the estimated
+    disparity. Compression artifacts result in a higher percentage of
+    false matches.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

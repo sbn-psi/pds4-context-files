@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.gio-c-jpa-3-rdr-iis-grigg-skjell-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GIOTTO JOHNSTONE PARTICLE ANALYSER V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.giotto_extended_mission::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:jpa.gio::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.26p-grigg-skjellerup_1_1922_k1::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.gio-c-jpa-3-rdr-iis-grigg-skjell-v1.0__browserp_gio-c-jpa-3-rdr-iis-grigg-skjell-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Johnstone, A.D., A.J. Coates, B. Wilken, W. Studemann, W. Weiss, R. Cerulli
+                   Irelli, V. Formisano, H. Borg, S. Olsen, J.D. Winningham, D.A. Bryant, and S.J.
+                   Kellock, The Giotto Three-Dimensional Positive Ion Analyser, Journal of Physics
+                   E: Scientific Instruments, 20, 795-805, 1987.
+            </reference_text>
+            <description>reference.JOHNSTONEETAL1987</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GIO-C-JPA-3-RDR-IIS-GRIGG-SKJELL-V1.0</data_set_id>
+        <data_set_name>GIOTTO JOHNSTONE PARTICLE ANALYSER V1.0</data_set_name>
+        <data_set_release_date>1995-12</data_set_release_date>
+        <start_time>1992-07-09T18:17:17.903Z</start_time>
+        <stop_time>1992-07-11T02:26:37.967Z</stop_time>
+        <producer_full_name>PDS SMALL BODIES NODE</producer_full_name>
+        <citation_text>Unknown</citation_text>
+        <data_set_terse_desc>
+            Results from the Implanted Ion Sensor of the Johnstone Particle
+            Analyser from the Giotto spacecraft encounter with
+            26P/Grigg-Skjellerup.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the results for the Implanted Ion Sensor
+            (IIS) of the Johnstone Particle Analyser (JPA) instrument flown
+            aboard the GIOTTO spacecraft during its extended mission to fly
+            by comet P/Grigg-Skjellerup. The IIS instrument produced data in
+            three modes during the encountered, labelled as &apos;D4D&apos;,
+            &apos;STC&apos; and &apos;TOF&apos;. The files in this data set
+            present the results obtained in those modes in the form of flat
+            ASCII files.
+        </abstract_desc>
+        <data_set_desc>
+      Data Set Overview
+      =================
+      This data set contains the results for the Implanted Ion Sensor (IIS)
+      of the Johnstone Particle Analyser (JPA) instrument flown aboard the
+      GIOTTO spacecraft during its extended mission to fly by comet
+      P/Grigg-Skjellerup.  The IIS instrument produced data in three modes
+      during the encountered, labelled as &apos;D4D&apos;, &apos;STC&apos; and &apos;TOF&apos;.  The
+      files in this data set present the results obtained in those modes
+      in the form of flat ASCII files.
+ 
+      Parameters
+      ==========
+      In each mode, the data recorded are a distribution of counts over an
+      integration period of 32 spins (Nominal spin rate is 4 seconds per
+      spin). The three modes are:
+ 
+        D4D    Four-dimensional (full) resolution mode.  Counts are binned
+               by polar angle, azimuthal angle, energy level and mass group.
+ 
+        TOF    Time-of-Flight mode.  All angular bins are combined; data are
+               binned by energy level and time of flight.
+ 
+        STC    Start vs Start-Stop mode.  In this mode, the number of impacts
+               triggering a START pulse, and the number triggering both a
+               START and STOP pulse (i.e., real events) are tabulated.
+ 
+      Note that since the processing program used the same output matrix for
+      all modes, dimension labels are sometimes misleading.  Consult the
+      definitions in the PDS labels for clarification.
+ 
+      Processing
+      ==========
+      These text files were produced by running the processing softare
+      designed for this purpose at Mullard Space Science Laboratory,
+      University College, London.  No further data processing was performed
+      at the Small Bodies Node, apart from preparing the PDS labels.
+ 
+      The data were processed once, the parameters adjusted, and the
+      processing repeated.  During the download of this second pass, two
+      files were lost: t1922205.txt and s1922205.txt.  These files were
+      recovered from the first pass, with the loss of one data record at
+      the beginning of each file. The STC files were reformatted to a more
+      readable format from that of the second-pass output; and all files
+      had carriage-control characters added to end record.
+ 
+      Data
+      ====
+      These data have been corrected for know telemetry glitches and hardware
+      failures, but are otherwise unprocessed.  They were used to generate
+      the JPA part of the results listed in the JPAMG data set, which merges
+      the analyzed results of these data with results from the magnetometer
+      experiment.  The files are designed for visual inspection, rather than
+      for input to another program.
+ 
+      Media/Format
+      ============
+      The data set is available as part of the GEM CDROM collection,
+      published by the PDS Small Bodies Node.
+        </data_set_desc>
+        <confidence_level_note>
+      Confidence Level Overview
+      =========================
+      Note that these data were accepted &apos;as is&apos; from the JPA team for the
+      purpose of completing the deep archive.  They have undergone the PDS
+      internal review process, but have not been reviewed externally.
+ 
+      For more information about the reliability of the experiment itself,
+      see the published documentation.
+        </confidence_level_note>
+        <archive_status>SAFED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>85-056A-00E</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>PSSB-00025</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-n-mag-4-rdr-hgcoords-1.92sec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VG2 NEP MAG RESAMP RDR HELIOGRAPHIC COORDINATES 1.92SEC V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.neptune::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-n-mag-4-rdr-hgcoords-1.92sec-v1.0__browserp_vg2-n-mag-4-rdr-hgcoords-1.92sec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Connerney, J.E.P., M.H. Acuna, and N.F. Ness, The Magnetic
+                   Field at Neptune, J. Geophys, Res., 96 (supplement),
+                   pp. 19023-19042, 1991.
+            </reference_text>
+            <description>reference.CONNERNEYETAL1991</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Ness, N.F., M.H. Acuna, L.F. Burlaga, J.E.P. Connerney,
+                   R.P. Lepping, and F.M. Neubauer, Magnetic Fields at
+                   Neptune, Science, 246, 1473-1478, 1989.
+            </reference_text>
+            <description>reference.NESSETAL1989</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0</data_set_id>
+        <data_set_name>VG2 NEP MAG RESAMP RDR HELIOGRAPHIC COORDINATES 1.92SEC V1.0</data_set_name>
+        <data_set_release_date>1992-06-01</data_set_release_date>
+        <start_time>1989-08-22T00:00:47.663Z</start_time>
+        <stop_time>1989-08-29T00:00:44.962Z</stop_time>
+        <producer_full_name>DR. JOHN E. P. CONNERNEY</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            VG2 NEP MAG RESAMP RDR HELIOGRAPHIC COORDINATES 1.92SEC V1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes data from the Low Field Magnetometer (LFM)
+            during the inbound Neptune encounter beginning in the solar wind
+            and continuing until the first magnetopause crossing. The
+            magnetometer are given in Heliographic coordinates and the data
+            have been averaged from the 60ms instrument sample rate to a 1.92
+            second resampled rate. The dataset consists of the following
+            columns: 1) ctime (decimal seconds since
+            1966-01-01T00:00:00.000), 2) pdstime (ISO standard time format),
+            3-5) spacecraft clock (m65536,m60,fds-line), 6) magnetometer id
+            (1 = LFM, 2 = HFM), 7), Br (radial component), 8) Bt (tangential
+            component), 9) Bn (normal component), 10) Bmag (magnitude of the
+            average components), 11) avg_Bmag (average of the magnitude of
+            the raw components), 12) Lambda (longitude = tan^-1(Bt/Br)), 13)
+            Delta (latitude = sin^-1(Bn/avg_Bmag) ), 14-16) rms vector
+            (pythagorean root mean square deviation of the component
+            averages), 17) npts (number of points in average), 18) flag a
+            character string which indicates software or s/c hardware
+            intervention which reduces confidence in the data (NULL flags
+            represent &apos;good&apos; data).
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set includes data from the Low Field Magnetometer
+      (LFM) during the inbound Neptune encounter beginning in the
+      solar wind and continuing until the first magnetopause
+      crossing.  The magnetometer are given in Heliographic
+      coordinates and the data have been averaged from the 60ms
+      instrument sample rate to a 1.92 second resampled rate.  The
+      dataset consists of the following columns: 1) ctime (decimal
+      seconds since 1966-01-01T00:00:00.000), 2) pdstime (ISO
+      standard time format), 3-5) spacecraft clock
+      (m65536,m60,fds-line), 6) magnetometer id (1 = LFM, 2 = HFM),
+      7), Br (radial component), 8) Bt (tangential component), 9) Bn
+      (normal component), 10) Bmag (magnitude of the average
+      components), 11) avg_Bmag (average of the magnitude of the raw
+      components), 12) Lambda (longitude = tan^-1(Bt/Br)), 13) Delta
+      (latitude = sin^-1(Bn/avg_Bmag) ), 14-16) rms vector
+      (pythagorean root mean square deviation of the component
+      averages), 17) npts (number of points in average), 18) flag a
+      character string which indicates software or s/c hardware
+      intervention which reduces confidence in the data (NULL flags
+      represent &apos;good&apos; data).
+ 
+      The Heliographic coordinate system is defined by the spacecraft
+      centered R, T, N coordinates whose unit vector are:
+ 
+      R - along the Sun-spacecraft line, positive away from the
+      Sun;
+      T - parallel to Sun&apos;s equator, positive in the sense of
+      Jupiter&apos;s motion;
+      N - equal to R x T.
+ 
+      An ancillary data file containing the derived spacecraft
+      magnetic field is provided with this data at a 48 second sample
+      rate.  These data provide zero level offsets used in the data
+      processing.  S/C field data is provided in spacecraft
+      coordinates.
+ 
+      Processing Level Id            : 4
+      Software Flag                  : N
+      Processing Start Time          : UNK
+      Processing Stop Time           : UNK
+ 
+ 
+    Parameters
+    ==========
+ 
+      Data Set Parameter &apos;MAGNETIC FIELD VECTOR&apos;
+      ------------------------------------------
+        A derived parameter which combines the 3 orthogonal magnetic
+        field component measurements.
+ 
+        Sampling Parameter Name        : TIME
+        Data Set Parameter Name        : MAGNETIC FIELD VECTOR
+        Sampling Parameter Resolution  : 0.060000
+        Minimum Sampling Parameter     : 0.060000
+        Maximum Sampling Parameter     : 0.060000
+        Sampling Parameter Interval    : 1.920000
+        Minimum Available Sampling Int : 1.920000
+        Data Set Parameter Unit        : NANOTESLA
+        Noise Level                    : 0.006000
+        Sampling Parameter Unit        : SECOND
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : MAGNETIC FIELD VECTOR
+      Instrument Parameter Name       : MAGNETIC FIELD COMPONENT
+      Important Instrument Parameters : 1
+ 
+      Instrument Host ID              : VG2
+      Data Set Parameter Name         : MAGNETIC FIELD VECTOR
+      Instrument Parameter Name       : WAVE MAGNETIC FIELD INTENSITY
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID    : N/A
+        Software              : UNK
+        Product Data Set ID   : VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      This dataset contains some data gaps and spikes.  The dataset
+      does contain a flag value which has been provided by the PI
+      (Norman Ness) that indicates whether or not a particular record
+      has been contaminated by software error or by spacecraft
+      interference ( a NULL flag string indicates good data.  Strings
+      which contain characters may be contaminated in one or more
+      ways.  Some records that are obviously contaminated have not
+      been flagged.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XM-11A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

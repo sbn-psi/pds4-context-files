@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:pfes.fexp</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PORTABLE FIELD EMISSION SPECTROMETER for FEXP</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.fexp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hoover, G., and A.B. Kahle, A portable spectrometer for use
+                   from 5 to 15 micrometers, JPL Publication 1986-19, 1986.
+            </reference_text>
+            <description>reference.JPLPUB1986-19</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>PORTABLE FIELD EMISSION SPECTROMETER</instrument_name>
+        <instrument_desc>
+ 
+ 
+    INSTRUMENT: PORTABLE FIELD EMISSION SPECTROMETER
+          HOST: FIELD EXPERIMENT
+ 
+ 
+    Instrument Information
+    ======================
+      Instrument Id                  : PFES
+      Instrument Host Id             : FEXP
+      Instrument Name                : PORTABLE FIELD EMISSION
+                                         SPECTROMETER
+      Instrument Type                : SPECTROMETER
+      Instrument Manufacturer Name   : JET PROPULSION LABORATORY
+ 
+ 
+    Instrument Description
+    ======================
+      The Portable Field Emission Spectrometer (PFES) was built for
+      the purpose of measuring the ambient spectral thermal emission
+      of geologic materials in situ, thus avoiding the disturbance of
+      the natural setting which occurs during sample collection.
+      This instrument was designed and built at the Jet Propulsion
+      Laboratory (JPL).  The spectral range covered is 5 to 14.5
+      micrometers and the resolution is approximately 1.5% of the
+      wavelength (0.1 - 0.2 micrometers).
+ 
+      The PFES system consists of two main parts, the sensor head and
+      the data recorder.  Accessories include a gas bottle, signal
+      monitoring box, reference hot and cold blackbodies, and
+      connecting cables.  The sensor head contains the optics, the
+      detector, and the preamplifiers.  During operation, the sensor
+      head is connected by a hose to a tank that supplies high
+      pressure argon gas for cooling the detector.  The data recorder
+      consists of a lap-top computer, signal processing circuitry,
+      scan sequencing logic circuits, and the power supply.  The
+      analyzing element of the spectrometer is a filter wheel
+      containing three filter segments (continuously variable
+      multilayer interference filters).  The detector is a MCT
+      (mercury-cadmium-telluride) photoconductor.
+ 
+      Spectral measurements of the target are made relative to the
+      spectrum of a reference blackbody at ambient temperature.  The
+      kinetic temperature of this blackbody is measured using an
+      attached thermistor.  Usually about two to three spectra of
+      each target are measured to provide a check of consistency and
+      to reduce noise by averaging.  Each spectrum takes about thirty
+      seconds to scan.  The instrument response function is checked
+      during each operation by measuring a second blackbody at a much
+      lower temperature (the cold blackbody) and comparing this
+      measured radiance against calculated radiances at that
+      temperature from the tables of instrument responses.
+ 
+      Emissivity can be calculated by dividing the target radiance by
+      the radiance of a blackbody at the same temperature.  Target
+      kinetic temperature is determined as the lowest temperature
+      which produces a calculated blackbody curve that is greater
+      than the curve of the target spectral radiance and tangent to
+      the target spectral radiance curve in the region between 7.0
+      and 7.5 micrometers (in general, most silicates closely
+      approach blackbody behavior in this wavelength region).
+      However, in the case of field spectroscopy, in addition to
+      radiance from the surface, the instrument is also sensitive to
+      the emitted skylight radiance.  The skylight radiance is
+      reflected from the surface and scattered into the instrument&apos;s
+      field of view.  To correct for the reflected skylight term, the
+      radiance of a texturized aluminum plate (e=0.01 to 0.05) is
+      measured.
+ 
+ 
+    Science Objectives
+    ==================
+      Measure radiance from the surface in thermal infrared
+      wavelengths.
+ 
+ 
+    Operational Considerations
+    ==========================
+      Not Applicable
+ 
+ 
+    Calibration Description
+    =======================
+      Not Applicable
+ 
+ 
+    Section &apos;PFES&apos;
+    ==============
+      Total Fovs                     : 1
+ 
+ 
+      &apos;PFES&apos; Section Parameter &apos;RADIANCE&apos;
+      -----------------------------------
+        Radiance is the amount of energy per time per projected area
+        per steradian.
+ 
+        Instrument Parameter Name      : RADIANCE
+        Sampling Parameter Name        : WAVELENGTH
+        Minimum Sampling Parameter     : 5.000000
+        Maximum Sampling Parameter     : 14.500000
+        Sampling Parameter Interval    : 0.095000
+        Sampling Parameter Unit        : MICROMETER
+ 
+ 
+      Description
+      -----------
+        Not Applicable
+ 
+ 
+      Sensitivity
+      -----------
+        Not Applicable
+ 
+
+        </instrument_desc>
+        <instrument_id>PFES</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Spectrometer</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-mag-4-lunar-field-ts-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LP MOON MAG LEVEL 4 LUNAR MAGNETIC FIELD TIME SERIES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.lunar_prospector::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.lp::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.moon::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-mag-4-lunar-field-ts-v1.0__browserc_lp-l-mag-4-lunar-field-ts-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.lp-l-mag-4-lunar-field-ts-v1.0__browserp_lp-l-mag-4-lunar-field-ts-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>LP-L-MAG-4-LUNAR-FIELD-TS-V1.0</data_set_id>
+        <data_set_name>LP MOON MAG LEVEL 4 LUNAR MAGNETIC FIELD TIME SERIES V1.0</data_set_name>
+        <data_set_release_date>2003-10-01</data_set_release_date>
+        <start_time>1998-01-16</start_time>
+        <stop_time>1999-07-29</stop_time>
+        <producer_full_name>LON L. HOOD</producer_full_name>
+        <citation_text>not applicable</citation_text>
+        <data_set_terse_desc>
+            Lunar Prospector magnetometer (MAG) Level 2 Data (CODMAC Level
+            4). Approximate measurements of the lunar crustal magnetic field
+            with external (solar wind and magnetospheric) fields removed or
+            minimized.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    Lunar Prospector magnetometer (MAG) Level 2 Data (CODMAC Level 4).
+    Selected and filtered time series data at 5 second intervals from
+    the Lunar Prospector (LP) polar orbital mission to the Moon
+    (January 1998 to July 1999).  These data represent approximate
+    measurements of the lunar crustal magnetic field with external
+    (solar wind and magnetospheric) fields removed or minimized.
+    Latitude / longitude coverage is limited to specific regions
+    overpassed by thespacecraft during the selected intervals.  Vector
+    magnetic field components are given in two coordinate systems:
+    Selenographic (SG) coordinates and east, north, and radial (ENR)
+    coordinates.
+ 
+ 
+  Parameters
+  ==========
+    The measured parameters consist of the three vector components
+    of the lunar crustal magnetic field in SG and ENR coordinates
+    sampled at 5-second intervals.  The units of the field measurements
+    are nanoTeslas (nT). 1 nT = 0.00001 Gauss.  SG coordinates is a
+    system centered in the Moon with X directed toward 0 N, 0 E, Z
+    directed toward the north selenographic pole, and Y directed toward
+    0 N, 90 E.  ENR coordinates are centered at the instantaneous
+    spacecraft location with X directed eastward, Y directed northward,
+    and Z directed radial to the Moon.
+ 
+ 
+  Processing
+  ==========
+    Data were first selected from magnetically quiet periods when the
+    Moon was in a lobe of the Earth&apos;s magnetotail or when the Moon was in
+    the solar wind but the spacecraft was in the lunar wake.
+    Hand-editing was applied to eliminate intervals of obvious
+    transient external fields.  Finally, long-wavelength (&gt; 500 km)
+    non-lunar fields were minimized (detrended) using a suitable filter.
+ 
+ 
+  File Names and Format
+  =====================
+    Each file (in ascii format) is named as yy_ddd_nnx.TAB, where yy is
+    year number (98 or 99), ddd is day of year, nn is orbit number on the
+    selected day, x is an optional letter (A, B, etc.) to distinguish
+    multiple files in one day, and &apos;TAB&apos; indicates an ASCII table file.
+    Each file contains the Universal time hour of day of the
+    measurement, the magnetic field components (BX, BY, BZ) in SG
+    coordinates, the magnetic field components (BE, BN, BR) in ENR
+    coordinates, the latitude, longitude, and approximate altitude
+    (in kilometers) above the lunar surface at which the measurement
+    was obtained. The altitude is estimated by subtracting the mean
+    lunar radius (1738 km) from the radial distance of the spacecraft
+    to the lunar center of figure.
+ 
+    List of columns in the files:
+ 
+      Column 1: Hour of day in Universal time (to 4 decimal places)
+      Column 2: BX in nanoTeslas; X component of the magnetic field
+                in SG Coordinates.  See Data Set Description for
+                definition of SG Coordinates.
+      Column 3: BY in nanoTeslas; Y component of the magnetic field
+                in SG Coordinates.
+      Column 4: BZ in nanoTeslas; Z component of the magnetic field
+                in SG Coordinates.
+      Column 5: BE in nanoTeslas; East comp. of the magnetic field
+                in ENR coordinates.  See Data Set Description for
+                definition of ENR coordinates.
+      Column 6: BN in nanoTeslas; North comp. of the magnetic field
+                in ENR coordinates.
+      Column 7: BR in nanoTeslas; Radial comp. of the magnetic field
+                in ENR coordinates.
+      Column 8: Lunar Latitude in degrees; north is positive.
+      Column 9: Lunar east longitude in degrees.
+      Column 10: Approximate altitude of spacecraft in kilometers.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Review
+  ======
+    These data have been examined by the data producer, and as of
+    2003-10-01 are being prepared for peer review by the PDS.
+ 
+ 
+  Limitations
+  ===========
+    The quality of the measurements is a strong function
+    of the spacecraft altitude, which varies from a minimum of about 80
+    km during the first year of the mission to about 15 km during the
+    final six months of the mission.  The best crustal field measurements
+    were therefore obtained during the final &apos;&apos;extended mission&apos;&apos; phase
+    when the orbit periapsis was lowest.  The surface resolution of the
+    measurements is normally of the same order as the spacecraft
+    altitude.  However, at the lowest altitudes (about 15 km), the
+    resolution is limited also by the orbit track separation, which is
+    approximately 30 km at the lunar equator.  The accuracy to which the
+    crustal field is measured at a single point along the spacecraft
+    trajectory is limited by residual external field variations and is
+    approximately 0.1 nT.
+ 
+ 
+  Data Coverage
+  =============
+    The coverage of the measurements over the lunar surface is limited to
+    those areas on the near and far side when the Moon and the LP
+    spacecraft were favorably located to allow direct measurements of the
+    crustal magnetic field.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

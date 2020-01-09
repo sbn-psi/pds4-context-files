@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rdrs-5-bidr-full-res-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGN V RDRS DERIVED BASIC IMAGE DATA RECORD FULL RES V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rdrs.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rdrs-5-bidr-full-res-v1.0__browserp_geo_mgn-v-rdrs-5-bidr-full-res-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rdrs-5-bidr-full-res-v1.0__dvo_geo_mgn-v-rdrs-5-bidr-full-res-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Gilbert, John, Full Resolution Basic Image Data Record,
+                   Project Magellan Software Interface Specification Document
+                   SDPS-101, Jet Propulsion Laboratory, Pasadena, Calif.,
+                   1990.
+            </reference_text>
+            <description>reference.GILBERT1990</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Saunders, R.S., G.H. Pettengill, R.E. Arvidson, W.L. Sjogren, W.T.K. Johnson,
+                   and L. Pieri, The Magellan Venus Radar Mapping Mission, Journal of Geophysical
+                   Research, Vol. 95, pp. 8339-8355, 1990.
+            </reference_text>
+            <description>reference.SAUNDERSETAL1990</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RDRS-5-BIDR-FULL-RES-V1.0</data_set_id>
+        <data_set_name>MGN V RDRS DERIVED BASIC IMAGE DATA RECORD FULL RES V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1990-09-16</start_time>
+        <stop_time>1994-01-12</stop_time>
+        <producer_full_name>Unknown</producer_full_name>
+        <citation_text>
+            Pettengill, G., MGN V RDRS DERIVED BASIC IMAGE DATA RECORD FULL
+            RES V1.0, MGN-V-RDRS-5-BIDR-FULL-RES-V1.0, NASA Planetary Data
+            System, UNK
+        </citation_text>
+        <data_set_terse_desc>
+            The Magellan Full-Resolution Basic Image Data Record (F-BIDR)
+            archive contains full-resolution images in the form of long,
+            narrow, almost pole-to-pole swaths acquired by the Magellan
+            spacecraft during its mission to Venus.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains the Magellan Full resolution basic image
+            data records (F-BIDR) - SAR image data acquired along one orbit.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      Full resolution basic image data records (F-BIDR) consist of
+      SAR image data acquired along one orbit.  Pixel widths are 75m.
+      Data are presented as 8 bit pixel brightness values where the
+      brightness is in proportion to the radar scaled backscatter
+      cross section.  Scaling is accomplished by dividing the
+      specific cross section value (i.e.  cross section/area) for
+      each pixel by the value estimated from the Muhleman Law for the
+      relevant incidence angle, converting the ratio to decibels, and
+      scaling to a 1 to 251 output range.  The 1 value corresponds to
+      -20 dB and 251 to +30 dB, with a linear quantization of 0.2 dB
+      in between.  Data have at least 4 looks.  Specifically, the
+      scaled radar backscatter cross section is generated by:
+ 
+      1.  Dividing the radar cross section / pixel area by
+          the Muhleman Law.  Muhleman Law is
+ 
+          sigma naught =
+               0.0118 cos(i) / ((sin(i) + 0.111 cos(i))**3)
+ 
+          where i = incidence angle.
+ 
+          Note:  A value of 0.0188 was intended for the
+                 multiplicative constant, but 0.0118 was used
+                 by mistake.  Also, the incidence angles used
+                 to compute the Muhleman Law are systematically
+                 low by 0.5 degrees.
+ 
+      2.  Converting to dB by taking 10 times log base 10 of
+          the ratio generated in the first step.
+ 
+      3.  Scaling output to a byte DN value using the
+          expression:
+ 
+          DN = 1 + INT ({MIN [MAX(RV,-20), 30] + 20} * 5)
+ 
+          where RV = value produced in step 2, and
+               INT = nearest integer function.
+ 
+      F-BIDRs are presented as image files containing two integers at
+      the beginning of each line.  The first integer specifies the
+      pixel offset to the first valid pixel; the second specifies the
+      pixel offset to the last valid pixel.  The remainder of the
+      line consists of scaled backscatter cross section values.
+ 
+      Regions within 89 degrees of the equator have F-BIDRs in
+      sinusoidal equal area projection; F-BIDR data located more than
+      80 degrees of the equator are also in oblique sinusoidal equal
+      area projections.  For the sinusoidal equal area projection,
+      the origin is at 0 degrees latitude and the central meridian is
+      the sub-spacecraft longitude at the equator, adjusted to the
+      nearest multiple of 75m, relative to a pixel centered at 0
+      degrees longitude.  For details of use of the oblique
+      sinusoidal equal area projection see Magellan Software
+      Interface Specification (SIS) Document by John Gilbert, Full
+      Resolution Basic Image Data Record, SDPS-101, October 1990.
+ 
+      The first mapping cycle F-BIDRs extend from the north pole to
+      approximately 60 degrees south latitude for northern strips and
+      from just below the north pole to about 70 degrees south
+      latitude for intervening F-BIDR strips.  Images sizes are
+      approximately 350 samples by 220,000 lines.
+ 
+      Each F-BIDR file is located, together with a number of other,
+      ancillary files, on one 6250 BPI 2400 foot 9 track tape.  Each
+      F-BIDR consists of approximately 106 million bytes of image
+      data and 39 million bytes of ancillary data.  Included in the
+      ancillary files are processing parameters, orbital information,
+      and radar operational information.  Each F-BIDR tape contains
+      19 separate files.
+ 
+      Processing Level Id            : 5
+      Software Flag                  : N
+      Processing Start Time          : 1990-09-16
+      Processing Stop Time           : UNK
+ 
+ 
+    Parameters
+    ==========
+ 
+      Data Set Parameter &apos;RADAR SCALED BACKSCATTER CROSS SECTION&apos;
+      -----------------------------------------------------------
+        Cross section values that are scaled by some procedure, such
+        as dividing by theoretical or empirical scattering laws.
+ 
+        Data Set Parameter Name        : RADAR SCALED BACKSCATTER
+                                           CROSS SECTION
+        Data Set Parameter Unit        : DIMENSIONLESS
+        Sampling Parameter Name        : PIXEL
+        Sampling Parameter Unit        : KILOMETER
+        Minimum Sampling Parameter     : N/A
+        Maximum Sampling Parameter     : N/A
+        Sampling Parameter Resolution  : 0.15
+        Sampling Parameter Interval    : 0.075
+        Minimum Available Sampling Int : N/A
+        Noise Level                    : UNK
+ 
+ 
+    Source Instrument Parameters
+    ============================
+      Instrument Host ID              : MGN
+      Data Set Parameter Name         : RADAR SCALED BACKSCATTER
+                                          CROSS SECTION
+      Instrument Parameter Name       : RADAR ECHO POWER
+      Important Instrument Parameters : 1
+ 
+ 
+    Processing
+    ==========
+ 
+      Processing History
+      ------------------
+        Source Data Set ID  : MGN-V-RDRS-2-EDR-SAR-V1.0
+        Software            : SDPS
+        Product Data Set ID : MGN-V-RDRS-5-BIDR-FULL-RES-V1.0
+ 
+ 
+      Software &apos;SDPS&apos;
+      ---------------
+        The SAR Data Processing Subsystem (SDPS) consists of a suite
+        of specialized routines to conduct range and Doppler
+        compression of the radar signal, look summation, and
+        remapping from range-Doppler to sinusoidal equal area map
+        coordinates.
+ 
+        Software Name               : SDPS
+        Software Type               : N/A
+        Software Release Date       : N/A
+        Node ID                     : SDPT
+        Cognizant Engineer          : N/A
+        Software Access Description : N/A
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      N/A
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>89-033B-01A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

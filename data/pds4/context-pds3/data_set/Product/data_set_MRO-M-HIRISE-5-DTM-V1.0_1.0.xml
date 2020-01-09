@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-hirise-5-dtm-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO MARS HIGH RESOLUTION IMAGING SCIENCE EXPERIMENT DTM V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:hirise.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-5-dtm-v1.0__browserp_mro-m-hirise-5-dtm-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-5-dtm-v1.0__browser_geo_mars_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-hirise-5-dtm-v1.0__dvo_imaging_mro-m-hirise-5-dtm-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Eliason, E., Software Interface Specification for HiRISE Reduced Data Record
+                   Products, Mars Reconnaissance Orbiter, JPL Document Number D-32006,
+                   MRO-M-HIRISE-3-RDR-V1.0, NASA Planetary Data System, 2006.
+            </reference_text>
+            <description>reference.ELIASON2006A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Eliason, E., HiRISE EDR &amp; RDR Archive Volumes Software Interface Specification,
+                   JPL Document Number D-32005, NASA Planetary Data System, 2006.
+            </reference_text>
+            <description>reference.ELIASON2006B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Ultrahigh resolution topographic mapping of Mars with MRO HiRISE stereo images:
+                   Meter-scale slopes of candidate Phoenix landing sites, J. Geophys. Res. 2008.
+            </reference_text>
+            <description>reference.KIRKETAL2008</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-HIRISE-5-DTM-V1.0</data_set_id>
+        <data_set_name>MRO MARS HIGH RESOLUTION IMAGING SCIENCE EXPERIMENT DTM V1.0</data_set_name>
+        <data_set_release_date>2009-12-08</data_set_release_date>
+        <start_time>2009-12-09T15:16:33.333Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>ALFRED MCEWEN</producer_full_name>
+        <citation_text>
+            McEwen, A., Mars Reconnaissance Orbiter High Resolution Imaging
+            Science Experiment, Digital Terrain Model,
+            MRO-M-HIRISE-5-DTM-V1.0, NASA Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Derived, Digital Terrain Model, geometrically-mapped elevation
+            and orthoimages for HiRISE (High Resolution Imaging Science
+            Experiment).
+        </data_set_terse_desc>
+        <abstract_desc>
+            This dataset includes derived Digital Terrain Models and their
+            corresponding orthoimages from the HiRISE instrument on MRO.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    The High Resolution Imaging Science Experiment (HiRISE) is one of
+    the remote sensing instruments on the Mars Reconnaissance Orbiter
+    (MRO) spacecraft that acquires orbital observations of the Martian
+    surface during a two earth-year primary mapping phase.  MRO,
+    successfully launched in August 2005, arrived at Mars in March
+    2006.  Following orbit insertion the spacecraft went into an
+    aerobraking period to achieve a 250 x 315 kilometer near-polar
+    orbit suitable for the Primary Science Phase (PSP) mapping that
+    started in November 2006. Since the start of PSP HiRISE has been
+    continuously operating acquiring 10-20 observations per day.
+ 
+    The HiRISE team is responsible for maintaining an updated dataset
+    of the best version of its science data until meaningful
+    changes in data calibration no longer occur and to release data in
+    an appropriate manner for public access including their final
+    deposition to NASA&apos;s Planetary Data System (PDS). In carrying out
+    these responsibilities, the HiRISE team creates two types of
+    standard data products:  1) Experiment Data Record (EDR) products
+    and 2) Reduced Data Record (RDR) Products. An additional, derived product
+    is produced from HiRISE stereo image pairs: 3) Digital Terrain Model (DTM)
+    Products. This document describes the DTM standard products.
+ 
+    The Digital Terrain Model (DTM) product is an image file that represent
+    elevations for an area imaged in stereo by HiRISE. The source images are
+    orthorectified using the DTM to produce orthoimages. Both the DTM and the
+    orthoimages are resampled to a standard map projection They are formatted
+    and organized according to the standards of the PDS. The DTM is stored as
+    a standard PDS IMAGE object with an attached label. The orthoimages are
+    stored in the JPEG2000 format accepted by the PDS. The JPEG2000 images are
+    accompanied by a PDS detached label providing supporting information about
+    the observation.
+ 
+    The HiRISE DTM products comply with the PDS standards for file formats and
+    labels, specifically using the PDS image object definition. The DTM image
+    object uses &apos;IMG&apos; as its filename extension. The PDS label is embedded
+    within the DTM image object. The DTM orthoimage files, formatted according
+    to the JPEG2000 standard, use &apos;JP2&apos; as their filename extension. They are
+    accompanied by PDS labels; files that have the same name as the image data
+    file but use &apos;LBL&apos; for their filename extension. The label files provides
+    image data characterization and science metadata information about the
+    observation. Additionally, the ancillary data files that accompany the DTM
+    products and the archive volume structure are in conformance with PDS
+    standards.
+ 
+    DTM orthoimage data are stored in the JPEG2000 ISO/IEC Part 1 standard
+    format (http://www.jpeg.org/jpeg2000/), which was accepted by the
+    PDS standard in October 2005. The JPEG2000 standard offers
+    benefits distinctly advantageous for storage and access to very
+    large images. With HiRISE RDR products reaching sizes exceeding
+    30,000 x 70,000 pixels the use of JPEG2000 was recognized as a
+    suitable solution for the storage and distribution of these data
+    products. Advantages include excellent compression performance,
+    multiple resolution levels from a single image data set,
+    progressive decompression quality layers, lossless and lossy
+    compression (HiRISE RDR products use lossless compression per the
+    PDS Standard), pixel datum precision up to 38 bits, multiple image
+    components (or bands), and selective image area access. These
+    features are achieved by the use of a sophisticated image coding
+    system based on discrete wavelet transforms (DWT) combined with
+    other coding techniques to generate a JPEG2000 codestream that can
+    be rendered to image pixel rasters using
+    inverse transform algorithms.
+ 
+ 
+  Processing
+  ==========
+    The processing involved in a HiRISE DTM and associated orthoimages
+    is partially automated, but still involves a great deal of manual
+    input. For this reason, it cannot be pipelined as the other
+    HiRISE products are. HiRISE DTMs are being produced at several
+    institutions including HiROC, USGS Flagstaff, NASA Ames and JPL,
+    using the prodedures described here.
+ 
+    The image data that are the starting points for DTM production are the
+    radiometrically and geometrically calibrated individual RED CCDs. They
+    have gone through the normal HiRISE image processing pipeline up to the
+    HiStitch pipeline, as described in RDR_DS.CAT. Generally, the color CCDs
+    are not used for DTM production. The RED CCDs are reprojected into ideal
+    camera space using the ISIS3 (http://isis.astrogeology.usgs.gov/) program
+    noproj. After noproj the individual CCDs are mosaicked together and then
+    converted to 8-bit raw format. The 8-bit raw images are then imported into
+    the commercial software package Socet Set (copyright) by BAE, Inc. to
+    create the DTM. SPICE information for the RED5 CCD is gathered to provide
+    pointing information for the image to be imported into Socet Set
+    (copyright).  The stereo pair is then triangulated and controlled to MOLA
+    elevation values, when possible. MOLA tracks are used as the reference
+    points for elevation and horizontal alignment. At equatorial latitudes,
+    sometimes the MOLA tracks do not completely span the HiRISE image
+    footprint. In polar regions, although the MOLA tracks are more densely
+    spaced, seasonal changes in snow/frost coverage create variability on the
+    scale of a few meters. In both of these cases the producer uses their best
+    judgement to tie the HiRISE DTM to the MOLA tracks. Terrain extraction is
+    performed in Socet Set (copyright) using their proprietary algorithms.
+    After the terrain model is produced, it is examined for obvious blunders
+    and artifacts. These are edited to the extent required by the project, but
+    within reasonable time constraints.
+ 
+    Socet Set (copyright) is used to create the orthoimages for each image in
+    the stereo pair. Orthoimages are produced at two resolutions. The first is
+    the full resolution of the original imagery (e.g. 0.25 m for bin1 images).
+    The second is produced at the same GSD as the DTM. A typical HiRISE DTM
+    produced from two bin1 images can have a GSD (or post spacing) of 1m.
+    During the project pre-processing, the stretch parameters to convert from
+    the native 16-bit to 8-bit format are preserved. These parameters are
+    documented in the label as SCALE and OFFSET should the end user wish to
+    restore the full dynamic range of the original image to the derived
+    orthoimage.
+ 
+    The DTM and orthoimages are exported from Socet Set (copyright) to the
+    ISIS3 cube format in order to populate the labels with correct scaling and
+    mapping values for subsequent PDS format conversion and label generation.
+    These products are map projected using the same mapping definitions as the
+    standard HiRISE RDR products.
+ 
+    Additionally DTM and orthoimage product browse, annotated browse,
+    and thumbnail jpeg images are created for HiRISE and PDS Imaging
+    Node web-based distribution services.
+ 
+  Data
+  ====
+    Radiometrically and geometrically corrected RED band products are
+    the input source to DTM processing. Two HiRISE images are used,
+    comprising a stereo pair. Stereo imaging is accomplished by rolling
+    the spacecraft off-nadir. The first stereo image acquired typically is
+    a small off-nadir roll. The second stereo image is usually the larger
+    off-nadir roll. Elevations are derived from a priori knowledge of
+    the observation geometry and the degree of cross-track parallax
+    between the two stereo images. Stereo image targeting includes
+    consideration of shadow length and direction, incidence and phase
+    angle. The ideal stereo pair for DTM creation is acquired under
+    similar lighting conditions and with a stereo convergence angle
+    of 15 to 25 degrees.
+ 
+  Ancillary Data
+  ==============
+    Generation of the DTM products relies on the MRO-project deliveries
+    for the Spacecraft Ephemeris (SPK kernels) and MRO spacecraft pointing
+    files (CK kernels)
+ 
+  Coordinate System &amp; Cartographic Standards
+  ==========================================
+    The HiRISE DTM products are compatible with the cartographic standards
+    and mapping conventions used by the HiRISE RDR and MRO CRISM map products.
+    When spatially registering map products produced by the two instrument
+    teams only a translation and scale change are required.  The
+    coordinate system used is planetocentric latitude and east positive
+    longitude direction. The planetocentric latitude is the angle from the
+    equator to a point on the surface of an oblate planet. The longitude
+    increases from west to east (left to right).
+    The planetary constants used in the camera model to produce the HiRISE
+    RDR products are obtained from the NAIF SPICE planetary constants
+    kernel pck0008.tpc.  The Mars constants of particular importance are
+    the right ascension and declination of the pole, the prime meridian,
+    rotation rate, and radii.  The constants used are:
+    BODY499_POLE_RA          = (  317.68143   -0.1061      0.  )
+    BODY499_POLE_DEC         = (   52.88650   -0.0609      0.  )
+    BODY499_PM               = (  176.630    350.89198226  0.  )
+    BODY499_RADII            = ( 3396.19    3396.19     3376.20 )
+ 
+    Additionally, the SPICE kernel de405.bsp was used for the ephemeris
+    data for Mars.
+ 
+    Two map projections are used in the HiRISE DTM products:
+    Equirectangular and Polar Stereographic.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+  Confidence Level Overview
+  =========================
+ 
+    Known problems are TBD.
+ 
+  Review
+  =====
+    This archival data set has been examined by a peer review panel
+    prior to its acceptance by the Planetary Data System (PDS). The
+    peer review has been carried out in accordance with PDS
+    procedures.
+ 
+  Data Coverage and Quality
+  =========================
+    DTM products are derived products from HiRISE stereo observations
+    that are radiometrically corrected. The observational coverage on
+    the martian surface is dependent on the instrument operating modes
+    of the observation and on the amount of overlap between of the stereo
+    pair. The largest coverage at 300 kilometer spacecraft altitude is
+    about 6 km crosstrack and 37 kilometers downtrack.
+ 
+    During the Primary and Extended Science Phases of MRO operations,
+    HiRISE is expected to acquire well over 1000 stereo pairs. Due to the
+    lengthy and complicated process required to produce DTMs, not all of
+    the stereo pairs will be used to create DTMs. DTMs to be produced
+    are prioritized by scientific usefulness, optimal image quality and
+    appropriate photometric parameters.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

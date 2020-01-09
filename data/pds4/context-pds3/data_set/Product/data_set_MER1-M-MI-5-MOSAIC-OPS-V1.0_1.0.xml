@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-m-mi-5-mosaic-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 1 MARS MICROSCOPIC IMAGER CAMERA MOSAICS RDR OPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mi.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-mi-5-mosaic-ops-v1.0__browserp_mer1-m-mi-5-mosaic-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-mi-5-mosaic-ops-v1.0__browser_geo_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-mi-5-mosaic-ops-v1.0__dvo_imaging_mer1-m-mi-5-mosaic-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Herkenhoff, K.E., et al., The Athena Microscopic Imager Investigation, Journal
+                   of Geophysical Research, July 2, 2003.
+            </reference_text>
+            <description>reference.HERKENHOFFETAL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1-M-MI-5-MOSAIC-OPS-V1.0</data_set_id>
+        <data_set_name>MER 1 MARS MICROSCOPIC IMAGER CAMERA MOSAICS RDR OPS V1.0</data_set_name>
+        <data_set_release_date>2004-08-24</data_set_release_date>
+        <start_time>2004-01-26T04:29:10.491Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JUSTIN MAKI</producer_full_name>
+        <citation_text>
+            Maki, Justin, MER 1 Mars Microscopic Imager Mosaic Images Ops RDR
+            V1.0, NASA Planetary Data System, MER1-M-MI-5-MOSAIC-OPS-V1.0,
+            2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 1 Microscopic Imager Mosaic Images,
+            Operations Reduced Data Record, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    This data set contains images where  multiple frames are mosaicked
+    into a single RDR product. The methods for this process are applied
+    by MIPL under OPGS, associating projections with the mosaicking
+    process. It should be noted that these processes can be independent,
+    and that governing methods and software can differ between OPGS and
+    the Athena Pancam and Microscopic Imager Teams under SOAS. For
+    instance, it is possible that OPGS and SOAS software will transform
+    individual images to one of the projections discussed below, without
+    involving any mosaicking. Detailed mathematical descriptions of the
+    mosaic projections and algorithms will be available in a separate
+    paper, Mars Mosaic Projection Algorithms.
+ 
+ 
+  Processing
+  ==========
+    The following is a description of each mosaic:
+ 
+    - Cylindrical Projection: the image is overlaid onto azimuth and
+      elevation grid lines, with individual frame boundries super
+      imposed and annotated by number. In this case each pixel
+      represents a fixed angle in azimuth and elevation. Rows are of
+      constant elevation in Mars coordinates. The horizon is level, and
+      columns begin clockwise from Mars north.
+ 
+    - Camera Point Perspective: a perspective projection with horizontal
+      epipolar lines. The image view is as if the camera had a much
+      larger field of view.
+ 
+   - Cylindrical-Perspective Projection: a 360 degree view projection
+      similar to the Point Perspective mosaic except that this is like a
+      pinhole camera which follows the mosaic in azimuth. The horizon is
+      not level in order to preserve epipolar viewing.
+ 
+   - Polar Projection: concentric circles represent constant projected
+     elevation. Mars nadir is at the convergent center and the horizon
+     is corrected for lander tilt. North is up.
+ 
+   - Vertical Projection: the creation of this type of mosaic assumes
+     that the field is a plane tangent to the Martian surface with up
+     pointing north. This is not an orthorectified rendering, but was
+     found to be useful for rapid initial orientation.
+ 
+   - Orthographic Projection: this type of mosaic is a generalization of
+     the vertical projection intended primarily for use with Microscopic
+     Imager data. It differs in that an arbitrary axis of projection (as
+     well as X- and Y-axes in the plane of projection) can be specified.
+ 
+   - XYZ: this mosaic contains XYZ values for each pixel in the mosaic
+     rather than intensity values. The inputs to the mosaic program are
+     XYZ files (or individual X, Y, or Z components), and the pixels are
+     interpreted in the same way - as the coordinate of the
+     corresponding pixel in Cartesian space.  Like XYZ images, they may
+     consist of a single 3-band file with X, Y, and Z components, or
+     separate 1 band files for each component. XYZ mosaics can be
+     produced in any of the mosaic projections.  Note: these mosaics
+     have a consistent coordinate system used applied to each input
+     image; the output mosaic may have only one coordinate system in
+     which the XYZ values are defined.
+ 
+    - Surface Normal (UVW): similar in concept to XYZ mosaics, a UVW
+      mosaic is simply a mosaic created from UVW (surface normal) input
+      images. The pixels represent the surface normals at each point.
+      Like Surface Normal (UVW) images, they can be single 3-band files
+      or separate 1-band files for each component.  As with XYZ mosaics,
+      any projection may be used, and all output values must be defined
+      in the same coordinate system.
+ 
+ 
+  Data
+  ====
+    1 or 3 16-bit signed integer or Float, PDS (SOAS) or dual PDS/VICAR
+    (OPGS) binary file.
+ 
+ 
+  Software
+  ========
+    The MIPL Mars Program Suite was used to generate these RDRs.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online.  Upon
+    Mission completion, the Hazcam Operations RDRs will be delivered
+    to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

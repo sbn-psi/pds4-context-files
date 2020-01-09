@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.nh-j-alice-3-jupiter-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NEW HORIZONS ALICE JUPITER ENCOUNTER V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.new_horizons::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.nh::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:alice.nh::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.callisto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.ganymede::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.j1_io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.j2_europa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.nh-j-alice-3-jupiter-v1.0__browserp_nh-j-alice-3-jupiter-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>NH-J-ALICE-3-JUPITER-V1.0</data_set_id>
+        <data_set_name>NEW HORIZONS ALICE JUPITER ENCOUNTER V1.0</data_set_name>
+        <data_set_release_date>2007-12-13</data_set_release_date>
+        <start_time>2007-01-01T00:00:00Z</start_time>
+        <stop_time>2007-06-27T00:00:00Z</stop_time>
+        <producer_full_name>JOSEPH PETERSON</producer_full_name>
+        <citation_text>
+            Stern, A., NEW HORIZONS ALICE JUPITER ENCOUNTER V1.0,
+            NH-J-ALICE-3-JUPITER-V1.0, NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Calibrated data taken by New Horizons Alice UV Imager instrument
+            during the JUPITER mission phase.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains Calibrated data taken by the New Horizons
+            Alice UV Imager instrument during the Jupiter encounter mission
+            phase.
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+ 
+      This data set contains Calibrated data taken by New Horizons
+        Alice UV Imager
+      instrument during the JUPITER mission phase.
+ 
+      During the Jupiter flyby phase, the Alice instrument observed:
+      Jupiter, Io and its torus, Europa, Ganymede, and Callisto.
+      Types of observations included UV spectra of the targets as well
+      as eclipses and stellar occultations.
+ 
+      Every observation provided in this data set was taken as a part of a
+      particular sequence.  A list of these sequences follows:
+ 
+      Sequence IDs &amp; start times (end times are the start times
+      of the following Sequence IDs) for the ALICE instrument
+      during the JUPITER phase of the New Horizons Mission
+      =========================================================
+ 
+      Sequence ID:  JEAL_JALICECAL01
+      Start UTC:    2007-01-06T20:00:00
+      Description:  JUPITER; Alice 501-504; Main objective to ensure a safe
+                    atonomous HV Ramp
+ 
+      Sequence ID:  JEAL_EALICECAL01
+      Start UTC:    2007-01-27T08:00:00
+      Description:  EUROPA; Alice pt source
+ 
+      Sequence ID:  JEAL_EALICECAL02
+      Start UTC:    2007-02-15T11:42:00
+      Description:  EUROPA; Alice point source
+ 
+      Sequence ID:  JEAL_JOCC03
+      Start UTC:    2007-02-22T16:23:00
+      Description:  FJUPITER; Stellar occultation, ingress (preferred);
+                    3/4/2007  7:40:00 PM.  Could be combined with the
+                    &apos;auroral response to magnetosphere&apos; observation.
+ 
+      Sequence ID:  JEAL_JOCC04
+      Start UTC:    2007-02-22T23:35:00
+      Description:  FJUPITER; Stellar occultation, egress (preferred);
+                    3/4/2007  7:40:00 PM.  Could be combined with the
+                    &apos;auroral response to magnetosphere&apos; observation.
+ 
+      Sequence ID:  JEAL_ISUNMON01
+      Start UTC:    2007-02-24T00:40:00
+      Description:  IO; Approach monitoring, Pele on limb; 02/23/07 05:42 -
+                    02/23/07 06:12
+ 
+      Sequence ID:  JEAL_EUVSPEC01
+      Start UTC:    2007-02-24T01:35:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_ISUNMON02
+      Start UTC:    2007-02-24T05:00:00
+      Description:  IO; Approach monitoring ; Timing flexible
+ 
+      Sequence ID:  JEAL_ISUNMON03
+      Start UTC:    2007-02-24T13:50:00
+      Description:  IO; Approach monitoring ; Timing flexible
+ 
+      Sequence ID:  JEAL_JAURORA01
+      Start UTC:    2007-02-24T23:00:00
+      Description:  JUPITER; Lyman alpha/H3+ airglow map; LEISA N/S scan;
+                    ALICE TTAG
+ 
+      Sequence ID:  JEAL_EUVSPEC02
+      Start UTC:    2007-02-25T00:00:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_JAURORA02
+      Start UTC:    2007-02-25T01:00:00
+      Description:  JUPITER; Lyman alpha/H3+ airglow map; LEISA N/S scan;
+                    ALICE TTAG
+ 
+      Sequence ID:  JEAL_EUVSPEC03
+      Start UTC:    2007-02-25T02:00:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_ISUNMON05
+      Start UTC:    2007-02-25T05:00:00
+      Description:  IO; Approach monitoring ; Timing flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC04
+      Start UTC:    2007-02-25T05:35:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_ISUNMON06
+      Start UTC:    2007-02-25T08:30:00
+      Description:  IO; Approach monitoring ; Timing flexible
+ 
+      Sequence ID:  JEAL_GECLIPSE01
+      Start UTC:    2007-02-25T09:00:00
+      Description:  GANYMEDE; Eclipse; 02/25/07 09:35  Need to know how the
+                    data taking is spread through the eclipse period.
+                    Assume for now that this one and the next one can be
+                    intermixed with potentially additional slews between Io
+                    and Europa
+ 
+      Sequence ID:  JEAL_ISUNMON07
+      Start UTC:    2007-02-25T14:55:00
+      Description:  IO; Approach monitoring ; Timing flexible
+ 
+      Sequence ID:  JEAL_CCOMP01
+      Start UTC:    2007-02-25T17:33:00
+      Description:  CALLISTO; Spectrum vs. phase; 02/25/07 12:30 - 02/26/07
+                    05:00
+ 
+      Sequence ID:  JEAL_ETERM01
+      Start UTC:    2007-02-25T18:05:00
+      Description:  EUROPA; Term Topography; 02/25/07 17:45 - 02/25/07 18:15
+ 
+      Sequence ID:  JEAL_ECOMP01
+      Start UTC:    2007-02-25T18:35:00
+      Description:  EUROPA; Anti-Jupiter side composition; 2/25/2007  12:00
+                    - 2/26/07 08:00
+ 
+      Sequence ID:  JEAL_IECLIPSE01
+      Start UTC:    2007-02-25T19:10:00
+      Description:  IO; Io Eclipse; 02/25/07 19:34 - 02/25/07 19:34
+ 
+      Sequence ID:  JEAL_IOCC01
+      Start UTC:    2007-02-26T04:05:00
+      Description:  IO; Stellar occultation; 3/4/2007  7:40:00 PM.  Could be
+                    combined with the &apos;auroral response to magnetosphere&apos;
+                    observation.
+ 
+      Sequence ID:  JEAL_COCC01
+      Start UTC:    2007-02-26T07:13:00
+      Description:  CALLISTO; Stellar occultation; 3/4/2007  7:40:00 PM.
+                    Could be combined with the &apos;auroral response to
+                    magnetosphere&apos; observation.
+ 
+      Sequence ID:  JEAL_GCOMP02
+      Start UTC:    2007-02-26T08:09:00
+      Description:  GANYMEDE; Gap Fill composition; 02/26/07 00:00 -
+                    02/26/07 17:00
+ 
+      Sequence ID:  JEAL_ISUNMON09
+      Start UTC:    2007-02-26T08:40:00
+      Description:  IO; Approach monitoring ; Timing flexible
+ 
+      Sequence ID:  JEAL_IHIRESIR01
+      Start UTC:    2007-02-26T18:25:00
+      Description:  IO; Hi-res coverage, composition; Timing flexible
+ 
+      Sequence ID:  JEAL_ECOMP02
+      Start UTC:    2007-02-26T18:55:00
+      Description:  EUROPA; Trailng side compostion; 02/26/07 13:00 -
+                    02/27/07 00:00
+ 
+      Sequence ID:  JEAL_IHIRES01
+      Start UTC:    2007-02-26T20:52:00
+      Description:  IO; Hi-res coverage, Pele on limb; 02/26/07 19:52 -
+                    02/26/07 21:52
+ 
+      Sequence ID:  JEAL_COCC02
+      Start UTC:    2007-02-27T00:15:00
+      Description:  CALLISTO; Stellar occultation; 3/4/2007  7:40:00 PM.
+                    Could be combined with the &apos;auroral response to
+                    magnetosphere&apos; observation.
+ 
+      Sequence ID:  JEAL_IHIRES02
+      Start UTC:    2007-02-27T01:05:00
+      Description:  IO; Hi-res coverage; Timing flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC05
+      Start UTC:    2007-02-27T02:00:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_ETERM03
+      Start UTC:    2007-02-27T02:30:00
+      Description:  EUROPA; Term Topography; 02/27/07 02:15 - 02/27/07 02:45
+ 
+      Sequence ID:  JEAL_CCOMP02
+      Start UTC:    2007-02-27T04:50:00
+      Description:  CALLISTO; Spectrum vs. phase; 02/26/07 23:00 - 02/27/07
+                    12:15
+ 
+      Sequence ID:  JEAL_IHIRESIR02
+      Start UTC:    2007-02-27T05:25:00
+      Description:  IO; Hi-res coverage, composition; Timing flexible
+ 
+      Sequence ID:  JEAL_EOCC01
+      Start UTC:    2007-02-27T06:50:00
+      Description:  EUROPA; Stellar occultation; 3/4/2007  7:40:00 PM.
+                    Could be combined with the &apos;auroral response to
+                    magnetosphere&apos; observation.
+ 
+      Sequence ID:  JEAL_ETERM04
+      Start UTC:    2007-02-27T07:15:00
+      Description:  EUROPA; Term Topography; 02/27/07 06:45 - 02/27/07 07:15
+ 
+      Sequence ID:  JEAL_EUVSPEC06
+      Start UTC:    2007-02-27T07:50:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_IHIRES03
+      Start UTC:    2007-02-27T09:15:00
+      Description:  IO; Hi-res coverage; Timing flexible
+ 
+      Sequence ID:  JEAL_GBEST01
+      Start UTC:    2007-02-27T09:45:00
+      Description:  GANYMEDE; Best resolution; 02/27/07 11:15 - 02/27/07
+                    19:30
+ 
+      Sequence ID:  JEAL_EECLIPSE01
+      Start UTC:    2007-02-27T10:24:00
+      Description:  EUROPA; Eclipse; 02/27/07 10:36 Need to know how the
+                    data taking is spread through the eclipse period.
+                    Assume for now that this one and the next one can be
+                    intermixed with potentially additional slews between Io
+                    and Europa
+ 
+      Sequence ID:  JEAL_IECLIPSE03
+      Start UTC:    2007-02-27T13:46:00
+      Description:  IO; Io Eclipse; 2/27/07 14:10 Target so Alice and LEISA
+                    integrations can be done with the same pointing.
+ 
+      Sequence ID:  JEAL_ETERM05
+      Start UTC:    2007-02-28T01:00:00
+      Description:  EUROPA; Term Topography; 02/27/07 21:15 - 02/27/07 21:45
+ 
+      Sequence ID:  JEAL_EBEST01
+      Start UTC:    2007-02-28T01:13:00
+      Description:  EUROPA; Best resolution  ; 02/27/07 14:00 - 02/28/07
+                    03:30
+ 
+      Sequence ID:  JEAL_CBEST01
+      Start UTC:    2007-02-28T03:10:00
+      Description:  CALLISTO; Spectrum vs. phase (best res.); 02/27/07 16:15
+                    - 02/28/07 03:00
+ 
+      Sequence ID:  JEAL_IHIRES04
+      Start UTC:    2007-02-28T03:50:00
+      Description:  IO; Hi-res coverage; Timing flexible
+ 
+      Sequence ID:  JEAL_IHIRESIR03
+      Start UTC:    2007-02-28T04:30:00
+      Description:  IO; Hi-res coverage, composition; Timing flexible
+ 
+      Sequence ID:  JEAL_IOCC02
+      Start UTC:    2007-02-28T05:20:00
+      Description:  IO; Stellar occultation; 3/4/2007  7:40:00 PM.  Could be
+                    combined with the &apos;auroral response to magnetosphere&apos;
+                    observation.
+ 
+      Sequence ID:  JEAL_TUVSPEC02
+      Start UTC:    2007-02-28T10:10:00
+      Description:  TORUS ANSA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_IHIRES05
+      Start UTC:    2007-02-28T11:00:00
+      Description:  IO; Hi-res coverage- Prometheus on limb; Timing flexible
+ 
+      Sequence ID:  JEAL_ISHINE01
+      Start UTC:    2007-02-28T13:05:00
+      Description:  IO; Jupiter shine; 02/28/07 12:00 - 02/28/07 14:00
+ 
+      Sequence ID:  JEAL_ETERM06
+      Start UTC:    2007-02-28T13:40:00
+      Description:  EUROPA; Term Topography; 02/28/07 13:15 - 02/28/07 13:45
+ 
+      Sequence ID:  JEAL_IHIRES06
+      Start UTC:    2007-02-28T15:15:00
+      Description:  IO; Hi-res coverage; Timing flexible
+ 
+      Sequence ID:  JEAL_IHIRESIR04
+      Start UTC:    2007-03-01T00:25:00
+      Description:  IO; Hi-res nightside- Pele on limb; Timing flexible
+ 
+      Sequence ID:  JEAL_INITEMON01
+      Start UTC:    2007-03-01T02:25:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_ETERM07
+      Start UTC:    2007-03-01T03:30:00
+      Description:  EUROPA; Term Topography; 03/01/07 05:15 - 03/01/07 05:45
+ 
+      Sequence ID:  JEAL_INITEMON02
+      Start UTC:    2007-03-01T04:20:00
+      Description:  IO; High Phase Monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC08
+      Start UTC:    2007-03-01T04:50:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_ETERM08
+      Start UTC:    2007-03-01T05:30:00
+      Description:  EUROPA; Term Topography; 03/01/07 05:15 - 03/01/07 05:45
+ 
+      Sequence ID:  JEAL_CUVSPEC03
+      Start UTC:    2007-03-01T05:50:00
+      Description:  CALLISTO; Long UV integration; 2/25/07 12:00 - 3/3/07
+                    12:00
+ 
+      Sequence ID:  JEAL_INITEMON03
+      Start UTC:    2007-03-01T07:30:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_TUVSPEC03
+      Start UTC:    2007-03-01T07:58:00
+      Description:  TORUS ANSA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_IECLIPSE04
+      Start UTC:    2007-03-01T08:25:00
+      Description:  IO; Io Eclipse; 3/1/07 8:38 Target so Alice and LEISA
+                    integrations can be done with the same pointing.
+ 
+      Sequence ID:  JEAL_INITEMON04
+      Start UTC:    2007-03-01T18:00:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_ISHINE02
+      Start UTC:    2007-03-01T22:00:00
+      Description:  IO; Jupiter shine; 03/01/07 21:00 - 03/01/07 23:00
+ 
+      Sequence ID:  JEAL_INITEMON05
+      Start UTC:    2007-03-02T06:00:00
+      Description:  IO; High phase monitoring: Tvashtar on limb; Timing
+                    flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC09
+      Start UTC:    2007-03-02T07:55:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_INITEMON06
+      Start UTC:    2007-03-02T08:20:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC10
+      Start UTC:    2007-03-02T09:10:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_INITEMON07
+      Start UTC:    2007-03-02T11:18:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_INITEMON08
+      Start UTC:    2007-03-02T14:00:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC11
+      Start UTC:    2007-03-02T14:20:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_INITEMON09
+      Start UTC:    2007-03-02T23:50:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC12
+      Start UTC:    2007-03-03T01:40:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_IECLIPSE05
+      Start UTC:    2007-03-03T04:00:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_JAURORA03
+      Start UTC:    2007-03-03T06:30:00
+      Description:  JUPITER; Lyman alpha/H3+ airglow map; LEISA N/S scan;
+                    ALICE TTAG
+ 
+      Sequence ID:  JEAL_JAURORA04
+      Start UTC:    2007-03-03T07:30:00
+      Description:  JUPITER; Lyman alpha/H3+ airglow map; LEISA N/S scan;
+                    ALICE TTAG
+ 
+      Sequence ID:  JEAL_INITEMON11
+      Start UTC:    2007-03-03T08:15:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_JAURORA05
+      Start UTC:    2007-03-03T08:40:00
+      Description:  JUPITER; Lyman alpha/H3+ airglow map; LEISA N/S scan;
+                    ALICE TTAG
+ 
+      Sequence ID:  JEAL_JAURORA06
+      Start UTC:    2007-03-03T09:30:00
+      Description:  JUPITER; Lyman alpha/H3+ airglow map; LEISA N/S scan;
+                    ALICE TTAG
+ 
+      Sequence ID:  JEAL_INITEMON12
+      Start UTC:    2007-03-03T10:15:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_INITEMON13
+      Start UTC:    2007-03-03T12:25:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC13
+      Start UTC:    2007-03-03T12:50:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_INITEMON14
+      Start UTC:    2007-03-04T00:20:00
+      Description:  IO; High phase monitoring; Timing flexible
+ 
+      Sequence ID:  JEAL_EUVSPEC14
+      Start UTC:    2007-03-04T11:30:00
+      Description:  EUROPA; UV spectra; Timing flexible
+ 
+      Sequence ID:  JEAL_GECLIPSE02
+      Start UTC:    2007-03-04T12:50:00
+      Description:  GANYMEDE; Eclipse; 03/04/07 12:50 - 03/04/07 12:50
+ 
+      Sequence ID:  JEAL_GOCC01
+      Start UTC:    2007-03-04T17:15:00
+      Description:  GANYMEDE; Stellar occultation; 3/4/2007  7:40:00 PM.
+                    Could be combined with the &apos;auroral response to
+                    magnetosphere&apos; observation.
+ 
+      Sequence ID:  JEAL_JALICECAL02
+      Start UTC:    2007-03-07T16:00:00
+      Description:  EARTH; Will be moved to coincide with a DSN pass in this
+                    time-frame/ Alice SOC door opening
+ 
+      Sequence ID:  JEAL_SALICECAL01
+      Start UTC:    2007-03-10T16:00:00
+      Description:  STAR; Alice - SOC occultation test
+ 
+      For the list of observations and their parameters, refer to
+      the data set index table (typically INDEX.TAB &amp; CUMINDEX.TAB,
+      initially in the /INDEX/ area of the data set).
+ 
+ 
+    Time
+    ====
+ 
+      There are several time systems, or units, in use in this dataset:
+      New Horizons spacecraft MET (Mission Event Time or Mission Elapsed
+      Time), UTC (Coordinated Universal Time), and TDB Barycentric
+      Dynamical Time.
+ 
+      This section will give a summary description of the relationship
+      between these time systems.  For a complete explanation of these
+      time systems the reader is referred to the documentation
+      distributed with the NAIF/SPICE toolkit from the NAIF PDS node.
+ 
+      The most common time unit associated with the data is is the
+      spacecraft MET.  MET is a 32-bit counter on the New Horizons
+      spacecraft that runs at a rate of about one increment per second
+      starting from a value of zero at
+ 
+        19.January, 2006 18:08:02 UTC
+ 
+      or
+ 
+        JD2453755.256337 TDB.
+ 
+      The leapsecond adjustment (DELTA_ET = ET - UTC) over this dataset
+      is 65.184s.
+ 
+      The data labels for any given product in this dataset usually
+      contain at least one pair of common UTC and MET representations
+      of the time at the middle of the observation.  Other portions
+      of the products, for example tables of data taken over periods
+      of up to a day or more, will only have the MET time associated
+      with a given row of the table.
+ 
+      For the data user&apos;s use in interpreting these times, a reasonable
+      approximation (+/- 1s) of the conversion between Julian Day (TDB)
+      and MET is as follows:
+ 
+        JD TDB = 2453755.256337 + ( MET / 86399.9998693 )
+ 
+      For more accurate calculations the reader is referred to the
+      NAIF/SPICE documentation as mentioned above.
+ 
+ 
+ 
+    Processing
+    ==========
+ 
+      The data in this data set were created by a software data
+      processing pipeline on the Science Operation Center (SOC) at
+      the Southwest Research Institute (SWRI), Department of Space Studies.
+      This SOC pipeline assembled data as FITS files from raw telemetry
+      packets sent down by the spacecraft and populated the data labels
+      with housekeeping and engineering values, and computed geometry
+      parameters using SPICE kernels. The pipeline did not resample
+      the data.
+ 
+ 
+    Data
+    ====
+ 
+      The observations in this data set are stored in data files using
+      standard Flexible Image Transport Sytem (FITS) format.  Each FITS
+      file has a corresponding detached PDS label file, named according
+      to a common convention.  The FITS files have image and/or table
+      extensions; see the PDS label plus the DOCUMENT files for a
+      description of these extensions and their contents.
+ 
+ 
+      This Data section comprises the following sub-topics:
+ 
+      - Filename/Product IDs
+      - CODMAC Level 3 ALICE data details
+      - Instrument description
+      - Visit Description, Visit Number, and Target in the Data Labels
+      - Unresolved Liens on the Data
+ 
+ 
+      Filename/Product IDs
+      --------------------
+ 
+        The filenames and product IDs of observations adhere to a
+        common convention e.g.
+ 
+         ALI_0123456789_0X0AB_ENG_1.FIT
+         ^^^ ^^^^^^^^^^ ^^^^^ ^^^ ^\__/
+         |        |       |    |  | ^^
+         |        |       |    |  |  |
+         |        |       |    |  |  +--File type (includes dot)
+         |        |       |    |  |     - .FIT for FITS file
+         |        |       |    |  |     - .LBL for PDS label
+         |        |       |    |  |     - not part of product ID
+         |        |       |    |  |
+         |        |       |    |  +-- Version number from the SOC
+         |        |       |    |      (Science Operations Center)
+         |        |       |    |
+         |        |       |    +--ENG for CODMAC Level 2 data *
+         |        |       |       SCI for CODMAC Level 3 data *
+         |        |       |
+         |        |       +--Application ID (ApID) of the telemetry data
+         |        |          packet from which the data come
+         |        |
+         |        +--MET (Mission Event Time) i.e. Spacecraft Clock
+         |
+         +--Instrument/observation designator
+ 
+          * For those datasets where the NH project is delivering
+            CODMAC Level 1 &amp; 2 data (REX &amp; PEPSSI), ENG and SCI apply
+            to CODMAC Level 1 &amp; 2 data, respectively.
+ 
+ 
+        Instrument   Instrument/observation designators  ApIDs
+        ===========  ==================================  =============
+         ALICE        ALI                                0X4B0 - 0X4B3
+ 
+         * Not all values in this range are used
+ 
+         There are other ApIDs that contain housekeeping values and
+         other values.  See the documentation for more details.
+ 
+ 
+        Here is a summary of the types of files generated by each APiD:
+ 
+ 
+      ApIDs   Data product description
+      =====   ========================
+      0x4b0 - ALICE Pixel List Lossless (CDH 1)
+      0x4b1 - ALICE Pixel List Packetized (CDH 1)
+      0x4b4 - ALICE Pixel List Lossless (CDH 2)
+      0x4b5 - ALICE Pixel List Packetized (CDH 2)
+      0x4b2 - ALICE Histogram Lossless (CDH 1)
+      0x4b3 - ALICE Histogram Packetized (CDH 1)
+      0x4b6 - ALICE Histogram Lossless (CDH 2)
+      0x4b7 - ALICE Histogram Packetized (CDH 2)
+ 
+ 
+ 
+      Instrument description
+      ----------------------
+ 
+        Refer to the following files for a description of this instrument.
+ 
+        CATALOG
+ 
+          ALICE.CAT
+ 
+        DOCUMENTS
+ 
+          ALICE_SSR.*
+          NH_ALICE_V###_TI.TXT  (### is a version number)
+          SOC_INST_ICD.*
+ 
+ 
+      Visit Description, Visit Number, and Target in the Data Labels
+      ---------------------------------------------------------------
+ 
+        The observation sequences were defined in Science Activity
+        Planning (SAP) documents, and grouped by Visit Description and
+        Visit Number.  The SAPs are spreadsheets with one Visit Description
+        &amp; Number per row.  A nominal target is also included on each row
+        and included in the data labels, but does not always match with the
+        TARGET_NAME field&apos;s value in the data labels.  In some cases, the
+        target was designated as RA,DEC pointing values in the form
+        ``RADEC=123.45,-12.34&apos;&apos; indicating Right Ascension and Declination,
+        in degrees, of the target from the spacecraft in the Earth
+        Equatorial J2000 inertial reference frame.  This indicates either
+        that the target was either a star, or that the target&apos;s ephemeris
+        was not loaded into the spacecraft&apos;s attitude and control system
+        which in turn meant the spacecraft could not be pointed at the
+        target by a body identifier and an inertial pointing value had to
+        be specified as Right Ascension and Declination values.  The PDS
+        standards do not allow putting a value like RADEC=... in the PDS
+        TARGET_NAME keyword&apos;s value; in those cases the PDS TARGET_NAME
+        value is set to CALIBRATION.
+ 
+ 
+      Unresolved Liens on the Data
+      ----------------------------
+ 
+        None exist at the present time.
+ 
+ 
+    Ancillary Data
+    ==============
+ 
+      The geometry items included in the data labels were computed
+      using the SPICE kernels archived in the New Horizons SPICE
+      data set, NH-X-SPICE-6-JUPITER-V1.0.
+ 
+ 
+    Reference Frame
+    ===============
+ 
+ 
+      Geometric Parameter Reference Frame
+      -----------------------------------
+        Earth Mean Equator and Vernal Equinox of J2000 (EMEJ2000) is the
+        inertial reference frame used to specify observational geometry
+        items provided in the data labels.  Geometric parameters are based
+        on best available SPICE data at time of data creation.
+ 
+ 
+      Epoch of Geometric Parameters
+      -----------------------------
+        All geometric parameters provided in the data labels were
+        computed at the epoch midway between the START_TIME and
+        STOP_TIME label fields.
+ 
+ 
+ 
+    Software
+    ========
+ 
+      The observations in this data set are in standard FITS format
+      with PDS labels, and can be viewed by a number of PDS-provided
+      and commercial programs. For this reason no special software is
+      provided with this data set.
+ 
+ 
+    Contact Information
+    ===================
+ 
+      For any questions regarding the data format of the archive,
+      contact the person whose PDS_USER_ID is ASTERN
+      as described in PERSONNEL.CAT.
+        </data_set_desc>
+        <confidence_level_note>
+    Confidence Level Overview
+    =========================
+      During the processing of the data in preparation for
+      delivery with this volume, the packet data associated with each
+      observation were used only if they passed a rigorous verification
+      process including standard checksums.
+    Review
+    ======
+      The data have been reviewed and validated by the instrument team
+      members, as well as by SOC personnel.
+        </confidence_level_note>
+        <archive_status>SUPERSEDED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>PSPA-00423</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

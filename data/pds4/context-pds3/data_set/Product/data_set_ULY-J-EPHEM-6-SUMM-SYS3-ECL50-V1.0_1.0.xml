@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.uly-j-ephem-6-summ-sys3-ecl50-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ULY JUPITER ENCOUNTER EPHEMERIS SYS3/ECL50 COORDS. VER. 1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.ulysses::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.uly::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:vhm-fgm.uly::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.uly-j-ephem-6-summ-sys3-ecl50-v1.0__browserp_uly-j-ephem-6-summ-sys3-ecl50-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Balogh, A., T.J. Beek, R.J. Forsyth, P.C. Hedgecock, R.J. Marquedant, E.J.
+                   Smith, D.J. Southwood, and B.T. Tsurutani, The magnetic field investigation on
+                   the Ulysses mission: Instrumentation and preliminary scientific results,
+                   Astron. Astrophys. Suppl. Ser. 92, 221-236, 1992.
+            </reference_text>
+            <description>reference.BALOGHETAL1992A</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Balogh, A., M.K. Dougherty, R.J. Forsyth, D.J. Southwood, E.J. Smith, B.T.
+                   Tsurutani, N. Murphy, and M.E. Burton, Magnetic field observations during
+                   the Ulysses flyby of Jupiter, Science, 257, 1515-1518, 1992.
+            </reference_text>
+            <description>reference.BALOGHETAL1992B</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Smith, E.J., and K.-P. Wenzel, Introduction to the Ulysses Encounter with
+                   Jupiter, J. Geophys. Res., 98, 21111, 1993.
+            </reference_text>
+            <description>reference.SMITH-WENZEL1993</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>ULY-J-EPHEM-6-SUMM-SYS3/ECL50-V1.0</data_set_id>
+        <data_set_name>ULY JUPITER ENCOUNTER EPHEMERIS SYS3/ECL50 COORDS. VER. 1.0</data_set_name>
+        <data_set_release_date>1998-05-01</data_set_release_date>
+        <start_time>1992-01-25T02:59:59.000Z</start_time>
+        <stop_time>1992-02-17T23:00:00.000Z</stop_time>
+        <producer_full_name>ROBERT J. FORSYTH</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            ULY JUPITER ENCOUNTER EPHEMERIS SYS3/ECL50 COORDS. VER. 1.0
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains Ulysses ephemeris data near Jupiter
+            covering the dates 1992-01-25 to 1992-02-18. Two slightly
+            different versions of these data are included. The first
+            (TRJ25_48.TAB), provided by the Ulysses MAG team (Imperial
+            College/JPL), includes position data in Sys 3 spherical, ECL50
+            spherical, and ECL50 Cartesian coordinates. The Ulysses spin axis
+            position is also provided in ECL50 spherical coordinates. The
+            second version (SPK25_48.TAB), generated at the PDS/PPI node
+            (UCLA), includes Sys 3 spherical trajectory, plus a spacecraft
+            local time. Note that the position values for these two versions
+            differ slightly. This variation is due to differences in the
+            definitions of the Jovian physical constants used to generate
+            them.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This data set contains Ulysses ephemeris data near Jupiter
+      covering the dates 1992-01-25 to 1992-02-18. Two slightly
+      different versions of these data are included. The first
+      (TRJ25_48.TAB), provided by the Ulysses MAG team (Imperial
+      College/JPL), includes position data in Sys 3 spherical, ECL50
+      spherical, and ECL50 Cartesian coordinates. The Ulysses spin
+      axis position is also provided in ECL50 spherical coordinates.
+      The second version (SPK25_48.TAB), generated at the PDS/PPI
+      node (UCLA), includes Sys 3 spherical trajectory, plus a
+      spacecraft local time. Note that the position values for these
+      two versions differ slightly. This variation is due to
+      differences in the definitions of the Jovian physical
+      constants used to generate them.
+ 
+ 
+    Data
+    ====
+ 
+    TRJ25_48.TAB
+    ------------
+      The file TRJ25_48.TAB contains positions and attitude of
+      Ulysses. Time resolution is the same as the final SEDR: 3
+      hours for Days 25-31, 1 minute for Days 32-47, 1 hour for Day
+      48.
+ 
+      This file simply contains convenient extractions of parameters
+      from the Final SEDR. These were reformatted at the PDS/PPI
+      node to provide time tags consistent with those used on the
+      rest of the ULYSSES JUPITER ENCOUNTER CD-ROM, and merged from
+      multiple data files into a single encounter file.
+ 
+      TRJ25_48.TAB is an ASCII (CR/LF) format file consisting of the
+      following columns:
+ 
+      column   type     description
+ 
+      time     a24      time in the format yyyy-mm-ddThh:mm:ss.sssZ
+      R        f10.5    distance from Jupiter to Ulysses (RJ; 1 RJ =
+                        71398 km)
+      RLATJG   f8.3     spacecraft jovian (Sys 3) latitude (degrees)
+      RLONJG   f8.3     spacecraft west (Sys 3) longitude (degrees)
+      RLATEC   f8.3     latitude of the Jupiter-to-Ulysses unit
+                        vector in ECL50 (degrees)
+      RLONEC   f8.3     longitude of the Jupiter-to-Ulysses unit
+                        vector in ECL50 (degrees)
+      AXISLAT  f8.3     latitude of Ulysses spin axis in ECL50
+                        (degrees)
+      AXISLON  f8.3     longitude of Ulysses spin axis in ECL50
+                        coordinates (degrees)
+      XSU      1pe15.8  Cartesian X of Sun-to-Ulysses vector in
+                        ECL50 (km)
+      YSU      1pe15.8  Cartesian Y of Sun-to-Ulysses vector in
+                        ECL50 (km)
+      ZSU      1pe15.8  Cartesian Y of Sun-to-Ulysses vector in
+                        ECL50 (km)
+ 
+      This file may be read according to the fortran format
+      statement: &apos;(a24,1x,f10.5,6(1x,f8.3),3(1x,1pe15.8))&apos;.
+ 
+ 
+    SPK25_48.TAB
+    ------------
+      This file contains positions in Sys 3 coordinates,
+      plus a local time to provide a sun reference. Positions are
+      provided in 60 second samples for the entire interval. Times
+      coincide with those for the 60 second averaged magnetometer
+      data provided to the PDS/PPI node by the Ulysses MAG team.
+ 
+      These data were generated from Ulysses SPICE at the PDS/PPI
+      node (UCLA). SPICE uses the latest IAU conventions as the
+      Jovian physical constants. The values used in this case
+      were those cited in the 1991 IAU report. The value used for
+      1 RJ = 71492 km.
+ 
+      SPK25_48.TAB is an ASCII (CR/LF) format file consisting of the
+      following columns:
+ 
+      column   type     description
+ 
+      time     a24      time in the format yyyy-mm-ddThh:mm:ss.sssZ
+      R        f10.5    Jupiter to spacecraft range (jovian radii)
+      LAT      f8.3     spacecraft Jovian (Sys 3) latitude
+                        (degrees)
+      LON      f8.3     spacecraft Jovian west longitude (degrees)
+      LocTime  f8.3     angular separation between the meridian
+                        containing the sun and the one containing
+                        the spacecraft converted to a time. The sun
+                        meridian is defined to be noon (12.000), with
+                        midnight (0.000) opposite it. Dawn (6.000)
+                        and dusk (18.000) are where the sun rises and
+                        sets according to the planet&apos;s rotation
+ 
+      This file may be read according to the fortran format
+      statement: &apos;(a24,1x,f10.5,3(1x,f8.3))&apos;.
+ 
+ 
+    Coordinate System
+    =================
+      System III (1965.0) (Sys 3) is a jovicentric left handed
+      coordinate system defined such that longitude increases with
+      time as viewed by a stationary remote observer.
+ 
+      Jovicentric System III (1965.0) spherical coordinates
+ 
+      R      Jupiter to spacecraft range (positive away from
+             Jupiter)
+ 
+      LAT    completes the left handed, orthogonal set
+ 
+      LON    System III (1965) west longitude (with longitude
+             increasing westward from a specific jovian prime
+             meridian)
+ 
+ 
+    Coordinate Transformation Matrices
+    ----------------------------------
+      The file TRJ25_48.TAB contains all the parameters necessary to
+      transform the field components into System III, ECL50, or
+      inertial spacecraft coordinates. The paragraphs below give
+      methods for computing transformation matrices using these
+      parameters. As an alternative, note that the appendix in
+      [SMITH&amp;WENZEL1993] contains the orbital elements of Ulysses
+      with respect to Jupiter and demonstrates how to calculate the
+      position of Ulysses in System III and other coordinate systems
+      without recourse to trajectory data files.
+ 
+      The transformation matrix from R-THETA-PHI to System III
+      (1965.0) consists of the column vectors of the R, THETA, and
+      PHI axes expressed in System III. The R-axis in System III is
+      cos(RLATJG) cos(360-RLONJG), cos(RLATJG) sin(360-RLONJG),
+      sin(RLATJG). The PHI axis is the normalized crossproduct J x
+      R, where J is the rotation axis which is just 0,0,1, so the
+      unit vector in the PHI direction is -sin(360-RLONJG),
+      cos(360-RLONJG), 0. The unit vector in the THETA direction is
+      the crossproduct PHI x R = sin(RLATJG) cos(360-RLONJG),
+      sin(RLATJG) sin(360-RLONJG), -cos(RLATJG).
+ 
+      The transformation matrix from R-THETA-PHI back to ECL50
+      consists of the column vectors of the R, THETA, and PHI axes
+      expressed in ECL50. R is cos(RLATEC) cos(RLONEC), cos(RLATEC)
+      sin(RLONEC), sin(RLATEC). PHI is the normalized crossproduct
+      J x R, where J (North Pole of Jupiter) is given in the
+      reference [SMITH&amp;WENZEL1993] as -92.002 RA, 64.504 DEC,
+      Earth Mean Equinox and Equator 1950.0. Rotating by 23.4458
+      deg (1950.0 obliquity) gives J in ECL50 = (-.015037545, -
+      .035534090, 0.999255323). The THETA axis is PHI x R.
+ 
+      Inertial spacecraft coordinates are defined as follows: Z is
+      the Ulysses spin axis, which points approximately towards
+      Earth; X is is perpendicular to Z and lies in the plane
+      containing Z and S, where S is the Ulysses-to-Sun vector. X is
+      positive toward the Sun. Z in ECL50 is cos(AXISLAT)
+      cos(AXISLON), cos(AXISLAT) sin(AXISLON), sin(AXISLAT). S in
+      ECL50 is -XSU, -YSU, -ZSU. The Y axis is the normalized
+      crossproduct Z x S, and the X axis is Y x Z. The
+      transformation matrix from ECL50 back to inertial spacecraft
+      coordinates consists of the column vectors X, Y, and Z.
+ 
+      The EPHEM files in this submission include all the parameters
+      necessary to calculate the above transformations. In a few
+      cases where the direction of the spin axis was not available
+      in the SEDR, the Ulysses-to-Earth direction was substituted in
+      the EPHEM files. It is suggested that interpolations in time
+      be performed on vector components rather than angles in order
+      to avoid difficulties near 0 or 360, and that double precision
+      arithmetic be used in matrix multiplication.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      As noted above, the two versions of Sys 3 ephemeris provided
+      contain slightly different values. In the case of R, the
+      variation is due to two different definitions of the Jovian
+      radius. A value of 1 RJ = 71398 km was used to generate
+      TRJ25_48.TAB, and a value of 1 RJ = 71492 km was used for
+      SPK25_48.TAB. The reason why latitude and longitude values
+      differ is unknown (though possibly due to different
+      definitions of the position of Jupiter&apos;s magnetic pole, or
+      statistical variation).
+ 
+      The differences in the values contained in the two versions
+      are summarized below:
+ 
+      COLUMN    MINIMUM       MAXIMUM         AVERAGE
+      NAME      VALUE         VALUE           VALUE
+ 
+      RJG        6.3052       262.609         80.6974
+      RLATJG   -37.512         39.854        -12.7527
+      RLONJG     0.001        359.999        180.357
+      R          6.29692      262.264         80.5913
+      LAT      -37.5168        39.859        -12.754
+      LON        0.00591442   359.999        180.372
+      dR        -0.345123      -0.0082798     -0.106104
+      dLAT      -0.00553894     0.00556946    -0.00129919
+      dLON      -0.0112224    359.998          0.0146073
+ 
+      where: RJG    : Jupiter-to-s/c range (TRJ25_48.TAB)
+             RLATJG : s/c latitude (TRJ25_48.TAB)
+             RLONJG : s/c west longitude (TRJ25_48.TAB)
+             R      : Jupiter-to-s/c range (SPK25_48.TAB)
+             LAT    : s/c latitude (SPK25_48.TAB)
+             LON    : s/c west longitude (SPK25_48.TAB)
+             dR     = R - rjg
+             dLAT   = LAT - rlatjg
+             dLON   = LON - rlonjg
+ 
+ 
+    TRJ25_48.TAB
+    ------------
+      For the position of Ulysses in Jupiter-centered coordinates,
+      1-sigma uncertainties are less than 1 part in 1 million, or
+      less than 0.5 km at closest approach.
+ 
+      The attitude of Ulysses during the Jupiter encounter interval
+      is stated to be accurate within +/- 0.005 degrees.
+ 
+ 
+    SPK25_48.TAB
+    ------------
+      Spacecraft positions were derived from SPICE using software
+      that has been extensively tested. They should give as accurate
+      representation of spacecraft ephemeris as possible using these
+      kernels.
+ 
+      Comparisons between these data and data from previous Jupiter
+      missions should be performed with caution. Some key parameters
+      (such as the Jovian radius) have changed from mission to
+      mission. Definitions for Jupiter&apos;s spin rate and the
+      orientation of its spin-axis have also changed slightly since
+      the early Pioneer days.
+ 
+      These data were generated using the current definition of the
+      Jovian radius, 71492 km. The spin rate used in generating these
+      data is the same as that used for System III (1965), +870.536
+      degrees/24 hours.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>90-090B-00C</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

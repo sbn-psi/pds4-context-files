@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-tes-5-timap-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGS MARS TES DERIVED THERMAL INERTIA MAPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_global_surveyor::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:tes.mgs::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-tes-5-timap-v1.0__browserp_mgs-m-tes-5-timap-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-tes-5-timap-v1.0__browser_mgs-m-tes-5-timap-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgs-m-tes-5-timap-v1.0__dvo_mgs-m-tes-5-timap-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Putzig, N.E., and M.T. Mellon, Apparent thermal inertia and the surface
+                   heterogeneity of Mars, Icarus, 191, 68-94, 2007.
+            </reference_text>
+            <description>reference.PUTZIGANDMELLON2007</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Putzig, N.E., M.T. Mellon, K.A. Kretke, and R.E. Arvidson, Global thermal
+                   inertia and surface properties of Mars from the MGS mapping mission, Icarus,
+                   173, 325-341, 2005.
+            </reference_text>
+            <description>reference.PUTZIGETAL2005</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGS-M-TES-5-TIMAP-V1.0</data_set_id>
+        <data_set_name>MGS MARS TES DERIVED THERMAL INERTIA MAPS V1.0</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1999-02</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>NATHANIEL E. PUTZIG</producer_full_name>
+        <citation_text>
+            Putzig, N.E., M.T. Mellon, T.L. Heet, and J.G. Ward, MGS Mars TES
+            Derived Thermal Intertia Maps V1.0, MGS-M-TES-5-TIMAP-V1.0, NASA
+            Planetary Data System, 2009.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Global Surveyor Thermal Emission Spectrometer derived
+            thermal inertia maps.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set contains thermal inertia maps derived from Mars
+            Global Surveyor Thermal Emission Spectrometer observations of the
+            surface temperatures of Mars taken over three Mars-years from OCK
+            (Orbit Counter Keeper) 1583 to 24346.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    This data set consists of Thermal Inertia maps derived using Mars Global
+    Surveyor Thermal Emission Spectrometer thermal bolometer temperature
+    observations taken over three Mars-years from orbit 1583 to 24346 (note that
+    in this context orbit refers to the TES specific Orbit Counter Keeper
+    (OCK)), from February 1999 (beginning of mapping mission) to April 2004.Maps
+    use only nightside or dayside data with surface temperatures between 160 and
+    400 K.  Nightside (southbound) and dayside (northbound) maps are included
+    and each has been infilled between 87 degrees south and 87 degrees north
+    latitude. The derived range is 5 to 5000 J/(m^2*K*sqrt(s)).  Higher and
+    lower values are not computed.
+ 
+    An interpolation mask is provided for each map, which identifies those
+    pixels where the map has been infilled by interpolation (less than 8% in
+    each case).  If the interpolated pixels are not desired, they can be removed
+    by multiplying the thermal inertia map by the associated interpolation mask.
+ 
+    Browse color images including scale bars are available in JPEG format for
+    nightside and dayside thermal inertia maps.  Large (approximately 3.3 Mb)
+    and small (approximately 0.15 Mb) versions are included.
+ 
+ 
+  Processing
+  ==========
+    The processing of this data set was carried out by Nathaniel E. Putzig,
+    currently at the Southwest Research Institute, and Michael T. Mellon,
+    currently at the University of Colorado in Boulder.  The processing to
+    convert TES bolometer temperature observations to thermal inertia has been
+    described in detail elsewhere.  See the papers by Putzig and Mellon (2007)
+    and Putzig et al. (2005) listed in ref.cat for more information.
+ 
+    Note that the MGS-TES published bolometric thermal inertia was not used to
+    derive these maps.  The thermal inertia model that was used to calculate and
+    populate the MGS-TES Bolometer tables is different than that used here, and
+    querying the thermal inertia data (i.e. from published CDs or from
+    http://tes.asu.edu/data_tool/index.php) will not reproduce the maps in this
+    dataset.
+ 
+ 
+  Data
+  ====
+    This data set comprises several images that include:
+ 
+    (1) Thermal Inertia Maps     (2) Interpolation Masks (3) Browse JPEGs
+ 
+    (1) Thermal Inertia Maps     These images contain thermal inertia values
+    derived from MGS TES thermal bolometer temperature observations taken over
+    three Mars-years from orbit 1583 to 24346, from February 1999 (beginning of
+    mapping mission) to April 2004.  Maps use only nightside or dayside data
+    with surface temperatures between 160 and 400 K.  Nightside (southbound) and
+    dayside (northbound) maps are included and each has been infilled between 87
+    degrees south and 87 degrees north latitude.  The derived range is 5 to 5000
+    J/(m^2*K*sqrt(s)).  Higher and lower values are not computed.  Map
+    resolution is 20 pixels per degree.  Dayside and nigthside images are
+    denoted in filenames by &apos;day&apos; and &apos;night,&apos; respectively.  &apos;2007&apos; denotes the
+    year in which these maps were published.
+ 
+    (2) Interpolation Masks     An interpolation mask is provided for each map,
+    which identifies those pixels where the map has been infilled by
+    interpolation (less than 8% in each case).  If the interpolated pixels are
+    not desired, they can be removed by multiplying the thermal inertia map by
+    the associated interpolation mask. There is one interpolation mask each for
+    both the nightside and dayside thermal inertia maps.  The resolution of the
+    interpolation masks is 20 pixels per degree.  Interpolation masks are
+    denoted in filenames by &apos;msk.&apos;
+ 
+    (3) Browse JPEGs The browse JPEGs consist of colorized representations of
+    the thermal inertia maps.  A large (approximately 3.3 Mb) and small
+    (approximately 0.15 Mb) version is available for both nightside and dayside
+    thermal inertia maps.  A scale bar to roughly interpret the value of thermal
+    inertia based on color is included on each browse JPEG. Units for the browse
+    images are tiu (tiu = J/(m^2*K*sqrt(s)) ). In filenames &apos;d&apos; denotes dayside
+    maps, &apos;n&apos; denotes nightside maps, &apos;b&apos; stands for bolometer, and &apos;s&apos; stands
+    for small.
+ 
+    See the papers by Putzig and Mellon (2007) and Putzig et al. (2005) listed
+    in ref.cat for more information on the data products included in this data
+    set.
+ 
+ 
+ 
+  Coordinate System
+  =================
+    Mars Planetocentric referenced to the IAU_1991 ellipsoid, east positive;
+    Mars is assumed to be a sphere with radius 3396.0 km.  All images in this
+    data set cover a latitude range of 90 to -90 degrees north and a longitude
+    range of -180 to 180 degrees east.  Images are centered at 0 degrees north
+    and 0 degrees east.
+ 
+ 
+  Media/Format
+  ============
+    This data set is available electronically via the PDS Geosciences Node web
+    site at http://pds-geosciences.wustl.edu.  Formats are be based on the
+    standards established by the Planetary Data System (PDS).
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Please refer to [PUTZIGANDMELLON2007] listed in ref.cat.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

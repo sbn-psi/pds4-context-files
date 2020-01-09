@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-s-j-e-v-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>CASSINI SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-s-j-e-v-spice-6-v1.0__browserp_co-s-j-e-v-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-s-j-e-v-spice-6-v1.0__browser_co-s-j-e-v-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-s-j-e-v-spice-6-v1.0__browser_wgc_co-s-j-e-v-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-S/J/E/V-SPICE-6-V1.0</data_set_id>
+        <data_set_name>CASSINI SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2002-11-01</data_set_release_date>
+        <start_time>1997-10-15T09:26:08Z</start_time>
+        <stop_time>2015-09-30T23:59:59Z</stop_time>
+        <producer_full_name>LEE ELSON</producer_full_name>
+        <citation_text>
+            Elson, L.S., C.H. Acton, D.L. Conner and B.V. Semenov, Cassini
+            SPICE Kernels V1.0, CO-S/J/E/V-SPICE-6-V1.0, NASA Planetary Data
+            System, 2005.
+        </citation_text>
+        <data_set_terse_desc>
+            This data set contains navigation and ancillary data in the form
+            of SPICE kernel files for the Cassini spacecraft.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of Cassini SPICE data
+            files (``kernel files&apos;), which can be accessed using SPICE
+            software. The SPICE data contains geometric and other ancillary
+            information needed to recover the full value of science
+            instrument data. In particular SPICE kernels provide spacecraft
+            and planetary ephemerides, instrument mounting alignments,
+            spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of SPICE data for Cassini
+      in the form of SPICE kernels, which can be accessed using SPICE
+      software available to read these files.
+ 
+      The SPICE data contains geometric and other ancillary information
+      needed to recover the full value of science instrument data.
+      In particular SPICE kernels provide spacecraft and planetary
+      ephemerides, instrument mounting alignments, spacecraft orientation
+      and spacecraft sequences of events. Data needed for relevant time
+      conversions is also included.
+ 
+      This data set is contained on a single virtual volume, cosp_1000,
+      including data from all mission phases and covering from launch,
+      1997-10-15, through the end time of the latest spacecraft
+      trajectory file supplied in the data set. Until the end of the
+      spacecraft lifespan this data set is accumulating with new data
+      added approximately every three to six months. In addition, old
+      data may be revised and added to the data set over time. Users are
+      urged to be sure that they use the most recent data available by
+      selecting files from the latest release, where appropriate.
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets, satellites,
+      comets and asteroids as well as for moving or fixed spacecraft and
+      instrument structures. They provide position and velocity, given
+      in a Cartesian reference frame. SPK files are located under the
+      ``data/spk&apos; directory on the volumes comprising this data set.
+ 
+      PCK kernels contain certain physical, dynamical and cartographic
+      constants for target bodies, such as size and shape specifications,
+      and orientation of the spin axis and prime meridian, that are meant to
+      be used with applications that incorporate the SPICE Toolkit. PCK
+      files are located under the ``data/pck&apos; directory on the volumes
+      comprising this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos; directory on the volumes comprising this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft structure
+      upon which science instruments are mounted. CK files are located
+      under the ``data/ck&apos; directory on the volumes comprising this
+      data set.
+ 
+      EK (Events) kernels contain spacecraft and science instrument event
+      related information. EK files are located under the ``data/ek&apos;
+      directory on the volumes comprising this data set.
+ 
+      LSK (Leapseconds) kernels contain the leapseconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos; directory on the volumes
+      comprising this data set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock calibration
+      data required to perform a mapping between Ephemeris time (ET) and
+      spacecraft on-board time (SCLK.) SCLK files are located under the
+      ``data/sclk&apos; directory on the volumes comprising this data set.
+ 
+      FK (Frame Definitions) kernels contain information required
+      to define reference frames, sources of frame orientation data
+      and inter-connections between these frames and other frames
+      supported within the SPICE system. This includes mounting alignment
+      information for each instrument. FK files are located under the
+      ``data/fk&apos; directory on the volumes comprising this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      Details specific to individual files are found in the ``*info.txt&apos;
+      files in the corresponding data directory. The most detailed
+      description of the data in each file is provided in metadata
+      included inside the file -- in the description area of text kernels
+      or in the comment area of binary kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read SPICE
+      kernel files. SPICELIB software is highly documented via internal
+      headers. Additional documentation is available in separate ASCII
+      text files called Required Reading files. For example, the S-
+      and P- Kernel (SPK) Required Reading File, named SPK.REQ, describes
+      use of the SPK kernel file readers and contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms
+      such as PC, Mac, SUN, HP, SGI, VAX, DEC Alpha, etc. is available
+      at the NAIF Node of PDS electronically (via anonymous FTP and
+      WWW servers). Refer to information in ``software/softinfo.txt&apos;.
+      Each version of the Toolkit is also archived at the NASA National
+      Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos; directory. For more
+      information about the CASSINI meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This volume contains SPICE kernel files created during mission
+      operations and after mission data reconstruction and analysis.
+      Some general information about this collection follows here, but
+      the prospective user is also referred to extensive descriptions
+      about each file that are stored inside each kernel file. These
+      metadata provide detailed information regarding the information
+      source from which the data were derived, the type of processing
+      applied to the source data, applicability of the data, etc. Metadata
+      are located in the ``comment area&apos; for binary kernel types (SPK,
+      CK, EK), accessible using either the COMMNT or SPACIT utility
+      program found in the NAIF Toolkit. Metadata are located after
+      ``\begintext&apos; markers within the text kernel types (PCK, IK, FK,
+      LSK, SCLK), accessible by using any available text file display
+      tool such as a word processor, text editor, or the unix ``more&apos;
+      or ``cat&apos; commands.
+ 
+      In some cases data accuracy information does not exist, or may be
+      estimated after mission completion.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;
+      not addressed herein the reader is invited to examine subsequent
+      SPICE archive volumes associated with this data set collection
+      (if such exist), or to contact the NAIF node of the Planetary Data
+      System for possible further information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      Two kinds of SPK files are provided in this archive: SPK files
+      produced by the Cassini Navigation team containing reconstructed
+      spacecraft trajectory and ephemeris information for the Solar
+      system planets and major Saturnian satellites, and SPK files
+      produced by the Gravity Science team containing ephemeris
+      information for minor Saturnian satellites. For more information,
+      see the file ``data/spk/spkinfo.txt&apos;.
+ 
+      This data set also includes two kinds of supplementary files with
+      the information either derived from or describing the
+      reconstructed SPK files. These files are not SPICE kernels; for
+      this reason they are provided in subdirectories under the
+      ``extras&apos; directory.
+ 
+      The first kind of supplementary files is the orbit number files
+      generated at the archive preparation time using the NAIF&apos;s ORBNUM
+      utility program for the NAV SPK files covering the orbital phases
+      of the mission. These files are provided in the ``extras/orbnum&apos;
+      directory. For more information about the orbit number files, see
+      the file ``extras/orbnum/orbinfo.txt&apos;.
+ 
+      The second kind of supplementary files is the covariance table
+      files containing the formal position uncertainties of Cassini&apos;s
+      reconstructed ephemeris provided in the SPK files produced by the
+      CASSINI NAV Team. These files are provided in the
+      ``extras/spkxtra/covtab&apos; directory. For more information about
+      these files, see the file ``extras/spkxtra/covtab/covinfo.txt&apos;.
+ 
+ 
+      CK Files
+      =========
+ 
+      Five kinds of CK files are provided in this archive. The Cassini
+      Attitude Articulation Control Subsystem (AACS) has provided both
+      predicted (1) and reconstructed (2) CK files for the spacecraft.
+      In addition, the Imaging Science Subsystem (ISS) has produced
+      image navigated CK files (3) containing the spacecraft attitude
+      for certain image exposure times. Using data from the CDA team
+      NAIF has created CK files (4) providing orientation of the CDA
+      instrument relative to the spacecraft bus. Using data from
+      telemetry MIMI/LEMMS team, APL has created CK files (5) providing
+      orientation of the MIMI/LEMMS instrument relative to the
+      spacecraft bus. For more information, see the file
+      ``data/ck/ckinfo.txt&apos;.
+ 
+      This data also contains auxiliary files with information relevant
+      to image navigated C-Kernels as well as comparisons between
+      predicted and reconstructed C-Kernels produced by AACS. Because
+      these files are outside the scope of the PDS archive requirements
+      they are provided in the ``extras&apos; directory of this data set.
+      For more detailed information, see the file
+      ``extras/ckxtra/ckxtinfo.txt&apos;.
+ 
+      Caution on Using CK Files
+      -------------------------
+ 
+      While not a data accuracy issue, the CK user is nevertheless
+      cautioned to understand and properly use the data found and
+      tolerance arguments that are inputs to the CK reader provided in the
+      SPICE Toolkit. Descriptions about how to read CK files are found
+      in the CK reader routine headers (top of the source code files)
+      and in the ``CK Required Reading&apos; document; these are contained
+      in each SPICE Toolkit package. The user is also referred to the
+      Cassini CK Tutorial in the ``document/ck&apos; directory. In addition,
+      it is not unusual for CK files to be revised. The user is urged
+      to be sure that CK data have not been superseded by searching
+      the latest data releases for appropriate coverage.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;
+      bodies such as Jupiter, Saturn and their major satellites. A
+      description of these data items and references to their source
+      is provided inside each PCK file, which is a simple text
+      file that can be viewed using any word processor, text editor
+      or text display utility. For more information, see the file
+      ``data/pck/pckinfo.txt&apos;.
+ 
+ 
+      FK Files
+      =========
+ 
+      Frames kernel files provide specifications for how one reference
+      frame is defined relative to another frame. A description of
+      each reference frame is provided inside each FK file, which is
+      a simple text file that can be viewed using any word processor,
+      text editor or text display utility. The Cassini frames kernel
+      contains reference frames for the orbiter instruments and subsystems
+      including communications antennae. For more information, see the
+      file ``data/fk/fkinfo.txt&apos;.
+ 
+ 
+      IK Files
+      =========
+ 
+      Instrument kernel files provide specifications for the mounting
+      alignment and, where applicable, field-of-view size, shape and
+      orientation for the named instrument. Metadata describing these
+      estimates are provided in each IK file included in this archive.
+      For more information, see the file ``data/ik/ikinfo.txt&apos;.
+ 
+ 
+      SCLK Files
+      =========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data needed
+      for converting time measurements between ephemeris time (ET) and
+      spacecraft clock time (SCLK). A SPICE SCLK file is made from a
+      similar file produced by the Cassini AACS Team. Each newly made
+      SCLK file fully replaces the previous SCLK file. For more
+      information, see the file ``data/sclk/sclkinfo.txt&apos;.
+ 
+ 
+      SPICE software does not prohibit an SCLK file from being used
+      for time conversions occurring for ``future times&apos; (or more
+      accurately, for epochs that occur later than the epoch of the
+      last telemetry data used in producing the last correlation
+      coefficients found in the SCLK file). Such ``predict&apos; time
+      conversions are likely to be inaccurate (changed somewhat)
+      once the epoch of interest has been passed.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leapseconds kernel files provide a tabulation of ``leapseconds&apos;
+      and some other terms used in converting time measurements between
+      ephemeris time (ET) and Universal Time (UTC). ``Spacecraft Event
+      Time&apos; (SCET) is the commonly used name for UTC events measured
+      at the spacecraft. For more information, see the file
+      ``data/lsk/lskinfo.txt&apos;.
+ 
+      Metadata describing how the LSK data are obtained or computed is
+      contained inside the LSK text file. The time conversion provided
+      by SPICE LSK files is accurate to approximately 0.000030 seconds.
+ 
+ 
+      EK Files
+      =========
+ 
+      Three kinds of Events kernel (EK) files are included in this
+      archive: Command Database, Science Plan and Sequence EKs.
+ 
+      Command database E-Kernels contain command and parameter descriptive
+      information used with Sequence EK files (see below).
+ 
+      Science Plan EKs contain detailed science requests and high-level
+      observation plans.
+ 
+      Sequence EKs contain commands, ground events, subsystem status
+      and notes taken from the integrated sequence Predicted Events
+      Files. They also contain ISS mechanical events (shutter
+      and filter wheel movements) derived from the Multi-mission
+      Image Processing Laboratory database used to process images.
+      For a complete description of the files see the files
+      ``document/ek/sis_ek_001_revc.pdf&apos;, ``data/ek/ekinfo.txt&apos;,
+      and comments within the files.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>PSCM-00026</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

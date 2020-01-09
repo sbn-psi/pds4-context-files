@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-a-mag-pos-3-rdr-summ-traj-ida-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>IDA GALILEO MAGNETOMETER/TRAJECTORY DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mag.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:asteroid.ida::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-a-mag-pos-3-rdr-summ-traj-ida-v1.0__browserp_go-a-mag-pos-3-rdr-summ-traj-ida-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson, M.G., K.K. Khurana, J.D. Means, C.T. Russell, and R.C. Snare, The
+                   Galileo Magnetic Field Investigation, Space Science Reviews, 60, 1-4, 357, 1992.
+            </reference_text>
+            <description>reference.KIVELSONETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Kivelson, M.G., Z. Wang, S. Joy, K.K. Khurana, C. Polansky, D.J. Southwood, and
+                   R.J. Walker, Solar Wind Interactions with Small Bodies 2. What can Galileo&apos;s
+                   Detection of Magnetic Rotations Tell Us About GASPRA and IDA, Advances in Space
+                   Research, 1994.
+            </reference_text>
+            <description>reference.KIVELSONETAL1994</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-A-MAG/POS-3-RDR/SUMM/TRAJ-IDA-V1.0</data_set_id>
+        <data_set_name>IDA GALILEO MAGNETOMETER/TRAJECTORY DATA V1.0</data_set_name>
+        <data_set_release_date>1996-06-01</data_set_release_date>
+        <start_time>1993-08-28T00:56:05.909Z</start_time>
+        <stop_time>1993-08-28T23:59:27.023Z</stop_time>
+        <producer_full_name>DR. MARGARET KIVELSON</producer_full_name>
+        <citation_text>blank</citation_text>
+        <data_set_terse_desc>
+            Galileo Magnetometer observations of the asteroid Gaspra,
+            extracted from the Galileo archive
+        </data_set_terse_desc>
+        <abstract_desc>
+            Galileo Magnetometer observations of the asteroid Gaspra,
+            extracted from the Galileo archive
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Dataset Overview
+      ================
+ 
+      This dataset contains data acquired by the Galileo Magnetometer
+      during the Ida flyby on Aug 28, 1993. It includes browse data,
+      high-resolution data in both spacecraft and Ida-centric
+      coordinates and trajectory data.  A sample of cruise phase data
+      around the time of encounter has also been included to provide
+      a context for the encounter data.
+ 
+      Note that the START_TIME and STOP_TIME above refer to the encounter
+      period. The ancillary cruise data cover an additional several weeks
+      before and after the encounter period.
+ 
+      Primary Dataset Reference:
+ 
+        Kivelson, M.G., Z. Wang, S. Joy, K.K. Khurana, C. Polanskey, D.J.
+        Southwood, and R.J. Walker, &apos;Solar Wind Interactions with Small
+        Bodies: 2. What Can Galileo&apos;s Detection of Magnetic Rotations Tell
+        Us About GASPRA and IDA&apos;, Advances in Space Research, 1994
+ 
+      Primary Instrument Reference:
+ 
+        Kivelson, M. G., K. K. Khurana, J. D. Means, C. T. Russell, and
+        R. C. Snare, &apos;The Galileo magnetic field investigation&apos;, Space
+        Science Reviews, 60, 1-4, 357, 1992.
+ 
+ 
+      Parameters
+      ==========
+ 
+      The primary parameters provided in each data file are:
+ 
+        browse     Time, magnetic field components
+        cruise     Time, magnetic field components in RTN coordinates,
+                     spacecraft position and trajectory parameters
+        hrsc       Time, rotor parameters, magnetic field component in
+                     spacecraft coordinates
+        hrgeoph    Time, magnetic field components in Gaspra-SE, EME-50
+                     and RTN coordinates
+        traject    Time, trajectory components in GASE coordinates, range
+                     and solar latitude and longitude
+ 
+      Processing
+      ==========
+ 
+      These data were provided by the Galileo project to support the
+      Ida/Gaspra observations. They have not been changed by SBN
+      personnel, but neither have they been updated for any possible
+      improvements in the mission data production pipeline. For the
+      most recent version, please contact the Galileo Project.
+ 
+ 
+      Data
+      ====
+ 
+      For a detailed description of the data in each file, including
+      acquisition, sampling and coordinate system notes, see the
+      accompanying documentation files.
+ 
+ 
+      Coordinate System
+      =================
+ 
+      The data are provided relative to several different coordinate
+      systems. See the accompanying documentation files for details.
+ 
+ 
+      Media/Format
+      ============
+ 
+      The data are being delivered on CDROM to the PDS archive and
+      the National Space Science Data Center. Copies of all or part of
+      this collection may also be available for downloading directly
+      from the on-line archives of the Small Bodies Node.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      Confidence Level Overview
+      =========================
+ 
+      These data were provided by the Galileo project. They were
+      extracted from the full archive as it was being prepared for
+      delivery to the Planetary Data System.  Subsequent changes
+      to the full archive have not been propagated to these files.
+ 
+      Note in particular that the cruise data has been repeatedly
+      revised and upgraded since the present file was extracted
+      for inclusion here. These cruise data are included merely to
+      provide some context for the encounter data. Users are advised
+      to contact the Galileo Project directly if their application
+      depends critically on cruise data.
+ 
+      Please see the accompanying documentation for caveats and
+      comments relevant to each file.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

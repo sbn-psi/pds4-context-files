@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rss-5-gravity-l2-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MGN V RSS SPHERICAL HARMONIC AND GRAVITY MAP DATA V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-5-gravity-l2-v1.0__browserp_geo_mgn-v-rss-5-gravity-l2-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-5-gravity-l2-v1.0__dvo_geo_mgn-v-rss-5-gravity-l2-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Special issue, The Geophysics of Venus, Icarus, 112, 1-295, 1994.
+            </reference_text>
+            <description>reference.ICARUSMGN1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Konopliv, A.S., and W.L. Sjogren, Venus Gravity Handbook, Jet Propulsion
+                   Laboratory Publication 96-2, January 1996.
+            </reference_text>
+            <description>reference.KONOPLIV-SJOGREN1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Konopliv, A.S., N.J. Borderies, P.W. Chodas, E.J. Christensen, W. Sjogren, B.G.
+                   Williams, G. Balmino, and J.P Barriot, Venus Gravity and Topography: 60th
+                   Degree and Order Model, Geophysical Research Letters, 20, 2403-2406, 1993.
+            </reference_text>
+            <description>reference.KONOPLIVETAL1993</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   McNamee, J.B., N.J. Borderies, and W.L. Sjogren, Venus: Global Gravity and
+                   Topography, Journal of Geophysical Research, 98, 9113-9128, 1993.
+            </reference_text>
+            <description>reference.MCNAMEEETAL1993</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Archival Tracking Data File Data Record (ATDFDR), Magellan Software
+                   Interface Specification: DSN Document 820-13, Rev. A, TRK-2-25, Jet
+                   Propulsion Laboratory, Pasadena, CA, 1986.
+            </reference_text>
+            <description>reference.MGN-ATDFDR1986</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Navigation Constants File Data Record (NCFDR), Magellan Software Interface
+                   Specification: NAV-103, Rev. A, Jet Propulsion Laboratory, Pasadena, CA,
+                   1991.
+            </reference_text>
+            <description>reference.MGN-NCFDR1991</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Orbit Data File Data Record (ODFDR), Magellan Software Interface
+                   Specification: DSN Document 820-13, Rev. A, TRK-2-18, Jet Propulsion
+                   Laboratory, Pasadena, CA, 1988.
+            </reference_text>
+            <description>reference.MGN-ODFDR1988</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Small Forces File Data Record (SFFDR), Magellan Software Interface
+                   Specification: SES-121, Jet Propulsion Laboratory, Pasadena, CA, 1987.
+            </reference_text>
+            <description>reference.MGN-SFFDR1987</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moyer, T.D., Mathematical Formulation of the Double-Precision Orbit
+                   Determination Program (DPODP), TR 32-1527, Jet Propulsion Laboratory, Pasadena,
+                   CA, 1971.
+            </reference_text>
+            <description>reference.MOYER1971</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Moyer, T.D., Changes to the ODP and the ODE for processing X-Band Uplink
+                   Data, EM-314-430, Jet Propulsion Laboratory, Pasadena, CA, 1987.
+            </reference_text>
+            <description>reference.MOYER1987</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Planetary Data System Standards Reference, Jet Propulsion Laboratory Document
+                   D-7669, Part 2, 20 November 1992
+            </reference_text>
+            <description>reference.PDSSR1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RSS-5-GRAVITY-L2-V1.0</data_set_id>
+        <data_set_name>MGN V RSS SPHERICAL HARMONIC AND GRAVITY MAP DATA V1.0</data_set_name>
+        <data_set_release_date>1997-08-01</data_set_release_date>
+        <start_time>1992-09-15</start_time>
+        <stop_time>1994-10-12</stop_time>
+        <producer_full_name>WILLIAM L. SJOGREN</producer_full_name>
+        <citation_text>
+            Sjogren, W. L., MGN V RSS SPHERICAL HARMONIC AND GRAVITY MAP DATA
+            V1.0, MGN-V-RSS-5-GRAVITY-L2-V1.0, NASA Planetary Data System,
+            1997
+        </citation_text>
+        <data_set_terse_desc>
+            This archive contains Magellan spherical harmonic models of Venus
+            gravity and topography field, and digital maps of the Bouguer
+            anomalies, free-air gravity accelerations and errors, geoid
+            anomalies and errors, and topography.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The gravitational signature of Venus was determined from velocity
+            perturbations of the Pioneer Venus Orbiter (PVO) and the Magellan
+            spacecraft as measured from the Doppler shift of the S-band and
+            X-band radio tracking signal. The spacecraft were tracked by
+            NASA&apos;s Deep Space Network (DSN) at Goldstone, California,
+            Canberra, Australia, and Madrid, Spain. The tracking data were
+            used to determine the spacecraft orbits about Venus, as well as
+            the Venusian gravity field. A detailed description of how the
+            spacecraft orbits were computed and an assessment of their
+            quality can be found in [KONOPLIV&amp;SJOGREN1996]. For
+            information on Magellan gravity investigations see papers in
+            [ICARUSMGN1994].
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The gravitational signature of Venus was determined from
+      velocity perturbations of the Pioneer Venus Orbiter (PVO) and
+      the Magellan spacecraft as measured from the Doppler shift of
+      the S-band and X-band radio tracking signal. The spacecraft
+      were tracked by NASA&apos;s Deep Space Network (DSN) at
+      Goldstone, California, Canberra, Australia, and Madrid, Spain.
+      The tracking data were used to determine the spacecraft orbits
+      about Venus, as well as the Venusian gravity field. A detailed
+      description of how the spacecraft orbits were computed and an
+      assessment of their quality can be found
+      in [KONOPLIV&amp;SJOGREN1996].  For information on Magellan gravity
+      investigations see papers in [ICARUSMGN1994].
+ 
+ 
+    Data
+    ====
+      This dataset includes a 120th degree and order spherical harmonic
+      gravitational field model and digital gravity maps of the Bouguer
+      anomalies, free-air gravity anomalies, free-air gravity errors,
+      geoid anomalies, and geoid anomaly errors.
+ 
+      There are three data types for the products found on this volume:
+      tabular, array, and image data.
+ 
+      The file containing the spherical harmonic coefficients of the
+      Venusian gravity field is in tabular format, with each row in the
+      table containing the degree index m, the order index n, the
+      coefficients Cmn and Smn, and the uncertainties in Cmn and Smn.
+ 
+      The digital maps of Bouguer anomalies, free-air gravity anomalies,
+      free-air gravity errors, geoid anomalies, and geoid anomaly errors,
+      are binary images.  There are also ASCII 2-D gridded data arrays
+      of all the digital map products, including a byte-scaled image of
+      each of these gridded products.
+ 
+ 
+    Parameters
+    ==========
+      The gravitational signature of Venus was determined from
+      velocity perturbations on the Pioneer Venus Orbiter and
+      Magellan spacecraft as measured from the Doppler shift of
+      the S-band and X-band radio tracking signal. The Doppler
+      data from the DSN stations were acquired with count intervals
+      of 1 minute and 10 seconds.
+ 
+      The free-air gravity anomalies (in milligals, mGals, where
+      1 mGal = 0.01 mm/s^2) are evaluated at the surface. The
+      free-air gravity  errors are also in mGals. Geoid anomalies
+      and errors are in meters.  Bouguer anomalies, determined by
+      subtracting the gravitational attraction of the surface
+      topography from the free-air anomaly, are in mGals.
+ 
+      The free-air gravity values are given by the radial
+      (or vertical) acceleration at the reference surface. This is
+      the radial gradient of the gravity potential. The reference
+      surface is a sphere with radius 6051.0 km. The GM for the
+      potential expansion is 324858.5897 km^3/s^2 (from the
+      120th degree and order gravity field solution).
+ 
+      The bouguer map is the actual free-air gravity minus the
+      theoretical free-air gravity from the topography with no
+      compensation. The acceleration difference is at the
+      reference surface of 6051.0 km. The reference radius for
+      the topography field is 6051.848044 km.
+ 
+ 
+    Processing
+    ==========
+      The gravity solution consists of over 3,304,000 observations,
+      of which 204,000 were contributed by PVO. The data were
+      divided into independent arcs based on considerations of
+      data coverage and timing of maneuvers. For each arc certain
+      parameters were determined: the spacecraft state (position and
+      velocity), a solar radiation pressure coefficient, Doppler
+      biases for each station over the arc to account for frequency
+      biases, and the mismodeling of the effects of the troposphere
+      and ionosphere on the Doppler signal. The a priori model
+      that was used included the [KONOPLIVETAL1993] gravity model,
+      and included the third-body perturbations due to the Sun,
+      the Earth, and all the planets, the solar radiation pressure
+      perturbation, the solar-induced solid tides, and appropriate
+      relativistic effects. The DE403 planetary ephemeris was used
+      in the analyses.
+ 
+      Although each data arc was typically fit to the level of
+      less than 0.1 mm/sec, the data were downweighted in order to
+      attenuate the power of the high degree terms, and account
+      for any systematic mismodeling that might still be present
+      in the data. The solution was also derived using an a
+      priori constraint that was applied where data coverage was
+      poor. This constraint is explained in detail in
+      [KONOPLIV&amp;SJOGREN1996].
+ 
+      Extensive experiments were performed in order to select the
+      a priori weights for the sets of data in the solution -- and
+      care was taken to downweight or delete data that produced
+      spurious signals in the anomaly maps.
+ 
+ 
+    Ancillary Data
+    ==============
+      Many of the spacecraft parameters can be found in the Navigation
+      Constants Document, [MGN-NCFDR1991]. There is a small force
+      record, [MGN-SFFDR1987], which lists the times and duration of
+      the momentum dumps. There were several maneuvers and their times
+      and durations are given in the Maneuver Profile Listing (MPL)
+      data product. The spacecraft orientations are all listed in the
+      Spacecraft Attitude During Hide Maneuver Listing (SADHML) data
+      product.
+ 
+      On every orbit the spacecraft orientation changed with the high
+      gain antenna pointing at Venus or at the Earth or some other
+      direction to keep the spacecraft temperature within safe bounds.
+      The transmitter ramp rates and initiation times are listed in
+      the ODFDR (Orbit Data File Data Record) and ATDFDR
+      (Archival Tracking Data File Data Record) [MGN-ODFDR1988;
+      MGN-ATDFDR1986]. The  equations to incorporate the ramp data
+      as well as the complete theoretical Doppler observable are
+      given in [MOYER1971; MOYER1987].
+ 
+      A useful product for understanding the errors in the gravity
+      solution is the gravity field covariance matrix.  The gravity
+      field covariance represents the complete error description for
+      the SHG120 gravity field solution, including the coefficient
+      variances (sigmas^2), and the correlations between all the
+      coefficients.  It is a product of the least squares solution
+      that derived SHG120.  The covariance provides a more complete
+      description of the error associated with the SHG120 gravity
+      field solution, than would be available from the sigmas alone.
+      The covariance matrix is large (~857 MB) since it contains the
+      correlations of each of the solution parameters with all the
+      other parameters. (SHG120 solved for 14756 spherical harmonic
+      coefficients, and the Venusian GM value). The full covariance
+      matrix was used to compute the error maps for the gravity
+      anomalies, and geoid anomalies that are associated with this
+      archive. The covariance matrix is available via the internet
+      through the World Wide Web:
+      http://pds-geophys.wustl.edu/pds/magellan/harmonics_maps_archive.
+ 
+      The covariance matrix is also available on request from the PDS
+      Geoscience Node (contact Jim Alexopoulos at 314-935-5365 or
+      jim@wuzzy.wustl.edu) or from JPL (contact Alex Konopliv at
+      818-354-6105 or ask@krait.jpl.nasa.gov).
+ 
+      More Magellan gravity data and documents are available via the
+      internet through the PDS Geophysics Subnode World Wide Web site:
+      http://pds-geophys.wustl.edu/pds/magellan
+ 
+      NOTE: All the ancillary data and information to process and
+      interpret the Doppler data are located at the PDS Geosciences
+      Node, Washington University, St. Louis, MO.
+ 
+ 
+    Coordinate System
+    =================
+      The coordinate system for the gravity data reduction is
+      space-fixed earth-mean-equator referenced to J2000. The
+      integration was done in a Venus centered frame. The earth
+      orientation parameters were given by the University of Texas,
+      Center of Space Research, solution EOP (CSR) 95 L 01.
+ 
+ 
+    Software
+    =========
+      N/A
+ 
+ 
+    Media/Format
+    ============
+      This archive will be available electronically via the World-Wide
+      Web and anonymous FTP transfer:
+      http://pds-geophys.wustl.edu/pds/magellan/harmonics_maps_archive.
+      The archive will also be delivered to the National Space Sciences
+      Data Center (NSSDC) using compact disk write once (CD-WO) media.
+      Formats will be based on standards established by the Planetary
+      Data System (PDS).
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      The data noise on the PVO Doppler data ranged from
+      0.3 to 1 mm/s, depending on the arc, and most of the data
+      were at a count interval of 60 seconds. The  Magellan Doppler
+      data from the DSN stations had a data noise of &lt;0.1 mm/s with
+      a count interval of 10 seconds.
+ 
+      Errors in the free-air gravity anomalies ranged from
+      ~2-12 mGals over the equatorial region (+/- 30 degrees
+      latitude), and 15-21 mGals over the high-latitudes.
+ 
+      Errors in the geoid range from ~0.1-2.3 meters.
+ 
+ 
+    Review
+    ======
+      The volume containing the Venusian gravity and topography data
+      sets was reviewed by Magellan mission scientists and by PDS.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The Magellan spacecraft was inserted into orbit about Venus on
+      August 10, 1990.  The first three cycles (one cycle is one
+      Venus rotation period of 243 days) were dedicated to SAR
+      imaging and altimetry measurements of the Venus surface. These
+      measurements required the high gain antenna to be pointed to
+      the Venus surface within about thirty minutes of periapsis
+      passage. Thus only high-altitude tracking (&gt;2500 km) was
+      obtained when the high gain antenna was returned to point at
+      Earth. These data still contain some low resolution
+      information on the gravity field and they were used by
+      [MCNAMEEETAL1993].  The altitude of periapsis for the first
+      three cycles is 250 km and is higher than the cycle four,
+      which was dedicated to gravity measurements. Except for the
+      periapsis altitude, the orbit shape for cycle four is
+      identical to the previous cycles and should contain all the
+      gravity information that is in the previous cycles and more.
+      In addition to the first three cycles, the modeling of the
+      solar pressure force for a rotating antenna through
+      periapsis passage is complicated, and solar pressure is a
+      significant force for the higher periapses due to diminished
+      drag. For these reasons, the first three cycles of data are
+      not included in the gravity solution.
+ 
+      There was a week of Doppler periapsis data during the period
+      of January 17 to 24, 1992, when the battery was being
+      recharged.  The data were at S-Band from the medium gain
+      antenna and periapsis was at 280 km.  From April 22 to
+      May 16, 1992 (23 days), the periapsis was at 261 km, and
+      periapsis data at X-Band were acquired for 16 orbits.  Other
+      than these two prior blocks of data, all Doppler gravity
+      data from August 1990 to September 1992 were obtained
+      when the spacecraft&apos;s altitude was well above 2000 km.
+ 
+      From September 15, 1992 to May 24, 1993 (Cycle 4), the first
+      block of high quality and high resolution gravity data were
+      acquired.  Periapsis was lowered to 180 km and coverage
+      across periapsis was obtained continuously for 360 degrees
+      of longitude. Periapsis latitude remained essentially
+      constant at 10 degrees N latitude and good resolution was
+      maintained within +/- 30 degrees (i.e.  40 degrees N to
+      20 degrees S where spacecraft altitudes reached ~450 km).
+      There were only a few days where no data were obtained, but
+      in general excellent data coverage was maintained providing
+      at least two orbits per day and much of the time four or
+      five orbits per day.  All of these were X-Band uplink and
+      downlink having a noise level of 0.1 mm/sec.  In addition
+      there were also two or more orbits with S-Band coverage
+      each day.
+ 
+      From May 1993 to August 6, 1993, The Magellan spacecraft
+      successfully completed an aerobraking sequence that nearly
+      circularized its orbit. This new orbit provided high
+      resolution data in the high latitude regions which
+      previously had poor gravity model determination.  The orbit
+      had a periapsis altitude of 180 km and an apoapsis of
+      550 km and provided ~300 - 400 km altitudes over the high
+      latitude regions.  The orbital period changed from
+      195 minutes to 94 minutes, so there were approximately
+      15 orbits per day.
+ 
+      Because of operational sequencing of the onboard computers
+      and the necessity to orient the spacecraft for thermal
+      conditions, the first good coherent X-Band data were acquired
+      on Aug 19, 1993.  There were some short S-Band data blocks
+      starting on August 6, 1993.  The data during aerobraking are
+      on ODFDR and ATDFDR files, but were not used for any of the
+      gravity experiment reductions.  The Doppler data acquired
+      during aerobraking were all S-Band at relatively high
+      altitudes.  There were no data near periapsis since the
+      spacecraft was oriented with its high gain antenna pointed
+      along the spacecraft velocity vector and not toward the
+      earth.  The daily coverage in this orbit was excellent with
+      data for several orbits every day.  However orbital geometry
+      of the Earth and Venus have made the coverage redundant for
+      some longitudes and non-existent for others.
+ 
+      There was a solar conjunction on January 16, 1994 and as a
+      result data from January 6, 1994 to January 26, 1994 are very
+      noisy and essentially non-usable for gravity extraction.  The
+      data immediately after solar conjunction have low altitude
+      passes over Maxwell Montes and provide the very best
+      information on this unique feature.
+ 
+      From June 22 to July 14, 1994 (orbits 13298-13635), the
+      Doppler radio tracking on each orbit of Magellan was cut
+      short due to inadvertent spacecraft event sequencing of
+      the thermal control where the spacecraft was turned-off of
+      earth-pointing (loss of radio contact) earlier than it should
+      have been. This was corrected in the next up-load to the
+      spacecraft, making the arcs about another 10 minutes longer.
+ 
+ 
+    Limitations
+    ===========
+      N/A
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>89-033B-02E</nssdc_collection_id>
+        </NSSDC>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>89-033B-02I</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

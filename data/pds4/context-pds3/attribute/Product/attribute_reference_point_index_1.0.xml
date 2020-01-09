@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.reference_point_index</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>reference_point_index</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>reference_point_index</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>reference_point_index</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+The REFERENCE_POINT_INDEX keyword is used to give the precise
+location of a reference point (center of a body, standard star,
+coordinate system reference point, etc.) relative to the origin
+of the associated object - typically an IMAGE or ARRAY.  The
+location is expressed as a sequence of values in units of the
+axis index, in the same order as the defined axes.  The indices
+for each axis are assumed to be numbered positively from 1.
+ 
+Although the indices are integral, the REFERENCE_POINT_INDEX
+values are floating point and may be expressed to an appropriate
+level of precision.  For example, if the reference point is the
+location of the center of a target body and known to sub-pixel
+accuracy, then it may have a REFERENCE_POINT_INDEX value that
+looks like: (215.678, 500.234).
+ 
+Note that the reference point is a logical concept, and thus is
+not required to be inside the associated object.  If, for example,
+the reference point described for an IMAGE object is outside the
+field of view included in the IMAGE, the values for
+REFERENCE_POINT_INDEX are determined by extrapolation of the image
+axes.  In this case some of the REFERENCE_POINT_INDEX values may be
+negative or greater than the maximum index found in the image.
+ 
+The REFERENCE_POINT_INDEX as defined here is analogous to the CRPIXn
+values of the FITS standard.  Users should note that the CRPIXn
+standard is often re-interpreted by data preparers, and should not
+assume that any particular CRPIXn set of numbers will map directly
+to a valid REFERENCE_POINT_INDEX without first verifying the local
+use of the CRPIXn keywords.
+ 
+The REFERENCE_POINT_DESC keyword should be used in conjunction with
+REFERENCE_POINT_INDEX to describe the nature of the point being
+referenced.
+ 
+See also the REFERENCE_POINT keyword, which locates the reference
+point in the physical units of the axes, rather than in index
+units (analogous to the FITS CRVALn keywords).
+        </definition>
+        <comment>ref_pt_index</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>reference_point_index</name>
+            <definition>
+The REFERENCE_POINT_INDEX keyword is used to give the precise
+location of a reference point (center of a body, standard star,
+coordinate system reference point, etc.) relative to the origin
+of the associated object - typically an IMAGE or ARRAY.  The
+location is expressed as a sequence of values in units of the
+axis index, in the same order as the defined axes.  The indices
+for each axis are assumed to be numbered positively from 1.
+ 
+Although the indices are integral, the REFERENCE_POINT_INDEX
+values are floating point and may be expressed to an appropriate
+level of precision.  For example, if the reference point is the
+location of the center of a target body and known to sub-pixel
+accuracy, then it may have a REFERENCE_POINT_INDEX value that
+looks like: (215.678, 500.234).
+ 
+Note that the reference point is a logical concept, and thus is
+not required to be inside the associated object.  If, for example,
+the reference point described for an IMAGE object is outside the
+field of view included in the IMAGE, the values for
+REFERENCE_POINT_INDEX are determined by extrapolation of the image
+axes.  In this case some of the REFERENCE_POINT_INDEX values may be
+negative or greater than the maximum index found in the image.
+ 
+The REFERENCE_POINT_INDEX as defined here is analogous to the CRPIXn
+values of the FITS standard.  Users should note that the CRPIXn
+standard is often re-interpreted by data preparers, and should not
+assume that any particular CRPIXn set of numbers will map directly
+to a valid REFERENCE_POINT_INDEX without first verifying the local
+use of the CRPIXn keywords.
+ 
+The REFERENCE_POINT_DESC keyword should be used in conjunction with
+REFERENCE_POINT_INDEX to describe the nature of the point being
+referenced.
+ 
+See also the REFERENCE_POINT keyword, which locates the reference
+point in the physical units of the axes, rather than in index
+units (analogous to the FITS CRVALn keywords).
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>true</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

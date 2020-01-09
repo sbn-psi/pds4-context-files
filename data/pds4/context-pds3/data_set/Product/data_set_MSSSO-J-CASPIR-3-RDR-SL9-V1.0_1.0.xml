@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mssso-j-caspir-3-rdr-sl9-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSSSO CASPIR IMAGES FROM THE SL9 IMPACTS WITH JUPITER V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.mssso::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:caspir.mssso::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:comet.sl9::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mssso-j-caspir-3-rdr-sl9-v1.0__browserp_mssso-j-caspir-3-rdr-sl9-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   McGregor, P.J., P.D. Nicholson, M.G. Allen, near-infrared observations of
+                   the impacts of fragments C, D, G, K, N, R, V, and W of Comet
+                   P/Shoemaker-Levy 9 with Jupiter from the ground, Icarus, 121 361-388,
+                   1996.
+            </reference_text>
+            <description>reference.MCGREGORETAL1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MSSSO-J-CASPIR-3-RDR-SL9-V1.0</data_set_id>
+        <data_set_name>MSSSO CASPIR IMAGES FROM THE SL9 IMPACTS WITH JUPITER V1.0</data_set_name>
+        <data_set_release_date>1996-08-14</data_set_release_date>
+        <start_time>1994-07-17T05:07:37Z</start_time>
+        <stop_time>1994-07-22T12:00:38Z</stop_time>
+        <producer_full_name>DR. PETER MCGREGOR</producer_full_name>
+        <citation_text>
+            McGregor, P.J., Allen, M.G., and A.C. Raugh, MSSSO CASPIR IMAGES
+            FROM THE SL9 IMPACTS WITH JUPITER V1.0,
+            MSSSO-J-CASPIR-3-RDR-SL9-V1.0, NASA Planetary Data System, 1996.
+        </citation_text>
+        <data_set_terse_desc>
+            Mt. Stromlo Siding Spring Observatory images of P/Shoemaker-Levy
+            9 impact into Jupiter
+        </data_set_terse_desc>
+        <abstract_desc>
+            This archive contains images of the collision of Comet
+            Shoemaker-Levy 9 with Jupiter obtained with CASPIR on the
+            Australian National University 2.3 m telescope at Siding Spring
+            Observatory, Australia, by Peter J. McGregor and Mark G. Allen.
+            Each subdirectory contains data for one night. A more specific
+            description of the state of the data is given below.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      This archive contains images of the collision of Comet
+      Shoemaker-Levy 9 with Jupiter obtained with CASPIR on the Australian
+      National University 2.3 m telescope at Siding Spring Observatory,
+      Australia, by Peter J. McGregor and Mark G. Allen.  Each
+      subdirectory contains data for one night.  A more specific
+      description of the state of the data is given below.
+ 
+ 
+    Processing
+    ==========
+      The images have 256x256 pixels with a pixel size of 0.25arcsec x
+      0.25arcsec on the sky.  Celestial north is up and east to the left
+      when displayed with IRAF.  The images have been bias subtracted,
+      corrected for detector non-linearities, flat-fielded,
+      sky-subtracted, bad pixel corrected by interpolation, and scaled to
+      an effective exposure time of 1 sec.  Strictly, the data are in
+      units of detected electrons above sky per sec per pixel.  Files with
+      an &apos;s&apos; suffix either have had a residual odd-even column bias
+      pattern removed, or a constant value determined from a clear sky
+      region has been subtracted.  Files with a &apos;c&apos; suffix have also had
+      ghost reflections partially removed using imedit in IRAF.  No
+      airmass-dependent corrections have been applied.
+ 
+ 
+    Ancillary Data
+    ==============
+      Two offset measurements were obtained of each standard star.  The
+      difference images of these standard star measurements are contained
+      in ddnnnmmm.fit files, where nnn is the run number of the added
+      image and mmm is the run number of the subtracted image.  The
+      Jupiter data have not been flux calibrated, but these standard star
+      measurements can be used to do so.  Recommended atmospheric
+      extinction coefficients are listed in Table 1.  Recommended narrow
+      band standard star magnitudes are listed in Table 2.  Broad band
+      standard stars have the following magnitudes: HD129540 K=8.25,
+      Kn=8.25; HD193727 K=8.78, Kn=8.78; BS4450 M=1.40; BS6147 M=2.20.
+ 
+                                    Table 1.
+                      Extinction Coefficients (Mag/airmass)
+ 
+                     nb108     0.12           nb308     0.19
+                     nb109     0.12           nb330     0.19
+                     nb128     0.12           nb342     0.19
+                     nb164     0.08           nb359     0.19
+                     nb165     0.08           nb399     0.19
+                     nb200     0.11
+                     nb212     0.10           M         0.20
+                     nb217     0.10           K         0.10
+                     nb221     0.11           Kn        0.10
+                     nb225     0.11
+                     nb234
+ 
+ 
+                                    Table 2.
+                           Standard Star Magnitudes.
+ 
+                     Filter         BS4773        Y3296
+ 
+                     nb108           4.12         7.19
+                     nb109           4.13         7.08
+                     nb128           4.19         6.75
+                     nb164           4.25         6.18
+                     nb165           4.25         6.18
+                     nb200           4.29         6.07
+                     nb212           4.30         6.04
+                     nb217           4.30         5.92
+                     nb221           4.30         5.89
+                     nb225           4.31         5.88
+                     nb234           4.31         5.93
+                     nb308           4.34         5.69
+                     nb330           4.34         5.65
+                     nb342           4.35         5.64
+                     nb359           4.36         5.64
+                     nb399           4.36         5.64
+ 
+      The zero magnitude flux calibration is given by
+ 
+                     Fnu = 5513/[w**3*(exp(1.285/w)-1)]   Jy
+ 
+      where w is the effective wavelength of the filter in units of
+      microns (e.g., 2.34 microns for the nb234 filter).
+ 
+ 
+    Data structure
+    ==============
+      The data are in FITS with the following header entries.  Keywords
+      not listed here should be ignored.  All data are normalised to an
+      exposure time of 1 second specified by the EXPOSURE keyword.  All
+      frames are oriented north up and east to the left; the POS_ANG
+      keyword has only instrumental significance.  The IRAFNAME keyword
+      uniquely identifies the file, being derived from the original run
+      number listed in the RUN keyword.
+ 
+      SIMPLE            =                    T / FITS STANDARD
+      BITPIX            =                  -32 / FITS BITS/PIXEL
+      NAXIS             =                    2 / NUMBER OF AXES
+      NAXIS1            =                  256 /
+      NAXIS2            =                  256 /
+      OBJECT            = &apos; JUPITER&apos;           /
+      ORIGIN            = &apos;KPNO-IRAF&apos;          /
+      DATE              = &apos;29-04-95&apos;           /
+      IRAFNAME          = &apos;ir101   &apos;           / NAME OF IRAF
+                                               / IMAGE FILE
+      IRAF-MAX          =           1.818423E4 / DATA MAX
+      IRAF-MIN          =           3.521613E3 / DATA MIN
+      IRAF-BPX          =                   32 / DATA BITS/PIXEL
+      IRAFTYPE          = &apos;REAL    &apos;           / PIXEL TYPE
+      ALT_OBS           =                 1149 / Telescope height
+                                               / above mean sea
+                                               / level (metres)
+      TELESCOP          = &apos;SSO 2.3METRE      &apos; / ANU 2.3 metre
+                                               / telescope
+      INSTRUME          = &apos;CASPIR            &apos; / Cryogenic Array
+                                               / Spectrometer
+                                               / Imager
+      LAT_OBS           = -3.1273361100000E+01 / Observatory
+                                               / Latitude (degrees)
+      LONG_OBS          =  1.4906119444000E+02 / Observatory East
+                                               / Longitude (deg)
+      RUN               =                  101 / Run number
+      DETECTOR          = &apos;SBRC              &apos; / Santa Barbara
+                                               / Research Centre
+      DETECXE           =                  256 / Detector X-axis
+                                               / End pixel number
+      DETECXS           =                    1 / Detector X-axis
+                                               / Start pixel number
+      DETECYE           =                  256 / Detector Y-axis
+                                               / End pixel number
+      DETECYS           =                    1 / Detector Y-axis
+                                               / Start pixel number
+      N_INT             =                  150 / Number of
+                                               / integration cycles
+      TIME_INT          =         4.002200E-01 / Integration time
+      OBS_MODE          =                    1 / Observing mode
+      WINDOXE           =                  256 / Window X-axis End
+                                               / pixel number
+      WINDOXS           =                    1 / Window X-axis
+                                               / Start pixel number
+      WINDOYE           =                  256 / Window Y-axis End
+                                               / pixel number
+      WINDOYS           =                    1 / Window Y-axis
+                                               / Start pixel number
+      MEANDEC           = -1.2164870837264E+01 / Mean Declination
+                                               / (degrees)
+      MEANRA            =  2.1320614620216E+02 / Mean RA (degrees)
+      OFFDEC            =  0.0000000000000E+00 / Offset in
+                                               / Declination (deg)
+      OFFRA             =  0.0000000000000E+00 / Offset in RA (deg)
+      HAEND             =  2.0521624122655E+01 / End Hour Angle
+      HASTART           =  2.0504440325062E+01 / Start Hour Angle
+      ZDEND             =  5.1536689544242E+01 / Zenith distance
+                                               / at end
+      ZDSTART           =  5.1753811258788E+01 / Zenith distance
+                                               / at start
+      STEND             = &apos;10:44:07          &apos; / End sidereal time
+      STSTART           = &apos;10:43:05          &apos; / Start sidereal time
+      UTEND             = &apos;05:08:39          &apos; / End time (UT)
+      UTSTART           = &apos;05:07:37          &apos; / Start time (UT)
+      UTDATE            = &apos;17-JUL-94         &apos; / UT Date from telescope
+                                               / database
+      WINDOW            = &apos;NONE              &apos; / Window File name
+      IR_APER           = &apos;                  &apos; / Entrance aperture
+      IR_UFILT          = &apos;CLEAR             &apos; / Upper filter
+      IR_UTILY          = &apos;SLOWCAM           &apos; / Utility wheel
+      IR_LFILT          = &apos;ICE               &apos; / Lower filter
+      IR_LENS           = &apos;CLEAR             &apos; / Lens
+      EQUINOX           = &apos;APPARENT          &apos; / Equinox of mean coordinate
+                                               / system
+      COSDEC            =                    0 / OFFRA is in degrees on sky
+                                               / (not polar axis)
+      POS_ANG           =  1.7885000000000E+02 / Position Angle (degrees)
+      METHOD            =                    2 / CASPIR ABSOLUTE
+      OBSMODE           =                    1 / Observing mode
+      AIRMASS           =  1.6130049228668E+00 / Airmass
+      EXPOSURE          =                   1. / All images scaled to 1 sec
+                                               / exposure
+      RED               = &apos;ldsc    &apos;
+      END
+ 
+    Software
+    ========
+      Standard IRAF reduction routines were used.  The RED keyword is an
+      acronym for the process.  The HISTORY comments list the process.
+ 
+ 
+    Media/Format
+    ============
+      This dataset is an electronic submission to PDS which was referenced
+      in the McGregor et al. (1996) [MCGREGORETAL1996] article.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+UNK
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>XD-B3B</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

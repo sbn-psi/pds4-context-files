@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-sw-epps-3-eps-ddr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER E/V/H/SW EPPS CALIBRATED EPS DDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:epps.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.calibration::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-sw-epps-3-eps-ddr-v1.0__browserp_mess-e-v-h-sw-epps-3-eps-ddr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Andrews, G.B., T.H. Zurbuchen, B.H. Mauk, H. Malcom, L.A. Fisk, G. Gloeckler,
+                   G.C. Ho, J.S. Kelley, P.L. Koehn, T.W. LeFevere, S.S. Livi, R.A. Lundgren, and
+                   J.M. Raines, The Energetic Particle and Plasma Spectrometer instrument on the
+                   MESSENGER spacecraft, Space Science Reviews, 131, 523-556, 2007.
+            </reference_text>
+            <description>reference.ANDREWSETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H/SW-EPPS-3-EPS-DDR-V1.0</data_set_id>
+        <data_set_name>MESSENGER E/V/H/SW EPPS CALIBRATED EPS DDR V1.0</data_set_name>
+        <data_set_release_date>2016-05-06</data_set_release_date>
+        <start_time>2004-257T00:00:00Z</start_time>
+        <stop_time>2015-120T15:08:14Z</stop_time>
+        <producer_full_name>GEORGE HO</producer_full_name>
+        <citation_text>
+            George C. Ho
+        </citation_text>
+        <data_set_terse_desc>
+            The MESSENGER EPPS DDR observations consist of energetic particle
+            and plasma data collected by the EPPS instrument during orbital
+            operations of Mercury.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== This data set consists of the MESSENGER
+            Energetic Particle and Plasma Spectrometer (EPPS) advanced data
+            products, also known as DDR/DAPs. The system encompasses 2
+            instrument subsystems - the Energetic Particle Spectrometer (EPS)
+            and the Fast Imaging Plasma Spectrometer (FIPS). This data set
+            contains EPS instrument data. EPS covers the energy range of 25
+            to &gt; 500 keV for electrons, and 10 keV/nucleon to ~3 MeV total
+            energy for ions. There is one DDR data product for EPS
+        </abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      The data set consists of advanced data products, also known as
+      DDR/DAPs.
+ 
+      For all the DDR products there is a detached PDS label file that
+      describes the contents of one data file. Each label file will have
+      the same base name as the data file it is describing, with the
+      extension .LBL to denote a label file. The label file defines the
+      start time and end of the observation, product creation time, and
+      the structure of the ASCII tables. Each data product is identified
+      within the PDS label by a STANDARD_DATA_PRODUCT_ID value, shown in
+      parentheses in the table below.
+ 
+      The EPS portion of the data archive consists of
+      two DDR data products which are tables of pitch-angle values and
+      pitch-angle distribution function spectrograms provided as browse
+      plots for selected energetic electron events based on the selection
+      criteria outlined in Ho et al. (2012, JGR) during the Mercury Orbit
+      phase.
+ 
+      The pitch angle spectrogram browse products were a one-time delivery
+      included in release 9.The pitch angle value table DDRs are included
+      in both releases 9 and 11. The pitch angle value tables in release 11
+      include the entire EPS data set covering the Mercury Orbit Year 2.
+ 
+      These products are summarized in the data table below. A more
+      complete description of each product may be found in the EPPS DDR SIS
+      document, located in the DOCUMENT directory of the document volume.
+ 
+ 
+    Instrument Overview
+    ===================
+      The EPS sensor consists of a 60-mm diameter, tuna-can-like
+      cylinder, in which a start foil and stop foil, wrapped around
+      opposite curved sides of the cylinder, constitute the TOF chamber.
+      The detectors are arranged so that each detector senses the
+      events within a given range of incidence angles. Each of the 6
+      detector modules is composed of 4 pixels: large and small ion and
+      large and small electron.
+ 
+      See the EPPSINST.CAT file for more information and
+      [ANDREWSETAL2007] for full details.
+ 
+ 
+    Calibration Overview
+    ====================
+      This data set is normalized and background subtracted.
+ 
+ 
+    Parameters
+    ==========
+ 
+   The accumulation times for each event are 120 seconds for the EPS
+   Pitch Angle Spectrogram. Calibration
+   parameters are described in the Calibration Implementation document.
+ 
+ 
+    Data
+    ====
+      EPS Pitch Angle table (EPSP_A)
+ 
+      The pitch angle values tables contain the pitch angle for each of
+      the six look directions reported at the same cadence as the EPS
+      LoRes Spectral rate measurements (see EPPS CDR document). Each file
+      thus has a one-to-one relationship with a corresponding LoRes
+      spectral file.
+ 
+ 
+      EPS Pitch Angle Spectrogram (EPS_PAS)
+ 
+      Contains the pitch angle spectrogram for the EPS odd shaped
+      channels (ion=1,5,7,9). A given pitch angle spectrogram DDR data
+      file contains all the observations obtained on
+      one electron event.   The particle measurement is 120 seconds
+      averaged.  0 denotes the same direction as the measured magnetic
+      field, and 180 is opposite to the local field.  The color scale is
+      normalized to the maximum flux for the time interval covered in the
+      plot.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Confidence Level Overview
+    =========================
+      The EPPS DDR data are the processed data set released for the
+      EPPS.  Data presented here are an accurate representation of the EPPS
+      data as received from the spacecraft and have been processed from
+      instrument unit to physical unit.
+ 
+ 
+    Review
+    ======
+      The EPPS DDR was reviewed internally by the EPPS team prior to
+      release to the PDS. PDS also performed an external review of the
+      EPPS CDR.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      Data reported are the processed data received from the
+      spacecraft during the sixteen mission phases: Launch,
+      Earth Cruise, Earth Flyby, Venus 1 Cruise, Venus 1 Flyby,
+      Venus 2 Cruise, Venus 2 Flyby, Mercury 1 Cruise, Mercury 1 Flyby,
+      Mercury 2 Cruise, Mercury 2 Flyby, Mercury 3 Cruise,
+      Mercury 3 Flyby, Mercury 4 Cruise, Mercury Orbit, Mercury Orbit
+      Year 2, Mercury Orbit Year 3, Mercury Orbit Year 4, and Mercury
+      Orbit Year 5.  These mission phases are defined as:
+ 
+                           Start time         End time
+      Phase Name           Date (DOY)         Date (DOY)
+      -----------------    ----------------  ----------------
+      Launch                3 Aug 2004 (216)  12 Sep 2004 (256)
+      Earth Cruise         13 Sep 2004 (257)  18 Jul 2005 (199)
+      Earth Flyby          19 Jul 2005 (200)  16 Aug 2005 (228)
+      Venus 1 Cruise       17 Aug 2005 (229)   9 Oct 2006 (282)
+      Venus 1 Flyby        10 Oct 2006 (283)   7 Nov 2006 (311)
+      Venus 2 Cruise        8 Nov 2006 (312)  22 May 2007 (142)
+      Venus 2 Flyby        23 May 2007 (143)  20 Jun 2007 (171)
+      Mercury 1 Cruise     21 Jun 2007 (172)  30 Dec 2007 (364)
+      Mercury 1 Flyby      31 Dec 2007 (365)  28 Jan 2008 (028)
+      Mercury 2 Cruise     29 Jan 2008 (029)  21 Sep 2008 (265)
+      Mercury 2 Flyby      22 Sep 2008 (266)  20 Oct 2008 (294)
+      Mercury 3 Cruise     21 Oct 2008 (295)  15 Sep 2009 (258)
+      Mercury 3 Flyby      16 Sep 2009 (259)  14 Oct 2009 (287)
+      Mercury 4 Cruise     15 Oct 2009 (288)  03 Mar 2011 (062)
+      Mercury Orbit        04 Mar 2011 (063)  17 Mar 2012 (077)
+      Mercury Orbit Year 2 18 Mar 2012 (078)  17 Mar 2013 (076)
+      Mercury Orbit Year 3 18 Mar 2013 (077)  17 Mar 2014 (076)
+      Mercury Orbit Year 4 18 Mar 2014 (077)  17 Mar 2015 (076)
+      Mercury Orbit Year 5 18 Mar 2015 (077)  30 Apr 2015 (120)
+ 
+ 
+      The EPS pitch angle distribution data have been corrected for
+      priority scheme in the instrument processor.
+ 
+      During orbital phase, a certain sector in the EPS field-of-view has a
+      direct view of the sunlit side of the planet. During these periods, the
+      single event data (Fast, Scanned, etc) may be susceptible to photon
+      contamination. The science event data (all rate and spectra data) have
+      additional on-board software processing that should eliminate this
+      photon contamination.  But the user should always consult with the
+      instrument team at JHU/APL to verify the quality of specific data prior
+      to publication.
+ 
+      During spacecraft noon-midnight orbits, EPS instrument temperature can
+      rise to levels that affect the low energy channels.  We have noticed
+      during some of these orbits, the temperature induced noise renders
+      those energy channels below 100 keV to be useless.  In addition, the
+      higher than normal temperature also induced a data &apos;drop-out&apos; where the
+      count in all rate drops by a factor during one integration period and
+      remains so for a few minutes to hours.  The EPS team is currently
+      investigating the cause of this &apos;drop-out&apos;.  Users should always
+      consult the instrument team at JHU/APL to verify the quality of
+      specific data prior to publication.
+ 
+      During orbital phase, EPS routinely switches between large and small
+      pixel on both the ion and electron detector.  User should check the
+      pixel size flag in the data to know which pixel the detectors are
+      using.
+ 
+      EPS Shaped channel Sector 3 and 11 have malfunction detectors and do
+      not produce any data product.
+ 
+      As always, users of the EPPS data should consult with the instrument
+      team at JHU/APL to verify the quality of specific data prior to
+      publication.
+ 
+    Limitations
+    ===========
+      This data set is fully processed, science quality data.  It has been
+      reviewed at high level by the EPS instrument team.  It has not been,
+      however, manually validated on a point by point.  Users are
+      encouraged to contact the EPS instrument team when questions about
+      the data arise.  Some analysis of this data requires detailed
+      knowledge of EPS pointing which can be extracted from SPICE.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

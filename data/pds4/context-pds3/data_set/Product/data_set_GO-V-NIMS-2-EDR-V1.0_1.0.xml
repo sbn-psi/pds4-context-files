@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-v-nims-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NIMS EXPERIMENT DATA RECORDS: VENUS ENCOUNTER</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.comet_sl9-jupiter_collision::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:nims.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-v-nims-2-edr-v1.0__browserp_go-v-nims-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-v-nims-2-edr-v1.0__dvo_imaging_go-v-nims-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-v-nims-2-edr-v1.0__dvo_usgs_go-v-nims-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Carlson, R.W., P.R. Weissman, W.D. Smythe, J.C. Mahoney, and the NIMS Science
+                   and Engineering Teams, Near-Infrared Mapping Spectrometer Experiment on
+                   Galileo, Space Science Reviews 60: 457-502, 1992.
+            </reference_text>
+            <description>reference.CARLSONETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Zamani, P., Project Galileo Software Interface Specification: NIMS Experiment
+                   Data Record, 625-610: SIS 232-08 (JPL D-296), July 30, 1991.
+            </reference_text>
+            <description>reference.ZAMANI1991</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-V-NIMS-2-EDR-V1.0</data_set_id>
+        <data_set_name>NIMS EXPERIMENT DATA RECORDS: VENUS ENCOUNTER</data_set_name>
+        <data_set_release_date>1993-12-15</data_set_release_date>
+        <start_time>1990-02-10T01:49Z</start_time>
+        <stop_time>1990-02-17T05:59Z</stop_time>
+        <producer_full_name>DR. ROBERT W. CARLSON</producer_full_name>
+        <citation_text>
+            Citation TBD
+        </citation_text>
+        <data_set_terse_desc>
+            Galileo Imaging Spectrometer (NIMS) Venus Experiment Data Records
+        </data_set_terse_desc>
+        <abstract_desc>
+            NIMS Experiment Data Record (EDR) files contain raw data from the
+            Galileo Orbiter Near-Infrared Mapping Spectrometer
+            (CARLSONETAL1992). This raw data requires considerable processing
+            before it is readily amenable to science analysis. The EDRs
+            comprise the base dataset from which spectral image cubes will be
+            created by continually evolving software using successively more
+            accurate calibration and geometry data.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    NIMS Experiment Data Record (EDR) files contain raw data from
+    the Galileo Orbiter Near-Infrared Mapping Spectrometer
+    (CARLSONETAL1992).  This raw data requires considerable
+    processing before it is readily amenable to science analysis.
+    The EDRs comprise the base dataset from which spectral image
+    cubes will be created by continually evolving software using
+    successively more accurate calibration and geometry data.This
+    dataset resides on volume GO_1001.
+ 
+ 
+  Parameters
+  ==========
+    The files consist principally of 10-bit sensor values from the
+    17 NIMS detectors ordered by time of acquisition, but these are
+    interleaved with NIMS background and housekeeping values, and,
+    less frequently, various instrument temperatures, AACS (scan
+    platform and rotor pointing) data and engineering measurements.
+    Sensor values are measured simultaneously in all detectors; a
+    set of 17 values is acquired at each of 20 cross-track
+    positions (via a secondary scanning mirror) in a period of 1/3
+    second.  A grating may step between mirror scans; as many as 24
+    steps may result in 20 spectra of as many as 408 wavelengths
+    each.  A second spatial dimension is added by spacecraft and
+    scan platform motion.
+ 
+ 
+  Processing
+  ==========
+    The EDRs are generated by the Multimission Image Processing
+    System (MIPS) at the Jet Propulsion Laboratory (JPL) from data
+    sources derived ultimately from decommutated Galileo telemetry.
+    They are divided into files containing up to 100 RIMs (60 2/3
+    second intervals) of data.  Each file contains the best data
+    available from the several ground stations receiving Galileo
+    telemetry.
+ 
+ 
+  Data
+  ====
+    The data are organized into 1024-byte records, one for each
+    minor frame (2/3 second) of spacecraft clock time.  In that
+    time, the NIMS instrument has collected sensor values for all
+    17 detectors over two scans (20 positions down and 20 positions
+    up) of the secondary mirror.
+ 
+    A detailed description of the structure of the EDR may be found
+    in the Galileo Software Interface Specification (ZAMANI1991).
+    The same information is available in both human and
+    machine-readable form in the Planetary Data System (PDS)
+    structure files on the NIMS EDR CD-ROM volumes.
+ 
+    As received from MIPS, each file has a Vicar label preceding a
+    PDS/ISIS label.  The Vicar labels have been removed from the
+    EDRs on the CD-ROMs but they are present in detached form.  The
+    PDS/ISIS-labelled EDRs themselves may be readily displayed and
+    further processed by software in the ISIS system, and by PDS
+    utilities.
+ 
+ 
+  NOTE
+  ====
+    The failure of the Galileo high gain antenna will result in
+    extensive modifications to NIMS operations and data structures
+    during Jupiter operations.  Extensive editing and compression
+    of NIMS data will occur on the spacecraft, and the EDR
+    structure will necessarily be different during phase 2.
+ 
+ 
+  Ancillary Data
+  ==============
+    A Postscript-format Guide to the planned observations,
+    including footprint plots on the target, instrument parameters,
+    etc.  is included with the EDRs on the CD-ROM, as are tables of
+    parameters for each EDR file, each observation and each RIM of
+    data, files of observed dark values in different modes and gain
+    states, a digitized map of the Galileo booms in cone-clock
+    space and tables of NIMS internal geometry and timing.
+ 
+    Calibration files, spike files and SPICE files (spacecraft
+    positions, planetary positions and constants, processed
+    pointing geometry, spacecraft clock versus universal time,
+    etc.) may be included in later volumes of the CD-ROM set.
+    Presently, calibration files are packaged with cube generation
+    software in the ISIS and Vicar systems, and SPICE files may be
+    obtained from the Galileo Science Data Team.
+ 
+ 
+  Software
+  ========
+    Simple software is available on the EDR CD-ROMs for displaying
+    the raw data in various ways, but use of this software requires
+    considerable familiarity with the operation of the NIMS
+    instrument.  Most science analysis requires generation of
+    spectral image cubes using ancillary geometric data, and
+    decalibration of the raw data numbers.  This may be done with
+    one of several similar sets of cube generation programs
+    available in the ISIS and Vicar systems.  (Data cubes generated
+    in this way will be made available in a separate series of
+    CD-ROMs.) Programs for displaying validity and status
+    information and for re-attaching the Vicar label to the EDR are
+    also available.
+ 
+ 
+  Media/Format
+  ============
+    The NIMS EDRs are archived on CD-ROM for delivery to the
+    Planetary Data System (PDS).  Formats are based on standards
+    for such products established by PDS.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+ 
+  Confidence Level Overview
+  =========================
+    NIMS EDRs contain essentially raw data as received from Galileo
+    telemetry.  These are generally processed into spectral image
+    cubes for science analysis.  A fuller discussion of confidence
+    levels will be more appropriate for the spectral image cube
+    dataset.
+ 
+ 
+  Review
+  ======
+    The NIMS EDRs are reviewed prior to archiving by the NIMS team.
+    Data received is compared with data expected, and replays of
+    missing data requested.  The status and validity information on
+    the EDRs themselves is examined, and spikes (bad points) are
+    identified.  Spectral image cubes of NIMS target data are
+    generated and reviewed for spatial data coverage and
+    consistency against observational plans.  Format and
+    documentation of the CD-ROM archive volumes are reviewed by
+    PDS.
+ 
+ 
+  Data Coverage and Quality
+  =========================
+    The EDRs contain flags which indicate the validity of
+    individual subsets of NIMS sensor data.  Zeros are used as fill
+    values when data is missing or invalid.
+ 
+ 
+  Limitations
+  ===========
+    The raw data numbers on the NIMS EDRs are of limited use.
+    Proper science analysis requires the computation of radiances
+    according to the best understanding of the instrument
+    calibration, and proper projection of the data onto the target
+    in the form of spectral image cubes.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>89-084B-01C</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

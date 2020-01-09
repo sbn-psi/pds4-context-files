@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-mer2-m-pancam-5-atmos-opacity-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER MARS PANCAM ATMOSPHERIC OPACITY RDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pancam.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pancam.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-mer2-m-pancam-5-atmos-opacity-v1.0__dvo_geo_mer1-mer2-m-pancam-5-atmos-opacity-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-mer2-m-pancam-5-atmos-opacity-v1.0__pds.geo.mer.analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bell, J.F. III, The Mars Exploration Rover Athena Panoramic Camera (Pancam)
+                   Investigation, Journal of Geophysical Research, June 23, 2003.
+            </reference_text>
+            <description>reference.BELLETAL2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Panoramic Camera Atmospheric Opacity
+                   Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.OPACITYSIS2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1/MER2-M-PANCAM-5-ATMOS-OPACITY-V1.0</data_set_id>
+        <data_set_name>MER MARS PANCAM ATMOSPHERIC OPACITY RDR V1.0</data_set_name>
+        <data_set_release_date>2004-08-24</data_set_release_date>
+        <start_time>2004-01-25T07:18:28.780Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>Mark Lemmon</producer_full_name>
+        <citation_text>
+            Lemmon, Mark, MER Mars Pancam Atmospheric Opacity RDR V1.0, NASA
+            Planetary Data System, MER1/MER2-M-PANCAM-5-ATMOS-OPACITY-V1.0,
+            2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover Pancam Atmospheric Opacity Reduced Data
+            Record
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    A Mars atmospheric opacity data product consists of two files, an
+    ASCII formatted detached PDS label file and an ASCII formatted data
+    file. The data file contains values of the Mars atmospheric opacity
+    or optical depth derived from MER Pancam images of the Sun acquired
+    with the two solar filters.  The effective wavelengths of these
+    filters are 440 and 880 nm. Each data file contains an ASCII table
+    of the derived atmospheric opacity for a given rover and Pancam
+    solar filter. Each table contains columns with the source Pancam
+    image identifier, the time of image acquisition, the Mars season
+    (Ls), Sun-Mars distance, airmass, observed solar flux, and opacity.
+ 
+ 
+  Processing
+  ==========
+    MER Pancam Atmospheric Opacity RDRs are considered Level 5 or
+    Derived Data (equivalent to NASA Level 2). The Mars atmospheric
+    opacity data products are generated from analysis of MER Pancam
+    images.
+ 
+    The Mars atmospheric opacity data products are produced by the
+    Atmospheres Science Theme Group (STG) of the MER Science Operations
+    Working Group (SOWG) using processing procedures and software
+    developed by Mark Lemmon, Texas A&amp;M University.
+ 
+    The data product is generated after each sol in which opacity data
+    is acquired. The generation is done in four steps. First, the input
+    parameters are set up. A list of Pancam data products to be
+    processed is read and associated values are determined for Ls, the
+    distance of Mars from the Sun, the sol that the data were acquired,
+    and the actual elevation angle of the Sun. It is likely that
+    standard tools such as the NAIF toolkit will be used for these
+    computations. For each Pancam data product, the airmass is computed
+    by integration through a spherically symmetric atmosphere with a
+    scale height equivalent to the gas scale height of the Martian
+    atmosphere.
+ 
+    Second, the solar flux is extracted from each calibrated Pancam
+    data product. To do this, the background is determined within an
+    annulus at a fixed radius from the center of the Sun in the image.
+    That background is subtracted, as it would lead to a significant
+    departure from Beers&apos; Law at high airmasses. After background
+    subtraction, the solar flux is integrated over the image. The
+    presence of a few missing pixels (e.g., a Phobos transit or a
+    missing packet that only partly overlaps the Sun) can be
+    accommodated by the integration algorithm. The presence of a large
+    number of missing pixels or any saturated pixels will result in the
+    rejection of an image (returning a flux and opacity of -1.000).
+ 
+    Third, a relative calibration is derived. Data from the afternoon of
+    all sols during which more than 1 image was acquired are considered,
+    together with instrumental uncertainties. The published calibration
+    is considered as a single datum with associated uncertainty. The
+    instrument response is varied, and a single best-fit opacity is
+    derived for each afternoon using Beers&apos; Law (I_observed = I_0 exp
+    (-t h), where h = airmass). A best-fitting responsivity is
+    chosen by minimizing the reduced C^2 of the fit.
+ 
+    Fourth, the relative calibration is used to derive opacities. All
+    images are considered, and Beers&apos; Law is applied to every pair of
+    I_observed and airmass. The relative calibration method ensures that
+    (1) substantial calibration uncertainty is not propagated into
+    uncertainty in opacity once sufficient surface data are obtained,
+    and (2) that the processing transfers smoothly from using the
+    laboratory calibration when the first datasets are obtained to using
+    the relative calibration when enough surface data exist.
+ 
+ 
+  Data
+  ====
+    Each Mars atmospheric opacity data product is structured as two
+    files; a detached PDS label file and a separate data file. Both
+    components are stored as ASCII text. Data within the opacity data
+    file is organized by time with the most recent measurement being
+    appended to the end of the file.
+ 
+    Each Mars atmospheric opacity data product consists of two parts.
+    The first part of the data file contains header information, which
+    includes parameter values used in the opacity computations and
+    column names for the data rows. The second part of the file,
+    starting at line 10 consists of a PDS table object. The table has
+    eight columns and a variable number of rows. There is one row for
+    each opacity measurement. The number of rows in a data product will
+    increase as new measurements of atmospheric opacity are made. Each
+    row is 88 bytes long including the carriage return and line feed
+    characters. All columns are fixed-width as described in the PDS
+    label and are also delimited with commas. Text columns are
+    surrounded by double-quotes and are left-justified. Numeric
+    columns are right-justified.
+ 
+ 
+  Software
+  ========
+    The ASCII format of the Mars atmospheric opacity data product means
+    that the data can be displayed using a text editor. In addition, the
+    use of the PDS table structure for this data product means the data
+    can be readily imported into spreadsheet and plotting programs.
+ 
+    PDS-labeled tables can be viewed with the program NASAView,
+    developed by the PDS. NASAView is available in versions that run on
+    SUN/SOLARIS, Windows, and LINUX operating systems. NASAView can be
+    obtained from the PDS web site
+    http://pdsproto.jpl.nasa.gov/Distribution/License.
+    There is no charge for NASAView.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initally be delivered and kept online. Upon
+    Mission completion, the Pancam Atmospheric Opacity RDRs will be
+    delivered to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

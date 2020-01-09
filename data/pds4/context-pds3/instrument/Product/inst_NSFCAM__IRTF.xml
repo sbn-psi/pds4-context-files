@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Instrument_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:instrument:nsfcam.irtf</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>NSF CAMERA for IRTF</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Instrument_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:earth-based.irtf::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Leggett, S., and T. Denault, NSFCAM User&apos;s Guide, Jan 3, 1996.
+            </reference_text>
+            <description>reference.LEGGETT-DENAULT1996</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Instrument_PDS3>
+        <instrument_name>NSF CAMERA</instrument_name>
+        <instrument_desc>
+ 
+ 
+    Instrument Overview
+    ===================
+      NSFCAM is a 1-5 um imager with a 256x256 InSb detector. Simultaneous
+      optical imaging is possible via an optical port. Three different
+      magnifications can be selected by rotating different cold lens
+      assemblies into the beam. These give plate scales of
+      0.3arcsec/pixel, 0.15arcsec/pixel and 0.06arcsec/pixel, with
+      corresponding fields of view of 76.8 arcmin, 37.9 arcmin and 14.1
+      arcmin respectively. Images can be obtained through a variety of
+      broad- and narrow-band filters, and low-resolution spectroscopy can
+      also be carried out using the circular variable filters (CVFs) or
+      grisms. Polarizing waveplates or grids can be inserted into the
+      beam. Two cold coronograph masks are also available.
+ 
+      Images are recorded onto a Sun workstation in FITS format. These are
+      taken in basic stare mode using the main (object) and offset (sky)
+      telescope beam positions; software is available to shift-and-add
+      series of images together to study fine image structure. It is also
+      possible to take frames rapidly in movie mode, storing them directly
+      to the instrument computer and saving overheads in time-critical
+      observations.
+ 
+ 
+    Electronics
+    ===========
+      Instrument start-up
+      -------------------
+      The camera is run from a PC which is located out at the telescope.
+      You can communicate with this PC, called NSFPC, via a monitor and
+      keyboard in the control room (to the right of the Planck
+      workstation), or by logging on to NSFPC from a workstation. Often
+      both the computer and the software which runs the camera are
+      referred to as the &apos;IC&apos;, for Instrument Computer.
+ 
+      The default Voltage (DETector) of -3.4 implies a 300mV bias across
+      the array (-3.4 - -3.7). This works well in the non-thermal regime
+      and where the background is not high, i.e. through narrow filters or
+      for the CVF.  Increasing the bias across the array, i.e. increasing
+      VDET, will increase the well depth allowing you to reach higher
+      counts before entering the non-linear regime, but it will also
+      rapidly increase the number of bad pixels and the dark current.
+      Hence the best value of VDET is a compromise between well depth and
+      increasing bad pixels, and it may vary from night to night; getting
+      the correct value will probably require some experimentation at the
+      telescope. You can reduce the number of counts per pixel and the
+      non-linearity problem by using a smaller pixel scale, if your
+      program will allow this.
+ 
+      A non-destructive read consists of reading each pixel without
+      resetting its value. Increasing the number of reads per image
+      reduces the read noise and for this reason the default value of NDR
+      is set to 8. For the CSHELL array (also a SBRC 256x256 InSb) it was
+      found that the read noise was 55 electrons (or 5 DN) for NDR=1, and
+      22 electrons (2 DN) for NDR=6. For NSFCAM the gain has been measured
+      to be 10 electrons/DN.
+ 
+      The higher the number of NDR the longer the minimum integration
+      time, as each read requires about 0.077 seconds. The number of NDR
+      will be set automatically to the maximum number possible (up to 8)
+      for your requested integration time (see following Section). The
+      maximum possible value of NDR (currently 8) as well as the number
+      used on the last &apos;Go&apos; is displayed on the top User Interface
+      window.
+ 
+ 
+    Data Modes
+    ==========
+      Readout Modes
+      -------------
+      &apos;ARC_D&apos; stands for &apos;array reset clocking, double sample&apos;. The entire
+      array is readout once (called pedestal sampling) and then after the
+      requested integration time has elapsed the array is readout again
+      (sampled). The difference between these two reads is displayed in VF
+      and saved to disk if Autosave is selected. The minimum integration
+      time is a function of array size.
+ 
+      If more than one NDR is done, the pedestal value is read out many
+      times (set by the value of NDR) and the final sample value is read
+      many times. The integration time is the time from the first read of
+      the pedestal to the first read of the sample. The frame that is
+      stored is the difference between the sum of the pedestal read and
+      the sum of the sample reads. Hence the number of counts in the frame
+      will be increased by a factor equal to the number of NDR. If more
+      than one coadd has been requested then this entire process is
+      repeated for the number of coadds, and the frame that is stored is
+      the sum of the frames. Hence when reducing your data the counts in
+      each frame need to be divided by the number of NDR and the number of
+      coadds. This value is given in the FITS header as &apos;Divisor&apos;. The
+      quick-look utility VF will automatically divide the counts in the
+      image by this value.
+ 
+      As described above, read noise decreases with increasing NDR. Hence
+      the maximum number of NDR possible within your requested integration
+      time (up to 8) will be carried out. For full arrays this means for
+      example that the value of NDR will be equal to the integer value
+      of:  (integration time) / 0.0768.
+ 
+      The other readout modes are not operational however briefly they
+      work as follows. ARC_S (Array Reset Clocking Single Sample) follows
+      the same procedure as ARC_D however no pedestal value is
+      subtracted.  PRC (Pixel Reset Clocking) mode is similar to ARC_S
+      however instead of reading the entire array every integration
+      interval, the pixels are read out on an individual basis. Similarly
+      CDS (Correlated Double Sample) reads the pixels on an individual
+      basis but subtracts a pedestal value for each pixel. These last two
+      modes effectively increase the well depth of the pixels as each
+      pixel is not left integrating up in counts while the entire array is
+      being sampled.  They will be useful modes for observing in the
+      thermal regime when they are operational.
+ 
+ 
+    Optics
+    ======
+      NSFCAM -- A U. Hawaii 256x256 Infrared Array Camera with an In-Sb
+      based chip, with each pixel individually addressable.  The camera
+      can be used in many modes including imaging and grism-based,
+      low-resolution spectroscopy.  The Observing Parameters are array,
+      filter, lens, dichroic and waveplate.
+ 
+      Waveplate
+      ---------
+      A half-wave plate is available for polarizing work with NSFCAM.
+      Polarizing grids are also available in both the CVF and filter
+      wheels.
+ 
+      Dichroic
+      --------
+      The first cold optical element in the light path is the dichroic
+      assembly.  There are four turrets currently containing: an open
+      aperture (default position), a visual/infrared dichroic, and two
+      lenses for the cold coronograph instrument CoCo.
+ 
+      Lens (&amp; Grism Slit &amp; Coronograph Masks)
+      ---------------------------------------
+      The optical element below the dichroic is the lens turret assembly.
+      There are three plate scales available chosen by selecting the
+      appropriate lenses; the focus position for each scale is different.
+      The three scales are: 0.055arcsec/pixel, 0.148arcsec/pixel and
+      0.300arcsec/pixel, giving fields of view of 13 arcsec, 35 arcsec and
+      72 arcsec (allowing for bad edges to the array). There are
+      coronograph masks available for the two smaller scales and a grism
+      slit available with the largest plate scale. The coronograph masks
+      are centrally located on the array and have diameters of 4 arcsec
+      (for the 0.055 arcsec scale) and 6 arcsec (for the 0.148 arcsec
+      scale).
+ 
+      Filter and CVF Wheels
+      ---------------------
+      The last optical elements before the detector are the filter and CVF
+      wheels.
+ 
+      The software will automatically select the blocking filter or open
+      position in the CVF wheel as appropriate for the filter wheel
+      selection. Similarly the blocker in the filter wheel will be
+      automatically selected for the CVF.  (The blockers are necessary in
+      some cases to prevent long-wavelength light leaks). All you need do
+      is select your filter or the CVF and type in the required CVF
+      wavelength with the latter. After making your selection from the
+      filter and CVF menus you must click on the &apos;move&apos; button before the
+      wheels will be moved.  The table below lists the filters in this
+      project.
+ 
+      Index Name                      Step   Deg  Central Wavelngth   FWHM
+                                                           microns
+ 
+      1     J                         2500   125    1.26              0.28
+      3     K&apos;                        2020   101    2.12              0.34
+      8     Spencer 2.3                740    37    2.28              0.17
+      10    VIS ND=20.                7180   359
+      16    Brackett ki 2.166         5620   281    2.16              0.02
+      17    H2 v=2-1 s1 2.248         5380   269    2.25              0.02
+      18    CO headband 2.295         5140   257    2.30              0.03
+      19    CO continuum K            4900   245    2.26              0.05
+      23    .945 micron               3940   197
+      24    IR ND=2.0                 3580   179
+      27    Open                      2740   137
+ 
+      Array (and Subarrays)
+      ---------------------
+      You are not constrained to reading out the full array of the camera
+      - smaller subarrays can be used. You can also store an image made up
+      of up to three non-overlapping subarrays. There are various ways of
+      defining which regions of the array you want read out.
+ 
+      In the Observing Parameters window you can use the Array 1/2/3 lines
+      to explicitly define the subarrays. You would enter the x,y
+      coordinates of the top left of the region (the top left corner of
+      the full array is 0,0), followed by the width and height of the
+      region in pixels. The width and height must be divisible by 8, and
+      the software should round off your numbers to the nearest
+      permissible value. In this window &apos;num array&apos; is the value of the
+      total number of regions you want read out in a single frame.
+ 
+ 
+    Operational Considerations
+    ==========================
+      Integration Times, Coadds, Cycles
+      ---------------------------------
+      The integration time is specified in seconds on the &apos;itime&apos; line in
+      the window. The minimum integration time is about 0.077 seconds for
+      a full array.  Software will automatically go to the smallest
+      possible value if your value is below this limit. The actual
+      integration time will be displayed and written in the FITS header.
+ 
+      The longest possible integration time will be set by the
+      requirements of:  not getting the counts up to the non-linear
+      regime  and not sitting on any science target for longer than the
+      sky stability period.
+ 
+      Setting the number of coadds greater than one will result in
+      repeated reads with your selected integration time, added together,
+      with the sum written out as a single image. This was also described
+      earlier where the connection between integration time, number of
+      NDRs, and coadds was discussed. VF automatically divides the counts
+      in your image by the number of NDR and coadds, so that you can
+      easily check for non-linearity.
+ 
+      Typically you will set your integration time to the maximum value
+      possible to still remain safely in the linear regime, using either a
+      bright science object in the field or the sky background if your
+      objects are faint. Then you will set your coadds so that the total
+      time is about equal to sky stability time (one or two minutes at
+      JHK, 20 seconds at longer wavelengths). Keep your counts greater
+      than ~100 to avoid being limited by read noise.
+ 
+      Selecting more than one &apos;cycle&apos; just means that the entire process
+      will be repeated many times with many images being written out (as
+      opposed to a single image if coadds &gt;1). If &apos;pair&apos; is selected as
+      the &apos;Obs Mode&apos; then cycles will repeat in a ABBA... pattern.
+ 
+ 
+    System Performance
+    ==================
+      The focus of the telescope is controlled from the operator&apos;s console
+      so that the observer needs to request any focus changes (this will
+      be changed in the future). The focus of the telescope gets more
+      negative with decreasing temperature, and so has to be reduced
+      during the night, usually stabilising by the early hours of the
+      morning.
+ 
+      The NSFCAM plate scales have different focus positions. The values
+      depend on the ambient temperature and can change by 20 units (0.20)
+      but typical values (for the non-tiptilt top end) are:
+ 
+      Instrument Sensitivity Assuming a 2 arcsec x 2 arcsec Image is as
+      follows:
+ 
+      Filter   Background per square arcsec    3 sigma mag in min on target
+                   with gain of 10 e/ADU           and 1 min on sky
+ 
+      J         6.9 x 10**3 e/s  15.9  mag             20.6
+      K&apos;        1.2 x 10**4      14.0                  18.9
+      K         1.7 x 10**4      13.7                  18.8
+ 
+ 
+      Other magnitudes or signal-to-noise values can be calculated
+      assuming background limited performance:
+ 
+                               S/N = signal x (sqrt time)
+ 
+      So that for example to increase signal-to-noise from 3[[sigma]] to
+      30[[sigma]], the signal would have to be increased by a factor of
+      10, implying that the object would have to be 2.5 magnitudes
+      brighter than the values given above, or the integration time would
+      have to be increased by a factor of 100.
+ 
+      For the narrow band filters or CVFs S/N can be estimated using the
+      above numbers and the difference in bandwidth. For example, the
+      signal through the CVF is down by about a factor of 10 compared to
+      the corresponding broadband filter and the noise is down by the
+      square root of 10; therefore objects would have to be 1.25
+      magnitudes brighter than the values listed above for the same
+      signal-to-noise.
+ 
+      Note that often systematic effects will limit the accuracy
+      achieved.  In particular sky variations will be the limiting factor
+      unless you are careful to limit the exposure time for each image to
+      less than the likely sky variation time. This translates into
+      maximum integration times of about one or two minutes at JHK, and
+      about 20 seconds at longer wavelengths. Keep your counts greater
+      than ~100 to avoid being read noise limited. The minimum number of
+      counts to be background limited is equal to the square of the read
+      noise in electrons divided by the gain.
+ 
+ 
+    Calibrations and Photometric Color Transformations
+    ==================================================
+      Non-Linearity
+      -------------
+      The array behaves in a similar manner to the CSHELL SBRC InSb
+      array.  The plots shown in the back of the CSHELL manual of counts
+      versus integration time, as a function of bias voltage, can be used
+      as a guide for the camera.
+ 
+      Observations of photometric standards with a 300mV bias show that
+      counts around the 2500 level result in a 5% non-linear effect.
+ 
+      Standard Stars
+      --------------
+      For JHK work the UKIRT Faint Standards list provides an excellent
+      source of standard stars. This list is posted on paper in the
+      control room and is also available to the operators and observers
+      via the xstarcat utility. The natural system of NSFCAM is extremely
+      similar to the UKIRT photometric system. The systems appear
+      identical at H and K with a small difference at J described
+      (provisionally) by the color relation:
+ 
+                       (J-K)nsfcam = 0.95 (J-K)ukirt
+ 
+      Using the UKIRT to CIT relationships from Krisciunas (private
+      communication) this implies that the relationship between the NSFCAM
+      natural system and the CIT system (as defined by the Elias
+      standards) is:
+ 
+                          Kcit     = Knsfcam
+                          (H-K)cit = 0.854(H-K)nsfcam
+                          (J-K)cit = 0.974(J-K)nsfcam
+ 
+      Photometric zeropoints for NSFCAM (i.e. the magnitude that is added
+      to the instrumental magnitude to obtain true magnitude) are
+      typically:
+ 
+      Filter                      J            H             K        L&apos;
+ 
+      Plate Scale(arcsec)    0.30  0.15   0.30   0.15   0.30   0.15   0.15
+      Zero Point            22.54 22.44  22.06  21.94  21.43  21.32  20.0
+ 
+ 
+      These values are for an airmass of 1.0 and were measured over the
+      time period December 1994 to November 1995. They are a measure of
+      instrument throughput and should not vary by more than about 0.10mag
+      from the above values. Atmospheric extinction is typically in the
+      range 0.05 to 0.20 magnitudes per airmass at JHKL&apos;. When reducing
+      your data don&apos;t forget to divide your FITS images by the number of
+      coadds and NDR (DIVISOR parameter value in the header); this is done
+      automatically in VF.
+ 
+      The maximum time between successive images, i.e. the number of
+      coadds, should be constrained by sky variability. At JHK sitting on
+      one position for a minute or two should be OK, but in the thermal
+      regime shorter observations are recommended, such as 200 coadds at
+      0.08 seconds.
+ 
+      Flat Fields
+      -----------
+      At J,H,K good flats can be obtained either from the dome or from the
+      sky.  Night to night variations at the level of 2% have been seen so
+      taking flats each night is recommended (this situation may have been
+      improved with the new array temperature controller). All the lights
+      should be on in the dome and the telescope pointed at the usual flat
+      position (which is not the white spot). Taking two sets of data with
+      the lights on, where one set has half the integration time of the
+      other, and subtracting the results, works well.
+ 
+      In the thermal regime dome flats require a long integration to get
+      sufficient counts and usually sky flats are used, or flat fielding
+      is not done and the object and calibrator are placed in the same
+      region of the array.
+ 
+      The array is flat to about 7%. The usual structure is a gradient
+      across the array with the right brighter than the left, and what
+      Mark Shure refers to as the Starship Enterprise pattern in the
+      center. If you do not see this kind of pattern then it is possible
+      that there is a problem with the array and you should report this to
+      the operator and your support astronomer.
+ 
+
+        </instrument_desc>
+        <instrument_id>NSFCAM</instrument_id>
+        <instrument_serial_number>not applicable</instrument_serial_number>
+        <instrument_type>Camera</instrument_type>
+        <instrument_version_id>not applicable</instrument_version_id>
+    </Instrument_PDS3>
+</Product_Instrument_PDS3>

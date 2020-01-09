@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-h-xrs-3-rdr-maps-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER H XRS REDUCED DATA RECORD (RDR) MAPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:xrs.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-h-xrs-3-rdr-maps-v1.0__browserp_mess-h-xrs-3-rdr-maps-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-h-xrs-3-rdr-maps-v1.0__browser_geo_mercury_orbital_data_explorer::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-h-xrs-3-rdr-maps-v1.0__dvo_mess-h-xrs-3-rdr-maps-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Schlemm, C.E., II, R.D. Starr, G.C. Ho, K.E. Bechtold, S.A. Benedict, J.D.
+                   Boldt, W.V. Boynton, W. Bradley, M.E. Fraeman, R.E. Gold, J.O. Goldsten, J.R.
+                   Hayes, S.E. Jaskulek, E. Rossano, R.A. Rumpf, E.D. Schaefer, K. Strohbehn, R.G.
+                   Shelton, R.E. Thompson, J.I. Trombka, and B.D. Williams, The X-Ray Spectrometer
+                   on the MESSENGER spacecraft, Space Science Reviews, 131, 393-415, 2007.
+            </reference_text>
+            <description>reference.SCHLEMMETAL2007</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-H-XRS-3-RDR-MAPS-V1.0</data_set_id>
+        <data_set_name>MESSENGER H XRS REDUCED DATA RECORD (RDR) MAPS V1.0</data_set_name>
+        <data_set_release_date>2016-05-06</data_set_release_date>
+        <start_time>2011-097T03:19:53Z</start_time>
+        <stop_time>2015-114T21:05:34Z</stop_time>
+        <producer_full_name>LARRY R. NITTLER</producer_full_name>
+        <citation_text>
+            L. R. Nittler, MESSENGER H XRS REDUCED DATA RECORD MAPS V1.0,
+            NASA Planetary Data System, 2013.
+        </citation_text>
+        <data_set_terse_desc>
+            The MESSENGER XRS RDR data consist of maps of the ratio of
+            elements detected by the XRS instrument during orbital operations
+            at Mercury.
+        </data_set_terse_desc>
+        <abstract_desc>
+            Abstract ======== This data set consists of the MESSENGER XRS
+            reduced data record observations, also known as RDRs, which are
+            derived from the calibrated data records, CDRs. Each XRS
+            observation results in four X-ray spectra. When an X-ray
+            interacts with one of the four detectors, a charge or voltage
+            pulse is generated. This signal is converted into one of 2^8
+            (256) channels, which are correlated to energy. Over a commanded
+            integration time period a histogram of counts as a function of
+            energy (channel number) is recorded. The EDRs are the number of
+            events in each channel of the four detectors accumulated over the
+            integration period. Channels above or below the useful energy
+            range of the detectors are not transmitted. The result is three
+            244-channel GPC histograms and one 231-channel solar monitor
+            histogram, each of which is designated as a single X-ray
+            spectrum. Each observation is calibrated and processed into the
+            CDR data set and then further processed to produce a map of
+            elemental ratios, the maps of which compose the RDR data set.
+        </abstract_desc>
+        <data_set_desc>
+ 
+   Data Set Overview
+   =================
+     Each observation is calibrated and processed into the CDR data set
+     and then further processed to produce a map of elemental ratios,
+     the maps of which compose the RDR data set.  The orbital mechanics
+     of the instrument and field-of-view of each measurement are
+     accounted for in the products of the elemental ratio maps, and are
+     also a part of the processing that produces the uncertainty map
+     that corresponds to each ratio map.
+ 
+   Instrument Overview
+   ===================
+     The X-Ray Spectrometer (XRS) experiment is comprised of three
+     identical gas proportional counters (GPC) that measure X-rays
+     emitted from the surface of Mercury in the energy range from about
+     1 to 10 keV.  X-rays in this energy range sample the planetary
+     surface to depths of a few tens of microns.
+ 
+     See the INSTRUMENT.CAT file for more information and [SCHLEMMETAL2007]
+     for full details.
+ 
+   Calibration Overview
+   ====================
+     The supernova remnant X-ray source Cassiopeia-A (Cas-A) is being
+     used for periodic in-flight calibration because of its relatively
+     high intensity in the XRS energy range. Once or twice a year XRS is
+     pointed to Cas-A for about 48 hours and then away from that source
+     for another 48 hours to accumulate background measurements. These
+     measurements provide an evaluation and calibration of the XRS anti-
+     coincidence and rise-time discrimination background rejection
+     systems.
+ 
+   Parameters
+   ==========
+     The principal parameters when observing with the XRS are as
+     follows:
+ 
+ 
+     * Integration Period: Normal (quiet Sun) or Flare. In Normal mode
+     three different integration intervals are used, depending on
+     distance to the planet. These may be set over a wide range, but the
+     default values are:
+ 
+                  Integration  Collection Time
+       Closest:        40 s       2000 s
+       Mid-Range:     200 s      10000 s
+       Greatest:      450 s      31200 s
+ 
+     In flare mode integration periods are automatically shortened to a
+     pre-determined level, typically 20 s, for 60 minutes or less.
+ 
+     * Veto Event: Accept or reject events with a simultaneous signal
+     from the anti-coincidence wires.
+ 
+     * Rise-Time Validation: Accept or reject events with an invalid
+     rise time measurement.
+ 
+   Data
+   ====
+     The XRS instrument telemetry conveys science data, configuration
+     data and status (housekeeping) data. Several telemetry packets are
+     used to downlink this information:
+ 
+        Status Housekeeping Packets
+        Uncompressed Science Packets
+        Compressed Science Packets
+        Raw Sensor Data Packets
+ 
+     The useful science and housekeeping measurements from the telemetry
+     are decompressed and decomutated and are correlated and accumulated
+     into one binary table, which constitutes the primary experimental
+     data record.
+ 
+     Each record of the table contains four energy spectra,
+     housekeeping, status, and rate data for one integration period. The
+     spectra correspond to the Mg-filtered detector (GPC1), the
+     Al-filtered detector (GPC2), the unfiltered detector (GPC3), and
+     the solar monitor (SAX). All the spectra have 256 bins, but only
+     the highest 244 bins for the GPC and the highest 231 bins for the
+     SAX are telemetered. All bins are 16 bits deep. There are five
+     32-bit rate counters for SAX and nine 24-bit rate counters for each
+     of the three gas proportional counters.
+ 
+     Rate counters for all four detectors include raw, valid event,
+     analyzed, pileup, and high-energy rates. The gas detectors also
+     have counters for the veto-anode, veto, rise-pileup, and
+     rise-rejection rates.
+ 
+     Housekeeping data provide voltage, current, and temperature
+     readings measured at the end of each integration period. Also
+     reported are record and software status, hardware settings and
+     integration and reporting times.
+ 
+     The CDR data products are aggregated to produce the RDRs; in
+     combination with the relevant SPICE kernels and the instrument&apos;s
+     field-of-view parameters, a planetary footprint can be calculated
+     for each CDR record.  These footprints form the basis for placing
+     CDR data onto the aggregate map that forms the basis of the
+     elemental ratio maps.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+   Confidence Level Overview
+   =========================
+     The XRS CDR data are the calibrated data records released for the XRS.
+     They include all of the EDR data plus other information such as detector
+     energy calibration, engineering data conversions, and spatial data which
+     will be necessary to convert raw XRS counts to planetary surface
+     compositions. The XRS RDR maps are created using the calibrated XRS CDR
+     products.
+ 
+   Review
+   ======
+     The XRS CDR was reviewed internally by the XRS team prior to release to
+     the PDS.  PDS also performed an external review of the XRS CDR. Likewise,
+     the XRS RDR products are reviewed both internally by the XRS science team
+     and by PDS.
+ 
+   Data Coverage and Quality
+   =========================
+     XRS RDR maps are generated from data collected only while in orbit at
+     Mercury, which is from phases Mercury Orbit through Mercury Orbit Year 5.
+     It is, however, helpful to review the larger mission from which these
+     data are derived.
+ 
+     Nineteen mission phases: Launch, Earth Cruise, Earth Flyby, Venus 1
+     Cruise, Venus 1 Flyby, Venus 2 Cruise, Venus 2 Flyby, Mercury 1 Cruise,
+     Mercury 1 flyby, Mercury 2 Cruise, Mercury 2 flyby, Mercury 3 Cruise,
+     Mercury 3 flyby, Mercury 4 Cruise, Mercury Orbit, Mercury Orbit Year 2,
+     Mercury Orbit Year 3, Mercury Orbit Year 4, and Mercury Orbit Year 5.
+     These mission phases are defined as:
+ 
+                           Start time          End time
+     Phase Name            Date (DOY)          Date (DOY)
+     -------------------   -----------------  -----------------
+     Launch                03 Aug 2004 (216)  12 Sep 2004 (256)
+     Earth Cruise          13 Sep 2004 (257)  18 Jul 2005 (199)
+     Earth Flyby           19 Jul 2005 (200)  16 Aug 2005 (228)
+     Venus 1 Cruise        17 Aug 2005 (229)  09 Oct 2006 (282)
+     Venus 1 Flyby         10 Oct 2006 (283)  07 Nov 2006 (311)
+     Venus 2 Cruise        08 Nov 2006 (312)  22 May 2007 (142)
+     Venus 2 Flyby         23 May 2007 (143)  20 Jun 2007 (171)
+     Mercury 1 Cruise      21 Jun 2007 (172)  30 Dec 2007 (364)
+     Mercury 1 Flyby       31 Dec 2007 (365)  28 Jan 2008 (028)
+     Mercury 2 Cruise      29 Jan 2008 (029)  21 Sep 2008 (265)
+     Mercury 2 Flyby       22 Sep 2008 (266)  20 Oct 2008 (294)
+     Mercury 3 Cruise      21 Oct 2008 (295)  15 Sep 2009 (258)
+     Mercury 3 Flyby       16 Sep 2009 (259)  14 Oct 2009 (287)
+     Mercury 4 Cruise      15 Oct 2009 (288)  03 Mar 2011 (062)
+     Mercury Orbit         04 Mar 2011 (063)  17 Mar 2012 (077)
+     Mercury Orbit Year 2  18 Mar 2012 (078)  17 Mar 2013 (076)
+     Mercury Orbit Year 3  18 Mar 2013 (077)  17 Mar 2014 (076)
+     Mercury Orbit Year 4  18 Mar 2014 (077)  17 Mar 2015 (076)
+     Mercury Orbit Year 5  18 Mar 2015 (077)  30 Apr 2015 (120)
+ 
+     No XRS data were collected during Earth Flyby or Venus 1 Flyby phases.
+     The XRS was on for some of each of the other seventeen mission phases.
+     During these planned operational periods, the XRS functioned nominally
+     and the data quality was good. Specific XRS operational periods were:
+ 
+                           Start time         End time
+     Phase Name            Date (DOY)         Date (DOY)
+     -----------------     ----------------   ----------------
+     Launch                30 Aug 2004 (243)  30 Aug 2004 (243)
+     Earth Cruise          07 Feb 2005 (038)  11 Feb 2005 (042)
+                           14 Apr 2005 (104)  14 Apr 2005 (104)
+                           09 Jul 2005 (190)  13 Jul 2005 (194)
+     Earth Flyby           No Data
+     Venus 1 Cruise        16 Jan 2006 (016)  13 Feb 2006 (044)
+                           06 Sep 2006 (249)  10 Sep 2006 (253)
+     Venus 1 Flyby         No Data
+     Venus 2 Cruise        27 Jan 2007 (027)  31 Jan 2007 (031)
+     Venus 2 Flyby         26 May 2007 (146)  20 Jun 2007 (171)
+     Mercury 1 Cruise      21 Jun 2007 (172)  08 Aug 2007 (220)
+                           17 Aug 2007 (229)  25 Aug 2007 (237)
+                           21 Dec 2007 (355)  30 Dec 2007 (364)
+     Mercury 1 Flyby       31 Dec 2007 (365)  21 Jan 2008 (021)
+     Mercury 2 Cruise      28 Mar 2008 (088)  02 Jun 2008 (154)
+                           11 Jun 2008 (163)  21 Sep 2008 (265)
+     Mercury 2 Flyby       22 Sep 2008 (266)  20 Oct 2008 (294)
+     Mercury 3 Cruise      21 Oct 2008 (295)  19 Nov 2008 (324)
+                           15 Jan 2009 (015)  04 May 2009 (124)
+                           07 May 2009 (127)  17 May 2009 (137)
+                           28 Aug 2009 (240)  01 Sep 2009 (244)
+                           04 Sep 2009 (247)  15 Sep 2009 (258)
+     Mercury 3 Flyby       16 Sep 2009 (259)  29 Sep 2009 (272)
+     Mercury 4 Cruise      22 Jan 2010 (022)  03 Dec 2010 (337)
+                           06 Dec 2010 (340)  03 Mar 2011 (062)
+     Mercury Orbit         04 Mar 2011 (063)  16 Mar 2011 (075)
+                           23 Mar 2011 (082)  07 Mar 2012 (067)
+                           12 Mar 2012 (072)  17 Mar 2012 (077)
+     Mercury Orbit Year 2  23 Mar 2012 (083)  17 Mar 2013 (076)
+     Mercury Orbit Year 3  18 Mar 2013 (077)  17 Mar 2014 (076)
+     Mercury Orbit Year 4  18 Mar 2014 (077)  17 Mar 2015 (076)
+     Mercury Orbit Year 5  18 Mar 2015 (077)  30 Apr 2015 (120)
+ 
+     The XRS detectors were on continuously during orbital mission phases
+     except where spacecraft operations (eclipses) and instrument health and
+     safety (temperature and count rate) required some or all of the detectors
+     to be turned off.  Details of these off periods and other operational
+     issues may be found in the XRS EDR and CDR data confidence notes.
+ 
+     The XRS RDR maps were produced from data collected during the Mercury
+     Orbit, Mercury Orbit Year 2, Mercury Orbit Year 3, Mercury Orbit Year 4,
+     and Mercury Orbit Year 5 mission phases. The maps are for elemental
+     ratios Mg/Si, Al/Si, S/Si, Ca/Si, and Fe/Si. The Mg/Si and Al/Si maps
+     include data acquired both during solar flares and more quiescent
+     &apos;Quiet Sun&apos; conditions. The dynamic range of Al/Si on Mercury is
+     considerably smaller than that of Mg/Si and the errors on individual
+     quiet sun Al/Si analyses are relatively large.  The other three ratio
+     maps all require flare data and as a result the spatial coverage is
+     more spotty.
+ 
+     Because of the MESSENGER spacecraft elliptical orbit which achieves
+     periapse over the northern hemisphere, spatial resolution is finer in the
+     northern hemisphere, but coverage is more complete in the southern
+     hemisphere.  Three sets of maps are provided for each element ratio:
+     elemental ratio, error, and effective resolution.
+ 
+     The maps are 1440 x 720 pixels corresponding to 1/4-degreee pixels in
+     cylindrical projection centered on lat,lon=0,0. Thus, the first column
+     represents longitude =-180 to -179.75 degrees, the bottom row is -90 to
+     -89.75 degrees south latitude, etc. Images are 8-bit.
+ 
+     All maps are linearly scaled such that the maximum pixel value (255)
+     corresponds to a maximum value listed in the table below. Thus, to get
+     the actual value from a pixel, one would multiply the pixel values by the
+     maximum pixel value divided by 255.  Zero values indicate no data.
+ 
+     Mg/Si
+     xrs_map_mg_si_20150424     max =      0.782
+     xrs_unc_mg_si_20150424     max =      0.149
+     xrs_res_mg_si_20150424     max =       1957
+ 
+     Al/Si
+     xrs_map_al_si_20150424     max =      0.353
+     xrs_unc_al_si_20150424     max =      0.084
+     xrs_res_al_si_20150424     max =       1916
+ 
+     S/Si
+     xrs_map_s__si_20150424     max =      0.147
+     xrs_unc_s__si_20150424     max =      0.037
+     xrs_res_s__si_20150424     max =       2697
+ 
+     Ca/Si
+     xrs_map_ca_si_20150424     max =      0.316
+     xrs_unc_ca_si_20150424     max =      0.077
+     xrs_res_ca_si_20150424     max =       2695
+ 
+     Fe/Si
+     xrs_map_fe_si_20150424     max =      0.098
+     xrs_unc_fe_si_20150424     max =      0.028
+     xrs_res_fe_si_20150424     max =       2894
+ 
+     Data selection criteria for the maps were as follows:
+ 
+     FOV=1 or 3 data from the five Mercury Orbit mission phases only.
+ 
+     Data which had contributions from charged particles were excluded, based
+     on the count rate around 8 keV due to electron induced fluorescence of
+     the collimator material, as well as derived Mg/Si and Al/Si count ratios,
+     where higher count rate ratios are generally due to electron fluorescence
+     of the Mg and Al filters.
+ 
+     To improve statistical precision, quiet-Sun data (Mg/Si and Al/Si maps)
+     were spatially binned such that XRS count rates acquired within a given
+     spatial bin were co-added prior to derivation of elemental ratios. A
+     quiet-Sun measurement was only included in the maps if the statistical
+     uncertainty on Mg/Si was lower than 0.5 (absolute) and that for Al/Si
+     was lower than 0.2. Only a subset of southern quiet-Sun data was
+     included because there was so much coverage in the southern hemisphere,
+     however, a random selection of southern quiet-Sun data from throughout
+     the orbital mission period is included in the maps so as not to
+     introduce any bias.
+ 
+     When coverage included many overlapping footprints, footprint
+     measurements that differed by more than 4 sigma from all others were
+     excluded.
+ 
+   Limitations
+   ===========
+     This is a calibrated data set.  It includes the data that are received
+     from the spacecraft telemetry as well as calibration information and
+     other ancillary data necessary for data analysis.  The XRS RDR maps are
+     created using the calibrated XRS CDR products.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

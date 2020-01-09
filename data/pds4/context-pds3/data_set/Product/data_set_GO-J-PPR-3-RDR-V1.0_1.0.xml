@@ -1,0 +1,1715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.go-j-ppr-3-rdr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GALILEO ORBITER PPR REDUCED DATA RECORD (RDR) V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.galileo::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.go::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:ppr.go::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.gll_pct::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:calibration.ppr_rct::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.jupiter::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.callisto::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.europa::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.ganymede::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.io::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.go-j-ppr-3-rdr-v1.0__browserp_go-j-ppr-3-rdr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Galileo Orbit Activity Plan, GLL-625-100, Volume 4.
+            </reference_text>
+            <description>reference.GLLOAP</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Galileo Orbit Planning Guides, GLL-625-100, Volume 2.
+            </reference_text>
+            <description>reference.GLLOPG</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hunten, D.M., L. Colin, and J.E. Hansen, Atmospheric Science on the
+                   Galileo Mission, Space Science Reviews, 44, 191-240, 1986.
+            </reference_text>
+            <description>reference.HUNTENETAL1986</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Johnson, T.V., C.M. Yeates, and R. Young, Space Science Reviews Volume on
+                   Galileo Mission Overview, Space Science Reviews, 60, 3-21, 1992.
+            </reference_text>
+            <description>reference.JOHNSONETAL1992</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Orton, G.S., J.R. Spencer, L.D. Travis, T.Z. Martin, L.K. Tamppari,
+                   Galileo Photopolarimeter- Radiometer Observations of Jupiter and the
+                   Galilean Satellites, Science, 274, 389-391, 1996.
+            </reference_text>
+            <description>reference.ORTONETAL1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Russell, E.E., F.G. Brown, R.A. Chandos, W.C. Fincher, L.F. Kubel, A.A.
+                   Lacis, and L.T. Travis, Galileo Photopolarimeter/Radiometer Experiment,
+                   Space Sci. Rev. 60 p. 531-563, 1992.
+            </reference_text>
+            <description>reference.RUSSELLETAL1992</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>GO-J-PPR-3-RDR-V1.0</data_set_id>
+        <data_set_name>GALILEO ORBITER PPR REDUCED DATA RECORD (RDR) V1.0</data_set_name>
+        <data_set_release_date>2002-11-30</data_set_release_date>
+        <start_time>1996-06-26T22:56:24Z</start_time>
+        <stop_time>2002-01-21T09:11:14Z</stop_time>
+        <producer_full_name>LARRY D. TRAVIS</producer_full_name>
+        <citation_text>
+            Travis, L.D., T.Z. Martin, G.S. Orton, J.R. Spencer, L.K.
+            Tamppari, R.F. Beebe and L.F. Huber, GO-J-PPR-3-RDR-V1.0, NASA
+            Planetary Data System, 2002.
+        </citation_text>
+        <data_set_terse_desc>
+            The Photopolarimeter/Radiometer (PPR) is designed to measure the
+            degree of linear polarization and intensity of reflected or
+            scattered sunlight and the intensity of thermally emitted
+            radiation from Jupiter and its major satellites.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+Data Set Overview
+=================
+ 
+The Photopolarimeter/Radiometer (PPR) subsystem is one of the four
+remote sensing instruments mounted on the Galileo Orbiter scan
+platform and is designed to measure the degree of linear polarization
+and intensity of reflected or scattered sunlight and the intensity of
+thermally emitted radiation from Jupiter and its major satellites.
+Primary science objectives and anticipated results of the PPR
+experiment are to: (1) determine the vertical and horizontal
+distribution of cloud and haze particles in the atmosphere of Jupiter;
+(2) determine the energy budget of Jupiter and the variation in the
+amount and spatial distribution of reflected solar radiation and
+emitted thermal radiation for Jupiter and its satellites, including
+the thermal structure of the atmosphere of Jupiter; and (3) measure
+and map the photometric, polarimetric, and thermal radiometric
+properties of the major satellites of Jupiter.  These objectives of
+course contribute to the broader goals of the Galileo Mission science
+disciplines of atmospheres and satellites as planned and coordinated
+by the Atmospheres Working Group (AWG) and the Satellite Working Group
+(SWG).
+ 
+With the Galileo Orbiter constrained to use the low-gain antenna, the
+Jupiter Phase mission planning was necessarily predicated on the
+strategy of recording most of the observations by the remote sensing
+instruments during each encounter period, or Jupiter and satellite
+close approach, for playback during the long cruise portions of the
+eccentric orbits.  As a consequence, the key spacecraft resources for
+science operations were Data Memory System (DMS) track usage, bits-to-
+ground as a measure of downlink telemetry capability, and propellant
+for spacecraft attitude reorientation, or science turns.  Initial
+planning by the Galileo Project Science Group (PSG) thus entailed the
+allocation of spacecraft resources to the three science disciplines -
+atmospheres, magnetosphere, and satellites - with the respective
+working groups planning and coordinating specific observations, or
+Orbit Activity Plan ELements (OAPELs).  The resulting plans are
+summarized in the Orbit Planning Guide (OPG; [GLLOPG]).
+ 
+The OPG summarizes the basic science objectives for each discipline
+and describes the strategies that were adopted given the resources
+allocated to each WG.  For the AWG, the strategy was to focus on
+integrated studies of a variety of atmospheric features and to
+emphasize observations that are unique in terms of instrumental
+capability or observing geometry opportunities.  For the SWG, the
+objective was to obtain global coverage of the satellites at modest
+spatial resolution consistent with resources and to emphasize small
+regions of interest for high spatial resolution and full multispectral
+coverage.  AWG and SWG objectives required coordinated observations by
+two or more of the four scan platform instruments as well as some
+observations by individual instruments.
+ 
+AWG Science Objectives and Observation Strategy:
+ 
+Atmospheric science objectives for the Galileo Mission were to: (1)
+determine the chemical composition of the atmosphere; (2) determine
+the structure of the atmosphere to a depth of at least 10 bars; (3)
+determine the nature of the cloud particles and the location and
+structure of the cloud layers; (4) determine the radiative energy
+balance in the atmosphere; (5) investigate the circulation and
+dynamics of the atmosphere; and (6) investigate the upper atmosphere
+and ionosphere.  The Galileo Probe addressed these objectives at one
+location and time, while the Orbiter observations are essential for
+completing the picture by providing spatial and temporal coverage.
+Observations by the remote sensing instruments on the Orbiter provide
+high spatial resolution with broad spectral and phase angle coverage.
+In general, coordinated observations by the scan platform instruments
+are the optimum strategy because of the broad spectral coverage thus
+afforded.  While many of the AWG observations were accordingly
+coordinated, the planned sequences typically involved distinct OAPELs
+for the individual instruments closely spaced in time rather than
+actually simultaneous measurements because of practical issues of
+efficient DMS tape usage.
+ 
+Since the number of image frames from the Solid State Imaging (SSI)
+system was rather restricted for the low-gain antenna mission, the AWG
+emphasized the observation of discrete atmospheric features utilizing
+joint remote sensing by the scan platform instruments.  So the primary
+AWG observational objective was for local regions defined by spatial
+scales of about 10,000 km, to determine the temperature structure,
+distribution of minor gaseous constituents, properties of the clouds,
+radiative energy budget, and wind field from observations at the
+highest spatial resolution over a range of emission and phase angles.
+These local regions included the Probe Entry Site, shearing regions at
+the edges of jets, white ovals, brown &apos;barges&apos;, infrared &apos;hot spots&apos;,
+and equatorial plumes.  Because of the need to obtain SSI frames
+spaced appropriately in time for determining cloud motions and to
+obtain a range of emission and phase angles, these observations were
+called feature tracks.  Features covering a broader area are also
+important, but their coverage could not involve joint observations by
+all remote sensing instruments at their fullest capabilities.  These
+regions included the Great Red Spot (GRS), the North and South Polar
+Regions, and two stable axisymmetric features: South Tropical Zone
+(STrZ) and North Equatorial Belt (NEB).  In order to establish
+context, to study zonal wave structure, and to provide a modest survey
+for temporal variations, global observations by individual instruments
+were planned on a very limited basis.  Finally, given the limitations
+of local or regional feature characterization and the relatively
+modest opportunities for complete longitudinal coverage in global
+maps, meridional scans were employed to provide sensitive studies of
+meridional variability of temperature, composition, or cloud
+properties.
+ 
+PPR observations in support of the AWG strategy are characterized by
+the following OAPEL types:
+1) FTBAS:  Basic feature track support; observes the local regions in
+both radiometry and photopolarimetry as part of the atmospheric
+feature campaign involving all the remote sensing instruments.
+2) FTPOL:  Adds feature track coverage to FTBAS in photopolarimetry at
+other phase angles.
+3) FTRAD:  Repeat of feature track in FTBAS in radiometry at different
+emission angle.
+4) REGMAP:  Characterize properties of a region larger than the
+standard feature track; nominally 4 times larger in both dimensions.
+5) GLOBAL:  Global map with complete coverage over 360 degrees of
+longitude with variable latitude range.
+6) NSSTRP:  North-south stripe provides pole-to-pole coverage at
+selected longitudes, sometimes selected to pass through features
+observed in feature track or regional map observations.
+ 
+SWG Science Objectives and Observation Strategy:
+ 
+Satellite science objectives for the Galileo Mission were to: (1)
+characterize the morphology, geology, and physical state of the
+satellite surfaces; (2) investigate the surface mineralogy of the
+satellites and determine the distribution of the compositional units;
+(3) determine the gravitational fields, magnetic fields, and dynamical
+properties of the satellites; and (4) study satellite atmospheres and
+ionospheres, extended gas clouds arising from the satellites, and
+interactions with the magnetosphere.  Observations to achieve the
+satellite science objectives have far less emphasis on coordinated
+measurements by the scan platform instruments than that for
+atmospheres, but instead are often focussed on timing of specific
+observations within the context of the satellite encounter geometry.
+ 
+Principal PPR satellite science objectives are: (1) characterizing the
+nature of current Io volcanism including temporal variability; (2) the
+search for possible internal activity on Europa and delineation of
+Europa&apos;s surface thermophysical properties; (3) characterizing the
+surface physical and optical properties with photopolarimetric phase
+observations; (4) determining global surface thermophysical property
+variations and surface volatile stability on Ganymede and Callisto;
+and (5) obtaining absolute temperature distribution maps.  The PPR
+OAPEL types employed to obtain appropriate observations to realize
+these objectives are:
+1) DGTM (Dayside Global Thermal Map):  Determine global daytime
+brightness temperature with highest possible spatial resolution as a
+function of wavelength to characterize global variations in surface
+compaction, its correlation with geological unit, and its possible use
+for evaluating surface ages, emplacement mechanisms, or compositions;
+investigate sub-resolution temperature variations as probes of surface
+roughness and local albedo distribution; and evaluate stability of
+volatiles on the surface.
+2) TPO (Thermal Phase Observation):  Observe the variation in
+brightness temperature of a particular point on the surface when seen
+from different directions to improve the determination of kinetic
+surface temperatures.
+3) DRKMAP (Darkside Map):  Determine global nighttime brightness
+temperatures with highest possible spatial resolution as a function of
+wavelength to characterize global variations in surface compaction,
+its correlation with geological unit, and its possible use for
+evaluating surface ages, emplacement mechanisms, or compositions and
+to look for possible sources of endogenic heat for Europa.
+4) HIRESS (High Resolution Samples):  Determine brightness temperature
+distribution for small areas near closest approach to characterize
+local variations in surface properties, evaluate stability of
+volatiles on the surface, and look for possible sources of endogenic
+heat for Europa.
+5) PPO (Polarimetry Phase Observation):  Measure polarization of
+reflected sunlight as a function of phase angle to infer grain sizes
+and refractive index of surface particles.
+6) IOLITE (Io Bright-Side Monitoring):  Map thermal emission as a
+function of wavelength with best possible spatial resolution on
+several orbits to characterize spatial distribution and temporal
+variability of large, low-temperature, high power hot spots on Io&apos;s
+sunlit hemisphere.
+7) IOMON (Io Monitoring):  Map thermal emission as a function of
+wavelength with best possible spatial resolution on several orbits to
+characterize spatial distribution and temporal variability of large,
+low-temperature, high power hot spots.
+ 
+As indicated in the Orbit Planning Guide, the Galileo Orbiter Jupiter
+Phase began with the approach to Jupiter and orbit insertion (JA/J0)
+followed by the prime mission with a tour of eleven orbits around
+Jupiter.  NASA approved the Galileo Europa Mission (GEM) to follow the
+prime mission with a tour of fourteen more orbits with a focus on
+Europa and concluding with two encounters of Io.  The Io encounters
+were placed at the end of GEM because of the increased risk to the
+spacecraft and instruments from the intense radiation expected at that
+closer approach to Jupiter.  Despite some effects attributable to the
+radiation, the overall Galileo Orbiter health remained quite good, and
+NASA thus approved a further extended tour, the Galileo Millennium
+Mission (GMM), which among a number of objectives, permitted observations
+from two platforms as the Cassini spacecraft made its Jupiter
+flyby in late 2000 on its way to Saturn.  The tours were shaped by
+close, or targeted, encounters with Ganymede, Europa, Callisto, and
+Io, with one such encounter on each orbit except numbers 5 and 13,
+which were used as &apos;phasing orbits&apos; with no planned encounter science
+owing to the effect of Jupiter solar conjunction on telemetry.  There
+were in addition to the targeted encounters, non-targeted satellite
+encounters that permitted observations at intermediate ranges for a
+number of the orbits.  The convention adopted for designating the tour
+encounter phases covering the period of several days about the
+satellite encounters and Jupiter closest approach was to use the
+letter corresponding to the targeted satellite and the orbit number,
+e.g., G1, E4, C10, and I24.  Based upon the allocated spacecraft
+resources, the specific opportunities presented by each encounter
+phase, and the observation strategies described above, the working
+groups designed a detailed plan for the mission as described in the
+Orbit Activity Plan [GLLOAP].
+ 
+PPR observations in the detailed mission plan used the basic OAPEL
+types described above (as well as a few special types added later),
+usually in a special PPR Burst-to-Tape record format that stored the
+relatively low rate (216 bps) PPR data in spacecraft memory until an
+appropriately-sized block of data was accumulated to be written to the
+DMS tape.  Other PPR observations were made in the so-called &apos;ride-
+along&apos; mode with a record format that included the PPR data as part of
+the Low Rate Science along with data from the prime instrument for
+that particular OAPEL, nearly always either the Near-Infrared Mapping
+Spectrometer (NIMS) or SSI instruments.  For both types of PPR
+observations, the original strategy was to use one of three principal
+PPR operational modes: (1) cycle mode, for which the PPR filter wheel
+makes a complete cycle over a period of about 28 seconds, making
+photopolarimetry and thermal radiometry measurements; (2) radiometry
+mode, for which the PPR filter wheel cycles back and forth over just
+the 7 radiometry positions; and (3) photopolarimetry mode, for which
+the PPR filter wheel makes a complete cycle, but steps through the
+radiometry positions without taking any data.
+ 
+Midway through the G1 encounter, the PPR instrument exhibited
+anomalous behavior with the filter wheel becoming stuck at a single
+radiometry position.  As a consequence, all planned PPR OAPELs for G2
+were canceled and a sequence involving thermal cycling of the
+instrument in an attempt to recover wheel stepping was added at the
+end of the G2 encounter.  When that recovery attempt failed, all PPR
+OAPELs in C3 and E4 were performed at the single radiometry band at
+which the wheel was stuck.  Another recovery sequence at the end of
+the E4 sequence proved successful and all PPR observations from then
+until the end of the Jupiter Phase Nominal Mission were performed
+using an operational mode that allows stepping the wheel back and
+forth over a few positions, thus permitting operations without going
+back to the position at which the wheel had become stuck.  This same
+strategy was followed throughout GEM and GMM, but it was necessary to
+have the filter wheel step through the worrisome position on several
+occasions in order to start a new cycle.  In each case this operation
+was successful and the filter wheel did not become stuck.  Of course,
+this means that most PPR OAPELs were then made at fewer wavelengths
+than originally planned.  See the INST.CAT file for a detailed
+description of the PPR operational modes and the nature of the filter
+wheel anomaly.
+ 
+The observations in the present data set are the PPR Reduced Data Record
+(RDR) level data for GEM and GMM from E12 encounter through I33
+encounter.  The RDR data include PPR science data converted from raw
+science data numbers (DN) in the Reformatted Experiment Data Record
+(R_EDR) data set (DATA_SET_ID: GO-J-PPR-2-REDR-GEM-GMM-V1.0) to
+intensity for the photometry measurements; intensity, linear
+polarization degree, and polarization direction for polarimetry; and
+radiance in dimensionless DN and corresponding brightness temperature
+for the radiometry.  The PPR R_EDR data were organized as records in an
+ASCII table, one record for each minor frame buffer of raw PPR data,
+with each record containing three pairs of PPR science data samples.
+Each record of the RDR data set contains the reduced data for a single
+pair of science data samples along with time tag information and some of
+the instrument housekeeping from the R_EDR records, again presented in
+ASCII tabular format.  Data for each observation, or OAPEL, are
+contained in a single data file.  File labels specify the OAPEL, the
+time of observation, data file format, and a unique PRODUCT_NAME for the
+observation that is generally the same as the Galileo observation ID
+with -R_EDR or -RDR appended to indicate reformatted EDR or reduced data
+(present data set), respectively.
+ 
+The observation ID is a 12-character field that begins with two
+characters for the orbit (e.g., E4, with the letter dropped after
+orbit C9), followed by one letter for the target body (J - Jupiter,
+C - Callisto, E - Europa, G - Ganymede, I - Io, N - calibration
+target, X - space or not applicable), followed by one letter for the
+prime instrument for the OAPEL (N - NIMS, P - PPR, S - SSI, U - UVS),
+followed by six characters for the observation name (usually the OAPEL
+type, but also proper names or abbreviations thereof), followed by a
+2-digit observation series number.  Thus, the observation IDs for the
+two PPR global maps of Jupiter in orbit G1 are G1JPGLOBAL01 and
+G1JPGLOBAL02, while the PPR ride-along with one of the NIMS
+observations of a brown barge at 42-degree phase angle in orbit E11 is
+11JNBRG04203.  An exception to the leading portion (prior to -RDR) of
+the PRODUCT_NAME being identical to the observation ID is that we
+retain the leading letter for the orbits after C9.
+ 
+ 
+Parameters
+==========
+ 
+The PPR presents to the Galileo Orbiter Command and Data Subsystem
+(CDS), an 18-byte instrument data buffer for each 2/3-sec interval
+corresponding to one minor frame (or MOD91) count of the spacecraft
+clock (91 minor frames constitute one RIM count of the spacecraft
+clock).  For each of the 18-byte PPR minor frame records, the first
+six bytes are housekeeping data that completely specify the instrument
+status, both commanded parameters and position within operational
+measurement mode cycles.  The remaining twelve bytes are three sets of
+PPR science data sample pairs and their associated identifying
+parameters and parity check bit.
+ 
+Because of the differences in time required for specific steps of the
+instrument operation, the various operational modes of the PPR result
+in the generation of the 18-byte minor frame records at variable
+rates.  Those rates range from just slightly slower than that at which
+the CDS performs the readout of those records every 2/3 second to a
+rate that is about three times slower.  Accordingly, the PPR design
+uses two internal 18-byte buffers that are alternately filled, with
+one buffer being active, or in the state of being filled, and the
+other containing the previous 18 bytes of housekeeping and science
+data for the sequence.  At the time of each CDS readout of PPR data,
+it is only the non-active buffer that is presented and placed into the
+CDS processing stream, and whenever that buffer has been previously
+transferred, the PPR sets a flag in the housekeeping data of that
+record to indicate that it is a &apos;repeat&apos; record.  For PPR observations
+that use the Low Rate Science format to record to the DMS tape, all
+PPR minor frame records are recorded and ultimately returned.  With
+the PPR Burst-to-Tape record mode, however, the CDS checks the PPR
+housekeeping to identify and discard the repeat records, storing only
+the non-redundant records for playback and downlink telemetry.
+ 
+The PPR R_EDR data set is organized with the PPR minor frame record as
+the focus, so each record of the R_EDR ASCII table is a set of columns
+that displays all of the housekeeping and science data for that minor
+frame along with the spacecraft clock RIM and MOD91 counts that
+correspond to the time that the memory buffer containing those data was
+readout by the CDS.  In contrast, the focus of the PPR RDR data set is
+on the science data unit, with a separate record generated for each of
+the three science data sample pairs of the minor frame record.
+Moreover, in order to appropriately represent the time at which a
+given science sample was acquired, we use the specific timing of the
+PPR operational modes to determine an &apos;adjusted&apos; spacecraft clock RIM
+and MOD91 count.  The ADJUSTED_RIM and ADJUSTED_MOD91 are the first
+two parameters of each RDR record and are followed in the record with
+the RIM and MOD91 values to provide an unambiguous identification of
+the R_EDR record from which the RDR data came.  Note that the adjusted
+RIM and MOD91 naturally always represent earlier times than the RIM
+and MOD91 corresponding to the time of the readout of the PPR memory
+buffer.  Following the adjusted and original spacecraft clock counts
+is the portion of the PPR housekeeping that describes the instrument
+status (i.e., not including parity information, valid command count,
+repeat memory buffer flag, and memory buffer ID contained in the R_EDR
+version archive), the PPR filter wheel position, the raw science data
+sample pair in DN, right ascension and declination (in degrees) of the
+scan platform instruments boresight direction, radiometry radiance in
+DN, radiometry brightness temperature in Kelvins, photometry or
+polarimetry radiance in DN, photometry or polarimetry radiance in
+absolute units of watts per square cm per steradian per nm, linear
+polarization degree in percent, polarization direction angle in
+degrees (i.e., the direction of the maximum E-field vector in the
+scene radiance relative to the PPR reference plane defined by the
+instrument baseplate), and a flag indicating whether the data sample
+pair was corrupted by a spacecraft boom passing through the PPR FOV.
+ 
+ 
+Processing
+==========
+ 
+The PPR makes three different types of measurements: photometry,
+polarimetry, and radiometry, with a range of positions on the rotating
+PPR filter wheel corresponding to each.  Positions 0 - 17 are used for
+three polarimetry spectral bands, 18 - 24 for seven thermal radiometry
+bands, and 25 - 31 for seven photometry bands.  At each of the thermal
+radiometry positions, a chopper mirror alternately directs the scene
+flux and the space-view reference flux through the filter and then
+from a mirror mounted on the back of the filter wheel to a
+pyroelectric detector.  For radiometry measurements, the first of the
+pair of data samples is the digitized output from the detector while
+the second data sample is the reading from one of 10 thermistors
+monitoring the temperature of internal instrument elements or 2
+platinum resistance thermometers and a reference resistance monitoring
+the temperature of the PPR radiometric calibration target (RCT).  At
+the photometry and polarimetry positions, the scene flux is directed
+by a relay lens through a Wollaston prism that splits the input into
+two orthogonally-polarized output beams, which are then focused onto a
+pair of silicon photodiode detectors.  Polarimetry measurements for a
+given spectral band are made at three filter wheel positions with
+three different orientations of half-wave retarders (mounted over the
+filter positions) in order to obtain the linear polarization degree
+and direction as well as intensity, whereas for photometry, the two
+orthogonal intensity components are simply added to get the intensity.
+ 
+The data reduction of the thermal radiometry entails the correction of
+the raw pyroelectric detector output for contributions to the measured
+flux by emission, albeit small, from internal elements such as mirrors
+and radiometric stops.  These corrections use the element temperatures
+monitored by the thermistors along with calibration factors determined
+through ground thermal vacuum tests in which each element was in turn
+heated by several degrees to observe the sensitivity to that
+particular element.  The corrected net thermal radiance is then
+converted to a brightness temperature in Kelvins.
+ 
+Input data for the RDR data set are of course the R_EDR data, with
+three RDR records generated for each R_EDR record, corresponding to
+one RDR record for each of the three science data sample pairs in the
+R_EDR record, as described above.  Each RDR data set record identifies
+the filter wheel position for that particular science data sample
+pair, which in turn indicates whether that record corresponds to
+radiometry, photometry, or polarimetry.  Thus, meaningful reduced
+values for the respective type of PPR measurement appear in the
+appropriate columns and zero-fill is used in the other columns; e.g.,
+when the filter wheel is at position 21, there are entries for the
+radiometry radiance in DN and the brightness temperature, but the
+polarimetry/photometry intensities, linear polarization degree, and
+polarization directions are set to zero.  Since polarimetry requires a
+minimum of two, and preferably three successive retarder positions,
+the tabulated polarization quantities are based upon the current data
+sample position and the previous, most recent data for the other
+requisite position(s).
+ 
+ 
+Data
+====
+ 
+The PPR reduced data are formatted as ASCII tables, one record for
+each PPR data sample pair corresponding to a single measurement.  Each
+record begins with the adjusted spacecraft clock RIM and MOD91 counts
+that correspond to the time at which the sample was acquired and these
+are followed by the original RIM and MOD91 that provide the time tag
+identifying the R_EDR record that serves as the input for these RDR
+records.
+ 
+For PPR observations that use the Burst-to-Tape record mode, the
+spacecraft scan platform pointing (viz., right ascension and
+declination angles) information is merged with the PPR science data
+because the Attitude and Articulation Control System (AACS) readouts
+that are included in the Low Rate Science record blocks and provide
+scan platform pointing would not otherwise be available with adequate
+frequency in the playback and downlink of the Burst-to-Tape mode.  So
+the two columns of the RDR records for the scan platform right
+ascension and declination angles, are set to zero when the PPR
+observation uses the Low Rate Science record mode.  In all record
+formats other than PPR Burst-to-Tape, the AACS information is
+delivered directly to the SPICE System, which provides general target
+and observing geometry and is archived in PDS.  For the Burst-to-Tape
+record mode, the scan platform right ascension and declination are
+obtained from the PPR science data and then delivered to the SPICE
+System.
+ 
+Note also that in the PPR Burst-to-Tape record mode, the second byte
+of the PPR housekeeping is deleted from the data stored in the CDS
+memory buffer in order to reduce the total data volume slightly and to
+optimize the sizing of the buffer.  The second byte of housekeeping
+was chosen because the bits therein correspond to the values for three
+parameters: photopolarimetry gain, radiometry gain, and number of
+samples, and all three of these parameters are set by command and do
+not change during instrument operation unless reset by sending a new
+command.  See the data label file format for a detailed description of
+these parameters.  In the processing to generate the present reduced
+science data, the known values for these parameters are manually
+input based upon the Galileo Sequence of Events File (SEF), which
+indicates the timing of the PPR commands and the commanded parameter
+values.
+ 
+Listed below by orbit are the PPR RDR data files with the data
+filename, observation ID (modified as described above), observation
+start time, and duration.  Files are located in subdirectories by orbit
+name and then by target.  Please note that because of the anomalous
+behavior of the PPR radiometry in encounter C20, reduction of those
+radiometry observations would be meaningless.  Since all observations
+planned for C20 were in radiometry mode, none of the C20 observations
+represented in the R_EDR data set are included here.
+ 
+G1:
+ 
+  Filename      Observation ID          Start Time         Duration
+GRSMNC01.TAB    G1JPGRSMNC01        1996-06-26T22:56:24    01:03:21
+GRSMND01.TAB    G1JPGRSMND01        1996-06-27T00:02:08    00:34:16
+GRSEXC01.TAB    G1JPGRSEXC01        1996-06-27T00:50:41    00:31:09
+GRSRAD01.TAB    G1JPGRSRAD01        1996-06-27T01:24:02    00:15:54
+MEMPIS01.TAB    G1GNMEMPIS01        1996-06-27T03:14:15    00:08:03
+DRTM__01.TAB    G1GPDRTM__01        1996-06-27T03:24:46    00:29:23
+AMON__01.TAB    G1GNAMON__01        1996-06-27T05:02:26    00:04:54
+PTAH__01.TAB    G1GNPTAH__01        1996-06-27T05:11:30    00:03:54
+HIRESS01.TAB    G1GPHIRESS01        1996-06-27T06:27:25    00:05:27
+HIRESS02.TAB    G1GPHIRESS02        1996-06-27T06:43:40    00:07:57
+DRKMAP01.TAB    G1GPDRKMAP01        1996-06-27T07:45:13    00:38:41
+STP15001.TAB    G1GPSTP15001        1996-06-27T08:32:48    00:00:25
+DRKMAP02.TAB    G1GPDRKMAP02        1996-06-27T08:59:01    02:15:35
+GRS00501.TAB    G1JNGRS00501        1996-06-27T11:20:38    00:11:34
+GLOBAL1A.TAB    G1JPGLOBAL01_PT1    1996-06-27T12:46:31    00:55:12
+GLOBAL1B.TAB    G1JPGLOBAL01_PT2    1996-06-27T13:41:45    02:09:05
+GLOBAL1C.TAB    G1JPGLOBAL01_PT3    1996-06-27T15:50:52    02:06:55
+GLOBAL1D.TAB    G1JPGLOBAL01_PT4    1996-06-27T17:57:48    02:06:34
+GLOBAL1E.TAB    G1JPGLOBAL01_PT5    1996-06-27T20:04:24    01:38:42
+GR043P01.TAB    G1JPGR043P01        1996-06-27T21:48:30    00:10:42
+STP02503.TAB    G1EPSTP02503        1996-06-27T22:22:12    00:00:26
+NHILAT01.TAB    G1ENNHILAT01        1996-06-28T00:00:56    00:30:06
+STP04404.TAB    G1EPSTP04404        1996-06-28T03:03:14    00:00:26
+STP05505.TAB    G1EPSTP05505        1996-06-28T05:27:14    00:00:26
+STP06006.TAB    G1EPSTP06006        1996-06-28T06:30:32    00:00:26
+STP06507.TAB    G1EPSTP06507        1996-06-28T07:30:32    00:00:26
+GRS09102.TAB    G1JNGRS09102        1996-06-28T08:47:44    00:11:55
+STP07008.TAB    G1EPSTP07008        1996-06-28T09:07:24    00:00:26
+STP07509.TAB    G1EPSTP07509        1996-06-28T10:15:38    00:00:26
+THRMAL02.TAB    G1INTHRMAL02        1996-06-28T11:23:26    00:01:36
+VOLCAN05.TAB    G1INVOLCAN05        1996-06-28T11:28:30    00:00:08
+STP08010.TAB    G1EPSTP08010        1996-06-28T12:02:53    00:00:26
+RCTCAL01.TAB    G1NPRCTCAL01        1996-06-28T13:16:24    00:01:25
+THRMAL03.TAB    G1INTHRMAL03        1996-06-28T13:54:06    00:03:24
+STP08511.TAB    G1EPSTP08511        1996-06-28T14:02:50    00:00:26
+IODISK01.TAB    G1IPIODISK01        1996-06-28T18:21:58    00:12:16
+GR123P01.TAB    G1JPGR123P01        1996-06-28T18:36:12    00:13:30
+GLOBAL02.TAB    G1JPGLOBAL02        1996-06-28T19:08:33    02:49:57
+PLLOKI01.TAB    G1ISPLLOKI01        1996-06-29T01:06:31    00:00:27
+PLATEN01.TAB    G1ISPLATEN01        1996-06-29T02:51:41    00:00:26
+IOECLP01.TAB    G1IPIOECLP01        1996-06-29T03:37:57    00:04:40
+IOECLI02.TAB    G1ISIOECLI02        1996-06-29T03:46:47    00:00:38
+PLSHTX01.TAB    G1XBPLSHTX01        1996-06-30T02:00:52    00:02:01
+ 
+C3:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    C3NPRCTCAL01        1996-11-03T14:20:30    00:01:16
+DRTM__01.TAB    C3CPDRTM__01        1996-11-04T11:02:28    00:46:42
+ASGRAD01.TAB    C3CNASGARD01        1996-11-04T12:00:28    00:29:21
+DRKMAP01.TAB    C3CPDRKMAP01        1996-11-04T12:34:29    00:12:03
+CRATER01.TAB    C3CNCRATER01        1996-11-04T13:21:31    00:03:37
+CSPOTS01.TAB    C3CNCSPOTS01        1996-11-04T13:52:15    00:06:01
+STP12003.TAB    C3CPSTP12003        1996-11-04T14:20:08    00:00:20
+DRKMAP02.TAB    C3CPDRKMAP02        1996-11-04T14:26:00    01:34:24
+FT2D__01.TAB    C3JPFT2D__01        1996-11-05T08:02:14    00:09:47
+FT2BAS01.TAB    C3JPFT2BAS01        1996-11-05T08:23:28    00:25:28
+NSSTRP01.TAB    C3JPNSSTRP01        1996-11-05T09:57:04    00:25:08
+FT1BAS01.TAB    C3JPFT1BAS01        1996-11-05T20:48:40    00:51:16
+FT1D__01.TAB    C3JPFT1D__01        1996-11-05T21:59:26    00:17:57
+FT1RAD01.TAB    C3JPFT1RAD01        1996-11-05T23:02:25    00:17:17
+IOMON_01.TAB    C3IPIOMON_01        1996-11-06T04:16:01    00:25:27
+IOLITE01.TAB    C3IPIOLITE01        1996-11-06T10:43:46    00:58:27
+HRSPEC01.TAB    C3INHRSPEC01        1996-11-06T11:52:35    00:07:23
+STP03004.TAB    C3EPSTP03004        1996-11-06T15:52:14    00:00:20
+DGTM__01.TAB    C3EPDGTM__01        1996-11-06T17:33:30    00:38:12
+TPO01001.TAB    C3EPTPO01001        1996-11-06T18:13:48    00:12:04
+TPO07803.TAB    C3EPTPO07803        1996-11-06T20:20:02    00:11:05
+DRKMAP01.TAB    C3EPDRKMAP01        1996-11-06T20:36:22    00:11:05
+STP09101.TAB    C3EPSTP09101        1996-11-06T21:10:13    00:00:21
+DRKMAP02.TAB    C3EPDRKMAP02        1996-11-06T21:12:46    00:26:06
+STP07002.TAB    C3IPSTP07002        1996-11-06T22:23:32    00:00:20
+IOMON_02.TAB    C3IPIOMON_02        1996-11-06T23:22:11    00:18:36
+STP08003.TAB    C3IPSTP08003        1996-11-07T00:49:08    00:00:20
+STP11003.TAB    C3EPSTP11003        1996-11-07T01:24:32    00:00:20
+STP06004.TAB    C3GPSTP06004        1996-11-07T05:17:04    00:00:20
+ 
+E4:
+ 
+  Filename      Observation ID          Start Time         Duration
+FT1BAS01.TAB    E4JPFT1BAS01        1996-12-18T01:59:40    00:26:06
+FT1D__01.TAB    E4JPFT1D__01        1996-12-18T02:29:04    00:09:46
+FT1RAD01.TAB    E4JPFT1RAD01        1996-12-18T04:07:04    00:45:42
+FTP01601.TAB    E4JPFTP01601        1996-12-18T12:44:45    00:29:23
+IOMON_01.TAB    E4IPIOMON_01        1996-12-18T14:32:29    00:10:46
+GLOBAL01.TAB    E4EPGLOBAL01        1996-12-18T20:17:20    00:15:00
+IOLITE01.TAB    E4IPIOLITE01        1996-12-18T22:06:56    00:22:11
+DGTMDM01.TAB    E4EPDGTMDM01        1996-12-19T01:58:28    01:03:41
+SUCOMP02.TAB    E4ENSUCOMP02        1996-12-19T05:20:25    00:09:18
+SUCOMP03.TAB    E4ENSUCOMP03        1996-12-19T06:25:42    00:12:47
+IOMON_02.TAB    E4IPIOMON_02        1996-12-19T08:37:52    00:09:07
+DRKMAP02.TAB    E4EPDRKMAP02        1996-12-19T09:43:35    01:05:00
+FTP09501.TAB    E4JPFTP09501        1996-12-19T11:10:23    00:07:30
+IOECLP02.TAB    E4IPIOECLP02        1996-12-19T15:36:28    00:10:06
+RCTCAL01.TAB    E4NPRCTCAL01        1996-12-20T00:45:12    00:01:18
+ 
+E6:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    E6NPRCTCAL01        1997-02-19T13:33:53    00:01:25
+NSSTRP01.TAB    E6JPNSSTRP01        1997-02-19T18:46:35    00:51:35
+CHEMIS02.TAB    E6INCHEMIS02        1997-02-20T04:02:42    00:03:31
+NSSTRP02.TAB    E6JPNSSTRP02        1997-02-20T06:36:23    00:32:19
+FT3EM101.TAB    E6JPFT3EM101        1997-02-20T10:27:56    00:32:20
+IOLITE01.TAB    E6IPIOLITE01        1997-02-20T11:26:35    00:29:38
+TERINC01.TAB    E6ENTERINC01        1997-02-20T12:04:05    00:31:12
+DGTM__01.TAB    E6EPDGTM__01        1997-02-20T14:17:27    00:35:35
+SUCOMP01.TAB    E6ENSUCOMP01        1997-02-20T16:13:44    00:08:04
+SUCOMP02.TAB    E6ENSUCOMP02        1997-02-20T16:31:56    00:08:04
+PPO06001.TAB    E6EPPPO06001        1997-02-20T16:49:20    00:05:16
+PPO10602.TAB    E6EPPPO10602        1997-02-20T17:00:40    00:02:20
+HIRESS01.TAB    E6EPHIRESS01        1997-02-20T17:06:18    00:16:12
+DRKMAP01.TAB    E6EPDRKMAP01        1997-02-20T19:25:51    00:45:43
+FT1EM101.TAB    E6JPFT1EM101        1997-02-20T21:04:06    00:42:16
+FT1EM201.TAB    E6JPFT1EM201        1997-02-20T22:31:53    01:04:00
+CHEMIS06.TAB    E6INCHEMIS06        1997-02-21T04:02:32    00:02:43
+FT2EM201.TAB    E6JPFT2EM201        1997-02-21T07:12:37    00:36:09
+FT2EM101.TAB    E6JPFT2EM101        1997-02-21T08:59:47    00:42:07
+THRMNS01.TAB    E6JNTHRMNS01        1997-02-21T11:07:12    00:29:48
+NSSTRP03.TAB    E6JPNSSTRP03        1997-02-21T14:51:39    00:25:08
+GLOBAL01.TAB    E6GPGLOBAL01        1997-02-21T23:14:11    00:08:48
+GLOBAL01.TAB    E6CNGLOBAL01        1997-02-22T22:08:16    00:08:14
+DRKMAP01.TAB    E6CPDRKMAP01        1997-02-22T22:22:26    00:29:42
+ 
+G7:
+ 
+  Filename      Observation ID          Start Time         Duration
+GLOBAL01.TAB    G7CSGLOBAL01        1997-04-02T16:42:56    00:00:52
+NSSTRP02.TAB    G7JPNSSTRP02        1997-04-03T10:46:44    00:19:52
+CHEMIS03.TAB    G7INCHEMIS03        1997-04-03T18:00:29    00:03:15
+HRSPEC01.TAB    G7INHRSPEC01        1997-04-03T21:03:29    00:02:57
+GLOBAL01.TAB    G7IPGLOBAL01        1997-04-03T21:10:34    00:19:30
+FTSEM201.TAB    G7JPFTSEM201        1997-04-03T23:27:05    00:17:37
+TOPMAP02.TAB    G7ISTOPMAP02        1997-04-04T01:46:38    00:00:06
+DGTM__01.TAB    G7EPDGTM__01        1997-04-04T02:35:09    01:03:41
+LOWFOT01.TAB    G7ESLOWFOT01        1997-04-04T04:15:16    00:00:22
+VLOFOT01.TAB    G7ESVLOFOT01        1997-04-04T04:32:28    00:00:21
+CHEMIS05.TAB    G7INCHEMIS05        1997-04-04T04:49:38    00:00:57
+IOMON_01.TAB    G7IPIOMON_01        1997-04-04T04:57:43    00:01:17
+TOPMAP03.TAB    G7ISTOPMAP03        1997-04-04T05:04:41    00:00:05
+SMONHI01.TAB    G7ISSMONHI01        1997-04-04T05:04:48    00:00:06
+TYRMAC01.TAB    G7ESTYRMAC01        1997-04-04T05:09:50    00:00:06
+TYRMAC02.TAB    G7ESTYRMAC02        1997-04-04T05:14:54    00:00:01
+FEX02003.TAB    G7JNFEX00203        1997-04-04T05:20:58    00:01:40
+TPO_3001.TAB    G7EPTPO_3001        1997-04-04T05:30:15    00:16:59
+APEXCR01.TAB    G7ESAPEXCR01        1997-04-04T06:14:01    00:00:01
+APEXCR02.TAB    G7ESAPEXCR02        1997-04-04T06:18:21    00:00:02
+APEXCR03.TAB    G7ESAPEXCR03        1997-04-04T06:22:43    00:00:02
+APEXCR04.TAB    G7ESAPEXCR04        1997-04-04T06:27:04    00:00:02
+TPO_9002.TAB    G7EPTPO_9002        1997-04-04T06:33:46    00:18:36
+DGTM__02.TAB    G7EPDGTM__02        1997-04-04T06:57:02    00:40:09
+DRKMAP01.TAB    G7EPDRKMAP01        1997-04-04T07:42:32    01:34:41
+RCTCAL01.TAB    G7NPRCTCAL01        1997-04-04T11:03:28    00:01:04
+HOTMAP01.TAB    G7JPHOTMAP01        1997-04-04T11:36:06    01:01:24
+REGMAP01.TAB    G7JPREGMAP01        1997-04-04T12:59:00    00:46:42
+GRSEM201.TAB    G7JPGRSEM201        1997-04-04T18:37:44    00:45:04
+GRSEM101.TAB    G7JPGRSEM101        1997-04-04T19:39:24    00:26:07
+FTNEM101.TAB    G7JPFTNEM101        1997-04-04T20:26:56    00:35:46
+FEAP6602.TAB    G7JNFEAP6602        1997-04-04T21:15:28    00:05:00
+PFTB6602.TAB    G7JNPFTB6602        1997-04-04T21:25:30    00:00:03
+FTSEM101.TAB    G7JPFTSEM101        1997-04-04T21:42:45    00:16:15
+FEA53M01.TAB    G7JNFEA53M01        1997-04-04T22:10:50    00:10:18
+FTNEM201.TAB    G7JPFTNEM201        1997-04-04T22:26:14    00:24:49
+DRTM__01.TAB    G7GPDRTM__01        1997-04-05T01:04:59    00:44:24
+EWSTRP01.TAB    G7JPEWSTRP01        1997-04-05T02:19:48    00:15:20
+DRKMAP01.TAB    G7GPDRKMAP01        1997-04-05T03:41:43    00:45:08
+HILAT_01.TAB    G7GNHILAT_01        1997-04-05T04:33:16    00:23:03
+THRMAL06.TAB    G7INTHRMAL06        1997-04-05T05:09:36    00:00:03
+PALIMP01.TAB    G7GSPALIMP01        1997-04-05T05:40:02    00:00:05
+ENKIDU01.TAB    G7GPENKIDU01        1997-04-05T06:00:14    00:06:50
+CATENA01.TAB    G7GSCATENA01        1997-04-05T06:12:22    00:00:13
+BRITRL01.TAB    G7GNBRITRL01        1997-04-05T06:20:26    00:04:44
+NICHOL01.TAB    G7GSNICHOL01        1997-04-05T06:31:36    00:00:22
+ACHELS01.TAB    G7GSACHELS01        1997-04-05T06:33:37    00:00:14
+NUNSUL01.TAB    G7GSNUNSUL01        1997-04-05T06:35:38    00:00:14
+NEITH_01.TAB    G7GSNEITH_01        1997-04-05T06:37:40    00:00:18
+KITTU_01.TAB    G7GSKITTU_01        1997-04-05T06:39:46    00:00:52
+KITTU_02.TAB    G7GSKITTU_02        1997-04-05T06:40:41    00:00:43
+KITTUN01.TAB    G7GNKITTU_01        1997-04-05T06:42:42    00:11:38
+HIRESS01.TAB    G7GPHIRESS01        1997-04-05T07:11:00    00:14:09
+DRKMAP02.TAB    G7GPDRKMAP02        1997-04-05T08:45:02    01:07:19
+STP12001.TAB    G7GPSTP12001        1997-04-05T10:02:52    00:08:10
+STP12501.TAB    G7IPSTP12501        1997-04-05T11:05:34    00:00:17
+STP12001.TAB    G7EPSTP12001        1997-04-05T11:17:42    00:00:17
+STP13501.TAB    G7CPSTP13501        1997-04-05T11:58:09    00:00:17
+FTP13003.TAB    G7JPFTP13003        1997-04-05T16:44:18    00:18:10
+FEA13002.TAB    G7JNFEA13002        1997-04-05T17:05:32    00:01:39
+STP14501.TAB    G7IPSTP14501        1997-04-05T17:24:45    00:00:17
+EWSTRP02.TAB    G7JPEWSTRP02        1997-04-05T22:24:01    00:20:00
+STP15501.TAB    G7IPSTP15501        1997-04-06T06:20:16    00:00:17
+STP15501.TAB    G7CPSTP15501        1997-04-06T10:05:44    00:00:17
+STP13001.TAB    G7EPSTP13001        1997-04-06T11:57:58    00:00:17
+ 
+G8:
+ 
+  Filename      Observation ID          Start Time         Duration
+POLMAP01.TAB    G8CPPOLMAP01        1997-05-06T09:38:10    01:10:39
+SPOLE_01.TAB    G8CNSPOLE_01        1997-05-06T11:18:24    00:30:04
+STP04101.TAB    G8CPSTP04101        1997-05-06T11:54:40    00:10:43
+BURI__01.TAB    G8CNBURI__01        1997-05-06T12:15:53    00:10:45
+ADLIND01.TAB    G8CNADLIND01        1997-05-06T12:31:03    00:18:36
+STP06101.TAB    G8CPSTP06101        1997-05-06T13:00:20    00:03:28
+POLMAP02.TAB    G8CPPOLMAP02        1997-05-06T13:39:49    00:28:35
+POLMAP03.TAB    G8CPPOLMAP03        1997-05-06T16:15:31    00:09:23
+IOMON_01.TAB    G8IPIOMON_01        1997-05-07T10:51:47    00:06:42
+VOLCAN04.TAB    G8INVOLCAN04        1997-05-07T12:09:38    00:01:41
+OSIRIS01.TAB    G8GNOSIRIS01        1997-05-07T13:09:17    00:11:14
+POLMAP01.TAB    G8GPPOLMAP01        1997-05-07T13:34:34    00:35:49
+URUK__01.TAB    G8GNURUK__01        1997-05-07T14:36:15    00:19:00
+TRANSI01.TAB    G8GNTRANSI01        1997-05-07T14:57:29    00:07:30
+LIDARK01.TAB    G8GNLIDARK01        1997-05-07T15:07:35    00:05:50
+MELKAR01.TAB    G8GNMELKAR01        1997-05-07T15:26:48    00:08:27
+DARTRL01.TAB    G8GNDARTRL01        1997-05-07T15:40:56    00:06:40
+STP15601.TAB    G8GPSTP15601        1997-05-07T16:12:18    00:00:21
+STP14402.TAB    G8GPSTP14402        1997-05-07T16:19:23    00:00:21
+STP12704.TAB    G8GPSTP12704        1997-05-07T16:58:49    00:00:26
+POLMAP02.TAB    G8GPPOLMAP02        1997-05-07T17:00:51    01:09:51
+STP03901.TAB    G8EPSTP03901        1997-05-07T18:33:52    00:00:25
+FEA04101.TAB    G8JNFEA04101        1997-05-07T21:28:47    00:01:38
+FT2BAS01.TAB    G8JPFT2BAS01        1997-05-07T21:35:13    00:42:05
+FT2RAD01.TAB    G8JPFT2RAD01        1997-05-07T23:19:59    00:12:04
+NSSTRP01.TAB    G8JPNSSTRP01        1997-05-08T05:03:46    01:01:47
+STP02501.TAB    G8EPSTP02501        1997-05-08T09:08:29    00:00:24
+FEAP1001.TAB    G8JNFEAP1001        1997-05-08T09:25:39    00:05:00
+FTP01001.TAB    G8JPFTP01001        1997-05-08T09:46:53    00:15:38
+RCTCAL01.TAB    G8NPRCTCAL01        1997-05-08T10:35:09    00:01:20
+PFTB1003.TAB    G8JNPFTB1003        1997-05-08T11:14:51    00:07:04
+FEAP1002.TAB    G8JNFEAP1002        1997-05-08T11:26:56    00:05:02
+STP02001.TAB    G8IPSTP02001        1997-05-08T12:18:33    00:00:26
+STP04101.TAB    G8EPSTP04101        1997-05-08T12:29:41    00:00:26
+STP05001.TAB    G8IPSTP05001        1997-05-08T15:25:37    00:00:26
+HOT05801.TAB    G8JPHOT05801        1997-05-08T15:32:42    00:59:06
+NSSTRP02.TAB    G8JPNSSTRP02        1997-05-08T16:43:27    00:32:40
+GRS05901.TAB    G8JPGRS05901        1997-05-08T17:24:55    01:00:28
+STP07001.TAB    G8EPSTP07001        1997-05-08T18:39:44    00:00:25
+REG06201.TAB    G8JPREG06201        1997-05-08T18:44:48    01:02:14
+STP07001.TAB    G8IPSTP07001        1997-05-08T19:53:34    00:00:25
+FEAP7101.TAB    G8JNFEAP7101        1997-05-08T20:01:39    00:04:59
+PFTB7101.TAB    G8JNPFTB7101        1997-05-08T20:12:46    00:06:59
+FT1BAS01.TAB    G8JPFT1BAS01        1997-05-08T20:20:51    00:31:47
+PFTB7102.TAB    G8JNPFTB7102        1997-05-08T21:04:20    00:06:59
+FEAP7102.TAB    G8JNFEAP7102        1997-05-08T21:17:29    00:04:58
+STP12001.TAB    G8CPSTP12001        1997-05-08T21:34:39    00:00:25
+STP09901.TAB    G8IPSTP09901        1997-05-09T01:24:11    00:00:25
+STP10001.TAB    G8EPSTP10001        1997-05-09T02:36:59    00:00:25
+REG09301.TAB    G8JPREG09301        1997-05-09T03:13:43    00:17:27
+GRS09801.TAB    G8JPGRS09801        1997-05-09T03:39:41    00:22:22
+HOT09601.TAB    G8JPHOT09601        1997-05-09T05:10:41    00:37:36
+FEA10401.TAB    G8JNFEA10401        1997-05-09T06:38:39    00:01:39
+FTP10402.TAB    G8JPFTP10402        1997-05-09T06:58:53    00:14:44
+FEA10402.TAB    G8JNFEA10402        1997-05-09T07:19:05    00:00:48
+REG10401.TAB    G8JPREG10401        1997-05-09T08:00:51    00:35:22
+STP13001.TAB    G8IPSTP13001        1997-05-09T11:22:47    00:00:25
+STP13601.TAB    G8CPSTP13601        1997-05-09T11:27:50    00:00:25
+STP14001.TAB    G8EPSTP14001        1997-05-09T18:45:39    00:00:25
+STP14001.TAB    G8IPSTP14001        1997-05-10T20:12:25    00:00:26
+ 
+C9:
+ 
+  Filename      Observation ID          Start Time         Duration
+REGMAP01.TAB    C9JPREGMAP01        1997-06-25T01:53:13    04:10:51
+REGMAP02.TAB    C9JPREGMAP02        1997-06-25T09:53:28    01:08:58
+POLMAP01.TAB    C9CPPOLMAP01        1997-06-25T11:42:41    00:53:44
+ANARR_01.TAB    C9CNANARR_01        1997-06-25T13:59:09    00:12:09
+CRATER01.TAB    C9CSCRATER01        1997-06-25T14:23:28    00:00:49
+SKULD_01.TAB    C9CNSKULD_01        1997-06-25T14:29:31    00:10:00
+NOLAT_01.TAB    C9CNNOLAT_01        1997-06-25T14:57:45    00:10:44
+VALHAL01.TAB    C9CSVALHAL01        1997-06-25T15:13:01    00:01:58
+VALSPC01.TAB    C9CNVALSPC01        1997-06-25T15:19:03    00:06:40
+POLMAP02.TAB    C9CPPOLMAP02        1997-06-25T16:07:35    01:02:14
+POLMAP01.TAB    C9GPPOLMAP01        1997-06-26T13:57:59    01:36:44
+CLIPSE01.TAB    C9ENCLIPSE01        1997-06-26T16:00:20    00:04:44
+STP00403.TAB    C9GPSTP00403        1997-06-26T16:23:35    00:08:29
+BRILED01.TAB    C9GNBRILED01        1997-06-26T17:27:17    00:11:18
+SULCUS01.TAB    C9GSSULCUS01        1997-06-26T17:55:37    00:00:32
+STP04604.TAB    C9GPSTP04604        1997-06-26T18:03:41    00:19:14
+CLIPSE03.TAB    C9ENCLIPSE03        1997-06-26T18:50:12    00:04:42
+POLMAP02.TAB    C9GPPOLMAP02        1997-06-26T19:10:25    01:02:41
+GRS05101.TAB    C9JNGRS05101        1997-06-26T20:24:14    00:03:18
+GRS05102.TAB    C9JNGRS05102        1997-06-26T20:44:23    00:03:22
+FT1BAS01.TAB    C9JPFT1BAS01        1997-06-26T20:53:33    00:29:05
+GRS05103.TAB    C9JNGRS05103        1997-06-26T21:50:09    00:03:22
+GLOBAL02.TAB    C9GNGLOBAL02        1997-06-26T21:58:12    00:20:10
+FT1RAD01.TAB    C9JPFT1RAD01        1997-06-26T22:26:34    00:17:00
+FT2BAS01.TAB    C9JPFT2BAS01        1997-06-27T03:03:37    00:31:20
+GLOBAL01.TAB    C9ESGLOBAL01        1997-06-27T03:50:09    00:00:54
+FT2RAD01.TAB    C9JPFT2RAD01        1997-06-27T04:32:35    00:59:06
+PHOTOM01.TAB    C9ISPHOTOM01        1997-06-27T06:01:35    00:00:07
+GRS01102.TAB    C9JNGRS01102        1997-06-27T06:38:59    00:03:20
+GRS01103.TAB    C9JNGRS01103        1997-06-27T08:24:09    00:03:19
+CHEMIS01.TAB    C9INCHEMIS01        1997-06-27T10:36:36    00:02:01
+GRS03901.TAB    C9JNGRS03901        1997-06-27T17:08:55    00:03:19
+STP06501.TAB    C9IPSTP06501        1997-06-27T17:17:00    00:10:43
+NSSTRP02.TAB    C9JPNSSTRP02        1997-06-27T20:59:26    00:33:07
+VOLCAN01.TAB    C9INVOLCAN01        1997-06-27T21:36:51    00:01:33
+CHEMIS03.TAB    C9INCHEMIS03        1997-06-27T22:31:23    00:03:24
+FEA05701.TAB    C9JNFEA05701        1997-06-27T22:46:34    00:08:26
+FEA05702.TAB    C9JNFEA05702        1997-06-28T00:32:47    00:03:19
+FTP25701.TAB    C9JPFTP25701        1997-06-28T00:40:52    00:27:18
+FEA05703.TAB    C9JNFEA05703        1997-06-28T01:13:14    00:03:20
+FEA05704.TAB    C9JNFEA05704        1997-06-28T02:01:46    00:03:19
+STP08101.TAB    C9IPSTP08101        1997-06-28T02:10:51    00:16:06
+FTP19502.TAB    C9JPFTP19502        1997-06-28T15:43:47    00:15:39
+NSSTRP03.TAB    C9JPNSSTRP03        1997-06-28T17:51:12    00:39:23
+ECLIPS02.TAB    C9ISECLIPS02        1997-06-28T18:36:44    00:00:27
+CHEMIS06.TAB    C9INCHEMIS06        1997-06-28T18:42:46    00:02:34
+STP14505.TAB    C9GPSTP14505        1997-06-28T19:37:22    00:00:25
+FEA10201.TAB    C9JNFEA10201        1997-06-28T21:00:16    00:03:20
+FTP10202.TAB    C9JPFTP10202        1997-06-28T21:08:22    00:16:33
+RCTCAL01.TAB    C9NPRCTCAL01        1997-07-14T11:36:59    00:02:47
+PCTCAL01.TAB    C9NPPCTCAL01        1997-07-14T11:43:20    00:10:57
+ 
+C10:
+ 
+  Filename      Observation ID          Start Time         Duration
+DRTM__01.TAB    C10CPDRTM__01       1997-09-16T19:39:14    00:48:20
+DRKMAP01.TAB    C10CPDRKMAP01       1997-09-16T20:46:59    01:23:53
+RCTCAL01.TAB    C10NPRCTCAL01       1997-09-16T22:19:00    00:00:42
+ASGARDS1.TAB    C10CSASGARD01       1997-09-16T23:56:05    00:01:39
+ASGARDN1.TAB    C10CNASGARD01       1997-09-17T00:00:06    00:08:57
+PALIMP01.TAB    C10CNPALIMP01       1997-09-17T00:29:24    00:05:00
+SMTHPLS1.TAB    C10CSSMTHPL01       1997-09-17T00:35:31    00:00:04
+SMTHPLN1.TAB    C10CNSMTHPL01       1997-09-17T00:37:30    00:11:01
+VALHAL01.TAB    C10CNVALHAL01       1997-09-17T00:53:42    00:08:58
+CATENA01.TAB    C10CNCATENA01       1997-09-17T01:29:05    00:22:59
+DRTM__02.TAB    C10CPDRTM__02       1997-09-17T02:00:25    00:34:17
+DRKMAP02.TAB    C10CPDRKMAP02       1997-09-17T02:37:50    01:11:32
+CHEMIS01.TAB    C10INCHEMIS01       1997-09-18T07:50:06    00:02:49
+NPOLEM06.TAB    C10JNNPOLEM06       1997-09-18T08:25:29    00:13:33
+NSSTRP01.TAB    C10JPNSSTRP01       1997-09-18T08:43:41    00:27:49
+SPOLEM08.TAB    C10JNSPOLEM08       1997-09-18T09:32:13    00:11:26
+NPOLEM01.TAB    C10JNNPOLEM01       1997-09-18T09:48:24    00:13:32
+SPOLEM01.TAB    C10JNSPOLEM01       1997-09-18T10:27:50    00:13:38
+NPOLEM02.TAB    C10JNNPOLEM02       1997-09-18T11:03:10    00:13:41
+SPOLEM02.TAB    C10JNSPOLEM02       1997-09-18T11:42:36    00:13:41
+FEA04101.TAB    C10JNFEA04101       1997-09-18T12:07:52    00:03:36
+NPOLEM03.TAB    C10JNNPOLEM03       1997-09-18T12:18:02    00:11:32
+FNP04101.TAB    C10JNFNP04101       1997-09-18T13:48:18    00:13:17
+SPAURD01.TAB    C10JNSPAURD01       1997-09-18T14:03:08    00:24:11
+SPOLEM04.TAB    C10JNSPOLEM04       1997-09-18T14:33:28    00:13:37
+FNP04102.TAB    C10JNFNP04102       1997-09-18T14:50:39    00:11:35
+SPOLEM05.TAB    C10JNSPOLEM05       1997-09-18T15:28:08    00:13:33
+NPOLEM04.TAB    C10JNNPOLEM04       1997-09-18T16:02:26    00:13:38
+SPOLEM06.TAB    C10JNSPOLEM06       1997-09-18T16:42:53    00:13:37
+NPOLEM05.TAB    C10JNNPOLEM05       1997-09-18T17:18:20    00:13:34
+SPOLEM07.TAB    C10JNSPOLEM07       1997-09-18T17:57:42    00:13:38
+SPAURD02.TAB    C10JNSPAURD02       1997-09-18T18:47:15    00:23:03
+IOMON_02.TAB    C10IPIOMON_02       1997-09-18T19:19:40    00:19:09
+NOISE_01.TAB    C10NPNOISE_01       1997-09-18T20:51:40    00:05:02
+REGMAP01.TAB    C10JPREGMAP01       1997-09-18T21:25:02    01:00:44
+FEA02101.TAB    C10JNFEA02101       1997-09-18T23:23:21    00:03:33
+FT2BAS01.TAB    C10JPFT2BAS01       1997-09-18T23:28:24    00:14:26
+FEASUB01.TAB    C10JNFEASUB01       1997-09-19T00:24:01    00:11:59
+FT1BAS01.TAB    C10JPFT1BAS01       1997-09-19T01:06:29    01:10:09
+FEA02102.TAB    C10JNFEA02102       1997-09-19T02:22:19    00:03:33
+REGMAP02.TAB    C10JPREGMAP02       1997-09-19T02:30:24    01:33:38
+IOMON_01.TAB    C10IPIOMON_01       1997-09-19T04:05:26    00:35:47
+HRSPEC01.TAB    C10INHRSPEC01       1997-09-19T04:42:48    00:10:19
+NSPEC_01.TAB    C10INNSPEC_01       1997-09-19T04:56:58    00:05:43
+FEA07401.TAB    C10JNFEA07401       1997-09-19T10:08:26    00:03:40
+CHEMIS05.TAB    C10INCHEMIS05       1997-09-19T10:24:37    00:02:28
+THRCYL01.TAB    C10JNTHRCYL01       1997-09-19T10:40:48    00:19:59
+FEA07402.TAB    C10JNFEA07402       1997-09-19T11:14:06    00:02:08
+THRCYL02.TAB    C10JNTHRCYL02       1997-09-19T11:22:12    00:20:02
+FEA07403.TAB    C10JNFEA07403       1997-09-19T11:52:32    00:03:48
+THRCYL03.TAB    C10JNTHRCYL03       1997-09-19T12:02:38    00:21:44
+THRCYL04.TAB    C10JNTHRCYL04       1997-09-19T13:00:20    00:22:31
+IOMON_03.TAB    C10IPIOMON_03       1997-09-19T15:33:00    00:18:46
+REGMAP04.TAB    C10JPREGMAP04       1997-09-19T16:24:34    01:29:41
+REGMAP05.TAB    C10JPREGMAP05       1997-09-19T19:03:19    01:31:35
+FEA09901.TAB    C10JNFEA09901       1997-09-19T20:57:34    00:03:38
+FEA09902.TAB    C10JNFEA09902       1997-09-19T21:38:01    00:03:38
+CHEMIS07.TAB    C10INCHEMIS07       1997-09-19T21:57:10    00:01:29
+FEA09903.TAB    C10JNFEA09903       1997-09-19T22:10:22    00:03:40
+FEA53M01.TAB    C10JNFEA53M01       1997-09-19T22:54:51    00:25:56
+SPAURN01.TAB    C10JNSPAURN01       1997-09-20T04:14:22    00:29:09
+REGMAP03.TAB    C10JPREGMAP03       1997-09-20T06:00:32    01:31:50
+FEA11401.TAB    C10JNFEA11401       1997-09-20T07:37:36    00:03:45
+FEA11402.TAB    C10JNFEA11402       1997-09-20T08:07:53    00:03:28
+ 
+E11:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    E11NPRCTCAL01       1997-11-04T23:47:01    00:01:25
+DGTM__01.TAB    E11CPDGTM__01       1997-11-05T06:39:28    00:07:10
+BRG53M02.TAB    E11JNBRG53M02       1997-11-05T17:20:53    00:19:59
+CYLMOS06.TAB    E11JNCYLMOS06       1997-11-06T02:47:06    00:10:02
+M17HR_01.TAB    E11ENM17HR_01       1997-11-06T03:00:12    00:19:09
+M15HR_01.TAB    E11ENM15HR_01       1997-11-06T05:24:50    00:20:58
+GLOBAL10.TAB    E11JPGLOBAL10       1997-11-06T10:45:43    02:52:51
+BRG04203.TAB    E11JNBRG04203       1997-11-06T14:31:51    00:06:41
+GLOBAL21.TAB    E11JPGLOBAL21       1997-11-06T14:39:18    00:43:00
+BRG04204.TAB    E11JNBRG04204       1997-11-06T15:26:27    00:06:41
+GLOBAL22.TAB    E11JPGLOBAL22       1997-11-06T15:34:14    01:10:52
+HOTSPT01.TAB    E11EPHOTSPT01       1997-11-06T17:50:24    00:46:38
+DRKLIT01.TAB    E11ENDRKLIT01       1997-11-06T18:49:42    00:12:00
+CYCLOD01.TAB    E11ENCYCLOD01       1997-11-06T19:27:06    00:11:59
+HOTSPT02.TAB    E11EPHOTSPT02       1997-11-06T21:36:31    01:04:25
+THRMNS01.TAB    E11JNTHRMNS01       1997-11-07T01:06:50    00:46:08
+BRGFUL01.TAB    E11JNBRGFUL01       1997-11-07T02:48:57    00:20:01
+BRG02003.TAB    E11JNBRG02003       1997-11-07T03:36:28    00:04:52
+GLOBAL31.TAB    E11JPGLOBAL31       1997-11-07T05:57:04    00:32:52
+GLOBAL32.TAB    E11JPGLOBAL32       1997-11-07T06:40:12    00:51:20
+CHEMIS01.TAB    E11INCHEMIS01       1997-11-07T07:46:12    00:02:32
+GLOBAL40.TAB    E11JPGLOBAL40       1997-11-07T07:51:57    01:36:33
+CHEMIS02.TAB    E11INCHEMIS02       1997-11-07T16:12:47    00:02:51
+IODISK01.TAB    E11IPIODISK01       1997-11-07T19:00:59    00:04:41
+CHEMIS03.TAB    E11INCHEMIS03       1997-11-07T19:47:08    00:02:00
+HRSPEC01.TAB    E11INHRSPEC01       1997-11-07T23:45:44    00:02:50
+NSPEC_01.TAB    E11INNSPEC_01       1997-11-07T23:52:49    00:02:48
+IODISK02.TAB    E11IPIODISK02       1997-11-08T03:01:36    00:04:18
+CHEMIS04.TAB    E11INCHEMIS04       1997-11-08T03:32:15    00:02:49
+ 
+E12:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    E12NPRCTCAL01       1997-12-15T12:13:04    00:01:25
+GLOBAL01.TAB    E12ENGLOBAL01       1997-12-16T07:12:00    00:16:03
+HOTSPT01.TAB    E12EPHOTSPT01       1997-12-16T10:00:26    01:05:47
+DLINEA01.TAB    E12ENDLINEA01       1997-12-16T11:17:38    00:06:59
+CPWYLL01.TAB    E12ENCPWYLL01       1997-12-16T11:43:55    00:07:17
+ICEBRG01.TAB    E12ENICEBRG01       1997-12-16T12:48:07    00:10:26
+HOTSPT02.TAB    E12EPHOTSPT02       1997-12-16T13:07:29    00:41:55
+HRSPEC01.TAB    E12INHRSPEC01       1997-12-16T14:14:35    00:04:11
+COOLDN01.TAB    E12NPCOOLDN01       1997-12-16T20:37:48    00:03:00
+ 
+E14:
+ 
+  Filename      Observation ID          Start Time         Duration
+IOMON_01.TAB    E14IPIOMON_01       1998-03-29T03:57:16    00:50:36
+HRSPEC01.TAB    E14INHRSPEC01       1998-03-29T04:52:10    00:16:00
+DARKHR01.TAB    E14EPDARKHR01       1998-03-29T11:10:05    00:55:50
+ICERAF01.TAB    E14ENICERAF01       1998-03-29T12:10:59    00:30:56
+SUCOMP01.TAB    E14ENSUCOMP01       1998-03-29T13:31:52    00:18:58
+SUCOMP02.TAB    E14ENSUCOMP02       1998-03-29T14:10:17    00:10:57
+SUCOMP03.TAB    E14ENSUCOMP03       1998-03-29T14:28:30    00:18:58
+DGTMHR01.TAB    E14EPDGTMHR01       1998-03-29T14:51:30    00:54:52
+DRKMAP01.TAB    E14EPDRKMAP01       1998-03-29T15:52:28    00:54:32
+RCTCAL01.TAB    E14NPRCTCAL01       1998-03-30T12:23:42    00:01:26
+ 
+E15:
+ 
+  Filename      Observation ID          Start Time         Duration
+HIPHAS01.TAB    E15ISHIPHAS01       1998-05-30T23:58:54    00:00:26
+ECLIPS01.TAB    E15ISECLIPS01       1998-05-31T00:17:14    00:00:01
+ECLIPS02.TAB    E15ISECLIPS02       1998-05-31T00:50:59    00:07:52
+RCTCAL01.TAB    E15NPRCTCAL01       1998-05-31T09:50:04    00:01:25
+HRSPEC01.TAB    E15INHRSPEC01       1998-05-31T13:18:38    00:21:03
+HRSPEC02.TAB    E15INHRSPEC02       1998-05-31T17:37:28    00:18:46
+DRKMAP01.TAB    E15EPDRKMAP01       1998-05-31T17:57:24    01:10:52
+DRTMHR01.TAB    E15EPDRTMHR01       1998-05-31T19:10:10    00:55:12
+REGMAP01.TAB    E15ESREGMAP01       1998-05-31T20:10:12    00:01:14
+PHOTOM01.TAB    E15ESPHOTOM01       1998-05-31T20:16:15    00:00:23
+CILIXS01.TAB    E15ESCILIXS01       1998-05-31T20:42:28    00:00:27
+REGION01.TAB    E15ENREGION01       1998-05-31T20:44:32    00:19:09
+CILIXS02.TAB    E15ESCILIXS02       1998-05-31T21:07:16    00:01:30
+RELIEF01.TAB    E15ESRELIEF01       1998-05-31T21:10:26    00:00:21
+RELIEF02.TAB    E15ESRELIEF02       1998-05-31T21:17:30    00:00:22
+SUCOMP01.TAB    E15ENSUCOMP01       1998-05-31T21:21:56    00:19:12
+SUCOMP02.TAB    E15ENSUCOMP02       1998-05-31T21:50:16    00:19:08
+REGMAP02.TAB    E15ESREGMAP02       1998-05-31T22:15:34    00:02:32
+SUCOMP03.TAB    E15ENSUCOMP03       1998-05-31T22:22:37    00:10:03
+DARKHR01.TAB    E15EPDARKHR01       1998-05-31T22:40:31    00:55:51
+DGTM__01.TAB    E15EPDGTM__01       1998-05-31T23:40:29    00:32:19
+GLOBAL01.TAB    E15ENGLOBAL01       1998-06-01T02:20:13    00:30:16
+RCTCAL02.TAB    E15NPRCTCAL02       1998-06-01T10:34:22    00:01:26
+EUR16H01.TAB    E15ENEUR16H01       1998-06-01T13:20:28    00:11:45
+EUR20H01.TAB    E15ENEUR20H01       1998-06-01T17:50:27    00:10:55
+ECLIPS03.TAB    E15ISECLIPS03       1998-06-01T18:46:38    00:03:49
+EUR22H01.TAB    E15ENEUR22H01       1998-06-01T19:05:16    00:10:05
+ECLIPS04.TAB    E15ISECLIPS04       1998-06-01T19:39:12    00:03:50
+KANEHI01.TAB    E15ISKANEHI01       1998-06-01T21:18:48    00:00:01
+ 
+E16:
+ 
+  Filename      Observation ID          Start Time         Duration
+HRSPEC02.TAB    E16INHRSPEC02       1998-07-20T06:06:04    00:02:45
+RCTCAL01.TAB    E16NPRCTCAL01       1998-07-20T11:20:14    00:01:25
+IOMON_01.TAB    E16IPIOMON_01       1998-07-20T11:30:37    00:16:55
+WHTOVL01.TAB    E16JPWHTOVL01       1998-07-20T13:18:50    00:23:33
+WAVEST01.TAB    E16JPWAVEST01       1998-07-20T14:20:31    01:57:14
+HOTMAP01.TAB    E16JNHOTMAP01       1998-07-20T16:22:51    00:23:45
+WAVEST02.TAB    E16JPWAVEST02       1998-07-20T16:58:53    00:25:28
+ 
+E17:
+ 
+  Filename      Observation ID          Start Time         Duration
+EUR20H01.TAB    E17ENEUR20H01       1998-09-25T06:57:45    00:09:04
+WHTOVL03.TAB    E17JNWHTOVL03       1998-09-25T12:32:26    00:09:57
+GSHAPE01.TAB    E17ESGSHAPE01       1998-09-25T12:57:29    00:00:05
+RCTCAL01.TAB    E17NPRCTCAL01       1998-09-25T20:20:16    00:01:25
+WAVEST01.TAB    E17JPWAVEST01       1998-09-25T20:27:41    00:11:32
+WAVEST02.TAB    E17JPWAVEST02       1998-09-25T21:43:31    00:03:41
+GLOBAL01.TAB    E17ENGLOBAL01       1998-09-25T22:55:18    00:44:55
+DRTM__01.TAB    E17EPDRTM__01       1998-09-26T00:25:57    00:48:40
+DRKPOL01.TAB    E17EPDRKPOL01       1998-09-26T01:15:51    00:23:11
+DARKHR01.TAB    E17EPDARKHR01       1998-09-26T01:42:09    00:04:20
+DISSRR01.TAB    E17ESDISSRR01       1998-09-26T03:41:55    00:00:14
+AGENOR01.TAB    E17ESAGENOR01       1998-09-26T03:44:05    00:01:06
+THRACE01.TAB    E17ESTHRACE01       1998-09-26T03:46:15    00:00:23
+LIBLIN01.TAB    E17ESLIBLIN01       1998-09-26T03:47:50    00:00:15
+STRSLP01.TAB    E17ESSTRSLP01       1998-09-26T03:49:34    00:01:15
+RHIANN01.TAB    E17ESRHIANN01       1998-09-26T03:52:10    00:00:06
+THYLIN01.TAB    E17ESTHYLIN01       1998-09-26T03:53:45    00:00:28
+SOUTHP01.TAB    E17ESSOUTHP01       1998-09-26T03:55:38    00:00:34
+REGMAP02.TAB    E17ESREGMAP02       1998-09-26T04:56:10    00:02:23
+REGMAP03.TAB    E17ESREGMAP03       1998-09-26T04:59:55    00:00:14
+DARKHR02.TAB    E17EPDARKHR02       1998-09-26T05:00:59    00:59:06
+DRKMAP02.TAB    E17EPDRKMAP02       1998-09-26T06:26:55    01:14:08
+DRKMAP03.TAB    E17EPDRKMAP03       1998-09-26T07:42:06    01:14:47
+RCTCAL02.TAB    E17NPRCTCAL02       1998-09-26T09:00:58    00:01:56
+ 
+E18:
+ 
+  Filename      Observation ID          Start Time         Duration
+STP10601.TAB    E18IPSTP10601       1998-11-21T14:17:12    00:01:16
+GLOBAL01.TAB    E18EPGLOBAL01       1998-11-21T18:48:39    00:00:51
+WHTOVL01.TAB    E18JNWHTOVL01       1998-11-22T00:31:18    00:16:05
+RCTCAL01.TAB    E18NPRCTCAL01       1998-11-22T03:14:51    00:01:20
+ 
+E19:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    E19NPRCTCAL01       1999-01-31T10:47:25    00:01:21
+POL09001.TAB    E19JPPOL09001       1999-01-31T11:05:48    02:06:19
+GLOBAL01.TAB    E19EPGLOBAL01       1999-01-31T21:23:17    00:21:00
+POL05102.TAB    E19JPPOL05102       1999-01-31T22:05:45    01:51:58
+REGMAP01.TAB    E19EPREGMAP01       1999-02-01T00:20:14    00:50:07
+STP04203.TAB    E19GPSTP04203       1999-02-01T03:13:06    00:01:19
+ 
+C21:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    C21NPRCTCAL01       1999-06-30T04:51:59    00:06:29
+CALCOL01.TAB    C21NMCALCOL01       1999-06-30T05:12:31    00:04:02
+HIRESS01.TAB    C21CPHIRESS01       1999-06-30T07:52:56    00:10:45
+GLOBAL01.TAB    C21IPGLOBAL01       1999-07-01T22:15:15    00:15:53
+GLOBAL02.TAB    C21IPGLOBAL02       1999-07-02T04:13:09    01:03:12
+HRSPEC01.TAB    C21INHRSPEC01       1999-07-02T07:03:14    00:55:44
+GLOBAL03.TAB    C21IPGLOBAL03       1999-07-02T14:19:51    00:16:15
+RCTCAL02.TAB    C21NPRCTCAL02       1999-07-02T15:09:32    00:01:22
+ 
+C22:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    C22NPRCTCAL01       1999-08-11T16:23:06    00:01:25
+REGMAP01.TAB    C22JPREGMAP01       1999-08-11T19:51:46    02:07:35
+REGMAP02.TAB    C22JPREGMAP02       1999-08-11T22:43:38    02:07:36
+REGMAP03.TAB    C22JPREGMAP03       1999-08-12T01:29:08    02:47:26
+WHTOVL01.TAB    C22JNWHTOVL01       1999-08-12T18:10:32    00:01:50
+ 
+I24:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    I24NPRCTCAL01       1999-10-10T08:14:08    00:01:17
+WAVEST01.TAB    I24JPWAVEST01       1999-10-10T09:04:03    00:00:57
+LOKI__02.TAB    I24IPLOKI__02       1999-10-11T03:42:18    00:37:31
+PELE_N01.TAB    I24INPELE__01       1999-10-11T04:22:42    00:03:59
+PELE_S01.TAB    I24ISPELE__01       1999-10-11T04:27:47    00:02:07
+PILLANS1.TAB    I24ISPILLAN01       1999-10-11T04:31:24    00:00:31
+PILLANN1.TAB    I24INPILLAN01       1999-10-11T04:32:01    00:01:25
+COLCHSS1.TAB    I24ISCOLCHS01       1999-10-11T04:34:31    00:00:26
+COLCHSN1.TAB    I24INCOLCHS01       1999-10-11T04:35:03    00:01:25
+ZAMAMAS1.TAB    I24ISZAMAMA01       1999-10-11T04:38:29    00:00:30
+ZAMAMAN1.TAB    I24INZAMAMA01       1999-10-11T04:39:06    00:01:19
+PROMTHS1.TAB    I24ISPROMTH01       1999-10-11T04:42:41    00:04:24
+PROMTHN1.TAB    I24INPROMTH01       1999-10-11T04:47:11    00:01:16
+COLCHSS2.TAB    I24ISCOLCHS02       1999-10-11T04:51:10    00:00:03
+COLCHSN2.TAB    I24INCOLCHS02       1999-10-11T04:52:31    00:00:50
+TOHIL_01.TAB    I24ISTOHIL_01       1999-10-11T04:54:39    00:01:30
+NTOHIL01.TAB    I24INNTOHIL01       1999-10-11T04:57:27    00:00:50
+PROMTHS2.TAB    I24ISPROMTH02       1999-10-11T04:59:38    00:04:29
+PROMTHN2.TAB    I24INPROMTH02       1999-10-11T05:05:25    00:06:58
+ZAMAMAS2.TAB    I24ISZAMAMA02       1999-10-11T05:13:43    00:03:19
+ZAMAMAN2.TAB    I24INZAMAMA02       1999-10-11T05:18:20    00:02:34
+DORIANS1.TAB    I24ISDORIAN01       1999-10-11T05:22:12    00:00:07
+DORIANN1.TAB    I24INDORIAN01       1999-10-11T05:23:37    00:00:50
+AMSKGIS1.TAB    I24ISAMSKGI01       1999-10-11T05:25:47    00:03:18
+AMSKGIN1.TAB    I24INAMSKGI01       1999-10-11T05:30:23    00:02:34
+TERMAPS1.TAB    I24ISTERMAP01       1999-10-11T05:34:20    00:00:16
+TERMAPN1.TAB    I24INTERMAP01       1999-10-11T05:35:54    00:01:16
+REGION01.TAB    I24INREGION01       1999-10-11T06:09:54    00:31:58
+PPLUME01.TAB    I24INPPLUME01       1999-10-11T06:47:38    00:04:59
+PELEPM01.TAB    I24INPELEPM01       1999-10-11T08:06:10    00:04:59
+REGION02.TAB    I24INREGION02       1999-10-11T10:45:56    00:16:24
+GLOCOL01.TAB    I24ISGLOCOL01       1999-10-11T18:05:07    00:00:48
+ECLIPS01.TAB    I24ISECLIPS01       1999-10-12T03:57:46    00:05:14
+ 
+I25:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    I25NPRCTCAL01       1999-11-25T13:23:24    00:01:18
+DRKMAP01.TAB    I25EPDRKMAP01       1999-11-25T14:13:19    01:29:09
+H2O12001.TAB    I25EPH2O12001       1999-11-25T15:47:06    00:36:06
+NOPOLE01.TAB    I25JNNOPOLE01       1999-11-25T16:38:50    00:11:00
+DARKBP01.TAB    I25ESDARKBP01       1999-11-25T16:59:10    00:00:04
+MOTTER01.TAB    I25ESMOTTER01       1999-11-25T17:01:10    00:00:02
+SUBJUP01.TAB    I25JNSUBJUP01       1999-11-25T17:15:16    00:03:08
+DGTM__01.TAB    I25EPDGTM__01       1999-11-25T17:33:20    01:01:03
+GLOBAL01.TAB    I25ESGLOBAL01       1999-11-25T18:46:20    00:01:40
+H2O40_02.TAB    I25EPH2O40_02       1999-11-25T18:49:00    00:31:00
+EQUATR01.TAB    I25JNEQUATR01       1999-11-25T19:25:42    00:06:35
+GLOBAL01.TAB    I25JNGLOBAL01       1999-11-25T19:44:54    00:01:59
+GLOBAL01.TAB    I25IPGLOBAL01       1999-11-25T22:54:02    01:07:53
+EMAKNGS2.TAB    I25ISEMAKNG02       1999-11-26T04:39:52    00:01:30
+EMAKNGN2.TAB    I25INEMAKNG02       1999-11-26T04:42:42    00:00:49
+GIANTSS1.TAB    I25ISGIANTS01       1999-11-26T04:46:56    00:00:14
+GIANTSN1.TAB    I25INGIANTS01       1999-11-26T04:48:30    00:01:40
+CULANNS1.TAB    I25ISCULANN01       1999-11-26T04:53:00    00:01:40
+CULANNN1.TAB    I25INCULANN01       1999-11-26T04:56:00    00:00:48
+TERM__01.TAB    I25ISTERM__01       1999-11-26T05:03:06    00:02:07
+TERMAP01.TAB    I25INTERMAP01       1999-11-26T05:06:33    00:00:48
+REGION01.TAB    I25INREGION01       1999-11-26T05:10:06    00:45:02
+RCTCAL02.TAB    I25NPRCTCAL02       1999-11-26T08:26:02    00:04:22
+ 
+I27:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    I27NPRCTCAL01       2000-02-22T00:09:59    00:01:17
+LIMBRD01.TAB    I27JPLIMBRD01       2000-02-22T01:53:28    01:05:18
+LIMBRD02.TAB    I27JPLIMBRD02       2000-02-22T04:54:07    00:26:45
+DRKMAP01.TAB    I27IPDRKMAP01       2000-02-22T06:59:50    01:11:11
+LOKI__01.TAB    I27IPLOKI__01       2000-02-22T11:21:43    00:47:30
+DAEDAL01.TAB    I27IPDAEDAL01       2000-02-22T12:25:25    00:38:07
+LOKI__02.TAB    I27IPLOKI__02       2000-02-22T13:06:51    00:18:03
+LOKI__03.TAB    I27IPLOKI__03       2000-02-22T13:25:55    00:07:12
+HRPELE01.TAB    I27INHRPELE01       2000-02-22T13:35:07    00:05:01
+PELE__01.TAB    I27ISPELE__01       2000-02-22T13:40:58    00:00:11
+MULNGU01.TAB    I27IPMULNGU01       2000-02-22T13:41:19    00:01:09
+SAPPNG01.TAB    I27ISSAPPNG01       2000-02-22T13:47:01    00:00:32
+CHACC_01.TAB    I27ISCHACC_01       2000-02-22T13:49:04    00:01:03
+PROMTHS1.TAB    I27ISPROMTH01       2000-02-22T13:51:05    00:00:42
+MOSAIC01.TAB    I27INMOSAIC01       2000-02-22T13:57:21    00:18:16
+PROMTHN1.TAB    I27INPROMTH01       2000-02-22T14:16:57    00:09:32
+TOHIL_01.TAB    I27ISTOHIL_01       2000-02-22T14:27:46    00:00:32
+PROMTH02.TAB    I27ISPROMTH02       2000-02-22T14:29:47    00:00:50
+CAMAXTS1.TAB    I27ISCAMAXT01       2000-02-22T14:32:50    00:01:41
+CAMAXTN1.TAB    I27INCAMAXT01       2000-02-22T14:35:48    00:01:58
+AMARANS1.TAB    I27ISAMARAN01       2000-02-22T14:39:55    00:00:40
+AMARANN1.TAB    I27INAMARAN01       2000-02-22T14:41:51    00:11:09
+ZALTRM01.TAB    I27ISZALTRM01       2000-02-22T15:08:13    00:00:48
+FROST_01.TAB    I27IPFROST_01       2000-02-22T16:15:35    01:06:18
+DGTM__01.TAB    I27IPDGTM__01       2000-02-22T17:25:28    00:38:44
+RCTCAL02.TAB    I27NPRCTCAL02       2000-02-22T23:24:29    00:01:17
+ 
+G28:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    G28NPRCTCAL01       2000-05-20T09:27:33    00:00:56
+HIRES_01.TAB    G28GPHIRES_01       2000-05-20T09:59:15    00:11:08
+SMOOTH01.TAB    G28GSSMOOTH01       2000-05-20T10:13:30    00:00:49
+BRTDRK01.TAB    G28GSBRTDRK01       2000-05-20T10:14:26    00:00:54
+NICHOL01.TAB    G28GSNICHOL01       2000-05-20T10:15:27    00:00:54
+ARBELA01.TAB    G28GSARBELA01       2000-05-20T10:16:27    00:01:58
+CALDRA01.TAB    G28GSCALDRA01       2000-05-20T10:18:29    00:02:50
+FEATRE01.TAB    G28GNFEATRE01       2000-05-20T10:21:26    00:08:03
+SMOOTH02.TAB    G28GSSMOOTH02       2000-05-20T10:29:36    00:00:54
+BRTDRK02.TAB    G28GSBRTDRK02       2000-05-20T10:30:37    00:00:54
+NICHOL02.TAB    G28GSNICHOL02       2000-05-20T10:31:37    00:00:54
+CALDRA02.TAB    G28GSCALDRA02       2000-05-20T10:34:39    00:02:50
+LMSCAN01.TAB    G28GNLMSCAN01       2000-05-20T10:37:37    00:11:58
+SMTHDR01.TAB    G28GSSMTHDR01       2000-05-20T10:54:37    00:00:07
+PERRIN01.TAB    G28GNPERRIN01       2000-05-20T12:02:33    00:07:58
+GLOBAL01.TAB    G28GPGLOBAL01       2000-05-20T12:27:32    00:02:42
+STP11401.TAB    G28EPSTP11401       2000-05-20T13:34:24    00:02:30
+STP10302.TAB    G28EPSTP10302       2000-05-20T14:57:32    00:03:07
+STP09003.TAB    G28EPSTP09003       2000-05-20T16:58:45    00:02:13
+STP07704.TAB    G28EPSTP07704       2000-05-20T18:59:05    00:02:12
+STP06105.TAB    G28EPSTP06105       2000-05-20T20:57:29    00:03:06
+STP04506.TAB    G28EPSTP04506       2000-05-20T22:57:42    00:02:13
+STP03007.TAB    G28EPSTP03007       2000-05-21T00:58:01    00:02:12
+STP01808.TAB    G28EPSTP01808       2000-05-21T03:05:33    00:03:06
+STP00609.TAB    G28EPSTP00609       2000-05-21T04:12:16    00:03:06
+NSSTRP01.TAB    G28JPNSSTRP01       2000-05-21T04:20:59    00:21:44
+DKSPOL01.TAB    G28JPDKSPOL01       2000-05-21T04:47:39    00:00:36
+DKSPOT01.TAB    G28JPDKSPOT01       2000-05-21T04:48:27    02:09:00
+WHTOVL01.TAB    G28JPWHTOVL01       2000-05-21T07:23:22    00:46:41
+LIMBRD01.TAB    G28JPLIMBRD01       2000-05-21T08:21:39    00:53:14
+LIMBRD02.TAB    G28JPLIMBRD02       2000-05-21T10:19:57    00:54:54
+RCTCAL02.TAB    G28NPRCTCAL02       2000-05-21T11:59:03    00:01:19
+STP05001.TAB    G28IPSTP05001       2000-05-21T12:24:26    00:02:53
+STP04502.TAB    G28IPSTP04502       2000-05-21T13:04:01    00:02:41
+ 
+G29:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    G29NPRCTCAL01       2000-12-28T07:30:03    00:01:17
+HIRES_01.TAB    G29GPHIRES_01       2000-12-28T07:54:38    00:25:17
+NPOLE_01.TAB    G29GPNPOLE_01       2000-12-28T08:19:56    00:09:39
+TROS__01.TAB    G29GPTROS__01       2000-12-28T08:29:36    00:09:32
+BARNRD01.TAB    G29GPBARNRD01       2000-12-28T08:39:08    00:15:04
+PERRIN01.TAB    G29GPPERRIN01       2000-12-28T08:56:29    00:04:53
+AIRGLO01.TAB    G29GSAIRGLO01       2000-12-28T09:21:22    00:19:27
+NICECL01.TAB    G29GPNICECL01       2000-12-28T09:45:33    00:11:44
+ECLEGR01.TAB    G29GPECLEGR01       2000-12-28T09:58:34    00:12:23
+CAPCOL01.TAB    G29GSCAPCOL01       2000-12-28T10:16:20    00:13:31
+DARDAN01.TAB    G29GSDARDAN01       2000-12-28T10:31:30    00:02:55
+REGION01.TAB    G29GNREGION01       2000-12-28T10:36:24    00:15:00
+DGTM__01.TAB    G29GPDGTM__01       2000-12-28T10:54:57    01:48:07
+GLOBAL01.TAB    G29CNGLOBAL01       2000-12-28T13:46:30    00:02:04
+GLOBAL01.TAB    G29GNGLOBAL01       2000-12-28T17:18:51    00:09:51
+GLOBAL02.TAB    G29GNGLOBAL02       2000-12-28T17:31:58    00:10:13
+NEB___01.TAB    G29JPNEB___01       2000-12-28T18:40:26    02:03:08
+STP12001.TAB    G29IPSTP12001       2000-12-28T21:42:36    00:03:22
+GLOBAL03.TAB    G29GNGLOBAL03       2000-12-28T22:37:20    00:07:44
+STP11002.TAB    G29IPSTP11002       2000-12-28T23:08:38    00:04:00
+WATCH_01.TAB    G29INWATCH_01       2000-12-28T23:17:46    00:03:00
+NWGRS_01.TAB    G29JPNWGRS_01       2000-12-29T01:02:47    02:02:57
+GRWAKE01.TAB    G29JNGRWAKE01       2000-12-29T03:07:30    00:25:54
+WATCH_02.TAB    G29INWATCH_02       2000-12-29T03:52:49    00:03:08
+GRWAKE02.TAB    G29JNGRWAKE02       2000-12-29T03:59:54    00:14:11
+HTSPOT01.TAB    G29JNHTSPOT01       2000-12-29T05:24:47    00:14:14
+HTSPOT02.TAB    G29JNHTSPOT02       2000-12-29T06:02:12    00:16:06
+NSSTRP01.TAB    G29JPNSSTRP01       2000-12-29T06:20:18    00:24:54
+STP04703.TAB    G29IPSTP04703       2000-12-29T06:46:46    00:04:28
+STP10801.TAB    G29EPSTP10801       2000-12-29T08:06:38    00:04:28
+STP03704.TAB    G29IPSTP03704       2000-12-29T08:21:48    00:04:28
+STP08302.TAB    G29EPSTP08302       2000-12-29T11:54:08    00:04:27
+AURORA01.TAB    G29JNAURORA01       2000-12-29T12:50:44    00:12:06
+GLOBAL01.TAB    G29ENGLOBAL01       2000-12-29T13:30:09    00:02:59
+AURORA02.TAB    G29JNAURORA02       2000-12-29T13:50:22    00:13:02
+AURORA03.TAB    G29JNAURORA03       2000-12-29T14:52:01    00:12:07
+AURORA04.TAB    G29JNAURORA04       2000-12-29T15:52:41    00:12:59
+GLOCOL01.TAB    G29ISGLOCOL01       2000-12-29T16:32:20    00:00:30
+AURORA05.TAB    G29JNAURORA05       2000-12-29T16:52:22    00:12:58
+STP05203.TAB    G29EPSTP05203       2000-12-29T17:24:40    00:03:33
+AURORA06.TAB    G29JNAURORA06       2000-12-29T17:56:05    00:10:08
+STP01705.TAB    G29IPSTP01705       2000-12-29T18:29:22    00:03:34
+AURORA07.TAB    G29JNAURORA07       2000-12-29T19:14:58    00:12:56
+PROMTH01.TAB    G29ISPROMTH01       2000-12-29T20:00:30    00:00:28
+AURORA08.TAB    G29JNAURORA08       2000-12-29T20:15:37    00:12:57
+STP03704.TAB    G29EPSTP03704       2000-12-29T20:48:54    00:03:33
+RCTCAL02.TAB    G29NPRCTCAL02       2000-12-29T21:02:10    00:02:04
+ 
+C30:
+ 
+  Filename      Observation ID          Start Time         Duration
+GLOBAL01.TAB    C30IPGLOBAL01       2001-05-23T16:30:12    00:17:56
+WHTOVL01.TAB    C30JPWHTOVL01       2001-05-23T20:04:56    00:36:30
+HIRES_01.TAB    C30CPHIRES_01       2001-05-25T11:14:37    00:08:00
+EWSCAN01.TAB    C30CPEWSCAN01       2001-05-25T14:00:04    00:01:56
+EWSCAN02.TAB    C30CPEWSCAN02       2001-05-25T14:16:28    00:03:34
+NSPOLE01.TAB    C30CPNSPOLE01       2001-05-25T14:28:52    00:00:38
+ 
+I31:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    I31NPRCTCAL01       2001-08-04T15:09:25    00:00:57
+STP13501.TAB    I31CPSTP13501       2001-08-04T15:23:42    00:06:32
+WHTOVL01.TAB    I31JPWHTOVL01       2001-08-05T07:24:17    00:41:55
+VORTEX01.TAB    I31JPVORTEX01       2001-08-05T08:11:00    00:42:39
+GLOBAL01.TAB    I31IPGLOBAL01       2001-08-06T00:19:23    01:36:37
+PELEDK01.TAB    I31IPPELEDK01       2001-08-06T01:57:44    00:57:47
+NPOLRG01.TAB    I31IPNPOLRG01       2001-08-06T02:57:22    00:54:51
+NSDRK_01.TAB    I31IPNSDRK_01       2001-08-06T03:56:41    00:09:46
+LOKI__01.TAB    I31IPLOKI__01       2001-08-06T04:13:12    00:10:05
+LEIKNG01.TAB    I31IPLEIKNG01       2001-08-06T04:25:46    00:06:34
+THERML01.TAB    I31INTHERML01       2001-08-06T04:37:27    00:09:59
+HSISUM01.TAB    I31INHSISUM01       2001-08-06T04:49:34    00:03:55
+HIRES_01.TAB    I31IPHIRES_01       2001-08-06T04:53:37    00:06:06
+SO2MAP01.TAB    I31INSO2MAP01       2001-08-06T05:02:42    00:00:39
+TVASHT01.TAB    I31INTVASHT01       2001-08-06T05:14:50    00:09:53
+GISHBR01.TAB    I31INGISHBR01       2001-08-06T05:39:07    00:07:57
+NSSTRP01.TAB    I31IPNSSTRP01       2001-08-06T05:57:23    00:16:34
+AMRANI01.TAB    I31INAMRANI01       2001-08-06T06:20:33    00:15:07
+REGION01.TAB    I31INREGION01       2001-08-06T06:50:55    01:12:46
+DGTM__01.TAB    I31IPDGTM__01       2001-08-06T09:05:04    01:57:54
+POLMAP01.TAB    I31IPPOLMAP01       2001-08-06T12:30:30    00:28:52
+STP03002.TAB    I31CPSTP03002       2001-08-06T14:13:42    00:06:15
+STP01503.TAB    I31CPSTP01503       2001-08-07T01:49:21    00:04:00
+ 
+I32:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    I32NPRCTCAL01       2001-10-15T07:30:39    00:01:19
+VORTEX01.TAB    I32JPVORTEX01       2001-10-15T07:47:11    00:49:57
+VORTEX02.TAB    I32JPVORTEX02       2001-10-15T10:13:48    00:34:44
+WHTOVL01.TAB    I32JPWHTOVL01       2001-10-15T11:00:19    00:44:43
+VORTEX03.TAB    I32JPVORTEX03       2001-10-15T12:43:27    00:44:43
+VORTEX04.TAB    I32JPVORTEX04       2001-10-15T13:29:57    00:44:44
+DRKMAP01.TAB    I32IPDRKMAP01       2001-10-15T14:19:11    00:29:01
+DRKMAP02.TAB    I32IPDRKMAP02       2001-10-15T19:18:26    01:02:22
+LOKI_S01.TAB    I32ISLOKI__01       2001-10-15T20:46:46    00:00:12
+COLCHS01.TAB    I32IPCOLCHS01       2001-10-15T20:51:27    00:55:11
+REGIONP1.TAB    I32IPREGION01       2001-10-15T21:53:29    00:56:46
+BABBAR01.TAB    I32IPBABBAR01       2001-10-15T22:51:05    00:59:33
+RAPATR01.TAB    I32IPRAPATR01       2001-10-15T23:51:45    00:28:48
+THPELE01.TAB    I32INTHPELE01       2001-10-16T00:23:06    00:04:00
+LOKI_P01.TAB    I32IPLOKI__01       2001-10-16T00:29:10    00:25:07
+THLOKI01.TAB    I32INTHLOKI01       2001-10-16T00:54:24    00:10:09
+PELE__01.TAB    I32ISPELE__01       2001-10-16T01:04:38    00:02:57
+THPELE02.TAB    I32INTHPELE02       2001-10-16T01:07:41    00:06:57
+HIRESS01.TAB    I32IPHIRESS01       2001-10-16T01:14:40    00:09:11
+TELGNS01.TAB    I32ISTELGNS01       2001-10-16T01:23:52    00:03:56
+THERML01.TAB    I32INTHERML01       2001-10-16T01:27:54    00:03:57
+EMAKNGS1.TAB    I32ISEMAKNG01       2001-10-16T01:31:57    00:01:25
+TELGNS02.TAB    I32ISTELGNS02       2001-10-16T01:33:22    00:01:48
+TOHIL_01.TAB    I32ISTOHIL_01       2001-10-16T01:35:17    00:05:40
+EMAKNGN1.TAB    I32INEMAKNG01       2001-10-16T01:40:57    00:12:09
+TUPAN_01.TAB    I32ISTUPAN_01       2001-10-16T01:56:10    00:02:59
+ITUPAN01.TAB    I32INITUPAN01       2001-10-16T01:59:09    00:08:06
+TVASHT01.TAB    I32ISTVASHT01       2001-10-16T02:08:35    00:00:14
+ICHAAC01.TAB    I32INICHAAC01       2001-10-16T02:10:14    00:11:16
+GSHBAR01.TAB    I32ISGSHBAR01       2001-10-16T02:21:32    00:00:14
+PROMTH01.TAB    I32INPROMTH01       2001-10-16T02:24:24    00:12:11
+TERMIN01.TAB    I32ISTERMIN01       2001-10-16T02:38:38    00:00:49
+TERMIN02.TAB    I32ISTERMIN02       2001-10-16T02:40:48    00:00:48
+EWSCAN01.TAB    I32IPEWSCAN01       2001-10-16T02:46:38    00:11:26
+POLMAP01.TAB    I32IPPOLMAP01       2001-10-16T03:01:39    00:08:46
+REGIONN1.TAB    I32INREGION01       2001-10-16T03:13:00    01:04:36
+POLDAY01.TAB    I32IPPOLDAY01       2001-10-16T04:18:31    00:27:45
+AMALTH01.TAB    I32SSAMALTH01       2001-10-16T04:53:07    00:00:01
+POLMAP02.TAB    I32IPPOLMAP02       2001-10-16T04:54:57    01:33:23
+LIMBRD01.TAB    I32JPLIMBRD01       2001-10-16T06:32:53    00:27:51
+REGION02.TAB    I32INREGION02       2001-10-16T07:03:33    00:35:21
+GLOBAL01.TAB    I32EPGLOBAL01       2001-10-16T08:02:54    00:06:46
+LIMBRD02.TAB    I32JPLIMBRD02       2001-10-16T15:18:50    00:27:50
+RCTCAL02.TAB    I32NPRCTCAL02       2001-10-17T16:12:02    00:01:18
+ 
+I33:
+ 
+  Filename      Observation ID          Start Time         Duration
+RCTCAL01.TAB    I33NPRCTCAL01       2002-01-16T22:59:26    00:01:17
+DRKMAP01.TAB    I33IPDRKMAP01       2002-01-16T23:22:02    00:09:26
+PROMTH01.TAB    I33IPPROMTH01       2002-01-17T13:06:44    00:16:00
+EWSCAN01.TAB    I33IPEWSCAN01       2002-01-17T13:29:21    00:04:13
+MARDUK01.TAB    I33IPMARDUK01       2002-01-17T13:36:23    00:04:46
+GLOBAL01.TAB    I33JNGLOBAL01       2002-01-19T23:46:46    00:23:12
+GLOBAL02.TAB    I33JNGLOBAL02       2002-01-20T03:06:58    00:20:10
+GLOBAL03.TAB    I33JNGLOBAL03       2002-01-20T06:28:10    00:27:10
+FEATRK01.TAB    I33JSFEATRK01       2002-01-20T19:09:35    00:00:26
+FEATRK02.TAB    I33JSFEATRK02       2002-01-20T19:38:54    00:00:26
+FEATRK03.TAB    I33JSFEATRK03       2002-01-20T20:08:14    00:00:24
+FEATRK11.TAB    I33JSFEATRK11       2002-01-20T20:40:35    00:00:25
+FEATRK12.TAB    I33JSFEATRK12       2002-01-20T21:09:54    00:00:25
+FEATRK13.TAB    I33JSFEATRK13       2002-01-20T21:39:14    00:00:26
+FEATRK21.TAB    I33JSFEATRK21       2002-01-20T22:11:36    00:00:24
+FEATRK22.TAB    I33JSFEATRK22       2002-01-20T22:40:54    00:00:25
+FEATRK23.TAB    I33JSFEATRK23       2002-01-20T23:10:14    00:00:24
+FEATRK31.TAB    I33JSFEATRK31       2002-01-21T05:10:11    00:00:24
+FEATRK32.TAB    I33JSFEATRK32       2002-01-21T05:39:30    00:00:20
+FEATRK33.TAB    I33JSFEATRK33       2002-01-21T06:08:53    00:00:21
+FEATRK41.TAB    I33JSFEATRK41       2002-01-21T06:41:11    00:01:27
+FEATRK42.TAB    I33JSFEATRK42       2002-01-21T07:10:30    00:01:26
+FEATRK43.TAB    I33JSFEATRK43       2002-01-21T07:39:50    00:01:26
+FEATRK51.TAB    I33JSFEATRK51       2002-01-21T08:12:11    00:00:24
+FEATRK57.TAB    I33JSFEATRK57       2002-01-21T08:41:30    00:00:25
+FEATRK53.TAB    I33JSFEATRK53       2002-01-21T09:10:50    00:00:24
+ 
+ 
+Ancillary Data
+==============
+ 
+The housekeeping and science data in the full PPR minor frame records
+contain all of the commanded parameters and all variable parameter
+values that completely specify the instrument status, including the
+position within various measurement mode cycles.  When observations
+are made using the PPR Burst-to-Tape record mode, the second byte of
+the PPR housekeeping is deleted before the data are stored in the CDS
+memory buffer.  This byte contains the commanded values for the
+photopolarimetry gain, radiometry gain, and number of successive
+samples to be taken at each filter wheel position before stepping to
+the next position.  These three parameters are set by command and do
+not change during instrument operation unless reset by a new command.
+Actual values can be obtained from the Galileo Sequence of Events File
+(SEF), which is archived in the PDS by the Galileo Project and which
+indicates timing of the PPR commands and the commanded parameter
+values.  In processing to generate the present reduced science data,
+the SEF or equivalent PPR-team-maintained command records are used to
+manually input the actual values for these three parameters.
+ 
+The target body for each observation is indicated in the observation
+ID and in the label file for each data file.  Observed location on the
+target body and observing geometry (viz., target range and incidence,
+emission, and phase angles) for each measurement sample within an
+observation sequence must be obtained from the SPICE system for the
+spacecraft clock time corresponding to the measurement.  Note that the
+spacecraft clock RIM and MOD91 counts for each record of the R_EDR
+data set correspond to the time that the respective PPR memory buffer
+was readout by the CDS.  The actual time at which the measurement
+samples were acquired is earlier than that time by varying amounts
+depending on instrument operation mode and the position of the data
+sample in the PPR buffer.  In the processing to generate the present
+reduced science data, the appropriate adjusted spacecraft clock time
+is determined and represented as adjusted RIM and MOD91 counts, which
+are the first two entries in each RDR data set record.  The SPICE data
+(kernels) and system tools are archived in PDS by the Galileo Project.
+The present reduced science data set includes geometric information
+(observed location on target body, observing geometry, range, etc.) as
+determined by the PPR team using the SPICE system.  Subdirectory GEOMETRY
+on this volume contains a *.GEO file with that information for each
+*.TAB reduced science data file.
+ 
+Calibration coefficients to convert PPR photometry and polarimetry
+measurements of intensity from DN values at a particular instrument
+gain level to absolute units are based upon ground calibration
+measurements.  Thermal radiometry measurement conversion to brightness
+temperature is a substantially more complex reduction process based
+upon various calibration tests performed before launch, but was always
+expected to require significant iteration based upon in-flight
+observations of the PPR radiometric calibration target (RCT), whose
+temperature is monitored and readout in the PPR science data stream.
+The ancillary data in CALINFO.TXT provides the photometry and
+polarimetry calibration coefficients and tabulates the results of the
+in-flight RCT observations.
+ 
+ 
+Coordinate System
+=================
+ 
+For PPR observations that use the Burst-to-Tape record mode, the right
+ascension and declination angles of the scan platform instrument
+boresight direction are merged with the PPR housekeeping and science
+data and appear as two columns of each RDR data set record.  All other
+record modes include the scan platform pointing in the AACS section of
+the Low Rate Science blocks, so it is necessary to use the SPICE
+system to obtain these angles for those observations.  The SPICE
+system kernels contain Galileo spacecraft ephemeris, scan platform
+pointing, and instrument data necessary for providing target body
+coordinates and observing geometry as a function of time, using IAU
+standard coordinate systems as specified in the SPICE documentation.
+As indicated above, geometry information generated by the PPR science
+team using the SPICE system is provided in files contained in the GEOMETRY
+subdirectory of this volume.
+ 
+The reduced PPR polarimetry observations provide the radiance, or
+intensity, the linear polarization degree, and the direction of the
+polarization of the light scattered-reflected from the viewed target.
+Polarization direction is the plane in which the maximum electric
+field vector of the incident flux lies and in the present RDR data
+is referenced to the PPR instrument baseplate. In the case of a
+photon scattered or reflected just once, i.e., single scattering,
+the polarization direction must lie precisely either in the
+scattering plane or perpendicular to it, where the scattering plane
+is the plane defined by the vector between the Sun and the observed
+point and the vector from the spacecraft to the observed point. Even
+in the more general multiple scattering case, the polarization
+direction is rarely more than a few degrees away from being either
+parallel or perpendicular to the scattering plane unless the linear
+polarization is close to zero, where the direction of course becomes
+undefined. As a consequence, polarimetry data will typically show
+polarization direction angles clustered, either about a single angle
+or two angles separated by about 90 degrees. Because of this
+approximate discrete two-valued nature rather than continuous over
+the full range of angles, linear polarization is often presented as
+a signed value, with negative values corresponding to the situation
+where the direction lies in or very near the scattering plane.
+ 
+The twist angle for the scan platform is the third Euler angle
+of the three that represent the C-matrix:
+ 
+   CMAT = [twist]  [pi/2 - DEC]  [RA]
+                 3             2     3
+ 
+The SPICE routine M2EUL can be used to recover Euler angles from
+a C-matrix.
+ 
+Please see the C-Kernel or Rotations &apos;Required Reading&apos; in the
+NAIF SPICE Toolkit documentation for further information.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+Confidence Level Overview
+=========================
+ 
+The PPR RDR data set represents all PPR data for the Jupiter Phase
+Nominal Mission and GEM and GMM extended tours as recovered from the
+Galileo Project ground system, with the exception of the observations
+during the C20 encounter that would be meaningless owing to the
+anomalous PPR radiometry mode behavior.  When multiple passes of the
+DMS tape were downlinked, the data were merged to provide the most
+complete sequences.
+ 
+ 
+Data Coverage and Quality
+=========================
+ 
+The RDR data set is organized into a separate file for each PPR
+observation or OAPEL as listed in the Data section under DATA_SET_DESC
+above.  The start times and durations in that set of lists correspond
+to the actual times of the first and last records returned for the
+particular OAPEL rather than the planned times, if different.  In a
+few cases, the data begin later or end earlier than planned owing to
+limitations on DMS tape or bits-to-ground capability or losses during
+downlink and ground processing.  There are, in addition, a few OAPELs
+that have coverage gaps.
+ 
+Parity bits generated by the PPR instrument processor and placed in
+the PPR housekeeping and science data were monitored in the processing
+of the EDR data and indicate that there appear to be no instances of
+individual bit changes in the data stream.  For PPR observations that
+use a DMS tape record mode employing the Low Rate Science format, any
+data gaps caused by telemetry dropouts appear as a loss of entire PPR
+minor frame records.  In contrast, for the Burst-to-Tape record mode,
+the channelization procedure used in storing the PPR data stream in
+the CDS memory buffer can lead to the return of PPR minor frame
+records with missing bytes in which zero-fill is used by the ground
+system.  The PPR science data samples use a non-zero &apos;dark&apos; level
+offset larger than any expected noise.  Thus, zero is not a legitimate
+value for these samples, for which the PPR processor uses a twos-
+compliment mode that when converted from the raw data stream to the
+RDR format for the basic data samples in DN will appear as 4095 if
+zero-fill has occurred.
+ 
+As described earlier, data reduction of the thermal radiometry entails
+the correction of the raw pyroelectric detector output for
+contributions to the measured flux by emission, albeit small, from
+internal elements such as mirrors and radiometric stops.  These
+corrections use the element temperatures monitored by the thermistors
+along with calibration factors determined through ground thermal
+vacuum tests in which each element was in turn heated by several
+degrees to observe the sensitivity to that particular element.  The
+corrected net thermal radiance is then converted to a brightness
+temperature in Kelvins.  In-flight observations of the PPR radiometric
+calibration target (RCT), whose temperature is monitored and readout
+in the PPR science data stream, reveal that the coefficients used in
+the basic reduction to date require re-examination because the
+agreement between the reduced brightness temperature of the RCT and
+the measured value is variable, with the former generally too low, in
+some cases by as much as 7.0 degrees.  During GEM and GMM phases,
+the sign of the difference was less systematic, perhaps owing to much
+increased noise levels, especially for those orbits with the high
+radiation environment closer to Jupiter.  The ancillary data set,
+CALINFO.TXT, tabulates the results of the in-flight RCT observations.
+ 
+Noise in the PPR radiometry measurements is due to inherent instrument
+noise caused by the response of the pyroelectric detector to small
+fluctuations of the thermal state in the region of the detector and
+noise caused by high-energy radiation (presumably particles) impacting
+the detector. The former, which we shall call instrument noise, is of
+order 1-2 DN at radiometry gain level 2 for the typical instrument
+operating temperature of -20 to -15 degrees Celsius. Radiation noise
+is assumed to be the perturbation in the pyroelectric detector output
+caused by the very short interaction of the high-energy particle with
+the detector and can be either a positive or negative change depending
+on the part of the chopper cycle during which it occurs, i.e., whether
+scene or space is being viewed. Of course, the contribution due to
+radiation noise is quite variable, with generally increased noise with
+decreasing distance of the spacecraft from Jupiter. During the mission
+phase through E11, radiation noise at gain level 2 was typically 2-10
+DN, but it occasionally hit higher peak levels.  Throughout the GEM
+and GMM phases, the radiation noise was generally higher, with typical
+values as large as 20-30 DN in some cases.  At a gain level 2 for
+observed brightness temperatures of order 130 K, a 2 DN change in the
+radiometry measurement corresponds to a brightness temperature change
+of about 1-2 K depending on the band. As a consequence, most PPR
+observations were designed to permit averaging of at least four
+successive samples without degrading spatial resolution. However, even
+with averaging, noise remains a problem in many cases and one should
+use caution with respect to both the absolute accuracy and the
+precision of the PPR radiometry data.
+ 
+ 
+Limitations
+===========
+ 
+As described in the Data Set Overview section of DATA_SET_DESC above,
+the PPR instrument exhibited anomalous behavior with the filter wheel
+becoming stuck at a single radiometry position midway through the G1
+encounter.  While a recovery sequence involving thermal cycling of the
+instrument succeeded at the end of the E4 encounter, an operational
+mode different from that originally planned was then used during the
+remainder of the Jupiter Phase Nominal Mission and the GEM and GMM
+extended tours to avoid having to step through the position at which
+the filter wheel stuck more than on a limited number of occasions.
+As a consequence, many planned OAPELs were used with a somewhat
+different science strategy than that originally intended and some
+OAPEL names may seem slightly inconsistent with the actual observation.
+It should be noted that during encounter C20, the PPR exhibited quite
+anomalous behavior in radiometry measurements.  All of the radiometry
+data samples were clustered at a DN value of 1412, slightly above the
+typical dark-level offset, and showed an extremely small scatter well
+below the typical noise level.  This behavior was interpreted as being
+consistent with a failed radiometry detector or pre-amplifier.  A PPR
+heating sequence was thus scheduled early in encounter C21 based upon
+the hope that one possible cause, debonding in the detector, might be
+at least partially reversed by high temperatures.  Data playback from
+C21 (and all subsequent encounters) showed that the radiometry function
+had essentially recovered to nominal performance.
+ 
+As noted earlier, the spacecraft clock RIM and MOD91 counts for each
+record of the R_EDR data set correspond to the time that the
+respective PPR memory buffer was readout by the CDS. The actual time
+at which the measurement samples were acquired is earlier than that
+time by varying amounts depending on instrument operation mode and
+the position of the data sample in the PPR buffer. In the processing
+to generate the present reduced science data, an appropriate adjusted
+spacecraft clock time is determined and represented as adjusted RIM
+and MOD91 counts, which are the first two entries in each RDR data
+set record. The most precise such time adjustment would require
+knowledge not only of the known sampling times for each portion of
+a cycle, but also the exact phase of the cycle with respect to the
+minor frame, or MOD91 period. Since that phase is dependent upon the
+precise timing of PPR power on and commanded mode changes, it would
+have to be determined empirically from the detailed pattern of PPR
+buffer redundancies, which is in fact not feasible for short data
+spans. Accordingly, the time adjustment is made without taking
+account of the phase, with the consequence that the adjusted times
+may be in error by as much as one minor frame period of two-thirds
+of a second.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-ROM</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

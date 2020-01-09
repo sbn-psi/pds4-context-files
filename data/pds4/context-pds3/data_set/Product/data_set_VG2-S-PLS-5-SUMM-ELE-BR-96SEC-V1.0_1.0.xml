@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.vg2-s-pls-5-summ-ele-br-96sec-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>VOYAGER 2 SATURN PLASMA DERIVED ELECTRON BROWSE 96 SEC</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.voyager::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pls.vg2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.saturn::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.vg2-s-pls-5-summ-ele-br-96sec-v1.0__browserp_vg2-s-pls-5-summ-ele-br-96sec-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.ppi-ucla::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bridge, H.S., J.W. Belcher, R.J. Butler, A.J. Lazarus, A.M. Mavretic, J.D.
+                   Sullivan, G.L. Siscoe, and V.M. Vasyliunas, The Plasma Experiment on the
+                   1977 Voyager Mission, Space Sci. Rev., Vol. 21, p. 259, 1977.
+            </reference_text>
+            <description>reference.BRIDGEETAL1977</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sittler, E.C., Jr., K.W. Ogilvie, and J.D. Scudder,
+                   survey of low-energy plasma electrons in Saturn&apos;s
+                   Magnetosphere, J. Geophys. Res., 88, 8848-8870, 1983.
+            </reference_text>
+            <description>reference.SITTLERETAL1983</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Sittler, E.C., Jr., K.W. Ogilvie and R.S. Selesnick,
+                   Survey of Electrons in the Uranian magnetosphere: Voyager 2
+                   Observations, J. Geophys. Res., 92, 15263-15281, 1987.
+            </reference_text>
+            <description>reference.SITTLERETAL1987</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>VG2-S-PLS-5-SUMM-ELE-BR-96SEC-V1.0</data_set_id>
+        <data_set_name>VOYAGER 2 SATURN PLASMA DERIVED ELECTRON BROWSE 96 SEC</data_set_name>
+        <data_set_release_date>Unknown</data_set_release_date>
+        <start_time>1981-08-25T00:00:42.991Z</start_time>
+        <stop_time>1981-08-27T00:29:30.816Z</stop_time>
+        <producer_full_name>JOHN D. RICHARDSON</producer_full_name>
+        <citation_text>TBD</citation_text>
+        <data_set_terse_desc>
+            Electron browse data from the Plasma experiment (PLS) on Voyager
+            2 from the Saturn encounter. The data set provides 96 second
+            averages of the electron (10-5950 eV) density and temperature
+            measurements.
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+        Data Set Overview
+        =================
+          THIS DATA SET CONTAINS THE THERMAL ELECTRON DENSITY AND
+          TEMPERATURE IN THE PLS ENERGY RANGE (10-5950 EV) FROM VOYAGER 2
+          AT SATURN DERIVED BY FITTING THE LOW ENERGY ELECTRON COMPONENT
+          WITH A MAXWELLIAN DISTRIBUTION, AND THE MOMENT DENSITY AND
+          TEMPERATURE OF THE HOT ELECTRONS CALCULATED AFTER THE SIGNAL FROM
+          THE THERMAL COMPONENT IS SUBTRACTED FROM THE ELECTRON SPECTRA.
+          IT IS A SUBSET OF THE DATA SET VG2-S-PLS-5-ELE-FIT-96.0SEC WHICH
+          SHOULD BE OBTAINED BEFORE THIS DATA IS USED.  SPACECRAFT CHARGING
+          MAY RESULT IN FACTOR OF 2-3 ERRORS IN THE THERMAL ELECTRON
+          DENSITY.
+ 
+          DATA FORMATS ARE DESCRIBED AS BELOW:
+ 
+          =================================================================
+          name      type       description
+          -----------------------------------------------------------------
+          time      A24        time in the format yyyy-mm-ddThh:mm:ss.sssZ
+          fit_den   1PE10.3    fit density of thermal electron component
+                                 (cnts/cm**3)
+          fit_temp  1PE10.3   fit temperature of thermal electron component
+                                 (eV)
+          mom_den   1PE10.3    moment density of suprathermal electrons
+                                 (cnts/cm**3)
+          mom_temp  1PE10.3    moment temperature of suprathermal electrons
+                                 (eV)
+ 
+          DATA FLAG VALUES (-9.999E+10) INDICATE THAT THE PARAMETER COULD
+          NOT BE OBTAINED FROM THE DATA USING THE STANDARD ANALYSIS
+          TECHNIQUE. ADDITIONAL INFORMATION ABOUT THIS DATASET AND THE
+          INSTRUMENT WHICH PRODUCED IT CAN BE FOUND ELSEWHERE IN THIS
+          CATALOG.  AN OVERVIEW OF THE DATA IN THIS DATA SET CAN BE FOUND
+          IN SITTLERETAL (1983) AND A COMPLETE INSTRUMENT DESCRIPTION CAN
+          BE FOUND IN BRIDGE (1977).
+ 
+          Processing Level Id            : 5
+          Software Flag                  : Y
+ 
+ 
+        Parameters
+        ==========
+          Sampling Parameter Name        : TIME
+          Data Set Parameter Name        : ELECTRON DENSITY
+          Sampling Parameter Resolution  : 96.000000
+          Sampling Parameter Interval    : 96.000000
+          Minimum Available Sampling Int : 96.000000
+          Data Set Parameter Unit        : CM-3
+          Sampling Parameter Unit        : SECOND
+ 
+          Description
+          -----------
+            A derived parameter giving an indication of the mean A
+            derived parameter equaling the number of electrons per unit
+            volume over a specified range of electron energy.
+            energy/electron, assuming the shape of the electron energy
+            Different forms of electron density are derived spectrum to
+            be Maxwellian (i.e. highest entropy shape).  Given
+            distinguished by method of derivation (Maxwellian fit, that
+            the electron energy spectrum is not exactly Maxwellian,
+            method of moments) or by the some selection criteria (ie.,
+            the electron temperature can be defined integrally (whereby
+            the mean energy obtained by integrating under the actual hot
+            electron and cold electron density).  In general, if more
+            electron energy spectrum is set equal to the integral under
+            than one electron component is analyzed, either by moment or
+            fit, a total density will be provided which is the sum of a
+            Maxwellian, where the temperature is a free parameter for the
+            electron densities.  If the electron do not have a which to
+            solve), or differentially (whereby the slopes of Maxwellian
+            distribution the actual distribution can be the actually
+            electron energy spectrum at various energies are matched to
+            the slopes of a corresponding Maxwellian).  represented as
+            the sum of several Maxwellians, in which case the density of
+            each Maxwellian is given.  The temperature parameter is often
+            qualified with a range of applicable energies.  temperatures
+            can be angularly anisotropic.  If the electrons do not have a
+            Maxwellian distribution the actual distribution can be
+            represented as the sum of several Maxwellians, each with a
+            separate temperature.
+ 
+ 
+        Source Instrument Parameters
+        ============================
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ELECTRON DENSITY
+          Instrument Parameter Name       : ELECTRON RATE
+          Important Instrument Parameters : 1
+ 
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ELECTRON DENSITY
+          Instrument Parameter Name       : ELECTRON CURRENT
+          Important Instrument Parameters : 1
+ 
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ELECTRON TEMPERATURE
+          Instrument Parameter Name       : ELECTRON RATE
+          Important Instrument Parameters : 1
+ 
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : ELECTRON TEMPERATURE
+          Instrument Parameter Name       : ELECTRON CURRENT
+          Important Instrument Parameters : 1
+ 
+ 
+        Processing
+        ==========
+ 
+          Processing History
+          ------------------
+            Source Data Set ID          : VG2-PLS
+            Software                    : UNK
+            Product Data Set ID         : VG2-S-PLS-5-ELE-BR-96.0SEC
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Confidence Level:
+    ==================
+ 
+          THIS DATA SET PROVIDES AN ESTIMATE OF THE ELECTRON PARAMETERS
+          IN THE PLS ENERGY RANGE (10-5950 EV).  THE THERMAL ELECTRON
+          DENSITY MAY BE UNDERESTIMATED BY FACTORS OF 2 IN SOME REGIONS
+          DUE TO NEGATIVE SPACECRAFT CHARGING.  THERMAL ELECTRON
+          PARAMETERS ARE ALSO UNRELIABLE INSIDE SIX KRONIAN RADII WHERE
+          ELECTRON TEMPERATURES ARE COLD AND IN THE OCCULTATION REGIONS.
+          HOT ELECTRONS ARE RELATIVELY UNDISTURBED BY CHARGING AND THESE
+          PARAMETERS HAVE UNCERTAINTIES OF LESS THAN 20%.
+ 
+ 
+    Data Coverage
+    ==================
+    Filename Records Start                     Stop
+    --------------------------------------------------------------------
+    Volume ID: VG_1601
+    ELE_BR.TAB  1819  1981-08-25T00:00:42.991Z  1981-08-27T00:29:30.816Z
+ 
+    Missing Data Flag
+    ==================
+    Any data column whose value is -9.999e+10 is a missing data value.
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>1977-076A</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

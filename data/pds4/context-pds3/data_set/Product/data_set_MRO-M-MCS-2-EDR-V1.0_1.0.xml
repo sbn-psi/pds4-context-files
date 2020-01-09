@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-mcs-2-edr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MRO MARS CLIMATE SOUNDER LEVEL 2 EDR V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_reconnaissance_orbiter::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mcs.mro::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mro-m-mcs-2-edr-v1.0__browserp_mro-m-mcs-2-edr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   D. McCleese, J. Schofield, F. Taylor, S. Calcutt, M. Foote, D. Kass, C. Leovy,
+                   D. Paige, P. Read, and R. Zurek, &apos;Mars Climate Sounder: An Investigation of
+                   Thermal and Water Vapor Structure, Dust and Condensate Distribution in the
+                   Atmosphere, and Energy Balance of the Polar Regions&apos;, Journal of Geophysical
+                   Research, TBD
+            </reference_text>
+            <description>reference.MCCLEESEETAL2006</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MRO-M-MCS-2-EDR-V1.0</data_set_id>
+        <data_set_name>MRO MARS CLIMATE SOUNDER LEVEL 2 EDR V1.0</data_set_name>
+        <data_set_release_date>2006-07-06</data_set_release_date>
+        <start_time>2006-10-12T19:10:51.999Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>DANIEL J. MCCLEESE</producer_full_name>
+        <citation_text>
+            McCleese and Schofield, MRO MARS CLIMATE SOUNDER LEVEL 2 EDR
+            V1.0, NASA Planetary Data System, MRO-M-MCS-2-EDR-V1.0, 2006.
+        </citation_text>
+        <data_set_terse_desc>
+            Unpacked, uncalibrated MRO MCS engineering and science
+            measurements
+        </data_set_terse_desc>
+        <abstract_desc>Unknown</abstract_desc>
+        <data_set_desc>
+ 
+    Data Set Overview
+    =================
+      This document describes how the MRO MCS instrument acquired the
+      Mars Reconnaissance Orbiter Experiment Data Record (EDR) data, and
+      how the data are processed, formatted, labeled, and uniquely
+      identified. This document discusses standards used in generating
+      the product and software that may be used to access the product.
+      The data product structure and organization is described in
+      sufficient detail to enable a user to fully utilize the EDR data
+      product.
+ 
+      This data set consists of tables and supporting documentation from
+      the final analysis of the Experimental Data Records (EDR) from the
+      Mars Reconnaissance Orbiter (MRO) Mars Climate Sounder (MCS)
+      instrument. The MCS instrument, its scientific goals, its
+      measurement objectives, and its observational strategies are
+      discussed in MCCLEESE ET Al 2006 and the INSTRUMENT.CAT file
+      accompanying this data set.
+ 
+      MCS is an atmospheric sounder that makes one measurement every
+      2.048 seconds, containing science, engineering and housekeeping
+      data, whenever the instrument is powered on. The instrument
+      operates in a single data-taking mode and observational
+      flexibility is provided by actuators that allow telescope
+      boresights to be directed over a range of 270 degrees in azimuth
+      and elevation.
+ 
+      Each instrument packet contains one measurement. The MCS EDR
+      contains time-ordered, unpacked, raw data for the entire MCS
+      mission, starting with the initial instrument power-on in the MRO
+      mapping orbit at 16:00 UT on 24th September 2006. The data are
+      organized by UTC in monthly archive volumes, with 6 four-hour ASCII
+      tables per day accompanied by detached headers. Each table row
+      contains one measurement, and each column contains one unpacked
+      science, engineering or housekeeping parameter.
+ 
+      The MCS EDR contains all the good packets received by the MCS
+      science team in APID 87. No attempt has been made to reconstruct
+      corrupted packets in APID 88. Gaps in the data set are only evident
+      from discontinuities in the timing of table rows (see Data Coverage
+      and Quality section). Some, sub-commutated raw housekeeping data
+      are not available every 2.048 seconds. For convenience these are
+      presented in the same table format with -9999 indicating time slots
+      where data are not taken.
+ 
+ 
+      Data Product Acquisition
+      ------------------------
+        The MCS software collects 192 sixteen-bit science measurements
+        from the focal plane interface electronics every 2.048 seconds,
+        along with associated instrument engineering and housekeeping
+        measurements. The science and housekeeping data are organized
+        into data packets that are transmitted to the spacecraft at the
+        same 2.048-second spacing. The data packets are downlinked to the
+        MRO Ground Data System (GDS) and placed into the Raw Science Data
+        Server (RSDS). MCS software queries the data from the RSDS and
+        assembles them into EDR data tables, each covering a 4 hour time
+        period.
+ 
+        Each MCS EDR data table will be approximately 16MB for each 4
+        hour time period; the volume of the EDR data product will be
+        approximately 96 MB per day; 3 GB per month.
+ 
+ 
+      Data Product Generation and Flow
+      --------------------------------
+        The MCS EDR data products, generated by the MCS Instrument Team
+        at JPL, are reconstructed from telemetry data products and
+        formatted according to the MRO/MCS EDR SIS. Meta-data derived
+        from fields in the EDR, will be used to populate the PDS label.
+ 
+        MCS science and engineering telemetry are transferred to the MRO
+        Project RSDS. Once transferred, the MCS software automatically
+        processes the telemetry into Level 0 EDR data products. The MCS
+        EDR data products are then archived locally at the MCS operation
+        center. After an initial 6 month data validation period, the MCS
+        team assembles the data products and ancillary files into archive
+        volumes and transfers the assembled volumes to the PDS
+        Atmospheres Node.  An archive volume consists of one month of
+        data.  Volumes are delivered approximately every 3 months.
+ 
+        The MCS EDR archive will be made available via data
+        releases scheduled at three month intervals as specified in the
+        Mars Reconnaissance Orbiter Project Data Archive Generation,
+        Validation and Transfer Plan
+ 
+ 
+    Processing
+    ==========
+      The MCS EDR data have been unpacked from raw packets and formatted
+      into ASCII tables. The only derived parameters are Date (Column 2),
+      UTC (Column 3) and decimal spacecraft clock (SCLK, Column 4). Time
+      requires special treatment because MCS packets are delivered
+      asynchronously to the spacecraft and are generated using an
+      internal instrument clock.
+ 
+      Decimal SCLK at the center of each measurement integration period
+      is derived from linear fits of instrument fine time to spacecraft
+      time supplied to MCS at roughly 51 second intervals in time
+      commands referenced to a 1 Hz time tick.
+ 
+      Instrument fine time at the start of each packet (Ticks_pkt_start,
+      Column 16), and at the receipt of the one second time tick
+      corresponding to the spacecraft time command (Ticks_at_SC_time,
+      Column 17), is available at a resolution of 64 ticks per 2.048
+      second integration period, or 32 msec. Spacecraft time consists of
+      integer and decimal parts of the spacecraft clock in seconds
+      referenced to 00:00 UTC January 1st 1980. These parts are contained
+      in Last_time_command (Column 48) and the last command received
+      column (Last_command_rec, Column 45).
+ 
+      Linear fits between instrument fine time and spacecraft time (SCLK)
+      at the receipt of each spacecraft time are performed over each four
+      hour file. This is done for the following reasons.
+ 
+      1.  To preserve the accurate, 2.048 second spacing of MCS
+          measurements.
+      2.  To track the slow drift between instrument and spacecraft clocks.
+      3.  To correct occasional +- 1 second error associated with S/C time.
+      4.  To correct ~50 second time jumps associated with anomalies in the
+          MSC software.
+ 
+      Formally, the absolute time derived from this process could be in
+      error by up to +- 32 msec, which is acceptable for MCS science. The
+      relative timing between MCS samples is much better than 1 msec,
+      except at the boundaries of four-hour files where errors of up to 4
+      msec are seen, which is also acceptable for MCS science.
+ 
+      SCLK is converted to UTC using the SPICE NAIF SCLK to SCET and Leap
+      Seconds kernels.
+ 
+ 
+    Data
+    ====
+      The MCS EDR is represented by a single PDS labeled table.  Each
+      table is accompanied by a full PDS detached label with the same
+      name except for suffix *.LBL.  The format of the table is described
+      in detail in MCS_EDR.FMT.  The PDS label completely describes the
+      format and contents of the table.
+ 
+      The naming convention for the tables and detached headers follow
+      the time-organization of the data itself and use the following
+      naming convention:
+ 
+         yyyymmddhh_EDR.TAB; where:
+ 
+              yyyy = year in which the data was acquired
+                mm = month of the year in which the data was acquired
+                dd = day of the month in which the data was acquired
+                hh = hour of the day in which the data was acquired
+ 
+      Note that the hour is UT (to within the nearest second) at the start
+      of the coverage of the data contained in the file.  There are six
+      possible values for hour.
+ 
+      The first data after powering on in September 2006 are:
+ 
+         - 2006092416_EDR.LBL:   The PDS label that describes the EDR data
+         - 2006092416_EDR.TAB:   The actual EDR data formatted into a PDS
+                                 TABLE object
+ 
+ 
+    Ancillary Data
+    ==============
+      Ancillary data is limited to Spacecraft clock (sclk) to UTC
+      conversion is performed using the following SPICE NAIF Kernels:
+ 
+       1. Sclk to Scet kernel
+       2. Leap Seconds kernel
+ 
+ 
+    Coordinate System
+    =================
+      The only coordinate system appropriate to MCS EDR data is time.
+ 
+ 
+    Software
+    ========
+      The MCS EDR products are formatted as columnar ASCII data; and as
+      such, they can be read and manipulated by standard, public-domain
+      software. For this reason, no special utilities are provided.
+ 
+      The MCS EDR products are standard PDS-labeled tables that can be
+      viewed with NASAView, an application developed by the PDS and
+      available for a variety of computer platforms from the PDS web
+      site.
+ 
+ 
+    Archive Format
+    ============
+      The individual archives were delivered to the PDS Atmospheres
+      node as gzipped tar files via ftp.  Once validated they are
+      available online with the archive volume structure.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+    Overview
+    ========
+ 
+      With respect to the EDR data, the data exists in 2 states -- Absent
+      or Present.  For the data that is present, the confidence level is
+      high due to simplicity of the processing and structure of the data.
+ 
+      The quality flag (column 1) has limited meaning for the EDR
+      records.  A value of 0 indicates present and completely valid
+      data; a value of 1 indicates a record header line; a value of 4
+      indicates the unpacking software had an issue with the time
+      interpolation (note there are only 4 records immediately at
+      power on flagged this way).
+ 
+ 
+    Review
+    ======
+      This archival data set was examined by a peer review panel prior to
+      its acceptance by the Planetary Data System (PDS). The peer review
+      was conducted in accordance with PDS procedures.
+ 
+      Prior to creation of the final version of the archival data set,
+      key elements of the archive were distributed for preliminary
+      review.  These included electronic versions of example PDS labels,
+      CATALOG files, and Software Interface Specifications (SISs).
+      These materials were distributed to PDS personnel, the experiment
+      investigator, and others, as appropriate.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      All MCS packets supplied to the MCS team by the project are
+      included in the archive.  Each MCS packet is complete due to the
+      handling methods used by the spacecraft and ground system.  The
+      data in each packet is the information generated and sent by the
+      instrument (checksums and other techniques are used to detect and
+      correct any corruption).
+ 
+      There are a number places where there are gaps and missing packets.
+      Most of these gaps are small (the largest is about 2 hours long).
+      The gaps are due to a number of causes.  The primary cause are
+      those lost due to not being received at a DSN ground station.
+      Other losses come from spacecraft activities (primarily ELECTRA
+      testing and reformatting the SSR--solid state recorder), interface
+      errors between MCS and the spacecraft, and ground data system
+      issues.
+ 
+      Missing packets can be identified in several ways.  The first is by
+      looking for gaps of more than 2.05 seconds between packets.  MCS
+      produces a packet every 2.048 seconds, unless powered off. The
+      date and time of the packet is represented in columns 2 and 3,
+      respectively. Except for when the counter rolls (at 65535), the
+      packet counter, column 5, can also be used to detect missing
+      packets.  Finally, there are 64 instrument ticks between each
+      packet (column 16).
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of the
+      execution, which is described above under Data Coverage and
+      Quality.
+ 
+      The only known limitation is the occurence of brief periods of
+      elevation mis-pointing associated with position errors.  During
+      these periods, the actuator (and thus the telescopes) are not in
+      the intended orientation and thus not viewing the intended
+      scene.  These do not affect the quality of the EDR records, but
+      are relevant for analysis and processing of higher data levels,
+      as well as the conversion of EDR records to RDR records.
+ 
+      Position errors occur when the MCS FSW and the hardware disagree on
+      the position of an actuator.  The position of the actuators is
+      checked at two locations: 0 degrees (blackbody position) and 105.7
+      degrees (step 2046, between the standard limb and space views).  A
+      position error is presumed (and in many cases confirmed) to
+      indicate a physical mis-pointing of the instrument.  Position
+      errors only occur while slewing, but a mis-pointing caused by a
+      position error will persist (with the same magnitude) until the
+      actuator is re-intialized and in synch with where FSW assumes it is
+      pointing.
+ 
+      Finding where the position errors are reported by MCS FSW is
+      straight forward.  The error is reported in the ERROR_ID column as
+      error 19 (note that the last error generated is reported in every
+      packet as a historical field, but is only generated when the
+      ERROR_COUNT increments).  The first byte of the ERROR_DETAIL field
+      will indicate the number of position errors that FSW will allow
+      before stowing the instrument.
+ 
+      After reporting a position error, the FSW re-intializes both
+      actuators, removing any pointing errors.  The time taken is
+      variable depending on where the error is handled (it can take a
+      minute in some cases), but all packets from that time are flagged
+      as moving.  The LAST_AZ_CMD and LAST_EL_CMD do not update until an
+      SST commands a move for that actuator after the re-intialization
+      (the re-intialization is not considered commanded movement).
+ 
+      The complexity is that the FSW does not report the error when it is
+      detected, it is only reported at the end of an SST.  The error was
+      detected during one of the check points in that SST (there are
+      special cases involving freeze and stow sequences).  Thus, the
+      actual pointing error occurred at some point before the last check
+      point crossing in the SST.  This is even more complicated in cases
+      (e.g., limb staring) were the sequence does not go through any of
+      the position check locations.
+ 
+      Position errors can also usually be detected by looking at the
+      radiances when pointed at the limb.  This is done by using A3 (core
+      of the 15 micron band) and comparing the calibrated radiances of
+      the limb views during the period around when the error is reported.
+      We use limb view before the probable slewing error, while the error
+      is in effect and after the actuator has been re-synchronized.  This
+      provides additional information on the timing of the position error
+      and sometimes also provides knowledge of the magnitude and
+      direction of the error.  Based on experience, we&apos;ve found that for
+      small errors (&lt; 1 degree), looking at the limb radiance provides a
+      pointing accuracy of one actuator step (0.101 degrees). There are
+      cases (especially over the poles) when the atmosphere is changing
+      too fast and it is not possible to accurately measure the pointing
+      error.
+ 
+      Note that even during a position error, all the fields in the EDR
+      are correct since the instrument does not report the actual
+      pointing, but the commanded pointing; see colums LAST_AZ_CMD and
+      LAST_EL_CMD (columns 27 and 28, respectively).
+ 
+      Note that for the derived RDR data product, we have flagged the
+      regions of the pointing errors and corrected them where possible.
+        </confidence_level_note>
+        <archive_status>ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>ELECTRONIC</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

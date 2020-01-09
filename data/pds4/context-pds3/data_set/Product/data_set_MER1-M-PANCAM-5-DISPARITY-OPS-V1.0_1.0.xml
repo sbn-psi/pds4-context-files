@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer1-m-pancam-5-disparity-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 1 MARS PANORAMIC CAMERA DISPARITY RDR OPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:pancam.mer1::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-pancam-5-disparity-ops-v1.0__browserp_mer1-m-pancam-5-disparity-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-pancam-5-disparity-ops-v1.0__browser_geo_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer1-m-pancam-5-disparity-ops-v1.0__dvo_imaging_mer1-m-pancam-5-disparity-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Bell, J.F. III, The Mars Exploration Rover Athena Panoramic Camera (Pancam)
+                   Investigation, Journal of Geophysical Research, June 23, 2003.
+            </reference_text>
+            <description>reference.BELLETAL2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER1-M-PANCAM-5-DISPARITY-OPS-V1.0</data_set_id>
+        <data_set_name>MER 1 MARS PANORAMIC CAMERA DISPARITY RDR OPS V1.0</data_set_name>
+        <data_set_release_date>2004-08-24</data_set_release_date>
+        <start_time>2004-01-25T07:18:28.780Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JUSTIN MAKI</producer_full_name>
+        <citation_text>
+            Maki, Justin, MER 1 Mars Panoromic Camera Disparity Ops RDR V1.0,
+            NASA Planetary Data System, MER1-M-PANCAM-5-DISPARITY-OPS-V1.0,
+            2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 1 Panoromic Camera Disparity Reduced Data
+            Record, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    A Disparity file contains 2 bands of 32-bit floating point numbers
+    in the Band Sequential order (line, sample). Alternatively, line and
+    sample may be stored in separate single-band files. The parallax, or
+    difference measured in pixels, between an object location in two
+    individual images (typically the left and right images of a stereo
+    pair) is also called the disparity. Disparity files contain these
+    disparity values in both the line and sample dimension for each
+    pixel in the reference image. This reference image is traditionally
+    the left image of a stereo pair, but could be the right image for
+    special products. The geometry of the Disparity image is the same as
+    the geometry of the reference image. This means that for any pixel
+    in the reference image the disparity of the viewed point can be
+    obtained from the same pixel location in the Disparity image.
+ 
+    The values in a Disparity image are the 1-based coordinates of the
+    corresponding point in the nonreference image. Thus, the coordinates
+    in the reference image are the same as the coordinates in the
+    Disparity image, and the matching coordinates in the stereo partner
+    image are the values is the Disparity image. Disparity values of 0.0
+    indicate no valid disparity exists, for example due to lack of
+    overlap or correlation failure. This value is reflected in the
+    MISSING_CONSTANT keyword.
+ 
+ 
+  Processing
+  ==========
+    This Operations RDR is produced by OPGS/MIPL using the Mars Suite of
+    VICAR image processing software.
+ 
+ 
+  Data
+  ====
+    2 bands, Float, DualPDS/VICAR (OPGS) binary file.
+ 
+ 
+  Software
+  ========
+    The MIPL Mars Program Suite was used to generate these RDRs.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online.  Upon
+    Mission completion, the Panoromic Camera Operations RDRs will be
+    delivered to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

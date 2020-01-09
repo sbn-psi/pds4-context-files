@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.co-sa-issna-5-phoebeshape-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>GASKELL PHOEBE SHAPE MODEL V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.cassini-huygens::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.co::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:issna.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:isswa.co::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:satellite.phoebe::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.co-sa-issna-5-phoebeshape-v1.0__browserp_co-sa-issna-5-phoebeshape-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.sbn::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>CO-SA-ISSNA-5-PHOEBESHAPE-V1.0</data_set_id>
+        <data_set_name>GASKELL PHOEBE SHAPE MODEL V1.0</data_set_name>
+        <data_set_release_date>2011-05-31</data_set_release_date>
+        <start_time>2004-06-11</start_time>
+        <stop_time>2004-06-12</stop_time>
+        <producer_full_name>CAROL NEESE</producer_full_name>
+        <citation_text>
+            Gaskell, R.W., Gaskell Phoebe Shape Model V1.0.
+            CO-SA-ISSNA-5-PHOEBESHAPE-V1.0. NASA Planetary Data System, 2011.
+        </citation_text>
+        <data_set_terse_desc>
+            Phoebe shape model from Cassini ISSNA and ISSWA images, by R.
+            Gaskell, version of July 7, 2010.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The shape model of Phoebe derived by Robert Gaskell from Cassini
+            images. The model is provided in the implicitly connected
+            quadrilateral (ICQ) format. This version of the model was
+            prepared on July 7, 2010. Vertex-facet versions of the models are
+            also provided.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+  Data Set Overview
+  =================
+    This shape model of Phoebe is based on 208 Cassini Imaging Science
+    Subsystem narrow and wide angle camera (ISSNA and ISSWA) images. The shape
+    model was prepared by Robert Gaskell on July 7, 2010.
+ 
+    The geometrical coordinate system of this model is defined by the
+    planetary constants file cpck13Sep2010.tpc (available in PDS from the NAIF
+    node) with an updated pole from Thomas:
+    RA=356.90   DEC=77.88     PM=178.58   W=939.639 (deg/da).
+ 
+    To find the file in PDS, go to the NAIF SPICE archive at
+    http://naif.jpl.nasa.gov/naif/data_archived.html.  In the table of data
+    links, select the volume FTP link for the Cassini Orbiter mission.
+    Within the volume, go to the data/pck directory, and download the desired
+    file (cpck13Sep2010.tpc).
+ 
+    The parameters of the model are as follows:
+ 
+    Number of landmarks: 522
+    Formal position uncertainty: 150 m/component
+    Number of images: 208
+    Pointing uncertainty: .032 mrad
+    S/C position uncertainty: N/A (tight a prioris)
+    Pointing residuals (relative to CK): 0.275 mrad
+    Range residuals: N/A
+    Number of measurement pairs 22555
+    Number of measurements per landmark: 131
+    RMS LMK location residual: 183 m/component
+ 
+ 
+    The models were originally prepared in the Implicitly Connected
+    Quadrilateral (ICQ) format.  Vertex-facet format versions, derived from
+    the ICQ versions, are also provided.  The filenames are
+    phoebe_quad512q.tab and phoebe_ver512q.tab, where 512 is the value
+    of Q (an indicator of the resolution).  See below for the full
+    definition of Q and the ICQ format.
+ 
+    The file &apos;phoebeimagelist.tab&apos; is a list of the Cassini ISSNA and ISSWA
+    images used to generate this model.
+ 
+    A text file, &apos;icqmodel.asc&apos; is provided in the &apos;document&apos; directory
+    which describes the ICQ format and the derivation of the
+    vertex-facet versions.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+  Confidence Level Overview
+  =========================
+    Note that the vertex-facet versions of the model have some duplicate
+    vertices on the edges and corners of the cube.  The duplicate vertices are
+    not used in the facet table, resulting in the presence of some vertices in
+    the vertex table which do not appear in the facet table.  This does not
+    affect the correctness of the vertex-facet version.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

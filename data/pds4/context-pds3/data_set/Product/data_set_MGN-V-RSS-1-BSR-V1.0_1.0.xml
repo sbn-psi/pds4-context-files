@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rss-1-bsr-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MAGELLAN BISTATIC RADAR RAW DATA RECORDS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-1-bsr-v1.0__browserp_geo_mgn-v-rss-1-bsr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-1-bsr-v1.0__dvo_geo_mgn-v-rss-1-bsr-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.geoscience::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hapke, B., and D. Blewett, Coherent backscatter model for the unusual radar
+                   reflectivity of icy satellites, Nature, 352, 46-47, 1991.
+            </reference_text>
+            <description>reference.HAPKE-BLEWETT1991</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Pettengill, G.H., P.G. Ford, and R.A. Simpson, Electrical properties of the
+                   Venus surface from bistatic radar observations, Science, 272, 1628-1631, 1996.
+            </reference_text>
+            <description>reference.PETTENGILLETAL1996</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Simpson, R.A., Spacecraft Studies of Planetary Surfaces Using Bistatic Radar,
+                   IEEE Transactions on Geoscience and Remote Sensing, 31, 465-482, March 1993.
+            </reference_text>
+            <description>reference.SIMPSON1993</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RSS-1-BSR-V1.0</data_set_id>
+        <data_set_name>MAGELLAN BISTATIC RADAR RAW DATA RECORDS V1.0</data_set_name>
+        <data_set_release_date>1997-12-31</data_set_release_date>
+        <start_time>1993-10-06</start_time>
+        <stop_time>1994-06-06</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            Simpson, R. A., MAGELLAN BISTATIC RADAR RAW DATA RECORDS V1.0,
+            MGN-V-RSS-1-BSR-V1.0, NASA Planetary Data System, 1997
+        </citation_text>
+        <data_set_terse_desc>
+            The Magellan Bistatic Radar (BSR) Raw Data archive is a
+            time-ordered collection of raw and partially processed data from
+            bistatic radar experiments conducted using the Magellan
+            spacecraft while it orbited Venus.
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Magellan (MGN) Bistatic Radar (BSR) Raw Data Archive (RDA) is
+            a time-ordered collection of raw and partially processed data
+            from bistatic radar experiments conducted using the Magellan
+            spacecraft while it orbited Venus.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Magellan (MGN) Bistatic Radar (BSR) Raw Data Archive (RDA)
+      is a time-ordered collection of raw and partially processed
+      data from bistatic radar experiments conducted using the
+      Magellan spacecraft while it orbited Venus.
+ 
+      The spacecraft radio system was used as the signal source.  The
+      spacecraft high-gain antenna (HGA) beamed those signals toward
+      the surface of Venus where they were scattered and then
+      received at stations of the NASA Deep Space Network (DSN) on
+      Earth.  Changes in the amplitude, frequency, and polarization
+      of the received signal can be related to the electrical and
+      physical properties of the scattering surface.  Bistatic
+      experiments have been described by [SIMPSON1993].
+ 
+      Two types of experiments were conducted using Magellan.  In
+      &apos;spotlight&apos; experiments a point on the surface was selected
+      and, as the spacecraft moved over that point, the HGA was aimed
+      toward it.  Experiments conducted on 6 October 1993 over Gula
+      Mons and on 31 May 1994 over Maxwell Montes used the spotlight
+      configuration.  In both cases, orbits and targets were chosen
+      so that the backscatter geometry was included in the
+      observation period.  The goal was to seek &apos;enhanced
+      backscatter&apos; [HAPKE&amp;BLEWETT1991] from the target at exactly the
+      time when the Earth, spacecraft, and target were aligned.
+      Predictions were that such a detection would be marginal, at
+      best, given the experiment parameters; but both spot targets
+      were in regions known to have higher reflectivity than the
+      average Venus surface.
+ 
+      In the second type of experiment, the HGA was aimed toward the
+      point on Venus&apos; surface where specular (mirror-like) reflection
+      would be expected.  As the spacecraft moved in its orbit, the
+      specular point moved along the ground.  Dispersion of the echo
+      signal by reflection from multiple points on the surface, each
+      with its own Doppler shift, is diagnostic of surface roughness.
+      Total power is proportional to the Fresnel reflection
+      coefficient for the surface material.  In these experiments,
+      the total echo power is much stronger than in spotlight
+      experiments.  S-band detections were predicted for
+      quasi-specular experiments conducted on 9 November 1993 and on
+      5 June 1994.
+ 
+      Transmitted polarization along the boresight of the spacecraft
+      antenna was linear at the S-band wavelength (13 cm, or 2298
+      MHz) and circular at the X-band wavelength (3.5 cm, or 8415
+      MHz).  Signals could be received coherently in both right- and
+      left- circular polarizations at both wavelengths when a 70-m
+      antenna was used at the DSN station.
+ 
+      During these experiments, frequency of the spacecraft
+      transmitter was controlled by an onboard crystal oscillator.
+ 
+      Prior to and after most experiments, the high-gain antenna was
+      pointed toward Earth both so that the frequency of the directly
+      propagating signal could be measured and also so that the phase
+      relationship between the two orthogonally polarized S-band
+      receivers could be related to the spacecraft&apos;s linearly
+      polarized transmissions.
+ 
+      Spacecraft attitude was not adjusted during the experiments to
+      account for refractive bending in the Venus atmosphere.
+ 
+      Results from the quasi-specular experiments over Maxwell Montes
+      on 5 June 1994 have been published [PETTENGILLETAL1996].
+ 
+      The data set includes Original Data Records (ODRs), which are
+      digitized recordings of baseband receiver output; the ODR is
+      considered to be the primary data type in this archive.
+      Archival Tracking Data Files (ATDFs or TDFs), records of
+      closed-loop receiver output, are also included; they serve as
+      low resolution backup to the ODRs but are not likely to include
+      measures of scattered signal.
+ 
+      Typical users of the data set would compute the expected
+      frequency of the signal from the target point, compute Fourier
+      transforms from the data samples, and sum the power spectra
+      incoherently.  The amplitude and spectral width of a detected
+      echo can be related to physical and electrical properties of
+      the scattering surface (and to experimental parameters, such as
+      the illumination footprint of the HGA on Venus&apos; surface).  The
+      analysis which has been published [PETTENGILLETAL1996] included
+      inference of surface properties from the polarization of the
+      received echo signal.
+ 
+ 
+    Parameters
+    ==========
+      Open loop data records (ODRs) contain 8-bit samples of receiver
+      output.  Each block of 4000 data samples is accompanied by a
+      166 byte header.  The ODR is described by a Software Interface
+      Specification (SIS), included as RSC11_11.TXT in the DOCUMENT
+      directory of the data set archival volume.
+ 
+      For experiments in 1993, two X-band (3.5 cm wavelength)
+      open-loop receivers were used, one capturing right-circularly
+      polarized signals and the other capturing left-circularly
+      polarized signals.  These are identified in the data stream as
+      Channels 1 and 3, respectively.  Two S-band open-loop receivers
+      were also used for 70-m observations in 1993, yielding right-
+      and left-circularly polarized output on Channels 2 and 4,
+      respectively.  Failures in the data acquisition equipment make
+      these four-channel 1993 data more difficult to use.
+ 
+      By 1994, capabilities of the sampling equipment had degraded to
+      the point where only two signals from the 70-m antennas could
+      be recorded simultaneously.  For these experiments, the usual
+      practice was to record two polarizations at X-band on one
+      orbit, alternating with two polarizations at S-band on the next
+      orbit.
+ 
+      Each ATDF data record contains 117 parameters, stored in
+      records of 288 bytes at rates up to one per second.  The
+      parameters include estimates of received signal strength and
+      frequency as well as status information on components of the
+      DSN system.  The ATDF is described by a Software Interface
+      Specification (SIS), included as TRK_2_25.TXT in the DOCUMENT
+      directory of each archival volume.
+ 
+ 
+    Processing
+    ==========
+      With the following exceptions, open loop data (ODRs) were not
+      edited or otherwise processed before being incorporated into
+      the archival volumes.
+ 
+      (1) A 32-byte label at the beginning of each ODR tape is not
+          included in the data file.  The 32-byte label gives the
+          version of the data taking software; this information has
+          been copied to the PDS label that accompanies the data
+          file.  The software version recorded in the &apos;NOTE&apos; keyword
+          is more likely to be accurate than the version recorded
+          with the &apos;SOFTWARE_VERSION&apos; keyword.  Because the 32-byte
+          label is no longer part of the data stream, users can treat
+          the remaining file as an integral number of fixed-length
+          records.
+ 
+      (2) Some tapes were delivered with record lengths truncated to
+          566 bytes rather than the expected 4166 bytes.  The
+          truncation may have occurred during copying at the DSN
+          station; no cause was ever determined and the original
+          (uncorrupted) data were not recovered.  Records truncated
+          to 566 bytes have been padded to their original 4166-byte
+          lengths with binary zeroes before being stored in the
+          archival volumes.  A list of these files is given in the
+          ERRATA.TXT file at the root of the archival volume.
+ 
+      The DSN Navigation Team sometimes edits ATDF records to remove
+      values clearly outside the nominal range.  The extent of
+      editing on Magellan bistatic radar ATDFs is not known.
+ 
+ 
+    Data
+    ====
+      Original Data Records (ODRs) were the primary data type for
+      this raw data archive.  ODRs were generated at stations of the
+      NASA Deep Space Network (DSN) and were distributed on 6250 bpi
+      tape.  Those tapes have been copied to disk files, defined as
+      PDS TABLE Objects, and archived on these CD-WO volumes.  ODRs
+      are stored on CD-WO volumes in chronological order; ancillary
+      data files (to support analysis) accompany ODRs in the CALIB,
+      GEOMETRY, and DOCUMENT directories.  The table FILELIST.TAB in
+      the DOCUMENT directory shows relationships among ODR files and
+      ancillary data.
+ 
+      A nominal ODR contains 24000 records, each record having 166
+      bytes of header data and 4000 bytes of 8-bit sample data.  Each
+      of four receiver channels (X-RCP, S-RCP, X-LCP, and S-LCP) was
+      sampled at 50000 samples per second in 1993; these appear in
+      the output record as channels 1 through 4, respectively [see
+      RSC11_11.TXT in the DOCUMENT directory of the archival volume].
+      A single file represented 8 minutes of observing time.  For
+      most experiments in 1994, only two channels were sampled
+      (usually X-RCP and X-LCP, Channels 1 and 3, respectively; or
+      S-RCP and S-LCP, Channels 2 and 4, respectively).  The sampling
+      rates on each channel remained at 50000 per second, but the
+      rate for each analog-to-digital converter was only 25000.  A
+      single file usually represented 16 minutes of data.
+ 
+      On MGN BSR archival volumes, ODR files have names of the form
+      ydddhhmm.ODR where y gives the least significant digit of the
+      year, ddd is the 3-digit day-of-year, hh is the 2-digit hour,
+      and mm is the 2-digit minute on which data acquisition for the
+      file began.
+ 
+      Each ODR data file is accompanied by a full PDS detached label
+      with name ydddhhmm.LBL which completely describes the contents
+      of the ODR file.  The format and content of the ODR are also
+      described in RSC11_11.TXT in the DOCUMENT directory of each
+      archival volume.
+ 
+      Archival Tracking Data Files (ATDFs or TDFs) are considered to
+      be primary raw data for many radio science experiments.  In
+      this case, they served a backup and ancillary role.  ATDFs are
+      generated by the Radio Metric Data Conditioning Team in the
+      DSN.  They were delivered either on computer-compatible tape or
+      as electronic files.  They have been copied to disk, defined as
+      PDS TABLE objects, and archived on these CD-WO volumes.
+ 
+      A typical ATDF covered several days and had a volume of 35
+      MBytes.  ATDF rates for these Magellan BSR experiments were
+      typically one sample every 60 seconds.  Each sample was of 117
+      items, including measurements of signal amplitude and frequency
+      from closed loop receivers, and was stored as a single record
+      of 288 bytes.  Sampling of the signals was limited to one
+      polarization at S-band and one polarization at X-band.  Time
+      resolution was more coarse than from the ODR and no information
+      on signal phase was retained.  It is unlikely that the
+      closed-loop receivers locked to the echo signal during bistatic
+      maneuvers.  The ATDF, from this perspective, provided
+      low-resolution backup to the ODR only during times when the HGA
+      was pointed toward Earth.
+ 
+      Each ATDF has a file name of the form ydddeeeX.TDF where y is
+      the least significant digit of the year and ddd is the
+      day-of-year for the first ATDF record.  The eee gives
+      day-of-year for the last data record in the ATDF, and X is set
+      to &apos;A&apos;.
+ 
+      Each ATDF is accompanied by a full PDS detached label with name
+      ydddeeeA.LBL which completely describes the contents of the
+      ATDF.  The format and contents are also described in
+      TRK_2_25.TXT in the DOCUMENT directory of each archival volume.
+ 
+      A set of &apos;browse&apos; files is included on each CD-WO volume.  Each
+      file is a composite PostScript file containing plots from three
+      steps in a &apos;quick-look&apos; processing of the ODR data.  Each file
+      will produce a single 8-1/2 x 11 inch page giving results from
+      one &apos;channel&apos; from an ODR.  Plots are: (1) histogram of 8-bit
+      sample values, (2) 60-second average power spectra, and (3)
+      1-second average values of sample power versus time.  Also
+      included in the fourth &apos;panel&apos; on each page is a text extract
+      from the top of the ODR PDS label.  Plots were created as the
+      archive was being assembled.  The plots should provide quick
+      low resolution access to the contents of each ODR to users able
+      to display or print PostScript files.  The plot files are
+      located in the BROWSE directory.
+ 
+ 
+    Ancillary Data
+    ==============
+      For each ODR, there is a set of ancillary files needed for
+      analysis.  These files are stored in the CALIB and GEOMETRY
+      directories, as appropriate.  A table FILELIST.TAB in the
+      DOCUMENT directory shows relationships among ODRs and ancillary
+      files.
+ 
+ 
+      High-Gain Antenna (HGA) Radiation Pattern
+      -----------------------------------------
+        The radiation pattern of the high-gain antenna (HGA) is
+        described in a PDS document with both ASCII and PostScript
+        components in the CALIB directory.  The HGA pattern would be
+        needed to estimate the illumination of any point on the Venus
+        surface.  The HGA calibration document is described in the
+        detached PDS label HGA_XXX.LBL in the CALIB directory; it is
+        included on all CD-WO volumes.
+ 
+ 
+      Observing Geometry
+      ------------------
+        Files describing the observing geometry are stored in the
+        GEOMETRY directory.  These include NAIF &apos;text&apos; format SPK
+        files and NAIF &apos;transfer&apos; format ephemerides.  Files
+        describing spacecraft attitude are also included in the
+        GEOMETRY directory, but are described in the next section.
+ 
+        NAIF (PDS Navigation and Ancillary Information) &apos;text&apos; format
+        SPK files are available for all observations except those on
+        1994-05-31.  Data for 1994-05-31 are available in NAIF SPK
+        &apos;transfer&apos; format.  SPK files contain the positions of
+        Magellan, Venus, Earth, and the Sun in data modules that can
+        be used readily with NAIF Toolkit software.  Each &apos;text&apos; SPK
+        file has a name ending with the extension &apos;TSP&apos;; each
+        &apos;transfer&apos; SPK file name ends with &apos;XSP&apos;.  Each SPK data file
+        is accompanied by a detached PDS minimal label having the
+        same file name but ending with the &apos;LBL&apos; extension.
+ 
+        For all orbits, predicted Keplerian orbital elements for the
+        Magellan spacecraft are available in the file KEPELEMS.TAB.
+ 
+        A single NAIF &apos;transfer&apos; format file (PEPH8996.XSP) contains
+        solar system ephemerides.  For reconstruction of observing
+        geometry, this file may be used in conjunction with
+        KEPELEMS.TAB as an alternative to the NAIF SPK files.
+ 
+        Before using either &apos;text&apos; or &apos;transfer&apos; NAIF files, the user
+        should convert ASCII carriage-return line-feed delimiters on
+        each record to the default delimiter for text files on the
+        local system, then use the NAIF utility SPACIT to convert the
+        archival file to local binary.
+ 
+        Information on acquisition, installation, and use of the NAIF
+        software can be found in TK_FTP.TXT in the DOCUMENT
+        directory.
+ 
+ 
+      Spacecraft Attitude (Quaternions)
+      ---------------------------------
+        Since maneuvers were executed to point the HGA toward the
+        surface during each bistatic radar experiment, information on
+        the spacecraft attitude is required for proper analysis and
+        interpretation of the results.
+ 
+        Attitude data are available as spacecraft quaternion
+        polynomial coefficients during maneuvers and as fixed
+        quaternions prior to and after the maneuvers (during Earth
+        point).  Quaternion files are in the GEOMETRY directory and
+        have names of the form yydddeee.QPC where &apos;yy&apos; gives the
+        2-digit year and &apos;ddd&apos; and &apos;eee&apos; give the start and end
+        day-of-year for which the file applies.
+ 
+ 
+    Coordinate System
+    =================
+      SPK ephemeris files and quaternion files were produced for the
+      J2000 inertial reference frame.  NAIF reader routines may be
+      used to convert these to other coordinate systems.
+ 
+      Other data types are not dependent on definition of a
+      coordinate system.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at Stanford University and elsewhere.
+      Because such software must usually operate at the bit-level and
+      is written for a narrow range of platforms, it is not suitable
+      for general distribution.  No software is included with this
+      archival data set.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set is written on CD-WO media using the Young
+      Minds CD Studio authoring system.  The CD-WO volumes conform to
+      ISO 9660 standards.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      With the exception of the quasi-specular track across Maxwell
+      Montes [PETTENGILLETAL1996], relatively little analysis had
+      been performed on the raw data at the time they were archived.
+ 
+ 
+    Review
+    ======
+      This archival data set was reviewed by a peer review panel
+      prior to its acceptance by the Planetary Data System (PDS).
+      The peer review was conducted in accordance with PDS
+      procedures.
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications.  These materials were distributed to PDS
+      personnel, the experiment investigator, and others, as
+      appropriate.
+ 
+      Data on the CD-WO volumes were checked using Stanford parsing
+      and reduction software to ensure that they were both complete
+      and accurate replicas of the data contained in the original
+      tape files.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The times covered by ODR tapes are given in FILELIST.TAB in the
+      DOCUMENT directory.  The experiments are summarized briefly
+      here.
+ 
+      6 October 1993 (Orbits 9331, 9335, and 9336)
+      --------------------------------------------
+        This was a set of three spotlight experiments with Gula Mons
+        as the target.  The summit of Gula Mons appears brighter than
+        average in radar backscatter.  The objective was to detect
+        enhanced backscatter in the bistatic configuration and to
+        compare it with scatter at other angles.  Chances of bistatic
+        detection were predicted to be marginal because of the
+        rapidly changing bistatic geometry and the relatively small
+        area at the summit of Gula Mons with enhanced reflectivity.
+ 
+        Orbit 9331 was observed using the 70-m Goldstone antenna;
+        X-RCP, S-RCP, X-LCP, and S-LCP were recorded.  A malfunction
+        in the data acquisition equipment resulted in loss of about
+        two-thirds of the records.  It may be possible to recover the
+        remainder, but considerable care will be required in handling
+        the remainder since sampling coherence has been lost -- at
+        least at some record-to-record boundaries and possibly within
+        single records.
+ 
+        Orbits 9335 and 9336 were observed using the 70-m Canberra
+        antenna.  Signals recorded included X-RCP, S-RCP, X-LCP, and
+        S-LCP.  For both orbits, the data acquisition equipment
+        functioned normally for several minutes, but then a 2-second
+        modulation on all channels began.  There is some evidence
+        that pairs of samples were being lost on a regular basis,
+        effectively toggling RCP and LCP on both the X- and S-band
+        channels every two seconds.  These data may be recoverable;
+        but care will be required if the effects of the modulation
+        are to be properly characterized and removed.
+ 
+        From an early analysis, no clear echo signal was identified
+        on any channel from any of the three orbits on 6 October.
+ 
+     DSS  Start Time Stop  Time  Channels   Archive  Notes
+     ---  ---------- ----------  --------   -------  ------------------
+      14   13:24:14   13:32:31   XRSRXLSL   MG_2301  Lost records
+      14   13:39:35   13:43:35   XRSRXLSL   MG_2301  Post-maneuver data
+      --   --------   --------   --------   -------
+      43   19:42:46   19:50:45   XRSRXLSL   MG_2301
+      43   19:50:46   19:58:40   XRSRXLSL   MG_2301  Modulation
+      --   --------   --------   --------   -------
+      43   21:17:26   21:25:25   XRSRXLSL   MG_2301  Modulation
+      43   21:25:26   21:33:20   XRSRXLSL   MG_2301  Modulation
+ 
+ 
+      9 November 1993 (Orbits 9846 through 9848)
+      ------------------------------------------
+        Parts of three quasi-specular tracks were observed using the
+        70-m DSN antenna near Madrid.  The tracks extended from near
+        (27S, 67E), crossed the equator at 67E, passed near (76N,
+        167E), and ended at approximately (57N, 210E).  Incidence
+        angle was minimum (73 deg) near (41N, 73E) and increased to
+        about 75.5 deg at both ends of the ground track, in all cases
+        including a preliminary adjustment for atmospheric
+        refraction.  Signals were received in X-RCP, S-RCP, X-LCP,
+        and S-LCP polarizations.  The objective was to observe
+        variations in reflected signal amplitude and bandwidth as the
+        specular point moved across the surface.  Predicted signal
+        strengths were more than adequate for detection at S-band;
+        because of increased atmospheric attenuation and frequency
+        dispersion during the surface scattering process, predicted
+        performance at X-band was uncertain.
+ 
+        Fifteen of 22 digital tapes that were received contained good
+        data; the other 7 contained records from which about 90
+        percent of the data samples had been truncated.  The cause
+        for this was never determined, but there are suggestions that
+        an incorrect record length may have been entered during
+        copying.  The original tapes were recycled at the DSN station
+        before the error was discovered.  Records in the archive have
+        been padded to the correct length with binary zeroes to allow
+        processing, albeit with artifacts in the output from the
+        padding.
+ 
+        S-band echoes were observed in both polarizations in real
+        time, though amplitudes and echo widths varied considerably
+        -- and the signal disappeared entirely at times.  No X-band
+        echoes have been seen in preliminary reductions of the data,
+        though confusion over monitor display settings led to early
+        belief that both S- and X-band echoes were being seen in real
+        time.
+ 
+     DSS  Start Time Stop  Time  Channels   Archive  Notes
+     ---  ---------- ----------  --------   -------  ----------
+      63   09:17:32   09:25:31   XRSRXLSL   MG_2302  Orbit 9846
+      63   09:25:32   09:33:31   XRSRXLSL   MG_2302  Orbit 9846
+      63   09:33:32   09:41:31   XRSRXLSL   MG_2302  Orbit 9846
+      --   --------   --------   --------   -------
+      63   10:03:12   10:11:11   XRSRXLSL   MG_2302  Orbit 9846
+      63   10:11:12   10:17:40   XRSRXLSL   MG_2302  Orbit 9846
+      --   --------   --------   --------   -------
+      63   10:51:41   10:59:40   XRSRXLSL   MG_2303  Orbit 9847
+      63   10:59:41   11:07:40   XRSRXLSL   MG_2303  Orbit 9847
+      63   11:07:41   11:15:40   XRSRXLSL   MG_2303  Orbit 9847
+      63   11:15:41   11:22:41   XRSRXLSL   MG_2303  Orbit 9847
+      63   11:23:09   11:31:08   XRSRXLSL   MG_2303  Orbit 9847
+      63   11:31:09   11:39:08   XRSRXLSL   MG_2304  Orbit 9847
+      63   11:39:09   11:47:08   XRSRXLSL   MG_2304  Orbit 9847
+      63   11:50:32   11:53:02   XRSRXLSL   MG_2304  Orbit 9847
+      --   --------   --------   --------   -------
+      63   12:26:11   12:34:11   XRSRXLSL   MG_2304  Orbit 9848
+      63   12:34:12   12:42:11   XRSRXLSL   MG_2304  Orbit 9848
+      63   12:42:12   12:50:11   XRSRXLSL   MG_2304  Truncated records
+      63   12:50:12   12:51:37   XRSRXLSL   MG_2305  Truncated records
+      63   12:53:24   12:58:35   XRSRXLSL   MG_2305  Truncated records
+      63   12:59:08   03:02:45   XRSRXLSL   MG_2305  Truncated records
+      63   13:07:08   13:15:07   XRSRXLSL   MG_2305  Truncated records
+      63   13:15:08   13:23:07   XRSRXLSL   MG_2305  Truncated records
+      63   13:23:08   13:27:02   XRSRXLSL   MG_2305  Truncated records
+ 
+ 
+      31 May 1994 (Orbits 12955 through 12958)
+      ----------------------------------------
+        Spotlight experiments were carried out over a target in the
+        south- eastern part of Maxwell Montes; all receiving was done
+        using the 70-m DSN antenna near Madrid.  The objective was to
+        detect enhanced backscatter in the bistatic configuration and
+        to compare it with scatter at other angles.  Chances of
+        bistatic detection were predicted to be poor because of the
+        rapidly changing bistatic geometry and the low radar cross
+        section for Maxwell at the highly oblique viewing angles --
+        despite its enhancement relative to nearby areas.
+        Quasi-specular observations were planned over the same target
+        five days later.
+ 
+        Data were collected from four consecutive orbits.  The first
+        orbit was observed using all four receiver channels (X-RCP,
+        S-RCP, X-LCP, and S-LCP).  The second and fourth orbits were
+        observed using only S-RCP and S-LCP; the third orbit was
+        observed using only X-RCP and X-LCP.
+ 
+        Tapes generally contained good data, but no signal was
+        detected during preliminary processing.  Modulation was
+        noticed on the X-RCP carrier prior to the first spotlight
+        maneuver; its cause was not determined.
+ 
+     DSS  Start Time Stop  Time  Channels   Archive  Notes
+     ---  ---------- ----------  --------   -------  ----------------
+      63   11:31:38   11:39:37   XRSRXLSL   MG_2306  Pre-cal
+      63   11:39:38   11:47:30   XRSRXLSL   MG_2306  Pre-cal
+      --   --------   --------   --------   -------
+      63   12:15:34   12:23:01   XRSRXLSL   MG_2306  X-RCP modulation
+      63   12:23:36   12:31:06   XRSRXLSL   MG_2306  X-RCP modulation
+      63   12:31:21   12:39:04   XRSRXLSL   MG_2306  Orbit 12955
+      63   12:40:06   12:42:21   XRSRXLSL   MG_2306  Orbit 12955
+      63   12:49:16   12:54:58   XRSRXLSL   MG_2306  Orbit 12955
+      63   12:55:31   13:03:30   XRSRXLSL   MG_2307  Orbit 12955
+      63   13:03:31   13:10:33   XRSRXLSL   MG_2307  Orbit 12955
+      --   --------   --------   --------   -------
+      63   13:50:11   14:06:02   SRSLSRSL   MG_2307  Orbit 12956
+      63   14:06:17   14:22:02   SRSLSRSL   MG_2307  Orbit 12956
+      63   14:26:23   14:35:53   SRSLSRSL   MG_2307  Orbit 12956
+      --   --------   --------   --------   -------
+      63   15:25:10   15:41:09   XRXLXRXL   MG_2308  Orbit 12957
+      63   15:41:10   15:57:09   XRXLXRXL   MG_2308  Orbit 12957
+      63   15:57:10   16:03:01   XRXLXRXL   MG_2308  Orbit 12957
+      --   --------   --------   --------   -------
+      63   17:00:11   17:16:10   SRSLSRSL   MG_2308  Orbit 12958
+      63   17:16:11   17:32:10   SRSLSRSL   MG_2308  Orbit 12958
+      63   17:32:11   17:45:57   SRSLSRSL   MG_2308  Orbit 12958
+ 
+ 
+      5 June 1994 (Orbits 13032 through 13040)
+      ----------------------------------------
+        Eight quasi-specular tracks were observed using two 70-m DSN
+        antennas.  Each track extended from south of the Venus
+        equator to beyond Maxwell Montes in the north.  The objective
+        was to observe changes in reflected signal amplitude and
+        dispersion as the specular point moved over different surface
+        units.  Of particular interest was Maxwell Montes, targeted
+        five days earlier in a spotlight bistatic experiment.
+        Predictions were for real-time observation of echoes at
+        S-band and possible detection (with intense non-real-time
+        processing) of X-band echoes.
+ 
+        Six orbits were captured using DSS 63 near Madrid; four were
+        captured using DSS 14 near Goldstone.  Madrid began with
+        S-RCP and S-LCP on the first orbit, switched to X-RCP and
+        X-LCP on the second, and continued to alternate on successive
+        orbits thereafter.  On the fifth orbit, DSS 14 began with
+        X-RCP and X-LCP (while DSS 63 collected S-RCP and S-LCP), and
+        alternated thereafter.
+ 
+        Tuning predictions for the open-loop receivers were
+        calculated at Stanford; owing to a sign error, the
+        predictions failed to achieve the desired result, but
+        real-time corrections to the tuning were sufficient to keep
+        the S-band signal within the passband for all but the first
+        of the DSS 63 observations.
+ 
+        At DSS 14 an error in ground antenna pointing reduced signal
+        levels considerably; those data probably have very little
+        value when compared with the DSS 63 results.
+ 
+        Some of the tapes received from DSS 63 had truncated records;
+        for the archive, those have been padded with binary zeroes,
+        as was done with the truncated records from 31 May 1994.
+ 
+        About half the tapes received from DSS 14 were unreadable;
+        the unreadable tapes are not included in the archive.
+ 
+        S-band echoes were observed in real time from DSS 63; no
+        X-band echoes were seen.  A paper based on this set of
+        experiments has been published [PETTENGILLETAL1996].
+ 
+     DSS  Start Time Stop  Time  Channels   Archive  Notes
+     ---  ---------- ----------  --------   -------  -----------------
+      63   13:09:31   13:25:30   SRSLSRSL   MG_2309
+      63   13:25:31   13:41:30   SRSLSRSL   MG_2309
+      63   13:41:31   13:48:39   SRSLSRSL   MG_2309
+      --   --------   --------   --------   -------
+      63   14:25:09   14:41:08   XRXLXRXL   MG_2309  Truncated records
+      63   14:41:09   14:57:08   XRXLXRXL   MG_2309
+      63   14:57:09   15:13:08   XRXLXRXL   MG_2309
+      63   15:13:09   15:21:26   XRXLXRXL   MG_2310  Truncated records
+      --   --------   --------   --------   -------
+      63   15:58:12   16:14:11   SRSLSRSL   MG_2310
+      63   16:14:12   16:30:11   SRSLSRSL   MG_2310
+      63   16:30:12   16:46:11   SRSLSRSL   MG_2310
+      63   16:46:12   16:54:17   SRSLSRSL   MG_2310
+      --   --------   --------   --------   -------
+      63   17:31:12   17:47:11   XRXLXRXL   MG_2310  Truncated records
+      63   17:47:12   18:03:11   XRXLXRXL   MG_2311
+      63   18:03:12   18:19:11   XRXLXRXL   MG_2311
+      63   18:19:12   18:28:06   XRXLXRXL   MG_2311  Truncated records
+      --   --------   --------   --------   -------
+      63   19:10:25   19:26:24   SRSLSRSL   MG_2311
+      63   19:26:25   19:42:24   SRSLSRSL   MG_2311
+      63   19:42:25   19:58:24   SRSLSRSL   MG_2311
+      63   19:58:25   20:00:23   SRSLSRSL   MG_2311
+      --   --------   --------   --------   -------
+      63   20:37:11   20:53:10   XRXLXRXL   MG_2312  Truncated records
+      63   20:53:11   21:09:10   XRXLXRXL   MG_2312
+      63   21:09:11   21:21:07   XRXLXRXL   MG_2312
+      --   --------   --------   --------   -------
+      14   18:52:34   19:01:20   XRXLXRXL   MG_2312  Pre-cal
+      14   19:02:27   19:10:01                       Tape unreadable
+      --   --------   --------   --------   -------
+      14   19:33:44   19:49:43   XRXLXRXL   MG_2312  Bad Pointing
+      14   19:49:44   20:01:25                       Tape unreadable
+      --   --------   --------   --------   -------
+      14   20:36:10   20:52:09   SRSLSRSL   MG_2312  Bad Pointing
+      14   20:52:10   20:55:38                       Tape unreadable
+      14   20:55:54   21:11:53   SRSLSRSL   MG_2313  Bad Pointing
+      14   21:11:54   21:27:53                       Tape unreadable
+      14   21:27:54   21:36:11   SRSLSRSL   MG_2313  Bad Pointing
+      --   --------   --------   --------   -------
+      14   22:09:09   22:25:08   XRXLXRXL   MG_2313  Bad Pointing
+      14   22:25:09   22:41:08                       Tape unreadable
+      14   22:41:09   22:57:08   XRXLXRXL   MG_2313  Bad Pointing
+      14   22:57:09   23:06:53                       Tape unreadable
+      --   --------   --------   --------   -------
+      14   23:39:53   23:55:52   SRSLSRSL   MG_2313  Bad Pointing
+      14   23:55:53   00:11:52                       Tape unreadable
+      --   --------   --------   --------   -------
+      14   00:11:53   00:27:37   SRSLSRSL   MG_2313  Bad Pointing
+ 
+        Orbit numbers are not uniquely identified with the data
+        collection intervals listed above; the table below may
+        provide guidance.  Times after 11:00:00 are for 5 June 1994;
+        times before 02:00:00 are for 6 June 1994.
+ 
+            Orbit Number      Start Time (UTC)     Stop Time (UTC)
+            ------------      ----------------     ---------------
+                13032              11:48:08            13:21:04
+                13033              13:21:05            14:54:02
+                13034              14:54:12            16:26:59
+                13035              16:27:00            17:59:56
+                13036              17:59:57            19:32:54
+                13037              19:32:54            21:05:51
+                13038              21:05:52            22:38:48
+                13039              22:38:49            00:11:46
+                13040              00:11:46            01:44:43
+ 
+ 
+      12 December 1995
+      ----------------
+        A test of the DSN equipment was carried out in December 1995
+        to measure the phase shift introduced by attenuators on
+        open-loop receivers.  The test was intended to show whether
+        adding attenuation could change the inferred phase on one
+        S-band channel with respect to the other.  Such a
+        differential phase shift could lead to errors in
+        reconstruction of linear received polarizations from the
+        circulars that are actually recorded on the ground.
+        Attenuator settings are included with the DSP header
+        information, but the test data were never analyzed to the
+        precision required to answer the question posed.  Data were
+        collected at the DTF 21 DSN-equivalent site at JPL; sample
+        rate was 200 Hz, so data records have lengths of 566 bytes.
+ 
+     DSS  Start Time Stop  Time  Channels   Archive  Notes
+     ---  ---------- ----------  --------   -------  -------------------
+      06   17:13:13   17:39:59   XRSRXLSL   MG_2313  Phase vs atten test
+ 
+ 
+    Limitations
+    ===========
+      The limitations in this data set follow from the quality of the
+      execution, which is described above under Data Coverage and
+      Quality.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

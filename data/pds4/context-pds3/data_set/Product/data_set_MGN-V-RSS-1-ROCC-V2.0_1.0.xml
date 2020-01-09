@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rss-1-rocc-v2.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MAGELLAN RADIO OCCULTATION RAW DATA RECORDS V2.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.magellan::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:rss.mgn::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mgn-v-rss-1-rocc-v2.0__browserp_mgn-v-rss-1-rocc-v2.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.atmos::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Hinson, D.P., and J.M. Jenkins, Magellan Radio Occultation Measurements of
+                   Atmospheric Waves on Venus, Icarus, 114, 310-327, 1995.
+            </reference_text>
+            <description>reference.HINSON-JENKINS1995</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Jenkins, J.M., P.G. Steffes, D.P. Hinson, J.D. Twicken, and G.L. Tyler, Radio
+                   Occultation Studies of the Venus Atmosphere with the Magellan Spacecraft: 2.
+                   Results from the October 1991 Experiments, Icarus, 110, 79-94, 1994.
+            </reference_text>
+            <description>reference.JENKINSETAL1994</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Steffes, P.G., J.M. Jenkins, R.S. Austin, S.W. Asmar, D.T. Lyons, E.H. Seale,
+                   and G.L. Tyler, Radio Occultation Studies of the Venus Atmosphere with the
+                   Magellan Spacecraft: 1. Experimental Description and Performance, Icarus, 110,
+                   71-78, 1994.
+            </reference_text>
+            <description>reference.STEFFESETAL1994</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MGN-V-RSS-1-ROCC-V2.0</data_set_id>
+        <data_set_name>MAGELLAN RADIO OCCULTATION RAW DATA RECORDS V2.0</data_set_name>
+        <data_set_release_date>1996-06-30</data_set_release_date>
+        <start_time>1991-10-05</start_time>
+        <stop_time>1994-10-12</stop_time>
+        <producer_full_name>RICHARD A. SIMPSON</producer_full_name>
+        <citation_text>
+            RICHARD A. SIMPSON, MAGELLAN RADIO OCCULTATION RAW DATA RECORDS
+            V2.0, MGN-V-RSS-1-ROCC-V2.0, NASA Planetary Data System, 1996
+        </citation_text>
+        <data_set_terse_desc>
+            MAGELLAN RADIO OCCULTATION RAW DATA ARCHIVE
+        </data_set_terse_desc>
+        <abstract_desc>
+            The Magellan (MGN) Radio Occultation (ROCC) Raw Data Archive
+            (RDA) is a time-ordered collection of raw and partially processed
+            data from radio occultation experiments conducted using the
+            Magellan spacecraft while it orbited Venus.
+        </abstract_desc>
+        <data_set_desc>
+ 
+ 
+    Data Set Overview
+    =================
+      The Magellan (MGN) Radio Occultation (ROCC) Raw Data Archive
+      (RDA) is a time-ordered collection of raw and partially
+      processed data from radio occultation experiments conducted
+      using the Magellan spacecraft while it orbited Venus.
+ 
+      The spacecraft radio system was used as the signal source.  The
+      spacecraft high-gain antenna (HGA) beamed those signals through
+      the atmosphere of Venus toward Earth, where they were received
+      at stations of the NASA Deep Space Network (DSN).  Changes in
+      the amplitude and frequency of the received signal can be
+      related to the refracting and absorbing properties of the
+      atmosphere as a function of raypath penetration depth.  These
+      parameters can then be inverted to give the temperature and
+      pressure structure and the density of absorbing species in the
+      atmosphere.
+ 
+      Transmit polarization along the boresight of the spacecraft
+      antenna was linear at the S-band wavelength (13 cm, or 2298
+      MHz) and circular at the X-band wavelength (3.5 cm, or 8415
+      MHz).  Signals could be received coherently in both right- and
+      left-circular polarizations at both wavelengths when a 70-m
+      antenna was used at the DSN station.  When a 34-m antenna was
+      used, only a single polarization at each wavelength could be
+      received; and, in some cases, only one wavelength was captured.
+ 
+      During these experiments, frequency of the spacecraft
+      transmitter was controlled by a signal radiated from the
+      ground.  The spacecraft oscillator locked to the &apos;uplink&apos;
+      signal, then generated &apos;downlink&apos; signals coherently at both S-
+      and X-band.  Perturbations on the radio signal during TWO
+      passes through the atmosphere must be considered during
+      analysis of these data.
+ 
+      During several experiments, the spacecraft attitude was
+      adjusted during the occultation to compensate for refractive
+      bending in the Venus atmosphere.  These &apos;limb-track&apos; maneuvers
+      allowed deepest penetration of the atmosphere and were usually
+      scheduled when a 70-m ground antenna was available.
+ 
+      The first set of experiments (5-6 October 1991) and their
+      results have been described in the literature
+      [STEFFESETAL1994], [JENKINSETAL1994], [HINSON&amp;JENKINS1995].
+ 
+      The data set includes Original Data Records (ODRs), which are
+      digitized recordings of baseband receiver output, and Archival
+      Tracking Data Files (ATDFs or TDFs), which are edited records
+      of closed-loop receiver output and related parameters.  The
+      ATDF also contains coefficients that can be used to derive the
+      frequency of the &apos;uplink&apos; signal transmitted from the ground.
+ 
+      Typical users of the data set would derive the frequency and
+      amplitude of the signal captured by the DSN receiving antenna
+      from ODRs (or, for low resolution, from an ATDF).  After
+      correction for known geometrical effects, the residual
+      frequency could be attributed to the radially variable index of
+      refraction of the atmosphere.  Reduction of the signal
+      amplitude from the predicted level could be attributed
+      partially to refractive spreading (which may be estimated from
+      the frequency analysis) or to mispointing of the HGA (which can
+      be estimated from spacecraft attitude data).  The remaining
+      attenuation is believed to result from absorption by
+      atmospheric constituents, especially sulfuric acid.  See
+      [STEFFESETAL1994], [JENKINSETAL1994] and references cited
+      therein for more information.
+ 
+ 
+    Parameters
+    ==========
+      Open loop data records (ODRs) contain 8-bit samples of receiver
+      output.  Each block of (nominally) 4000 data samples is
+      accompanied a 166 byte header.  The ODR is described by a
+      Software Interface Specification (SIS), included as
+      RSC11_11.TXT in the DOCUMENT directory of the data set archival
+      volume.
+ 
+      When 70-m antennas were available, two X-band (3.5 cm wave-
+      length) open-loop receivers were used, one capturing right-
+      circularly polarized signals and the other capturing left-
+      circularly polarized signals.  These are identified in the data
+      stream as Channels 1 and 3.  Two S-band open-loop receivers
+      were also used, yielding right- and left-circularly polarized
+      output on Channels 2 and 4, respectively.  When smaller
+      antennas were used, no more than two receivers were used; the
+      bands, polarizations, and channel assignments varied among
+      experiments.
+ 
+      Each ATDF data record contains 117 parameters, stored in
+      records of 288 bytes at rates up to 10 per second.  The
+      parameters include estimates of received signal strength and
+      frequency as well as status information on components of the
+      DSN system.  The ATDF is described by a Software Interface
+      Specification (SIS), included as TRK_2_25.TXT in the DOCUMENT
+      directory of each ROCC archival volume.
+ 
+ 
+    Processing
+    ==========
+      Open loop data (ODRs) are not edited or otherwise processed
+      before being incorporated into the ROCC RDA.  A 32-byte label
+      at the beginning of each ODR tape is not included in the data
+      file; it gives the software version of the data taking
+      equipment and is saved instead in the PDS label that
+      accompanies the data file.
+ 
+      DSN Navigation Team performs editing on data during conversion
+      from the Intermediate Data Record (IDR) to ATDF formats; this
+      function serves mostly to remove anomalous (out of nominal
+      range) values.
+ 
+ 
+    Data
+    ====
+      Original Data Records (ODRs) were the primary data type for
+      this raw data archive.  ODRs were generated at stations of the
+      NASA Deep Space Network (DSN) and were distributed on 6250 bpi
+      tape.  Those tapes have been copied to disk files, defined as
+      PDS TABLE Objects, and archived on these CD-WO volumes.  ODRs
+      are stored on CD-WO volumes in this archival data set in
+      chronological order; ancillary data to support analysis
+      accompany ODRs in the CALIB, GEOMETRY, and DOCUMENT
+      directories.  The table FILELIST.TAB in the document directory
+      shows relationships among ODR files and ancillary data.
+ 
+      A nominal ODR contained 24000 records, each record having 166
+      bytes of header data and 4000 bytes of 8-bit sample data.  For
+      the carefully planned experiments, each of four receiver
+      channels (X-RCP, S-RCP, X-LCP, and S-RCP) was sampled at 50000
+      samples per second.  A single file represented 8 minutes of
+      observing time.  For the ad hoc experiments (February-March
+      1992, January 1993, and October 1994) channel assignments and
+      sampling parameters varied.
+ 
+      On MGN ROCC archival volumes ODR files have names of the form
+      ydddhhmm.ODR where y gives the least significant digit of the
+      year, ddd is the 3-digit day-of-year, hh is the 2-digit hour,
+      and mm is the 2-digit minute on which data acquisition for the
+      file began.
+ 
+      Each ODR data file is accompanied by a full PDS detached label
+      with name ydddhhmm.LBL which completely describes the contents
+      of the ODR file.  The format and contents are also described in
+      RSC11_11.TXT in the DOCUMENT directory of each archival volume.
+ 
+      In two instances (1992-068T20:43 and 1992-070T21:48) two DSN
+      stations (DSS 15 and DSS 45) began recording occultation data
+      at the same ydddhhmm; the file with the slightly earlier start
+      time (8 seconds in the first case and 2 in the second) has had
+      its &apos;mm&apos; manually decremented by one so as to avoid duplicate
+      file names.
+ 
+      Archival Tracking Data Files (ATDFs or TDFs) are considered to
+      be primary raw data for many radio science experiments.  In
+      this case, they served a backup and ancillary role.  ATDFs are
+      generated by the Radio Metric Data Conditioning Team in the
+      DSN.  They were delivered either on computer-compatible tape or
+      as electronic files.  They have been copied to disk, defined as
+      PDS TABLE objects, and archived on these CD-WO volumes.
+ 
+      A typical ATDF covered several days and had a volume of 35
+      MBytes.  ATDF rates for these Magellan ROCC experiments were
+      typically on the order of one sample every 60 seconds.  Each
+      sample was of 117 items, including measurements of signal
+      amplitude and frequency from closed loop receivers, and was
+      stored as a single record of 288 bytes.  Sampling of the
+      signals was limited to one polarization at S-band and one
+      polarization at X-band.  Time resolution was far coarser than
+      from the ODR and no information on signal phase was retained.
+      The ATDF, from this perspective, provided low-resolution backup
+      to the ODR.
+ 
+      The ATDF also provided data on the uplink transmitting system,
+      including constant and linear coefficients for a software
+      driven oscillator that served as the uplink frequency
+      reference.  This information is needed for analysis of the ODR,
+      especially when the uplink signal was &apos;ramped&apos; -- used a
+      linearly varying frequency.
+ 
+      Each ATDF has a file name of the form ydddeeeX.TDF where y is
+      the least significant digit of the year and ddd is the
+      day-of-year for the first ATDF record.  The eee gives
+      day-of-year for the last data record in the ATDF, and X is set
+      to &apos;A&apos; unless there is more than one ATDF with ydddeee in the
+      data set.  For the MGN ROCC raw data archive there were no
+      duplicates of ydddeee among ATDFs.
+ 
+      Each ATDF is accompanied by a full PDS detached label with name
+      ydddeeeA.LBL which completely describes the contents of the
+      ATDF.  The format and contents are also described in
+      TRK_2_25.TXT in the DOCUMENT directory of each archival volume.
+ 
+ 
+    Ancillary Data
+    ==============
+      For each ODR, there is a set of ancillary files needed for
+      analysis.  These are stored in the CALIB and GEOMETRY
+      directories, as appropriate.  A table FILELIST.TAB in the
+      DOCUMENT directory shows relationships among ODRs and ancillary
+      files.
+ 
+ 
+      Uplink Frequency Data
+      ---------------------
+        The transmitted signal from the ground was used as the
+        frequency reference for the spacecraft radio signal.  During
+        early experiments the uplink was &apos;ramped&apos; -- the frequency
+        varied linearly with time.  Coefficients for linear uplink
+        frequency functions are stored in the ATDF (in items 112-114;
+        see TRK_2_25.TXT in the DOCUMENT directory).  These were
+        abstracted from the ATDF and stored in files of their own for
+        the first set of experiments in 1991.  They are stored as
+        tables with names TUNnnnnn.TAB in the CALIB directory on the
+        first CD-WO volume.  Each TUNnnnnn.TAB file is accompanied by
+        a detached PDS label with name TUNnnnnn.LBL.
+ 
+        For later experiments, the user must obtain the uplink
+        coefficients directly from the ATDF in the TDF directory.
+        For experiments in 1994 ramping was discontinued, and a
+        constant frequency was transmitted.  It is not known when the
+        change occurred; users interested in working with data from
+        1992 and 1993 should at least plan to obtained uplink
+        coefficients (and times) from ATDFs.
+ 
+ 
+      Downlink Frequency Files
+      ------------------------
+        Also, for the 1991 experiments (only), downlink frequencies
+        were predicted at both S- and X-band.  These are stored as
+        tables with names DSBnnnnn.TAB in the CALIB directory.  The
+        files give offsets from the expected carrier frequency at
+        S-band (B=S) and X-band (B=X) after Doppler effects from
+        relative motion and effects of Earth&apos;s atmosphere are taken
+        into account.  They do NOT include effects from the
+        atmosphere of Venus, so subtracting the prediction from the
+        observed frequency will give a first-order measure of the
+        effects of the atmosphere in the frequency domain.  Each
+        DSBnnnnn.TAB file is accompanied by a PDS detached label
+        DSBnnnnn.LBL.  These prediction files appear only on the
+        first CD-WO volume; users desiring them for experiments in
+        1992-1994 must calculate their own.
+ 
+ 
+      High-Gain Antenna (HGA) Radiation Pattern
+      -----------------------------------------
+        The radiation pattern of the high-gain antenna (HGA) is
+        described in a PDS document with both ASCII and extended
+        PostScript components in the CALIB directory.  The HGA
+        pattern would not be needed if the HGA always pointed toward
+        &apos;virtual&apos; Earth.  In ad hoc experiments, there was no limb
+        track maneuver; and, when maneuvers were planned, they were
+        simple linear offsets rather than true tracks of the image of
+        Earth refracted through Venus&apos; atmosphere.  On 1994-221 the
+        spacecraft executed its limb track maneuver two minutes
+        early; so corrections based on the HGA patterns will be
+        needed if the results are to be interpreted accurately.  The
+        HGA calibration document is described in the detached PDS
+        label HGA_XXX.LBL in the CALIB directory; it is included on
+        all CD-WO volumes.
+ 
+ 
+      Observing Geometry
+      ------------------
+        Files describing the observing geometry are stored in the
+        GEOMETRY directory.  These include NAIF &apos;text&apos; format SPK
+        files and NAIF &apos;transfer&apos; format ephemerides.  Files
+        describing spacecraft attitude are also included in the
+        GEOMETRY directory, but are described in the next section.
+ 
+        NAIF (PDS Navigation and Ancillary Information) &apos;text&apos; format
+        SPK files are available for all observations through
+        1992-342.  These contain the positions of Magellan, Venus,
+        Earth, and the Sun in data modules that can be used readily
+        with NAIF Toolkit software.  Each &apos;text&apos; SPK file has a name
+        ending with the extension &apos;TSP&apos;; each TSP data file is
+        accompanied by a detached PDS minimal label having the same
+        file name but ending with the &apos;LBL&apos; extension.
+ 
+        NAIF &apos;transfer&apos; format ephemeris files are available for the
+        remaining observations (1992-355 through 1994).  Files with
+        names MGNyyddd.XSP contain the Magellan trajectory with
+        respect to Venus beginning on year yy and day-of-year ddd.  A
+        single file PEPH8996.XSP contains the positions of Earth,
+        Venus, and the Sun from 1989 to 1996.  Each XSP file is
+        accompanied by a detached PDS minimal label having the same
+        file name, except for an &apos;LBL&apos; extension.
+ 
+        Before using either &apos;text&apos; or &apos;transfer&apos; NAIF files, the user
+        should convert ASCII carriage-return line-feed delimiters on
+        each record to the default delimiter for text files on the
+        local system, then use the NAIF utility SPACIT to convert the
+        archival file to local binary.
+ 
+        Information on acquisition, installation, and use of the NAIF
+        software can be found in TK_FTP.TXT in the DOCUMENT
+        directory.
+ 
+ 
+      Spacecraft Attitude (Quaternions)
+      ---------------------------------
+        Data describing the attitude of the spacecraft during radio
+        occultations is needed when the HGA was not pointed toward
+        the image of Earth, as seen from the spacecraft.  Limb track
+        maneuvers were planned and executed for several experiments
+        -- to improve pointing during experiments; attitude data
+        defines the accuracy to which the image of Earth remained on
+        the HGA boresight.
+ 
+        Attitude data are available in as many as five forms, though
+        no more than three forms are included here for any single
+        experiment.
+ 
+        For the first set of experiments (1991), telemetry of
+        quaternion values is available in PDS tables with file names
+        of the form DRFnnnnn.TAB.  Filtered versions of the telemetry
+        are available in files FILnnnnn.TAB.  Reconstructions of
+        antenna pointing are in tables with file names HGAnnnnn.TAB.
+        In each case a detached PDS label completely describes the
+        format and content of the table.  One set of DRF, FIL, and
+        HGA files is stored for each of the three Magellan orbits
+        observed in 1991.  These files appear in the GEOMETRY
+        directory, but only on the first CD-WO volume.
+ 
+        For the remaining experiments during which a limb track
+        maneuver was planned spacecraft attitude is described by
+        either a table of quaternion values (QUAnnnnn.TAB file name),
+        a text file of polynomial coefficients which can be used to
+        generate quaternions (QCFnnnnn.TXT), or both.  The QUA*.TAB
+        files are each accompanied by a detached PDS label with file
+        name QUA*.LBL which completely describes the content and
+        format of the associated table.  QCF*.TXT files are
+        self-documenting.  In some QCF*.TXT files multiple sets of
+        coefficients have been archived; in these cases the
+        experiment investigator had not determined at the time of
+        archiving which set had actually been executed on the
+        spacecraft.
+ 
+ 
+    Coordinate System
+    =================
+      SPK ephemeris files and quaternion files were produced for the
+      J2000 inertial reference frame.  SPICE reader routines may be
+      used to convert these to other coordinate systems.
+ 
+      Other data types are not dependent on definition of a
+      coordinate system.
+ 
+ 
+    Software
+    ========
+      Software for parsing, reducing, and analyzing data such as
+      these has been developed at Stanford University and elsewhere.
+      The Stanford software has not been prepared for general
+      distribution and is not included with the archival data set.
+ 
+ 
+    Media/Format
+    ============
+      The archival data set is written on CD-WO media using the Young
+      Minds CD Studio authoring system.  The CD-WO volumes conform to
+      ISO 9660 standards.
+ 
+        </data_set_desc>
+        <confidence_level_note>
+ 
+ 
+    Overview
+    ========
+      At the time the raw data were archived relatively little
+      analysis had been performed on the data, except for the 1991
+      occultations (1991-10-05 and 1991-10-06) [STEFFESETAL1994],
+      [JENKINSETAL1994], [HINSON&amp;JENKINS1995].
+ 
+ 
+    Review
+    ======
+      This archival data set was distributed for peer review panel
+      prior to its acceptance by the Planetary Data System (PDS).
+      The review was conducted in accordance with PDS procedures.
+ 
+      Prior to creation of the final version of the archival data
+      set, key elements of the archive were distributed for
+      preliminary review.  These included electronic versions of
+      example PDS labels, CATALOG files, and Software Interface
+      Specifications.  These materials were distributed to PDS
+      personnel, the experiment investigator, and others, as
+      appropriate.  An earlier version of the first CD-WO volume
+      (MG_2201, DATA_SET_ID = &apos;MGN-V-1-ROCC-V1.0&apos;) was distributed
+      for review in February 1995.
+ 
+      Data on the CD-WO volumes was checked using Stanford parsing
+      and reduction software to ensure that it was both complete and
+      an accurate replica of the data contained in the original tape
+      files.
+ 
+ 
+    Data Coverage and Quality
+    =========================
+      The times covered by ODR tapes are given below.  Notes on
+      presumed quality of the data follow each list of ODR times.
+      Note that ODRs from 1992-355 and 1992-356 are included here for
+      completeness; but those data were not in the the archive.
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      43     1991-278T20:15:54     1991-278T20:23:54
+      43     1991-278T20:23:54     1991-278T20:24:24
+      43     1991-278T23:31:28     1991-278T23:39:27
+      43     1991-278T23:39:28     1991-278T23:40:27
+      43     1991-279T02:47:01     1991-279T02:55:01
+      43     1991-279T02:55:01     1991-279T02:56:00
+ 
+      No problems known with data above.
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      65     1992-048T08:14:59     1992-048T08:37:00
+      65     1992-048T11:32:31     1992-048T11:52:30
+      61     1992-049T10:21:19     1992-049T10:41:19
+      61     1992-049T13:36:54     1992-049T13:56:52
+      61     1992-050T09:10:12     1992-050T09:30:13
+      61     1992-050T12:25:48     1992-050T12:45:46
+      61     1992-051T07:59:10     1992-051T08:19:10
+      61     1992-051T11:14:46     1992-051T11:34:44
+      65     1992-052T10:02:46     1992-052T10:23:46
+      65     1992-052T13:18:23     1992-052T13:39:21
+      45     1992-067T21:52:06     1992-067T22:12:02
+      45     1992-068T01:07:58     1992-068T01:27:56
+      45     1992-068T04:23:54     1992-068T04:43:52
+      65     1992-068T11:32:39     1992-068T11:52:31
+      65     1992-068T14:11:51     1992-068T14:31:43
+      15     1992-068T17:27:42     1992-068T17:47:40
+      45     1992-068T20:43:43     1992-068T21:03:39
+      15     1992-068T20:43:51     1992-068T21:03:39
+      45     1992-068T23:59:41     1992-069T00:19:39
+      45     1992-069T03:15:43     1992-069T03:35:41
+      65     1992-069T13:03:03     1992-069T13:25:01
+      15     1992-069T16:20:02     1992-069T16:40:00
+      15     1992-069T19:36:11     1992-069T19:56:09
+      45     1992-069T22:52:25     1992-069T23:12:21
+      45     1992-070T02:08:37     1992-070T02:28:35
+      15     1992-070T15:14:25     1992-070T15:34:21
+      15     1992-070T18:31:15     1992-070T18:51:13
+      15     1992-070T21:48:46     1992-070T22:08:44
+      45     1992-070T21:48:48     1992-070T22:08:44
+      61     1992-071T10:38:08     1992-071T10:58:10
+      61     1992-071T13:53:54     1992-071T14:13:45
+      15     1992-071T14:09:58     1992-071T14:13:38
+ 
+      No limb track maneuvers were planned, so penetration depth into
+      atmosphere was limited.  No SPK file for 1992-052.  ODR files
+      were not checked for anomalies prior to archiving.  DSS 61 used
+      non-standard receiver filters (7500 Hz).  These data were
+      typically collected using DSP mode 4; X-band samples were
+      obtained using ADCs 2-4 (the samples from ADC 1 are redundant
+      and should not be used).
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      43     1992-342T03:21:45     1992-342T03:29:44
+      43     1992-342T03:29:45     1992-342T03:37:44
+      43     1992-342T03:37:45     1992-342T03:45:44
+      43     1992-342T03:39:45     1992-342T03:37:44
+      43     1992-342T03:45:45     1992-342T03:49:24
+      43     1992-342T06:36:09     1992-342T06:44:08
+      43     1992-342T06:44:09     1992-342T06:52:08
+      43     1992-342T06:52:09     1992-342T07:00:08
+      43     1992-342T07:00:09     1992-342T07:03:45
+ 
+      Effect of atmosphere was not included in calculation of
+      receiver tuning predictions; X-band signal drifts out of
+      passband during observation periods.  Occultations were at
+      apoapsis, so vertical resolution in the atmosphere was not as
+      good as during 1991 experiments.
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      14     1992-355T21:57:00     1992-355T22:04:59
+      14     1992-355T22:05:00     1992-355T22:12:59
+      14     1992-355T22:13:00     1992-355T22:20:59
+      14     1992-355T22:29:00     1992-355T22:36:59
+      14     1992-355T22:37:00     1992-355T22:44:59
+      14     1992-355T22:45:00     1992-355T22:45:16
+      14     1992-356T01:04:17     1992-356T01:12:16
+      14     1992-356T01:12:17     1992-356T01:16:15
+      14     1992-356T01:16:16     1992-356T01:24:15
+      14     1992-356T01:24:16     1992-356T01:28:59
+      14     1992-356T01:29:08     1992-356T01:37:07
+      14     1992-356T01:37:08     1992-356T01:42:07
+      14     1992-356T01:42:09     1992-356T01:50:10
+      14     1992-356T01:50:11     1992-356T01:51:42
+      14     1992-356T01:54:20     1992-356T01:59:37
+ 
+      Recording system failed, and no quaternion files have been
+      located.  Data corresponding to the ODR files above were NOT
+      included in the archive.
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      15     1993-013T20:31:30     1993-013T20:47:29
+      15     1993-013T20:47:30     1993-013T21:03:29
+      15     1993-013T21:03:30     1993-013T21:08:02
+      15     1993-013T21:08:25     1993-013T21:24:24
+      15     1993-013T21:24:25     1993-013T21:31:38
+ 
+      No ATDF; but experiments were conducted with constant uplink
+      frequencies in 1994, so uplink frequency rates MAY not be
+      needed here.  No limb track maneuver means penetration depth in
+      the atmosphere is not great.  ODRs were not reviewed before
+      archiving, so their quality is unknown.
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      14     1994-175T17:40:44     1994-175T17:51:39
+      14     1994-175T18:17:41     1994-175T18:33:40
+      14     1994-175T18:33:41     1994-175T18:34:22
+      14     1994-175T19:13:39     1994-175T19:15:12
+      14     1994-175T19:50:41     1994-175T20:01:39
+      14     1994-175T20:46:41     1994-175T20:57:39
+      14     1994-175T21:23:41     1994-175T21:34:39
+      14     1994-175T22:20:01     1994-175T22:36:00
+      14     1994-175T22:36:01     1994-175T22:36:35
+      14     1994-175T22:56:39     1994-175T23:07:39
+ 
+      Incorrect pointing of ground antenna (pointing was calculated
+      for DSS 15, then used at DSS 14 without correcting for physical
+      displacement between antennas; error was large enough that
+      spacecraft was well off the S-band boresight and in the
+      sidelobes at X-band).  Also, incorrect spacecraft polarization
+      (and transmitter) was specified.  Incorrect entries in DSN
+      keyword file meant ground sequencing was in error, including
+      erroneous uplink transmit timing.  The last occultation may be
+      OK, but the others are degraded.  By 1994 uplink transmissions
+      did not use &apos;ramping&apos;; so the ATDF should not be required for
+      details of uplink radio frequencies.
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      43     1994-197T02:26:04     1994-197T02:37:59
+      43     1994-197T03:59:35     1994-197T04:11:32
+      43     1994-197T05:32:35     1994-197T05:44:32
+ 
+      No known problems with the ODRs above.
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      61     1994-221T13:37:09     1994-221T13:57:08
+      61     1994-221T13:57:09     1994-221T14:16:13
+      61     1994-221T15:10:11     1994-221T15:30:10
+      61     1994-221T15:30:11     1994-221T15:49:02
+      61     1994-221T16:43:10     1994-221T17:03:09
+      61     1994-221T17:03:10     1994-221T17:22:01
+      61     1994-221T18:16:13     1994-221T18:36:12
+      61     1994-221T18:36:13     1994-221T18:55:01
+      61     1994-221T19:49:10     1994-221T20:09:09
+      61     1994-221T20:09:10     1994-221T20:28:01
+ 
+      Spacecraft executed limb track maneuvers 2 minutes early.  DSS
+      61 filters are non-standard.  Otherwise, no known problems with
+      ODR data above.
+ 
+      DSS           START                 STOP
+      ---     -----------------     -----------------
+      65     1994-274T12:55:41     1994-274T13:11:40
+      65     1994-274T13:11:41     1994-274T13:20:17
+      65     1994-274T13:23:47     1994-274T13:39:47
+      65     1994-274T13:39:48     1994-274T13:55:47
+      65     1994-274T13:55:48     1994-274T14:11:47
+      65     1994-274T14:19:38     1994-274T14:34:40
+      65     1994-274T16:42:57     1994-274T16:58:56
+      65     1994-274T16:58:57     1994-274T17:14:56
+      65     1994-274T17:14:57     1994-274T17:30:56
+      65     1994-274T17:30:57     1994-274T17:33:36
+      65     1994-274T17:34:09     1994-274T17:37:52
+      15     1994-275T17:46:04     1994-275T18:02:03
+      15     1994-275T18:02:04     1994-275T18:04:59
+      15     1994-275T20:50:00     1994-275T21:05:59
+      15     1994-275T21:06:00     1994-275T21:19:59
+      15     1994-279T20:16:00     1994-279T20:31:59
+      15     1994-279T20:32:00     1994-279T20:47:59
+      15     1994-281T18:26:05     1994-281T18:42:04
+      15     1994-281T18:42:05     1994-281T18:58:04
+      15     1994-281T21:31:00     1994-281T21:46:59
+      15     1994-281T21:47:00     1994-281T22:02:59
+      61     1994-283T10:27:00     1994-283T10:46:38
+      61     1994-283T10:46:58     1994-283T11:03:46
+      61     1994-283T13:32:11     1994-283T13:52:10
+      61     1994-283T13:52:11     1994-283T14:05:01
+      61     1994-283T16:37:11     1994-283T16:57:10
+      61     1994-283T16:57:11     1994-283T17:10:01
+      42     1994-284T08:03:12     1994-284T08:19:11
+      42     1994-284T08:19:12     1994-284T08:35:11
+      42     1994-284T08:35:12     1994-284T08:38:03
+      61     1994-284T11:05:28     1994-284T11:25:27
+      61     1994-284T11:25:28     1994-284T11:43:04
+      61     1994-284T14:06:56     1994-284T14:26:55
+      61     1994-284T14:26:56     1994-284T14:43:07
+      61     1994-284T15:42:10     1994-284T16:02:09
+      61     1994-284T16:02:10     1994-284T16:15:31
+      61     1994-284T17:14:10     1994-284T17:31:02
+      42     1994-284T21:54:41     1994-284T22:10:40
+      42     1994-284T22:10:41     1994-284T22:26:40
+      42     1994-284T22:26:41     1994-284T22:30:03
+      42     1994-284T23:27:10     1994-284T23:43:09
+      42     1994-284T23:43:10     1994-284T23:59:09
+      42     1994-284T23:59:10     1994-285T00:02:03
+      42     1994-285T00:59:39     1994-285T01:15:38
+      42     1994-285T01:15:39     1994-285T01:31:38
+      42     1994-285T01:31:39     1994-285T01:34:33
+      61     1994-285T09:55:28     1994-285T10:07:25
+      61     1994-285T10:37:25     1994-285T10:57:24
+      61     1994-285T10:57:25     1994-285T11:17:24
+      61     1994-285T11:17:25     1994-285T11:37:24
+ 
+      No limb track maneuvers, so atmospheric penetration expected to
+      be limited.  DSS 61 used non-standard filters.  ODRs had not
+      been checked for quality when archiving began; but no problems
+      known a priori.  Spacecraft communications with Earth ended on
+      1994-285.
+ 
+ 
+    Limitations
+    ===========
+      No ATDF is available for 1993-013.  No trajectory data are
+      available for 1992-052.  Otherwise, the limitations in this
+      data set follow from the quality of the execution, which is
+      described above under Data Coverage and Quality.
+ 
+        </confidence_level_note>
+        <archive_status>ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>CD-WO</medium_type>
+            <nssdc_collection_id>89-033B-03B</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

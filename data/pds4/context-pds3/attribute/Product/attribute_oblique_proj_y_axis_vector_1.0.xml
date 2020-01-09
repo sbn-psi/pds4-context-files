@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.oblique_proj_y_axis_vector</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>oblique_proj_y_axis_vector</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>oblique_proj_y_axis_vector</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>oblique_proj_y_axis_vector</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+Unit vector in the direction of the Y axis of the oblique
+coordinate system used in the OBLIQUE CYLINDRICAL projection,
+in terms of the X, Y, and Z axes of the standard body-fixed
+coordinate system.  In each system, the X axis points from
+the body center toward longitude and latitude (0,0) in that
+system, and the Z axis to (0,90), and the Y axis completes a
+right-handed coordinate system. The OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS
+make up the rows of a rotation matrix that when multiplied on
+the left of a vector referenced to the standard coordinate system
+converts it into its equivalent in the oblique coordinate system.
+This rotation matrix is the product of successively applied
+rotations by +/- OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis,
+90 - OBLIQUE_PROJ_POLE_LATITUDE around the once-rotated Y axis,
+and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis.
+For the first of these rotations, a positive sign is used if the
+OBLIQUE_PROJ_POLE_LONGITUDE is given as an east longitude, and a
+negative sign if it is expressed as a west longitude.
+        </definition>
+        <comment>oblprojyaxv</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>oblique_proj_y_axis_vector</name>
+            <definition>
+Unit vector in the direction of the Y axis of the oblique
+coordinate system used in the OBLIQUE CYLINDRICAL projection,
+in terms of the X, Y, and Z axes of the standard body-fixed
+coordinate system.  In each system, the X axis points from
+the body center toward longitude and latitude (0,0) in that
+system, and the Z axis to (0,90), and the Y axis completes a
+right-handed coordinate system. The OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS
+make up the rows of a rotation matrix that when multiplied on
+the left of a vector referenced to the standard coordinate system
+converts it into its equivalent in the oblique coordinate system.
+This rotation matrix is the product of successively applied
+rotations by +/- OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis,
+90 - OBLIQUE_PROJ_POLE_LATITUDE around the once-rotated Y axis,
+and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis.
+For the first of these rotations, a positive sign is used if the
+OBLIQUE_PROJ_POLE_LONGITUDE is given as an east longitude, and a
+negative sign if it is expressed as a west longitude.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>TBD_maximum_characters</maximum_characters>
+            <minimum_value>-1.0</minimum_value>
+            <maximum_value>1.0</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mer2-m-mi-3-radiometric-ops-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MER 2 MARS MICROSCOPIC IMAGER RADIOMETRIC RDR OPS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.mars_exploration_rover::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:mi.mer2::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mars::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-mi-3-radiometric-ops-v1.0__browserp_mer2-m-mi-3-radiometric-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-mi-3-radiometric-ops-v1.0__browser_geo_analysts_notebook::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mer2-m-mi-3-radiometric-ops-v1.0__dvo_imaging_mer2-m-mi-3-radiometric-ops-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.imaging::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   Mars Exploration Rover Mission, Camera Software Interface Specification, 2003
+            </reference_text>
+            <description>reference.CAMSIS2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>
+                   Herkenhoff, K.E., et al., The Athena Microscopic Imager Investigation, Journal
+                   of Geophysical Research, July 2, 2003.
+            </reference_text>
+            <description>reference.HERKENHOFFETAL2003</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MER2-M-MI-3-RADIOMETRIC-OPS-V1.0</data_set_id>
+        <data_set_name>MER 2 MARS MICROSCOPIC IMAGER RADIOMETRIC RDR OPS V1.0</data_set_name>
+        <data_set_release_date>2004-08-03</data_set_release_date>
+        <start_time>2004-01-05T05:37:43.593Z</start_time>
+        <stop_time nilReason="unknown" xsi:nil="true"></stop_time>
+        <producer_full_name>JUSTIN MAKI</producer_full_name>
+        <citation_text>
+            Maki, Justin, MER 2 Mars Microscopic Imager RDR Rad Corrected Ops
+            V1.0, NASA Planetary Data System,
+            MER2-M-MI-3-RADIOMETRIC-OPS-V1.0, 2004.
+        </citation_text>
+        <data_set_terse_desc>
+            Mars Exploration Rover 2 Microscopic Imager Radiometrically
+            Corrected Operations Reduced Data Record, Version 1.0
+        </data_set_terse_desc>
+        <abstract_desc>not applicable</abstract_desc>
+        <data_set_desc>
+ 
+  Data Set Overview
+  =================
+    The MIPLRAD method refers to radiometric correction systematically
+    performed by MIPL (OPGS at JPL) to meet tactical time constraints
+    imposed by rover planners, since these RDRs are integrated into
+    terrain mesh products used for traverse planning. The method can
+    apply to any of the camera instruments.
+ 
+    In the operations environment for the Prime and Extended Missions,
+    MIPL&apos;s radiometrically-corrected RDR filename carries the product
+    type designator of RAD for the non-linearized case and RAL for
+    the linearized case. However, in the PDS archive volume, the MIPL
+    radiometrically-corrected RDR carries the product type MRD for the
+    non-linearized case and MRL for the linearized case. Though there
+    is no difference in image content between the operational and
+    archived versions of MIPL&apos;s radiometrically-corrected RDR, the
+    distinction in their filenames is made to identify all RAD and
+    RAL product types in the PDS archive volumes as being unique to
+    the Athena Pancam team&apos;s radiance correction process.
+ 
+    As a special note, two bugs pertaining to MIPL&apos;s radiometric
+    correction process were discovered during the preparation of data
+    for PDS archival, which was after the MER Prime Mission and well
+    into the Extended Mission. The problems involved on-board flat-field
+    removal and temperature determination. For the purposes of this
+    discussion, the term MIPLRAD refers to the original implementation
+    used during Prime Mission and approximately through the first two
+    months of Extended Mission, while MIPLRAD2 represents the corrected
+    implementation used thereafter. Both MIPLRAD and MIPLRAD2 are valid
+    values for RADIOMETRIC_CORRECTION_TYPE. The differences are
+    described below. Note that all RAD/RAL/RSD/RSL types of RDRs have
+    been reprocessed with MIPLRAD2, limiting the number of
+    MIPLRAD-processed products in the PDS archive volume to a subset of
+    mosaics which were generated before MIPLRAD2 was implemented. Note
+    also that no mosaics were generated from on-board flat-field images
+    using MIPLRAD, so the only difference in the archive data is the
+    temperature issue.
+ 
+    MIPLRAD is a first-order correction only and should be considered
+    approximate. MIPLRAD first backs out any onboard flat field that was
+    performed. It then applies the following corrections: flat field,
+    exposure time, temperature-compensated responsivity. The result is
+    calibrated to physical units for MER of W/m^2/nm/sr. The actual
+    algorithm and equations used for MIPLRAD are shown below. Each
+    correction is applied in sequence, to every pixel:
+ 
+    1. If on-board flat-fielding has been applied, it is backed out
+       according to the parameters in FLAT_FIELD_CORRECTION_PARM, which
+       defines ff(x,y). MIPLRAD incorrectly multiplied by ff(x,y) rather
+       than divided, causing the on-board flat field to be doubled
+       rather than removed. MIPLRAD2 correctly divides by ff(x,y) as
+       follows:
+ 
+       output(x,y) = input(x,y) / ff(x,y)
+ 
+    2. For the flat-field adjustment, the x and y coordinates are
+       adjusted based on downsampling and subframing to find the
+       corresponding pixel in the flat field, then the DN is divided by
+       the flat field value:
+ 
+       output(x,y) = input(x,y) / flat_field(x&apos;,y&apos;)
+ 
+    3. Exposure time is then removed. Exposure time comes from
+       EXPOSURE_DURATION, converted to seconds:
+ 
+       output(x,y) = input(x,y) / exposure_time
+ 
+    4. The temperature responsivity is removed next. The temperature
+       comes from the first element of INSTRUMENT_TEMPERATURE and the
+       parameters R0, R1, and R2 come from the flat field parameter
+       file, and are different per instrument. The actual temperature
+       formula is as follows:
+ 
+       output(x,y) = input(x,y) * (R0 + R1*temp + R2*temp*temp)
+ 
+    For MIPLRAD, the temperature is simply the first element of
+    INSTRUMENT_TEMPERATURE. For MIPLRAD2, the temperature is dependent
+    on the instrument. The temperature used for each instrument is
+    determined using the following general rules
+    (from the MER thermal team):
+ 
+    a) Use the CCD temp of said camera, if it exists.
+ 
+    b) Use the CCD temp of neighboring camera (left/right partner), if
+       available.
+ 
+    c) Use the CCD temp of similar camera (i.e., Navcam/Pancam).
+ 
+    d) Use CCD temperature from any camera.
+ 
+    e) Use the electronics temperature of said camera.
+ 
+    f) Use the electronics temperature of similar camera.
+ 
+    Rules e and f are a last resort in view of the fact that MER
+    operates warmup heaters inside the electronics (during nighttime and
+    early morning) that raise camera electronics temperatures above CCD
+    temperatures. Thus any CCD temperature is at higher priority than
+    any electronics temperature measurement. The most significant
+    consequence of this is that the MI CCD is the best available proxy
+    for all four Hazcam CCDs. A value of 0.0 is ignored as a no-reading
+    value, and a value greater than or equal to 50.0 (degrees C) is
+    interpreted as a broken sensor. Either value causes that temperature
+    to be ignored and the next one on the list tested. If none of the
+    values is valid, a default of 0.0 degrees C is used.
+ 
+ 
+  Processing
+  ==========
+    MER Camera Payload RDRs are considered Level 3 (Calibrated Data
+    equivalent to NASA Level 1-A), Level 4 (Resampled Data
+    equivalent to NASA Level 1-B), or Level 5 (Derived Data
+    equivalent to NASA Level 1-C, 2 or 3). The RDRs are to be
+    reconstructed from Level 2 edited data, and are to be assembled
+    into complete images that may include radiometric and/or geometric
+    correction.
+ 
+    MER Camera Payload EDRs and RDRs will be generated by JPL&apos;s
+    Multimission Image Processing Laboratory (MIPL) under the OPGS
+    subsystem of the MER GDS. RDRs will also be generated by the Athena
+    Pancam Science and Microscopic Imager Science Teams under the SOAS
+    subsystem of the GDS.
+ 
+    RDR data products will be generated by, but not limited to, MIPL
+    using the Mars Suite of VICAR image processing software at JPL, the
+    Athena Pancam Science Team using IDL software at Cornell University
+    and JPL, and the Microscopic Imager Science Team using ISIS software
+    at USGS (Flagstaff) and JPL. The RDRs produced will be processed
+    data. The input will be one or more Camera EDR or RDR data products
+    and the output will be formatted according to this SIS. Additional
+    meta-data may be added by the software to the PDS label.
+ 
+    There may be multiple versions of a MER Camera RDRs.
+ 
+ 
+  Data
+  ====
+    RDR products generated by MIPL will have a VICAR label wrapped by a
+    PDS label, and their structure can include the optional EOL label
+    after the binary data. RDR products not generated by MIPL may
+    contain only a PDS label. Or, RDR products conforming to a standard
+    other than PDS, such as JPEG compressed or certain Terrain products,
+    are acceptable without a PDS header during mission operations, but
+    may not be archivable.
+ 
+    The RDR data product is comprised of radiometrically decalibrated
+    and/or camera model corrected and/or geometrically altered versions
+    of the raw camera data, in both single and multi-frame (mosaic)
+    form. Most RDR data products will have PDS labels, or if generated
+    by MIPL (OPGS), dual PDS/VICAR labels. Non-labeled RDRs include JPEG
+    compressed products and the Terrain products.
+ 
+    The MIPLRAD method is a radiometric correction performed by MIPL
+    (OPGS) at JPL. It can apply to any of the camera instruments, but
+    only the RAD (and RAL) type is generated. MIPLRAD first backs
+    out any onboard flat field that was performed. It then applies the
+    following corrections: flat field, exposure time,
+    temperature-compensated responsivity. The result is calibrated to
+    physical units for MER of W/m^2/nm/sr. MIPLRAD is a first-order
+    correction only and should be considered approximate.
+ 
+ 
+  Software
+  ========
+    The MIPL Mars Program Suite was used to generate these RDRs.
+ 
+ 
+  Media/Format
+  ============
+    The data set will initially be delivered and kept online.  Upon
+    Mission completion, the Microscopic Imager Operations RDRs will be
+    delivered to PDS on DVD.
+        </data_set_desc>
+        <confidence_level_note>
+NULL
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED_ACCUMULATING</archive_status>
+        <NSSDC>
+            <medium_type>NULL</medium_type>
+            <nssdc_collection_id>NULL</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+

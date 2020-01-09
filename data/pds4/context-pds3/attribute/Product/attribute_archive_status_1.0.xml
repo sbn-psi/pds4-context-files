@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Attribute_Definition xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+ 
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:attribute:attribute.archive_status</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>archive_status</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Attribute_Definition</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <DD_Attribute_Full>
+        <name>archive_status</name>
+        <version_id>1.0</version_id>
+        <class_name>not applicable</class_name>
+        <local_identifier>archive_status</local_identifier>
+        <steward_id>pds</steward_id>
+        <type>PDS3</type>
+        <namespace_id>PDS</namespace_id>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>JOHN HO</submitter_name>
+        <definition>
+ 
+The ARCHIVE_STATUS element indicates the stage to which a data set has
+progressed in the archiving process, from &apos;IN QUEUE&apos; through &apos;ARCHIVED&apos;.
+It can also take on the values &apos;SUPERSEDED&apos; or &apos;SAFED&apos;, which indicate
+that the data set is not part of the active archive.  &apos;ACCUMULATING&apos; can be
+appended to some values to indicate that the data set is incomplete and/or
+that not all components have reached the stage given by the root value;
+&apos;ACCUMULATING&apos; would be used, for example, when the archive is being
+delivered incrementally, as from a mission that lasts many months or years.
+See below for standard values and their definitions.
+ 
+The ARCHIVE_STATUS_NOTE element is available to describe the archive status
+in more detail.
+ 
+STANDARD VALUES
+ 
+IN QUEUE - Received at the curation node but no action has been taken by
+the curation node. Use with caution.
+ 
+PRE PEER REVIEW - Being prepared for peer review under the direction of the
+curation node. Use with caution
+ 
+IN PEER REVIEW - Under peer review at the curation node but evaluation is
+not complete. Use with caution
+ 
+IN LIEN RESOLUTION - Peer review completed. Liens are in the process of
+being resolved.  Use with caution.
+ 
+LOCALLY ARCHIVED - Passed peer review with all liens resolved. Considered
+archived by the curation node but awaiting completion of the standard
+archiving process. Possible TBD items include the arrival of thearchive
+volume at NSSDC and ingestion of catalog information into the Data Set
+Catalog.
+ 
+ARCHIVED - Passed peer review with all liens resolved. Available through
+the Data Set Catalog and at NSSDC.
+ 
+IN QUEUE - ACCUMULATING - Some parts of the data set are IN QUEUE, but
+other parts have not yet been delivered to PDS.  Use with caution.
+ 
+PRE PEER REVIEW - ACCUMULATING - Some parts of the data set are in
+PRE PEER REVIEW, but other parts are IN QUEUE and/or have not yet been
+delivered to PDS. Use with caution.
+ 
+IN PEER REVIEW - ACCUMULATING - Some parts of the data set are IN PEER
+REVIEW, but other parts are in earlier stages of the archiving process
+and/or have not yet been delivered to PDS.  Use with caution.
+ 
+IN LIEN RESOLUTION - ACCUMULATING - Some parts of the data set are IN LIEN
+RESOLUTION, but other parts are in earlier stages of the archiving process
+and/or have not yet been delivered to PDS.  Use with caution.
+ 
+LOCALLY ARCHIVED - ACCUMULATING - Some parts of the data set are LOCALLY
+ARCHIVED, but other parts are in earlier stages of the archiving process
+and/or have not yet been delivered to PDS.  Use with caution.
+ 
+ARCHIVED - ACCUMULATING - Some parts of the data set are ARCHIVED,
+but other parts are in earlier stages of the archiving process and/or
+have not yet been delivered to PDS.  Use with caution.
+ 
+SUPERSEDED - This data set has been replaced by a newer version, implying
+that the data set is not to be used unless the requester has specific
+reasons. When a data set has been superseded the Engineering Node, will
+notify NSSDC that their databases need to be updated to advise users of
+the new status and the location of the replacement data set.
+ 
+SAFED - The data set has been received by the PDS with no evaluation.
+Data will not be formally archived.
+        </definition>
+        <comment>archivestat</comment>
+        <registered_by>JOHN HO</registered_by>
+        <registration_authority_id>0001_NASA_PDS_1</registration_authority_id>
+        <attribute_concept>Unknown</attribute_concept>
+        <Terminological_Entry>
+            <name>archive_status</name>
+            <definition>
+ 
+The ARCHIVE_STATUS element indicates the stage to which a data set has
+progressed in the archiving process, from &apos;IN QUEUE&apos; through &apos;ARCHIVED&apos;.
+It can also take on the values &apos;SUPERSEDED&apos; or &apos;SAFED&apos;, which indicate
+that the data set is not part of the active archive.  &apos;ACCUMULATING&apos; can be
+appended to some values to indicate that the data set is incomplete and/or
+that not all components have reached the stage given by the root value;
+&apos;ACCUMULATING&apos; would be used, for example, when the archive is being
+delivered incrementally, as from a mission that lasts many months or years.
+See below for standard values and their definitions.
+ 
+The ARCHIVE_STATUS_NOTE element is available to describe the archive status
+in more detail.
+ 
+STANDARD VALUES
+ 
+IN QUEUE - Received at the curation node but no action has been taken by
+the curation node. Use with caution.
+ 
+PRE PEER REVIEW - Being prepared for peer review under the direction of the
+curation node. Use with caution
+ 
+IN PEER REVIEW - Under peer review at the curation node but evaluation is
+not complete. Use with caution
+ 
+IN LIEN RESOLUTION - Peer review completed. Liens are in the process of
+being resolved.  Use with caution.
+ 
+LOCALLY ARCHIVED - Passed peer review with all liens resolved. Considered
+archived by the curation node but awaiting completion of the standard
+archiving process. Possible TBD items include the arrival of thearchive
+volume at NSSDC and ingestion of catalog information into the Data Set
+Catalog.
+ 
+ARCHIVED - Passed peer review with all liens resolved. Available through
+the Data Set Catalog and at NSSDC.
+ 
+IN QUEUE - ACCUMULATING - Some parts of the data set are IN QUEUE, but
+other parts have not yet been delivered to PDS.  Use with caution.
+ 
+PRE PEER REVIEW - ACCUMULATING - Some parts of the data set are in
+PRE PEER REVIEW, but other parts are IN QUEUE and/or have not yet been
+delivered to PDS. Use with caution.
+ 
+IN PEER REVIEW - ACCUMULATING - Some parts of the data set are IN PEER
+REVIEW, but other parts are in earlier stages of the archiving process
+and/or have not yet been delivered to PDS.  Use with caution.
+ 
+IN LIEN RESOLUTION - ACCUMULATING - Some parts of the data set are IN LIEN
+RESOLUTION, but other parts are in earlier stages of the archiving process
+and/or have not yet been delivered to PDS.  Use with caution.
+ 
+LOCALLY ARCHIVED - ACCUMULATING - Some parts of the data set are LOCALLY
+ARCHIVED, but other parts are in earlier stages of the archiving process
+and/or have not yet been delivered to PDS.  Use with caution.
+ 
+ARCHIVED - ACCUMULATING - Some parts of the data set are ARCHIVED,
+but other parts are in earlier stages of the archiving process and/or
+have not yet been delivered to PDS.  Use with caution.
+ 
+SUPERSEDED - This data set has been replaced by a newer version, implying
+that the data set is not to be used unless the requester has specific
+reasons. When a data set has been superseded the Engineering Node, will
+notify NSSDC that their databases need to be updated to advise users of
+the new status and the location of the replacement data set.
+ 
+SAFED - The data set has been received by the PDS with no evaluation.
+Data will not be formally archived.
+            </definition>
+            <language>English</language>
+            <preferred_flag>true</preferred_flag>
+        </Terminological_Entry>
+        <DD_Value_Domain_Full>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <formation_rule>not applicable</formation_rule>
+            <minimum_characters>TBD_minimum_characters</minimum_characters>
+            <maximum_characters>33</maximum_characters>
+            <minimum_value>TBD_minimum_value</minimum_value>
+            <maximum_value>TBD_maximum_value</maximum_value>
+            <pattern>TBD_pattern</pattern>
+            <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+            <conceptual_domain>Short_String</conceptual_domain>
+            <specified_unit_id>none</specified_unit_id>
+            <DD_Permissible_Value_Full>
+                <value>ARCHIVED</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>ARCHIVED - ACCUMULATING</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>IN LIEN RESOLUTION</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>IN LIEN RESOLUTION - ACCUMULATING</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>IN PEER REVIEW</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>IN PEER REVIEW - ACCUMULATING</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>IN QUEUE</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>IN QUEUE - ACCUMULATING</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>LOCALLY ARCHIVED</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>LOCALLY ARCHIVED - ACCUMULATING</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>PRE PEER REVIEW</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>PRE PEER REVIEW - ACCUMULATING</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>SAFED</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+            <DD_Permissible_Value_Full>
+                <value>SUPERSEDED</value>
+                <value_begin_date>2010-10-12T00:00:00Z</value_begin_date>
+                <value_end_date>2029-12-31T00:00:00Z</value_end_date>
+            </DD_Permissible_Value_Full>
+        </DD_Value_Domain_Full>
+    </DD_Attribute_Full>
+</Product_Attribute_Definition>

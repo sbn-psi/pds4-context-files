@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Data_Set_PDS3 xmlns="http://pds.nasa.gov/pds4/pds/v1"
+ xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1600.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-spice-6-v1.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MESSENGER SPICE KERNELS V1.0</title>
+        <information_model_version>1.6.0.0</information_model_version>
+        <product_class>Product_Data_Set_PDS3</product_class>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2016-10-01</modification_date>
+                <version_id>1.0</version_id>
+                <description>
+                    extracted metadata from PDS3 catalog and
+                    modified to comply with PDS4 Information Model
+                </description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    
+    <Reference_List>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:investigation:mission.messenger::1.0</lidvid_reference>
+            <reference_type>has_mission</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument_host:spacecraft.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument_host</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:instrument:spice.mess::1.0</lidvid_reference>
+            <reference_type>has_instrument</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.earth::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.mercury::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:target:planet.venus::1.0</lidvid_reference>
+            <reference_type>has_target</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-spice-6-v1.0__browserp_mess-e-v-h-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-spice-6-v1.0__browser_mess-e-v-h-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:resource:resource.mess-e-v-h-spice-6-v1.0__browser_wgc_mess-e-v-h-spice-6-v1.0::1.0</lidvid_reference>
+            <reference_type>has_resource</reference_type>
+        </Internal_Reference>
+        <Internal_Reference>
+            <lidvid_reference>urn:nasa:pds:context_pds3:node:node.naif::1.0</lidvid_reference>
+            <reference_type>has_node</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>
+                   unk
+            </reference_text>
+            <description>reference.unk</description>
+        </External_Reference>
+    </Reference_List>
+    
+    <Data_Set_PDS3>
+        <data_set_id>MESS-E/V/H-SPICE-6-V1.0</data_set_id>
+        <data_set_name>MESSENGER SPICE KERNELS V1.0</data_set_name>
+        <data_set_release_date>2016-05-06</data_set_release_date>
+        <start_time>2004-08-03T07:13:35Z</start_time>
+        <stop_time>2015-04-30T19:26:02Z</stop_time>
+        <producer_full_name>MIKE REID</producer_full_name>
+        <citation_text>
+            Turner, Scott, MESSENGER SPICE KERNELS V1.0,
+            MESS-E/V/H-SPICE-6-V1.0, NASA Planetary Data System, 2007.
+        </citation_text>
+        <data_set_terse_desc>
+            Navigation and ancillary data in the form of SPICE System kernel
+            files for the MESSENGER mission.
+        </data_set_terse_desc>
+        <abstract_desc>
+            This data set includes the complete set of MESSENGER SPICE data
+            files (&apos;kernel files&apos;), which can be accessed using
+            SPICE software. The SPICE data contains geometric and other
+            ancillary information needed to recover the full value of science
+            instrument data. In particular SPICE kernels provide spacecraft
+            and planetary ephemerides, instrument mounting alignments,
+            spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.
+        </abstract_desc>
+        <data_set_desc>
+ 
+      Data Set Overview
+      =================
+ 
+      This data set includes the complete set of MESSENGER SPICE data
+      files (``kernel files&apos;), which can be accessed using SPICE
+      software. The SPICE data contains geometric and other ancillary
+      information needed to recover the full value of science
+      instrument data. In particular SPICE kernels provide spacecraft
+      and planetary ephemerides, instrument mounting alignments,
+      spacecraft orientation, and data needed for relevant time
+      conversions.
+ 
+      This data set is contained on a single virtual volume,
+      MESSSP_1000, including data from all mission phases and covering
+      from launch, 2004-08-03T00:00:00, through the end time of the
+      latest reconstructed spacecraft orientation CK file supplied in
+      the data set. Until the end of the spacecraft life span this data
+      set is accumulating with new data added approximately six months. Data
+      are associated with the mission phases given below. These are defined
+      in the MESSENGER DMAP. These may be updated periodically.
+ 
+                            Start time          End time
+      Phase Name            Date (DOY)          Date (DOY)
+      -------------------   -----------------  -----------------
+      Launch                03 Aug 2004 (216)  12 Sep 2004 (256)
+      Earth Cruise          13 Sep 2004 (257)  18 Jul 2005 (199)
+      Earth Flyby           19 Jul 2005 (200)  16 Aug 2005 (228)
+      Venus 1 Cruise        17 Aug 2005 (229)  09 Oct 2006 (282)
+      Venus 1 Flyby         10 Oct 2006 (283)  07 Nov 2006 (311)
+      Venus 2 Cruise        08 Nov 2006 (312)  22 May 2007 (142)
+      Venus 2 Flyby         23 May 2007 (143)  20 Jun 2007 (171)
+      Mercury 1 Cruise      21 Jun 2007 (172)  30 Dec 2007 (364)
+      Mercury 1 Flyby       31 Dec 2007 (365)  28 Jan 2008 (028)
+      Mercury 2 Cruise      29 Jan 2008 (029)  21 Sep 2008 (265)
+      Mercury 2 Flyby       22 Sep 2008 (266)  20 Oct 2008 (294)
+      Mercury 3 Cruise      21 Oct 2008 (295)  15 Sep 2009 (258)
+      Mercury 3 Flyby       16 Sep 2009 (259)  14 Oct 2009 (287)
+      Mercury 4 Cruise      15 Oct 2009 (288)  03 Mar 2011 (062)
+      Mercury Orbit         04 Mar 2011 (063)  17 Mar 2012 (077)
+      Mercury Orbit Year 2  18 Mar 2012 (078)  17 Mar 2013 (076)
+      Mercury Orbit Year 3  18 Mar 2013 (077)  17 Mar 2014 (076)
+      Mercury Orbit Year 4  18 Mar 2014 (077)  17 Mar 2015 (076)
+      Mercury Orbit Year 5  18 Mar 2015 (077)  30 Apr 2015 (120)
+ 
+ 
+      Data Types (SPICE kernel types)
+      ===============================
+ 
+      SPK kernels contain ephemerides for spacecraft, planets,
+      satellites, comets and asteroids as well as for moving or fixed
+      spacecraft and instrument structures. They provide position and
+      velocity, given in a Cartesian reference frame. SPK files are
+      located under the ``data/spk&apos; directory of this data set.
+ 
+      PCK kernels contain certain physical, dynamical and cartographic
+      constants for target bodies, such as size and shape
+      specifications, and orientation of the spin axis and prime
+      meridian. PCK files are located under the ``data/pck&apos; directory
+      of this data set.
+ 
+      IK kernels (Instrument description kernels) give descriptive and
+      operational data peculiar to a particular scientific instrument,
+      such as internal timing relative to the spacecraft clock and
+      field-of-view model parameters. IK files are located under the
+      ``data/ik&apos; directory of this data set.
+ 
+      CK kernels describe pointing, containing a transformation
+      traditionally called the C-matrix which is used to determine
+      time-tagged pointing (orientation) angles for a spacecraft
+      structure upon which science instruments are mounted. CK files
+      are located under the ``data/ck&apos; directory of this data set.
+ 
+      EK (Events) kernels are derived from the integrated sequence of
+      events used to produce actual spacecraft commands. EK files are
+      not used by the MESSENGER program and are not included in this
+      data set.
+ 
+      LSK (Leap seconds) kernels contain the leap seconds and the values
+      of other constants required to perform a transformation between
+      Universal Time Coordinated (UTC) and Ephemeris time (ET). LSK
+      files are located under the ``data/lsk&apos; directory of this data
+      set.
+ 
+      SCLK (Spacecraft Clock) kernels contain on-board clock
+      calibration data required to perform a mapping between Ephemeris
+      time (ET) and spacecraft on-board time (SCLK.) SCLK files are
+      located under the ``data/sclk&apos; directory of this data set.
+ 
+      FK (Frame Definitions) kernels contain information required to
+      define reference frames, sources of frame orientation data and
+      inter-connections between these frames and other frames
+      supported within the SPICE system. This includes mounting
+      alignment information for each instrument. FK files are located
+      under the ``data/fk&apos; directory of this data set.
+ 
+ 
+      Kernel File Details
+      ===================
+ 
+      A brief overview of the different types of MESSENGER kernels
+      included in this data set is provided in the
+      CONFIDENCE_LEVEL_NOTE section of this file while details
+      specific to individual files are found in the ``*info.txt&apos;
+      files in the corresponding data directory. The most detailed
+      description of the data in each file is provided in metadata
+      included inside the file -- in the description area of text
+      kernels or in the comment area of binary kernels.
+ 
+ 
+      Software
+      ========
+ 
+      The SPICE Toolkit contains software modules needed to read SPICE
+      kernel files. SPICELIB software is highly documented via
+      internal headers. Additional documentation is available in
+      separate ASCII text files called Required Reading files. For
+      example, the S- and P- Kernel (SPK) Required Reading File, named
+      SPK.REQ, describes use of the SPK kernel file readers and
+      contains sample programs.
+ 
+      The latest SPICE Toolkit for a variety of computer platforms
+      such as PC, Mac, SUN, etc. is available at the NAIF Node of PDS
+      electronically (via anonymous FTP and WWW servers). Refer to
+      information in ``software/softinfo.txt&apos; for details regarding
+      obtaining this software. Each version of the Toolkit is also
+      archived at the NASA National Space Science Data Center.
+ 
+ 
+      Loading Kernel Files into a SPICE-based Application
+      ===================================================
+ 
+      The easiest way to make data from a collection of SPICE kernels
+      available to a SPICE-based application is to list these kernels
+      in a meta-kernel and load it into the program using the high
+      level SPICE data loader routine FURNSH. This data set provides
+      such meta-kernel(s) under the ``extras/mk&apos; directory. For more
+      information about the MESSENGER meta-kernel(s), see the file
+      ``extras/mk/mkinfo.txt&apos;.
+        </data_set_desc>
+        <confidence_level_note>
+ 
+      This data set contains SPICE kernel files created during mission
+      operations. Some general information about this collection follows
+      here, but the prospective user is also referred to extensive
+      descriptions about each file that are stored inside each kernel
+      file. These metadata provide detailed information regarding the
+      information source from which the data were derived, the type of
+      processing applied to the source data, applicability of the data,
+      etc. Metadata are located in the ``comment area&apos; for binary
+      kernel types (SPK, CK, ESQ), accessible using either the COMMNT
+      or SPACIT utility program found in the NAIF Toolkit. Metadata are
+      located after ``\begintext&apos; markers within the text kernel types
+      (PCK, IK, FK, LSK, SCLK, MK), accessible by using any available
+      text file display tool such as a word processor, text editor, or
+      the unix ``more&apos; or ``cat&apos; commands.
+ 
+      Where there are questions about data accuracy or ``confidence&apos;
+      not addressed herein the reader is invited to contact the NAIF
+      node of the Planetary Data System for possible further
+      information.
+ 
+ 
+      SPK Files
+      =========
+ 
+      Three kinds of SPK files are provided in this archive: a planetary
+      ephemerides SPK, merged spacecraft reference trajectory SPKs, and a
+      final SPK that contains both merged spacecraft reference trajectory and
+      planetary ephemerides (msgr_040803_150430_150430_od431sc_2.bsp).
+      Each of these kinds is briefly described below; more information
+      is available in the file ``data/spk/spkinfo.txt&apos;.
+ 
+      Planetary SPK
+      -------------
+ 
+      The DE405 planetary ephemeris SPK file included in this data set
+      contains ephemeris data for the Solar System planet barycenters,
+      Sun, Mercury, Venus, Earth, Moon, and Mars. This version of
+      ephemerides was officially used by the project during mission
+      operations. The internal comments included this SPK file provide
+      detailed accuracy information. A custom version of this file containing
+      data from both DE405 and DE423, spk/msgr_de405_de423s.bsp, is included
+      in this archive and used prior to the final release. It is deprecated in
+      the final release since the data it contains are merged into the final
+      spacecraft trajectory SPK.
+ 
+      Merged Spacecraft Reference Trajectory SPKs
+      -------------------------------------------
+ 
+      These SPKs are the latest official full-mission merged reference
+      trajectory SPK files that contain only the spacecraft ephemeris.
+      They were created by merging a series of reconstructions and
+      short-term predictions onto the modeled whole-tour SPK. These
+      files include extensive internal comments providing detailed
+      information about reconstructed and predicted portions of the
+      data.
+ 
+      Note: The final version of the full-mission merged trajectory SPK,
+      msgr_040803_150430_150430_od431sc_2.bsp, also contains the required
+      planetary ephemeris. As noted above, the DE405 planetary ephemeris and
+      the custom planetary ephemeris, msgr_de405_de423s.bsp, should not be
+      loaded when this SPK is loaded. See the final MKs for details.
+ 
+      CK Files
+      ========
+ 
+      Three kinds of C-kernel files are provided in this archive: the
+      spacecraft bus and solar panel orientation CKs, the MDIS attitude
+      history CKs, and the MDIS Pivot Platform CKs. Each of these kinds
+      is briefly described below; more information is available in the
+      file ``data/ck/ckinfo.txt&apos;.
+ 
+      All of these CK files were produced from engineering telemetry
+      down linked from the spacecraft. As is often the case with
+      spacecraft engineering telemetry-based measurements, considerable
+      uncertainty exists as to the accuracy of such measurements, and,
+      data quality (accuracy and completeness) can vary significantly.
+ 
+      Spacecraft Bus and Solar Panel Orientation CK Files
+      ---------------------------------------------------
+ 
+      These CK files providing the orientation of the spacecraft bus
+      (``the spacecraft&apos;) can be used to support interpretation of
+      data obtained by all science experiments. These CK Files also
+      contain the orientation of the +X to -X solar panels relative to
+      the spacecraft bus. They were generated by mission operations at
+      variable sampling resolutions depending on downlink availability
+      and spacecraft configuration (can be up to 1 Hz). The engineering
+      telemetry that supplied the attitude history included a quality
+      flag which was used during construction of the files to eliminate
+      readings that do not meet science requirements.
+ 
+      The spacecraft guidance and control telemetry from Oct 20, 2006
+      was interrupted when the spacecraft was demoted to earth
+      acquisition mode. Due to the anomaly, data were missing. The CK
+      file covering this day was ``patched&apos; with simulated data to
+      provide coverage for the missing period.
+ 
+      MDIS Attitude History CK Files
+      ------------------------------
+ 
+      These CKs provide orientation of the spacecraft bus based on the
+      1-Hz spacecraft attitude data bracketing MDIS observations only.
+      They represent the same information as the spacecraft bus
+      orientation CKs, but at a different sampling frequency. These CK
+      files store 16 bit ``compressed&apos; quaternions, unlike the
+      spacecraft CK files, which use full 32 bit quaternions. The
+      angular rate data included in the MDIS attitude history file did
+      not come from Guidance and Control telemetry. Instead, this
+      information was derived from the attitude information.
+ 
+      Note that if the normal spacecraft bus orientation telemetry
+      supports a 1-Hz rate, this data is not necessary and may not be
+      down linked. Therefore the MDIS attitude history file may not
+      cover all MDIS observations - just those for which sufficient
+      coverage may not exist in the spacecraft bus CK&apos;s.
+ 
+      MDIS Pivot Platform (Gimbal) CK Files
+      -------------------------------------
+ 
+      These CKs provide pointing of the MDIS instrument over time. The
+      MDIS stepper motor setting telemetry was used to calculate the
+      pointing for each image taken. This information was included in
+      the image header and was used to construct these CK files. Every
+      set of MDIS exposures has related orientation information
+      provided in these CKs.
+ 
+      Caution on Using CK Files
+      -------------------------
+ 
+      While not a data accuracy issue, the CK user is nevertheless
+      cautioned to understand and properly use the data found and
+      tolerance arguments that are inputs to the CK reader provided in
+      the SPICE Toolkit. Descriptions about how to read CK files are
+      found in the CK reader routine headers (top of the source code
+      files) and in the ``CK Required Reading&apos; document; these are
+      contained in each SPICE Toolkit package.
+ 
+ 
+      PCK Files
+      =========
+ 
+      PCK files provide size, shape and orientation data for ``target&apos;
+      bodies such as Earth, Venus and Mercury. A description of these
+      data items and reference to their source is provided inside the
+      PCK file, which is a simple text file that can be viewed using
+      any word processor, text editor or text display utility.
+ 
+      Two types of PCK file are provided in this data set: a type of PCK file
+      containing the official IAU/IAG/COSPAR values as of 10/21/2011 and a
+      type containing a MESSENGER specific file for the MESSENGER updates to
+      Mercury parameters. This second type of PCK file was adopted by the
+      MESSENGER Principle Investigator based on the recommendation of the
+      MESSENGER science team concerning the best and most current data. It
+      contains both the generic PCK provided by NAIF and the MESSENGER
+      specific parameters.
+ 
+      More information about the PCK files included in this data set is
+      available in the file ``data/pck/pckinfo.txt&apos;.
+ 
+ 
+      FK Files
+      ========
+ 
+      Frames kernel files provide specifications for how one reference
+      frame is defined relative to another frame. This data set
+      includes two kinds of FK files: FKs providing the complete set of
+      frame definitions for the spacecraft, its structures such as
+      solar array, and all of its science instruments and FKs defining
+      a number of dynamic frames used in science data reduction. Meta
+      information provided in the comments included in these files
+      consists of the frame specifications, description of the frame
+      relationships, source of and accuracy of the information, etc.
+ 
+      More information about the MESSENGER FK files is available in the
+      file ``data/fk/fkinfo.txt&apos;.
+ 
+ 
+      IK Files
+      ========
+ 
+      Instrument kernel files provide specifications for the mounting
+      alignment and--where applicable--field-of-view size, shape and
+      orientation for the named instrument. Metadata describing these
+      estimates are provided in each IK file included in this archive.
+      Parameter values were determined from pre-launch measurements and
+      in-flight measurements.
+ 
+      This data set includes IK files for the EPPS, GRNS, MAG, MASCS,
+      MDIS, MLA, and XRS instruments. They represent the best available
+      information at the present time and meet science requirements.
+ 
+      More information about the MESSENGER IK files is available in the
+      file ``data/ik/ikinfo.txt&apos;.
+ 
+ 
+      SCLK Files
+      ==========
+ 
+      Spacecraft Clock kernel files provide a tabulation of data needed
+      for converting time measurements between ephemeris time (ET) and
+      spacecraft clock time (SCLK). A SPICE SCLK file is made from a
+      similar file--SCLK/SCET file, or SCLKvSCET file--produced by
+      another mission entity. Each newly made SCLK file fully replaces
+      the previous SCLK file.
+ 
+      The time correlation accuracy of the SCLK files provided in this data
+      set meet the science requirements for all phases of the mission.
+ 
+      Note that the SCLK kernels provided in this data set have been
+      determined to be in a relativistic solar system barycentric frame
+      of reference. This has been verified through confirmation that
+      the ephemerides used to compute the SCLK kernel correlations are
+      in a solar barycentric frame. It is critically important that the
+      users of these kernels for time applications be aware of this and
+      that they properly interpret the time correlations in the SCLK
+      kernels. The file ``sea_2007_010.pdf&apos; in the ``document&apos;
+      directory should be consulted for information on how to do this.
+      In addition, the file ``sea_2003_024.pdf&apos; in the ``document&apos;
+      directory gives further information on the format and design of
+      these kernels.
+ 
+      More information about the SCLK files is available in the
+      file ``data/sclk/sclkinfo.txt&apos;.
+ 
+ 
+      LSK Files
+      =========
+ 
+      Leap seconds kernel files provide a tabulation of ``leap
+      seconds&apos; and some other terms used in converting time
+      measurements between ephemeris time (ET) and Universal Time
+      (UTC). ``Spacecraft Event Time&apos; (SCET) is the commonly used name
+      for UTC events measured at the spacecraft.
+ 
+      Metadata describing how the LSK data are obtained or computed is
+      contained inside the LSK text file. The time conversion provided
+      by SPICE LSK files is accurate to approximately 0.000030 seconds.
+ 
+      More information about the LSK files is available in the file
+      ``data/lsk/lskinfo.txt&apos;.
+ 
+ 
+      EK Files
+      ========
+ 
+      Events kernel (EK) files are not used by the MESSENGER mission;
+      therefore, no EKs are included in this data set.
+        </confidence_level_note>
+        <archive_status>LOCALLY_ARCHIVED</archive_status>
+        <NSSDC>
+            <medium_type>N/A</medium_type>
+            <nssdc_collection_id>PSCM-00029</nssdc_collection_id>
+        </NSSDC>
+    </Data_Set_PDS3>
+</Product_Data_Set_PDS3>
+
