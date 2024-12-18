@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1700.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<Product_Context xmlns="http://pds.nasa.gov/pds4/pds/v1"
- xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1700.xsd">
-    
+<?xml-model
+    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1K00.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model
+    href="https://pds.nasa.gov/pds4/ctli/v2/PDS4_CTLI_1K00_2000.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Context
+    xmlns="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" 
+    xmlns:ctli="http://pds.nasa.gov/pds4/ctli/v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="
+        http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1K00.xsd 
+        http://pds.nasa.gov/pds4/ctli/v2 https://pds.nasa.gov/pds4/ctli/v2/PDS4_CTLI_1K00_2000.xsd">
     <Identification_Area>
-        <logical_identifier>urn:nasa:pds:context:instrument:themis.ody</logical_identifier>
+        <logical_identifier>urn:nasa:pds:context:instrument:ody.themis</logical_identifier>
         <version_id>1.0</version_id>
         <title>THERMAL EMISSION IMAGING SYSTEM for ODY</title>
-        <information_model_version>1.7.0.0</information_model_version>
+        <information_model_version>1.20.0.0</information_model_version>
         <product_class>Product_Context</product_class>
+        <Alias_List>
+            <Alias>
+                <alternate_title>urn:nasa:pds:context:instrument:themis.ody</alternate_title>  <!-- deprecated LID -->
+            </Alias>
+        </Alias_List>
         <Modification_History>
             <Modification_Detail>
-                <modification_date>2016-10-01</modification_date>
+                <modification_date>2023-09-15</modification_date>
                 <version_id>1.0</version_id>
-                <description>
-                    extracted metadata from PDS3 catalog and
-                    modified to comply with PDS4 Information Model
+                <description> Update to ody.themis and set alias to the original themis.ody. 
+                    Updated to PDS4_PDS_1F00.xsd to allow for DOI and added DOI to reference. 
+                    And per "Guide to PDS4 Context Products" v1.8, changed all lidvid_reference to lid_reference.
+                    Added and then updated (2024-06-05) ctli for Instrument class, type = Imaging Spectrometer  
                 </description>
             </Modification_Detail>
         </Modification_History>
@@ -24,7 +39,7 @@
 
     <Reference_List>
         <Internal_Reference>
-            <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ody::1.0</lidvid_reference>
+            <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ody</lid_reference>
             <reference_type>instrument_to_instrument_host</reference_type>
         </Internal_Reference>
         <External_Reference>
@@ -35,25 +50,25 @@
             <description>reference.CHRISTENSEN2002</description>
         </External_Reference>
         <External_Reference>
+            <doi>10.1023/B:SPAC.0000021008.16305.94</doi>
             <reference_text>
                    Christensen, P. R., B. M. Jakosky, H. H. Kieffer, M. C. Malin, H. Y.
                    McSween, Jr., K. Nealson, G. L. Mehall, S. H. Silverman, S. Ferry, and M.
-                   Caplinger, The Thermal Emission Imaging System (THEMIS) for the Mars 2001
-                   Odyssey Mission, Space Science Rev., submitted.
+                   Caplinger, (2004), The Thermal Emission Imaging System (THEMIS) for the Mars 2001
+                   Odyssey Mission, Space Science Reviews volume 110, pages85–120.
             </reference_text>
             <description>reference.CHRISTENSENETAL2002</description>
         </External_Reference>
     </Reference_List>
-    
+
     <Instrument>
         <name>THERMAL EMISSION IMAGING SYSTEM</name>
-        <type>Imager</type> <!--RChen/EN was Camera-->
-        <naif_instrument_id>not applicable</naif_instrument_id>
-
-        <serial_number>not applicable</serial_number>
-
+        <Type_List_Area>
+            <ctli:Type_List>
+                <ctli:type>Imaging Spectrometer</ctli:type>
+            </ctli:Type_List>
+        </Type_List_Area>
         <description>
- 
   Instrument Overview
   ===================
     The THEMIS flight instrument is a combined infrared and visible
@@ -454,6 +469,6 @@
     Philip R. Christensen
     Arizona State University
 
-        </description>
+            </description>
     </Instrument>
 </Product_Context>
